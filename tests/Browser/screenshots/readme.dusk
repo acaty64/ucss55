@@ -1,0 +1,18 @@
+php artisan dusk
+php artisan dusk --filter 
+
+Errores:
+
+DCursos01Test::
+	test_edit_a_dcurso : Investigar DUSK & HARVEST CHOSEN
+							Hacer el test manual.
+DCursos02Test::
+	test_view_a_sillabus : Investigar DUSK & HARVEST CHOSEN
+							Hacer el test manual.
+
+
+MenusActionsTest::
+	test_a_master_create_a_menu : Se demora un poco, hay que reprocesarlo varias veces.
+	test_edit_a_menu : TODO.
+	test_delete_a_menu : TODO.
+
