@@ -37,7 +37,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         @guest
-                            &nbsp;
+                            <h3>Bienvenidos</h3>
+                            <!-&nbsp;->
                         @else
                             <Menu-Component></Menu-Component>
                         @endguest
