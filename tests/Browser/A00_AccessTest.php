@@ -27,4 +27,21 @@ class A00_AccessTest extends DuskTestCase
                     ->assertPathIs('/home');
         });
     }
+
+    public function testAccess()
+    {
+        $this->browse(function(Browser $browser)
+        {
+            $user = User::create([
+                    'name' => 'Administrador Lima',
+                    'email' => 'ucss.fcec.lim@gmail.com',
+                    'password'  => bcrypt('secret')
+                ]);
+            $browser->visit('/')
+                ->type('email', 'ucss.fcec.lim@gmail.com')
+                ->type('password', 'secret')
+                ->press('Login')
+                ->assertPathIs('/home');
+        });
+    }
 }
