@@ -5,6 +5,8 @@
     phpenv local 7.1
     
     cp .env.dusk.codeship .env
+
+    mysql -e 'create database dusk_tests;'
     
     composer install --no-interaction
     php artisan key:generate

@@ -11,7 +11,9 @@
     composer install --prefer-dist --no-interaction -o --optimize-autoloader
     
     php artisan key:generate    
-    php artisan migrate --force
-    php artisan db:seed
+    php artisan migrate --force --env="ucss_tests"
+    php artisan db:seed --env="ucss_tests"
+
+    cp phpunit.xml.ci phpunit.xml
 
     vendor/bin/phpunit
