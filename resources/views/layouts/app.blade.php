@@ -35,14 +35,16 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
                         @guest
-                            <h3>Bienvenidos</h3>
-                            <!-&nbsp;->
+                            <ul class="nav navbar-nav">
+                                <h3>Bienvenidos</h3>
+                                <!-&nbsp;->
+                            </ul>
                         @else
-                            <Menu-Component></Menu-Component>
+                            <div class="nav navbar-nav">
+                                <Menu-Component></Menu-Component>
+                            </div>
                         @endguest
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
