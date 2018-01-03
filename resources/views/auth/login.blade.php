@@ -67,3 +67,7 @@
     </div>
 </div>
 @endsection
+
+@section('view')
+View: view/auth/login.blade.php
+@endsection

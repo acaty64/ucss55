@@ -16,3 +16,34 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('dcurso/index', [
+		'as'	=> 'api.dcurso.index',
+		'uses'	=> 'api\DcursoController@index',	
+	]);
+//->middleware('can:is_admin,'.Acceso::class);
+
+Route::post('dcurso/update', [
+		'as'	=> 'api.dcurso.update',
+		'uses'	=> 'api\DcursoController@update',	
+	]);
+
+
+/**
+ * Menu's Api Route
+ *
+ */
+
+//Route::middleware('auth:api')->get('generar/{type_id}/{auth_id?}', [
+Route::get('generar/{type_id}/{auth_id?}', [
+	'as' => 'generar',
+	'uses' =>'Api\MenuController@generar'
+]);
+
+
+
+Route::get('generarHelp/{type_id}', [
+	'as' => 'generarHelp',
+	'uses' =>'Api\MenuController@generarHelp'
+]);
+

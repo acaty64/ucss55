@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(3);
+var bind = __webpack_require__(4);
 var isBuffer = __webpack_require__(19);
 
 /*global toString:true*/
@@ -404,6 +404,12 @@ module.exports = g;
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(18);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
@@ -424,10 +430,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(5);
+    adapter = __webpack_require__(6);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(5);
+    adapter = __webpack_require__(6);
   }
   return adapter;
 }
@@ -498,10 +504,10 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -519,7 +525,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -709,7 +715,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -720,7 +726,7 @@ var settle = __webpack_require__(22);
 var buildURL = __webpack_require__(24);
 var parseHeaders = __webpack_require__(25);
 var isURLSameOrigin = __webpack_require__(26);
-var createError = __webpack_require__(6);
+var createError = __webpack_require__(7);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(27);
 
 module.exports = function xhrAdapter(config) {
@@ -896,7 +902,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -921,7 +927,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -933,7 +939,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -959,7 +965,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -1068,15 +1074,15 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(11);
+__webpack_require__(12);
 module.exports = __webpack_require__(46);
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1086,7 +1092,7 @@ module.exports = __webpack_require__(46);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(12);
+__webpack_require__(13);
 
 window.Vue = __webpack_require__(36);
 window.VueRouter = __webpack_require__(39);
@@ -1097,19 +1103,20 @@ window.VueRouter = __webpack_require__(39);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', __webpack_require__(40));
-Vue.component('menu-component', __webpack_require__(43));
+//Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('menu-component', __webpack_require__(40));
+Vue.component('help-component', __webpack_require__(43));
 
 var app = new Vue({
   el: '#app'
 });
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(13);
+window._ = __webpack_require__(14);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -1118,9 +1125,9 @@ window._ = __webpack_require__(13);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(15);
+  window.$ = window.jQuery = __webpack_require__(16);
 
-  __webpack_require__(16);
+  __webpack_require__(17);
 } catch (e) {}
 
 /**
@@ -1129,7 +1136,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(17);
+window.axios = __webpack_require__(2);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -1163,7 +1170,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -18252,10 +18259,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(14)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(15)(module)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -18283,7 +18290,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -28543,7 +28550,7 @@ return jQuery;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 /*!
@@ -30926,12 +30933,6 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(18);
-
-/***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30939,9 +30940,9 @@ module.exports = __webpack_require__(18);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(3);
+var bind = __webpack_require__(4);
 var Axios = __webpack_require__(20);
-var defaults = __webpack_require__(2);
+var defaults = __webpack_require__(3);
 
 /**
  * Create an instance of Axios
@@ -30974,9 +30975,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(8);
+axios.Cancel = __webpack_require__(9);
 axios.CancelToken = __webpack_require__(34);
-axios.isCancel = __webpack_require__(7);
+axios.isCancel = __webpack_require__(8);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -31024,7 +31025,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(2);
+var defaults = __webpack_require__(3);
 var utils = __webpack_require__(0);
 var InterceptorManager = __webpack_require__(29);
 var dispatchRequest = __webpack_require__(30);
@@ -31129,7 +31130,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(6);
+var createError = __webpack_require__(7);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -31564,8 +31565,8 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(31);
-var isCancel = __webpack_require__(7);
-var defaults = __webpack_require__(2);
+var isCancel = __webpack_require__(8);
+var defaults = __webpack_require__(3);
 var isAbsoluteURL = __webpack_require__(32);
 var combineURLs = __webpack_require__(33);
 
@@ -31724,7 +31725,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(8);
+var Cancel = __webpack_require__(9);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -42882,7 +42883,7 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(5)))
 
 /***/ }),
 /* 39 */
@@ -45520,130 +45521,11 @@ if (inBrowser && window.Vue) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(9)
+var normalizeComponent = __webpack_require__(10)
 /* script */
 var __vue_script__ = __webpack_require__(41)
 /* template */
 var __vue_template__ = __webpack_require__(42)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/ExampleComponent.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7168fb6a", Component.options)
-  } else {
-    hotAPI.reload("data-v-7168fb6a", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
-});
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
-          _c("div", { staticClass: "panel panel-default" }, [
-            _c("div", { staticClass: "panel-heading" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "panel-body" }, [
-              _vm._v(
-                "\n                    I'm an example component!\n                "
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-7168fb6a", module.exports)
-  }
-}
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(9)
-/* script */
-var __vue_script__ = __webpack_require__(44)
-/* template */
-var __vue_template__ = __webpack_require__(45)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45682,11 +45564,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 44 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -45708,141 +45592,126 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['type_id'],
     mounted: function mounted() {
         console.log('MenuComponent mounted.');
     },
+
+
+    created: function created() {
+        this.getItems();
+    },
+
     data: function data() {
         return {
-            loading: false,
-            items: [{
-                name: 'Inicio',
-                href: 'home',
-                level: 0,
-                order: 0
-            }, {
-                name: 'Menus',
-                href: 'menu/index',
-                level: 0,
-                order: 1
-            }, {
-                name: 'Generar',
-                //href: 'submenu',
-                level: 0,
-                order: 2,
-                submenu: [{
-                    name: 'Generar Ayuda',
-                    href: 'menu/generarHelp',
-                    level: 1,
-                    order: 2
-                }, {
-                    name: 'Generar Menus',
-                    href: 'menu/generar',
-                    level: 1,
-                    order: 2
-                }]
-            }, {
-                name: 'Tipos de Usuarios',
-                href: 'route("type.index")',
-                level: 0,
-                order: 3
-            }, {
-                name: 'Asignacion de Menus',
-                href: 'route("menutype.index")',
-                level: 0,
-                order: 4
-            }]
-
+            items: []
         };
+    },
+
+
+    methods: {
+        getItems: function getItems() {
+            var _this = this;
+
+            var URLdomain = window.location.host;
+            var protocol = window.location.protocol;
+            var urlItems = protocol + '//' + URLdomain + '/api/generar/' + this.type_id;
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(urlItems).then(function (response) {
+                _this.items = response.data;
+            });
+        }
     }
+
+    /*                items: [
+                        {
+                            'id' : 1, 
+                            'name' : 'Inicio', 
+                            'href' : 'home', 
+                            'sw_auth' : false, 
+                            'help' : 'Regresa a definir facultad y sede a acceder.', 
+                        },
+                        {
+                            'id' : 2, 
+                            'name' : 'Menus', 
+                            'href':  'menu.index', 
+                            'sw_auth' : true, 
+                            'help' : 'Definición de opciones de menues.', 
+                        },
+                        {
+                            'id' : 3, 
+                            'name' : 'Generar', 
+                            'sw_auth' : false, 
+                            'help' : 'Generar archivos de Navegación y Ayuda.', 
+                            'submenu': [
+                                    {'id' : 8, 'name' : 'Generar A'},
+                                    {'id' : 9, 'name' : 'Generar B'},
+                                ],
+                        },
+                        {'id' : 4, 'name' : 'Generar Menus', 'href':  'menu.generar', 'sw_auth' : true, },
+                        {'id' : 5, 'name' : 'Generar Ayuda', 'href' : 'menu.generarhelp', 'sw_auth' : true, },
+                        {'id' : 6, 'name' : 'Tipos de Usuarios', 'href' : 'type.index', 'sw_auth' : true, 'help' : 'CRUD Tipo de usuario.', },
+                        {'id' : 7, 'name' : 'Asignacion de Menus', 'href' : 'menutype.index', 'sw_auth' : true, 'help' : 'Asignación de opciones de menú a Tipo de Usuario.', },
+                    ],
+    
+            computed() {
+                return{
+                    isSubmenu: function (item) {
+                        return [this.item.href == 'submenu', true, false];
+                    },
+                }
+            },
+    
+    
+            <li v-for="item in items" :class="[ item.href == 'submenu' ? '' : 'dropdown']">
+                <div v-if="isSubmenu(item)">
+                    {{ item.name }}               
+                </div>
+                <div v-else>
+                    <a href="#" v-link="{{ item.href }}">{{ item.name }}</a>
+                </div>
+                {{item.name}}
+            </li>
+    
+    
+    
+            <div v-if="submenu == false">
+                <li><a href={{item.href}}>{{item.name}}</a></li>
+            </div>
+            <div v-if="submenu">
+                <li class='dropdown'>
+                    <a href='#' class='dropdown-toggle' role='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>{{item.name}}<span class='caret'></span></a>
+                    <ul class='dropdown-menu'aria-labelledby='dropdownMenu2'>
+                        <template v-for="subitem in item.submenu">
+                            <li><a href={{subitem.href}}>{{subitem.name}}</a></li>
+                        </template>
+                    </ul>
+                </li>
+            </div>
+    
+            ready: function() {
+                this.loading = true;
+                this.$http.get('/api/generar/{{Session::get("type_id")}}/{{ Auth::user()->id }}')
+                .then(function (response) {
+                    this.items = response.data;
+                    this.loading = false;
+                });
+            },        
+            computed:{
+                submenu: function () {
+                    if(this.item.href == 'submenu'){
+                        return true;
+                    }
+                    return false;
+                }
+           },
+    */
+
 });
 
-/*                items: [
-                    {
-                        'id' : 1, 
-                        'name' : 'Inicio', 
-                        'href' : 'home', 
-                        'sw_auth' : false, 
-                        'help' : 'Regresa a definir facultad y sede a acceder.', 
-                    },
-                    {
-                        'id' : 2, 
-                        'name' : 'Menus', 
-                        'href':  'menu.index', 
-                        'sw_auth' : true, 
-                        'help' : 'Definición de opciones de menues.', 
-                    },
-                    {
-                        'id' : 3, 
-                        'name' : 'Generar', 
-                        'sw_auth' : false, 
-                        'help' : 'Generar archivos de Navegación y Ayuda.', 
-                        'submenu': [
-                                {'id' : 8, 'name' : 'Generar A'},
-                                {'id' : 9, 'name' : 'Generar B'},
-                            ],
-                    },
-                    {'id' : 4, 'name' : 'Generar Menus', 'href':  'menu.generar', 'sw_auth' : true, },
-                    {'id' : 5, 'name' : 'Generar Ayuda', 'href' : 'menu.generarhelp', 'sw_auth' : true, },
-                    {'id' : 6, 'name' : 'Tipos de Usuarios', 'href' : 'type.index', 'sw_auth' : true, 'help' : 'CRUD Tipo de usuario.', },
-                    {'id' : 7, 'name' : 'Asignacion de Menus', 'href' : 'menutype.index', 'sw_auth' : true, 'help' : 'Asignación de opciones de menú a Tipo de Usuario.', },
-                ],
-
-        computed() {
-            return{
-                isSubmenu: function (item) {
-                    return [this.item.href == 'submenu', true, false];
-                },
-            }
-        },
-
-
-        <li v-for="item in items" :class="[ item.href == 'submenu' ? '' : 'dropdown']">
-            <div v-if="isSubmenu(item)">
-                {{ item.name }}               
-            </div>
-            <div v-else>
-                <a href="#" v-link="{{ item.href }}">{{ item.name }}</a>
-            </div>
-            {{item.name}}
-        </li>
-
-
-
-        <div v-if="submenu == false">
-            <li><a href={{item.href}}>{{item.name}}</a></li>
-        </div>
-        <div v-if="submenu">
-            <li class='dropdown'>
-                <a href='#' class='dropdown-toggle' role='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>{{item.name}}<span class='caret'></span></a>
-                <ul class='dropdown-menu'aria-labelledby='dropdownMenu2'>
-                    <template v-for="subitem in item.submenu">
-                        <li><a href={{subitem.href}}>{{subitem.name}}</a></li>
-                    </template>
-                </ul>
-            </li>
-        </div>
-
-        ready: function() {
-            this.loading = true;
-            this.$http.get('/api/generar/{{Session::get("type_id")}}/{{ Auth::user()->id }}')
-            .then(function (response) {
-                this.items = response.data;
-                this.loading = false;
-            });
-        },        
-        computed:{
-            submenu: function () {
-                if(this.item.href == 'submenu'){
-                    return true;
-                }
-                return false;
-            }
-       },
-*/
-
 /***/ }),
-/* 45 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45915,6 +45784,183 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-7d319ab7", module.exports)
+  }
+}
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(10)
+/* script */
+var __vue_script__ = __webpack_require__(44)
+/* template */
+var __vue_template__ = __webpack_require__(45)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/HelpComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6656ffd6", Component.options)
+  } else {
+    hotAPI.reload("data-v-6656ffd6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['type_id'],
+    mounted: function mounted() {
+        console.log('Help-Component mounted.');
+    },
+
+
+    created: function created() {
+        this.getHelps();
+    },
+
+    data: function data() {
+        return {
+            helps: [],
+            helpPanel: ""
+        };
+    },
+
+
+    methods: {
+        getHelps: function getHelps() {
+            var _this = this;
+
+            var URLdomain = window.location.host;
+            var protocol = window.location.protocol;
+            var urlHelps = protocol + '//' + URLdomain + '/api/generarHelp/' + this.type_id;
+            console.log('urlHelps: ' + urlHelps);
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(urlHelps).then(function (response) {
+                _this.helps = response.data;
+                console.log('helps: ' + _this.helps);
+                _this.helpView(1);
+            });
+        },
+
+        helpView: function helpView(id) {
+            this.helpPanel = this.findById(this.helps, id);
+        },
+
+        findById: function findById(helps, id) {
+            for (var i in helps) {
+                if (helps[i].id == id) {
+                    return helps[i];
+                }
+            }
+            return null;
+        }
+    }
+});
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "panel-body", attrs: { id: "help_app" } }, [
+    _c(
+      "div",
+      { staticClass: "conteiner", staticStyle: { "margin-top": "0px" } },
+      [
+        _c(
+          "ul",
+          { staticClass: "nav nav-tabs" },
+          _vm._l(_vm.helps, function(help) {
+            return _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: { "data-toggle": "tab" },
+                  on: {
+                    click: function($event) {
+                      _vm.helpView(help.id)
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(help.name))]
+              )
+            ])
+          })
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "tab-content" }, [
+          _c("h4", [_vm._v(_vm._s(_vm.helpPanel.name) + " ")]),
+          _vm._v(
+            "\n                " + _vm._s(_vm.helpPanel.help) + " \n        "
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6656ffd6", module.exports)
   }
 }
 

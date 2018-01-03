@@ -40,11 +40,16 @@
                                 <h3>Bienvenidos</h3>
                                 <!-&nbsp;->
                             </ul>
-                        @else
-                            <div class="nav navbar-nav">
-                                <Menu-Component></Menu-Component>
-                            </div>
                         @endguest
+                        @auth
+                            @if( Session::get('facultad_id') != 0 )
+                                <div class="nav navbar-nav">
+                                    <Menu-Component 
+                                        :type_id="{{ Session::get('type_id') }}">
+                                    </Menu-Component>
+                                </div>
+                            @endif
+                        @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -79,6 +84,7 @@
         </nav>
 
         @yield('content')
+        @yield('view')
     </div>
 
     <!-- Scripts -->

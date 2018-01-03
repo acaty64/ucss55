@@ -17,8 +17,9 @@ window.VueRouter = require('vue-router');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+//Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('menu-component', require('./components/MenuComponent.vue'));
+Vue.component('help-component', require('./components/HelpComponent.vue'));
 
 const app = new Vue({
     el: '#app'

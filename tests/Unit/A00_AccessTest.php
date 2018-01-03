@@ -8,13 +8,7 @@ use Tests\TestCase;
 
 class A00_AccessTest extends TestCase
 {
-    public function testAccess()
-    {
-        $this->get('/')
-        	->assertStatus(200);
-    }
-
-    function test_auth_preliminar_value()
+    public function test_get_MenuApi()
     {
         // Having
         $user = User::create([
@@ -22,18 +16,20 @@ class A00_AccessTest extends TestCase
                 'email' => 'jdoe@gmail.com',
                 'password'  => bcrypt('secret')
             ]);
-        // Check database
-        $this->assertDatabaseHas('users',[
-            'name' => 'Jane Doe',
-            'email' => 'jdoe@gmail.com'
-        ]);
-
+        $array = [
+            'name' => 'Inicio',
+            'href' => '/home',
+            "help" => "Regresa a definir facultad y sede a acceder.",
+            "type_id" => 5,
+            "menu_id" => 1,            
+            'level' => 0,
+            'order' => 0,
+        ];
         // Acting
-        $this->get('/login')
-            ->assertStatus(200);
-
-        $response = $this->actingAs($user, 'web')
-            ->get('/home')
-            ->assertStatus(200);
+        $type_id = '5';  // Administrador
+        $auth_id = $user->id ;
+        $this->actingAs($user)
+            ->get('api/generar/'.$type_id.'/'.$auth_id)
+            ->assertJSONFragment($array);
     }
 }

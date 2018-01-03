@@ -19,63 +19,34 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
+        props: ['type_id'],
         mounted() {
-            console.log('MenuComponent mounted.')
+            console.log('MenuComponent mounted.');
         },
+
+        created: function () {
+            this.getItems();
+        },
+
         data() {
             return {
-                loading: false,
-                items:[
-                    {
-                        name: 'Inicio',
-                        href: 'home',
-                        level: 0,
-                        order: 0,
-                    },
-                    {
-                        name: 'Menus',
-                        href: 'menu/index',
-                        level: 0,
-                        order: 1,
-                    },
-                    {
-                        name: 'Generar',
-                        //href: 'submenu',
-                        level: 0,
-                        order: 2,
-                        submenu: 
-                        [
-                            {
-                                name: 'Generar Ayuda',
-                                href: 'menu/generarHelp',
-                                level:1,
-                                order:2,
-                            },
-                            {
-                                name: 'Generar Menus',
-                                href: 'menu/generar',
-                                level:1,
-                                order:2,
-                            },
-                        ],
-                    },
-                    {
-                        name: 'Tipos de Usuarios',
-                        href: 'route("type.index")',
-                        level: 0,
-                        order: 3,
-                    },
-                    {
-                        name: 'Asignacion de Menus',
-                        href: 'route("menutype.index")',
-                        level: 0,
-                        order: 4,
-                    },
-                ],
-
+                items:[],
             }
         },
+
+        methods: {
+            getItems: function () {
+                var URLdomain = window.location.host;
+                var protocol = window.location.protocol;
+                var urlItems = protocol+'//'+URLdomain+'/api/generar/'+this.type_id;
+                axios.get(urlItems).then(response=>{
+                    this.items = response.data
+                });
+            },
+        },
+
     }
 
 

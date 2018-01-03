@@ -41,6 +41,35 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+        'master' => [
+            'web',
+            'auth',
+            'can:is_master,'.Acceso::class,
+        ],
+
+        'consulta' => [
+            'web',
+            'auth',
+            Authorize::class.':is_consulta,'.Acceso::class,
+        ],
+
+        'docente' => [
+            'web',
+            'auth',
+            'can:is_docente,'.Acceso::class,
+        ],
+
+        'responsable' => [
+            'web',
+            'auth',
+            'can:is_responsable,'.Acceso::class,
+        ],
+
+        'admin' => [
+            'web',
+            'auth',
+            'can:is_admin,'.Acceso::class,
+        ], 
     ];
 
     /**
@@ -57,5 +86,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'Access' => Styde\Html\Facades\Access::class,
     ];
 }

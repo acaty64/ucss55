@@ -13,8 +13,16 @@
 
 Route::get('/', function () {
     return view('auth.login');
+    //return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', [
+	'as'	=> 'home',
+	'uses'	=> 'HomeController@index']);
+
+Route::post('/home/acceso', [
+	'as'	=> 'home.acceso',
+	'uses'	=> 'HomeController@acceso',	
+]);
