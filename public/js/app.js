@@ -45887,10 +45887,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var URLdomain = window.location.host;
             var protocol = window.location.protocol;
             var urlHelps = protocol + '//' + URLdomain + '/api/generarHelp/' + this.type_id;
-            console.log('urlHelps: ' + urlHelps);
+            //console.log('urlHelps: '+urlHelps);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(urlHelps).then(function (response) {
                 _this.helps = response.data;
-                console.log('helps: ' + _this.helps);
                 _this.helpView(1);
             });
         },
