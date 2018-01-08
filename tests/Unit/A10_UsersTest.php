@@ -28,7 +28,7 @@ class A10_UsersTest extends TestCase
 
       // Then
       $response = $this->get('administrador/user/index')
-          ->assertSuccessful();
+          ->assertViewIs('admin.user.index');
       //Then -> view Laravel DUSK
       //$response->assertStatus(200);
    }
