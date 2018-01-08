@@ -40,12 +40,12 @@ class A10_UsersTest extends TestCase
   		//Having an administrator user
   		$admin = factory(User::class)->create();
 
-  		$facultad_id = 1;
-  		$sede_id = 1;
-      $type_id = 5;
-  		$this->authUser($admin->id, $facultad_id, $sede_id, $type_id);
-
       $response = $this->actingAs($admin);
+      
+      $facultad_id = 1;
+      $sede_id = 1;
+      $type_id = 5;
+      $this->authUser($admin->id, $facultad_id, $sede_id, $type_id);
 
       // When
       $newUser = [
