@@ -13,6 +13,9 @@ use Tests\TestCase;
 
 class A10_UsersTest extends TestCase
 {
+    /**
+     * @medium
+     */
    function test_list_the_users()
    {
       //Having an administrator user
