@@ -11,11 +11,12 @@ class A00_AccessTest extends TestCase
     public function test_get_MenuApi()
     {
         // Having
-        $user = User::create([
+        $user = User::find(1);
+        /*$user = User::where([
                 'name' => 'Jane Doe',
                 'email' => 'jdoe@gmail.com',
                 'password'  => bcrypt('secret')
-            ]);
+            ]);*/
         $array = [
             'name' => 'Inicio',
             'href' => '/home',
