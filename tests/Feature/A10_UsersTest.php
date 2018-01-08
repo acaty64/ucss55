@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Feature;
 
 use App\Acceso;
 use App\DataUser;
@@ -23,16 +23,20 @@ class A10_UsersTest extends TestCase
       $facultad_id = 1;
       $sede_id = 1;
 
-      $this->authUser($user->id, $facultad_id, $sede_id, 5);
       $response = $this->actingAs($user);
 
-      // Then
-      $response = $this->get('administrador/user/index');
+      // Primero se logea
+      $this->authUser($user->id, $facultad_id, $sede_id, 5);
 
+      // Then
+      $response = $this->get('administrador/user/index')
+                ->assertStatus(200);
+/*
       $this-> markTestIncomplete (
           "Esta prueba no se ha implementado todavía: ->assertStatus(200) Da error en CodeShip"
         );
 //          ->assertStatus(200);
+*/
    }
 
 	function test_create_a_guest_user()
@@ -56,8 +60,7 @@ class A10_UsersTest extends TestCase
 
       $cdocente = DataUser::find(1)->newcodigo();
       $response = $this->post('administrador/user/store', $newUser);
-$user = User::all()->last();
-dd($user);
+
       //Then
       $this->assertDatabaseHas('users',[
         'name'=>'John Doe',
