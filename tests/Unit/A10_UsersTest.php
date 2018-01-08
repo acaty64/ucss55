@@ -56,7 +56,8 @@ class A10_UsersTest extends TestCase
 
       $cdocente = DataUser::find(1)->newcodigo();
       $response = $this->post('administrador/user/store', $newUser);
-
+$user = User::all()->last();
+dd($user);
       //Then
       $this->assertDatabaseHas('users',[
         'name'=>'John Doe',
