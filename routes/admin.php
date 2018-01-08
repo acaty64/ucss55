@@ -17,15 +17,11 @@ Route::get('user/create', [
 		'uses'	=> 'admin\UserController@create',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
-Route::post('user/store', function()
-{
-	dd('route admin.php');
-})->middleware('can:is_admin,'.Acceso::class);
-	/*[
+Route::post('user/store', [
 		'as'	=> 'admin.user.store',
 		'uses'	=> 'admin\UserController@store',	
 	])->middleware('can:is_admin,'.Acceso::class);
-*/
+
 Route::get('user/edit/{user_id}', [
 		'as'	=> 'admin.user.edit',
 		'uses'	=> 'admin\UserController@edit',	
