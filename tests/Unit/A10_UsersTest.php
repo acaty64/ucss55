@@ -27,9 +27,10 @@ class A10_UsersTest extends TestCase
       $response = $this->actingAs($user);
 
       // Then
-      $response = $this->get('administrador/user/index');
+      $response = $this->get('administrador/user/index')
+          ->assertSuccessful();
       //Then -> view Laravel DUSK
-      $response->assertStatus(200);
+      //$response->assertStatus(200);
    }
 
 	function test_create_a_guest_user()
