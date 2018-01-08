@@ -8,13 +8,19 @@ use Tests\TestCase;
 
 class A01_AccessTest extends TestCase
 {
-    public function test_access()
+    /**
+     * @test
+     */
+    public function init_access()
     {
         $this->get('/')
         	->assertStatus(200);
     }
 
-    function test_auth_value()
+    /**
+     * @test
+     */
+    function auth_access()
     {
         // Having
         $user = User::create([

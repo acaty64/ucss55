@@ -13,7 +13,10 @@ use Tests\TestCase;
 
 class A02_AccessTest extends TestCase
 {
-    function test_administrador_Access()
+    /**
+     * @test
+     */
+    function administrador_Access()
     {
         // Having
         $user = User::find(3); 

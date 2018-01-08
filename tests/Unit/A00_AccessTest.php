@@ -8,7 +8,10 @@ use Tests\TestCase;
 
 class A00_AccessTest extends TestCase
 {
-    public function test_get_MenuApi()
+    /**
+     * @test
+     */
+    public function get_MenuApi()
     {
         // Having
         $user = User::find(1);

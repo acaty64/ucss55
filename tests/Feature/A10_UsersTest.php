@@ -14,9 +14,10 @@ use Tests\TestCase;
 class A10_UsersTest extends TestCase
 {
     /**
+     * @test
      * @medium
      */
-   function test_list_the_users()
+   function list_the_users()
    {
       //Having an administrator user
       $user = factory(User::class)->create();
@@ -39,7 +40,10 @@ class A10_UsersTest extends TestCase
 */
    }
 
-	function test_create_a_guest_user()
+    /**
+     * @test
+     */
+	function create_a_new_user()
    {
   		//Having an administrator user
   		$admin = factory(User::class)->create();
