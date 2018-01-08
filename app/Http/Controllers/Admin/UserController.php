@@ -68,6 +68,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+dd($request->all());
         $cdocente = DataUser::find(1)->newcodigo();
 
         // Recibe los datos del formulario de resources\admin\users\create.blade.php
