@@ -20,6 +20,7 @@ window.VueRouter = require('vue-router');
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('menu-component', require('./components/MenuComponent.vue'));
 Vue.component('help-component', require('./components/HelpComponent.vue'));
+Vue.component('userindex-component', require('./components/UserIndexComponent.vue'));
 
 const app = new Vue({
     el: '#app'

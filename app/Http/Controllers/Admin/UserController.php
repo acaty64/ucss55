@@ -17,12 +17,18 @@ use Laracasts\Flash\Flash;
 
 class UserController extends Controller
 {
+
+
+    public function index()
+    {
+        return view('admin.user.index');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function indexbk(Request $request)
     {
         $facultad_id = Session::get('facultad_id');
         $sede_id = Session::get('sede_id');

@@ -13,9 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/**
+ * Dcurso's Api Route
+ *
+ */
 
 Route::post('dcurso/index', [
 		'as'	=> 'api.dcurso.index',
@@ -27,6 +28,17 @@ Route::post('dcurso/update', [
 		'as'	=> 'api.dcurso.update',
 		'uses'	=> 'api\DcursoController@update',	
 	]);
+
+/**
+ * Users's Api Route
+ *
+ */
+
+//Route::middleware('auth:api')->get('generar/{type_id}/{auth_id?}', [
+Route::get('user/index/{facultad_id}/{sede_id}/{page?}', [
+	'as' => 'user.index',
+	'uses' =>'Api\UserController@index'
+]);
 
 
 /**
@@ -47,3 +59,8 @@ Route::get('generarHelp/{type_id}', [
 	'uses' =>'Api\MenuController@generarHelp'
 ]);
 
+/*
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+*/

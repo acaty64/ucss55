@@ -1,0 +1,285 @@
+<template>
+    <div> 
+        <div class="container">
+            <span v-show="ctype == 'Administrador'">
+                <a href="/administrador/user/create" class="btn btn-info">Registrar Nuevo Usuario</a>               
+            </span>
+        </div>     
+        <br>      
+        <table class="table table-striped table-condensed table-hover">
+            <thead>
+                <th>id</th>
+                <th>Código</th>
+                <th>Usuario</th>
+                <th>Docente</th>
+                <th>Tipo</th>
+                <th>Acción</th>
+            </thead>
+            <tbody>  
+                <tr v-for="user in users"> 
+                    <td>{{ user.user_id }}</td>
+                    <td>{{ user.cdocente }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.wdocente }}</td>
+                    <td>{{ user.ctype }}</td>
+                    <td>
+                        <span v-for="button in user.buttons">
+                            <a :href=button.href :class=button.color data-toggle="tooltip" :title=button.title ><span :class=button.icon aria-hidden='true'></span></a>
+                        </span>                        
+                    </td>                    
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li v-if="pagination.current_page > 1">     
+                    <a href="#" @click.prevent="changePage(pagination.current_page - 1)">   
+                        <span>Atrás</span>  
+                    </a>    
+                </li>     
+                <li  v-for="page in pagesNumber" v-bind:class="[ page == isActived ? 'active' : ''  ]" >     
+                    <a href="#" @click.prevent="changePage( page )">    
+                        {{ page }} 
+                    </a>    
+                </li>     
+                <li v-if="pagination.current_page < pagination.last_page">
+                    <a href="#" @click.prevent="changePage(pagination.current_page + 1)">   
+                        <span>Siguiente</span>  
+                    </a>    
+                </li>     
+            </ul>
+        </nav>
+    </div>
+</template>
+
+<script>
+    import axios from 'axios';
+    export default {
+        mounted() {
+            this.getUsers(this.page);
+            
+            console.log('UserIndexComponent mounted.');
+        },
+
+        props: ['ctype', 'facultad_id', 'sede_id'],
+        data() {
+            return {
+                users:[],
+                /* DATA for pagination INIT */
+                page:0,
+                offset: 4,                 
+                pagination: { 
+                    'total' :0, 
+                    'current_page'  :0, 
+                    'per_page'  :0, 
+                    'last_page' :0, 
+                    'from'  :0, 
+                    'to'  :0, 
+                },    
+                /* DATA for pagination END */
+
+                /* DATA for buttons INIT */
+                buttons:[],
+                //byAllButtons:[],
+                AllButtons: {
+                    'datauser-show': {
+                            'href': "/consulta/datauser/show/",
+                            'user_id': true,
+                            'title': "Ver Datos Personales",
+                            'color': 'warning',
+                            'icon': "user",
+                    },
+                    'datauser-edit': {
+                            'href': "/consulta/datauser/edit/",
+                            'user_id': true,
+                            'title': "Modificar Datos Personales",
+                            'color': 'success',
+                            'icon': "earphone",
+                    },
+
+                    'mody-user': {
+                            'href': "/administrador/user/edit/",
+                            'user_id': true,
+                            'title': "Modificar usuario",
+                            'color': 'warning',
+                            'icon': "user",
+                    },                        
+                    'edit-pass': {
+                            'href': "/administrador/user/editpass/",
+                            'user_id': true,
+                            'title': "Modificar password",
+                            'color': 'danger',
+                            'icon': "lock",
+                    },
+                    'destroy': {
+                            'href': "/administrador/user/destroy/",
+                            'user_id': true,
+                            'title': "Eliminar usuario",
+                            'color': 'danger',
+                            'icon': "trash",
+                    },
+                    'acceso': {
+                            'href': "/administrador/acceso/edit/",
+                            'user_id': true,
+                            'title': "Modificar acceso del usuarioo",
+                            'color': 'warning',
+                            'icon': "ok",
+                    },
+
+                    'dhora': {
+                            'href': "/administrador/dhora/edit/",
+                            'user_id': true,
+                            'title': "Disponibilidad Horaria",
+                            'color': 'success',
+                            'icon': "calendar",
+                    },                    
+                    'dcurso': {
+                            'href': "/administrador/dcurso/edit/",
+                            'user_id': true,
+                            'color': 'success',
+                            'title': "Disponibilidad de Cursos",
+                            'icon': "list-alt",
+                    },
+                },
+                UserButtons: {
+                    'Master' : [],
+                    'Coordinador' : [
+                        'edit-pass',
+                        'datauser-edit',
+                        'dhora',
+                        'dcurso',
+                    ],
+                    'Docente' : [
+                        'edit-pass',
+                        'datauser-edit',
+                        'dhora',
+                        'dcurso',
+                    ],
+                    'Consulta': [
+                        'datauser-show',
+                        'dhora',
+                    ],
+                    'Administrador': [
+                        'mody-user',
+                        'edit-pass',
+                        'destroy',
+                        'acceso',
+                        'datauser-edit',
+                        'dhora',
+                        'dcurso',
+                    ],
+                },
+
+                /* DATA for buttons END*/
+            }
+        },
+        methods: {
+            getUsers: function (page) {
+                var protocol = window.location.protocol;
+                var URLdomain = window.location.host;
+                var urlItems = protocol+'//'+URLdomain+'/api/user/index/'+this.facultad_id+'/'+this.sede_id+'?page='+page;
+                axios.get(urlItems).then(response=>{
+                    this.pagination = response.data.pagination;
+                    this.users = response.data.users.data;
+                    this.defineButtons();
+                })
+                .catch(() => {
+                    console.log('handle server error from UserIndexComponent.vue');
+                });                
+            },
+
+            /* METHODS for pagination INIT */
+            changePage(page) {
+                this.pagination.current_page = page;
+                this.getUsers(page);
+                this.$emit('setPage' , page);
+            },          
+            /* METHODS for pagination END */
+
+            /* METHODS for buttons INIT */
+            defineButtons: function() {
+                for (var user in this.users){
+                    var ctype = this.users[user].ctype;
+                    this.buttons = [];
+                    var xAllButtons = [];
+                    var xAllButtons = this.AllButtons;
+
+                    for(var xbutton in this.UserButtons[ctype]){
+                        var opcion = this.UserButtons[ctype][xbutton];
+
+                        xAllButtons[opcion]['icon'] = "glyphicon glyphicon-"+xAllButtons[opcion]['icon'];
+
+                        xAllButtons[opcion]['color'] = "btn btn-"+xAllButtons[opcion]['color'];
+
+                        if(xAllButtons[opcion]['user_id']){
+                            xAllButtons[opcion]['href'] = 
+                                xAllButtons[opcion]['href'] 
+                                + this.users[user].user_id;
+                        };
+                        this.buttons.push(xAllButtons[opcion]);
+                    };
+
+                    if(this.buttons != ''){
+                        this.users[user].buttons = this.buttons;
+                    };
+                };
+            },
+            /* METHODS for buttons END */
+
+        },
+
+        computed: {     
+            /* COMPUTED for pagination INIT */
+            isActived : function() {    
+                return this.pagination.current_page;    
+            },      
+            pagesNumber : function() {    
+                if( !this.pagination.to ) {   
+                  return [];  
+                }   
+                    
+                var from = this.pagination.current_page - this.offset ;   
+                if( from < 1 ){   
+                  from = 1 ;  
+                }   
+                    
+                var to = from + ( this.offset * 2 );    
+                if( to >= this.pagination.last_page ){    
+                  to = this.pagination.last_page; 
+                }   
+                    
+                var pagesArray = [];    
+                while( from <= to ) {   
+                  pagesArray.push( from );  
+                  from++; 
+                }   
+                    
+                return pagesArray;    
+                    
+            },      
+            /* COMPUTED for pagination END */
+                
+        },  
+
+    }
+
+    /*
+
+    <div>
+        
+    <select v-model="typeSelected">
+        <option v-for="type in types" v-bind:value="type.name">
+            {{ type.name }}
+        </option>
+    </select>
+    </div>
+
+    <p><a @click="searchText">Filtrar</a></p>
+        <form @submit.prevent="searchName">
+            <input v-model="searchText" type="text" class="form-control">
+            <button class="btn btn-primary">Filtrar</button>
+        </form>
+
+
+    */
+</script>
