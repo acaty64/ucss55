@@ -20,8 +20,8 @@ Route::get('user/create', [
 Route::post('user/store', function()
 {
 	dd('route admin.php');
-});
-/*	[
+})->middleware('can:is_admin,'.Acceso::class);
+	/*[
 		'as'	=> 'admin.user.store',
 		'uses'	=> 'admin\UserController@store',	
 	])->middleware('can:is_admin,'.Acceso::class);
