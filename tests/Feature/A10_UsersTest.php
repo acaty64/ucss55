@@ -42,7 +42,7 @@ class A10_UsersTest extends TestCase
 
     /**
      * @test
-     */
+     *
 	function create_a_new_user()
    {
   		//Having an administrator user
@@ -87,4 +87,5 @@ class A10_UsersTest extends TestCase
         'type_id'=> 2
       ]);
 	}
+*/
 }
