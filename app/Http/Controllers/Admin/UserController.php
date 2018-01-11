@@ -17,7 +17,7 @@ use Laracasts\Flash\Flash;
 
 class UserController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         return view('admin.user.index');
     }
