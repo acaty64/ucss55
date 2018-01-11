@@ -19,7 +19,6 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
-dd('UserController index');
         return view('admin.user.index');
     }
     /**
