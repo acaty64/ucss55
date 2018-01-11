@@ -30,7 +30,7 @@ class A10_UsersTest extends TestCase
       $response = $this->actingAs($user);
 
       $this->authUser($user->id, $facultad_id, $sede_id, $type_id);
-dd(\Cache::get('ctype'));
+      
       // Then
       $response = $this->get('administrador/user/index')
                 ->assertStatus(200);
