@@ -26,9 +26,10 @@ trait TestsHelper
 
     public function authUser($user_id, $facultad_id, $sede_id, $type_id)
     {
-    	$cfacultad = Facultad::find($facultad_id)->cfacultad;
-    	$csede = Sede::find($sede_id)->csede;
-    	$ctype = Type::find($type_id)->name;
+//dd($user_id, $facultad_id, $sede_id, $type_id);
+//    	$cfacultad = Facultad::find($facultad_id)->cfacultad;
+//    	$csede = Sede::find($sede_id)->csede;
+//    	$ctype = Type::find($type_id)->name;
     	
     	Acceso::create([
     		'user_id' => $user_id,
@@ -37,12 +38,15 @@ trait TestsHelper
     		'type_id' => $type_id
     		]);
 
+        Acceso::setAccesoAttributes($facultad_id, $sede_id, $type_id);
+/*
     	Session::put('facultad_id', $facultad_id);
     	Session::put('cfacultad', $cfacultad);
     	Session::put('sede_id', $sede_id);
     	Session::put('csede', $csede);
     	Session::put('type_id', $type_id);
     	Session::put('ctype', $ctype);
+*/
     }
 
 }

@@ -32,6 +32,6 @@ class AccesoPolicy
 
     public function is_admin()
     {
-        return trim(strtolower(Session::get('ctype'))) === 'administrador';
+        return trim(strtolower(\Cache::get('ctype'))) === 'administrador';
     }
 }

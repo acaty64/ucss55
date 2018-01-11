@@ -17,7 +17,7 @@ use Laracasts\Flash\Flash;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         return view('admin.user.index');
     }
@@ -209,5 +209,7 @@ dd('controller UserController@store');
             return redirect()->back();
 
     }
+
+
 
 }

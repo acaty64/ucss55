@@ -6,8 +6,10 @@ use App\DataUser;
 use App\Facultad;
 use App\Type;
 use App\User;
+use App\Sede;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
 
 class Acceso extends Model
@@ -18,8 +20,17 @@ class Acceso extends Model
         'user_id', 'sede_id', 'facultad_id', 'type_id', 'swcierre', 'wdocente', 'dhora', 'dcurso', 'carga'
     ];
 
-    protected function setAccesoAttributes()
+    protected function setAccesoAttributes($facultad_id, $sede_id, $type_id)
     {
+        \Cache::put('facultad_id', $facultad_id, 60);
+        \Cache::put('cfacultad', Facultad::find($facultad_id)->cfacultad, 60);
+        \Cache::put('wfacultad', Facultad::find($facultad_id)->wfacultad, 60);
+        \Cache::put('sede_id', $sede_id, 60);
+        \Cache::put('csede', Sede::find($sede_id)->csede, 60);
+        \Cache::put('type_id', $type_id, 60);
+        \Cache::put('ctype', Type::find($type_id)->name, 60);
+
+/*
         if(Session::get('facultad_id')){
             Auth::User()->setFacultadAttributes(Session::get('facultad_id'), Session::get('cfacultad'));
         } 
@@ -29,6 +40,7 @@ class Acceso extends Model
         if(Session::get('type_id')){
             Auth::User()->setTypeAttributes(Session::get('type_id'), Session::get('ctype'));
         }
+*/
     }
 /**
     public function getWdocenteAttribute()

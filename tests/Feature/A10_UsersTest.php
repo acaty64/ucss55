@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Acceso;
 use App\DataUser;
 use App\User;
+use App\Type;
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -23,11 +24,12 @@ class A10_UsersTest extends TestCase
       $user = factory(User::class)->create();
       $facultad_id = 1;
       $sede_id = 1;
-
-      $response = $this->actingAs($user);
+      $type_id = Type::where('name','Administrador')->first()->id;
 
       // Primero se logea
-      $this->authUser($user->id, $facultad_id, $sede_id, 5);
+      $response = $this->actingAs($user);
+
+      $this->authUser($user->id, $facultad_id, $sede_id, $type_id);
 
       // Then
       $response = $this->get('administrador/user/index')

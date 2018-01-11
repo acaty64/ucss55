@@ -19,20 +19,13 @@ class A02_AccessTest extends TestCase
     function administrador_Access()
     {
         // Having
-        $user = User::find(3); 
+        $user = factory(User::class)->create(); 
         //factory(User::class)->make();
 
         $type = Type::where('name', 'Administrador')->first();
         $facultad = Facultad::find(1);
         $sede = Sede::find(1);
-
-        $acceso = Acceso::create([
-                'user_id'       => $user->id,
-                'facultad_id'   => $facultad->id,
-                'sede_id'       => $sede->id,
-                'type_id'       => $type->id,
-            ]);
-
+        
         $request = [
                 'facultad_id' => $facultad->id,
                 'sede_id'   => $sede->id
@@ -46,7 +39,10 @@ class A02_AccessTest extends TestCase
 */
         // When
         $this->actingAs($user);
-        $this->post('/home/acceso',$request)
+//dd(Auth()->user());
+        $this->authUser($user->id, $facultad->id, $sede->id, $type->id);
+//dd(\Cache::get('user_id'), \Cache::get('cfacultad'), \Cache::get('csede'), \Cache::get('ctype'));
+        $this->post('/home/acceso', $request)
             ->assertStatus(200)
             ->AssertSeeText('Descripción de Opciones');
     }

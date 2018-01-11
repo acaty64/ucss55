@@ -30,6 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        \Cache::flush();
         
         $facultades = Facultad::all();
         foreach ($facultades as $facultad) {
@@ -49,14 +50,17 @@ class HomeController extends Controller
 
     public function acceso(Request $request)
     { 
+
         $facultad=Facultad::find($request->facultad_id);
         $sede=Sede::find($request->sede_id);
-        
+        \Cache::put('facultad_id', $facultad->id, 60);
+        \Cache::put('sede_id', $sede->id, 60);
+/*        
         Session::put('facultad_id',$facultad->id);
         Session::put('cfacultad',$facultad->cfacultad);
         Session::put('sede_id',$sede->id);
         Session::put('csede',$sede->csede);
-
+*/
         $usuario = Auth::user();
 
         if ($usuario->acceder) {

@@ -60,15 +60,29 @@ class User extends Authenticatable
 
     public function getAccederAttribute($value)
     {
-        Acceso::setAccesoAttributes();
-        $ok = Acceso::where('user_id', $this->id)->where('facultad_id', $this->facultad_id)->where('sede_id', $this->sede_id)->first();
-        
-        if (count($ok) && $this->facultad_id) {
+        //Acceso::setAccesoAttributes();
+        $facultad_id = \Cache::get('facultad_id');
+        $sede_id = \Cache::get('sede_id');
+        $ok = Acceso::where('user_id', $this->id)->where('facultad_id', $facultad_id)->where('sede_id', $sede_id)->first();
+    
+        if (count($ok)) {
+
+            Acceso::setAccesoAttributes($facultad_id, $sede_id, $ok->type_id);
+/*
+            \Cache::put('type_id',$ok->type_id, 60);
+            \Cache::put('ctype',$ok->type->name, 60);
+            \Cache::put('wfacultad',$ok->wfacultad, 60);
+            \Cache::put('wsede',$ok->wsede, 60);
+*/
+
+/*
             Session::put('type_id',$ok->type_id);
             Session::put('ctype',$ok->type->name);
             Session::put('wfacultad',$ok->wfacultad);
             Session::put('wsede',$ok->wsede);
-            Acceso::setAccesoAttributes();
+            Acceso::setAccesoAttributes($ok->facultad_id, $ok->sede_id, $ok->type_id);
+*/
+
             return true;
         } else {
             return false;
