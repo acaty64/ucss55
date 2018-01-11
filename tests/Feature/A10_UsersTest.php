@@ -30,10 +30,12 @@ class A10_UsersTest extends TestCase
       $response = $this->actingAs($user);
 
       $this->authUser($user->id, $facultad_id, $sede_id, $type_id);
-      
+
+      $view = "admin.user.index";
       // Then
       $response = $this->get('administrador/user/index')
-                ->assertStatus(200);
+          ->assertViewIs($view);
+//        ->assertStatus(200);
 /*
       $this-> markTestIncomplete (
           "Esta prueba no se ha implementado todavía: ->assertStatus(200) Da error en CodeShip"
