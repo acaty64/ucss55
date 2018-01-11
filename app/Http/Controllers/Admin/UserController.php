@@ -19,6 +19,7 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
+dd("UserController");
         return view('admin.user.index');
     }
     /**
