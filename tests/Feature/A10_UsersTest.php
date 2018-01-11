@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
-class A10_UsersTest extends TestCase
+class A10_Users extends TestCase
 {
     /**
      * @test

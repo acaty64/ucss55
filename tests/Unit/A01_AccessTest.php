@@ -8,13 +8,16 @@ use Tests\TestCase;
 
 class A01_AccessTest extends TestCase
 {
+
     /**
      * @test
      */
     public function init_access()
     {
+        $view = "auth.login";
         $this->get('/')
-        	->assertStatus(200);
+            ->assertViewIs($view);
+//        	->assertStatus(200);
     }
 
     /**
