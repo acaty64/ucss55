@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
-class A10_Users extends TestCase
+class A10_UsersTest extends TestCase
 {
     /**
      * @test
@@ -30,11 +30,11 @@ class A10_Users extends TestCase
       $response = $this->actingAs($user);
 
       $this->authUser($user->id, $facultad_id, $sede_id, $type_id);
-
+dd(\Cache::get('ctype'));
       $view = "admin.user.index";
       // Then
       $response = $this->get('administrador/user/index')
-          ->assertViewIs($view);
+          ->assertViewIs("admin.user.index");
 //        ->assertStatus(200);
 /*
       $this-> markTestIncomplete (

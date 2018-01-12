@@ -16,8 +16,7 @@ class A01_AccessTest extends TestCase
     {
         $view = "auth.login";
         $this->get('/')
-            ->assertViewIs($view);
-//        	->assertStatus(200);
+        	->assertStatus(200);
     }
 
     /**
