@@ -48,6 +48,7 @@
                                         :type_id="{{ \Cache::get('type_id') }}">
                                     </Menu-Component>
                                 </div>
+{{ \Cache::get('ctype') }}
                             @endif
                         @endauth
 
@@ -82,8 +83,11 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+        <div class="container">
+            @include('flash::message')
+            @include('layouts.partials.errors')
+            @yield('content')
+        </div>
         @yield('view')
     </div>
 

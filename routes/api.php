@@ -20,13 +20,13 @@ use Illuminate\Http\Request;
 
 Route::post('dcurso/index', [
 		'as'	=> 'api.dcurso.index',
-		'uses'	=> 'api\DcursoController@index',	
+		'uses'	=> 'Api\DcursoController@index',	
 	]);
 //->middleware('can:is_admin,'.Acceso::class);
 
 Route::post('dcurso/update', [
 		'as'	=> 'api.dcurso.update',
-		'uses'	=> 'api\DcursoController@update',	
+		'uses'	=> 'Api\DcursoController@update',	
 	]);
 
 /**

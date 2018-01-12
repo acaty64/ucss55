@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
 
 @section('title','Grupos de Envíos de Correos Electrónicos')
 

@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
 
 @section('title','Modificar Accesos de Usuario '.$acceso->wdocente)
 

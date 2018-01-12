@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
 
 @section('title','Modificar Usuario '.$user->wdoc1." : Código ".$user->username)
 

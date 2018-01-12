@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
 @section('title','Modificar Grupo de Envios: '.$menvio->id)
 @section('content')
 	{!! Form::open(['route'=>['administrador.menvio.update', $menvio->id], 'method'=>'PUT']) !!}

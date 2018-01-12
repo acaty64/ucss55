@@ -34,8 +34,8 @@ class AccesoController extends Controller
      */
     public function edit($user_id)
     {
-        $facultad_id = Session::get('facultad_id');
-        $sede_id = Session::get('sede_id');
+        $facultad_id = \Cache::get('facultad_id');
+        $sede_id = \Cache::get('sede_id');
         $acceso = Acceso::where('facultad_id', $facultad_id)->where('sede_id', $sede_id)->where('user_id', $user_id)->first();
 
         $facultades = \App\facultad::all();

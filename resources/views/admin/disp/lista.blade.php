@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
  
 @section('title','Lista de Actualizaciones de '.$title)
 

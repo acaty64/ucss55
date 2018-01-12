@@ -8,20 +8,20 @@ use Illuminate\Http\Request;
 
 Route::get('user/index', [
 		'as'	=> 'consulta.user.index',
-		'uses'	=> 'admin\UserController@index',	
-	])->middleware(Authorize::class.':is_consulta,'.Acceso::class);
+		'uses'	=> 'Admin\UserController@index',	
+	])->middleware('can:is_consulta'.Acceso::class);
 
 Route::get('datauser/edit/{id}', [
 		'as'	=> 'consulta.datauser.edit',
-		'uses'	=> 'admin\DataUserController@edit',	
+		'uses'	=> 'Admin\DataUserController@edit',	
 	])->middleware(Authorize::class.':is_consulta,'.Acceso::class);
 
 Route::put('datauser/update', [
 		'as'	=> 'consulta.datauser.update',
-		'uses'	=> 'admin\DataUserController@update',	
+		'uses'	=> 'Admin\DataUserController@update',	
 	])->middleware(Authorize::class.':is_consulta,'.Acceso::class);
 
 Route::get('datauser/show/{id}', [
 		'as'	=> 'consulta.datauser.show',
-		'uses'	=> 'admin\DataUserController@show',	
+		'uses'	=> 'Admin\DataUserController@show',	
 	])->middleware(Authorize::class.':is_consulta,'.Acceso::class);

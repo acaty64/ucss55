@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
 
 @section('title','Disponibilidad Horaria del Docente: ' . $wdocente )
 

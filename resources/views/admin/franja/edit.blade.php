@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
 
 @section('title','Modificar Franja :'.$franja->dia.'/'.$franja->turno.'/'.$franja->hora)
 

@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('layouts.app')
 
 @section('title','Lista de Docentes a Comunicar. / Tipo: '
 		. $denvios[0]->menvio->tipo
