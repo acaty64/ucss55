@@ -19,6 +19,7 @@ class UserController extends Controller
 {
     public function index()
     {
+        dd(\Cache::get('ctype'));
         return view('admin.user.index');
     }
     /**
