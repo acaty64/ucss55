@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 /** USER ********************************************/
 Route::get('user/index',  [
 		'as'	=> 'administrador.user.index',
-		'uses'	=> 'admin\UserController@index',	
+		'uses'	=> 'Admin\UserController@index',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 Route::get('user/create', [
