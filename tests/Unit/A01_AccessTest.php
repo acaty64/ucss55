@@ -25,15 +25,12 @@ class A01_AccessTest extends TestCase
     function auth_access()
     {
         // Having
-        $user = User::create([
-                'name' => 'Jane Doe',
-                'email' => 'jdoe@gmail.com',
-                'password'  => bcrypt('secret')
-            ]);
+        $user = $this->defaultUser();
+
         // Check database
         $this->assertDatabaseHas('users',[
-            'name' => 'Jane Doe',
-            'email' => 'jdoe@gmail.com'
+            'name' => $user->name,
+            'email' => $user->email
         ]);
 
         // Acting

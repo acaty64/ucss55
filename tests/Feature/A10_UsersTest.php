@@ -21,7 +21,7 @@ class A10_UsersTest extends TestCase
    function list_the_users()
    {
       //Having an administrator user
-      $user = factory(User::class)->create();
+      $user = $this->defaultUser();
       $facultad_id = 1;
       $sede_id = 1;
       $type_id = Type::where('name','Administrador')->first()->id;
@@ -34,14 +34,9 @@ class A10_UsersTest extends TestCase
       $view = "admin.user.index";
       // Then
       $response = $this->get('administrador/user/index')
-          ->assertViewIs("admin.user.index");
-//        ->assertStatus(200);
-/*
-      $this-> markTestIncomplete (
-          "Esta prueba no se ha implementado todavía: ->assertStatus(200) Da error en CodeShip"
-        );
-//          ->assertStatus(200);
-*/
+          ->assertViewIs("admin.user.index")
+          ->assertStatus(200);
+
    }
 
     /**

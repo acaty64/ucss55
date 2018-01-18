@@ -31,7 +31,7 @@ trait TestsHelper
 //    	$csede = Sede::find($sede_id)->csede;
 //    	$ctype = Type::find($type_id)->name;
     	
-    	Acceso::create([
+    	$acceso = Acceso::create([
     		'user_id' => $user_id,
     		'facultad_id' => $facultad_id,
     		'sede_id' => $sede_id,
@@ -39,6 +39,7 @@ trait TestsHelper
     		]);
 
         Acceso::setAccesoAttributes($facultad_id, $sede_id, $type_id);
+
 /*
     	Session::put('facultad_id', $facultad_id);
     	Session::put('cfacultad', $cfacultad);

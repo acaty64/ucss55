@@ -14,7 +14,7 @@ class A00_AccessTest extends TestCase
     public function get_MenuApi()
     {
         // Having
-        $user = User::find(1);
+        $user = $this->defaultUser();
         /*$user = User::where([
                 'name' => 'Jane Doe',
                 'email' => 'jdoe@gmail.com',
