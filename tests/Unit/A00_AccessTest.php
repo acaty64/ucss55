@@ -15,11 +15,7 @@ class A00_AccessTest extends TestCase
     {
         // Having
         $user = $this->defaultUser();
-        /*$user = User::where([
-                'name' => 'Jane Doe',
-                'email' => 'jdoe@gmail.com',
-                'password'  => bcrypt('secret')
-            ]);*/
+
         $array = [
             'name' => 'Inicio',
             'href' => '/home',
@@ -35,5 +31,12 @@ class A00_AccessTest extends TestCase
         $this->actingAs($user)
             ->get('api/generar/'.$type_id.'/'.$auth_id)
             ->assertJSONFragment($array);
+    }
+
+    /** @test */
+    public function a_guest_cant_get_API($value='')
+    {
+        $this->get('api/generar/1/1')
+            ->assertStatus(302);
     }
 }

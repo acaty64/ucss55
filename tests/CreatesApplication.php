@@ -2,10 +2,21 @@
 
 namespace Tests;
 
+use App\Acceso;
+use App\DataUser;
+use App\Facultad;
+use App\Sede;
+use App\Type;
+use App\User;
 use Illuminate\Contracts\Console\Kernel;
 
 trait CreatesApplication
 {
+
+    protected $defaultUser;
+    protected $defaultDataUser;
+    protected $authUser;
+
     /**
      * Creates the application.
      *
@@ -19,4 +30,5 @@ trait CreatesApplication
 
         return $app;
     }
+
 }

@@ -39,4 +39,11 @@ class A01_AccessTest extends TestCase
             ->assertStatus(200)
             ->AssertSeeText('Facultad y Sede');
     }
+
+    /** @test */
+    function a_guest_cant_access_home($value='')
+    {
+        $this->get('/home')
+            ->assertStatus(302);
+    }
 }

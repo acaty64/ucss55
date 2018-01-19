@@ -46143,7 +46143,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 'acceso': {
                     'href': "/administrador/acceso/edit/",
                     'user_id': true,
-                    'title': "Modificar acceso del usuarioo",
+                    'title': "Modificar acceso del usuario",
                     'color': 'warning',
                     'icon': "ok"
                 },
@@ -46164,11 +46164,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             },
             UserButtons: {
-                'Master': [],
-                'Coordinador': ['edit-pass', 'datauser-edit', 'dhora', 'dcurso'],
-                'Docente': ['edit-pass', 'datauser-edit', 'dhora', 'dcurso'],
-                'Consulta': ['datauser-show', 'dhora'],
-                'Administrador': ['mody-user', 'edit-pass', 'destroy', 'acceso', 'datauser-edit', 'dhora', 'dcurso']
+                'Master': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
+                'Responsable': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
+                'Docente': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
+                'Consulta': ['mody-user', 'datauser-show', 'acceso', 'destroy'],
+                'Administrador': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy']
             }
 
             /* DATA for buttons END*/
@@ -46204,28 +46204,55 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         defineButtons: function defineButtons() {
             for (var user in this.users) {
                 var ctype = this.users[user].ctype;
-                this.buttons = [];
-                var xAllButtons = [];
-                var xAllButtons = this.AllButtons;
+                var buttons = [];
+                this.users[user].buttons = buttons;
+                console.log('user', this.users[user]);
+                console.log('this.UserButtons[ctype]', this.UserButtons[ctype]);
+                for (var button in this.UserButtons[ctype]) {
 
-                for (var xbutton in this.UserButtons[ctype]) {
-                    var opcion = this.UserButtons[ctype][xbutton];
+                    var name_button = this.UserButtons[ctype][button];
+                    console.log('name_button', name_button);
 
-                    xAllButtons[opcion]['icon'] = "glyphicon glyphicon-" + xAllButtons[opcion]['icon'];
+                    console.log('this.AllButtons[name_button]', this.AllButtons[name_button]);
 
-                    xAllButtons[opcion]['color'] = "btn btn-" + xAllButtons[opcion]['color'];
+                    this.users[user].buttons.push(this.AllButtons[name_button]);
+                }
+            }
 
-                    if (xAllButtons[opcion]['user_id']) {
-                        xAllButtons[opcion]['href'] = xAllButtons[opcion]['href'] + this.users[user].user_id;
-                    };
-                    this.buttons.push(xAllButtons[opcion]);
-                };
+            console.log('users', this.users);
+        },
 
-                if (this.buttons != '') {
-                    this.users[user].buttons = this.buttons;
-                };
-            };
-        }
+        nff: function nff() {}
+        // body...
+        /*
+                        for (var user in this.users){
+                            var ctype = this.users[user].ctype;
+                            this.buttons = [];
+                            var xAllButtons = [];
+                            var xAllButtons = this.AllButtons;
+        
+                            for(var xbutton in this.UserButtons[ctype]){
+                                var opcion = this.UserButtons[ctype][xbutton];
+        
+                                xAllButtons[opcion]['icon'] = "glyphicon glyphicon-"+xAllButtons[opcion]['icon'];
+        
+                                xAllButtons[opcion]['color'] = "btn btn-"+xAllButtons[opcion]['color'];
+        
+                                if(xAllButtons[opcion]['user_id']){
+                                    xAllButtons[opcion]['href'] = 
+                                        xAllButtons[opcion]['href'] 
+                                        + this.users[user].user_id;
+                                };
+                                this.buttons.push(xAllButtons[opcion]);
+                            };
+        
+                            if(this.buttons != ''){
+                                this.users[user].buttons = this.buttons;
+                            };
+                        };
+        */
+
+
         /* METHODS for buttons END */
 
     },
@@ -46257,14 +46284,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
 
             return pagesArray;
-        }
+        },
         /* COMPUTED for pagination END */
 
+        /* COMPUTED for buttons INIT */
+        getClass: function getClass(button) {
+            return 'glyphicon glyphicon-' + button.color;
+        }
+        /* COMPUTED for buttons END */
     }
 
     /*
-    
-    <div>
+     <div>
         
     <select v-model="typeSelected">
         <option v-for="type in types" v-bind:value="type.name">
@@ -46272,15 +46303,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         </option>
     </select>
     </div>
-    
-    <p><a @click="searchText">Filtrar</a></p>
+     <p><a @click="searchText">Filtrar</a></p>
         <form @submit.prevent="searchName">
             <input v-model="searchText" type="text" class="form-control">
             <button class="btn btn-primary">Filtrar</button>
         </form>
-    
-    
-    */
+      */
 
 });
 
@@ -46348,7 +46376,7 @@ var render = function() {
                     _c(
                       "a",
                       {
-                        class: button.color,
+                        class: "glyphicon glyphicon-" + button.color,
                         attrs: {
                           href: button.href,
                           "data-toggle": "tooltip",

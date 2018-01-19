@@ -39,4 +39,15 @@ class A02_AccessTest extends TestCase
             ->assertStatus(200)
             ->AssertSeeText('Descripción de Opciones');
     }
+
+    /** @test */
+    function a_guest_cant_access_home_acceso($value='')
+    {
+        $request = [
+                'facultad_id' => 1,
+                'sede_id'   => 1
+            ];
+        $this->post('/home/acceso', $request)
+            ->assertStatus(302);
+    }    
 }

@@ -52,6 +52,7 @@ extends Model
     public function newCodigo()
     {
         $codigo = DataUser::all()->sortByDesc('cdocente')->first()->cdocente;
+        if(!$codigo){ return $codigo = 900000; }
         return $codigo + 1;        
     }
 }

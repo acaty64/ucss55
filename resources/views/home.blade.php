@@ -16,7 +16,7 @@
                         {!! Form::select('sede_id',$opc_sede, null, ['class'=>'form-control',  'placeholder'=>'Seleccione la sede','required']) !!}
                         <br>
                       </div>
-                      <button type="submit">Acceder</button>
+                      <button dusk="acceder" type="submit">Acceder</button>
 
                   {!! Form::close() !!}
                 </div>

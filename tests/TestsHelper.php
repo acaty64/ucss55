@@ -3,6 +3,7 @@
 namespace Tests;
 
 use App\Acceso;
+use App\DataUser;
 use App\Facultad;
 use App\Sede;
 use App\Type;
@@ -14,6 +15,7 @@ use App\User;
 trait TestsHelper
 {
     protected $defaultUser;
+    protected $defaultDataUser;
     protected $authUser;
 
     public function defaultUser(array $attributes = [])
@@ -24,13 +26,24 @@ trait TestsHelper
         return $this->defaultUser = factory(User::class)->create($attributes);
     }
 
+
+    public function defaultDataUser(User $user)
+    {
+        if($this->defaultDataUser){
+            return $this->defaultDataUser;
+        }
+        $cdocente = DataUser::find(1)->newcodigo();
+        return $this->defaultDataUser = factory(DataUser::class)
+            ->create([
+                'user_id' => $user->id,
+                'cdocente' => $cdocente,
+                'wdoc1' => $user->name,
+                'email1' => $user->email,
+            ]);        
+    }
+
     public function authUser($user_id, $facultad_id, $sede_id, $type_id)
     {
-//dd($user_id, $facultad_id, $sede_id, $type_id);
-//    	$cfacultad = Facultad::find($facultad_id)->cfacultad;
-//    	$csede = Sede::find($sede_id)->csede;
-//    	$ctype = Type::find($type_id)->name;
-    	
     	$acceso = Acceso::create([
     		'user_id' => $user_id,
     		'facultad_id' => $facultad_id,
@@ -39,15 +52,6 @@ trait TestsHelper
     		]);
 
         Acceso::setAccesoAttributes($facultad_id, $sede_id, $type_id);
-
-/*
-    	Session::put('facultad_id', $facultad_id);
-    	Session::put('cfacultad', $cfacultad);
-    	Session::put('sede_id', $sede_id);
-    	Session::put('csede', $csede);
-    	Session::put('type_id', $type_id);
-    	Session::put('ctype', $ctype);
-*/
     }
 
 }

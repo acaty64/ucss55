@@ -24,7 +24,7 @@
                     <td>{{ user.ctype }}</td>
                     <td>
                         <span v-for="button in user.buttons">
-                            <a :href=button.href :class=button.color data-toggle="tooltip" :title=button.title ><span :class=button.icon aria-hidden='true'></span></a>
+                            <a :href=button.href :class="'glyphicon glyphicon-'+button.color" data-toggle="tooltip" :title=button.title ><span :class=button.icon aria-hidden='true'></span></a>
                         </span>                        
                     </td>                    
                 </tr>
@@ -121,7 +121,7 @@
                     'acceso': {
                             'href': "/administrador/acceso/edit/",
                             'user_id': true,
-                            'title': "Modificar acceso del usuarioo",
+                            'title': "Modificar acceso del usuario",
                             'color': 'warning',
                             'icon': "ok",
                     },
@@ -142,32 +142,48 @@
                     },
                 },
                 UserButtons: {
-                    'Master' : [],
-                    'Coordinador' : [
+                    'Master' : [
+                        'mody-user',
                         'edit-pass',
                         'datauser-edit',
+                        'acceso',
                         'dhora',
                         'dcurso',
-                    ],
+                        'destroy',
+                        ],
+                    'Responsable' : [
+                        'mody-user',
+                        'edit-pass',
+                        'datauser-edit',
+                        'acceso',
+                        'dhora',
+                        'dcurso',
+                        'destroy',
+                        ],
                     'Docente' : [
+                        'mody-user',
                         'edit-pass',
                         'datauser-edit',
+                        'acceso',
                         'dhora',
                         'dcurso',
-                    ],
+                        'destroy',
+                        ],
                     'Consulta': [
+                        'mody-user',
                         'datauser-show',
-                        'dhora',
-                    ],
+                        'acceso',
+                        'destroy',
+                        ],
                     'Administrador': [
                         'mody-user',
                         'edit-pass',
-                        'destroy',
-                        'acceso',
                         'datauser-edit',
+                        'acceso',
                         'dhora',
                         'dcurso',
-                    ],
+                        'destroy',
+                        ],
                 },
 
                 /* DATA for buttons END*/
@@ -200,6 +216,29 @@
             defineButtons: function() {
                 for (var user in this.users){
                     var ctype = this.users[user].ctype;
+                    var buttons = [];
+                    this.users[user].buttons = buttons;
+console.log('user', this.users[user]);
+console.log('this.UserButtons[ctype]', this.UserButtons[ctype]);
+                    for (var button in this.UserButtons[ctype]){
+
+                        var name_button = this.UserButtons[ctype][button];
+console.log('name_button', name_button);
+
+console.log('this.AllButtons[name_button]', this.AllButtons[name_button]);
+
+                        this.users[user].buttons.push(this.AllButtons[name_button])
+                    }
+                }
+
+console.log('users', this.users);
+            },
+
+            nff: function () {
+                    // body...
+/*
+                for (var user in this.users){
+                    var ctype = this.users[user].ctype;
                     this.buttons = [];
                     var xAllButtons = [];
                     var xAllButtons = this.AllButtons;
@@ -223,7 +262,10 @@
                         this.users[user].buttons = this.buttons;
                     };
                 };
-            },
+*/
+            }
+
+                
             /* METHODS for buttons END */
 
         },
@@ -259,6 +301,11 @@
             },      
             /* COMPUTED for pagination END */
                 
+            /* COMPUTED for buttons INIT */
+            getClass: function (button) {
+                return 'glyphicon glyphicon-'+button.color;
+            }
+            /* COMPUTED for buttons END */
         },  
 
     }

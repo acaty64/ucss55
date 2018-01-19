@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                         @guest
-                            <ul class="nav navbar-nav">
+                            <ul class="nav navbar-nav list-group-item list-inline">
                                 <h3>Bienvenidos</h3>
                                 <!-&nbsp;->
                             </ul>
@@ -48,7 +48,6 @@
                                         :type_id="{{ \Cache::get('type_id') }}">
                                     </Menu-Component>
                                 </div>
-{{ \Cache::get('ctype') }}
                             @endif
                         @endauth
 
@@ -90,6 +89,8 @@
         </div>
         @yield('view')
     </div>
+    
+    @include('layouts.partials.footer')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
