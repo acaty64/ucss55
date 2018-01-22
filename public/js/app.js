@@ -46167,7 +46167,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 'Master': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
                 'Responsable': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
                 'Docente': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
-                'Consulta': ['mody-user', 'datauser-show', 'acceso', 'destroy'],
+                'Consulta': ['mody-user', 'edit-pass', 'datauser-edit', 'datauser-show', 'acceso', 'destroy'],
                 'Administrador': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy']
             }
 
@@ -46202,56 +46202,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         /* METHODS for buttons INIT */
         defineButtons: function defineButtons() {
+
             for (var user in this.users) {
                 var ctype = this.users[user].ctype;
-                var buttons = [];
-                this.users[user].buttons = buttons;
-                console.log('user', this.users[user]);
-                console.log('this.UserButtons[ctype]', this.UserButtons[ctype]);
-                for (var button in this.UserButtons[ctype]) {
+                this.buttons = [];
 
-                    var name_button = this.UserButtons[ctype][button];
-                    console.log('name_button', name_button);
+                for (var xbutton in this.UserButtons[ctype]) {
 
-                    console.log('this.AllButtons[name_button]', this.AllButtons[name_button]);
+                    var opcion = this.UserButtons[ctype][xbutton];
+                    this.buttons.push(this.AllButtons[opcion]);
+                };
 
-                    this.users[user].buttons.push(this.AllButtons[name_button]);
-                }
-            }
-
-            console.log('users', this.users);
-        },
-
-        nff: function nff() {}
-        // body...
-        /*
-                        for (var user in this.users){
-                            var ctype = this.users[user].ctype;
-                            this.buttons = [];
-                            var xAllButtons = [];
-                            var xAllButtons = this.AllButtons;
-        
-                            for(var xbutton in this.UserButtons[ctype]){
-                                var opcion = this.UserButtons[ctype][xbutton];
-        
-                                xAllButtons[opcion]['icon'] = "glyphicon glyphicon-"+xAllButtons[opcion]['icon'];
-        
-                                xAllButtons[opcion]['color'] = "btn btn-"+xAllButtons[opcion]['color'];
-        
-                                if(xAllButtons[opcion]['user_id']){
-                                    xAllButtons[opcion]['href'] = 
-                                        xAllButtons[opcion]['href'] 
-                                        + this.users[user].user_id;
-                                };
-                                this.buttons.push(xAllButtons[opcion]);
-                            };
-        
-                            if(this.buttons != ''){
-                                this.users[user].buttons = this.buttons;
-                            };
-                        };
-        */
-
+                if (this.buttons != '') {
+                    this.users[user].buttons = this.buttons;
+                };
+            };
+        }
 
         /* METHODS for buttons END */
 
@@ -46284,18 +46250,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
 
             return pagesArray;
-        },
-        /* COMPUTED for pagination END */
-
-        /* COMPUTED for buttons INIT */
-        getClass: function getClass(button) {
-            return 'glyphicon glyphicon-' + button.color;
         }
-        /* COMPUTED for buttons END */
+        /* COMPUTED for pagination END */
     }
 
     /*
-     <div>
+    
+    <div>
         
     <select v-model="typeSelected">
         <option v-for="type in types" v-bind:value="type.name">
@@ -46303,12 +46264,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         </option>
     </select>
     </div>
-     <p><a @click="searchText">Filtrar</a></p>
+    
+    <p><a @click="searchText">Filtrar</a></p>
         <form @submit.prevent="searchName">
             <input v-model="searchText" type="text" class="form-control">
             <button class="btn btn-primary">Filtrar</button>
         </form>
-      */
+    
+    
+    */
 
 });
 
@@ -46376,16 +46340,16 @@ var render = function() {
                     _c(
                       "a",
                       {
-                        class: "glyphicon glyphicon-" + button.color,
+                        class: "btn btn-" + button.color,
                         attrs: {
-                          href: button.href,
+                          href: button.href + user.user_id,
                           "data-toggle": "tooltip",
                           title: button.title
                         }
                       },
                       [
                         _c("span", {
-                          class: button.icon,
+                          class: "glyphicon glyphicon-" + button.icon,
                           attrs: { "aria-hidden": "true" }
                         })
                       ]

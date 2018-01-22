@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
-class A10_UsersTest extends TestCase
+class B10_UsersTest extends TestCase
 {
     /**
      * @test
@@ -39,29 +39,29 @@ class A10_UsersTest extends TestCase
 
    }
 
-    /**
-     * @test
-     *
+    /** @test */
 	function create_a_new_user()
    {
   		//Having an administrator user
-  		$admin = factory(User::class)->create();
+      $admin = $this->defaultUser();
+      $dataAdmin = $this->defaultDataUser($admin);
 
-      $response = $this->actingAs($admin);
-      
       $facultad_id = 1;
       $sede_id = 1;
-      $type_id = 5;
+      $type_id = Type::where('name','Administrador')->first()->id;
       $this->authUser($admin->id, $facultad_id, $sede_id, $type_id);
 
       // When
+      $response = $this->actingAs($admin);
+
       $newUser = [
           'name'=>'John Doe',
           'email'=> 'jd@gmail.com',
         	'password'=>bcrypt('secret')
          ];
 
-      $cdocente = DataUser::find(1)->newcodigo();
+      $cdocente = DataUser::first()->newcodigo();
+
       $response = $this->post('administrador/user/store', $newUser);
 
       //Then
@@ -86,5 +86,5 @@ class A10_UsersTest extends TestCase
         'type_id'=> 2
       ]);
 	}
-*/
+
 }

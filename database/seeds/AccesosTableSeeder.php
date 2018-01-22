@@ -18,13 +18,13 @@ class AccesosTableSeeder extends Seeder
     public function run()
     {
         $user_id = 1;
-        $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
+//        $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
         Acceso::create([
             'user_id' => $user_id,
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 1,
-            'wdocente' => $wdocente,
+//            'wdocente' => $wdocente,
             ]);
 
         $user_id = 2;
@@ -34,7 +34,7 @@ class AccesosTableSeeder extends Seeder
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 5,
-            'wdocente' => $wdocente,
+//            'wdocente' => $wdocente,
             ]);
 
         $user_id = 3;
@@ -44,7 +44,7 @@ class AccesosTableSeeder extends Seeder
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 4,
-            'wdocente' => $wdocente,
+//            'wdocente' => $wdocente,
             ]);
 
         $user_id = 4;
@@ -54,7 +54,7 @@ class AccesosTableSeeder extends Seeder
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 3,
-            'wdocente' => $wdocente,
+//            'wdocente' => $wdocente,
             ]);
 
         $user_id = 5;
@@ -64,7 +64,7 @@ class AccesosTableSeeder extends Seeder
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 2,
-            'wdocente' => $wdocente,
+//            'wdocente' => $wdocente,
             ]);
 
 
@@ -74,13 +74,13 @@ class AccesosTableSeeder extends Seeder
             $facultad_id = Facultad::all()->random()->id;
             $sede_id = Sede::all()->random()->id;
             $type_id = Type::all()->random()->id;
-            $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
+//            $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
             Acceso::create([
                'user_id' => $user_id,
                'facultad_id' => $facultad_id, 
                'sede_id' => $sede_id,
                'type_id' => $type_id,
-               'wdocente' => $wdocente,
+//               'wdocente' => $wdocente,
                 ]);
         }
 

@@ -24,7 +24,7 @@
                     <td>{{ user.ctype }}</td>
                     <td>
                         <span v-for="button in user.buttons">
-                            <a :href=button.href :class="'glyphicon glyphicon-'+button.color" data-toggle="tooltip" :title=button.title ><span :class=button.icon aria-hidden='true'></span></a>
+                            <a :href="button.href+user.user_id" :class="'btn btn-'+button.color" data-toggle="tooltip" :title=button.title ><span :class="'glyphicon glyphicon-'+button.icon" aria-hidden='true'></span></a>
                         </span>                        
                     </td>                    
                 </tr>
@@ -171,6 +171,8 @@
                         ],
                     'Consulta': [
                         'mody-user',
+                        'edit-pass',
+                        'datauser-edit',
                         'datauser-show',
                         'acceso',
                         'destroy',
@@ -214,57 +216,24 @@
 
             /* METHODS for buttons INIT */
             defineButtons: function() {
-                for (var user in this.users){
-                    var ctype = this.users[user].ctype;
-                    var buttons = [];
-                    this.users[user].buttons = buttons;
-console.log('user', this.users[user]);
-console.log('this.UserButtons[ctype]', this.UserButtons[ctype]);
-                    for (var button in this.UserButtons[ctype]){
 
-                        var name_button = this.UserButtons[ctype][button];
-console.log('name_button', name_button);
-
-console.log('this.AllButtons[name_button]', this.AllButtons[name_button]);
-
-                        this.users[user].buttons.push(this.AllButtons[name_button])
-                    }
-                }
-
-console.log('users', this.users);
-            },
-
-            nff: function () {
-                    // body...
-/*
                 for (var user in this.users){
                     var ctype = this.users[user].ctype;
                     this.buttons = [];
-                    var xAllButtons = [];
-                    var xAllButtons = this.AllButtons;
 
                     for(var xbutton in this.UserButtons[ctype]){
+
                         var opcion = this.UserButtons[ctype][xbutton];
+                        this.buttons.push(this.AllButtons[opcion]);
 
-                        xAllButtons[opcion]['icon'] = "glyphicon glyphicon-"+xAllButtons[opcion]['icon'];
-
-                        xAllButtons[opcion]['color'] = "btn btn-"+xAllButtons[opcion]['color'];
-
-                        if(xAllButtons[opcion]['user_id']){
-                            xAllButtons[opcion]['href'] = 
-                                xAllButtons[opcion]['href'] 
-                                + this.users[user].user_id;
-                        };
-                        this.buttons.push(xAllButtons[opcion]);
                     };
 
                     if(this.buttons != ''){
                         this.users[user].buttons = this.buttons;
                     };
                 };
-*/
-            }
 
+            }
                 
             /* METHODS for buttons END */
 
@@ -300,12 +269,6 @@ console.log('users', this.users);
                     
             },      
             /* COMPUTED for pagination END */
-                
-            /* COMPUTED for buttons INIT */
-            getClass: function (button) {
-                return 'glyphicon glyphicon-'+button.color;
-            }
-            /* COMPUTED for buttons END */
         },  
 
     }

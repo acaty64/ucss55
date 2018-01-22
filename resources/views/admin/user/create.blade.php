@@ -3,7 +3,7 @@
 @section('title','Crear Usuario')
 
 @section('content')
-
+	<h3>Crear Nuevo Usuario</h3>
 	{!! Form::open(['route'=>'admin.user.store', 'method'=>'POST']) !!}
 		{!! csrf_field() !!}
 

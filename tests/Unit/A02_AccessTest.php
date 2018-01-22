@@ -35,6 +35,14 @@ class A02_AccessTest extends TestCase
 
         $this->authUser($user->id, $facultad->id, $sede->id, $type->id);
 
+        // Check database
+        $this->assertDatabaseHas('accesos',[
+            'user_id' => $user->id,
+            'facultad_id' => $facultad->id,
+            'sede_id' => $sede->id,
+            'type_id' => $type->id,
+        ]);        
+
         $this->post('/home/acceso', $request)
             ->assertStatus(200)
             ->AssertSeeText('Descripción de Opciones');

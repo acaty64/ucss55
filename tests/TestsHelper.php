@@ -20,19 +20,27 @@ trait TestsHelper
 
     public function defaultUser(array $attributes = [])
     {
+/*
         if($this->defaultUser){
             return $this->defaultUser;
         }
+*/
         return $this->defaultUser = factory(User::class)->create($attributes);
     }
 
 
     public function defaultDataUser(User $user)
     {
+/*
         if($this->defaultDataUser){
             return $this->defaultDataUser;
         }
-        $cdocente = DataUser::find(1)->newcodigo();
+*/
+        if(DataUser::first()){
+            $cdocente = DataUser::find(1)->newcodigo();
+        }else{
+            $cdocente = 900000;
+        }
         return $this->defaultDataUser = factory(DataUser::class)
             ->create([
                 'user_id' => $user->id,
@@ -52,6 +60,8 @@ trait TestsHelper
     		]);
 
         Acceso::setAccesoAttributes($facultad_id, $sede_id, $type_id);
+
+        return $acceso;
     }
 
 }

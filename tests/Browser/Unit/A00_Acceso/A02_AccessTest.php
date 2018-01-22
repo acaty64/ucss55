@@ -1,15 +1,17 @@
 <?php
 
-namespace Tests\Browser\Unit\A01_User;
+namespace Tests\Browser\Unit\A00_Acceso;
 
 use App\Acceso;
 use App\User;
+use App\Facultad;
+use App\Sede;
 use App\Type;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class A01Test extends DuskTestCase
+class A02_AccessTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
@@ -23,12 +25,19 @@ class A01Test extends DuskTestCase
             $sede_id = 1; 
 
             $user = $this->defaultUser();
+            $datauser = $this->defaultDataUser($user);
+
             $type = Type::where('name', 'Consulta')->first();
-            $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
+            $var = $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
  
             $admin = $this->defaultUser();
-            $type = Type::where('name', 'Administrador')->first();
-            $this->authUser($admin->id, $facultad_id, $sede_id, $type->id);
+            //$this->defaultDataUser($admin);
+            $type_admin = Type::where('name', 'Administrador')->first();
+            $var = $this->authUser($admin->id, $facultad_id, $sede_id, $type_admin->id);
+            
+            $newFacu_id = Facultad::where('cFacultad', 'FSAL')->first()->id;
+            $newSede_id = Sede::where('cSede', 'HUA')->first()->id;
+            $newType_id = Type::where('name', 'Docente')->first()->id;
 
             $browser->loginAs($admin)
                     ->visit('/home')
@@ -36,14 +45,20 @@ class A01Test extends DuskTestCase
                     ->select('sede_id', $sede_id)
                     ->press('Acceder')
 //                    ->pause(2500)
-                    ->waitForText('Inicio', 1*60)
+                    ->waitForText('Inicio', 0.5*60)
                     ->assertSee('Usuarios')
+                    ->waitForText('Tipo de usuario: Administrador', 0.5*60)
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
+                    ->waitForText('Código', 0.5*60)
                     ->visit("/administrador/acceso/edit/{$user->id}")
                     ->assertPathIs("/administrador/acceso/edit/{$user->id}")
-                    ->select('type_id',3)
+                    ->waitForText('Modificación de acceso', 1*60)
+                    ->select('facultad_id', $newFacu_id)
+                    ->select('sede_id', $newSede_id)
+                    ->select('type_id', $newType_id)
                     ->press('Grabar modificaciones')
+                    ->waitForText($user->datauser->wdoc1, 1*60)
                     ->assertSee('Se ha modificado el usuario: ' . $user->id . ' : ' . $user->datauser->wdoc2 . " " . $user->datauser->wdoc3 . ", " . $user->datauser->wdoc1 . ' de forma exitosa')
                     ;
 

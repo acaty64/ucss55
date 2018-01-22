@@ -27,7 +27,7 @@ class CreateAccesosTable extends Migration
 
             $table->unSignedInteger('type_id')->default(2);
 
-            $table->string('wdocente')->default(false);
+            //$table->string('wdocente')->default(false);
             
             $table->boolean('swcierre')->default(false);
             

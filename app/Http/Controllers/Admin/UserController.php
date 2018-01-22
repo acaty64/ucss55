@@ -12,7 +12,6 @@ use App\Type;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
 class UserController extends Controller
@@ -20,32 +19,6 @@ class UserController extends Controller
     public function index()
     {
         return view('admin.user.index');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function indexbk(Request $request)
-    {
-        $facultad_id = Session::get('facultad_id');
-        $sede_id = Session::get('sede_id');
-        $acceso_auth = Acceso::acceso_auth();
-
-        $accesos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->search($request->get('wdocente'), $request->get('type'))->paginate(6);
-
-        $title = Facultad::find($facultad_id)->wfacultad .' - '.Sede::find($sede_id)->wsede ;
-        $types = Type::where('name','!=','Master')->get();
-        $xtypes = [];
-        foreach ($types as $type) {
-            $xtypes[$type->id] = $type->name;
-        }
-        return view('admin.user.index')
-                ->with('title',$title)
-                ->with('users',$accesos)
-                ->with('types',$xtypes)
-                ->with('acceso_auth',$acceso_auth)
-                ;
     }
 
     /**
@@ -66,16 +39,23 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $cdocente = DataUser::find(1)->newcodigo();
+
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        $cdocente = DataUser::first()->newcodigo();
 
         // Recibe los datos del formulario de resources\admin\users\create.blade.php
-        $facultad_id = Session::get('facultad_id');
-        $sede_id = Session::get('sede_id');
+        $facultad_id = \Cache::get('facultad_id');
+        $sede_id = \Cache::get('sede_id');
 
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+
         $user->save(); 
         
         // Crea un registro en DataUser

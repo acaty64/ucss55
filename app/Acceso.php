@@ -42,13 +42,13 @@ class Acceso extends Model
         }
 */
     }
-/**
+
     public function getWdocenteAttribute()
     {
-        //return DataUser::where('user_id',$this->user_id)->first()->wdocente();
-        return $this->wdocente;
+        return DataUser::where('user_id',$this->user_id)->first()->wdocente();
+        //return $this->wdocente;
     }
-*/
+
     public function getCdocenteAttribute()
     {
         return DataUser::where('user_id',$this->user_id)->first()->cdocente;

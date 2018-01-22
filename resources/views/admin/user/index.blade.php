@@ -3,11 +3,14 @@
 @section('title','Lista de Usuarios')
 
 @section('content')
-		<userindex-component 
-			:facultad_id="{{ \Cache::get('facultad_id') }}"
-			:sede_id="{{ \Cache::get('sede_id') }}"
-			ctype="{{ \Cache::get('ctype') }}">
-		</userindex-component>
+    <div class="mx-auto" style="width: 200px;">
+        <h3>Lista de Usuarios</h3>
+    </div>
+	<userindex-component 
+		:facultad_id="{{ \Cache::get('facultad_id') }}"
+		:sede_id="{{ \Cache::get('sede_id') }}"
+		ctype="{{ \Cache::get('ctype') }}">
+	</userindex-component>
 @endsection
 
 @section('js')
