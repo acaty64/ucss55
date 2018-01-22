@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "barryvdh/laravel-debugbar": "dev-master",
         "fideloper/proxy": "~3.3",
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.5.*",
@@ -37,6 +36,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
+                "laravel/dusk"
             ]
         }
     },
