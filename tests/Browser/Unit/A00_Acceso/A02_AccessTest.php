@@ -32,6 +32,7 @@ class A02_AccessTest extends DuskTestCase
  
             $admin = $this->defaultUser();
             $this->defaultDataUser($admin);
+
             $type_admin = Type::where('name', 'Administrador')->first();
             $var = $this->authUser($admin->id, $facultad_id, $sede_id, $type_admin->id);
             
@@ -44,20 +45,20 @@ class A02_AccessTest extends DuskTestCase
                     ->select('facultad_id', $facultad_id)
                     ->select('sede_id', $sede_id)
                     ->press('Acceder')
-                    ->waitForText('Inicio', 0.5*60)
+                    ->waitForText('Inicio')
                     ->assertSee('Usuarios')
-                    ->waitForText('Tipo de usuario: Administrador', 0.5*60)
+                    ->waitForText('Tipo de usuario: Administrador')
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
-                    ->waitForText('Lista de Usuarios', 0.5*60)
+                    ->waitForText('Lista de Usuarios')
                     ->visit("/administrador/acceso/edit/{$user->id}")
                     ->assertPathIs("/administrador/acceso/edit/{$user->id}")
-                    ->waitForText('Modificación de acceso', 1.5*60)
+                    ->waitForText('Modificación de acceso')
                     ->select('facultad_id', $newFacu_id)
                     ->select('sede_id', $newSede_id)
                     ->select('type_id', $newType_id)
                     ->press('Grabar modificaciones')
-                    ->waitForText($user->datauser->wdoc1, 1*60)
+                    ->waitForText($user->datauser->wdoc1)
                     ->assertSee('Se ha modificado el usuario: ' . $user->id . ' : ' . $user->datauser->wdoc2 . " " . $user->datauser->wdoc3 . ", " . $user->datauser->wdoc1 . ' de forma exitosa')
                     ;
 
