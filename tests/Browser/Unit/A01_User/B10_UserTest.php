@@ -25,7 +25,8 @@ class B10_UserTest extends DuskTestCase
             $sede_id = 1; 
  
             $admin = $this->defaultUser();
-            //$this->defaultDataUser($admin);
+            $this->defaultDataUser($admin);
+            
             $type_admin = Type::where('name', 'Administrador')->first();
             $var = $this->authUser($admin->id, $facultad_id, $sede_id, $type_admin->id);
             
