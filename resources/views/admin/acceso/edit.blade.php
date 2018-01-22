@@ -12,7 +12,7 @@
 		</thead>
 		<tbody-->
 			<div class="form-group">
-				<h3>Modificación de acceso</h3>
+				<h3>Modificacion de acceso</h3>
 			</div>
 			<div class="form-group">
 				{!! Form::hidden('id',$acceso->id) !!}

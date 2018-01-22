@@ -53,7 +53,7 @@ class A02_AccessTest extends DuskTestCase
                     ->waitForText('Código', 0.5*60)
                     ->visit("/administrador/acceso/edit/{$user->id}")
                     ->assertPathIs("/administrador/acceso/edit/{$user->id}")
-                    ->waitForText('Modificación de acceso', 1*60)
+                    ->waitForText('Modificacion de acceso', 1*60)
                     ->select('facultad_id', $newFacu_id)
                     ->select('sede_id', $newSede_id)
                     ->select('type_id', $newType_id)
