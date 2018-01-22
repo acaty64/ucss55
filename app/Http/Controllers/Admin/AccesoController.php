@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Acceso;
-use App\DataUser;
 use App\Facultad;
 use App\Http\Controllers\Controller;
 use App\Sede;
+use App\Type;
 use App\User;
 use Illuminate\Foundation\Auth\Access\can;
 use Illuminate\Http\Request;
@@ -38,20 +38,20 @@ class AccesoController extends Controller
         $sede_id = \Cache::get('sede_id');
         $acceso = Acceso::where('facultad_id', $facultad_id)->where('sede_id', $sede_id)->where('user_id', $user_id)->first();
 
-        $facultades = \App\facultad::all();
+        $facultades = Facultad::all();
         foreach ($facultades as $facultad) {
             $opc_facu[$facultad->id] = $facultad->wfacultad;
         }
 
-        $sedes = \App\sede::all();
+        $sedes = Sede::all();
         foreach ($sedes as $sede) {
             $opc_sede[$sede->id] = $sede->wsede;
         }
 
         if(auth()->user()->can('is_master',Acceso::class)){        
-            $types = \App\type::all();
+            $types = Type::all();
         }else{
-            $types = \App\type::where('name','<>','Master')->where('name','<>','Administrador')->get();
+            $types = Type::where('name','<>','Master')->where('name','<>','Administrador')->get();
         }
         foreach ($types as $type) {
             $opc_type[$type->id] = $type->name;
