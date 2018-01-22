@@ -50,7 +50,7 @@ class A02_AccessTest extends DuskTestCase
                     ->waitForText('Tipo de usuario: Administrador', 0.5*60)
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
-                    ->waitForText('Código', 0.5*60)
+                    ->waitForText('Lista de Usuarios', 0.5*60)
                     ->visit("/administrador/acceso/edit/{$user->id}")
                     ->assertPathIs("/administrador/acceso/edit/{$user->id}")
                     ->waitForText('Modificacion de acceso', 1*60)
