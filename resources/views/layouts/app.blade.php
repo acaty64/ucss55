@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'UCSS') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -28,8 +28,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a href="http://www.ucss.edu.pe" target="_blank">
+                        <img class="navbar-brand" src="{{asset('images/logo-ucss.png')}}" ></img>
                     </a>
                 </div>
 
@@ -37,7 +37,7 @@
                     <!-- Left Side Of Navbar -->
                         @guest
                             <ul class="nav navbar-nav list-group-item list-inline">
-                                <h3>Bienvenidos</h3>
+                                <h4>Bienvenidos</h4>
                                 <!-&nbsp;->
                             </ul>
                         @endguest
