@@ -37,7 +37,7 @@ trait TestsHelper
         }
 */
         if(DataUser::first()){
-            $cdocente = DataUser::find(1)->newcodigo();
+            $cdocente = DataUser::first()->newcodigo();
         }else{
             $cdocente = 900000;
         }
