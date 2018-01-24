@@ -14,17 +14,17 @@ Route::get('user/index',  [
 
 Route::get('user/create', [
 		'as'	=> 'admin.user.create',
-		'uses'	=> 'Admin\UserController@create',	
+		'uses'	=> 'Admin\userController@create',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 Route::post('user/store', [
 		'as'	=> 'admin.user.store',
-		'uses'	=> 'Admin\UserController@store',	
+		'uses'	=> 'Admin\userController@store',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 Route::get('user/edit/{user_id}', [
 		'as'	=> 'admin.user.edit',
-		'uses'	=> 'Admin\UserController@edit',	
+		'uses'	=> 'Admin\userController@edit',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 Route::put('user/update', [
@@ -34,17 +34,17 @@ Route::put('user/update', [
 
 Route::get('user/{user}/show', [
 		'as'	=> 'admin.user.show',
-		'uses'	=> 'Admin\UserController@show',	
+		'uses'	=> 'Admin\userController@show',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 Route::get('user/{id}/destroy', [
 		'as'	=> 'admin.user.destroy',
-		'uses'	=> 'Admin\UserController@destroy',	
+		'uses'	=> 'Admin\userController@destroy',	
 	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
 
 Route::get('user/editpass/{id}', [
 		'as'	=> 'admin.user.editpass',
-		'uses'	=> 'Admin\UserController@editpass',	
+		'uses'	=> 'Admin\userController@editpass',	
 	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
 
 /** DATAUSER *****************************************/
