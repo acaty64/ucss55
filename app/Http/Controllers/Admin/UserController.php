@@ -14,7 +14,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
 
-class UserController extends Controller
+class userController extends Controller
 {
     public function index()
     {
