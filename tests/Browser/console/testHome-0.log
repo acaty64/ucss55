@@ -3,6 +3,6 @@
         "level": "SEVERE",
         "message": "http:\/\/newucss5.test\/home - Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
         "source": "network",
-        "timestamp": 1516747290986
+        "timestamp": 1516767989551
     }
 ]
