@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
-class AccesoController extends Controller
+class accesoController extends Controller
 {
     /**
      * Display the specified resource.

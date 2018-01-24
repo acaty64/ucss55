@@ -50,23 +50,23 @@ Route::get('user/editpass/{id}', [
 /** DATAUSER *****************************************/
 Route::get('datauser/edit/{id}', [
 		'as'	=> 'admin.datauser.edit',
-		'uses'	=> 'Admin\DataUserController@edit',	
+		'uses'	=> 'Admin\dataUserController@edit',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 Route::put('datauser/update', [
 		'as'	=> 'administrador.datauser.update',
-		'uses'	=> 'Admin\DataUserController@update',	
+		'uses'	=> 'Admin\dataUserController@update',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 /** ACCESO *******************************************/
 Route::get('acceso/edit/{id}', [
 		'as'	=> 'admin.acceso.edit',
-		'uses'	=> 'Admin\AccesoController@edit',	
+		'uses'	=> 'Admin\accesoController@edit',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 Route::put('acceso/update', [
 		'as'	=> 'admin.acceso.update',
-		'uses'	=> 'Admin\AccesoController@update',	
+		'uses'	=> 'Admin\accesoController@update',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 /** DHORA ********************************************/
