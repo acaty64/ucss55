@@ -49,7 +49,7 @@ class B11_UserTest extends DuskTestCase
                     ->type('name', 'John Doe')
                     ->type('email', 'jd@gmail.com')
                     ->press('Grabar modificaciones')
-                    ->waitForText('Lista de Usuarios', 1*60)
+                    ->waitForText('Lista de Usuarios')
                     ->assertSee('Se ha modificado el registro: ' . $user->id . ' : John Doe de forma exitosa')
                     ->waitForText('Consulta');
         });
