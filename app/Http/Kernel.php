@@ -42,11 +42,6 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
-        'master' => [
-            'web',
-            'auth',
-            'can:is_master,'.Acceso::class,
-        ],
 
         'consulta' => [
             'web',
@@ -71,6 +66,12 @@ class Kernel extends HttpKernel
             'auth',
             'can:is_admin,'.Acceso::class,
         ], 
+
+        'master' => [
+            'web',
+            'auth',
+            'can:is_master,'.Acceso::class,
+        ],
     ];
 
     /**
