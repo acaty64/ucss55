@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
-class DataUserController extends Controller
+class dataUserController extends Controller
 {
     /**
      * Display the specified resource.
@@ -71,12 +71,13 @@ class DataUserController extends Controller
         $datauser = DataUser::find($request->id);
         $datauser->fill($request->all());
         $datauser->save();
+/*
         // Actualiza el valor de wdocente de la tabla acceso
         $acceso = Acceso::where('user_id',$request->user_id)->first();
         $acceso->wdocente = $datauser->wdoc2 . " " .$datauser->wdoc3. ", ".$datauser->wdoc1;  
         $acceso->save();
-
-        Flash::success('Se ha modificado el usuario: '.$datauser->user_id.' : '.$acceso->wdocente.' de forma exitosa');
+*/
+        Flash::success('Se ha modificado el usuario: '.$datauser->user_id.' : '.$datauser->wdocente().' de forma exitosa');
         //if(can('is_admin',Acceso::where('user_id',Session::get('user_id'))->first())){
         if(auth()->user()->can('is_admin',Acceso::class)){
             return redirect()->route('administrador.user.index');

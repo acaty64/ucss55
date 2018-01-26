@@ -82,8 +82,8 @@ class Acceso extends Model
     // Funciones
     protected function acceso_auth()
     {
-        $facultad_id = Session::get('facultad_id');
-        $sede_id = Session::get('sede_id');
+        $facultad_id = \Cache::get('facultad_id');
+        $sede_id = \Cache::get('sede_id');
         return Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id', auth()->user()->id)->first();
     }
 
