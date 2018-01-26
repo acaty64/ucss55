@@ -45,7 +45,8 @@
                             @if( \Cache::get('facultad_id') != 0 )
                                 <div class="nav navbar-nav">
                                     <Menu-Component 
-                                        :type_id="{{ \Cache::get('type_id') }}">
+                                        :type_id="{{ \Cache::get('type_id') }}"
+                                        :auth_id="{{ \Auth::user()->id }}">
                                     </Menu-Component>
                                 </div>
                             @endif

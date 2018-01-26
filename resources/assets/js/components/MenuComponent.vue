@@ -21,7 +21,7 @@
 <script>
     import axios from 'axios'
     export default {
-        props: ['type_id'],
+        props: ['type_id', 'auth_id'],
         mounted() {
             console.log('MenuComponent mounted.');
         },
@@ -40,7 +40,7 @@
             getItems: function () {
                 var URLdomain = window.location.host;
                 var protocol = window.location.protocol;
-                var urlItems = protocol+'//'+URLdomain+'/api/generar/'+this.type_id;
+                var urlItems = protocol+'//'+URLdomain+'/api/generar/'+this.type_id+'/'+this.auth_id;
                 axios.get(urlItems).then(response=>{
                     this.items = response.data
                 });

@@ -124,7 +124,7 @@ class User extends Authenticatable
 
     public function datauser()
     {
-        return $this->hasOne('App\Datauser');
+        return $this->hasOne('App\DataUser');
     }
 
     public function dcursos()

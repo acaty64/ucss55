@@ -45595,7 +45595,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['type_id'],
+    props: ['type_id', 'auth_id'],
     mounted: function mounted() {
         console.log('MenuComponent mounted.');
     },
@@ -45618,7 +45618,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             var URLdomain = window.location.host;
             var protocol = window.location.protocol;
-            var urlItems = protocol + '//' + URLdomain + '/api/generar/' + this.type_id;
+            var urlItems = protocol + '//' + URLdomain + '/api/generar/' + this.type_id + '/' + this.auth_id;
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(urlItems).then(function (response) {
                 _this.items = response.data;
             });

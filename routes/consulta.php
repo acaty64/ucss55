@@ -13,7 +13,7 @@ Route::get('user/index', [
 
 Route::get('datauser/edit/{id}', [
 		'as'	=> 'consulta.datauser.edit',
-		'uses'	=> 'Admin\DataUserController@edit',	
+		'uses'	=> 'Admin\dataUserController@edit',	
 	])->middleware(Authorize::class.':is_consulta,'.Acceso::class);
 
 Route::put('datauser/update', [

@@ -54,20 +54,108 @@ class C10_DataUserTest extends DuskTestCase
                     ->check('whatsapp')
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
+        });
+    }
 
+    function test_a_CONSULTA_can_edit_his_datauser()
+    {
+//$this->markTestSkipped('must be revisited.');
+        $this->artisan('db:seed');
+        $this->browse(function(Browser $browser)
+        {
+            $facultad_id = 1;
+            $sede_id = 1; 
 
-/*                    
-                    ->visit('/administrador/user/index')
-                    ->assertPathIs('/administrador/user/index')
-                    ->visit("/administrador/user/edit/".$user->id)
-                    ->assertPathIs("/administrador/user/edit/".$user->id)
-                    ->waitForText('Modificar Usuario')
-                    ->type('name', 'John Doe')
-                    ->type('email', 'jd@gmail.com')
+            $user = $this->defaultUser();
+            $datauser = $this->defaultDataUser($user);
+            $type = Type::where('name', 'Consulta')->first();
+            $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
+ 
+            $browser->loginAs($user)
+                    ->visit('/home')
+                    ->select('facultad_id', $facultad_id)
+                    ->select('sede_id', $sede_id)
+                    ->press('Acceder')
+                    ->waitForText('Inicio')
+                    ->assertSee('Usuarios')
+                    ->waitForText('Tipo de usuario: Consulta')
+                    ->visit("/consulta/datauser/edit/{$user->id}")
+                    ->waitForText('Modificación de Datos de Usuario')
+                    //->type('cdocente','000002')
+                    ->type('wdoc1','Nuevo nombre')
+                    ->type('wdoc2','Primer Apellido')
+                    ->type('wdoc3','Segundo Apellido')
+                    //->type('email1','newmail@gmail.com')
+                    ->type('email2','otromail@gmail.com')
+                    ->check('whatsapp')
                     ->press('Grabar modificaciones')
-                    ->waitForText('Lista de Usuarios')
-                    ->assertSee('Se ha modificado el registro: ' . $user->id . ' : John Doe de forma exitosa');
-*/
+                    ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
+        });
+    }
+
+    function test_a_DOCENTE_can_edit_his_datauser()
+    {
+//$this->markTestSkipped('must be revisited.');
+        $this->artisan('db:seed');
+        $this->browse(function(Browser $browser)
+        {
+            $facultad_id = 1;
+            $sede_id = 1; 
+
+            $user = $this->defaultUser();
+            $datauser = $this->defaultDataUser($user);
+            $type = Type::where('name', 'Docente')->first();
+            $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
+ 
+            $browser->loginAs($user)
+                    ->visit('/home')
+                    ->select('facultad_id', $facultad_id)
+                    ->select('sede_id', $sede_id)
+                    ->press('Acceder')
+                    ->waitForText('Inicio')
+                    ->waitForText('Tipo de usuario: Docente')
+                    ->visit("/docente/datauser/edit/{$user->id}")
+                    ->waitForText('Modificación de Datos de Usuario')
+                    ->type('wdoc1','Nuevo nombre')
+                    ->type('wdoc2','Primer Apellido')
+                    ->type('wdoc3','Segundo Apellido')
+                    ->type('email2','otromail@gmail.com')
+                    ->check('whatsapp')
+                    ->press('Grabar modificaciones')
+                    ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
+        });
+    }
+
+    function test_a_RESPONSABLE_can_edit_his_datauser()
+    {
+//$this->markTestSkipped('must be revisited.');
+        $this->artisan('db:seed');
+        $this->browse(function(Browser $browser)
+        {
+            $facultad_id = 1;
+            $sede_id = 1; 
+
+            $user = $this->defaultUser();
+            $datauser = $this->defaultDataUser($user);
+            $type = Type::where('name', 'Responsable')->first();
+            $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
+ 
+            $browser->loginAs($user)
+                    ->visit('/home')
+                    ->select('facultad_id', $facultad_id)
+                    ->select('sede_id', $sede_id)
+                    ->press('Acceder')
+                    ->waitForText('Inicio')
+                    ->waitForText('Tipo de usuario: Responsable')
+                    ->visit("/responsable/datauser/edit/{$user->id}")
+                    ->waitForText('Modificación de Datos de Usuario')
+                    ->type('wdoc1','Nuevo nombre')
+                    ->type('wdoc2','Primer Apellido')
+                    ->type('wdoc3','Segundo Apellido')
+                    ->type('email2','otromail@gmail.com')
+                    ->check('whatsapp')
+                    ->press('Grabar modificaciones')
+                    ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
     }
 }
