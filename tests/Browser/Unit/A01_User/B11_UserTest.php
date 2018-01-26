@@ -43,6 +43,12 @@ class B11_UserTest extends DuskTestCase
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
                     ->waitForText('Lista de Usuarios')
+                    ->select('pagination',2)
+                    ->waitForText($user->name)
+                    ->click('modi-user'.$user->id)
+                    ->assertPathIs("/administrador/user/edit/".$user->id)
+                    ;
+/*                    
                     ->visit("/administrador/user/edit/".$user->id)
                     ->assertPathIs("/administrador/user/edit/".$user->id)
                     ->waitForText('Modificar Usuario')
@@ -51,6 +57,7 @@ class B11_UserTest extends DuskTestCase
                     ->press('Grabar modificaciones')
                     ->waitForText('Lista de Usuarios')
                     ->assertSee('Se ha modificado el registro: ' . $user->id . ' : John Doe de forma exitosa');
+*/
         });
     }
 }

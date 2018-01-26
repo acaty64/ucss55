@@ -46105,70 +46105,96 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             //byAllButtons:[],
             AllButtons: {
                 'datauser-show': {
-                    'href': "/consulta/datauser/show/",
+                    'href': "/datauser/show/",
                     'user_id': true,
                     'title': "Ver Datos Personales",
                     'color': 'warning',
-                    'icon': "user"
+                    'icon': "user",
+                    'id': 'datauser-show'
                 },
                 'datauser-edit': {
-                    'href': "/consulta/datauser/edit/",
+                    'href': "/datauser/edit/",
                     'user_id': true,
                     'title': "Modificar Datos Personales",
                     'color': 'success',
-                    'icon': "earphone"
+                    'icon': "earphone",
+                    'id': 'datauser-edit'
                 },
 
                 'mody-user': {
-                    'href': "/administrador/user/edit/",
+                    'href': "/user/edit/",
                     'user_id': true,
                     'title': "Modificar usuario",
                     'color': 'warning',
-                    'icon': "user"
+                    'icon': "user",
+                    'id': 'mody-user'
                 },
                 'edit-pass': {
-                    'href': "/administrador/user/editpass/",
+                    'href': "/user/editpass/",
                     'user_id': true,
                     'title': "Modificar password",
                     'color': 'danger',
-                    'icon': "lock"
+                    'icon': "lock",
+                    'id': 'edit-pass'
                 },
                 'destroy': {
-                    'href': "/administrador/user/destroy/",
+                    'href': "/user/destroy/",
                     'user_id': true,
                     'title': "Eliminar usuario",
                     'color': 'danger',
-                    'icon': "trash"
+                    'icon': "trash",
+                    'id': 'destroy'
                 },
                 'acceso': {
-                    'href': "/administrador/acceso/edit/",
+                    'href': "/acceso/edit/",
                     'user_id': true,
                     'title': "Modificar acceso del usuario",
                     'color': 'warning',
-                    'icon': "ok"
+                    'icon': "ok",
+                    'id': 'acceso'
                 },
 
                 'dhora': {
-                    'href': "/administrador/dhora/edit/",
+                    'href': "/dhora/edit/",
                     'user_id': true,
                     'title': "Disponibilidad Horaria",
                     'color': 'success',
-                    'icon': "calendar"
+                    'icon': "calendar",
+                    'id': 'dhora'
                 },
                 'dcurso': {
-                    'href': "/administrador/dcurso/edit/",
+                    'href': "/dcurso/edit/",
                     'user_id': true,
                     'color': 'success',
                     'title': "Disponibilidad de Cursos",
-                    'icon': "list-alt"
+                    'icon': "list-alt",
+                    'id': 'dcurso'
                 }
             },
             UserButtons: {
                 'Master': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
-                'Responsable': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
-                'Docente': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
-                'Consulta': ['mody-user', 'edit-pass', 'datauser-edit', 'datauser-show', 'acceso', 'destroy'],
+                'Consulta': ['datauser-show'],
                 'Administrador': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy']
+                /*
+                                    'Responsable' : [
+                                        'mody-user',
+                                        'edit-pass',
+                                        'datauser-edit',
+                                        'acceso',
+                                        'dhora',
+                                        'dcurso',
+                                        'destroy',
+                                        ],
+                                    'Docente' : [
+                                        'mody-user',
+                                        'edit-pass',
+                                        'datauser-edit',
+                                        'acceso',
+                                        'dhora',
+                                        'dcurso',
+                                        'destroy',
+                                        ],
+                */
             }
 
             /* DATA for buttons END*/
@@ -46176,6 +46202,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
+        prefix: function prefix() {
+            var str = this.ctype;
+            return str.toLowerCase();
+        },
+
         getUsers: function getUsers(page) {
             var _this = this;
 
@@ -46202,9 +46233,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         /* METHODS for buttons INIT */
         defineButtons: function defineButtons() {
-
+            var ctype = this.ctype;
             for (var user in this.users) {
-                var ctype = this.users[user].ctype;
                 this.buttons = [];
 
                 for (var xbutton in this.UserButtons[ctype]) {
@@ -46224,6 +46254,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     computed: {
+
         /* COMPUTED for pagination INIT */
         isActived: function isActived() {
             return this.pagination.current_page;
@@ -46255,8 +46286,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     }
 
     /*
-    
-    <div>
+     <div>
         
     <select v-model="typeSelected">
         <option v-for="type in types" v-bind:value="type.name">
@@ -46264,15 +46294,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         </option>
     </select>
     </div>
-    
-    <p><a @click="searchText">Filtrar</a></p>
+     <p><a @click="searchText">Filtrar</a></p>
         <form @submit.prevent="searchName">
             <input v-model="searchText" type="text" class="form-control">
             <button class="btn btn-primary">Filtrar</button>
         </form>
-    
-    
-    */
+      */
 
 });
 
@@ -46342,7 +46369,8 @@ var render = function() {
                       {
                         class: "btn btn-" + button.color,
                         attrs: {
-                          href: button.href + user.user_id,
+                          id: button.id + user.user_id,
+                          href: _vm.prefix() + button.href + user.user_id,
                           "data-toggle": "tooltip",
                           title: button.title
                         }
@@ -46366,7 +46394,7 @@ var render = function() {
     _c("nav", [
       _c(
         "ul",
-        { staticClass: "pagination" },
+        { staticClass: "pagination", attrs: { name: "pagination" } },
         [
           _vm.pagination.current_page > 1
             ? _c("li", [

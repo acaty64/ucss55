@@ -21,7 +21,7 @@ class UserController extends Controller
     public function index(Request $request, $facultad_id, $sede_id)
     {
 
-        $accesos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->paginate(5);
+        $accesos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->paginate(4);
 
         $users = collect();
         $users->put('current_page',$accesos->currentPage());

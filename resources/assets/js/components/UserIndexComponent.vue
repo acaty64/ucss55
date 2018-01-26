@@ -24,14 +24,14 @@
                     <td>{{ user.ctype }}</td>
                     <td>
                         <span v-for="button in user.buttons">
-                            <a :href="button.href+user.user_id" :class="'btn btn-'+button.color" data-toggle="tooltip" :title=button.title ><span :class="'glyphicon glyphicon-'+button.icon" aria-hidden='true'></span></a>
+                            <a :id="button.id+user.user_id" :href="prefix()+button.href+user.user_id" :class="'btn btn-'+button.color" data-toggle="tooltip" :title=button.title ><span :class="'glyphicon glyphicon-'+button.icon" aria-hidden='true'></span></a>
                         </span>                        
                     </td>                    
                 </tr>
             </tbody>
         </table>
         <nav>
-            <ul class="pagination">
+            <ul class="pagination" name="pagination">
                 <li v-if="pagination.current_page > 1">     
                     <a href="#" @click.prevent="changePage(pagination.current_page - 1)">   
                         <span>Atrás</span>  
@@ -83,62 +83,70 @@
                 //byAllButtons:[],
                 AllButtons: {
                     'datauser-show': {
-                            'href': "/consulta/datauser/show/",
+                            'href': "/datauser/show/",
                             'user_id': true,
                             'title': "Ver Datos Personales",
                             'color': 'warning',
                             'icon': "user",
+                            'id': 'datauser-show'
                     },
                     'datauser-edit': {
-                            'href': "/consulta/datauser/edit/",
+                            'href': "/datauser/edit/",
                             'user_id': true,
                             'title': "Modificar Datos Personales",
                             'color': 'success',
                             'icon': "earphone",
+                            'id': 'datauser-edit'
                     },
 
                     'mody-user': {
-                            'href': "/administrador/user/edit/",
+                            'href': "/user/edit/",
                             'user_id': true,
                             'title': "Modificar usuario",
                             'color': 'warning',
                             'icon': "user",
+                            'id': 'mody-user'
                     },                        
                     'edit-pass': {
-                            'href': "/administrador/user/editpass/",
+                            'href': "/user/editpass/",
                             'user_id': true,
                             'title': "Modificar password",
                             'color': 'danger',
                             'icon': "lock",
+                            'id': 'edit-pass'
                     },
                     'destroy': {
-                            'href': "/administrador/user/destroy/",
+                            'href': "/user/destroy/",
                             'user_id': true,
                             'title': "Eliminar usuario",
                             'color': 'danger',
                             'icon': "trash",
+                            'id': 'destroy'
                     },
                     'acceso': {
-                            'href': "/administrador/acceso/edit/",
+                            'href': "/acceso/edit/",
                             'user_id': true,
                             'title': "Modificar acceso del usuario",
                             'color': 'warning',
                             'icon': "ok",
+                            'id': 'acceso'
                     },
 
                     'dhora': {
-                            'href': "/administrador/dhora/edit/",
+                            'href': "/dhora/edit/",
                             'user_id': true,
                             'title': "Disponibilidad Horaria",
                             'color': 'success',
                             'icon': "calendar",
+                            'id': 'dhora'
                     },                    
                     'dcurso': {
-                            'href': "/administrador/dcurso/edit/",
+                            'href': "/dcurso/edit/",
                             'user_id': true,
                             'color': 'success',
                             'title': "Disponibilidad de Cursos",
                             'icon': "list-alt",
+                            'id': 'dcurso'
                     },
                 },
                 UserButtons: {
@@ -151,6 +159,19 @@
                         'dcurso',
                         'destroy',
                         ],
+                    'Consulta': [
+                        'datauser-show',
+                        ],
+                    'Administrador': [
+                        'mody-user',
+                        'edit-pass',
+                        'datauser-edit',
+                        'acceso',
+                        'dhora',
+                        'dcurso',
+                        'destroy',
+                        ],
+/*
                     'Responsable' : [
                         'mody-user',
                         'edit-pass',
@@ -169,29 +190,18 @@
                         'dcurso',
                         'destroy',
                         ],
-                    'Consulta': [
-                        'mody-user',
-                        'edit-pass',
-                        'datauser-edit',
-                        'datauser-show',
-                        'acceso',
-                        'destroy',
-                        ],
-                    'Administrador': [
-                        'mody-user',
-                        'edit-pass',
-                        'datauser-edit',
-                        'acceso',
-                        'dhora',
-                        'dcurso',
-                        'destroy',
-                        ],
+*/
                 },
 
                 /* DATA for buttons END*/
             }
         },
         methods: {
+            prefix: function () {
+                var str = this.ctype;
+                return str.toLowerCase();
+            },
+
             getUsers: function (page) {
                 var protocol = window.location.protocol;
                 var URLdomain = window.location.host;
@@ -216,9 +226,8 @@
 
             /* METHODS for buttons INIT */
             defineButtons: function() {
-
+                var ctype = this.ctype;
                 for (var user in this.users){
-                    var ctype = this.users[user].ctype;
                     this.buttons = [];
 
                     for(var xbutton in this.UserButtons[ctype]){
@@ -239,7 +248,8 @@
 
         },
 
-        computed: {     
+        computed: { 
+
             /* COMPUTED for pagination INIT */
             isActived : function() {    
                 return this.pagination.current_page;    
