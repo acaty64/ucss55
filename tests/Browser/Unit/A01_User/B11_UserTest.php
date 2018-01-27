@@ -26,7 +26,9 @@ class B11_UserTest extends DuskTestCase
 
             $user = $this->defaultUser();
             $this->defaultDataUser($user);
- 
+            $type = Type::where('name', 'Docente')->first();
+            $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
+
             $admin = $this->defaultUser();
             $this->defaultDataUser($admin);            
             $type_admin = Type::where('name', 'Administrador')->first();
@@ -43,13 +45,10 @@ class B11_UserTest extends DuskTestCase
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
                     ->waitForText('Lista de Usuarios')
-                    ->select('pagination',2)
+                    ->waitFor('#modi_user1')
+                    ->click('.pagination',2)
                     ->waitForText($user->name)
-                    ->click('modi-user'.$user->id)
-                    ->assertPathIs("/administrador/user/edit/".$user->id)
-                    ;
-/*                    
-                    ->visit("/administrador/user/edit/".$user->id)
+                    ->click('#modi_user'.$user->id)
                     ->assertPathIs("/administrador/user/edit/".$user->id)
                     ->waitForText('Modificar Usuario')
                     ->type('name', 'John Doe')
@@ -57,7 +56,7 @@ class B11_UserTest extends DuskTestCase
                     ->press('Grabar modificaciones')
                     ->waitForText('Lista de Usuarios')
                     ->assertSee('Se ha modificado el registro: ' . $user->id . ' : John Doe de forma exitosa');
-*/
+
         });
     }
 }

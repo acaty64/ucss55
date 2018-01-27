@@ -46104,38 +46104,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             buttons: [],
             //byAllButtons:[],
             AllButtons: {
-                'datauser-show': {
+                'datauser_show': {
                     'href': "/datauser/show/",
                     'user_id': true,
                     'title': "Ver Datos Personales",
                     'color': 'warning',
                     'icon': "user",
-                    'id': 'datauser-show'
+                    'id': 'datauser_show'
                 },
-                'datauser-edit': {
+                'datauser_edit': {
                     'href': "/datauser/edit/",
                     'user_id': true,
                     'title': "Modificar Datos Personales",
                     'color': 'success',
                     'icon': "earphone",
-                    'id': 'datauser-edit'
+                    'id': 'datauser_edit'
                 },
 
-                'mody-user': {
+                'modi_user': {
                     'href': "/user/edit/",
                     'user_id': true,
                     'title': "Modificar usuario",
                     'color': 'warning',
                     'icon': "user",
-                    'id': 'mody-user'
+                    'id': 'modi_user'
                 },
-                'edit-pass': {
+                'edit_pass': {
                     'href': "/user/editpass/",
                     'user_id': true,
                     'title': "Modificar password",
                     'color': 'danger',
                     'icon': "lock",
-                    'id': 'edit-pass'
+                    'id': 'edit_pass'
                 },
                 'destroy': {
                     'href': "/user/destroy/",
@@ -46172,29 +46172,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             },
             UserButtons: {
-                'Master': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
-                'Consulta': ['datauser-show'],
-                'Administrador': ['mody-user', 'edit-pass', 'datauser-edit', 'acceso', 'dhora', 'dcurso', 'destroy']
-                /*
-                                    'Responsable' : [
-                                        'mody-user',
-                                        'edit-pass',
-                                        'datauser-edit',
-                                        'acceso',
-                                        'dhora',
-                                        'dcurso',
-                                        'destroy',
-                                        ],
-                                    'Docente' : [
-                                        'mody-user',
-                                        'edit-pass',
-                                        'datauser-edit',
-                                        'acceso',
-                                        'dhora',
-                                        'dcurso',
-                                        'destroy',
-                                        ],
-                */
+                'Master': ['modi_user', 'edit_pass', 'datauser_edit', 'acceso', 'dhora', 'dcurso', 'destroy'],
+                'Consulta': ['datauser_show'],
+                'Administrador': ['modi_user', 'edit_pass', 'datauser_edit', 'acceso', 'dhora', 'dcurso', 'destroy']
             }
 
             /* DATA for buttons END*/
@@ -46203,8 +46183,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         prefix: function prefix() {
+            var protocol = window.location.protocol;
+            var URLdomain = window.location.host;
             var str = this.ctype;
-            return str.toLowerCase();
+            var lower = str.toLowerCase();
+            return protocol + '//' + URLdomain + '/' + lower;
         },
 
         getUsers: function getUsers(page) {
@@ -46286,7 +46269,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     }
 
     /*
-     <div>
+    
+    <div>
         
     <select v-model="typeSelected">
         <option v-for="type in types" v-bind:value="type.name">
@@ -46294,12 +46278,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         </option>
     </select>
     </div>
-     <p><a @click="searchText">Filtrar</a></p>
+    
+    <p><a @click="searchText">Filtrar</a></p>
         <form @submit.prevent="searchName">
             <input v-model="searchText" type="text" class="form-control">
             <button class="btn btn-primary">Filtrar</button>
         </form>
-      */
+    
+    
+    */
 
 });
 

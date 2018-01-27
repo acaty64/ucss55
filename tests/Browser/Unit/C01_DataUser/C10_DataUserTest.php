@@ -44,7 +44,14 @@ class C10_DataUserTest extends DuskTestCase
                     ->waitForText('Tipo de usuario: Administrador')
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
-                    ->visit("/administrador/datauser/edit/{$user->id}")
+
+                    ->waitForText('Lista de Usuarios')
+                    ->waitFor('#modi_user1')
+                    ->click('.pagination',2)
+                    ->waitForText($user->name)
+                    ->click('#datauser_edit'.$user->id)
+
+                    ->waitForText('Modificación de Datos de Usuario')
                     ->type('cdocente','000002')
                     ->type('wdoc1','Nuevo nombre')
                     ->type('wdoc2','Primer Apellido')
