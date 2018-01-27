@@ -45622,6 +45622,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(urlItems).then(function (response) {
                 _this.items = response.data;
             });
+        },
+
+        isSubmenu: function isSubmenu(item) {
+            console.log('item.href: ' + item.href);
+            return [item.href == 'submenu', true, false];
         }
     }
 
@@ -45724,13 +45729,8 @@ var render = function() {
     { staticClass: "nav navbar-nav list-group-item list-inline" },
     _vm._l(_vm.items, function(item) {
       return _c("li", [
-        item.href
+        item.href == "submenu"
           ? _c("span", [
-              _c("a", { attrs: { href: item.href } }, [
-                _vm._v(" " + _vm._s(item.name) + " ")
-              ])
-            ])
-          : _c("span", [
               _c("li", { staticClass: "dropdown" }, [
                 _c(
                   "a",
@@ -45772,6 +45772,11 @@ var render = function() {
                     ])
                   })
                 )
+              ])
+            ])
+          : _c("span", [
+              _c("a", { attrs: { href: item.href } }, [
+                _vm._v(" " + _vm._s(item.name) + " ")
               ])
             ])
       ])
