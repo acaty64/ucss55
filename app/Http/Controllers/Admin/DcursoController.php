@@ -113,7 +113,7 @@ class DCursoController extends Controller
     public function edit($docente_id)
     {
 
-        return view('errors.000');
+        return view('admin.dcurso.edit');
 
 
         $facultad_id = \Cache::get('facultad_id');

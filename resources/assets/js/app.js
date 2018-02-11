@@ -7,7 +7,6 @@
 
 require('./bootstrap');
 
-
 window.Vue = require('vue');
 window.VueRouter = require('vue-router');
 
@@ -21,6 +20,8 @@ window.VueRouter = require('vue-router');
 Vue.component('menu-component', require('./components/MenuComponent.vue'));
 Vue.component('help-component', require('./components/HelpComponent.vue'));
 Vue.component('userindex-component', require('./components/UserIndexComponent.vue'));
+Vue.component('dcurso-component', require('./components/DCursoComponent.vue'));
+Vue.component('App', require('./components/App.vue'));
 
 const app = new Vue({
     el: '#app'
