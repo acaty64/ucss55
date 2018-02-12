@@ -17,6 +17,9 @@ class DatabaseSeeder extends Seeder
         $this->call(FacultadesTableSeeder::class);
         $this->call(SedesTableSeeder::class);
         $this->call(SedeFacultadesTableSeeder::class);
+        $this->call(GruposTableSeeder::class);
+        $this->call(CursosTableSeeder::class);
+        $this->call(CursoGrupoTableSeeder::class);
         if(env('APP_ENV') != 'testing'){        
             $this->call(UsersTableSeeder::class);
             $this->call(DataUsersTableSeeder::class);

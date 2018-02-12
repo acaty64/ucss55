@@ -15,7 +15,7 @@ class DCurso extends Model
     /********** RELATIONSHIP ***********/
     public function curso()
     {
-        return $this->belongsTo('App\Curso');
+        return $this->belongsTo('App\Curso', 'curso_id');
     }	
 
     public function user()

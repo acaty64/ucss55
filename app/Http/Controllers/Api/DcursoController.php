@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Curso;
 use App\CursoGrupo;
 use App\DCurso;
+use App\Grupo;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -78,6 +80,66 @@ class DCursoController extends Controller
         return [
            'success' => true,
             ];
+    }
+
+    public function load(Request $request)
+    {
+        $facultad_id = $request->facultad_id;
+        $sede_id = $request->sede_id;
+        $user_id = $request->docente_id;
+
+        $xgrupos = Grupo::where('facultad_id',$facultad_id)
+                ->where('sede_id',$sede_id)->get();
+
+        $dcursos = DCurso::where('facultad_id',$facultad_id)
+                ->where('sede_id',$sede_id)
+                ->where('user_id',$user_id)->get()->toArray();
+
+        $grupos = [];
+        $cursos = [];
+        foreach($xgrupos as $grupo){
+            array_push($grupos, [
+                'grupo_id' => $grupo->id,
+                'cgrupo' => $grupo->cgrupo,
+                'wgrupo' => $grupo->wgrupo
+            ]);
+            $xcursos = $grupo->cursogrupo;
+            foreach($xcursos as $curso){
+                $item = $curso->curso;
+                array_push( $cursos, [
+                    'grupo_id' => $grupo->id,
+                    'curso_id' => $item->id,
+                    'ccurso' => $item->ccurso,
+                    'wcurso' => $item->wcurso,
+                    'registered' => array_search($item->id, array_column($dcursos,'id'))
+                ]);
+            }
+        }
+      
+        $registrations = [];
+        foreach ($cursos as $item){
+            if(is_numeric($item['registered'])){
+                array_push($registrations, $item);
+            }
+        }
+
+        $registration = [];
+        foreach ($cursos as $item){
+            if(!is_numeric($item['registered'])){
+                array_push($registration, $item);
+            }
+        }
+
+        $data = [];
+        $data['grupos'] = $grupos ;
+        $data['registration'] = $registration ;
+        $data['registrations'] = $registrations ;
+
+        return [
+            'success' => true,
+            'data' => $data
+        ];        
+
     }
 
 }

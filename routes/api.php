@@ -17,6 +17,10 @@ use Illuminate\Http\Request;
  * Dcurso's Api Route
  *
  */
+Route::post('dcurso/load', [
+		'as'	=> 'api.dcurso.load',
+		'uses'	=> 'Api\DCursoController@load',	
+	]);
 
 Route::post('dcurso/index', [
 		'as'	=> 'api.dcurso.index',

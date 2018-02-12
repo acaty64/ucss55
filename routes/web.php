@@ -26,3 +26,7 @@ Route::post('/home/acceso', [
 	'as'	=> 'home.acceso',
 	'uses'	=> 'HomeController@acceso',	
 ]);
+
+Route::get('/test', [
+	'as'	=> 'test',
+	'uses'	=> 'TestController@test']);
