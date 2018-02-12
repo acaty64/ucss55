@@ -2,8 +2,8 @@
 <div id="app">
   
     <app-grupo @changeGrupo="changeGrupo" :grupos="grupos"></app-grupo>
-    <app-registration @itemRegistered="itemRegistered" :items="unregisteredItems"></app-registration>
     <app-registrations @itemUnregistered="itemUnregistered" :registrations="registrations"></app-registrations>
+    <app-registration @itemRegistered="itemRegistered" :items="unregisteredItems"></app-registration>
 
 </div>
 </template>
