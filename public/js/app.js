@@ -45897,6 +45897,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -45940,64 +45942,66 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "ul",
-    { staticClass: "nav navbar-nav list-group-item list-inline" },
-    _vm._l(_vm.items, function(item) {
-      return _c("li", [
-        item.href == "submenu"
-          ? _c("span", [
-              _c("li", { staticClass: "dropdown" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "dropdown-toggle",
-                    attrs: {
-                      href: "#",
-                      role: "button",
-                      id: "dropdownMenu2",
-                      "data-toggle": "dropdown",
-                      "aria-haspopup": "true",
-                      "aria-expanded": "false"
-                    }
-                  },
-                  [
-                    _vm._v(_vm._s(item.name)),
-                    _c("span", { staticClass: "caret" })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "ul",
-                  {
-                    staticClass: "dropdown-menu",
-                    attrs: { "aria-labelledby": "dropdownMenu2" }
-                  },
-                  _vm._l(item.submenu, function(subitem) {
-                    return _c("div", [
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "nav-item nav-link",
-                            attrs: { href: subitem.href }
-                          },
-                          [_vm._v(_vm._s(subitem.name))]
-                        )
+  return _c("div", { attrs: { dusk: "menu-component" } }, [
+    _c(
+      "ul",
+      { staticClass: "nav navbar-nav list-group-item list-inline" },
+      _vm._l(_vm.items, function(item) {
+        return _c("li", [
+          item.href == "submenu"
+            ? _c("span", [
+                _c("li", { staticClass: "dropdown" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-toggle",
+                      attrs: {
+                        href: "#",
+                        role: "button",
+                        id: "dropdownMenu2",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "true",
+                        "aria-expanded": "false"
+                      }
+                    },
+                    [
+                      _vm._v(_vm._s(item.name)),
+                      _c("span", { staticClass: "caret" })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "dropdownMenu2" }
+                    },
+                    _vm._l(item.submenu, function(subitem) {
+                      return _c("div", [
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "nav-item nav-link",
+                              attrs: { href: subitem.href }
+                            },
+                            [_vm._v(_vm._s(subitem.name))]
+                          )
+                        ])
                       ])
-                    ])
-                  })
-                )
+                    })
+                  )
+                ])
               ])
-            ])
-          : _c("span", [
-              _c("a", { attrs: { href: item.href } }, [
-                _vm._v(" " + _vm._s(item.name) + " ")
+            : _c("span", [
+                _c("a", { attrs: { href: item.href } }, [
+                  _vm._v(" " + _vm._s(item.name) + " ")
+                ])
               ])
-            ])
-      ])
-    })
-  )
+        ])
+      })
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -46519,7 +46523,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { attrs: { dusk: "userindex-component" } }, [
     _c("div", { staticClass: "container" }, [
       _c(
         "span",
@@ -46773,6 +46777,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -46835,17 +46843,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
 
+        save: function save() {
+            alert("Pendiente grabar información.");
+            console.log("save: ", this.registrations);
+        },
         itemRegistered: function itemRegistered(item) {
-            var date = new Date();
+            console.log("itemRegistered: ", item);
             this.registrations.push({
                 grupo_id: item.grupo_id,
                 curso_id: item.curso_id,
-                wcurso: item.wcurso,
-                date: date.getMonth() + '/' + date.getDay() });
+                wcurso: item.wcurso });
             this.sortWcurso(this.registrations);
             this.items.splice(this.items.indexOf(item), 1);
         },
         itemUnregistered: function itemUnregistered(registration) {
+            console.log("itemUnRegistered: ", registration);
             var item = this.items.find(function (item) {
                 return item.id == registration.itemId;
             });
@@ -46959,7 +46971,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n#grupos[data-v-54b37fca] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n}\n\n", ""]);
+exports.push([module.i, "\n#grupos[data-v-54b37fca] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n}\n", ""]);
 
 // exports
 
@@ -47038,7 +47050,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "grupos" } }, [
+  return _c("div", { attrs: { id: "grupos", dusk: "dcursogrupo-component" } }, [
     _c("h3", [_vm._v("Seleccione el grupo")]),
     _vm._v(" "),
     _c(
@@ -47053,6 +47065,7 @@ var render = function() {
           }
         ],
         staticClass: "form-control",
+        attrs: { id: "sel_grupos" },
         on: {
           change: [
             function($event) {
@@ -47205,6 +47218,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         registerItem: function registerItem(item) {
             this.$emit('itemRegistered', item);
             item.registered != false;
+        },
+        viewItem: function viewItem(item) {
+            alert("Pendiente vista PDF del syllabus del curso (" + item.ccurso + "): " + item.wcurso);
         }
     }
 });
@@ -47219,7 +47235,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { attrs: { id: "registration" } },
+    { attrs: { id: "registration", dusk: "dcursoregistration-component" } },
     [
       _c("h3", [_vm._v("Seleccione el curso")]),
       _vm._v(" "),
@@ -47227,18 +47243,29 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.items, function(item) {
         return _c("div", { staticClass: "row" }, [
-          _c("p", [_vm._v(_vm._s(item.wcurso))]),
-          _vm._v(" "),
           _c(
             "button",
             {
+              on: {
+                click: function($event) {
+                  _vm.viewItem(item)
+                }
+              }
+            },
+            [_vm._v("View")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: { href: "#" },
               on: {
                 click: function($event) {
                   _vm.registerItem(item)
                 }
               }
             },
-            [_vm._v("Seleccionar")]
+            [_vm._v(_vm._s(item.wcurso))]
           )
         ])
       })
@@ -47342,7 +47369,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n#registrations[data-v-3739a8bb] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n    text-align: left;\n}\n.summary[data-v-3739a8bb] {\n    text-align: center;\n}\n.row h4[data-v-3739a8bb] {\n    display: inline-block;\n    width: 30%;\n    margin: 0 0 10px 0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.row span[data-v-3739a8bb] {\n    width: 30%;\n    color: red;\n    cursor: pointer;\n}\n.row span[data-v-3739a8bb]:hover {\n    color: darkred;\n}\n.date[data-v-3739a8bb] {\n    display: inline-block;\n    width: 38%;\n    text-align: right;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n", ""]);
+exports.push([module.i, "\n#registrations[data-v-3739a8bb] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n    text-align: left;\n}\n.summary[data-v-3739a8bb] {\n    text-align: center;\n}\n.row h4[data-v-3739a8bb] {\n    display: inline-block;\n    width: 30%;\n    margin: 0 0 10px 0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.row span[data-v-3739a8bb] {\n    width: 30%;\n    color: red;\n    cursor: pointer;\n}\n.row span[data-v-3739a8bb]:hover {\n    color: darkred;\n}\n\n", ""]);
 
 // exports
 
@@ -47368,12 +47395,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['registrations'],
     methods: {
         unregister: function unregister(registration) {
             this.$emit('itemUnregistered', registration);
+        },
+        save: function save() {
+            this.$emit('save');
         }
     },
     computed: {
@@ -47393,9 +47424,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { attrs: { id: "registrations" } },
+    { attrs: { id: "registrations", dusk: "dcursoregistrations-component" } },
     [
       _c("div", { staticClass: "summary" }, [
+        _vm.total > 0
+          ? _c("span", [
+              _c("button", { on: { click: _vm.save } }, [
+                _vm._v("Grabar cursos seleccionados")
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
         _c("h3", [_vm._v("Cursos Seleccionados")]),
         _vm._v(" "),
         _c("h5", [_vm._v("Total: " + _vm._s(_vm.total))])
@@ -47405,22 +47444,19 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.registrations, function(registration) {
         return _c("div", { staticClass: "row" }, [
-          _c("p", [_vm._v(_vm._s(registration.wcurso))]),
-          _vm._v(" "),
-          _c(
-            "span",
-            {
-              on: {
-                click: function($event) {
-                  _vm.unregister(registration)
+          _c("p", [
+            _vm._v(_vm._s(registration.wcurso) + " "),
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    _vm.unregister(registration)
+                  }
                 }
-              }
-            },
-            [_vm._v("(Eliminar)")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "date" }, [
-            _vm._v(_vm._s(registration.date))
+              },
+              [_vm._v("X")]
+            )
           ])
         ])
       })
@@ -47457,7 +47493,7 @@ var render = function() {
       _vm._v(" "),
       _c("app-registrations", {
         attrs: { registrations: _vm.registrations },
-        on: { itemUnregistered: _vm.itemUnregistered }
+        on: { itemUnregistered: _vm.itemUnregistered, save: _vm.save }
       }),
       _vm._v(" "),
       _c("app-registration", {

@@ -1,7 +1,7 @@
 <template>
-    <div id="grupos">
+    <div id="grupos" dusk="dcursogrupo-component">
         <h3>Seleccione el grupo</h3>
-        <select v-model="item" class="form-control" v-on:change="registerItem">
+        <select id="sel_grupos" v-model="item" class="form-control" v-on:change="registerItem">
           <option v-for="item in grupos" :value="item">
             {{ item.wgrupo }}
           </option>
@@ -34,5 +34,4 @@
         width: 300px;
         vertical-align: top;
     }
-
 </style>

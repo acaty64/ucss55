@@ -1,8 +1,0 @@
-[
-    {
-        "level": "SEVERE",
-        "message": "http:\/\/newucss5.test\/docente\/datauser\/edit\/11 184:69 Uncaught ReferenceError: evento is not defined",
-        "source": "javascript",
-        "timestamp": 1517073474362
-    }
-]

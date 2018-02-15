@@ -1,10 +1,10 @@
 <template>
-    <div id="registration">
+    <div id="registration" dusk="dcursoregistration-component">
         <h3>Seleccione el curso</h3>
         <hr>
         <div class="row" v-for="item in items">
-            <p>{{ item.wcurso }}</p>
-            <button @click="registerItem(item)">Seleccionar</button>
+            <button @click="viewItem(item)">View</button>
+            <a href="#" @click="registerItem(item)">{{ item.wcurso }}</a>
         </div>
     </div>
 </template>
@@ -16,6 +16,10 @@
             registerItem(item) {
                 this.$emit('itemRegistered', item);
                 item.registered != false;
+            },
+
+            viewItem(item) {
+                alert("Pendiente vista PDF del syllabus del curso ("+item.ccurso+"): "+item.wcurso);
             }
         }
     }

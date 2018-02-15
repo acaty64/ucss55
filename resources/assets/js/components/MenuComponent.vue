@@ -1,21 +1,23 @@
 <template>
-    <ul class="nav navbar-nav list-group-item list-inline">
-        <li v-for="item in items">
-            <span v-if="item.href=='submenu'">
-                <li class='dropdown'>
-                    <a href='#' class='dropdown-toggle' role='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>{{item.name}}<span class='caret'></span></a>
-                    <ul class='dropdown-menu'aria-labelledby='dropdownMenu2'>
-                        <div v-for="subitem in item.submenu">
-                            <li><a class="nav-item nav-link" :href=subitem.href>{{subitem.name}}</a></li>
-                        </div>
-                    </ul>
-                </li>                
-            </span>
-            <span v-else>
-                <a :href=item.href> {{ item.name }} </a>
-            </span>
-        </li>
-    </ul>
+    <div dusk="menu-component">    
+        <ul class="nav navbar-nav list-group-item list-inline">
+            <li v-for="item in items">
+                <span v-if="item.href=='submenu'">
+                    <li class='dropdown'>
+                        <a href='#' class='dropdown-toggle' role='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>{{item.name}}<span class='caret'></span></a>
+                        <ul class='dropdown-menu'aria-labelledby='dropdownMenu2'>
+                            <div v-for="subitem in item.submenu">
+                                <li><a class="nav-item nav-link" :href=subitem.href>{{subitem.name}}</a></li>
+                            </div>
+                        </ul>
+                    </li>                
+                </span>
+                <span v-else>
+                    <a :href=item.href> {{ item.name }} </a>
+                </span>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>

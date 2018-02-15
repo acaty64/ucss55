@@ -2,7 +2,11 @@
 <div id="app">
   
     <app-grupo @changeGrupo="changeGrupo" :grupos="grupos"></app-grupo>
-    <app-registrations @itemUnregistered="itemUnregistered" :registrations="registrations"></app-registrations>
+    <app-registrations 
+      @itemUnregistered="itemUnregistered" 
+      @save="save" 
+      :registrations="registrations">
+      </app-registrations>
     <app-registration @itemRegistered="itemRegistered" :items="unregisteredItems"></app-registration>
 
 </div>
@@ -64,18 +68,23 @@
               });
           },
 
+          save() {
+            alert("Pendiente grabar información.");
+console.log("save: ", this.registrations );
+          },
+
           itemRegistered(item) {
-              const date = new Date;
+console.log("itemRegistered: ", item );
               this.registrations.push({
                   grupo_id: item.grupo_id, 
                   curso_id: item.curso_id, 
-                  wcurso: item.wcurso, 
-                  date: date.getMonth() + '/' + date.getDay()})
+                  wcurso: item.wcurso })
               this.sortWcurso(this.registrations);
               this.items.splice(this.items.indexOf(item), 1);
           },
 
           itemUnregistered(registration) {
+console.log("itemUnRegistered: ", registration );
             const item = this.items.find(item => {
                 return item.id == registration.itemId;
             });

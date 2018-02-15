@@ -1,5 +1,5 @@
 <template>
-    <div> 
+    <div dusk="userindex-component"> 
         <div class="container">
             <span v-show="ctype == 'Administrador'">
                 <a href="/administrador/user/create" class="btn btn-info">Registrar Nuevo Usuario</a>               

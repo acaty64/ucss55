@@ -1,14 +1,15 @@
 <template>
-    <div id="registrations">
+    <div id="registrations" dusk="dcursoregistrations-component">
         <div class="summary">
+            <span v-if="total > 0">
+                <button @click="save">Grabar cursos seleccionados</button>
+            </span>
             <h3>Cursos Seleccionados</h3>
             <h5>Total: {{ total }}</h5>
         </div>
         <hr>
         <div class="row" v-for="registration in registrations">
-            <p>{{ registration.wcurso }}</p>
-            <span @click="unregister(registration)">(Eliminar)</span>
-            <div class="date">{{ registration.date }}</div>
+            <p>{{ registration.wcurso }} <button @click="unregister(registration)">X</button></p>
         </div>
     </div>
 </template>
@@ -19,6 +20,9 @@
         methods: {
             unregister(registration) {
                 this.$emit('itemUnregistered', registration);
+            },
+            save(){
+                this.$emit('save');
             }
         },
         computed: {
@@ -61,10 +65,4 @@
         color: darkred;
     }
 
-    .date {
-        display: inline-block;
-        width: 38%;
-        text-align: right;
-        box-sizing: border-box;
-    }
 </style>
