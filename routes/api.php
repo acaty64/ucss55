@@ -17,16 +17,22 @@ use Illuminate\Http\Request;
  * Dcurso's Api Route
  *
  */
-Route::post('dcurso/load', [
-		'as'	=> 'api.dcurso.load',
-		'uses'	=> 'Api\DCursoController@load',	
-	]);
 
 Route::post('dcurso/index', [
 		'as'	=> 'api.dcurso.index',
 		'uses'	=> 'Api\DcursoController@index',	
 	]);
 //->middleware('can:is_admin,'.Acceso::class);
+
+Route::post('dcurso/load', [
+		'as'	=> 'api.dcurso.load',
+		'uses'	=> 'Api\DCursoController@load',	
+	]);
+
+Route::post('dcurso/save', [
+		'as'	=> 'api.dcurso.save',
+		'uses'	=> 'Api\DCursoController@save',	
+	]);
 
 Route::post('dcurso/update', [
 		'as'	=> 'api.dcurso.update',

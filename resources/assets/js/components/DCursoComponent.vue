@@ -19,6 +19,7 @@
   import Registrations from './DCursoRegistrations.vue';
 
   export default {
+
       mounted() {
           console.log('Dcurso-component mounted.');
           this.getData();
@@ -32,6 +33,8 @@
 
       data() {
           return {
+              URLdomain: window.location.host,
+              protocol: window.location.protocol,
               items:[],
               facultad_id:1,
               sede_id:1,
@@ -51,15 +54,13 @@
       },
       methods: {
           getData: function() {
-              var URLdomain = window.location.host;
-              var protocol = window.location.protocol;
-              var url = protocol+'//'+URLdomain+'/api/dcurso/load/'
-              var request ={
+              var request = {
                       'facultad_id': this.facultad_id,
                       'sede_id': this.sede_id,
                       'docente_id': this.docente_id,
                   };
 
+              var url = this.protocol+'//'+this.URLdomain+'/api/dcurso/load/'
               axios.post(url, request).then(response=>{
                   this.grupos = response.data.data.grupos;
                   this.items = response.data.data.registration;
@@ -69,6 +70,26 @@
           },
 
           save() {
+              var request = {
+                  'facultad_id': this.facultad_id,
+                  'sede_id': this.sede_id,
+                  'docente_id': this.docente_id,
+                  'items': this.registrations
+                };
+console.log('request', request);
+
+              var url = this.protocol+'//'+this.URLdomain+'/api/dcurso/save/'
+
+              axios.post(url, request).then(response=>{
+                console.log('response', response.data.success);                
+/*
+                  this.grupos = response.data.data.grupos;
+                  this.items = response.data.data.registration;
+                  this.sortWcurso(this.items);
+                  this.registrations = response.data.data.registrations;
+*/
+              });
+
             alert("Pendiente grabar información.");
 console.log("save: ", this.registrations );
           },

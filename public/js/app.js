@@ -46802,6 +46802,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     data: function data() {
         return {
+            URLdomain: window.location.host,
+            protocol: window.location.protocol,
             items: [],
             facultad_id: 1,
             sede_id: 1,
@@ -46826,15 +46828,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getData: function getData() {
             var _this2 = this;
 
-            var URLdomain = window.location.host;
-            var protocol = window.location.protocol;
-            var url = protocol + '//' + URLdomain + '/api/dcurso/load/';
             var request = {
                 'facultad_id': this.facultad_id,
                 'sede_id': this.sede_id,
                 'docente_id': this.docente_id
             };
 
+            var url = this.protocol + '//' + this.URLdomain + '/api/dcurso/load/';
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, request).then(function (response) {
                 _this2.grupos = response.data.data.grupos;
                 _this2.items = response.data.data.registration;
@@ -46844,6 +46844,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
 
         save: function save() {
+            var request = {
+                'facultad_id': this.facultad_id,
+                'sede_id': this.sede_id,
+                'docente_id': this.docente_id,
+                'items': this.registrations
+            };
+            console.log('request', request);
+
+            var url = this.protocol + '//' + this.URLdomain + '/api/dcurso/save/';
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, request).then(function (response) {
+                console.log('response', response.data.success);
+                /*
+                                  this.grupos = response.data.data.grupos;
+                                  this.items = response.data.data.registration;
+                                  this.sortWcurso(this.items);
+                                  this.registrations = response.data.data.registrations;
+                */
+            });
+
             alert("Pendiente grabar información.");
             console.log("save: ", this.registrations);
         },

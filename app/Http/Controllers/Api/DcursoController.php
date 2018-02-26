@@ -60,7 +60,6 @@ class DCursoController extends Controller
      */
     public function update(Request $request)
     {
-
         $all = collect($request->registros);  
         foreach ($all as $item) {
             $dcurso = Dcurso::find($item['id']);
@@ -140,6 +139,14 @@ class DCursoController extends Controller
             'data' => $data
         ];        
 
+    }
+
+    function save(Request $request)
+    {
+        return [
+            'success' => true,
+            'data' => '$request' 
+        ];
     }
 
 }
