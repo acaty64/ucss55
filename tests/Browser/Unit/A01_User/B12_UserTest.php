@@ -35,12 +35,13 @@ class B12_UserTest extends DuskTestCase
                     ->select('facultad_id', $facultad_id)
                     ->select('sede_id', $sede_id)
                     ->press('Acceder')
-                    ->waitForText('Inicio')
+                    ->waitForText('Inicio', 10)
                     ->assertSee('Usuarios')
                     ->waitForText('Tipo de usuario: Consulta')
                     ->visit('/consulta/user/index')
                     ->assertPathIs('/consulta/user/index')
                     ->waitForText('Lista de Usuarios');
         });
+        session()->flush();
     }
 }

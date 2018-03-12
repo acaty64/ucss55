@@ -58,5 +58,6 @@ class B11_UserTest extends DuskTestCase
                     ->assertSee('Se ha modificado el registro: ' . $user->id . ' : John Doe de forma exitosa');
 
         });
+        session()->flush();
     }
 }

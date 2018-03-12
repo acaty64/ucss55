@@ -34,6 +34,7 @@ class A01_AccessTest extends DuskTestCase
                     ->AssertSee('Descripción de Opciones')
                     ;
         });
+        session()->flush();
     }
 
 }

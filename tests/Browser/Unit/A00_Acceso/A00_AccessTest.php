@@ -26,6 +26,7 @@ class A00_AccessTest extends DuskTestCase
                     ->visit('/home')
                     ->assertPathIs('/home');
         });
+        session()->flush();
     }
 
     public function testAccess()
@@ -43,5 +44,6 @@ class A00_AccessTest extends DuskTestCase
                 ->press('Login')
                 ->assertPathIs('/home');
         });
+        session()->flush();
     }
 }

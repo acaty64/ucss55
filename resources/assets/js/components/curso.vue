@@ -1,3 +1,0 @@
-<template>
-	curso.vue
-</template>

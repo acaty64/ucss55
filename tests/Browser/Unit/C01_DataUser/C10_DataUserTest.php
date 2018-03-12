@@ -39,19 +39,19 @@ class C10_DataUserTest extends DuskTestCase
                     ->select('facultad_id', $facultad_id)
                     ->select('sede_id', $sede_id)
                     ->press('Acceder')
-                    ->waitForText('Inicio')
+                    ->waitForText('Inicio', 10)
                     ->assertSee('Usuarios')
-                    ->waitForText('Tipo de usuario: Administrador')
+                    ->waitForText('Tipo de usuario: Administrador', 10)
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
 
-                    ->waitForText('Lista de Usuarios')
-                    ->waitFor('#modi_user1')
+                    ->waitForText('Lista de Usuarios', 10)
+                    ->waitFor('#modi_user1', 10)
                     ->click('.pagination',2)
-                    ->waitForText($user->name)
+                    ->waitForText($user->name, 10)
                     ->click('#datauser_edit'.$user->id)
 
-                    ->waitForText('Modificación de Datos de Usuario')
+                    ->waitForText('Modificación de Datos de Usuario', 10)
                     ->type('cdocente','000002')
                     ->type('wdoc1','Nuevo nombre')
                     ->type('wdoc2','Primer Apellido')
@@ -62,6 +62,7 @@ class C10_DataUserTest extends DuskTestCase
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
+        session()->flush();
     }
 
     function test_a_CONSULTA_can_edit_his_datauser()
@@ -83,11 +84,11 @@ class C10_DataUserTest extends DuskTestCase
                     ->select('facultad_id', $facultad_id)
                     ->select('sede_id', $sede_id)
                     ->press('Acceder')
-                    ->waitForText('Inicio')
+                    ->waitForText('Inicio', 20)
                     ->assertSee('Usuarios')
-                    ->waitForText('Tipo de usuario: Consulta')
+                    ->waitForText('Tipo de usuario: Consulta', 10)
                     ->visit("/consulta/datauser/edit/{$user->id}")
-                    ->waitForText('Modificación de Datos de Usuario')
+                    ->waitForText('Modificación de Datos de Usuario', 10)
                     //->type('cdocente','000002')
                     ->type('wdoc1','Nuevo nombre')
                     ->type('wdoc2','Primer Apellido')
@@ -98,6 +99,7 @@ class C10_DataUserTest extends DuskTestCase
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
+        session()->flush();
     }
 
     function test_a_DOCENTE_can_edit_his_datauser()
@@ -119,10 +121,10 @@ class C10_DataUserTest extends DuskTestCase
                     ->select('facultad_id', $facultad_id)
                     ->select('sede_id', $sede_id)
                     ->press('Acceder')
-                    ->waitForText('Inicio')
-                    ->waitForText('Tipo de usuario: Docente')
+                    ->waitForText('Inicio', 10)
+                    ->waitForText('Tipo de usuario: Docente', 10)
                     ->visit("/docente/datauser/edit/{$user->id}")
-                    ->waitForText('Modificación de Datos de Usuario')
+                    ->waitForText('Modificación de Datos de Usuario', 10)
                     ->type('wdoc1','Nuevo nombre')
                     ->type('wdoc2','Primer Apellido')
                     ->type('wdoc3','Segundo Apellido')
@@ -131,6 +133,7 @@ class C10_DataUserTest extends DuskTestCase
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
+        session()->flush();
     }
 
     function test_a_RESPONSABLE_can_edit_his_datauser()
@@ -152,10 +155,10 @@ class C10_DataUserTest extends DuskTestCase
                     ->select('facultad_id', $facultad_id)
                     ->select('sede_id', $sede_id)
                     ->press('Acceder')
-                    ->waitForText('Inicio')
-                    ->waitForText('Tipo de usuario: Responsable')
+                    ->waitForText('Inicio', 10)
+                    ->waitForText('Tipo de usuario: Responsable', 10)
                     ->visit("/responsable/datauser/edit/{$user->id}")
-                    ->waitForText('Modificación de Datos de Usuario')
+                    ->waitForText('Modificación de Datos de Usuario', 10)
                     ->type('wdoc1','Nuevo nombre')
                     ->type('wdoc2','Primer Apellido')
                     ->type('wdoc3','Segundo Apellido')
@@ -164,5 +167,6 @@ class C10_DataUserTest extends DuskTestCase
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
+        session()->flush();
     }
 }

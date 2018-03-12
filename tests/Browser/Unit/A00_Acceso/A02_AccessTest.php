@@ -63,5 +63,6 @@ class A02_AccessTest extends DuskTestCase
                     ;
 
         });
+        session()->flush();
     }
 }

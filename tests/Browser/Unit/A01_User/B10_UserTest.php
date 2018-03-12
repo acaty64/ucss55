@@ -51,5 +51,6 @@ class B10_UserTest extends DuskTestCase
                     ->assertSee('Lista de Usuarios')
                     ->assertSee('Se ha registrado John Doe de forma exitosa');
         });
+        session()->flush();
     }
 }
