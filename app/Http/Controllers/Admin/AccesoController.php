@@ -10,7 +10,7 @@ use App\Type;
 use App\User;
 use Illuminate\Foundation\Auth\Access\can;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
 class accesoController extends Controller

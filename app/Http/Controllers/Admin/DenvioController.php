@@ -13,7 +13,7 @@ use DB;
 use Illuminate\Database\Eloquent\paginate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection as Collection;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
  
 class DenvioController extends Controller
@@ -48,6 +48,7 @@ class DenvioController extends Controller
                 $denvio->save();                
             }
         }
+
 /**        if ($tipo = 'disp') {
             $denvios = Denvio::Stipo(['menvio_id'=>$id, 'type'=>'horas'])->orderBy('id','ASC')->paginate(10);
         }else{

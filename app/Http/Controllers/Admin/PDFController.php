@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\asset;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 
 class PDFController extends Controller
 {
@@ -26,7 +26,8 @@ class PDFController extends Controller
     {
         $curso = Curso::find($request->curso_id);
         $filename = $curso->ccurso.'.pdf';
-        $facu_sede = Session::get('cfacultad').'_'.Session::get('csede');
+        $facu_sede = \Cache::get('cfacultad').'_'.\Cache::get('csede');
+        // $facu_sede = Session::get('cfacultad').'_'.Session::get('csede');
         $file_pdf = 'pdf/FCEC_LIM/silabos/'.$filename;
         $arch_pdf = asset('pdf\\'.$facu_sede.'\\silabos\\').$filename;
         if(!file_exists($file_pdf)){

@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Database\Eloquent\Relations\paginate;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
 class GrupoController extends Controller
@@ -48,8 +48,10 @@ class GrupoController extends Controller
     public function store(Request $request)
     {
         $grupo = new Grupo();
-        $grupo->facultad_id = Session::get('facultad_id');
-        $grupo->sede_id = Session::get('sede_id');
+        $grupo->facultad_id = \Cache::get('facultad_id');
+        // $grupo->facultad_id = Session::get('facultad_id');
+        $grupo->sede_id = \Cache::get('sede_id');
+        // $grupo->sede_id = Session::get('sede_id');
         $grupo->cgrupo = $request->cgrupo;
         $grupo->wgrupo = $request->wgrupo;
         $grupo->save();

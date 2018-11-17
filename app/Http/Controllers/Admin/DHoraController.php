@@ -15,7 +15,7 @@ use App\Menvio;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -161,10 +161,12 @@ class DHoraController extends Controller
 
         // Redirecciona segun tipo de usuario
         Flash::success('Se ha registrado la modificación de disponibilidad horaria de forma exitosa');
-        if (Session::get('ctype') == 'Administrador') {
+        if (\Cache::get('ctype') == 'Administrador') {
+        // if (Session::get('ctype') == 'Administrador') {
             return redirect()->route('administrador.user.index');
         }else{
-            return redirect()->route(strtolower(Session::get('ctype')).'.dhora.edit', $user_id);
+            return redirect()->route(strtolower(\Cache::get('ctype')).'.dhora.edit', $user_id);
+            // return redirect()->route(strtolower(Session::get('ctype')).'.dhora.edit', $user_id);
         }
     }
 
@@ -186,7 +188,9 @@ class DHoraController extends Controller
         // Verifica si existe un menvio pendiente 
     public function sw_cambio($user_id, $tipo)
     {
-        if (Session::get('ctype') == 'Administrador' || Session::get('ctype') == 'Master') {
+        // if (Session::get('ctype') == 'Administrador' || Session::get('ctype') == 'Master') {
+        if (\Cache::get('ctype') == 'Administrador' 
+                || \Cache::get('ctype') == 'Master') {
             $sw_cambio = '1';
         }else{
             date_default_timezone_set('America/Lima');

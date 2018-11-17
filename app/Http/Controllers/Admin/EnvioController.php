@@ -16,7 +16,7 @@ use Illuminate\Mail\TransportManager;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 use Swift_SwiftException;
 
@@ -48,8 +48,8 @@ class EnvioController extends Controller
                             'bcc'=>auth()->user()->email,
                             'auth_name' => auth()->user()->datauser->wdocente(),
                             'tx_need'=>$correo->menvio->tx_need,
-                            'cfacultad' => Session::get('wfacultad'),
-                            'csede' => Session::get('wsede')
+                            'cfacultad' => \Cache::get('wfacultad'),
+                            'csede' => \Cache::get('wsede')
                         ];
                     $blade = 'admin.envios.email_01';
                     $contador++;
@@ -118,8 +118,10 @@ class EnvioController extends Controller
         if ($correo->menvio->tipo == 'disp') 
         {   
             // Selecciona el acceso 
-            $facultad_id = Session::get('facultad_id');
-            $sede_id = Session::get('sede_id');
+            $facultad_id = \Cache::get('facultad_id');
+            // $facultad_id = Session::get('facultad_id');
+            $sede_id = \Cache::get('sede_id');
+            // $sede_id = Session::get('sede_id');
             $user_id = $correo->user_id;
             $acceso = Acceso::where('facultad_id',$facultad_id)
                         ->where('sede_id', $sede_id)
@@ -145,8 +147,10 @@ class EnvioController extends Controller
 */
         }else{
             /// FALTA PROGRAMAR ACCESO A HORARIOS
-            $facultad_id = Session::get('facultad_id');
-            $sede_id = Session::get('sede_id');
+            $facultad_id = \Cache::get('facultad_id');
+            // $facultad_id = Session::get('facultad_id');
+            $sede_id = \Cache::get('sede_id');
+            // $sede_id = Session::get('sede_id');
             $user_id = $correo->user_id;
             $acceso = Acceso::where('facultad_id',$facultad_id)
                         ->where('sede_id', $sede_id)

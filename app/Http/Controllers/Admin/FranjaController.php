@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
 class FranjaController extends Controller
@@ -19,7 +19,8 @@ class FranjaController extends Controller
      */
     public function index()
     {
-        $session = Session::all();
+        $session = \Cache::all();
+        // $session = Session::all();
         //$all = Franja::where('facultad_id', $session['facultad_id'])->where('sede_id', $session['sede_id'])->get();
         /*$franjas = Franja::where([
                 ['facultad_id', $session['facultad_id']], 
@@ -43,7 +44,8 @@ class FranjaController extends Controller
      */
     public function create()
     {
-        $session = Session::all();
+        $session = \Cache::all();
+        // $session = Session::all();
         return view('admin.franja.create')
                 ->with('wsede', $session['wsede']);
     }
@@ -56,7 +58,8 @@ class FranjaController extends Controller
      */
     public function store(Request $request)
     {
-        $session = Session::all();
+        $session = \Cache::all();
+        // $session = Session::all();
         $data = $request->all();
 
         $chk = Franja::where('facultad_id', $session['facultad_id'])
@@ -91,7 +94,8 @@ class FranjaController extends Controller
      */
     public function show()
     {
-        $session = Session::all();
+        $session = \Cache::all();
+        // $session = Session::all();
         
         $franjas = Franja::where('facultad_id',$session['facultad_id'])->where('sede_id',$session['sede_id'])->get();
         if(!$franjas){

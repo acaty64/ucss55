@@ -10,7 +10,7 @@ use App\Sede;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 
 class Acceso extends Model
 {
@@ -89,8 +89,10 @@ class Acceso extends Model
 
     protected function acceso_disponibilidad()
     {
-        $facultad_id = Session::get('facultad_id');
-        $sede_id = Session::get('sede_id');
+        $facultad_id = \Cache::get('facultad_id');
+        // $facultad_id = Session::get('facultad_id');
+        $sede_id = \Cache::get('sede_id');
+        // $sede_id = Session::get('sede_id');
         $todos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
         $accesos = collect([]);        
         foreach ($todos as $acceso) {
