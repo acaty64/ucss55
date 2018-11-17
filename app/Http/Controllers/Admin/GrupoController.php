@@ -52,7 +52,7 @@ class GrupoController extends Controller
         // $grupo->facultad_id = Session::get('facultad_id');
         $grupo->sede_id = \Cache::get('sede_id');
         // $grupo->sede_id = Session::get('sede_id');
-        $grupo->cgrupo = $request->cgrupo;
+        $grupo->cod_grupo = $request->cod_grupo;
         $grupo->wgrupo = $request->wgrupo;
         $grupo->save();
         Flash::success('Se ha registrado '.$grupo->wgrupo.' de forma exitosa');
@@ -92,7 +92,7 @@ class GrupoController extends Controller
     public function update(Request $request)
     {
         $grupo = Grupo::find($request->id);
-        $grupo->cgrupo = $request->cgrupo;
+        $grupo->cod_grupo = $request->cod_grupo;
         $grupo->wgrupo = $request->wgrupo;
         $grupo->save();
 

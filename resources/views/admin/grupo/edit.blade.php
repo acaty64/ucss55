@@ -6,8 +6,8 @@
 	{!! Form::model($grupo, array('route' => array('admin.grupo.update'), 'method' => 'PUT')) !!}
 		{!! Form::hidden('id',$grupo->id) !!}
 		<div class="form-group">
-			{!! Form::label('cgrupo','Código de Grupo (máximo 3 caracteres)') !!}
-			{!! Form::text('cgrupo', $grupo->cgrupo, ['class'=>'form-control', 'required', 'maxlength'=>"3"]) !!}
+			{!! Form::label('cod_grupo','Código de Grupo (máximo 3 caracteres)') !!}
+			{!! Form::text('cod_grupo', $grupo->cgrupo, ['class'=>'form-control', 'required', 'maxlength'=>"3"]) !!}
 		</div>
 
 		<div class="form-group">

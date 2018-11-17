@@ -3,12 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Session;
 
 class Grupo extends Model
 {
     protected $fillable = [
-        'cod_grupo', 'wgrupo', 
+        'facultad_id', 'sede_id', 'cod_grupo', 'wgrupo', 
     ];
     /************* RELATIONSHIPS *********/
     public function cursogrupo()
@@ -19,8 +18,8 @@ class Grupo extends Model
     /************* FUNCIONES ************/
     protected function facultadSede()
     {
-    	$facultad_id = Session::get('facultad_id');
-    	$sede_id = Session::get('sede_id');
+    	$facultad_id = \Cache::get('facultad_id');
+    	$sede_id = \Cache::get('sede_id');
     	return Grupo::where('facultad_id', $facultad_id)->where('sede_id',$sede_id)->get();
     }
 
