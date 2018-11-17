@@ -3,12 +3,6 @@
         "level": "SEVERE",
         "message": "http:\/\/ucss.test\/api\/user\/index\/1\/1?page=0 - Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
         "source": "network",
-        "timestamp": 1542488259199
-    },
-    {
-        "level": "SEVERE",
-        "message": "http:\/\/ucss.test\/consulta\/datauser\/edit\/11 183:65 Uncaught ReferenceError: evento is not defined",
-        "source": "javascript",
-        "timestamp": 1542488262944
+        "timestamp": 1542489370171
     }
 ]
