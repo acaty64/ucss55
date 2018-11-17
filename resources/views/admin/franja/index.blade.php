@@ -22,7 +22,7 @@
 	 				<td>{{ $franja->hora }}</td>
 	 				<td>{{ $franja->wfranja }}</td>
 	 				<td>
-	 					<a href="{{ route('admin.franja.edit', [$franja->id]) }}" class="btn btn-success" data-toggle="tooltip" title="Modificar" name = "{{'Edit'.$franja->id}}"><span class="glyphicon glyphicon-pencil" aria-hidden='true'></span></a>
+	 					<a href="{{ route('administrador.franja.edit', [$franja->id]) }}" class="btn btn-success" data-toggle="tooltip" title="Modificar" name = "{{'Edit'.$franja->id}}"><span class="glyphicon glyphicon-pencil" aria-hidden='true'></span></a>
 
 						<a href="{{ route('administrador.franja.destroy', $franja->id) }}" onclick='return confirm("Está seguro de eliminar el registro?")' class="btn btn-danger" data-toggle="tooltip" title="Eliminar franja" name = "{{'Dele'.$franja->id}}"><span class="glyphicon glyphicon-trash" aria-hidden='true'></a>
 

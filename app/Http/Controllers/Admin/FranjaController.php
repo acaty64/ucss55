@@ -19,22 +19,15 @@ class FranjaController extends Controller
      */
     public function index()
     {
-        $session = \Cache::all();
-        // $session = Session::all();
-        //$all = Franja::where('facultad_id', $session['facultad_id'])->where('sede_id', $session['sede_id'])->get();
-        /*$franjas = Franja::where([
-                ['facultad_id', $session['facultad_id']], 
-                ['sede_id', $session['sede_id']]
-            ])->sortByDesc('updated_at');
-        */
         $franjas = DB::table('franjas')->where([
-                ['facultad_id', $session['facultad_id']], 
-                ['sede_id', $session['sede_id']]
+                ['facultad_id', \Cache::get('facultad_id')], 
+                ['sede_id', \Cache::get('sede_id')]
             ])->orderBy('dia')->orderBy('turno')->orderBy('hora')->paginate(7);
+        $wsede = \Cache::get('wsede');
         //$franjas = $all->sortByDesc('updated_at');
         return view('admin.franja.index')
             ->with('franjas', $franjas)
-            ->with('wsede', $session['wsede']);
+            ->with('wsede', $wsede);
     }
 
     /**
@@ -44,10 +37,9 @@ class FranjaController extends Controller
      */
     public function create()
     {
-        $session = \Cache::all();
         // $session = Session::all();
         return view('admin.franja.create')
-                ->with('wsede', $session['wsede']);
+                ->with('wsede', \Cache::get('wsede'));
     }
 
     /**
@@ -58,20 +50,19 @@ class FranjaController extends Controller
      */
     public function store(Request $request)
     {
-        $session = \Cache::all();
         // $session = Session::all();
         $data = $request->all();
 
-        $chk = Franja::where('facultad_id', $session['facultad_id'])
-                        ->where('sede_id', $session['sede_id'])
+        $chk = Franja::where('facultad_id', \Cache::get('facultad_id'))
+                        ->where('sede_id', \Cache::get('sede_id'))
                         ->where('dia', $data['dia'])
                         ->where('turno', $data['turno'])
                         ->where('hora', $data['hora'])->first();
 
         if(!$chk){
             $franja = new Franja();
-            $franja->facultad_id   = $session['facultad_id'];
-            $franja->sede_id       = $session['sede_id'];
+            $franja->facultad_id   = \Cache::get('facultad_id');
+            $franja->sede_id       = \Cache::get('sede_id');
             $franja->wfranja       = $data['wfranja'];
             $franja->dia           = $data['dia'];
             $franja->turno         = $data['turno'];
@@ -94,10 +85,9 @@ class FranjaController extends Controller
      */
     public function show()
     {
-        $session = \Cache::all();
         // $session = Session::all();
         
-        $franjas = Franja::where('facultad_id',$session['facultad_id'])->where('sede_id',$session['sede_id'])->get();
+        $franjas = Franja::where('facultad_id', \Cache::get('facultad_id'))->where('sede_id', \Cache::get('sede_id'))->get();
         if(!$franjas){
             dd('No hay franjas');
         }
@@ -120,8 +110,8 @@ class FranjaController extends Controller
         return view('admin.franja.show')
             ->with('wfranjas', $wfranjas)
             ->with('gfranjas', $gfranjas)
-            ->with('wsede',$session['wsede'])
-            ->with('cfacultad',$session['cfacultad']);
+            ->with('wsede', \Cache::get('wsede'))
+            ->with('cfacultad', \Cache::get('cfacultad'));
     }
 
     /**
@@ -180,8 +170,12 @@ class FranjaController extends Controller
     public function destroy($id)
     {
         $franja = Franja::find($id);
-        $franja->delete();          
-        Flash::error('Se ha eliminado el registro: '.$franja->id.' '.$franja->dia.'/'.$franja->turno.'/'.$franja->hora.' - '.$franja->wfranja.' de forma exitosa');
-        return redirect()->route('administrador.franja.index');
+        try {
+            $franja->delete();          
+            Flash::error('Se ha eliminado el registro: '.$franja->id.' '.$franja->dia.'/'.$franja->turno.'/'.$franja->hora.' - '.$franja->wfranja.' de forma exitosa');
+            return redirect()->route('administrador.franja.index');
+        } catch (Exception $e) {
+            return 'error';
+        }
     }
 }

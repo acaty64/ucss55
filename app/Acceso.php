@@ -27,6 +27,7 @@ class Acceso extends Model
         \Cache::put('wfacultad', Facultad::find($facultad_id)->wfacultad, 60);
         \Cache::put('sede_id', $sede_id, 60);
         \Cache::put('csede', Sede::find($sede_id)->csede, 60);
+        \Cache::put('wsede', Sede::find($sede_id)->wsede, 60);
         \Cache::put('type_id', $type_id, 60);
         \Cache::put('ctype', Type::find($type_id)->name, 60);
 
