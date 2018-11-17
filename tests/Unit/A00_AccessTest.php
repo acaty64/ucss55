@@ -3,16 +3,20 @@
 namespace Tests\Unit;
 
 use App\User;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
 
 class A00_AccessTest extends TestCase
 {
+    use DatabaseMigrations;
     /**
      * @test
      */
     public function get_MenuApi()
     {
+        Artisan::call('db:seed');
         // Having
         $user = $this->defaultUser();
 
@@ -33,13 +37,15 @@ class A00_AccessTest extends TestCase
             ->assertJSONFragment($array);
     }
 
-    /** @test */
+    /** @test 
     public function a_guest_cant_get_API($value='')
     {
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        Artisan::call('db:seed');
+        // $this->markTestIncomplete(
+        //   'This test has not been implemented yet.'
+        // );
         $this->get('api/generar/1/1')
             ->assertStatus(302);
     }
+    */
 }

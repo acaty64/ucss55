@@ -10,7 +10,6 @@ class A000_ExampleTest extends DuskTestCase
 {
     public function testBasicExample()
     {
-//dd(config('database.connections.'.env('DB_CONNECTION')));
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
                     ->assertPathIs('/')

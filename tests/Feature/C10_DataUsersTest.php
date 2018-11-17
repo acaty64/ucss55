@@ -7,6 +7,8 @@ use App\DataUser;
 use App\Type;
 use App\User;
 use Illuminate\Auth\Middleware\Authorize;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
@@ -14,9 +16,11 @@ use Tests\TestCase;
 
 class C10_DataUsersTest extends TestCase
 {
+  use DatabaseMigrations;
   /** @test */
   function an_administrator_edit_the_datauser_of_docente()
   {
+    Artisan::call('db:seed');
       $facultad_id = 1;
       $sede_id = 1;
 
@@ -67,6 +71,7 @@ class C10_DataUsersTest extends TestCase
   /** @test */
   function a_consulta_edit_his_datauser()
   {
+    Artisan::call('db:seed');
       $facultad_id = 1;
       $sede_id = 1;
 
@@ -106,6 +111,7 @@ class C10_DataUsersTest extends TestCase
   /** @test */
   function a_docente_edit_his_datauser()
   {
+    Artisan::call('db:seed');
     $facultad_id = 1;
     $sede_id = 1;
 
@@ -145,6 +151,7 @@ class C10_DataUsersTest extends TestCase
   /** @test */
   function a_responsable_edit_his_datauser()
   {
+    Artisan::call('db:seed');
     $facultad_id = 1;
     $sede_id = 1;
 

@@ -3,11 +3,14 @@
 namespace Tests\Unit;
 
 use App\User;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
 
 class A01_AccessTest extends TestCase
 {
+    use DatabaseMigrations;
 
     /**
      * @test
@@ -24,6 +27,7 @@ class A01_AccessTest extends TestCase
      */
     function auth_access()
     {
+        Artisan::call('db:seed');
         // Having
         $user = $this->defaultUser();
 

@@ -50,7 +50,6 @@ class HomeController extends Controller
 
     public function acceso(Request $request)
     { 
-
         $facultad=Facultad::find($request->facultad_id);
         $sede=Sede::find($request->sede_id);
         \Cache::put('facultad_id', $facultad->id, 60);
@@ -63,6 +62,7 @@ class HomeController extends Controller
 */
         $usuario = Auth::user();
 
+// dd($usuario->acceder);
         if ($usuario->acceder) {
             $aerrors = [];
             $contador = 0;

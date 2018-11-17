@@ -23,8 +23,8 @@ class CreateDcursosTable extends Migration
 
             $table->boolean('sw_cambio')->default(false);
 
-            $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+//            $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('cascade');
+//            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

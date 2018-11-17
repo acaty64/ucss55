@@ -11,6 +11,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $append = ['facultad', 'sede', 'type', 'acceder', 'accesos'];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -29,6 +31,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     protected $facultad_id, $cfacultad, $sede_id, $csede, $type_id, $ctype;
+
+
+    public function setAccesosAttributes()
+    {
+        return $this->belongsToMany(Acceso::class, 'id', 'user_id');
+    }
 
     public function setFacultadAttributes($id, $name)
     {
@@ -58,15 +66,14 @@ class User extends Authenticatable
         return $rpta;
     }
 
-    public function getAccederAttribute($value)
+    public function getAccederAttribute()
     {
         //Acceso::setAccesoAttributes();
         $facultad_id = \Cache::get('facultad_id');
         $sede_id = \Cache::get('sede_id');
         $ok = Acceso::where('user_id', $this->id)->where('facultad_id', $facultad_id)->where('sede_id', $sede_id)->first();
-    
-        if (count($ok)) {
 
+        if ($ok) {
             Acceso::setAccesoAttributes($facultad_id, $sede_id, $ok->type_id);
 /*
             \Cache::put('type_id',$ok->type_id, 60);

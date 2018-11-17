@@ -7,10 +7,13 @@ use Illuminate\Support\Facades\Session;
 
 class Grupo extends Model
 {
+    protected $fillable = [
+        'cod_grupo', 'wgrupo', 
+    ];
     /************* RELATIONSHIPS *********/
     public function cursogrupo()
     {
-        return $this->hasMany('App\CursoGrupo');
+        return $this->hasMany('App\CursoGrupo', 'cod_grupo', 'cod_grupo');
     }
 
     /************* FUNCIONES ************/

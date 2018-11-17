@@ -4,9 +4,11 @@ namespace Tests\Feature;
 
 use App\Acceso;
 use App\DataUser;
-use App\User;
 use App\Type;
+use App\User;
 use Illuminate\Auth\Middleware\Authorize;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
@@ -14,12 +16,16 @@ use Tests\TestCase;
 
 class B10_UsersTest extends TestCase
 {
+  use DatabaseMigrations;
+
     /**
      * @test
      * @medium
      */
    function list_the_users()
    {
+      Artisan::call('db:seed');
+
       //Having an administrator user
       $user = $this->defaultUser();
       $facultad_id = 1;
@@ -42,6 +48,7 @@ class B10_UsersTest extends TestCase
     /** @test */
 	function create_a_new_user()
    {
+      Artisan::call('db:seed');
   		//Having an administrator user
       $admin = $this->defaultUser();
       $dataAdmin = $this->defaultDataUser($admin);

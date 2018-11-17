@@ -3,25 +3,29 @@
 namespace Tests\Feature;
 
 use App\Acceso;
+use App\Curso;
 use App\DCurso;
 use App\DataUser;
 use App\Type;
 use App\User;
 use Illuminate\Auth\Middleware\Authorize;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
 class D10_CursosTest extends TestCase
-{    
+{
+  use DatabaseMigrations;
+  
   function test_an_administrator_add_a_DCurso()
-    {
+  {
+    Artisan::call('db:seed');
 
-$this->markTestSkipped('must be revisited.');
-
-      $facultad_id = 1;
-      $sede_id = 1;
+    $facultad_id = 1;
+    $sede_id = 1;
 
     // Having a user
     $user = $this->defaultUser();
@@ -41,12 +45,19 @@ $this->markTestSkipped('must be revisited.');
     $response = $this->get("administrador/dcurso/edit/{$user->id}")
       ->assertStatus(200);
 
+    for ($i=0; $i < 8; $i++) { 
+      Curso::create([
+          'cod_curso' => '00000' . $i,
+          'wcurso' => 'Curso ' . $i
+        ]);
+    }
+
     $cursos = ['5','7'];
     $request = [
         'docente_id' => $user->id,
         'cursos'  => $cursos
       ];
-    $response = $this->put("administrador/dcurso/update",$request);
+    $response = $this->put(route("admin.dcurso.update"),$request);
     $response->assertStatus(302);
 
     //Then 
@@ -58,12 +69,14 @@ $this->markTestSkipped('must be revisited.');
       'prioridad'=> 99,
       'sw_cambio'=>1
     ]);
-	}
+  // $this->markTestSkipped('must be revisited.');
+  }
 
   function test_a_docente_edit_his_DCurso()
   {
 
-$this->markTestSkipped('must be revisited.');
+// $this->markTestSkipped('must be revisited.');
+    Artisan::call('db:seed');
 
     //Having a user docente
     $user = factory(User::class)->create();
@@ -110,8 +123,9 @@ $this->markTestSkipped('must be revisited.');
   function test_a_responsable_edit_his_DCurso()
   {
 
-$this->markTestSkipped('must be revisited.');
-
+// $this->markTestSkipped('must be revisited.');
+    Artisan::call('db:seed');
+    
     //Having a user responsable
     $user = factory(User::class)->create();
     $datauser = factory(DataUser::class)->create(['user_id'=>$user->id, 'cdocente' => str_pad($user->id, 6, '0', STR_PAD_LEFT)]);

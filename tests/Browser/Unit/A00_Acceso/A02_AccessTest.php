@@ -2,10 +2,7 @@
 
 namespace Tests\Browser\Unit\A00_Acceso;
 
-use App\Acceso;
 use App\User;
-use App\Facultad;
-use App\Sede;
 use App\Type;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
@@ -15,53 +12,28 @@ class A02_AccessTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
-    function test_edit_an_acceso()
+    public function test_a_User_get_access()
     {
-//$this->markTestSkipped('must be revisited.');
         $this->artisan('db:seed');
         $this->browse(function(Browser $browser)
         {
+            // Having
+            $user = $this->defaultUser();
+            $type = Type::where('name', 'Administrador')->first();
             $facultad_id = 1;
             $sede_id = 1; 
+                       
+            $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
 
-            $user = $this->defaultUser();
-            $datauser = $this->defaultDataUser($user);
-
-            $type = Type::where('name', 'Consulta')->first();
-            $var = $this->authUser($user->id, $facultad_id, $sede_id, $type->id);
- 
-            $admin = $this->defaultUser();
-            $this->defaultDataUser($admin);
-
-            $type_admin = Type::where('name', 'Administrador')->first();
-            $var = $this->authUser($admin->id, $facultad_id, $sede_id, $type_admin->id);
-            
-            $newFacu_id = Facultad::where('cFacultad', 'FSAL')->first()->id;
-            $newSede_id = Sede::where('cSede', 'HUA')->first()->id;
-            $newType_id = Type::where('name', 'Docente')->first()->id;
-
-            $browser->loginAs($admin)
+            $browser->loginAs($user)
                     ->visit('/home')
-                    ->select('facultad_id', $facultad_id)
-                    ->select('sede_id', $sede_id)
-                    ->press('Acceder')
-                    ->waitForText('Inicio')
-                    ->assertSee('Usuarios')
-                    ->waitForText('Tipo de usuario: Administrador')
-                    ->visit('/administrador/user/index')
-                    ->assertPathIs('/administrador/user/index')
-                    ->waitForText('Lista de Usuarios')
-                    ->visit("/administrador/acceso/edit/{$user->id}")
-                    ->assertPathIs("/administrador/acceso/edit/{$user->id}")
-                    ->waitForText('Modificación de acceso')
-                    ->select('facultad_id', $newFacu_id)
-                    ->select('sede_id', $newSede_id)
-                    ->select('type_id', $newType_id)
-                    ->press('Grabar modificaciones')
-                    ->waitForText($user->datauser->wdoc1)
-                    ->assertSee('Se ha modificado el usuario: ' . $user->id . ' : ' . $user->datauser->wdoc2 . " " . $user->datauser->wdoc3 . ", " . $user->datauser->wdoc1 . ' de forma exitosa')
+                    ->select('facultad_id',1)
+                    ->select('sede_id',1)
+                    ->click('@acceder')
+                    ->AssertSeeIn('#userType', 'Tipo de usuario: Administrador')
+                    ->AssertSee('Descripción de Opciones')
                     ;
-
         });
     }
+
 }

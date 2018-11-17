@@ -15,12 +15,15 @@ class CreateCursoGrupoTable extends Migration
         Schema::create('cursogrupo', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unSignedInteger('grupo_id');
-            $table->unSignedInteger('curso_id');
+            // $table->unSignedInteger('grupo_id');
+            // $table->unSignedInteger('curso_id');
+            $table->string('cod_curso',6);
+            $table->string('cod_grupo',3);
+
             $table->boolean('sw_cambio')->default(false);
             
-            $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('cascade');
-            $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('cascade');
+            // $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('cascade');
+            // $table->foreign('curso_id')->references('id')->on('mcursos')->onDelete('cascade');
             $table->timestamps();
         });
     }

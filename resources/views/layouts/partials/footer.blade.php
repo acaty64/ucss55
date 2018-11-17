@@ -10,11 +10,10 @@
 		<div>Laravel v5.5</div>
 		<div>Vue js v2.5</div>
 	</span>	
-
-</div>
-<div class="row">
     <div class="nav navbar-nav list-group-item list-inline" id="userType" style="color:red; font-size:75%">
-    	Tipo de usuario: {{ \Cache::get('ctype') }}
+    	<div>Tipo de usuario: {{ \Cache::get('ctype') }}</div>
+    	<div>Facultad: {{ \Cache::get('cfacultad') }}</div>
+    	<div>Filial: {{ \Cache::get('csede') }}</div>
 	</div>
 <!--/div-->
 </div>

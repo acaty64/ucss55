@@ -19,10 +19,13 @@ class CursoGrupoController extends Controller
             $grupo_id = $acceso_auth->grupo_id;
         }
 
-        $grupo = Grupo::find($grupo_id);
-
+        $grupo = Grupo::findOrFail($grupo_id);
         $cursos = $grupo->cursoGrupo;
-
+        // $cursos = [];
+        // foreach ($var as $curso) {
+        //     array_push($cursos, $curso->curso);
+        // }
+        // $cursos = collect($cursos);
         return view('admin.cursogrupo.index')
             ->with('cursos', $cursos)
             ->with('grupo', $grupo)

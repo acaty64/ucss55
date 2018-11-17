@@ -1,12 +1,16 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\Api;
 
 use App\Acceso;
+use App\Curso;
 use App\DCurso;
 use App\DataUser;
+use App\Grupo;
 use App\User;
 use Illuminate\Auth\Middleware\Authorize;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
@@ -14,29 +18,20 @@ use Tests\TestCase;
 
 class ApiDCursoTest extends TestCase
 {    
+  use DatabaseMigrations;
   function test_a_responsable_can_get_priority_DCursos()
     {
-      //Having an responsable user
-      $user = factory(User::class)->create();
-      $datauser = factory(DataUser::class)->create([
-              'user_id' => $user->id,
-              'cdocente' => '999999'
-          ]);
+      Artisan::call('db:seed');
+    //Having an responsable user
       $facultad_id = 1;
       $sede_id = 1;
+      $type_id = 3; // RESPONSABLE
+      $user = User::findOrFail(3); // RESPONSABLE
 
-      $datauser = factory(DataUser::class)->create([
-            'user_id' => $user->id,
-            'cdocente' => str_pad($user->id, 6, '0', STR_PAD_LEFT)
-          ]);
-      
-      $this->authUser($user->id, $facultad_id, $sede_id, 4);  // RESPONSABLE
+      $this->authUser($user->id, $facultad_id, $sede_id, $type_id);
 
-      $teacher = factory(User::class)->create();
-      $datauser = factory(DataUser::class)->create([
-            'user_id' => $teacher->id,
-            'cdocente' => str_pad($teacher->id, 6, '0', STR_PAD_LEFT)
-        ]);
+      /* With a DOCENTE */
+      $teacher = User::findOrFail(4); // DOCENTE;
 
       // dcursos data
       $dcurso = DCurso::create([
@@ -50,12 +45,16 @@ class ApiDCursoTest extends TestCase
 
       $id = $dcurso->user_id;
       $wdocente = DCurso::find($dcurso->id)->user->datauser->wdocente();
+      
+      $this->actingAs($user);
+      $this->get('/home');
+      $request = ['facultad_id' => $facultad_id, 'sede_id' => $sede_id];
+      $this->post(route('home.acceso'), $request);      
 
-      $request = ['grupo_id'=> 1, 'curso_id'=>6, 'facultad_id'=>1, 'sede_id'=>1];
-
-      $this->actingAs($user)
-          ->get("responsable/cursogrupo/index/1")
+      $this->get("responsable/cursogrupo/index/1")
           ->assertStatus(200);
+      
+      $request = ['grupo_id'=> 1, 'curso_id'=>6, 'facultad_id'=>1, 'sede_id'=>1];
       $this->actingAs($user)
           ->post("api/dcurso/index", $request)
           ->assertStatus(200)
@@ -89,6 +88,7 @@ class ApiDCursoTest extends TestCase
 
   function test_a_responsable_can_updated_priority_DCursos()
     {
+      Artisan::call('db:seed');
       //Having an responsable user
       $user = factory(User::class)->create();
       $datauser = factory(DataUser::class)->create([
@@ -126,7 +126,7 @@ class ApiDCursoTest extends TestCase
       $dcurso_1 = DCurso::create([
           'facultad_id'=>$facultad_id,
           'sede_id'=>$sede_id,
-          'curso_id'=>6,
+          'curso_id'=>2,
           'user_id'=>$teacher_1->id,
           'prioridad'=>1,
           'sw_cambio'=>1    
@@ -134,7 +134,7 @@ class ApiDCursoTest extends TestCase
       $dcurso_2 = DCurso::create([
           'facultad_id'=>$facultad_id,
           'sede_id'=>$sede_id,
-          'curso_id'=>6,
+          'curso_id'=>2,
           'user_id'=>$teacher_2->id,
           'prioridad'=>2,    
           'sw_cambio'=>1    
@@ -142,13 +142,13 @@ class ApiDCursoTest extends TestCase
       $dcurso_3 = DCurso::create([
           'facultad_id'=>$facultad_id,
           'sede_id'=>$sede_id,
-          'curso_id'=>6,
+          'curso_id'=>2,
           'user_id'=>$teacher_3->id,
           'prioridad'=>3,    
           'sw_cambio'=>1    
         ]); 
 
-      $request = ['grupo_id'=> 1, 'curso_id'=>6, 'facultad_id'=>1, 'sede_id'=>1];
+      $request = ['grupo_id'=> 1, 'curso_id'=>2, 'facultad_id'=>1, 'sede_id'=>1];
 
       $this->actingAs($user)
           ->post("api/dcurso/index", $request)
@@ -246,10 +246,12 @@ class ApiDCursoTest extends TestCase
                     'curso_id'    => $dcurso_3->curso_id,
                     'user_id'     => $dcurso_3->user->id                    
                   ]);
+      $cod_curso = Curso::findOrFail(2)->cod_curso;
+      $cod_grupo = Grupo::findOrFail(1)->cod_grupo;
       $this->assertDatabaseHas('cursogrupo', [ 
                     'sw_cambio'   => true,
-                    'grupo_id'    => 1,
-                    'curso_id'    => 6,
+                    'cod_grupo'    => $cod_grupo,
+                    'cod_curso'    => $cod_curso,
                   ]);
 
 

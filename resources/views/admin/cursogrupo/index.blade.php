@@ -13,28 +13,30 @@
  			<th>Código</th>
  			<th>Curso</th>
  			<th>Acción</th>
+ 			<th>Status</th>
  		</thead>
  		<tbody>
  			@foreach($cursos as $curso)
  				<tr>
-	 				<td>{{ $curso->curso_id }}</td>
-	 				<td>{{ $curso->curso->ccurso }}</td>
+	 				<td>{{ $curso->curso->id }}</td>
+	 				<td>{{ $curso->curso->cod_curso }}</td>
 	 				<td>{{ $curso->curso->wcurso }}</td>
 	 				<td>
-		
-	 					<a href="{{ route('admin.dcurso.index', [$grupo->id, $curso->curso_id]) }}" class="btn btn-success" data-toggle="tooltip" title="Prioridad docentes" name = "{{'Index'.$grupo->id}}"><span class="glyphicon glyphicon-sort" aria-hidden='true'></span></a>
-
-	 					@if($curso->sw_cambio == '0')
-	 						<span style="Color:red">PENDIENTE</span>
-	 					@else 
-	 						<span style="Color:green">Actualizado</span>
-	 					@endif
+	 					<a href="{{ route('admin.dcurso.index', [$grupo->id, $curso->id]) }}" class="btn btn-success" data-toggle="tooltip" title="Prioridad docentes" name = "{{'Index'.$grupo->id}}"><span class="glyphicon glyphicon-sort" aria-hidden='true'></span></a>
+	 				</td>
+	 				<td>	 					
+						<div style="align-self: center">
+		 					@if($curso->sw_cambio == '0')
+		 						<span style="color:red">PENDIENTE</span>
+		 					@else 
+		 						<span style="color:green">Actualizado</span>
+		 					@endif
+						</div>
 	 				</td>
 	 			</tr>
  			@endforeach 			
  		</tbody>
 	</table>
-
 @endsection
 
 @section('view','admin/cursogrupo/index.blade.php')

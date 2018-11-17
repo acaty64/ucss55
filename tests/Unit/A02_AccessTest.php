@@ -7,20 +7,23 @@ use App\Facultad;
 use App\Sede;
 use App\Type;
 use App\User;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
 class A02_AccessTest extends TestCase
 {
+    use DatabaseMigrations;
     /**
      * @test
      */
     function administrador_Access()
     {
+        Artisan::call('db:seed');
         // Having
         $user = $this->defaultUser();
-
         $type = Type::where('name', 'Administrador')->first();
         $facultad = Facultad::find(1);
         $sede = Sede::find(1);
@@ -34,6 +37,7 @@ class A02_AccessTest extends TestCase
         $this->actingAs($user);
 
         $this->authUser($user->id, $facultad->id, $sede->id, $type->id);
+// dd($user->acceder);
 
         // Check database
         $this->assertDatabaseHas('accesos',[

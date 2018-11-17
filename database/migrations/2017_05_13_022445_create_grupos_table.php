@@ -17,7 +17,7 @@ class CreateGruposTable extends Migration
             $table->unSignedInteger('facultad_id');
             $table->unSignedInteger('sede_id');
             
-            $table->string('cgrupo',3);
+            $table->string('cod_grupo',3);
             $table->string('wgrupo',50);
 
             //$table->integer('semestr_id')->unsigned();

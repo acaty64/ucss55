@@ -240,18 +240,14 @@ class DCursoController extends Controller
         /*  Agrega registros  */
         $dCurso = new dCurso;
         foreach ($agregados as $curso_id) {
-            $curso = Curso::find($curso_id);
-            $nuevo = [
+            $dCurso = DCurso::create([
                 'facultad_id'=>$facultad_id,
                 'sede_id'=>$sede_id,
                 'user_id'=>$user->id,
-                'curso_id'=>$curso->id, 
-                'prioridad' => '99',
-                'sw_cambio' => '1'
-                 ];
-            $dCurso = new DCurso ;
-            $dCurso->fill($nuevo);
-            $dCurso->save();
+                'curso_id'=>$curso_id, 
+                'prioridad' => 99,
+                'sw_cambio' => true
+                 ]);
         }
         /* Elimina registros */
         foreach ($eliminados as $curso_id) {
@@ -260,9 +256,9 @@ class DCursoController extends Controller
             //dd($clave);
             $clave_id = $dCurso[$clave]['id'];
             //dd($clave_id);
-            $dCursos = dCurso::find($clave_id);
+            $delCurso = dCurso::find($clave_id);
             //dd($dCursos);
-            $dCursos->delete();  
+            $delCurso->delete();  
         }
 
         // Modifica switch respuesta en Denvios

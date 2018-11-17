@@ -17,17 +17,15 @@ class AccesosTableSeeder extends Seeder
      */
     public function run()
     {
-        $user_id = 1;
-//        $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
+        $user_id = 1; // MASTER
         Acceso::create([
             'user_id' => $user_id,
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 1,
-//            'wdocente' => $wdocente,
             ]);
 
-        $user_id = 2;
+        $user_id = 2; // ADMINISTRADOR
         $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
         Acceso::create([
             'user_id' => $user_id,
@@ -37,50 +35,45 @@ class AccesosTableSeeder extends Seeder
 //            'wdocente' => $wdocente,
             ]);
 
-        $user_id = 3;
+        $user_id = 3; // RESPONSABLE
         $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
         Acceso::create([
             'user_id' => $user_id,
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 4,
-//            'wdocente' => $wdocente,
             ]);
 
-        $user_id = 4;
+        $user_id = 4; // DOCENTE
         $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
         Acceso::create([
             'user_id' => $user_id,
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 3,
-//            'wdocente' => $wdocente,
             ]);
 
-        $user_id = 5;
+        $user_id = 5; // CONSULTA
         $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
         Acceso::create([
             'user_id' => $user_id,
             'facultad_id' => 1, 
             'sede_id' => 1,
             'type_id' => 2,
-//            'wdocente' => $wdocente,
             ]);
 
 
-        $users = User::where('id','>',5)->get();
+        $users = User::where('id','>',5)->get(); // RANDOM
         foreach ($users as $user) {
             $user_id = $user->id;
             $facultad_id = Facultad::all()->random()->id;
             $sede_id = Sede::all()->random()->id;
             $type_id = Type::all()->random()->id;
-//            $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
             Acceso::create([
                'user_id' => $user_id,
                'facultad_id' => $facultad_id, 
                'sede_id' => $sede_id,
                'type_id' => $type_id,
-//               'wdocente' => $wdocente,
                 ]);
         }
 

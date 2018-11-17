@@ -54,3 +54,10 @@ Route::get('grupocurso/index', [
 		'as'	=> 'responsable.grupocurso.index',
 		'uses'	=> 'Admin\GrupoCursoController@index',	
 	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+
+
+Route::fallback(function()
+{
+	return response('Página no encontrada', 404);
+});
+

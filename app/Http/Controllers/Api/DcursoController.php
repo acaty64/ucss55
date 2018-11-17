@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Curso;
 use App\CursoGrupo;
 use App\DCurso;
+use App\Grupo;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -58,7 +60,6 @@ class DCursoController extends Controller
      */
     public function update(Request $request)
     {
-
         $all = collect($request->registros);  
         foreach ($all as $item) {
             $dcurso = Dcurso::find($item['id']);
@@ -66,12 +67,14 @@ class DCursoController extends Controller
             $dcurso->save(); 
         };
         $options = $all->first();
+        $cod_curso = Curso::findOrFail($options['curso_id'])->cod_curso;
+        $cod_grupo = Grupo::findOrFail($options['grupo_id'])->cod_grupo;
         /* Modifica el sw_cambio de CursoGrupo*/
         $facultad_id = $options['facultad_id'];
         $sede_id = $options['sede_id'];
-        $curso_id = $options['curso_id'];
-        $grupo_id = $options['grupo_id'];
-        $cursoGrupo = CursoGrupo::where('curso_id',$curso_id)->where('grupo_id',$grupo_id)->first();
+        // $cod_curso = $options[$cod_curso];
+        // $cod_grupo = $options[$cod_grupo];
+        $cursoGrupo = CursoGrupo::where('cod_curso',$cod_curso)->where('cod_grupo',$cod_grupo)->first();
         $cursoGrupo->sw_cambio = 1;
         $cursoGrupo->save();
 

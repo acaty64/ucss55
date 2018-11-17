@@ -16,8 +16,6 @@ Route::get('/', function () {
     //return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', [
 	'as'	=> 'home',
 	'uses'	=> 'HomeController@index']);
@@ -26,3 +24,5 @@ Route::post('/home/acceso', [
 	'as'	=> 'home.acceso',
 	'uses'	=> 'HomeController@acceso',	
 ]);
+
+Auth::routes();
