@@ -169,6 +169,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Styde\Html\HtmlServiceProvider::class,
         
         /*
          * Application Service Providers...
@@ -194,6 +195,7 @@ return [
 
     'aliases' => [
 
+        'Access' => Styde\Html\Facades\Access::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
