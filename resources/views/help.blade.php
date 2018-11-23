@@ -6,7 +6,7 @@
             <div class="col-md-8 col-md-offset-2">
             	<div class="panel-heading">Descripción de Opciones</div>
                 <div class="panel panel-default">
-					<Help-Component :type_id="{{ \Cache::get('type_id') }}"></Help-Component>
+					<Help-Component :type_id="{{ \Session::get('type_id') }}"></Help-Component>
 				</div>
 			</div>
 		</div>

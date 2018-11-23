@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','SILABO DEL CURSO: '.$wcurso)
+@section('title','SYLLABUS DEL CURSO: '.$wcurso)
 
 @section('content')
 	<object data={{$arch_pdf}} type="application/pdf" width=100% height=800 margin-left:auto margin-right:auto>
@@ -8,4 +8,4 @@
 	</object>
 @endsection
 
-@section('view','pdf/silabo.blade.php')	
+@section('view','pdf/syllabus.blade.php')	

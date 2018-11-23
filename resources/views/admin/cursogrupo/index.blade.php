@@ -22,7 +22,7 @@
 	 				<td>{{ $curso->curso->cod_curso }}</td>
 	 				<td>{{ $curso->curso->wcurso }}</td>
 	 				<td>
-	 					<a href="{{ route('admin.dcurso.index', [$grupo->id, $curso->id]) }}" class="btn btn-success" data-toggle="tooltip" title="Prioridad docentes" name = "{{'Index'.$grupo->id}}"><span class="glyphicon glyphicon-sort" aria-hidden='true'></span></a>
+	 					<a href="{{ route('admin.dcurso.orden', [$curso->id]) }}" class="btn btn-success" data-toggle="tooltip" title="Prioridad docentes" name = "{{'Index'.$grupo->id}}"><span class="glyphicon glyphicon-sort" aria-hidden='true'></span></a>
 	 				</td>
 	 				<td>	 					
 						<div style="align-self: center">

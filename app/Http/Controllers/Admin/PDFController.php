@@ -24,14 +24,16 @@ class PDFController extends Controller
 
     public function silaboCurso(Request $request)
     {
+dd($request->all());
         $curso = Curso::find($request->curso_id);
-        $filename = $curso->ccurso.'.pdf';
-        $facu_sede = \Cache::get('cfacultad').'_'.\Cache::get('csede');
+        $filename = $curso->ccurso . '_' . env('SEMESTRE') .'.pdf';
+        $cod_facultad = \Session::get('cfacultad');
         // $facu_sede = Session::get('cfacultad').'_'.Session::get('csede');
-        $file_pdf = 'pdf/FCEC_LIM/silabos/'.$filename;
-        $arch_pdf = asset('pdf\\'.$facu_sede.'\\silabos\\').$filename;
+        // $file_pdf = 'pdf/FCEC_LIM/silabos/'.$filename;
+        // $arch_pdf = asset('pdf\\'.$facu_sede.'\\silabos\\').$filename;
+        $arch_pdf = asset('storage\\app\\syllabus\\'.$cod_facultad.'\\').$filename;
         if(!file_exists($file_pdf)){
-            $arch_pdf = asset('pdf\\000000.pdf');
+            $arch_pdf = asset('storage\\app\\syllabus\\000000.pdf');
         }
         return view('pdf.silabo')
             ->with('arch_pdf',$arch_pdf)

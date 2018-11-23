@@ -108,6 +108,11 @@ Route::get('dcurso/index/{grupo_id}/{curso_id}', [
 		'uses'	=> 'Admin\DcursoController@index',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
+Route::get('dcurso/orden/{grupo_id}', [
+		'as'	=> 'admin.dcurso.orden',
+		'uses'	=> 'Admin\DcursoController@orden',	
+	])->middleware('can:is_admin,'.Acceso::class);
+
 Route::get('dcurso/edit/{id}', [
 		'as'	=> 'admin.dcurso.edit',
 		'uses'	=> 'Admin\DcursoController@edit',	

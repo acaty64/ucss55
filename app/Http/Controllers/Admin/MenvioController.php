@@ -32,9 +32,9 @@ class MenvioController extends Controller
         $hora_ini = substr(Carbon::now()->format('H:i:s'),0,2)+1;
         $hora_fin = 24;
         */
-        $sede_id = \Cache::get('sede_id');
+        $sede_id = \Session::get('sede_id');
         // $sede_id = Session::get('sede_id');
-        $facultad_id = \Cache::get('facultad_id');
+        $facultad_id = \Session::get('facultad_id');
         // $facultad_id = Session::get('facultad_id');
         $Menvios = Menvio::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->orderBy('id', 'DESC')->paginate(6);
         return view('admin.envios.index')
@@ -65,9 +65,9 @@ class MenvioController extends Controller
     public function store(Request $request)
     {
         $user_id = auth()->user()->id;
-        $facultad_id = \Cache::get('facultad_id');
+        $facultad_id = \Session::get('facultad_id');
         // $facultad_id = Session::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $sede_id = \Session::get('sede_id');
         // $sede_id = Session::get('sede_id');
         $menvio = new menvio($request->all());
         $menvio->user_id = $user_id;

@@ -48,8 +48,8 @@ class userController extends Controller
         $cdocente = DataUser::first()->newcodigo();
 
         // Recibe los datos del formulario de resources\admin\users\create.blade.php
-        $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
 
         $user = new User();
         $user->name = $request->name;

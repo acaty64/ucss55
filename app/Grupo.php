@@ -18,8 +18,8 @@ class Grupo extends Model
     /************* FUNCIONES ************/
     protected function facultadSede()
     {
-    	$facultad_id = \Cache::get('facultad_id');
-    	$sede_id = \Cache::get('sede_id');
+    	$facultad_id = \Session::get('facultad_id');
+    	$sede_id = \Session::get('sede_id');
     	return Grupo::where('facultad_id', $facultad_id)->where('sede_id',$sede_id)->get();
     }
 

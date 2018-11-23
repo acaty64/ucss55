@@ -18,11 +18,18 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 use Maatwebsite\Excel\Facades\Excel;
 
 class DCursoController extends Controller
 {
+    public function orden($curso_id)
+    {
+        $curso = Curso::findOrFail($curso_id);
+        return view('admin.dcurso.index_orden')
+                ->with('curso', $curso);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -33,8 +40,8 @@ class DCursoController extends Controller
 //dd($grupo_id, $curso_id);
         $grupo_id = $grupo_id;
         $curso_id = $curso_id;
-        $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
         $dcursos = DCurso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('curso_id',$curso_id)->get();
 
         $all = Dcurso::where('facultad_id',$facultad_id)->where('sede_id', $sede_id)->where('curso_id', $curso_id)->get();
@@ -112,21 +119,19 @@ class DCursoController extends Controller
      */
     public function edit($docente_id)
     {
-
-        return view('errors.000');
-
-
-        $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $docente = User::findOrFail($docente_id);
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
         return view('admin.dcurso.edit')
                 ->with('docente_id',$docente_id)
                 ->with('facultad_id', $facultad_id)
-                ->with('sede_id', $sede_id);        
+                ->with('sede_id', $sede_id)
+                ->with('docente', $docente);        
     }
     public function bkedit($docente_id)
     {
-        $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
         /***********************************************************************************/
         /* Datos para el CHOSEN superior */
         $datauser = DataUser::where('user_id',$docente_id)->first();           
@@ -213,8 +218,8 @@ class DCursoController extends Controller
     public function update(Request $request)
     {
         // Ubicacion 
-        $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
         // Docente seleccionado
         $docente_id = $request->docente_id;
         $user = User::find($docente_id);
@@ -270,10 +275,10 @@ class DCursoController extends Controller
         }
 
         Flash::success('Se ha registrado la modificación de disponibilidad de cursos de forma exitosa');
-        if (\Cache::get('ctype') == 'Administrador') {
+        if (\Session::get('ctype') == 'Administrador') {
             return redirect()->route('administrador.user.index');
         }else{
-            $route = "'".strtolower(\Cache::ctype).".dcurso.edit'";
+            $route = "'".strtolower(\Session::ctype).".dcurso.edit'";
             return redirect()->route($route, $request->docente_id);
         }
     }
@@ -298,7 +303,7 @@ class DCursoController extends Controller
         // Verifica si existe un menvio pendiente 
     public function sw_cambio($user_id, $tipo)
     {
-        if (\Cache::get('ctype') == 'Administrador' || \Cache::get('ctype') == 'Master') {
+        if (\Session::get('ctype') == 'Administrador' || \Session::get('ctype') == 'Master') {
             $sw_cambio = '1';
         }else{
             date_default_timezone_set('America/Lima');

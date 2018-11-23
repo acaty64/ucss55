@@ -1,6 +1,6 @@
-<?php
+<?php 
 
-namespace Tests\Browser\Unit\A01_User;
+namespace Tests\Browser\Unit\C01_DataUser;
 
 use App\Acceso;
 use App\User;

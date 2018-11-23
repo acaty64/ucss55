@@ -16,12 +16,13 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import axios from 'axios';
     export default {
-        props: ['type_id'],
         mounted() {
             console.log('Help-Component mounted.');
         },
+
+        props: ['type_id'],
 
         created: function () {
             this.getHelps();

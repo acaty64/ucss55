@@ -10,7 +10,7 @@ use Barryvdh\DomPDF\loadHTML;
 use Barryvdh\DomPDF\stream;
 use Illuminate\Foundation\Auth\Access\can;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
 class dataUserController extends Controller
@@ -28,10 +28,10 @@ class dataUserController extends Controller
         $user = User::find($id);
         $datauser = $user->datauser;
 
-        $facultad_id = \Cache::get('facultad_id');
-        // $facultad_id = Session::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
-        // $sede_id = Session::get('sede_id');
+        // $facultad_id = \Cache::get('facultad_id');
+        $facultad_id = Session::get('facultad_id');
+        // $sede_id = \Cache::get('sede_id');
+        $sede_id = Session::get('sede_id');
         $acceso = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id', $id)->first();
 
         return view('consulta.user')

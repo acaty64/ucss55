@@ -42,12 +42,11 @@
                             </ul>
                         @endguest
                         @auth
-                            @if( \Cache::get('facultad_id') != 0 )
+                            @if( \Session::get('facultad_id') != 0 )
                                 <div class="nav navbar-nav">
-                                    <Menu-Component 
-                                        :type_id="{{ \Cache::get('type_id') }}"
-                                        :auth_id="{{ \Auth::user()->id }}">
-                                    </Menu-Component>
+                                    <menu-component 
+                                        :type_id="{{ \Session::get('type_id') }}" :auth_id="{{ \Auth::user()->id }}">
+                                    </menu-component>
                                 </div>
                             @endif
                         @endauth

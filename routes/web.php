@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Cache;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,9 @@
 */
 
 Route::get('/', function () {
+    \Session()->put('facultad_id', 0);
+    \Session()->put('sede_id', 0);
+    \Session()->put('type_id', 0);
     return view('auth.login');
     //return view('welcome');
 });

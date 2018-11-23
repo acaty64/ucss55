@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-// use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 
 class FranjaController extends Controller
@@ -20,10 +20,10 @@ class FranjaController extends Controller
     public function index()
     {
         $franjas = DB::table('franjas')->where([
-                ['facultad_id', \Cache::get('facultad_id')], 
-                ['sede_id', \Cache::get('sede_id')]
+                ['facultad_id', \Session::get('facultad_id')], 
+                ['sede_id', \Session::get('sede_id')]
             ])->orderBy('dia')->orderBy('turno')->orderBy('hora')->paginate(7);
-        $wsede = \Cache::get('wsede');
+        $wsede = \Session::get('wsede');
         //$franjas = $all->sortByDesc('updated_at');
         return view('admin.franja.index')
             ->with('franjas', $franjas)
@@ -39,7 +39,7 @@ class FranjaController extends Controller
     {
         // $session = Session::all();
         return view('admin.franja.create')
-                ->with('wsede', \Cache::get('wsede'));
+                ->with('wsede', \Session::get('wsede'));
     }
 
     /**
@@ -53,16 +53,16 @@ class FranjaController extends Controller
         // $session = Session::all();
         $data = $request->all();
 
-        $chk = Franja::where('facultad_id', \Cache::get('facultad_id'))
-                        ->where('sede_id', \Cache::get('sede_id'))
+        $chk = Franja::where('facultad_id', \Session::get('facultad_id'))
+                        ->where('sede_id', \Session::get('sede_id'))
                         ->where('dia', $data['dia'])
                         ->where('turno', $data['turno'])
                         ->where('hora', $data['hora'])->first();
 
         if(!$chk){
             $franja = new Franja();
-            $franja->facultad_id   = \Cache::get('facultad_id');
-            $franja->sede_id       = \Cache::get('sede_id');
+            $franja->facultad_id   = \Session::get('facultad_id');
+            $franja->sede_id       = \Session::get('sede_id');
             $franja->wfranja       = $data['wfranja'];
             $franja->dia           = $data['dia'];
             $franja->turno         = $data['turno'];
@@ -87,7 +87,7 @@ class FranjaController extends Controller
     {
         // $session = Session::all();
         
-        $franjas = Franja::where('facultad_id', \Cache::get('facultad_id'))->where('sede_id', \Cache::get('sede_id'))->get();
+        $franjas = Franja::where('facultad_id', \Session::get('facultad_id'))->where('sede_id', \Session::get('sede_id'))->get();
         if(!$franjas){
             dd('No hay franjas');
         }
@@ -110,8 +110,8 @@ class FranjaController extends Controller
         return view('admin.franja.show')
             ->with('wfranjas', $wfranjas)
             ->with('gfranjas', $gfranjas)
-            ->with('wsede', \Cache::get('wsede'))
-            ->with('cfacultad', \Cache::get('cfacultad'));
+            ->with('wsede', \Session::get('wsede'))
+            ->with('cfacultad', \Session::get('cfacultad'));
     }
 
     /**

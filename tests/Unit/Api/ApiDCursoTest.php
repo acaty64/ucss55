@@ -214,7 +214,7 @@ class ApiDCursoTest extends TestCase
               ]]
       ];
 
-      $this->post("api/dcurso/update", $request)
+      $this->post("api/dcurso/update_orden", $request)
           ->assertStatus(200)
           ->assertExactJson(['success'=>true]);
 

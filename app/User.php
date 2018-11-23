@@ -69,8 +69,8 @@ class User extends Authenticatable
     public function getAccederAttribute()
     {
         //Acceso::setAccesoAttributes();
-        $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
         $ok = Acceso::where('user_id', $this->id)->where('facultad_id', $facultad_id)->where('sede_id', $sede_id)->first();
 
         if ($ok) {

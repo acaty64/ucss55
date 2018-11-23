@@ -50,9 +50,9 @@ Route::get('horario/show/{id}', [
 		'uses'	=> 'Admin\UserController@show',	
 	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
  
-Route::get('grupocurso/index', [
-		'as'	=> 'responsable.grupocurso.index',
-		'uses'	=> 'Admin\GrupoCursoController@index',	
+Route::get('cursogrupo/index', [
+		'as'	=> 'responsable.cursogrupo.index',
+		'uses'	=> 'Admin\CursoGrupoController@index',	
 	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
 
 

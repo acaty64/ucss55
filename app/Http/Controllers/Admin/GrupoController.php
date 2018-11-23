@@ -48,9 +48,9 @@ class GrupoController extends Controller
     public function store(Request $request)
     {
         $grupo = new Grupo();
-        $grupo->facultad_id = \Cache::get('facultad_id');
+        $grupo->facultad_id = \Session::get('facultad_id');
         // $grupo->facultad_id = Session::get('facultad_id');
-        $grupo->sede_id = \Cache::get('sede_id');
+        $grupo->sede_id = \Session::get('sede_id');
         // $grupo->sede_id = Session::get('sede_id');
         $grupo->cod_grupo = $request->cod_grupo;
         $grupo->wgrupo = $request->wgrupo;

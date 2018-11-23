@@ -71,10 +71,10 @@ class DHoraController extends Controller
      */
     public function edit($user_id)
     {
-        // $facultad_id = Session::get('facultad_id');
-        $facultad_id = \Cache::get('facultad_id');
-        // $sede_id = Session::get('sede_id');
-        $sede_id = \Cache::get('sede_id');
+        $facultad_id = \Session::get('facultad_id');
+        // $facultad_id = \Cache::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
+        // $sede_id = \Cache::get('sede_id');
         
         $franjas = Franja::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
         if(!$franjas){
@@ -127,10 +127,10 @@ class DHoraController extends Controller
     {
         // Rehacer data
         //$franjas = Franja::get();
-        $facultad_id = \Cache::get('facultad_id');
-        // $facultad_id = Session::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
-        // $sede_id = Session::get('sede_id');
+        // $facultad_id = \Cache::get('facultad_id');
+        $facultad_id = \Session::get('facultad_id');
+        // $sede_id = \Cache::get('sede_id');
+        $sede_id = \Session::get('sede_id');
         // Elimina la disponibilidad horaria anterior
         $dhoras = DHora::where('user_id', $request->user_id)->where('facultad_id',$facultad_id)->where('sede_id',$sede_id);
         foreach ($dhoras as $dhora) {
@@ -161,11 +161,11 @@ class DHoraController extends Controller
 
         // Redirecciona segun tipo de usuario
         Flash::success('Se ha registrado la modificación de disponibilidad horaria de forma exitosa');
-        if (\Cache::get('ctype') == 'Administrador') {
-        // if (Session::get('ctype') == 'Administrador') {
+        // if (\Cache::get('ctype') == 'Administrador') {
+        if (\Session::get('ctype') == 'Administrador') {
             return redirect()->route('administrador.user.index');
         }else{
-            return redirect()->route(strtolower(\Cache::get('ctype')).'.dhora.edit', $user_id);
+            return redirect()->route(strtolower(\Session::get('ctype')).'.dhora.edit', $user_id);
             // return redirect()->route(strtolower(Session::get('ctype')).'.dhora.edit', $user_id);
         }
     }
@@ -189,8 +189,8 @@ class DHoraController extends Controller
     public function sw_cambio($user_id, $tipo)
     {
         // if (Session::get('ctype') == 'Administrador' || Session::get('ctype') == 'Master') {
-        if (\Cache::get('ctype') == 'Administrador' 
-                || \Cache::get('ctype') == 'Master') {
+        if (\Session::get('ctype') == 'Administrador' 
+                || \Session::get('ctype') == 'Master') {
             $sw_cambio = '1';
         }else{
             date_default_timezone_set('America/Lima');

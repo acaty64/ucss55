@@ -40,3 +40,8 @@ Route::get('horario/show/{id}', [
 		'as'	=> 'docente.horario.show',
 		'uses'	=> 'Admin\UserController@show',	
 	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+
+Route::get('pdf/syllabus/{id}', [
+		'as'	=> 'pdf.syllabus.show',
+		'uses'	=> 'Admin\PDFController@syllabus',	
+	])->middleware(Authorize::class.':is_docente,'.Acceso::class);

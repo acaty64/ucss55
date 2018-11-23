@@ -1,18 +1,13 @@
 php artisan dusk
 php artisan dusk --filter 
 
-Errores:
+Hacer test manual:
+Motivo: Vue JS 
 
-DCursos01Test::
-	test_edit_a_dcurso : Investigar DUSK & HARVEST CHOSEN
-							Hacer el test manual.
-DCursos02Test::
-	test_view_a_sillabus : Investigar DUSK & HARVEST CHOSEN
-							Hacer el test manual.
+A) Disponibilidad de Cursos
+	route: http://ucss.test/administrador/dcurso/edit/4
+	view: admin/dcursos/edit.blade.php 
 
+	boton View: Ver PDF Syllabus
 
-MenusActionsTest::
-	test_a_master_create_a_menu : Se demora un poco, hay que reprocesarlo varias veces.
-	test_edit_a_menu : TODO.
-	test_delete_a_menu : TODO.
 

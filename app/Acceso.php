@@ -9,8 +9,8 @@ use App\User;
 use App\Sede;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
 // use Illuminate\Support\Facades\Session;
+
 
 class Acceso extends Model
 {
@@ -22,14 +22,14 @@ class Acceso extends Model
 
     protected function setAccesoAttributes($facultad_id, $sede_id, $type_id)
     {
-        \Cache::put('facultad_id', $facultad_id, 60);
-        \Cache::put('cfacultad', Facultad::find($facultad_id)->cfacultad, 60);
-        \Cache::put('wfacultad', Facultad::find($facultad_id)->wfacultad, 60);
-        \Cache::put('sede_id', $sede_id, 60);
-        \Cache::put('csede', Sede::find($sede_id)->csede, 60);
-        \Cache::put('wsede', Sede::find($sede_id)->wsede, 60);
-        \Cache::put('type_id', $type_id, 60);
-        \Cache::put('ctype', Type::find($type_id)->name, 60);
+        \Session::put('facultad_id', $facultad_id, 60);
+        \Session::put('cfacultad', Facultad::find($facultad_id)->cfacultad, 60);
+        \Session::put('wfacultad', Facultad::find($facultad_id)->wfacultad, 60);
+        \Session::put('sede_id', $sede_id, 60);
+        \Session::put('csede', Sede::find($sede_id)->csede, 60);
+        \Session::put('wsede', Sede::find($sede_id)->wsede, 60);
+        \Session::put('type_id', $type_id, 60);
+        \Session::put('ctype', Type::find($type_id)->name, 60);
 
 /*
         if(Session::get('facultad_id')){
@@ -83,16 +83,16 @@ class Acceso extends Model
     // Funciones
     protected function acceso_auth()
     {
-        $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
         return Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id', auth()->user()->id)->first();
     }
 
     protected function acceso_disponibilidad()
     {
-        $facultad_id = \Cache::get('facultad_id');
+        $facultad_id = \Session::get('facultad_id');
         // $facultad_id = Session::get('facultad_id');
-        $sede_id = \Cache::get('sede_id');
+        $sede_id = \Session::get('sede_id');
         // $sede_id = Session::get('sede_id');
         $todos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
         $accesos = collect([]);        
