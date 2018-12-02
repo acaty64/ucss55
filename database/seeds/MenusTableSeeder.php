@@ -47,7 +47,7 @@ Menu::create(['id' => 19, 'name' => 'Verificaciones', 'sw_auth' => false, 'help'
 Menu::create(['id' => 20, 'name' => 'Actualización de Disponibilidad Horaria', 'href' => 'dhora/lista', 'sw_auth' => true, ]);
 Menu::create(['id' => 21, 'name' => 'Actualización de Disponibilidad de Cursos', 'href' => 'dcurso/lista', 'sw_auth' => true, ]);
 Menu::create(['id' => 22, 'name' => 'Acciones', 'sw_auth' => false, 'help' => 'En esta opción podrá realizar los procesos de envíos de correos electrónicos a los docentes activos para el requerimiento de información.', ]);
-Menu::create(['id' => 23, 'name' => 'Envío de Correos Electrónicos', 'href' => 'menvio/index', 'sw_auth' => true, 'help' => 'En esta opción podrá realizar los procesos de envíos de correos electrónicos a los docentes activos para el requerimiento de información.', ]);
+Menu::create(['id' => 23, 'name' => 'Envío de Correos Electrónicos', 'href' => 'menvios/index', 'sw_auth' => true, 'help' => 'En esta opción podrá realizar los procesos de envíos de correos electrónicos a los docentes activos para el requerimiento de información.', ]);
 
 
     }

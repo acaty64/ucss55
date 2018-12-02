@@ -44,4 +44,5 @@ Route::get('horario/show/{id}', [
 Route::get('pdf/syllabus/{id}', [
 		'as'	=> 'pdf.syllabus.show',
 		'uses'	=> 'Admin\PDFController@syllabus',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+	]);
+	// ])->middleware(Authorize::class.':is_docente,'.Acceso::class);

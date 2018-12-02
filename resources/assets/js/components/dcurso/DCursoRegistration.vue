@@ -3,7 +3,8 @@
         <h3>Seleccione el curso</h3>
         <hr>
         <div class="row" v-for="item in items">
-            <button @click="viewItem(item)">View</button>
+            <!-- <button @click="viewItem(item)">View</button> -->
+            <a :href="viewItem(item)" >View</a>
             <a href="#" @click="registerItem(item)">{{ item.wcurso }}</a>
         </div>
     </div>
@@ -11,7 +12,7 @@
 
 <script>
     export default {
-        props: ['items'],
+        props: ['items', 'URLdomain', 'protocol'],
         methods: {
             registerItem(item) {
                 this.$emit('itemRegistered', item);
@@ -19,16 +20,7 @@
             },
 
             viewItem(item) {
-/*
-                var request = {
-                      'item': this.item
-                  };
-
-                var url = this.protocol+'//'+this.URLdomain+'/docente/pdf/syllabus/'+this.item.ccurso
-                axios.get(url, request).then(response=>{
-                    console.log( response.data.data)
-                });
-*/
+                return this.protocol + "//" + this.URLdomain + "/docente/pdf/syllabus/" + item.curso_id;
                 alert("Pendiente vista PDF del syllabus del curso ("+item.ccurso+"): "+item.wcurso);
             }
         }

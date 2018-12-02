@@ -8,7 +8,7 @@ class Denvio extends Model
 {
     protected $table = 'denvios';		
     protected $fillable = [		
-    	'user_id', 'menvio_id', 'email_to', 'email_cc', 'fenvio', 'flimite', 'sw_envio','sw_rpta', 'tipo'
+    	'user_id', 'menvio_id', 'tipo', 'sw_envio', 'sw_rpta1', 'sw_rpta2'
     ];	
 
     public function user()

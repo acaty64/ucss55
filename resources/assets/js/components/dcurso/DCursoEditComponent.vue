@@ -1,7 +1,11 @@
 <template>
   <div id="app">  
       <app-grupo @changeGrupo="changeGrupo" :grupos="grupos"></app-grupo>
-      <app-registration @itemRegistered="itemRegistered" :items="unregisteredItems"></app-registration>
+      <app-registration 
+        @itemRegistered="itemRegistered" 
+        :items="unregisteredItems"
+        :URLdomain="URLdomain"
+        :protocol="protocol"></app-registration>
       <app-registrations 
         @itemUnregistered="itemUnregistered" 
         @save="save" 

@@ -23,6 +23,7 @@ Vue.component('help-component', require('./components/HelpComponent.vue'));
 Vue.component('userindex-component', require('./components/user/UserIndexComponent.vue'));
 Vue.component('dcurso_edit-component', require('./components/dcurso/DCursoEditComponent.vue'));
 Vue.component('dcurso_orden-component', require('./components/dcurso/DcursoOrdenComponent.vue'));
+Vue.component('envio-component', require('./components/envio/EnvioComponent.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -60,7 +60,7 @@ trait TestsHelper
     		]);
 
         Acceso::setAccesoAttributes($facultad_id, $sede_id, $type_id);
-
+ 
         return $acceso;
     }
 

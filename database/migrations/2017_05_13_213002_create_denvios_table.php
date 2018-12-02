@@ -16,12 +16,12 @@ class CreateDenviosTable extends Migration
             $table->increments('id');
             $table->unSignedInteger('user_id');
             $table->unSignedInteger('menvio_id');
-            $table->string('email_to');
-            $table->string('email_cc')->nullable();
+            $table->string('tipo');
+            // $table->string('email_to');
+            // $table->string('email_cc')->nullable();
             $table->boolean('sw_envio')->default(false);
             $table->boolean('sw_rpta1')->default(false);
             $table->boolean('sw_rpta2')->default(false);
-            $table->string('tipo');
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('menvio_id')->references('id')->on('menvios')->onDelete('cascade');

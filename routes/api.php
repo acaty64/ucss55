@@ -14,6 +14,19 @@ use Illuminate\Http\Request;
 */
 
 /**
+ * Envio's Api Route
+ *
+ */
+Route::post('envio/load', [
+		'as'	=> 'api.envio.load',
+		'uses'	=> 'Api\EnvioController@load',	
+	]);
+Route::post('envio/save', [
+		'as'	=> 'api.envio.save',
+		'uses'	=> 'Api\EnvioController@save',	
+	]);
+
+/**
  * Dcurso's Api Route
  *
  */

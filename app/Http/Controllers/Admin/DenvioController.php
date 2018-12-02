@@ -28,41 +28,37 @@ class DenvioController extends Controller
      */
     public function define($id)
     {
-        // Recuperar los Denvios del Menvio
-        $menvio = Menvio::find($id);
-        $tipo = $menvio->tipo;
-        $updated_at = $menvio->created_at;
-        $denvios = $menvio->denvios()->get();
-        if($denvios->isEmpty())
-        {
-            $accesos = Acceso::acceso_disponibilidad()->sortBy('wdocente');
-            foreach ($accesos as $user) {
-                // Grabar registro a registro
-                $denvio = new Denvio;
-                $denvio->user_id = $user->id;
-                $denvio->menvio_id = $id;
-                $denvio->email_to = $user->datauser->email1;
-                $denvio->email_cc = $user->datauser->email2;
-                $denvio->updated_at = $updated_at;
-                $denvio->tipo = $tipo;
-                $denvio->save();                
-            }
-        }
-
-/**        if ($tipo = 'disp') {
-            $denvios = Denvio::Stipo(['menvio_id'=>$id, 'type'=>'horas'])->orderBy('id','ASC')->paginate(10);
-        }else{
-            $denvios = Menvio::find($id)->denvios->Stipo('carga')->orderBy('id','ASC')->paginate(10);
-        }
-*/
-        $denvios = Denvio::where('menvio_id',$id)->where('tipo', $tipo)->paginate(10);
-        foreach ($denvios as $denvio) {
-            $denvio->cdocente = User::find($denvio->user_id)->datauser->cdocente;
-            $denvio->wdocente = User::find($denvio->user_id)->datauser->wdocente();
-        } 
-        // Enviar a la vista define los denvios
         return view('admin.envios.define')
-            ->with('denvios', $denvios);
+            ->with('id',$id);
+        // // Recuperar los Denvios del Menvio
+        // $menvio = Menvio::find($id);
+        // $tipo = $menvio->tipo;
+        // $updated_at = $menvio->created_at;
+        // $denvios = $menvio->denvios()->get();
+        // if($denvios->isEmpty())
+        // {
+        //     $accesos = Acceso::acceso_disponibilidad()->sortBy('wdocente');
+        //     foreach ($accesos as $user) {
+        //         // Grabar registro a registro
+        //         $denvio = new Denvio;
+        //         $denvio->user_id = $user->id;
+        //         $denvio->menvio_id = $id;
+        //         $denvio->email_to = $user->datauser->email1;
+        //         $denvio->email_cc = $user->datauser->email2;
+        //         $denvio->updated_at = $updated_at;
+        //         $denvio->tipo = $tipo;
+        //         $denvio->save();                
+        //     }
+        // }
+
+        // $denvios = Denvio::where('menvio_id',$id)->where('tipo', $tipo)->paginate(10);
+        // foreach ($denvios as $denvio) {
+        //     $denvio->cdocente = User::find($denvio->user_id)->datauser->cdocente;
+        //     $denvio->wdocente = User::find($denvio->user_id)->datauser->wdocente();
+        // } 
+        // // Enviar a la vista define los denvios
+        // return view('admin.envios.define')
+        //     ->with('denvios', $denvios);
     }
 
     /**
@@ -74,6 +70,7 @@ class DenvioController extends Controller
      */
     public function update(Request $request)
     {
+// dd($request->all());
         $denvios = $request['xenvios'];
         $contador01 = 0;
         $contador10 = 0;
@@ -100,6 +97,7 @@ class DenvioController extends Controller
             }
         }
         Flash::success($contador01.' marcas agregadas, '.$contador10. ' marcas eliminadas.');
+        return redirect('admin.envios.define');                
         return back();                
     }
 
