@@ -24,7 +24,7 @@ class E11_EnviosTest extends DuskTestCase
                   ->select('sede_id','1')
                   ->press('Acceder')
                   ->pause(2500)
-                  ->waitForText('Inicio')
+                  ->waitForText('Inicio', 30)
                   ->assertSee('Usuarios')
                   ->visit('/administrador/menvios/index')
                   ->assertPathIs('/administrador/menvios/index')
