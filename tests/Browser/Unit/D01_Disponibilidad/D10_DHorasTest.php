@@ -64,7 +64,7 @@ class D10_DHorasTest extends DuskTestCase
                     ->check('D1_H13')
                     ->check('D1_H31')
                     ->press('Grabar modificaciones')
-                    ->assertSee('Se ha registrado ', 30)
+                    ->assertSee('Se ha registrado ', 60)
                     ->assertSee(' de disponibilidad horaria de forma exitosa');
         });
 
