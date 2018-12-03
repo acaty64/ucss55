@@ -23,7 +23,6 @@ class E11_EnviosTest extends DuskTestCase
                   ->select('facultad_id','1')
                   ->select('sede_id','1')
                   ->press('Acceder')
-                  ->pause(2500)
                   ->waitForText('Inicio', 30)
                   ->assertSee('Usuarios')
                   ->visit('/administrador/menvios/index')
