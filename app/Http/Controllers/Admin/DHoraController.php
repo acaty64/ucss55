@@ -153,8 +153,10 @@ class DHoraController extends Controller
         
         // Modifica switch respuesta en Denvios
         $acceso = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id', $request->user_id)->first();
-        $denvio = Menvio::find($acceso->disp_id)->denvios->first();
-        if(!empty($denvio)){
+        $menvio = Menvio::find($acceso->disp_id);
+        if(!empty($menvio)){
+            $denvio = Denvio::where('menvio_id', $menvio->id)
+                        ->where('user_id', $request->user_id)->first();
             $denvio->sw_rpta1 = '1';
             $denvio->save();
         }
