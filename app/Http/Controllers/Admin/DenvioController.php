@@ -61,109 +61,109 @@ class DenvioController extends Controller
         //     ->with('denvios', $denvios);
     }
 
-    /**
-     * ACTUALIZA LAS MARCAS DE LOS DETALLES DE ENVIOS (PAGINA ACTUAL) 
-     * Update the specified resource in storage.
-     *
-     * @param  admin.envios.define.blade.php : $request
-     * @return back() 
-     */
-    public function update(Request $request)
-    {
-// dd($request->all());
-        $denvios = $request['xenvios'];
-        $contador01 = 0;
-        $contador10 = 0;
-        foreach ($denvios as $id => $value) {
-            $denvio = Denvio::find($id);
-            if ($denvio->getOriginal('sw_envio') != $value) {
-                $denvio->sw_envio = $value;
-                if ($denvio->sw_envio == 1) {
-                    $contador01++;
-                }else{
-                    $contador10++;
-                }
-                $denvio->save();
+//     /**
+//      * ACTUALIZA LAS MARCAS DE LOS DETALLES DE ENVIOS (PAGINA ACTUAL) 
+//      * Update the specified resource in storage.
+//      *
+//      * @param  admin.envios.define.blade.php : $request
+//      * @return back() 
+//      */
+//     public function update(Request $request)
+//     {
+// // dd($request->all());
+//         $denvios = $request['xenvios'];
+//         $contador01 = 0;
+//         $contador10 = 0;
+//         foreach ($denvios as $id => $value) {
+//             $denvio = Denvio::find($id);
+//             if ($denvio->getOriginal('sw_envio') != $value) {
+//                 $denvio->sw_envio = $value;
+//                 if ($denvio->sw_envio == 1) {
+//                     $contador01++;
+//                 }else{
+//                     $contador10++;
+//                 }
+//                 $denvio->save();
 
-/**
-                // Actualiza la marca de detalles de envios CURSOS
-                $envio_curso = Denvio::where('user_id','=',$denvio->user_id)
-                    ->where('menvio_id','=',$denvio->menvio_id)->get();
-                foreach ($envio_curso as $envio) {
-                    $envio->sw_envio = $value;
-                    $envio->save();
-                }
-*/
-            }
-        }
-        Flash::success($contador01.' marcas agregadas, '.$contador10. ' marcas eliminadas.');
-        return redirect('admin.envios.define');                
-        return back();                
-    }
+// /**
+//                 // Actualiza la marca de detalles de envios CURSOS
+//                 $envio_curso = Denvio::where('user_id','=',$denvio->user_id)
+//                     ->where('menvio_id','=',$denvio->menvio_id)->get();
+//                 foreach ($envio_curso as $envio) {
+//                     $envio->sw_envio = $value;
+//                     $envio->save();
+//                 }
+// */
+//             }
+//         }
+//         Flash::success($contador01.' marcas agregadas, '.$contador10. ' marcas eliminadas.');
+//         return redirect('admin.envios.define');                
+//         return back();                
+//     }
 
-    /**
-     * MARCA TODOS LOS DETALLES DE ENVIOS
-     *
-     * @param  admin.envios.send.blade.php : Menvio->$id
-     * @return back()
-     */
-    public function markall($id)
-    {
-        $menvio = Menvio::find($id);
-        $id = $menvio->id;
-        $type = $menvio->tipo;
-        $updated_at = $menvio->created_at;
+//     /**
+//      * MARCA TODOS LOS DETALLES DE ENVIOS
+//      *
+//      * @param  admin.envios.send.blade.php : Menvio->$id
+//      * @return back()
+//      */
+//     public function markall($id)
+//     {
+//         $menvio = Menvio::find($id);
+//         $id = $menvio->id;
+//         $type = $menvio->tipo;
+//         $updated_at = $menvio->created_at;
         
-        $newvalue = 1;
-        $contador01 = 0;
-        $contador10 = 0;
-        $denvios = Menvio::find($id)->denvios()->get(); 
-        foreach ($denvios as $denvio) {
-            $denvio->sw_envio = $newvalue;
-            $denvio->updated_at = $updated_at;
-            if ($denvio->getOriginal('sw_envio') != $newvalue) {
-                if ($denvio->sw_envio == 1)
-                {
-                    $contador01++;
-                }
-            }
-            $denvio->save();
-        }
-        Flash::success($contador01.' marcas agregadas, '.$contador10. ' marcas eliminadas.');
-        return back();  
-    }
+//         $newvalue = 1;
+//         $contador01 = 0;
+//         $contador10 = 0;
+//         $denvios = Menvio::find($id)->denvios()->get(); 
+//         foreach ($denvios as $denvio) {
+//             $denvio->sw_envio = $newvalue;
+//             $denvio->updated_at = $updated_at;
+//             if ($denvio->getOriginal('sw_envio') != $newvalue) {
+//                 if ($denvio->sw_envio == 1)
+//                 {
+//                     $contador01++;
+//                 }
+//             }
+//             $denvio->save();
+//         }
+//         Flash::success($contador01.' marcas agregadas, '.$contador10. ' marcas eliminadas.');
+//         return back();  
+//     }
 
-    /**
-     * DESMARCA TODOS LOS DETALLES DE ENVIOS
-     *
-     * @param  admin.envios.send.blade.php : Menvio->$id
-     * @return back()
-     */
-    public function unmarkall($id)
-    {
-        $menvio = Menvio::find($id);
-        $id = $menvio->id;
-        $type = $menvio->tipo;
-        $updated_at = $menvio->created_at;
+//     /**
+//      * DESMARCA TODOS LOS DETALLES DE ENVIOS
+//      *
+//      * @param  admin.envios.send.blade.php : Menvio->$id
+//      * @return back()
+//      */
+//     public function unmarkall($id)
+//     {
+//         $menvio = Menvio::find($id);
+//         $id = $menvio->id;
+//         $type = $menvio->tipo;
+//         $updated_at = $menvio->created_at;
            
-        $newvalue = 0;
-        $contador01 = 0;
-        $contador10 = 0;
-        $denvios = Menvio::find($id)->denvios()->get(); 
-        foreach ($denvios as $denvio) {
-            $denvio->sw_envio = $newvalue;
-            $denvio->updated_at = $updated_at;
-            if ($denvio->getOriginal('sw_envio') != $newvalue) {
-                if ($denvio->sw_envio == 0)
-                {
-                    $contador10++;
-                }
-                $denvio->save();
-            }
-        }
-        Flash::success($contador01.' marcas agregadas, '.$contador10. ' marcas eliminadas.');
-        return back();  
-    }
+//         $newvalue = 0;
+//         $contador01 = 0;
+//         $contador10 = 0;
+//         $denvios = Menvio::find($id)->denvios()->get(); 
+//         foreach ($denvios as $denvio) {
+//             $denvio->sw_envio = $newvalue;
+//             $denvio->updated_at = $updated_at;
+//             if ($denvio->getOriginal('sw_envio') != $newvalue) {
+//                 if ($denvio->sw_envio == 0)
+//                 {
+//                     $contador10++;
+//                 }
+//                 $denvio->save();
+//             }
+//         }
+//         Flash::success($contador01.' marcas agregadas, '.$contador10. ' marcas eliminadas.');
+//         return back();  
+//     }
 
 
 }

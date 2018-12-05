@@ -13,7 +13,7 @@ class E11_EnviosTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
-    function test_define_a_menvio()
+    function test_define_a_menvio_and_destroy_it()
     {
         $this->artisan('db:seed');
         $this->browse(function(Browser $browser)
@@ -41,6 +41,10 @@ class E11_EnviosTest extends DuskTestCase
               'checked' => [2,3,4]
             ];  
             $response = $this->post("api/envio/save",$request);
+            $browser->press('#Regresar')
+                  ->waitForText('Seleccionado', 30)
+                  ->assertSee('3')
+                  ;
         });
 
         $this->assertDatabaseHas('denvios',[
@@ -60,6 +64,28 @@ class E11_EnviosTest extends DuskTestCase
           'menvio_id'   => 1,
           'tipo'        => 'disp'
         ]);
+
+        /*  Elimina Menvio y sus Denvios*/
+        $this->browse(function(Browser $browser)
+        {
+          $browser->visit('/administrador/menvios/destroy/1')
+                  // ->assertSee('Está seguro de eliminar este envio?')
+                  // ->press('Aceptar')
+                  ->assertSee('Se ha eliminado el grupo de envios: 1 de forma exitosa');
+        });
+        $this->assertDatabaseMissing('menvios',[
+          'id' => 1,
+          'facultad_id' => 1,
+          'sede_id'   => 1,
+          'tipo'        => 'disp'
+        ]);
+
+        $this->assertDatabaseMissing('denvios',[
+          'user_id' => 1,
+          'menvio_id'   => 1,
+          'tipo'        => 'disp'
+        ]);
+
 
     }
 }

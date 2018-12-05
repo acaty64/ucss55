@@ -91,6 +91,8 @@
     </div>
     
     @include('layouts.partials.footer')
+    
+    @yield('style')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

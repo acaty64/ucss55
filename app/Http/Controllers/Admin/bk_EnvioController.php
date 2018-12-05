@@ -9,7 +9,6 @@ use App\Dhora;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Menvio;
-use App\Traits\Correo;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -17,14 +16,12 @@ use Illuminate\Mail\TransportManager;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
+// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 use Swift_SwiftException;
 
-
-class EnvioController extends Controller
+class bk_EnvioController extends Controller
 {
-    use Correo;
-
      /**************  EN CONSTRUCCION *************************************************
      * ENVIO DE CORREOS ELECTRONICOS
      *
@@ -35,60 +32,55 @@ class EnvioController extends Controller
      */
     public function send($id)
     {
-
         $dias = array("domingo","lunes","martes","mi&eacute;rcoles","jueves","viernes","s&aacute;bado");
         $contador = 0;
-        $correos =Denvio::where('menvio_id', $id)->get();
-        foreach ($correos as $correo) {               
-            // Define información según tipo de envío.                   
-            if ($correo->tipo='disp') {
-                $data=['flimite'=>$correo->menvio->flimite,
-                        'dlimite'=>$dias[date("w")],
-                        'wdocente'=>$correo->user->datauser->wDocente(),
-                        'email_to'=>$correo->user->email,
-                        // 'bcc'=>auth()->user()->email,
-                        // 'auth_name' => auth()->user()->datauser->wdocente(),
-                        // 'tx_need'=>$correo->menvio->tx_need,
-                        'cfacultad' => \Session::get('wfacultad'),
-                        'csede' => \Session::get('wsede')
-                    ];
-                $request = [
-                        'output' => 'email',
-                        'model' => 'Disponibilidad',
-                        'data' => $data,
-                    ];
-                // $blade = 'admin.envios.email_01';
-                $contador++;
-            }elseif($correo->tipo='carga'){
+        $correos = Menvio::find($id)->denvios->all();
+        foreach ($correos as $correo) {
+            if ($correo->sw_envio == 0) {
+                $correo->delete();     
+            }else{               
+                // Define información según tipo de envío.                   
+                if ($correo->tipo='disp') {
+                    $data=['flimite'=>$correo->menvio->flimite,
+                            'dlimite'=>$dias[date("w")],
+                            'wdocente'=>$correo->user->datauser->wDocente(),
+                            'email'=>$correo->user->email,
+                            'bcc'=>auth()->user()->email,
+                            'auth_name' => auth()->user()->datauser->wdocente(),
+                            'tx_need'=>$correo->menvio->tx_need,
+                            'cfacultad' => \Session::get('wfacultad'),
+                            'csede' => \Session::get('wsede')
+                        ];
+                    $blade = 'admin.envios.email_01';
+                    $contador++;
+                }elseif($correo->tipo='carga'){
 ///////////////////////////////////////
-                $data = 'FALTA DEFINIR DATA PARA ENVIAR AL BLADE';
-                $request = [
-                        'output' => 'preview',
-                        'model' => 'Carga',
-                        'data' => $data,
-                    ];
-                
-                // $blade = 'admin.envios.email_02';
-                $contador++;
-            }
-            // Enviar correo
-            try{
-                Correo::send($request);
-                $correo->sw_envio = 1;
-                $correo->save();
-                // $this->enviado($correo);
-            } catch(Swift_SwiftException $e) {
+                    $data = 'FALTA DEFINIR DATA PARA ENVIAR AL BLADE';
+                    
+                    $blade = 'admin.envios.email_02';
+                    $contador++;
+                }
+                // Enviar correo
+                try{
+                    Mail::send($blade, $data, function ($message) use($data) {
+                        $message->from($data['bcc'], $data['auth_name'])
+                            ->bcc($data['bcc'])
+                            ->to($data['email'], $data['wdocente'])
+                            ->subject($data['tx_need']);
+                    });
+                    $this->enviado($correo);
+                } catch(Swift_SwiftException $e) {
 ///////////////////////////////////////
-                // *********** ERROR DE ENVIO DE CORREO ELECTRONICO ***********
-                    dd($e);
-            }
+                    // *********** ERROR DE ENVIO DE CORREO ELECTRONICO ***********
+                        dd($e);
+                }
             
-            // }
+            }
         }
         // Asignación del switch envío en el Maestro de Envíos.
-        // $Menvio = Menvio::find($id);
-        // $Menvio->sw_envio = 1;
-        // $Menvio->save();
+        $Menvio = Menvio::find($id);
+        $Menvio->sw_envio = 1;
+        $Menvio->save();
 //dd('enviados: '.$contador. ' / eliminados: '.$contador_xx);
         Flash::success('Se han enviado '.$contador.' correos de forma exitosa');
         return redirect()->route('administrador.menvio.index');

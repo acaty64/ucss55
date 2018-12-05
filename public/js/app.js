@@ -47792,12 +47792,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         'sede_id': this.sede_id,
         'type_id': this.type_id
       };
-      //console.log('request: ',request);
       var URLdomain = window.location.host;
       var protocol = window.location.protocol;
       var url = protocol + '//' + URLdomain + '/api/envio/load/';
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, request).then(function (response) {
-        // console.log('response.data: ',response.data);
         _this.users = response.data.users;
         _this.checked = response.data.checked;
       }).catch(function (error) {
@@ -47806,9 +47804,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     markall: function markall() {
       var array = [];
-      // console.log('this.checked: ', this.checked);
       this.users.forEach(function (user) {
-        // console.log('user.user_id: ', user.user_id);
         array.push(user.user_id);
       });
       this.checked = array;
@@ -47819,7 +47815,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     save: function save() {
       var _this2 = this;
 
-      // alert('En construccion save()');
       var request = {
         'id': this.id,
         'checked': this.checked
@@ -47828,15 +47823,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var protocol = window.location.protocol;
       var url = protocol + '//' + URLdomain + '/api/envio/save/';
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, request).then(function (response) {
-        console.log('response.data: ', response.data);
-        // 						alert('Docentes seleccionados: ' + response.data);
         _this2.mensaje = "Registros grabados: " + response.data.contador;
       }).catch(function (error) {
+        this.mensaje = "Registros NO grabados. Error(EnvioComponent.vue)";
         console.log(error);
       });
     },
     back: function back() {
-      alert('En construccion back()');
+      var URLdomain = window.location.host;
+      var protocol = window.location.protocol;
+      var url = protocol + '//' + URLdomain + '/api/menvio/index/';
+      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(url).then(function (response) {
+        window.location = response.data.redirect;
+      }).catch(function (error) {
+        this.mensaje = "No redireccionado al index.";
+        alert(this.mensaje);
+        console.log(error);
+      });
     }
   }
 });

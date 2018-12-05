@@ -10,7 +10,8 @@
  			<th>Tipo</th>
  			<th>Fecha de envio</th>
  			<th>Fecha límite</th>
- 			<th>Envíos</th>
+ 			<th>Seleccionados</th>
+ 			<th>Enviados</th>
  			<th>Respuestas</th>
  			<th>Acción</th>
  		</thead>
@@ -22,16 +23,13 @@
  					<td>{{ $envio->fenvio }}</td>
  					<td>{{ $envio->flimite }}</td>
  					<td>
- 						 <span class="badge">{{ $envio->envio1 }}</span>
- 						 @if($envio->tipo == 'disp')
- 						 	<span class="badge">{{ $envio->envio2 }}</span>
- 						 @endif
+ 						 <span class="badge">{{ $envio->selected }}</span>
  					</td>
  					<td>
- 						<span class="badge">{{ $envio->rpta1 }}</span>
- 						@if($envio->tipo == 'disp')
- 						 	<span class="badge">{{ $envio->rpta2 }}</span>
- 						@endif
+ 						 <span class="badge">{{ $envio->envio }}</span>
+ 					</td>
+ 					<td>
+ 						<span class="badge">{{ $envio->rpta }}</span>
  					</td>
 	 				<td>
 	 					@if($envio->sw_envio == 0)
@@ -41,7 +39,7 @@
 	 						<a href="{{ route('administrador.menvio.show', $envio->id ) }}" class="btn btn-primary" data-toggle="tooltip" title="Ver Docentes Comunicados"><span class="glyphicon glyphicon-eye-open" aria-hidden='true' id="{{'Show'.$envio->id}}"></span></a>
 	 					@endif
 	 					<a href="{{ route('administrador.menvio.destroy', $envio->id) }}" onclick="return confirm('Está seguro de eliminar este envio?')" class="btn btn-danger" data-toggle="tooltip" title="Eliminar envio" id="{{'Dele'.$envio->id}}"><span class="glyphicon glyphicon-trash" aria-hidden='true'></a>
-	 					@if($envio->envio1 > 0 and $envio->sw_envio == 0)
+	 					@if($envio->selected > 0 and $envio->envio == 0)
 	 						<a href="{{ route('administrador.envio.send', $envio->id) }}" class="btn btn-success" data-toggle="tooltip" title="Enviar los correos electrónicos"><span class="glyphicon glyphicon-send" aria-hidden='true' id="{{'Send'.$envio->id}}"></a>
 	 					@endif
 	 				</td>	
@@ -53,3 +51,10 @@
 @endsection
 
 @section('view','admin/envios/index.blade.php')	
+
+@section('style')
+<style>
+	th {text-align: center;}
+	td {text-align: center;}
+</style>
+@endsection

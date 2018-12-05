@@ -24,8 +24,8 @@ class MenvioController extends Controller
      */
     public function index()
     {
-        $this->recontar_envios();
-        $this->recontar_rptas();
+        // $this->recontar_envios();
+        // $this->recontar_rptas();
         /*  PARA SELECT HORA DE ENVIO QUEUE
         date_default_timezone_set('America/Lima');
         $contador = 1;
@@ -54,7 +54,7 @@ class MenvioController extends Controller
     {
         return view('admin.envios.create');
     }
-
+ 
     /**
      * GRABA EL NUEVO REGISTRO DEL MAESTRO DE ENVIOS
      * Store a newly created resource in storage.
@@ -143,7 +143,6 @@ class MenvioController extends Controller
      */
     public function destroy($id)
     {
-        //        dd('En construcción: MenviosController@destroy');
         $denvios = Menvio::find($id)->denvios;
         foreach ($denvios as $denvio) {
             $xdenvio = Denvio::find($denvio->id);
@@ -152,28 +151,28 @@ class MenvioController extends Controller
         $menvio =  Menvio::find($id);
         $menvio->delete();          
         Flash::error('Se ha eliminado el grupo de envios: '.$menvio->id.' de forma exitosa');
-        return redirect()->route('admin.menvios.index');
+        return redirect()->route('administrador.menvio.index');
     }
 
-    /**
-     * RECUENTA LOS DETALLES DE ENVIOS MARCADOS
-     *
-     * @param  MenviosController.index()
-     */
-    public function recontar_envios()
-    {
-        $Menvios = Menvio::all();
-        if ($Menvios->isEmpty() == false) 
-        {
-            foreach ($Menvios as $Menvio) 
-            {
-                $denvios = $Menvio->denvios;
-                $Menvio->envio1 = $denvios->sum('sw_envio');
-                $Menvio->envio2 = $denvios->sum('sw_envio');
-                $Menvio->save();
-            }  
-        }           
-    }
+    // /**
+    //  * RECUENTA LOS DETALLES DE ENVIOS MARCADOS
+    //  *
+    //  * @param  MenviosController.index()
+    //  */
+    // public function recontar_envios()
+    // {
+    //     $Menvios = Menvio::all();
+    //     if ($Menvios->isEmpty() == false) 
+    //     {
+    //         foreach ($Menvios as $Menvio) 
+    //         {
+    //             $denvios = $Menvio->denvios;
+    //             $Menvio->envio1 = $denvios->sum('sw_envio');
+    //             $Menvio->envio2 = $denvios->sum('sw_envio');
+    //             $Menvio->save();
+    //         }  
+    //     }           
+    // }
 
 
     /**

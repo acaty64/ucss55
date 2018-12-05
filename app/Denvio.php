@@ -18,12 +18,12 @@ class Denvio extends Model
 	
 	public function menvio()
     {
-         return $this->belongsTo('App\MEnvio');
+         return $this->belongsTo('App\Menvio');
     }
     /* Requiere array['id'=>menvio_id, 'type'=>tipo]*/
-    public function scopeStipo($query, $id_type){
-        $id = $id_type['menvio_id'];
-        $type = $id_type['type']; 
+    public function scopeStipo($query, $data){
+        $id = $data['menvio_id'];
+        $type = $data['type']; 
         return $query->where('menvio_id', '=', $id )->where('tipo', '=', $type) ;
     }
 }

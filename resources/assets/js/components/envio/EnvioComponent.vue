@@ -69,12 +69,10 @@
               'sede_id': this.sede_id,
               'type_id': this.type_id
           };
-//console.log('request: ',request);
         var URLdomain = window.location.host;
         var protocol = window.location.protocol;
         var url = protocol+'//'+URLdomain+'/api/envio/load/';
         axios.post(url, request).then(response=>{
-// console.log('response.data: ',response.data);
             this.users = response.data.users;
             this.checked = response.data.checked;
         }).catch(function (error) {
@@ -83,9 +81,7 @@
 			},
 			markall(){
 				var array = [];
-// console.log('this.checked: ', this.checked);
 				this.users.forEach(function(user) {
-// console.log('user.user_id: ', user.user_id);
 				  array.push(user.user_id);
 				});
 				this.checked = array;
@@ -94,7 +90,6 @@
 				this.checked = [];
 			},
 			save(){
-				// alert('En construccion save()');
         var request = {
               'id': this.id,
               'checked': this.checked
@@ -103,19 +98,24 @@
         var protocol = window.location.protocol;
         var url = protocol+'//'+URLdomain+'/api/envio/save/';
         axios.post(url, request).then(response=>{
-console.log('response.data: ',response.data);
-// 						alert('Docentes seleccionados: ' + response.data);
 						this.mensaje = "Registros grabados: "+response.data.contador;
         }).catch(function (error) {
+        		this.mensaje = "Registros NO grabados. Error(EnvioComponent.vue)"
             console.log(error);
         });
 			},
 			back(){
-				alert('En construccion back()');
+        var URLdomain = window.location.host;
+        var protocol = window.location.protocol;
+        var url = protocol+'//'+URLdomain+'/api/menvio/index/';
+				axios.get(url).then(response=>{
+						window.location = response.data.redirect;
+        }).catch(function (error) {
+        		this.mensaje = "No redireccionado al index."
+        		alert(this.mensaje);
+            console.log(error);
+        });
 			},
-			// checked(){
-			// 	alert('checked');
-			// },
 		},
 	}
 </script>

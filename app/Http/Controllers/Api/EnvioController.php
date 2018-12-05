@@ -14,6 +14,10 @@ use Laracasts\Flash\Flash;
 
 class EnvioController extends Controller
 {
+    public function index()
+    {
+        return ['redirect' => route('administrador.menvio.index')];
+    }
     public function load(Request $request)
     {
         $id = $request->id;

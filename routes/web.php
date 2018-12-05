@@ -1,17 +1,11 @@
 <?php
 
+use App\Mail\Disponibilidad;
+use App\Menvio;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Mail;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 Route::get('/', function () {
     \Session()->put('facultad_id', 0);
@@ -20,6 +14,13 @@ Route::get('/', function () {
     return view('auth.login');
     //return view('welcome');
 });
+
+
+// Route::get('/', function () {
+// 	$cuenta = Menvio::find(1);
+//     return $cuenta->envio;
+// });
+
 
 Route::get('/home', [
 	'as'	=> 'home',

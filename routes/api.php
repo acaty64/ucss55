@@ -17,6 +17,10 @@ use Illuminate\Http\Request;
  * Envio's Api Route
  *
  */
+Route::get('menvio/index', [
+		'as'	=> 'api.menvio.index',
+		'uses'	=> 'Api\EnvioController@index',	
+	]);
 Route::post('envio/load', [
 		'as'	=> 'api.envio.load',
 		'uses'	=> 'Api\EnvioController@load',	

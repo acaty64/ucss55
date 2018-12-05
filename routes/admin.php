@@ -6,6 +6,21 @@ use Illuminate\Http\Request;
 
 // ROUTES
 
+/** MAIL ********************************************/
+/* Request:  */
+/*  		output: 'preview' or 'email' */
+/*  		model: Class */
+/*  		data: [
+					'email_to' 	=> 'REQUIRED', 
+					'others'	=> 'ACCORDING TO CLASS'
+				]*/
+/*  */
+Route::post('mail/send', [
+		'as' => 'administrador.mail.send',
+		'uses' => 'Admin\mailController@send'
+	])->middleware('can:is_admin,'.Acceso::class);
+
+
 /** USER ********************************************/
 Route::get('user/index',  [
 		'as'	=> 'administrador.user.index',
