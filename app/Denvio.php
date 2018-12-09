@@ -26,4 +26,5 @@ class Denvio extends Model
         $type = $data['type']; 
         return $query->where('menvio_id', '=', $id )->where('tipo', '=', $type) ;
     }
+
 }

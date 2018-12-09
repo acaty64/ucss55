@@ -22,48 +22,6 @@ use Maatwebsite\Excel\Facades\Excel;
 class DHoraController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('errors.000');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('errors.000');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        return view('errors.000');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return view('errors.000');
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -86,34 +44,49 @@ class DHoraController extends Controller
         foreach ($turnos as $key_turno => $turno) {
             $horas = $turno->where('turno',$key_turno)->sortBy('hora')->groupBy('hora');
             foreach ($horas as $key_hora => $hora) {
-                array_push($gfranjas, ['turno'=>$key_turno,'hora'=>$key_hora]);
+                $xfranja = Franja::where('turno', $key_turno)
+                                ->where('hora', $key_hora)
+                                ->first();
+                array_push($gfranjas, ['turno'=>$key_turno,'hora'=>$key_hora, 'wfranja'=>$xfranja->wfranja]);
             }
         }
         $gfranjas = collect($gfranjas);
 
+        $cfranjas = [];
         foreach ($franjas as $franja) {
             $campo = "D".$franja->dia.'_H'.$franja->turno.$franja->hora;
-            $wfranja[$campo] = $franja->wfranja;
+            // $wfranjas[$campo] = $franja->wfranja;
+            array_push($cfranjas, $campo);
         }
 
         $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
 
+        // $dhoras = DHora::where('user_id', $user_id)->where('sede_id', $sede_id)->where('facultad_id', $facultad_id)->get();
         $collect_dhoras = DHora::where('user_id', $user_id)->where('sede_id', $sede_id)->where('facultad_id', $facultad_id)->get();
 
         $dhoras = [];
-        foreach ($collect_dhoras as $key => $value) {
-            $dhoras[$value->wfranja] = 'on';
+        foreach ($collect_dhoras as $value) {
+            $xfranja = $value->wfranja;
+            array_push($dhoras, $xfranja);
+            // $dhoras[$value->wfranja] = 'on';
         }
-
-        $sw_cambio = $this->sw_cambio($user_id, 'disp');
-
-        return view('admin.dhora.edit')
-            ->with('sw_cambio',$sw_cambio)
-            ->with('wfranja', $wfranja)
-            ->with('gfranjas',$gfranjas)
+        $dhoras = collect($dhoras);
+        // $sw_cambio = $this->sw_cambio($user_id, 'disp');
+        $check = User::editable('disp');
+// dd($wfranjas);
+        // return view('admin.dhora.edit')
+        return view('admin.dhora.vue_edit')
+            ->with('sw_cambio', $check)
+            // ->with('wfranjas', collect($wfranjas))
+            ->with('cfranjas', collect($cfranjas))
+            ->with('gfranjas', $gfranjas)
             ->with('dhoras', $dhoras)
-            ->with('wdocente',$wdocente)
-            ->with('user_id',$user_id);
+            ->with('wdocente', $wdocente)
+            ->with('docente_id', $user_id)
+            ->with('rhoras', 30)
+            ->with('facultad_id', \Session::get('facultad_id'))
+            ->with('sede_id', \Session::get('sede_id'))
+            ;
     }
 
     /**
@@ -172,17 +145,6 @@ class DHoraController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        return view('errors.000');
-    }
-
     /* Identifica si tiene envio de disponibilidad pendiente */
         // Si el usuario es Administrador puede modificar
         // Selecciona los denvios del usuario
@@ -204,7 +166,7 @@ class DHoraController extends Controller
                 $contador = 0;
                 foreach ($denvios as $denvio) {
                     if ($denvio->menvio->tipo=$tipo 
-                            and $denvio->menvio->fenvio < $hoy
+                            // and $denvio->menvio->fenvio < $hoy
                             and $denvio->menvio->flimite > $ayer)
                     {
                         $menvios[$contador++] = $denvio->menvio->toArray();

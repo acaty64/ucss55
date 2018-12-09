@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Mail;
 
 
 
+
+Route::get('/pagination', [
+	'as'	=> 'pagination',
+	'uses'	=> 'HomeController@pagination']);
+
 Route::get('/', function () {
     \Session()->put('facultad_id', 0);
     \Session()->put('sede_id', 0);
@@ -14,12 +19,6 @@ Route::get('/', function () {
     return view('auth.login');
     //return view('welcome');
 });
-
-
-// Route::get('/', function () {
-// 	$cuenta = Menvio::find(1);
-//     return $cuenta->envio;
-// });
 
 
 Route::get('/home', [

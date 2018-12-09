@@ -2,16 +2,19 @@
 
 use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::get('model/index/{page?}', [
+	'as' => 'api.model.index',
+	'uses' =>'Api\ModelController@index'
+]);
+
+/**
+ * Rhora's Api Route
+ *
+ */
+Route::post('rhoras/save', [
+		'as'	=> 'api.rhoras.save',
+		'uses'	=> 'Api\RhoraController@save',	
+	]);
 
 /**
  * Envio's Api Route

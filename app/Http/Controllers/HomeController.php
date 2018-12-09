@@ -94,4 +94,9 @@ class HomeController extends Controller
             return back();
         }    
     }
+    /* Modulo de plantilla  */
+    public function pagination()
+    {
+        return view('model.pagination');
+    }
 }

@@ -4,9 +4,10 @@ namespace App;
 
 use App\DataUser;
 use App\Facultad;
+use App\Rhora;
+use App\Sede;
 use App\Type;
 use App\User;
-use App\Sede;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 // use Illuminate\Support\Facades\Session;
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Auth;
 class Acceso extends Model
 {
     protected $table = 'accesos';
-
+    protected $append = [
+            'rhoras'
+        ];
     protected $fillable = [
         'user_id', 'sede_id', 'facultad_id', 'type_id', 'swcierre', 'wdocente', 'dhora', 'dcurso', 'carga'
     ];
@@ -31,23 +34,25 @@ class Acceso extends Model
         \Session::put('type_id', $type_id, 60);
         \Session::put('ctype', Type::find($type_id)->name, 60);
 
-/*
-        if(Session::get('facultad_id')){
-            Auth::User()->setFacultadAttributes(Session::get('facultad_id'), Session::get('cfacultad'));
-        } 
-        if(Session::get('sede_id')){
-            Auth::User()->setSedeAttributes(Session::get('sede_id'), Session::get('csede'));
-        } 
-        if(Session::get('type_id')){
-            Auth::User()->setTypeAttributes(Session::get('type_id'), Session::get('ctype'));
-        }
-*/
     }
 
     public function getWdocenteAttribute()
     {
         return DataUser::where('user_id',$this->user_id)->first()->wdocente();
-        //return $this->wdocente;
+    }
+
+    public function getRhorasAttribute()
+    {
+        $rhora = Rhora::where('facultad_id',$this->facultad_id)
+                    ->where('sede_id',$this->sede_id)
+                    ->where('user_id',$this->user_id)
+                    ->first();
+     
+        if($rhora){
+            return $rhora->rhoras;
+        }else{
+            return 0;
+        }
     }
 
     public function getCdocenteAttribute()

@@ -3,6 +3,8 @@
 namespace App;
 
 use App\Acceso;
+use App\Menvio;
+use App\Rhora;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Session;
@@ -11,7 +13,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    protected $append = ['facultad', 'sede', 'type', 'acceder', 'accesos'];
+    protected $append = ['facultad', 'sede', 'type', 'acceder', 'accesos', 'rhora'];
 
     /**
      * The attributes that are mass assignable.
@@ -75,24 +77,21 @@ class User extends Authenticatable
 
         if ($ok) {
             Acceso::setAccesoAttributes($facultad_id, $sede_id, $ok->type_id);
-/*
-            \Cache::put('type_id',$ok->type_id, 60);
-            \Cache::put('ctype',$ok->type->name, 60);
-            \Cache::put('wfacultad',$ok->wfacultad, 60);
-            \Cache::put('wsede',$ok->wsede, 60);
-*/
-
-/*
-            Session::put('type_id',$ok->type_id);
-            Session::put('ctype',$ok->type->name);
-            Session::put('wfacultad',$ok->wfacultad);
-            Session::put('wsede',$ok->wsede);
-            Acceso::setAccesoAttributes($ok->facultad_id, $ok->sede_id, $ok->type_id);
-*/
-
             return true;
         } else {
             return false;
+        }
+    }
+
+    public function getRhoraAttribute()
+    {
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
+        $rhora = Rhora::where('user_id', $this->id)->where('facultad_id', $facultad_id)->where('sede_id', $sede_id)->first();
+        if($rhora){
+            return $rhora;
+        }else{
+            return 0;
         }
     }
 
@@ -117,12 +116,37 @@ class User extends Authenticatable
         return $filter;
     }
 
-    /************* FUNCIONES ***************
-    public function wDocente($id){
-        $datauser = DataUser::where('user_id',$id)->first();
-        return $datauser->wdoc2." ".$datauser->wdoc3.", ".$datauser->wdoc1;
+    /************* FUNCIONES *************** */
+
+    public static function editable($tipo)
+    {
+        $user_id = \Session::get('user_id');
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
+        $type_user = \App\Acceso::acceso_auth()->ctype;
+        switch ($type_user) {
+            case 'Master' || 'Administrador':
+                $editable = true;
+                break;
+            case 'Responsable' || 'Docente':
+                $menvios = Menvio::where('facultad_id', $facultad_id)
+                                ->where('sede_id', $sede_id)
+                                ->sortBy('flimite');
+                foreach ($menvios as $menvio) {
+                    $editable = false;
+                    $denvio = $menvio->denvios->where('user_id', $this->user_id)->first();
+                    if ($denvio) {
+                        $editable = true;
+                    }
+                }
+                break;
+            default:
+                $editable = false;
+                break;
+        }
+
+        return $editable;
     }
-*****/
     /************ RELATIONSHIPS ******************/
     public function accesos()
     {

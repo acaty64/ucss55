@@ -6,18 +6,30 @@ use Illuminate\Http\Request;
 
 // ROUTES
 
-/** MAIL ********************************************/
-/* Request:  */
-/*  		output: 'preview' or 'email' */
-/*  		model: Class */
-/*  		data: [
-					'email_to' 	=> 'REQUIRED', 
-					'others'	=> 'ACCORDING TO CLASS'
-				]*/
-/*  */
-Route::post('mail/send', [
-		'as' => 'administrador.mail.send',
-		'uses' => 'Admin\mailController@send'
+/** RHORA ********************************************/
+Route::get('rhora/index', [
+		'as'	=> 'administrador.rhora.index',
+		'uses'	=> 'Admin\RhoraController@index',	
+	])->middleware('can:is_admin,'.Acceso::class);
+
+Route::get('rhora/create',  [
+		'as'	=> 'administrador.rhora.create',
+		'uses'	=> 'Admin\RhoraController@create',	
+	])->middleware('can:is_admin,'.Acceso::class);
+
+Route::post('rhora/store',  [
+		'as'	=> 'administrador.rhora.store',
+		'uses'	=> 'Admin\RhoraController@store',	
+	])->middleware('can:is_admin,'.Acceso::class);
+
+Route::get('rhora/edit/{user_id}',  [
+		'as'	=> 'administrador.rhora.edit',
+		'uses'	=> 'Admin\RhoraController@edit',	
+	])->middleware('can:is_admin,'.Acceso::class);
+
+Route::put('rhora/update',  [
+		'as'	=> 'administrador.rhora.update',
+		'uses'	=> 'Admin\RhoraController@update',	
 	])->middleware('can:is_admin,'.Acceso::class);
 
 
