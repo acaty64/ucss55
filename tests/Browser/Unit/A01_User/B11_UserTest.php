@@ -33,7 +33,7 @@ class B11_UserTest extends DuskTestCase
             $this->defaultDataUser($admin);            
             $type_admin = Type::where('name', 'Administrador')->first();
             $var = $this->authUser($admin->id, $facultad_id, $sede_id, $type_admin->id);
-            
+
             $browser->loginAs($admin)
                     ->visit('/home')
                     ->select('facultad_id', $facultad_id)
