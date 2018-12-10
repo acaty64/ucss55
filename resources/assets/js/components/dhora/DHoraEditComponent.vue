@@ -126,9 +126,10 @@
           var protocol = window.location.protocol;
           var url = protocol+'//'+URLdomain+'/api/dhoras/save/';
           axios.post(url, request).then(response=>{
+console.log(response.data);
               this.mensaje = "Registros grabados: "+response.data.contador;
           }).catch(function (error) {
-              this.mensaje = "Registros NO grabados. Error(EnvioComponent.vue)"
+              // this.mensaje = "Registros NO grabados. Error(EnvioComponent.vue)"
               console.log(error);
           });
         }else{

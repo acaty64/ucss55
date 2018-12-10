@@ -102,8 +102,11 @@ class Acceso extends Model
         $todos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
         $accesos = collect([]);        
         foreach ($todos as $acceso) {
-            if ($acceso->ctype != 'Master' && $acceso->ctype != 'Consulta') {
-                $accesos->push($acceso->user);
+            if ($acceso->ctype != 'Master' && $acceso->ctype != 'Consulta') 
+            {
+                if($acceso->rhoras > 0){
+                    $accesos->push($acceso->user);
+                }
             }
         }
         return $accesos;       

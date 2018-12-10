@@ -89,7 +89,7 @@ class User extends Authenticatable
         $sede_id = \Session::get('sede_id');
         $rhora = Rhora::where('user_id', $this->id)->where('facultad_id', $facultad_id)->where('sede_id', $sede_id)->first();
         if($rhora){
-            return $rhora;
+            return $rhora->rhoras;
         }else{
             return 0;
         }

@@ -24,12 +24,14 @@ class RhoraController extends Controller
                     ->get();
         $users = [];
         foreach ($accesos as $acceso) {
-            $user = [
-                    'id'=>$acceso->user_id,
-                    'wdocente'=>$acceso->wdocente,
-                    'rhoras' => $acceso->rhoras
-                ];
-            array_push($users, $user);
+            if($acceso->ctype == 'Responsable' || $acceso->ctype == 'Docente'){
+                $user = [
+                        'id'=>$acceso->user_id,
+                        'wdocente'=>$acceso->wdocente,
+                        'rhoras' => $acceso->rhoras
+                    ];
+                array_push($users, $user);
+            }
         }
 
         uasort($users, function ($a, $b)
@@ -39,7 +41,7 @@ class RhoraController extends Controller
             }
             return ($a['wdocente'] < $b['wdocente']) ? -1 : 1;
         });
-        $perPage = 4;
+        $perPage = 10;
         $row = 0;
         $rowPage = 0;
         $nPage = 1;

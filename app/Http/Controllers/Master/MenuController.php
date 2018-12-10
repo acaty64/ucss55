@@ -88,27 +88,29 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        //$menu = Menu::find($id);
-        $var = array();
-        $menuTypes = MenuType::all()->where('menu_id', $id);
-        foreach ($menuTypes as $menuType) {
-            $id = $menuType->id;
-            $var[$id]['id'] = $menuType->id;
-            $menu_name = Menu::find($menuType->menu_id)->name;
-            $menu_href = Menu::find($menuType->menu_id)->href;
-            $type_name = Type::find($menuType->type_id)->name;
-            $var[$id]['menu_id'] = $menuType->menu_id;
-            $var[$id]['type_id'] = $menuType->type_id;
-            $var[$id]['menu_name'] = $menu_name;
-            $var[$id]['menu_href'] = $menu_href;
-            $var[$id]['type_name'] = $type_name;
-            $var[$id]['level'] = $menuType->level;
-            $var[$id]['order'] = $menuType->order;
-        }
-        $menus = collect($var);
+        $items = Menu::find($id);
 
         return view('menu/edit')
-            ->with('menus', $menus);
+            ->with('items', $items);
+        //$menu = Menu::find($id);
+//         $var = array();
+//         $menuTypes = MenuType::where('menu_id', $id)->get();
+//         foreach ($menuTypes as $menuType) {
+//             $id = $menuType->id;
+//             $var['id'] = $menuType->id;
+//             $menu_name = Menu::find($menuType->menu_id)->name;
+//             $menu_href = Menu::find($menuType->menu_id)->href;
+//             $type_name = Type::find($menuType->type_id)->name;
+//             $var['menu_id'] = $menuType->menu_id;
+//             $var['type_id'] = $menuType->type_id;
+//             $var['menu_name'] = $menu_name;
+//             $var['menu_href'] = $menu_href;
+//             $var['type_name'] = $type_name;
+//             $var['level'] = $menuType->level;
+//             $var['order'] = $menuType->order;
+//         }
+//         $menus = collect($var);
+
             //->with('types',$types);
     }
 
@@ -119,9 +121,20 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        dd('MenuController@update');
+        $menu = Menu::findOrFail($request->id);
+        $menu->fill([
+                'name' => $request->name,
+                'href' => $request->href,
+                'sw_auth' => $request->sw_auth,
+                'parameter' => $request->parameter,
+                'help' => $request->help
+            ]);
+        $menu->save();
+        Flash::success('Menu modificado.');
+        return back();
+
     }
 
     /**

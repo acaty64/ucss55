@@ -58,14 +58,25 @@ class D10_DHorasTest extends DuskTestCase
                     ->assertSee('Usuarios')
                     ->visit('/administrador/user/index')
                     ->assertPathIs('/administrador/user/index')
-                    ->visit("/administrador/dhora/edit/{$user->id}")
-                    ->check('D1_H11')
-                    ->check('D1_H12')
-                    ->check('D1_H13')
-                    ->check('D1_H31')
-                    ->press('Grabar modificaciones')
-                    ->assertSee('Se ha registrado la modificación de disponibilidad horaria de forma exitosa', 60);
+                    ->visit("/administrador/dhora/edit/{$user->id}");
         });
+
+        $request = [
+              'docente_id' => $user_id,
+              'facultad_id' => $facultad_id,
+              'sede_id' => $sede_id,
+              'checked' => [ 
+                    'D1_H11',
+                    'D1_H12',
+                    'D1_H13',
+                    'D1_H31',                  
+                  ]           
+                ];
+
+        $response = $this->post('/api/dhoras/save', $request)
+                  ->assertStatus(200);
+        //       ->assertSee('Se ha registrado la modificación de disponibilidad horaria de forma exitosa', 60);
+
 
         $this->assertDatabaseHas('dhoras',[
           'facultad_id' => $facultad_id,

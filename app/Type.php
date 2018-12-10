@@ -15,13 +15,19 @@ class Type extends Model
         'name'
     ];
 
-	public function users(){
+    public function users(){
         return $this->belongsToMany(Type::class);
+    }
+
+	public function menutype(){
+        // return $this->belongsToMany(MenuType::class)
+        return $this->belongsTo(MenuType::class, 'type_id');
+                // ->withPivot('type_id');
     }
 
     public function menus(){
         return $this->belongsToMany(Menu::class)
-            ->withPivot('level', 'order');
+                    ->withPivot('level', 'order');
     }
 
     public function accesos(){

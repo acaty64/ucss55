@@ -105,36 +105,30 @@ class I10_MenusActionsTest extends TestCase
         $menu->name = 'Nuevo menu';
         $menu->href = '/accion/funcion';
         $menu->save();
-        $menu_id = Menu::all()->last()->id;
+        $menu_id = $menu->id;
+        // $menu_id = Menu::all()->last()->id;
 
-        $menu_type = new MenuType;
-        $menu_type->menu_id = $menu_id;
-        $menu_type->type_id = 1;
-        $menu_type->level = 0;
-        $menu_type->order = 0;
-        $menu_type->save();
+        // $menu_type = new MenuType;
+        // $menu_type->menu_id = $menu_id;
+        // $menu_type->type_id = 1;
+        // $menu_type->level = 0;
+        // $menu_type->order = 0;
+        // $menu_type->save();
 
-        $menu_type = new MenuType;
-        $menu_type->menu_id = $menu_id;
-        $menu_type->type_id = 3;
-        $menu_type->level = 0;
-        $menu_type->order = 0;
-        $menu_type->save();
+        // $menu_type = new MenuType;
+        // $menu_type->menu_id = $menu_id;
+        // $menu_type->type_id = 3;
+        // $menu_type->level = 0;
+        // $menu_type->order = 0;
+        // $menu_type->save();
 
 		//Acting
         $this->actingAs($user);
-        // Session::put('facultad_id',$facultad->id);
-        // Session::put('cfacultad',$facultad->cfacultad);
-        // Session::put('sede_id',$sede->id);
-        // Session::put('csede',$sede->csede);
-        // Session::put('type_id',$type->id);
-        // Session::put('ctype',$type->name);
-    	// $this->authUser($user->id, $facultad_id, $sede_id, 1);
     	$this->authUser($user->id, 1, 1, 1);
 
 		$this->get('/master/menu/index')
 			->assertStatus(200);
-		$this->post("/master/menu/{{$menu_id}}/edit")
+		$this->get("/master/menu/".$menu_id."/edit") 
 			->assertStatus(200);
 		//Then
 // TODO		

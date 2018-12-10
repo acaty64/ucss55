@@ -6,13 +6,13 @@ use App\Acceso;
 use App\DHora;
 use App\DataUser;
 use App\Franja;
+use App\Rhora;
 use App\User;
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
-// use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
 class E10_DhorasTest extends TestCase
@@ -29,6 +29,13 @@ class E10_DhorasTest extends TestCase
     /* A user for a edit */
     $user = factory(User::class)->create();
     $datauser = factory(DataUser::class)->create(['user_id'=>$user->id, 'cdocente' => str_pad($user->id, 6, '0', STR_PAD_LEFT)]);
+    Rhora::create([
+        'user_id' => $user->id,
+        'facultad_id' => $facultad_id,
+        'sede_id' => $sede_id,
+        'rhoras' => 8
+      ]);
+
     $this->authUser($user->id, $facultad_id, $sede_id, 3);
 
     // Asignacion de valores en Session del administrador
@@ -40,14 +47,18 @@ class E10_DhorasTest extends TestCase
       
     //When
     $request = [
-      'user_id' => $user->id,
-      'D1_H11' =>  'on',
-      'D1_H12' =>  'on',
-      'D1_H13' =>  'on',
-      'D1_H31' =>  'on'
-      ];
+          'docente_id' => $user->id,
+          'facultad_id' => $facultad_id,
+          'sede_id' => $sede_id,
+          'checked' => [ 
+                'D1_H11',
+                'D1_H12',
+                'D1_H13',
+                'D1_H31',
+              ]           
+            ];
 
-    $response = $this->put("administrador/dhora/update", $request);
+    $response = $this->post("api/dhoras/save", $request);
 
     //Then 
     $this->assertDatabaseHas('dhoras',[
@@ -90,6 +101,12 @@ class E10_DhorasTest extends TestCase
     $sede_id = 1;
     $type_id = 3;
     $this->authUser($user->id, $facultad_id, $sede_id, $type_id);
+    Rhora::create([
+        'user_id' => $user->id,
+        'facultad_id' => $facultad_id,
+        'sede_id' => $sede_id,
+        'rhoras' => 8
+      ]);
 
     $response = $this->actingAs($user);
 
@@ -98,14 +115,18 @@ class E10_DhorasTest extends TestCase
 
     //When
     $request = [
-      'user_id' => $user->id,
-      'D1_H11' =>  'on',
-      'D1_H12' =>  'on',
-      'D1_H13' =>  'on',
-      'D1_H31' =>  'on'
-      ];
+          'docente_id' => $user->id,
+          'facultad_id' => $facultad_id,
+          'sede_id' => $sede_id,
+          'checked' => [ 
+                'D1_H11',
+                'D1_H12',
+                'D1_H13',
+                'D1_H31',
+              ]           
+            ];
     
-    $response = $this->put("docente/dhora/update", $request);
+    $response = $this->post("api/dhoras/save", $request);
 
     //Then 
     $this->assertDatabaseHas('dhoras',[
@@ -149,22 +170,31 @@ class E10_DhorasTest extends TestCase
     $sede_id = 1;
     $type_id = 4;
     $this->authUser($user->id, $facultad_id, $sede_id, $type_id);
+    Rhora::create([
+        'user_id' => $user->id,
+        'facultad_id' => $facultad_id,
+        'sede_id' => $sede_id,
+        'rhoras' => 8
+      ]);
 
     $response = $this->actingAs($user);
 
     $response = $this->get("responsable/dhora/edit/{$user->id}");
-//      ->assertStatus(200);
 
     //When
     $request = [
-      'user_id' => $user->id,
-      'D1_H11' =>  'on',
-      'D1_H12' =>  'on',
-      'D1_H13' =>  'on',
-      'D1_H31' =>  'on'
-      ];
+          'docente_id' => $user->id,
+          'facultad_id' => $facultad_id,
+          'sede_id' => $sede_id,
+          'checked' => [ 
+                'D1_H11',
+                'D1_H12',
+                'D1_H13',
+                'D1_H31',
+              ]           
+            ];
 
-    $response = $this->put("responsable/dhora/update", $request);
+    $response = $this->post("api/dhoras/save", $request);
 
     //Then 
     $this->assertDatabaseHas('dhoras',[

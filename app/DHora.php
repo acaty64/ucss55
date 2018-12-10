@@ -11,8 +11,7 @@ class DHora extends Model
         'facultad_id',
         'sede_id',
         'user_id',
-        'wfranja',
-        'sw_cambio'  
+        'wfranja' 
     ];
 
     public function user()

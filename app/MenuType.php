@@ -12,18 +12,20 @@ class MenuType extends Model
     protected $fillable = [
         'type_id', 'menu_id', 'level', 'order'
     ];
-/**
+
     public function menu(){
-        return $this->hasOne(Menu::class);
+        return $this->hasOne(Menu::class, 'id');
     }
     public function type(){
-        return $this->hasOne(Type::class);
+        return $this->hasOne(Type::class, 'id');
     }
-*/
+
     public function treeArray($type_id)
     {
         $menu_type = MenuType::where('type_id', $type_id)->sortBy('level')->sortBy('order')->all();
 dd($menu_type);
         return $tree;
     }
+
+
 }

@@ -66,9 +66,12 @@ class AccesosTableSeeder extends Seeder
         $users = User::where('id','>',5)->get(); // RANDOM
         foreach ($users as $user) {
             $user_id = $user->id;
-            $facultad_id = Facultad::all()->random()->id;
-            $sede_id = Sede::all()->random()->id;
-            $type_id = Type::all()->random()->id;
+            $facultad_id = 1;
+            // $facultad_id = Facultad::all()->random()->id;
+            $sede_id = 1;
+            // $sede_id = Sede::all()->random()->id;
+            $type_id = 3;
+            // $type_id = Type::all()->random()->id;
             Acceso::create([
                'user_id' => $user_id,
                'facultad_id' => $facultad_id, 
@@ -77,11 +80,11 @@ class AccesosTableSeeder extends Seeder
                 ]);
         }
 
-        /* User 7: para tests*/
-        $user = User::find(7);
-        $user->facultad_id = 1;
-        $user->sede_id = 1;
-        $user->save;
+        // /* User 7: para tests*/
+        // $user = User::find(7);
+        // $user->facultad_id = 1;
+        // $user->sede_id = 1;
+        // $user->save;
 
     }
 }

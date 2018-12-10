@@ -48578,9 +48578,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var protocol = window.location.protocol;
         var url = protocol + '//' + URLdomain + '/api/dhoras/save/';
         axios.post(url, request).then(function (response) {
+          console.log(response.data);
           _this.mensaje = "Registros grabados: " + response.data.contador;
         }).catch(function (error) {
-          this.mensaje = "Registros NO grabados. Error(EnvioComponent.vue)";
+          // this.mensaje = "Registros NO grabados. Error(EnvioComponent.vue)"
           console.log(error);
         });
       } else {

@@ -29,64 +29,63 @@ class DHoraController extends Controller
      */
     public function edit($user_id)
     {
-        $facultad_id = \Session::get('facultad_id');
-        // $facultad_id = \Cache::get('facultad_id');
-        $sede_id = \Session::get('sede_id');
-        // $sede_id = \Cache::get('sede_id');
-        
-        $franjas = Franja::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
-        if(!$franjas){
-            dd('No hay franjas');
-        }
-        
-        $turnos = $franjas->sortBy('turno')->groupBy('turno');
-        $gfranjas=array();
-        foreach ($turnos as $key_turno => $turno) {
-            $horas = $turno->where('turno',$key_turno)->sortBy('hora')->groupBy('hora');
-            foreach ($horas as $key_hora => $hora) {
-                $xfranja = Franja::where('turno', $key_turno)
-                                ->where('hora', $key_hora)
-                                ->first();
-                array_push($gfranjas, ['turno'=>$key_turno,'hora'=>$key_hora, 'wfranja'=>$xfranja->wfranja]);
+        $user = User::findOrFail($user_id);
+        if($user->rhora == 0){
+            Flash::warning('El docente '.$user->name.' no tiene requerimiento de horario');
+            return back();
+        }else{                
+            $facultad_id = \Session::get('facultad_id');
+            $sede_id = \Session::get('sede_id');
+            
+            $franjas = Franja::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
+            if(!$franjas){
+                dd('No hay franjas');
             }
+            
+            $turnos = $franjas->sortBy('turno')->groupBy('turno');
+            $gfranjas=array();
+            foreach ($turnos as $key_turno => $turno) {
+                $horas = $turno->where('turno',$key_turno)->sortBy('hora')->groupBy('hora');
+                foreach ($horas as $key_hora => $hora) {
+                    $xfranja = Franja::where('turno', $key_turno)
+                                    ->where('hora', $key_hora)
+                                    ->first();
+                    array_push($gfranjas, ['turno'=>$key_turno,'hora'=>$key_hora, 'wfranja'=>$xfranja->wfranja]);
+                }
+            }
+            $gfranjas = collect($gfranjas);
+
+            $cfranjas = [];
+            foreach ($franjas as $franja) {
+                $campo = "D".$franja->dia.'_H'.$franja->turno.$franja->hora;
+                array_push($cfranjas, $campo);
+            }
+
+            $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
+
+            $collect_dhoras = DHora::where('user_id', $user_id)->where('sede_id', $sede_id)->where('facultad_id', $facultad_id)->get();
+
+            $dhoras = [];
+            foreach ($collect_dhoras as $value) {
+                $xfranja = $value->wfranja;
+                array_push($dhoras, $xfranja);
+            }
+            $dhoras = collect($dhoras);
+            $check = User::editable('disp');
+            
+
+            return view('admin.dhora.vue_edit')
+                ->with('sw_cambio', $check)
+                ->with('cfranjas', collect($cfranjas))
+                ->with('gfranjas', $gfranjas)
+                ->with('dhoras', $dhoras)
+                ->with('wdocente', $wdocente)
+                ->with('docente_id', $user_id)
+                ->with('rhoras', $user->rhora)
+                ->with('facultad_id', $facultad_id)
+                ->with('sede_id', $sede_id)
+                ;
         }
-        $gfranjas = collect($gfranjas);
-
-        $cfranjas = [];
-        foreach ($franjas as $franja) {
-            $campo = "D".$franja->dia.'_H'.$franja->turno.$franja->hora;
-            // $wfranjas[$campo] = $franja->wfranja;
-            array_push($cfranjas, $campo);
-        }
-
-        $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
-
-        // $dhoras = DHora::where('user_id', $user_id)->where('sede_id', $sede_id)->where('facultad_id', $facultad_id)->get();
-        $collect_dhoras = DHora::where('user_id', $user_id)->where('sede_id', $sede_id)->where('facultad_id', $facultad_id)->get();
-
-        $dhoras = [];
-        foreach ($collect_dhoras as $value) {
-            $xfranja = $value->wfranja;
-            array_push($dhoras, $xfranja);
-            // $dhoras[$value->wfranja] = 'on';
-        }
-        $dhoras = collect($dhoras);
-        // $sw_cambio = $this->sw_cambio($user_id, 'disp');
-        $check = User::editable('disp');
-// dd($wfranjas);
-        // return view('admin.dhora.edit')
-        return view('admin.dhora.vue_edit')
-            ->with('sw_cambio', $check)
-            // ->with('wfranjas', collect($wfranjas))
-            ->with('cfranjas', collect($cfranjas))
-            ->with('gfranjas', $gfranjas)
-            ->with('dhoras', $dhoras)
-            ->with('wdocente', $wdocente)
-            ->with('docente_id', $user_id)
-            ->with('rhoras', 30)
-            ->with('facultad_id', \Session::get('facultad_id'))
-            ->with('sede_id', \Session::get('sede_id'))
-            ;
     }
 
     /**
@@ -96,54 +95,54 @@ class DHoraController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
-    {
-        // Rehacer data
-        //$franjas = Franja::get();
-        // $facultad_id = \Cache::get('facultad_id');
-        $facultad_id = \Session::get('facultad_id');
-        // $sede_id = \Cache::get('sede_id');
-        $sede_id = \Session::get('sede_id');
-        // Elimina la disponibilidad horaria anterior
-        $dhoras = DHora::where('user_id', $request->user_id)->where('facultad_id',$facultad_id)->where('sede_id',$sede_id);
-        foreach ($dhoras as $dhora) {
-            $dhora->delete();
-        }
-        // Genera nuevas franjas en DHora
-        $franjas = Franja::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
-        foreach ($franjas as $franja) {
-            $campo = 'D'.$franja->dia.'_H'.$franja->turno.$franja->hora;
-            if ($request->$campo == "on") {
-                $dhora = new DHora;
-                $dhora->user_id = $request->user_id;
-                $dhora->facultad_id = $facultad_id;
-                $dhora->sede_id = $sede_id;
-                $dhora->wfranja = $campo;
-                // Graba en archivo Dhoras
-                $dhora->save();
-            }
-        }
+    // public function update(Request $request)
+    // {
+    //     // Rehacer data
+    //     //$franjas = Franja::get();
+    //     // $facultad_id = \Cache::get('facultad_id');
+    //     $facultad_id = \Session::get('facultad_id');
+    //     // $sede_id = \Cache::get('sede_id');
+    //     $sede_id = \Session::get('sede_id');
+    //     // Elimina la disponibilidad horaria anterior
+    //     $dhoras = DHora::where('user_id', $request->user_id)->where('facultad_id',$facultad_id)->where('sede_id',$sede_id);
+    //     foreach ($dhoras as $dhora) {
+    //         $dhora->delete();
+    //     }
+    //     // Genera nuevas franjas en DHora
+    //     $franjas = Franja::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
+    //     foreach ($franjas as $franja) {
+    //         $campo = 'D'.$franja->dia.'_H'.$franja->turno.$franja->hora;
+    //         if ($request->$campo == "on") {
+    //             $dhora = new DHora;
+    //             $dhora->user_id = $request->user_id;
+    //             $dhora->facultad_id = $facultad_id;
+    //             $dhora->sede_id = $sede_id;
+    //             $dhora->wfranja = $campo;
+    //             // Graba en archivo Dhoras
+    //             $dhora->save();
+    //         }
+    //     }
         
-        // Modifica switch respuesta en Denvios
-        $acceso = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id', $request->user_id)->first();
-        $menvio = Menvio::find($acceso->disp_id);
-        if(!empty($menvio)){
-            $denvio = Denvio::where('menvio_id', $menvio->id)
-                        ->where('user_id', $request->user_id)->first();
-            $denvio->sw_rpta1 = '1';
-            $denvio->save();
-        }
+    //     // Modifica switch respuesta en Denvios
+    //     $acceso = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id', $request->user_id)->first();
+    //     $menvio = Menvio::find($acceso->disp_id);
+    //     if(!empty($menvio)){
+    //         $denvio = Denvio::where('menvio_id', $menvio->id)
+    //                     ->where('user_id', $request->user_id)->first();
+    //         $denvio->sw_rpta1 = '1';
+    //         $denvio->save();
+    //     }
 
-        // Redirecciona segun tipo de usuario
-        Flash::success('Se ha registrado la modificación de disponibilidad horaria de forma exitosa');
-        // if (\Cache::get('ctype') == 'Administrador') {
-        if (\Session::get('ctype') == 'Administrador') {
-            return redirect()->route('administrador.user.index');
-        }else{
-            return redirect()->route(strtolower(\Session::get('ctype')).'.dhora.edit', $user_id);
-            // return redirect()->route(strtolower(Session::get('ctype')).'.dhora.edit', $user_id);
-        }
-    }
+    //     // Redirecciona segun tipo de usuario
+    //     Flash::success('Se ha registrado la modificación de disponibilidad horaria de forma exitosa');
+    //     // if (\Cache::get('ctype') == 'Administrador') {
+    //     if (\Session::get('ctype') == 'Administrador') {
+    //         return redirect()->route('administrador.user.index');
+    //     }else{
+    //         return redirect()->route(strtolower(\Session::get('ctype')).'.dhora.edit', $user_id);
+    //         // return redirect()->route(strtolower(Session::get('ctype')).'.dhora.edit', $user_id);
+    //     }
+    // }
 
     /* Identifica si tiene envio de disponibilidad pendiente */
         // Si el usuario es Administrador puede modificar

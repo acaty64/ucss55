@@ -63,6 +63,7 @@ class MenuTypeTableSeeder extends Seeder
 21 => ['level' => 2, 'order' => 3, ],
 22 => ['level' => 0, 'order' => 4, ],
 23 => ['level' => 1, 'order' => 4, ],
+24 => ['level' => 1, 'order' => 4, ],
 
             ]);
 

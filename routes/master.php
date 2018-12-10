@@ -42,12 +42,12 @@ Route::get('menu/delete', [
 		'uses'	=> 'Master\MenuController@delete',	
 	])->middleware(Authorize::class.':is_master,'.Acceso::class);
 
-Route::post('menu/{menu}/edit', [
+Route::get('menu/{menu}/edit', [
 		'as'	=> 'master.menu.edit',
 		'uses'	=> 'Master\MenuController@edit',	
 	])->middleware(Authorize::class.':is_master,'.Acceso::class);
 
-Route::get('menu/update', [
+Route::post('menu/update', [
 		'as'	=> 'master.menu.update',
 		'uses'	=> 'Master\MenuController@update',	
 	])->middleware(Authorize::class.':is_master,'.Acceso::class);

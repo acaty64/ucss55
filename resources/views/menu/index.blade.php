@@ -37,12 +37,15 @@
 </div>
 
 @endsection
+
+@section('view','view/menu/index.blade.php')
+
 @section('footer')
-<p>menu.index.blade.php</p>
+{{-- <p>menu.index.blade.php</p>
 <p><a class="btn btn-link" href="{{ url('/prueba1') }}">
     PRUEBA 1. Session::all()
 </a></p>
 <p><a class="btn btn-link" href="{{ url('/prueba2') }}">
     PRUEBA 2. Auth::user()
-</a></p>
+</a></p> --}}
 @endsection

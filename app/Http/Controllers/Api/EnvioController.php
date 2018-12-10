@@ -35,17 +35,17 @@ class EnvioController extends Controller
         $tipo = $menvio->tipo;
         $accesos = Acceso::acceso_disponibilidad()->sortBy('wdocente');
         foreach ($accesos as $user) {
-            // Agregar todos los docentes de la sede/facultad
-            $denvio = new Denvio;
-            $denvio->user_id = $user->id;
-            $denvio->menvio_id = $id;
-            $denvio->email_to = $user->datauser->email1;
-            $denvio->email_cc = $user->datauser->email2;
-            $denvio->updated_at = $updated_at;
-            $denvio->tipo = $tipo;
-            $denvio->cdocente = User::find($denvio->user_id)->datauser->cdocente;
-            $denvio->wdocente = User::find($denvio->user_id)->datauser->wdocente();
-            array_push($users, $denvio);
+            // Agregar todos los docentes de la sede/facultad con rhoras               
+                $denvio = new Denvio;
+                $denvio->user_id = $user->id;
+                $denvio->menvio_id = $id;
+                $denvio->email_to = $user->datauser->email1;
+                $denvio->email_cc = $user->datauser->email2;
+                $denvio->updated_at = $updated_at;
+                $denvio->tipo = $tipo;
+                $denvio->cdocente = User::find($denvio->user_id)->datauser->cdocente;
+                $denvio->wdocente = User::find($denvio->user_id)->datauser->wdocente();
+                array_push($users, $denvio);
         }
         // Recuperar los Denvios anteriores
         $checked = [];
