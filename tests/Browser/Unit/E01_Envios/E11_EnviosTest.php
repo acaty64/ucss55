@@ -15,6 +15,7 @@ class E11_EnviosTest extends DuskTestCase
 
     function test_define_a_menvio_and_destroy_it()
     {
+      $this->artisan('cache:clear');
         $this->artisan('db:seed');
         $this->browse(function(Browser $browser)
         {
