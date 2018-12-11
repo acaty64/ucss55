@@ -129,15 +129,18 @@ class User extends Authenticatable
                 $editable = true;
                 break;
             case 'Responsable' || 'Docente':
-                $menvios = Menvio::where('facultad_id', $facultad_id)
-                                ->where('sede_id', $sede_id)
-                                ->sortBy('flimite');
-                foreach ($menvios as $menvio) {
-                    $editable = false;
-                    $denvio = $menvio->denvios->where('user_id', $this->user_id)->first();
-                    if ($denvio) {
-                        $editable = true;
+                $denvios = Denvios::where('user_id', $this->id)
+                            ->where('tipo', $tipo)->get();
+                $ultimo = "";
+                foreach ($denvios as $denvio) {
+                    if($denvio->menvio->flimite > $ultimo){
+                        $ultimo = $denvio->menvio->flimite;
                     }
+                }
+                if( $ultimo > date('Y-m-d')) {
+                    $editable = true;
+                }else{
+                    $editable = false;
                 }
                 break;
             default:
@@ -165,6 +168,12 @@ class User extends Authenticatable
         $dcursos = $this->hasMany('App\DCurso')->where('facultad_id',$facultad_id)->where('sede_id',$sede_id);
         return $dcursos;
     }
+
+    public function denvios()
+    {
+        return $this->hasMany('App\Denvio');
+    }
+
 /***
     public function getTypeAttribute($value='')
     {

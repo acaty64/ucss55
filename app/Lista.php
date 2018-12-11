@@ -22,6 +22,7 @@ class Lista extends Model
     {
         // Status: No comunicado.- Sin denvio
         // Lista los usuarios con lo siguiente:
+        //      Envio pendiente: switch de envio == false
         //      Solicitado: fecha de envio
         //      Limite: fecha limite
         //      Respuesta: fecha de respuesta
@@ -83,9 +84,16 @@ class Lista extends Model
                         if ($menvio->fenvio < $hoy
                             and $menvio->flimite > $ayer)
                         {
-                            $registro = $registro->merge([
-                                'sw_actualizacion' => 'solicitado',
-                            ]);
+                            if($menvio->envio){
+                                $registro = $registro->merge([
+                                    'sw_actualizacion' => 'solicitado',
+                                ]);
+                            }else{
+                                $registro = $registro->merge([
+                                    'sw_actualizacion' => 'envio pendiente',
+                                ]);
+                            }
+
                         }else{
                             $registro = $registro->merge([
                                 'sw_actualizacion' => 'sin respuesta',

@@ -9,7 +9,7 @@
 
 	<table class="table table-striped">
  		<thead>
- 			<th>Id</th>
+ 			<th>User Id</th>
  			<th>Codigo</th>
  			<th>Docente Comunicado</th>
  			<th>Email enviado</th>
@@ -20,11 +20,12 @@
  		<tbody>
  			@foreach($Denvios as $envio )
  				<tr>
- 					<td>{{ $envio->id }}</td>
- 					<td>{{ $envio->user->username }}</td>
- 					<td>{{ substr($envio->user->wdocente($envio->user_id),0,50) }}</td>
- 					<td>{{ $envio->email_to }}</td>
- 					<td>{{ $envio->email_cc }}</td>
+ 					<td>{{ $envio->user->id }}</td>
+ 					<td>{{ $envio->user->datauser->cdocente }}</td>
+ 					<td>{{ $envio->user->name }}</td>
+ 					{{-- <td>{{ substr($envio->wdocente,0,50) }}</td> --}}
+ 					<td>{{ $envio->user->datauser->email1 }}</td>
+ 					<td>{{ $envio->user->datauser->email2 }}</td>
  					<td>
  						@if($envio->sw_envio == 1)
  							<a href="#" class="btn btn-success" data-toggle="tooltip" title="Se envió"><span class="glyphicon glyphicon-ok" aria-hidden='true'></span></a>

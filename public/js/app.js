@@ -48073,6 +48073,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -48085,7 +48104,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     return {
       users: [],
       checked: [],
-      mensaje: "Marque o desmarque los registros."
+      mensaje: "Marque o desmarque los registros.",
+      /* DATA for pagination INIT */
+      page: 1,
+      offset: 4,
+      pagination: {
+        'total': 0,
+        'current_page': 0,
+        'per_page': 0,
+        'last_page': 0,
+        'from': 0,
+        'to': 0
+      },
+      dataPage: []
+      /* DATA for pagination END */
     };
   },
 
@@ -48104,12 +48136,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var protocol = window.location.protocol;
       var url = protocol + '//' + URLdomain + '/api/envio/load/';
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, request).then(function (response) {
-        _this.users = response.data.users;
+        // this.users = response.data.users;
+        _this.users = Object.values(response.data.users);
+        _this.pagination = response.data.pagination;
         _this.checked = response.data.checked;
+        _this.getDataPage(1);
       }).catch(function (error) {
         console.log(error);
       });
     },
+    /* METHODS for pagination INIT */
+    getDataPage: function getDataPage(page) {
+      this.pagination.current_page = page;
+      this.pagination.from = (page - 1) * this.pagination.per_page + 1;
+      if (page < this.pagination.last_page) {
+        this.pagination.to = page * this.pagination.per_page;
+      } else {
+        this.pagination.to = this.pagination.total;
+      }
+      this.dataPage = this.users.filter(function (user) {
+        return user.page == page;
+      });
+      this.dataPage = this.dataPage.sort(function (a, b) {
+        if (a['wdocente'] > b['wdocente']) {
+          return 1;
+        } else if (a['wdocente'] < b['wdocente']) {
+          return -1;
+        }
+        return 0;
+      });
+    },
+    changePage: function changePage(page) {
+      this.pagination.current_page = page;
+      this.getDataPage(page);
+      this.$emit('setPage', page);
+    },
+
+    /* METHODS for pagination END */
     markall: function markall() {
       var array = [];
       this.users.forEach(function (user) {
@@ -48149,6 +48212,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log(error);
       });
     }
+  },
+  computed: {
+    /* COMPUTED for pagination INIT */
+    isActived: function isActived() {
+      return this.pagination.current_page;
+    },
+    pagesNumber: function pagesNumber() {
+      if (!this.pagination.to) {
+        return [];
+      }
+
+      var from = this.pagination.current_page - this.offset;
+      if (from < 1) {
+        from = 1;
+      }
+
+      var to = from + this.offset * 2;
+      if (to >= this.pagination.last_page) {
+        to = this.pagination.last_page;
+      }
+
+      var pagesArray = [];
+      while (from <= to) {
+        pagesArray.push(from);
+        from++;
+      }
+
+      return pagesArray;
+    }
+    /* COMPUTED for pagination END */
   }
 });
 
@@ -48264,7 +48357,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "tbody",
-        _vm._l(_vm.users, function(user) {
+        _vm._l(_vm.dataPage, function(user) {
           return _c("tr", [
             _c("td", [_vm._v(_vm._s(user.user_id))]),
             _vm._v(" "),
@@ -48318,6 +48411,79 @@ var render = function() {
             ])
           ])
         })
+      )
+    ]),
+    _vm._v(" "),
+    _c("nav", [
+      _c(
+        "ul",
+        { staticClass: "pagination", attrs: { name: "pagination" } },
+        [
+          _vm.pagination.current_page > 1
+            ? _c("li", [
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.changePage(_vm.pagination.current_page - 1)
+                      }
+                    }
+                  },
+                  [_c("span", [_vm._v("Atrás")])]
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm._l(_vm.pagesNumber, function(page) {
+            return _c(
+              "li",
+              { class: [page == _vm.isActived ? "active" : ""] },
+              [
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.changePage(page)
+                      }
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "    \n                    " +
+                        _vm._s(page) +
+                        " \n                "
+                    )
+                  ]
+                )
+              ]
+            )
+          }),
+          _vm._v(" "),
+          _vm.pagination.current_page < _vm.pagination.last_page
+            ? _c("li", [
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.changePage(_vm.pagination.current_page + 1)
+                      }
+                    }
+                  },
+                  [_c("span", [_vm._v("Siguiente")])]
+                )
+              ])
+            : _vm._e()
+        ],
+        2
       )
     ])
   ])
@@ -48517,8 +48683,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   methods: {
     getData: function getData() {
       this.cuenta = this.dhoras.length;
-      if (this.sw_cambio) {
+      if (!this.sw_cambio) {
         this.mensaje = this.mensajeDefault;
+      } else {
+        this.mensaje = "Debe seleccionar como mínimo: " + this.rhoras / 2 + " casillas.";
       };
     },
     on: function on(dia, gfranja) {

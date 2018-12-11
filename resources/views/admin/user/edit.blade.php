@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Modificar Usuario '.$user->datauser->wdocente())
+@section('title','Modificar Usuario: '.$user->datauser->wdocente())
 
 @section('content')
-	<h3>Modificar Usuario</h3>
+	{{-- <h3>Modificar Usuario</h3> --}}
 	{!! Form::model($user, array('route' => array('admin.user.update'), 'method' => 'PUT')) !!}
 		{!! Form::hidden('id',$user->id) !!}
 		<div class="form-group">

@@ -13,7 +13,7 @@ class E11_EnviosTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
-    function test_define_a_menvio_and_destroy_it()
+    function test_define_a_menvio_show_and_destroy_it()
     {
       $this->artisan('cache:clear');
         $this->artisan('db:seed');
@@ -65,6 +65,13 @@ class E11_EnviosTest extends DuskTestCase
           'menvio_id'   => 1,
           'tipo'        => 'disp'
         ]);
+
+        $this->browse(function(Browser $browser)
+        {
+          $browser->visit('/administrador/menvios/show/1')
+                  ->assertSee('Docentes Comunicados');
+        });
+
 
         /*  Elimina Menvio y sus Denvios*/
         $this->browse(function(Browser $browser)

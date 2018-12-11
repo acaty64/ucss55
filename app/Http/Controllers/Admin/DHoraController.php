@@ -15,7 +15,6 @@ use App\Menvio;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Session;
 use Laracasts\Flash\Flash;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -29,11 +28,16 @@ class DHoraController extends Controller
      */
     public function edit($user_id)
     {
+        if(\Session::get('ctype')=='Master' || 
+            \Session::get('ctype')=='Administrador'){
+            $editable = true;
+        }else{
+            $editable = false;
+        }
+
         $user = User::findOrFail($user_id);
-        if($user->rhora == 0){
-            Flash::warning('El docente '.$user->name.' no tiene requerimiento de horario');
-            return back();
-        }else{                
+        if($user->rhora > 0 || $editable){
+                
             $facultad_id = \Session::get('facultad_id');
             $sede_id = \Session::get('sede_id');
             
@@ -85,6 +89,9 @@ class DHoraController extends Controller
                 ->with('facultad_id', $facultad_id)
                 ->with('sede_id', $sede_id)
                 ;
+        }else{
+            Flash::warning('El docente '.$user->name.' no tiene requerimiento de horario');
+            return back();
         }
     }
 

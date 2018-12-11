@@ -90,10 +90,20 @@ class MenvioController extends Controller
      */
     public function show($id)
     {
+
+        $Denvios = Denvio::join('users as us', 'us.id', '=', 'denvios.user_id')
+           ->orderBy('us.name', 'asc')
+           ->select('denvios.*')       // just to avoid fetching anything from joined table
+           // ->with('options')         // if you need options data anyway
+           ->where('menvio_id', $id)
+           ->paginate(10);
+// dd($Denvios);
         //dd('MenviosController@show: '.$id);
-        $Denvios = Denvio::where('menvio_id','=',$id)
-                            ->Paginate(10);
-        //dd($Denvios);
+        // $Denvios = Denvio::
+        //             orderBy('wdocente')->get();
+                    // ->where('menvio_id','=',$id)
+                    // ->Paginate(10);
+// dd($Denvios);
         return view('admin.envios.list')
             ->with('Denvios', $Denvios);
     }

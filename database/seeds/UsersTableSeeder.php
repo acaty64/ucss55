@@ -37,7 +37,10 @@ class UsersTableSeeder extends Seeder
             'email' => 'consulta@gmail.com', 
             'password' => bcrypt('secret')
                 ]);
-
-        factory(User::class,5)->create();
+        if(env('APP_ENV') == 'testing'){
+            factory(User::class,5)->create();            
+        }else{
+            factory(User::class,50)->create();            
+        }
     }
 }

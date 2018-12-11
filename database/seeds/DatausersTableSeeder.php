@@ -26,8 +26,6 @@ class DataUsersTableSeeder extends Seeder
             'whatsapp' => false
             ]);
 
-
-
         $users = User::where('id','>',1)->get();
         foreach ($users as $user) {
             factory(App\DataUser::class)->create([

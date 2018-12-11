@@ -1,6 +1,6 @@
 @extends('layouts.app')
  
-@section('title','Lista de Actualizaciones de '.$title)
+@section('title','Lista de Actualizaciones: '.$title)
 
 @section('content')
 	@if($tipo == 'dhora')
@@ -32,4 +32,4 @@
 	</table>
 @endsection
 
-@section('view','admin/dhoras/list.blade.php')
+@section('view','admin/disp/lista.blade.php')

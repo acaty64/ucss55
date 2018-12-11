@@ -32,7 +32,7 @@
  						<span class="badge">{{ $envio->rpta }}</span>
  					</td>
 	 				<td>
-	 					@if($envio->sw_envio == 0)
+	 					@if($envio->envio == 0)
 	 						<a href="{{ route('administrador.menvio.edit', $envio->id) }}" class="btn btn-warning" data-toggle="tooltip" title="Modificar envio"><span class="glyphicon glyphicon-wrench" aria-hidden='true' id="{{'Mody'.$envio->id}}"></span></a>
 	 						<a href="{{ route('administrador.denvio.define', $envio->id ) }}" class="btn btn-success" data-toggle="tooltip" title="Agregar Docentes a Comunicar"><span class="glyphicon glyphicon-plus-sign" aria-hidden='true' id="{{'Add'.$envio->id}}"></span></a>
 	 					@else

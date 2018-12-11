@@ -1,6 +1,6 @@
 @extends('layouts.app')
  
-@section('title','Modificar Accesos de Usuario '.$acceso->wdocente)
+@section('title','Modificación de acceso de Usuario: '.$acceso->wdocente)
 
 @section('content')
 	{!! Form::model($acceso, array('route' => array('admin.acceso.update'), 'method' => 'PUT')) !!}
@@ -11,9 +11,9 @@
 			</tr>
 		</thead>
 		<tbody-->
-			<div class="form-group">
+			{{-- <div class="form-group">
 				<h3>Modificación de acceso</h3>
-			</div>
+			</div> --}}
 			<div class="form-group">
 				{!! Form::hidden('id',$acceso->id) !!}
 				{!! Form::label('facultad_id','Facultad') !!}
@@ -36,7 +36,7 @@
 
 @endsection
 
-@section('view','admin/accesos/edit.blade.php')
+@section('view','admin/acceso/edit.blade.php')
 
 
 

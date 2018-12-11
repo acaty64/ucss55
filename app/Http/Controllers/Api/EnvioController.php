@@ -53,9 +53,37 @@ class EnvioController extends Controller
         foreach ($denvios as $denvio) {
             array_push($checked, $denvio->user_id);
         }
+        /* Paginacion ordenada por wdocente */
+        uasort($users, function ($a, $b)
+        {
+            if ($a['wdocente'] == $b['wdocente']) {
+                return 0;
+            }
+            return ($a['wdocente'] < $b['wdocente']) ? -1 : 1;
+        });
+        $perPage = 5;
+        $row = 0;
+        $rowPage = 0;
+        $page = 1;
+        foreach ($users as $key => $value) {
+            $users[$key]['row'] = ++$row;
+            $users[$key]['rowPage'] = ++$rowPage;
+            $users[$key]['page'] = $page;
+            if($rowPage == $perPage){$rowPage=0; ++$page;};
+        }
 
+        $pagination = [
+                        'total' => $accesos->count(), 
+                        'per_page'  => $perPage, 
+                        'last_page' => $page,
+                        'current_page' => 0,
+                        'from' => 0,
+                        'to' => 0 
+                    ];
+        /* End paginacion ordenada por wdocente */
         $data = [
                 'users' => $users,
+                'pagination' => $pagination,
                 'checked' => $checked
             ];
         return $data;

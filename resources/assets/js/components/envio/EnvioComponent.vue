@@ -31,7 +31,7 @@
 	 			<th>Enviar</th>
 	 		</thead>
 	 		<tbody>
-	 			<tr v-for="user in users">
+	 			<tr v-for="user in dataPage">
 					<td>{{ user.user_id }}</td>
 					<td>{{ user.cdocente }}</td>
 					<td>{{ user.wdocente }}</td>
@@ -41,7 +41,26 @@
 					</td>
 	 			</tr> 			
 	 		</tbody>
-		</table>	
+		</table>
+    <nav>
+        <ul class="pagination" name="pagination">
+            <li v-if="pagination.current_page > 1">     
+                <a href="#" @click.prevent="changePage(pagination.current_page - 1)">   
+                    <span>Atrás</span>  
+                </a>    
+            </li>     
+            <li  v-for="page in pagesNumber" v-bind:class="[ page == isActived ? 'active' : ''  ]" >     
+                <a href="#" @click.prevent="changePage( page )">    
+                    {{ page }} 
+                </a>    
+            </li>     
+            <li v-if="pagination.current_page < pagination.last_page">
+                <a href="#" @click.prevent="changePage(pagination.current_page + 1)">   
+                    <span>Siguiente</span>  
+                </a>    
+            </li>     
+        </ul>
+    </nav>	
 	</main>	
 </template>
 <script>
@@ -57,7 +76,20 @@
   		return {
   			users: [],
   			checked: [],
-  			mensaje: "Marque o desmarque los registros."
+  			mensaje: "Marque o desmarque los registros.",
+        /* DATA for pagination INIT */
+        page:1,
+        offset: 4,                 
+        pagination: { 
+            'total' :0, 
+            'current_page'  :0, 
+            'per_page'  :0, 
+            'last_page' :0, 
+            'from'  :0, 
+            'to'  :0, 
+        },
+        dataPage: [],   
+        /* DATA for pagination END */
   		}
   	},
 
@@ -73,12 +105,42 @@
         var protocol = window.location.protocol;
         var url = protocol+'//'+URLdomain+'/api/envio/load/';
         axios.post(url, request).then(response=>{
-            this.users = response.data.users;
+            // this.users = response.data.users;
+            this.users = Object.values(response.data.users);
+            this.pagination = response.data.pagination;
             this.checked = response.data.checked;
+            this.getDataPage(1);
         }).catch(function (error) {
             console.log(error);
         });
 			},
+      /* METHODS for pagination INIT */
+      getDataPage: function (page) {
+        this.pagination.current_page = page;
+        this.pagination.from = ((page-1)*this.pagination.per_page)+1;
+        if(page < this.pagination.last_page){
+          this.pagination.to = page*this.pagination.per_page;
+        }else{
+          this.pagination.to = this.pagination.total;
+        }
+        this.dataPage = this.users.filter(function(user) { 
+            return user.page == page;
+          });
+        this.dataPage = this.dataPage.sort(function(a,b){
+          if( a['wdocente'] > b['wdocente']){
+              return 1;
+          }else if( a['wdocente'] < b['wdocente'] ){
+              return -1;
+          }
+          return 0;
+        });
+      },
+      changePage(page) {
+        this.pagination.current_page = page;
+        this.getDataPage(page);
+        this.$emit('setPage' , page);
+      },          
+      /* METHODS for pagination END */
 			markall(){
 				var array = [];
 				this.users.forEach(function(user) {
@@ -117,6 +179,37 @@
         });
 			},
 		},
+    computed: { 
+      /* COMPUTED for pagination INIT */
+      isActived : function() {    
+        return this.pagination.current_page;    
+      },      
+      pagesNumber : function() {    
+        if( !this.pagination.to ) {   
+          return [];  
+        }   
+              
+        var from = this.pagination.current_page - this.offset ;   
+        if( from < 1 ){   
+          from = 1 ;  
+        }   
+              
+        var to = from + ( this.offset * 2 );    
+        if( to >= this.pagination.last_page ){    
+          to = this.pagination.last_page; 
+        }   
+              
+        var pagesArray = [];    
+        while( from <= to ) {   
+          pagesArray.push( from );  
+          from++; 
+        }   
+              
+        return pagesArray;    
+              
+      },      
+      /* COMPUTED for pagination END */
+    },  		
 	}
 </script>
 <style>

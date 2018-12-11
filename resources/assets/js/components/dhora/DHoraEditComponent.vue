@@ -75,8 +75,10 @@
     methods:{
       getData: function () {
         this.cuenta = this.dhoras.length;
-        if(this.sw_cambio){
+        if(!this.sw_cambio){
           this.mensaje = this.mensajeDefault;
+        }else{
+          this.mensaje = "Debe seleccionar como mínimo: "+ this.rhoras/2 +" casillas.";
         };
       },
       on: function (dia, gfranja) {

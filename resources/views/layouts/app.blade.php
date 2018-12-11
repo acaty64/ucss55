@@ -83,6 +83,10 @@
             </div>
         </nav>
         <div class="container">
+            <div class="container" style="text-align: center; font-size: 18px; color: black">
+                @yield('title')
+            </div>
+
             @include('flash::message')
             @include('layouts.partials.errors')
             @yield('content')

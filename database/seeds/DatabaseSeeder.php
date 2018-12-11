@@ -20,11 +20,11 @@ class DatabaseSeeder extends Seeder
         $this->call(McursosTableSeeder::class);
         $this->call(CursoGrupoTableSeeder::class);
         $this->call(GruposTableSeeder::class);
-        // if(env('APP_ENV') != 'testing'){        
-            $this->call(UsersTableSeeder::class);
-            $this->call(DataUsersTableSeeder::class);
-            $this->call(AccesosTableSeeder::class);
-            $this->call(FranjasTableSeeder::class);
+        $this->call(FranjasTableSeeder::class);
+        // if(env('APP_ENV') == 'testing'){  
+        $this->call(UsersTableSeeder::class);
+        $this->call(DataUsersTableSeeder::class);
+        $this->call(AccesosTableSeeder::class);
         // }        
         
     }

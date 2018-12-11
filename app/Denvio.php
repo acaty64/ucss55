@@ -27,4 +27,9 @@ class Denvio extends Model
         return $query->where('menvio_id', '=', $id )->where('tipo', '=', $type) ;
     }
 
+    public function getWdocenteAttribute()
+    {
+        return $this->user->datauser->wdocente();
+    }
+
 }

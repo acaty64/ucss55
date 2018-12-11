@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Modificar Usuario '.$datauser->wdocente($datauser->id))
+@section('title','Modificación de Datos de Usuario: '.$datauser->wdocente($datauser->id))
 
 @section('content')
-	<h3>Modificación de Datos de Usuario</h3>
+	{{-- <h3>Modificación de Datos de Usuario</h3> --}}
 	{!! Form::model($datauser, ['route' => strtolower(\Session::get('ctype')) .'.datauser.update', 'method' => 'PUT']) !!}
 		{!! Form::hidden('id',$datauser->id) !!}
 		{!! Form::hidden('user_id',$datauser->user_id) !!}
