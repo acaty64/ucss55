@@ -22,8 +22,8 @@ class CreateMenviosTable extends Migration
             $table->string('tx_need',100);
             $table->unSignedInteger('envio')->default(0);
             // $table->unSignedInteger('envio2')->default(0);
-            $table->unSignedInteger('rpta')->default(0);
-            // $table->unSignedInteger('rpta2')->default(0);
+            $table->unSignedInteger('rpta1')->default(0);
+            $table->unSignedInteger('rpta2')->default(0);
             $table->string('tipo', 4);
         //    $table->string('tablename', 20)->nullable();
             // $table->boolean('sw_envio')->default(false);

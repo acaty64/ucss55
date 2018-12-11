@@ -25,7 +25,7 @@ class MenvioController extends Controller
     public function index()
     {
         // $this->recontar_envios();
-        // $this->recontar_rptas();
+        $this->recontar_rptas();
         /*  PARA SELECT HORA DE ENVIO QUEUE
         date_default_timezone_set('America/Lima');
         $contador = 1;
@@ -33,14 +33,11 @@ class MenvioController extends Controller
         $hora_fin = 24;
         */
         $sede_id = \Session::get('sede_id');
-        // $sede_id = Session::get('sede_id');
         $facultad_id = \Session::get('facultad_id');
-        // $facultad_id = Session::get('facultad_id');
         $Menvios = Menvio::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->orderBy('id', 'DESC')->paginate(6);
+// dd($Menvios->first()->rpta1);
         return view('admin.envios.index')
             ->with('Menvios', $Menvios);
-        //    ->with('hora_ini',$hora_ini)
-        //    ->with('hora_fin',$hora_fin);
     }
 
     /**
@@ -90,7 +87,6 @@ class MenvioController extends Controller
      */
     public function show($id)
     {
-
         $Denvios = Denvio::join('users as us', 'us.id', '=', 'denvios.user_id')
            ->orderBy('us.name', 'asc')
            ->select('denvios.*')       // just to avoid fetching anything from joined table
@@ -190,7 +186,7 @@ class MenvioController extends Controller
      *
      * @param  MenviosController.index()
      */
-    public function recontar_rptas()
+    protected function recontar_rptas()
     {
         $Menvios = Menvio::all();
         if ($Menvios->isEmpty() == false) 

@@ -2,14 +2,17 @@
 
 namespace App;
 
+use App\DHora;
+use App\DCurso;
 use Illuminate\Database\Eloquent\Model;
 
 class Menvio extends Model
 {
     protected $table = 'menvios';
-//    protected $append = ['envios'];		
+    protected $append = ['rpta1', 'rpta2'];		
     protected $fillable = [		
-    	'user_id', 'facultad_id', 'sede_id','fenvio', 'flimite', 'envio', 'rpta', 'tipo', 'tx_need'
+    	'user_id', 'facultad_id', 'sede_id','fenvio', 'flimite', 'envio', 
+      'tipo', 'tx_need'
     ];	
 
     public function denvios()
@@ -29,9 +32,4 @@ class Menvio extends Model
    		return $cuenta;
    	}
 
-   	protected function getRptaAttribute()
-   	{
-   		$cuenta = $this->denvios->where('sw_rpta', '1')->count();
-   		return $cuenta;
-   	}
 }

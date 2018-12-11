@@ -36,14 +36,15 @@ class DhoraController extends Controller
     }
     
     // Modifica switch respuesta en Denvios
-    $acceso = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id', $docente_id)->first();
-    $menvio = Menvio::find($acceso->disp_id);
-    if(!empty($menvio)){
-        $denvio = Denvio::where('menvio_id', $menvio->id)
-                    ->where('user_id', $request->docente_id)->first();
-        $denvio->sw_rpta = '1';
-        $denvio->save();
-    }
+    $denvio = Denvio::join('menvios as me', 'me.id', '=', 'denvios.menvio_id')
+            ->select('denvios.*')
+            ->where('me.facultad_id', $facultad_id)
+            ->where('me.sede_id', $sede_id)
+            ->where('denvios.user_id', $docente_id)
+            ->orderBy('me.flimite', 'desc')
+            ->first();
+    $denvio->sw_rpta1 = '1';
+    $denvio->save();
 
     return ['contador' => $contador];
 

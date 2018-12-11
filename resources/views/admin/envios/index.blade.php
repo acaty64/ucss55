@@ -23,13 +23,14 @@
  					<td>{{ $envio->fenvio }}</td>
  					<td>{{ $envio->flimite }}</td>
  					<td>
- 						 <span class="badge">{{ $envio->selected }}</span>
+ 						 <span class="badge selected{{ $envio->id }}">{{ $envio->selected }}</span>
  					</td>
  					<td>
- 						 <span class="badge">{{ $envio->envio }}</span>
+ 						 <span class="badge sended{{ $envio->id }}">{{ $envio->envio }}</span>
  					</td>
  					<td>
- 						<span class="badge">{{ $envio->rpta }}</span>
+ 						<span class="badge dhora{{ $envio->id }}">{{ $envio->rpta1 }}</span>
+ 						<span class="badge dcurso{{ $envio->id }}">{{ $envio->rpta2 }}</span>
  					</td>
 	 				<td>
 	 					@if($envio->envio == 0)

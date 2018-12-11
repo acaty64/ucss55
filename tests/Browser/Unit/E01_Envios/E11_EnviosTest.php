@@ -30,7 +30,7 @@ class E11_EnviosTest extends DuskTestCase
                   ->assertPathIs('/administrador/menvios/index')
                   ->visit('/administrador/menvios/create')
                   ->select('tipo','disp')
-                  ->value('#flimite','2017-06-15')
+                  ->value('#flimite','2019-06-15')
                   ->type('tx_need','Prueba de envio.')
                   ->press('Grabar')
                   ->assertSee('Se ha registrado de forma exitosa')
@@ -68,10 +68,15 @@ class E11_EnviosTest extends DuskTestCase
 
         $this->browse(function(Browser $browser)
         {
+          $browser->visit('/administrador/menvios/index')
+                  ->assertSee('3', '#selected1');
+        });
+
+        $this->browse(function(Browser $browser)
+        {
           $browser->visit('/administrador/menvios/show/1')
                   ->assertSee('Docentes Comunicados');
         });
-
 
         /*  Elimina Menvio y sus Denvios*/
         $this->browse(function(Browser $browser)

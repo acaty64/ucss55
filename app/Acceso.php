@@ -4,6 +4,7 @@ namespace App;
 
 use App\DataUser;
 use App\Facultad;
+use App\Menvio;
 use App\Rhora;
 use App\Sede;
 use App\Type;
