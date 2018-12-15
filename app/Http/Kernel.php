@@ -47,31 +47,41 @@ class Kernel extends HttpKernel
         'consulta' => [
             'web',
             'auth',
-            'can:is_consulta,'.Acceso::class,
+            'is_consulta',
         ],
 
         'docente' => [
             'web',
             'auth',
-            'can:is_docente,'.Acceso::class,
+            'is_consulta',
+            'is_docente',
         ],
 
         'responsable' => [
             'web',
             'auth',
-            'can:is_responsable,'.Acceso::class,
+            'is_consulta',
+            'is_docente',
+            'is_responsable',
         ],
 
         'admin' => [
             'web',
             'auth',
-            'can:is_admin,'.Acceso::class,
+            'is_consulta',
+            'is_docente',
+            'is_responsable',
+            'is_admin'
         ], 
 
         'master' => [
             'web',
             'auth',
-            'can:is_master,'.Acceso::class,
+            'is_consulta',
+            'is_docente',
+            'is_responsable',
+            'is_admin',
+            'is_master'
         ],
     ];
 
@@ -84,6 +94,11 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+        'is_consulta' => \App\Http\Middleware\ConsultaMiddleware::class,
+        'is_docente' => \App\Http\Middleware\DocenteMiddleware::class,
+        'is_responsable' => \App\Http\Middleware\ResponsableMiddleware::class,
+        'is_admin' => \App\Http\Middleware\AdminMiddleware::class,
+        'is_master' => \App\Http\Middleware\MasterMiddleware::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,

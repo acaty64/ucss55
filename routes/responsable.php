@@ -7,53 +7,53 @@ use Illuminate\Http\Request;
 // ROUTES
 Route::get('cursogrupo/index/{id}', [
 		'as'	=> 'responsable.cursogrupo.index',
-		'uses'	=> 'Admin\CursoGrupoController@index',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'CursoGrupoController@index',	
+	]);
 
 Route::get('cursogrupo/edit/{id}', [
 		'as'	=> 'responsable.cursogrupo.edit',
-		'uses'	=> 'Admin\CursoGrupoController@edit',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'CursoGrupoController@edit',	
+	]);
 
 Route::get('datauser/edit/{id}', [
 		'as'	=> 'responsable.datauser.edit',
-		'uses'	=> 'Admin\DataUserController@edit',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'DataUserController@edit',	
+	]);
 
 Route::put('datauser/update', [
 		'as'	=> 'responsable.datauser.update',
-		'uses'	=> 'Admin\DataUserController@update',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'DataUserController@update',	
+	]);
 
 Route::get('dcurso/edit/{id}', [
 		'as'	=> 'responsable.dcurso.edit',
-		'uses'	=> 'Admin\DcursoController@edit',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'DcursoController@edit',	
+	]);
 
 Route::put('dcurso/update', [
 		'as'	=> 'responsable.dcurso.update',
-		'uses'	=> 'Admin\DcursoController@update',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'DcursoController@update',	
+	]);
 
 Route::get('dhora/edit/{id}', [
 		'as'	=> 'responsable.dhora.edit',
-		'uses'	=> 'Admin\DHoraController@edit',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'DHoraController@edit',	
+	]);
 
 Route::put('dhora/update', [
 		'as'	=> 'responsable.dhora.update',
-		'uses'	=> 'Admin\DHoraController@update',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'DHoraController@update',	
+	]);
 
 Route::get('horario/show/{id}', [
 		'as'	=> 'responsable.horario.show',
-		'uses'	=> 'Admin\UserController@show',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'UserController@show',	
+	]);
  
 Route::get('cursogrupo/index', [
 		'as'	=> 'responsable.cursogrupo.index',
-		'uses'	=> 'Admin\CursoGrupoController@index',	
-	])->middleware(Authorize::class.':is_responsable,'.Acceso::class);
+		'uses'	=> 'CursoGrupoController@index',	
+	]);
 
 
 Route::fallback(function()

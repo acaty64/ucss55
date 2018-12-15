@@ -68,6 +68,10 @@ class User extends Authenticatable
         return $rpta;
     }
 
+    public function getCtypeAttribute()
+    {
+        return $this->ctype;
+    }
     public function getAccederAttribute()
     {
         //Acceso::setAccesoAttributes();

@@ -85,7 +85,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'master',
-            'namespace' => $this->namespace,
+            'namespace' => $this->namespace . '\Master',
             'prefix' => 'master',
         ], function ($router) {
             require base_path('routes/master.php');
@@ -96,7 +96,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'admin',
-            'namespace' => $this->namespace,
+            'namespace' => $this->namespace . '\Admin',
             'prefix' => 'administrador',
         ], function ($router) {
             require base_path('routes/admin.php');
@@ -107,7 +107,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'responsable',
-            'namespace' => $this->namespace,
+            'namespace' => $this->namespace . '\Admin',
             'prefix' => 'responsable',
         ], function ($router) {
             require base_path('routes/responsable.php');
@@ -118,7 +118,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'docente',
-            'namespace' => $this->namespace,
+            'namespace' => $this->namespace . '\Admin',
             'prefix' => 'docente',
         ], function ($router) {
             require base_path('routes/docente.php');
@@ -129,7 +129,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'consulta',
-            'namespace' => $this->namespace,
+            'namespace' => $this->namespace . '\Admin',
             'prefix' => 'consulta',
         ], function ($router) {
             require base_path('routes/consulta.php');

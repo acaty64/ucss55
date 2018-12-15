@@ -8,41 +8,41 @@ use Illuminate\Http\Request;
 
 Route::get('datauser/edit/{id}', [
 		'as'	=> 'docente.datauser.edit',
-		'uses'	=> 'Admin\DataUserController@edit',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+		'uses'	=> 'DataUserController@edit',	
+	]);
 
 Route::put('datauser/update', [
 		'as'	=> 'docente.datauser.update',
-		'uses'	=> 'Admin\DataUserController@update',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+		'uses'	=> 'DataUserController@update',	
+	]);
 
 Route::get('dhora/edit/{id}', [
 		'as'	=> 'docente.dhora.edit',
-		'uses'	=> 'Admin\DHoraController@edit',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+		'uses'	=> 'DHoraController@edit',	
+	]);
 
 Route::put('dhora/update', [
 		'as'	=> 'docente.dhora.update',
-		'uses'	=> 'Admin\DHoraController@update',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+		'uses'	=> 'DHoraController@update',	
+	]);
 
 Route::get('dcurso/edit/{id}', [
 		'as'	=> 'docente.dcurso.edit',
-		'uses'	=> 'Admin\DcursoController@edit',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+		'uses'	=> 'DcursoController@edit',	
+	]);
 
 Route::put('dcurso/update', [
 		'as'	=> 'docente.dcurso.update',
-		'uses'	=> 'Admin\DcursoController@update',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+		'uses'	=> 'DcursoController@update',	
+	]);
 
 Route::get('horario/show/{id}', [
 		'as'	=> 'docente.horario.show',
-		'uses'	=> 'Admin\UserController@show',	
-	])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+		'uses'	=> 'UserController@show',	
+	]);
 
 Route::get('pdf/syllabus/{id}', [
 		'as'	=> 'pdf.syllabus.show',
-		'uses'	=> 'Admin\PDFController@syllabus',	
+		'uses'	=> 'PDFController@syllabus',	
 	]);
-	// ])->middleware(Authorize::class.':is_docente,'.Acceso::class);
+	// ]);

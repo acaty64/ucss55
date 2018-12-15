@@ -9,303 +9,303 @@ use Illuminate\Http\Request;
 /** RHORA ********************************************/
 Route::get('rhora/index', [
 		'as'	=> 'administrador.rhora.index',
-		'uses'	=> 'Admin\RhoraController@index',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'RhoraController@index',	
+	]);
 
 Route::get('rhora/create',  [
 		'as'	=> 'administrador.rhora.create',
-		'uses'	=> 'Admin\RhoraController@create',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'RhoraController@create',	
+	]);
 
 Route::post('rhora/store',  [
 		'as'	=> 'administrador.rhora.store',
-		'uses'	=> 'Admin\RhoraController@store',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'RhoraController@store',	
+	]);
 
 Route::get('rhora/edit/{user_id}',  [
 		'as'	=> 'administrador.rhora.edit',
-		'uses'	=> 'Admin\RhoraController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'RhoraController@edit',	
+	]);
 
 Route::put('rhora/update',  [
 		'as'	=> 'administrador.rhora.update',
-		'uses'	=> 'Admin\RhoraController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'RhoraController@update',	
+	]);
 
 
 /** USER ********************************************/
 Route::get('user/index',  [
 		'as'	=> 'administrador.user.index',
-		'uses'	=> 'Admin\userController@index',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'userController@index',	
+	]);
 
 Route::get('user/create', [
 		'as'	=> 'admin.user.create',
-		'uses'	=> 'Admin\userController@create',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'userController@create',	
+	]);
 
 Route::post('user/store', [
 		'as'	=> 'admin.user.store',
-		'uses'	=> 'Admin\userController@store',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'userController@store',	
+	]);
 
 Route::get('user/edit/{user_id}', [
 		'as'	=> 'admin.user.edit',
-		'uses'	=> 'Admin\userController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'userController@edit',	
+	]);
 
 Route::put('user/update', [
 		'as'	=> 'admin.user.update',
-		'uses'	=> 'Admin\userController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'userController@update',	
+	]);
 
 Route::get('user/{user}/show', [
 		'as'	=> 'admin.user.show',
-		'uses'	=> 'Admin\userController@show',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'userController@show',	
+	]);
 
 Route::get('user/{id}/destroy', [
 		'as'	=> 'admin.user.destroy',
-		'uses'	=> 'Admin\userController@destroy',	
+		'uses'	=> 'userController@destroy',	
 	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
 
 Route::get('user/editpass/{id}', [
 		'as'	=> 'admin.user.editpass',
-		'uses'	=> 'Admin\userController@editpass',	
+		'uses'	=> 'userController@editpass',	
 	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
 
 /** DATAUSER *****************************************/
 Route::get('datauser/edit/{id}', [
 		'as'	=> 'admin.datauser.edit',
-		'uses'	=> 'Admin\dataUserController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'dataUserController@edit',	
+	]);
 
 Route::put('datauser/update', [
 		'as'	=> 'administrador.datauser.update',
-		'uses'	=> 'Admin\dataUserController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'dataUserController@update',	
+	]);
 
 /** ACCESO *******************************************/
 Route::get('acceso/edit/{id}', [
 		'as'	=> 'admin.acceso.edit',
-		'uses'	=> 'Admin\accesoController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'accesoController@edit',	
+	]);
 
 Route::put('acceso/update', [
 		'as'	=> 'admin.acceso.update',
-		'uses'	=> 'Admin\accesoController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'accesoController@update',	
+	]);
 
 /** DHORA ********************************************/
 
 Route::get('dhora/edit/{id}',[
 		'as'	=> 'admin.dhora.edit',
-		'uses'	=> 'Admin\DHoraController@edit'
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DHoraController@edit'
+	]);
 
 Route::put('dhora/update',[
 		'as'	=> 'admin.dhora.update',
-		'uses'	=> 'Admin\DHoraController@update'
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DHoraController@update'
+	]);
 
 Route::get('dhora/lista',  [
 		'as'	=> 'administrador.dhora.lista',
-		'uses'	=> 'Admin\DHoraController@lista',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DHoraController@lista',	
+	]);
 
 Route::get('dhora/list2Excel',[
 		'as'	=> 'admin.dhora.list2Excel',
-		'uses'	=> 'Admin\DHoraController@list2Excel'
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DHoraController@list2Excel'
+	]);
 
 /** CURSOGRUPO *******************************************/
 Route::get('cursogrupo/index/{id?}', [
 		'as'	=> 'admin.cursogrupo.index',
-		'uses'	=> 'Admin\CursoGrupoController@index',	
+		'uses'	=> 'CursoGrupoController@index',	
 	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
 
 Route::get('cursogrupo/edit/{id}', [
 		'as'	=> 'admin.cursogrupo.edit',
-		'uses'	=> 'Admin\CursoGrupoController@edit',	
+		'uses'	=> 'CursoGrupoController@edit',	
 	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
 
 /** DCURSO *******************************************/
 Route::get('dcurso/index/{grupo_id}/{curso_id}', [
 		'as'	=> 'admin.dcurso.index',
-		'uses'	=> 'Admin\DcursoController@index',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DcursoController@index',	
+	]);
 
 Route::get('dcurso/orden/{grupo_id}', [
 		'as'	=> 'admin.dcurso.orden',
-		'uses'	=> 'Admin\DcursoController@orden',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DcursoController@orden',	
+	]);
 
 Route::get('dcurso/edit/{id}', [
 		'as'	=> 'admin.dcurso.edit',
-		'uses'	=> 'Admin\DcursoController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DcursoController@edit',	
+	]);
 
 Route::put('dcurso/update', [
 		'as'	=> 'admin.dcurso.update',
-		'uses'	=> 'Admin\DcursoController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DcursoController@update',	
+	]);
 
 Route::get('dcurso/lista',  [
 		'as'	=> 'administrador.dcurso.lista',
-		'uses'	=> 'Admin\DCursoController@lista',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DCursoController@lista',	
+	]);
 
 Route::get('dcurso/list2Excel',[
 		'as'	=> 'admin.dcurso.list2Excel',
-		'uses'	=> 'Admin\DCursoController@list2Excel'
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DCursoController@list2Excel'
+	]);
 
 /** GRUPO ********************************************/
 Route::get('grupo/index',  [
 		'as'	=> 'administrador.grupo.index',
-		'uses'	=> 'Admin\GrupoController@index',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'GrupoController@index',	
+	]);
 
 Route::get('grupo/create',  [
 		'as'	=> 'admin.grupo.create',
-		'uses'	=> 'Admin\GrupoController@create',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'GrupoController@create',	
+	]);
 
 Route::post('grupo/store',  [
 		'as'	=> 'admin.grupo.store',
-		'uses'	=> 'Admin\GrupoController@store',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'GrupoController@store',	
+	]);
 
 Route::get('grupo/edit/{id}',[
 		'as'	=> 'admin.grupo.edit',
-		'uses'	=> 'Admin\GrupoController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'GrupoController@edit',	
+	]);
 
 Route::put('grupo/update',  [
 		'as'	=> 'admin.grupo.update',
-		'uses'	=> 'Admin\GrupoController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'GrupoController@update',	
+	]);
 
 Route::get('grupo/orden',  [
 		'as'	=> 'admin.grupo.orden',
-		'uses'	=> 'Admin\GrupoController@orden',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'GrupoController@orden',	
+	]);
 
 Route::get('grupo/destroy/{id}',  [
 		'as'	=> 'admin.grupo.destroy',
-		'uses'	=> 'Admin\GrupoController@destroy',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'GrupoController@destroy',	
+	]);
 
 
 /** GRUPOUSERS *************CORREGIR NOMBRES**************************/
 Route::get('usergrupos/index',  [
 		'as'	=> 'administrador.usergrupo.index',
-		'uses'	=> 'Admin\UserGrupoController@index',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'UserGrupoController@index',	
+	]);
 
 /** FRANJAS ***************************************/
 Route::get('franjas/index',  [
 		'as'	=> 'administrador.franja.index',
-		'uses'	=> 'Admin\FranjaController@index',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'FranjaController@index',	
+	]);
 
 Route::get('franjas/show',  [
 		'as'	=> 'administrador.franja.show',
-		'uses'	=> 'Admin\FranjaController@show',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'FranjaController@show',	
+	]);
 
 Route::get('franjas/create',  [
 		'as'	=> 'administrador.franja.create',
-		'uses'	=> 'Admin\FranjaController@create',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'FranjaController@create',	
+	]);
 
 Route::post('franjas/store',  [
 		'as'	=> 'administrador.franja.store',
-		'uses'	=> 'Admin\FranjaController@store',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'FranjaController@store',	
+	]);
 
 Route::get('franjas/edit/{id}',  [
 		'as'	=> 'administrador.franja.edit',
-		'uses'	=> 'Admin\FranjaController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'FranjaController@edit',	
+	]);
 
 Route::put('franjas/update',  [
 		'as'	=> 'administrador.franja.update',
-		'uses'	=> 'Admin\FranjaController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'FranjaController@update',	
+	]);
 
 Route::get('franjas/destroy/{id}',  [
 		'as'	=> 'administrador.franja.destroy',
-		'uses'	=> 'Admin\FranjaController@destroy',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'FranjaController@destroy',	
+	]);
 
 
 
 /** MENVIO *******************************************/
 Route::get('menvios/index',  [
 		'as'	=> 'administrador.menvio.index',
-		'uses'	=> 'Admin\MenvioController@index',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'MenvioController@index',	
+	]);
 
 Route::get('menvios/create',  [
 		'as'	=> 'administrador.menvio.create',
-		'uses'	=> 'Admin\MenvioController@create',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'MenvioController@create',	
+	]);
 
 Route::post('menvios/store',  [
 		'as'	=> 'administrador.menvio.store',
-		'uses'	=> 'Admin\MenvioController@store',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'MenvioController@store',	
+	]);
 
 Route::get('menvios/edit/{id}',  [
 		'as'	=> 'administrador.menvio.edit',
-		'uses'	=> 'Admin\MenvioController@edit',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'MenvioController@edit',	
+	]);
 
 Route::put('menvios/update',  [
 		'as'	=> 'administrador.menvio.update',
-		'uses'	=> 'Admin\MenvioController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'MenvioController@update',	
+	]);
 
 Route::get('menvios/show/{id}',  [
 		'as'	=> 'administrador.menvio.show',
-		'uses'	=> 'Admin\MenvioController@show',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'MenvioController@show',	
+	]);
 
 Route::get('menvios/destroy/{id}',  [
 		'as'	=> 'administrador.menvio.destroy',
-		'uses'	=> 'Admin\MenvioController@destroy',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'MenvioController@destroy',	
+	]);
 
 /** DENVIO *******************************************/
 Route::get('denvios/define/{id}',  [
 		'as'	=> 'administrador.denvio.define',
-		'uses'	=> 'Admin\DenvioController@define',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DenvioController@define',	
+	]);
 
 Route::put('denvios/update',  [
 		'as'	=> 'administrador.denvio.update',
-		'uses'	=> 'Admin\DenvioController@update',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DenvioController@update',	
+	]);
 
 Route::get('denvios/markall/{id}',  [
 		'as'	=> 'administrador.denvio.markall',
-		'uses'	=> 'Admin\DenvioController@markall',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DenvioController@markall',	
+	]);
 
 Route::get('denvios/unmarkall/{id}',  [
 		'as'	=> 'administrador.denvio.unmarkall',
-		'uses'	=> 'Admin\DenvioController@unmarkall',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'DenvioController@unmarkall',	
+	]);
 
 /** ENVIO *********************************************/
 Route::get('envios/send/{id}', [
 		'as'	=> 'administrador.envio.send',
-		'uses'	=> 'Admin\EnvioController@send',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'EnvioController@send',	
+	]);
 
 /** PDF ***********************************************/
 Route::put('PDF/silaboCurso', [
 		'as'	=> 'admin.PDF.silaboCurso',
-		'uses'	=> 'Admin\PDFController@silaboCurso',	
-	])->middleware('can:is_admin,'.Acceso::class);
+		'uses'	=> 'PDFController@silaboCurso',	
+	]);
