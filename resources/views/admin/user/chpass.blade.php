@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Modificar Usuario '.$user->wdoc1." : Código ".$user->username)
+@section('title','Modificar Password '.$user->wdoc1." : Código ".$user->datauser->cod_doc)
 
 @section('content')
 
@@ -24,4 +24,4 @@
 
 @endsection
 
-@section('view','admin/users/chpass.blade.php')
+@section('view','admin/user/chpass.blade.php')

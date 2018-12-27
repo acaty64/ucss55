@@ -66,3 +66,8 @@ Route::get('menutype/index', [
 		'as'	=> 'master.menutype.index',
 		'uses'	=> 'MenuTypeController@index',	
 	]);
+
+Route::get('menutype/edit', [
+		'as'	=> 'master.menutype.edit',
+		'uses'	=> 'MenuTypeController@edit',	
+	]);

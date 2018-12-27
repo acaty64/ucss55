@@ -23,7 +23,7 @@ class CreateDatausersTable extends Migration
             $table->string('fono2', 12)->nullable();
             $table->string('email1', 80);
             $table->string('email2', 80)->nullable();
-            $table->boolean('whatsapp')->default(false);
+            // $table->boolean('whatsapp')->default(false);
             $table->integer('user_id')->unsigned();
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

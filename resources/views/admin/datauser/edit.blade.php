@@ -81,7 +81,7 @@
 					</div>
 				</td>
 			</tr>
-			<tr>
+{{-- 			<tr>
 				<td style='text-align: right'>
 					{!! Form::label('whatsapp','Marque la casilla si tiene instalado Whatsapp') !!}					
 				</td>
@@ -95,7 +95,7 @@
 						@endif
 					</div> 
 				</td>
-			</tr>
+			</tr> --}}
 		</tbody>
 	</table>
 

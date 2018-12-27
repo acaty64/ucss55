@@ -101,6 +101,12 @@ Route::get('generarHelp/{type_id}', [
 	'uses' =>'Api\MenuController@generarHelp'
 ]);
 
+
+Route::get('menutype/edit/', [
+	'as' => 'menuType.edit',
+	'uses' =>'Api\MenuTypeController@edit'
+]);
+
 /*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

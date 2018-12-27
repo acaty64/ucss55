@@ -23,7 +23,7 @@ extends Model
     	'fono2',
     	'email1',
     	'email2',
-        'whatsapp',
+        // 'whatsapp',
         'wdocente'
     ];
 

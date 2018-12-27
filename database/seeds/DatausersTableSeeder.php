@@ -23,7 +23,7 @@ class DataUsersTableSeeder extends Seeder
             'fono2' => '333-333-333',
             'email1' => 'admin@gmail.com',
             'email2' => 'master@gmail.com',
-            'whatsapp' => false
+            // 'whatsapp' => false
             ]);
 
         $users = User::where('id','>',1)->get();

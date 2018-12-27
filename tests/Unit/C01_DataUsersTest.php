@@ -43,7 +43,7 @@ class C01_DataUsersTest extends TestCase
     $new_values->fono2 = '333-333-333';
     $new_values->email1 = 'jd@gmail.com';
     $new_values->email2 = 'jd2@gmail.com';
-    $new_values->whatsapp = true;
+    // $new_values->whatsapp = true;
 
     $response = $this->put("administrador/datauser/update", $new_values->toArray());
     //Then 
@@ -56,7 +56,7 @@ class C01_DataUsersTest extends TestCase
       'fono2' => '333-333-333',
       'email1' => 'jd@gmail.com',
       'email2' => 'jd2@gmail.com',
-      'whatsapp' => true,
+      // 'whatsapp' => true,
     ]);
 	}
 
@@ -89,7 +89,7 @@ class C01_DataUsersTest extends TestCase
     $new_values->fono1 = '555-555-555';
     $new_values->fono2 = '333-333-333';
     $new_values->email2 = 'jd2@gmail.com';
-    $new_values->whatsapp = true;
+    // $new_values->whatsapp = true;
 
     $response = $this->put("consulta/datauser/update", $new_values->toArray());
     //Then 
@@ -100,7 +100,7 @@ class C01_DataUsersTest extends TestCase
       'fono1' => '555-555-555',
       'fono2' => '333-333-333',
       'email2' => 'jd2@gmail.com',
-      'whatsapp' => true,
+      // 'whatsapp' => true,
     ]);
   }
 
@@ -134,7 +134,7 @@ class C01_DataUsersTest extends TestCase
     $new_values->fono1 = '555-555-555';
     $new_values->fono2 = '333-333-333';
     $new_values->email2 = 'jd2@gmail.com';
-    $new_values->whatsapp = true;
+    // $new_values->whatsapp = true;
 
     $response = $this->put("docente/datauser/update", $new_values->toArray());
     //Then 
@@ -145,7 +145,7 @@ class C01_DataUsersTest extends TestCase
       'fono1' => '555-555-555',
       'fono2' => '333-333-333',
       'email2' => 'jd2@gmail.com',
-      'whatsapp' => true,
+      // 'whatsapp' => true,
     ]);
   }
 
@@ -177,7 +177,7 @@ class C01_DataUsersTest extends TestCase
     $new_values->fono1 = '555-555-555';
     $new_values->fono2 = '333-333-333';
     $new_values->email2 = 'jd2@gmail.com';
-    $new_values->whatsapp = true;
+    // $new_values->whatsapp = true;
 
     $response = $this->put("responsable/datauser/update", $new_values->toArray());
     //Then 
@@ -189,7 +189,7 @@ class C01_DataUsersTest extends TestCase
       'fono2' => '333-333-333',
       'email1' => $new_values->email1,
       'email2' => 'jd2@gmail.com',
-      'whatsapp' => true,
+      // 'whatsapp' => true,
     ]);
   }
 }

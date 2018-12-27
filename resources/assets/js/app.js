@@ -19,8 +19,9 @@ window.VueRouter = require('vue-router');
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('model_pagination-component', require('./components/pagination/ModelIndexComponent.vue'));
-Vue.component('menu-component', require('./components/MenuComponent.vue'));
-Vue.component('help-component', require('./components/HelpComponent.vue'));
+Vue.component('menu-component', require('./components/menu/MenuComponent.vue'));
+Vue.component('menutype_edit-component', require('./components/menu/menutype/EditComponent.vue'));
+Vue.component('help-component', require('./components/menu/HelpComponent.vue'));
 Vue.component('userindex-component', require('./components/user/UserIndexComponent.vue'));
 Vue.component('dcurso_edit-component', require('./components/dcurso/DCursoEditComponent.vue'));
 Vue.component('dcurso_orden-component', require('./components/dcurso/DcursoOrdenComponent.vue'));

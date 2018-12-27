@@ -58,7 +58,7 @@ class C10_DataUserTest extends DuskTestCase
                     ->type('wdoc3','Segundo Apellido')
                     ->type('email1','newmail@gmail.com')
                     ->type('email2','otromail@gmail.com')
-                    ->check('whatsapp')
+                    // ->check('whatsapp')
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
@@ -94,7 +94,7 @@ class C10_DataUserTest extends DuskTestCase
                     ->type('wdoc3','Segundo Apellido')
                     //->type('email1','newmail@gmail.com')
                     ->type('email2','otromail@gmail.com')
-                    ->check('whatsapp')
+                    // ->check('whatsapp')
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
@@ -127,7 +127,7 @@ class C10_DataUserTest extends DuskTestCase
                     ->type('wdoc2','Primer Apellido')
                     ->type('wdoc3','Segundo Apellido')
                     ->type('email2','otromail@gmail.com')
-                    ->check('whatsapp')
+                    // ->check('whatsapp')
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });
@@ -160,7 +160,7 @@ class C10_DataUserTest extends DuskTestCase
                     ->type('wdoc2','Primer Apellido')
                     ->type('wdoc3','Segundo Apellido')
                     ->type('email2','otromail@gmail.com')
-                    ->check('whatsapp')
+                    // ->check('whatsapp')
                     ->press('Grabar modificaciones')
                     ->assertSee('Se ha modificado el usuario: '.$user->id.' : Primer Apellido Segundo Apellido, Nuevo nombre de forma exitosa');
         });

@@ -54,4 +54,4 @@
 
 @endsection
 
-@section('view','type_menu.edit.blade.php')
+@section('view','menu_type.edit.blade.php')

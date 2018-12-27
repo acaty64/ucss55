@@ -142,7 +142,7 @@ class userController extends Controller
     public function editpass($id)
     {
         $user = User::find($id);
-        return view('admin.users.chpass')->with('user', $user);
+        return view('admin.user.chpass')->with('user', $user);
     }
 
     /**********************************************/

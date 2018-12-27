@@ -112,4 +112,19 @@ class MenuController extends Controller
 
         return $helps;
     }
+
+    public function edit()
+    {
+        $types = Type::all();
+
+        $menus = Menu::all();
+
+        $menutypes = MenuType::all();
+
+        return [
+            'types'      =>  $types,            
+            'menus'      =>  $menus,            
+            'menutypes'  =>  $menutypes,
+        ];
+    }
 }

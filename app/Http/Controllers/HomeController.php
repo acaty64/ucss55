@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Laracasts\Flash\Flash;
 
 class HomeController extends Controller
 {
@@ -57,14 +58,15 @@ class HomeController extends Controller
         \Session::put('sede_id', $sede->id, 60);
         \Session::put('cfacultad',$facultad->cfacultad);
         \Session::put('csede',$sede->csede);
+        \Session::put('wfacultad',$facultad->wfacultad);
+        \Session::put('wsede',$sede->wsede);
 
         $usuario = Auth::user();
 
-// dd($usuario->acceder);
         if ($usuario->acceder) {
             $aerrors = [];
             $contador = 0;
-            //date_default_timezone_set('America/Lima');
+            date_default_timezone_set('America/Lima');
             $hoy = Carbon::now();
             $ayer = Carbon::now()->subDays(1);
             
@@ -91,6 +93,7 @@ class HomeController extends Controller
             return view('help')
                 ->with('errors',$errors);
         } else {
+            Flash::error("Usted no tiene acceso a la Facultad: ".\Session::get('wfacultad').". Filial: ".\Session::get('wsede'));
             return back();
         }    
     }

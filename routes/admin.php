@@ -70,9 +70,14 @@ Route::get('user/{id}/destroy', [
 	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
 
 Route::get('user/editpass/{id}', [
-		'as'	=> 'admin.user.editpass',
+		'as'	=> 'admin.users.editpass',
 		'uses'	=> 'userController@editpass',	
-	])->middleware(Authorize::class.':is_admin,'.Acceso::class);
+	]);
+
+Route::post('user/savepass/{id}', [
+		'as'	=> 'admin.users.savepass',
+		'uses'	=> 'userController@savepass',	
+	]);
 
 /** DATAUSER *****************************************/
 Route::get('datauser/edit/{id}', [
