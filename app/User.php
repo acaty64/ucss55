@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Acceso;
+use App\Denvio;
 use App\Menvio;
 use App\Rhora;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -122,18 +123,21 @@ class User extends Authenticatable
 
     /************* FUNCIONES *************** */
 
-    public static function editable($tipo)
+    public static function editable($tipo, $user_id)
     {
-        $user_id = \Session::get('user_id');
+        // $user_id = \Session::get('user_id');
         $facultad_id = \Session::get('facultad_id');
         $sede_id = \Session::get('sede_id');
         $type_user = \App\Acceso::acceso_auth()->ctype;
         switch ($type_user) {
-            case 'Master' || 'Administrador':
+            case 'Master':             
+                $editable = true;
+                break;
+            case 'Administrador':
                 $editable = true;
                 break;
             case 'Responsable' || 'Docente':
-                $denvios = Denvios::where('user_id', $this->id)
+                $denvios = Denvio::where('user_id', $user_id)
                             ->where('tipo', $tipo)->get();
                 $ultimo = "";
                 foreach ($denvios as $denvio) {

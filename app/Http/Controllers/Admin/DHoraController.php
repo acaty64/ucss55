@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Lista;
 use App\Menvio;
+use App\Rhora;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -57,7 +58,6 @@ class DHoraController extends Controller
                     array_push($gfranjas, ['turno'=>$key_turno,'hora'=>$key_hora, 'wfranja'=>$xfranja->wfranja]);
                 }
             }
-            $gfranjas = collect($gfranjas);
 
             $cfranjas = [];
             foreach ($franjas as $franja) {
@@ -74,18 +74,27 @@ class DHoraController extends Controller
                 $xfranja = $value->wfranja;
                 array_push($dhoras, $xfranja);
             }
-            $dhoras = collect($dhoras);
-            $check = User::editable('disp');
-            
 
+            $check = User::editable('disp',$user_id);
+            
+            $rhora = Rhora::where('facultad_id', $facultad_id)
+                        ->where('sede_id', $sede_id)
+                        ->where('user_id', $user_id)
+                        ->first();
+
+            if(!$rhora){
+                $rhoras = 0;
+            }else{
+                $rhoras = $rhora->rhoras;
+            }
             return view('admin.dhora.vue_edit')
                 ->with('sw_cambio', $check)
                 ->with('cfranjas', collect($cfranjas))
-                ->with('gfranjas', $gfranjas)
-                ->with('dhoras', $dhoras)
+                ->with('gfranjas', collect($gfranjas))
+                ->with('dhoras', collect($dhoras))
                 ->with('wdocente', $wdocente)
                 ->with('docente_id', $user_id)
-                ->with('rhoras', $user->rhora)
+                ->with('rhoras', $rhoras)
                 ->with('facultad_id', $facultad_id)
                 ->with('sede_id', $sede_id)
                 ;

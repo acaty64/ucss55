@@ -46570,29 +46570,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     up: function up(type, item, items) {
-      var nIndex = this.getIndex(item, items);
-      console.log("up item.index: ", nIndex);
-      if (nIndex > 0) {
-        var pre = items.filter(function (item) {
-          if (this.getIndex(item, items) < nIndex) {
-            return item;
-          }
-        });
-        console.log("up pre: ", pre);
+      alert("up(item). En construccion. " + item.id);
+      // var nIndex = this.getIndex(item, items);
+      // console.log("up item.index: ", nIndex);
+      // if(nIndex > 0){
+      //   var pre = items.filter(function(item) {
+      //     if(this.getIndex(item,items) < nIndex){
+      //       return item;
+      //     }
+      //   });
+      //   console.log("up pre: ", pre);
 
-        // var post = items.filter(function(item) {
-        //   return this.getIndex(item,items) > nIndex;
-        // });
-        // console.log("up post: ", post);
-      } else {
-        alert("No se puede subir de orden.");
-      }
+      //   // var post = items.filter(function(item) {
+      //   //   return this.getIndex(item,items) > nIndex;
+      //   // });
+      //   // console.log("up post: ", post);
+
+      // }else{
+      //   alert("No se puede subir de orden.");
+      // }
     },
     down: function down(type, item) {
-      alert("down(item) " + item.id);
+      alert("down(item). En construccion. " + item.id);
     },
     add: function add(type, item) {
-      alert("add(item) " + item.id);
+      alert("add(item). En construccion. " + item.id);
     },
     menu_name: function menu_name(menu_id) {
       var data = this.menus.filter(function (menu) {
@@ -49348,6 +49350,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -49368,6 +49373,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     getData: function getData() {
+      console.log('this.dhoras: ', this.dhoras);
       this.cuenta = this.dhoras.length;
       if (!this.sw_cambio) {
         this.mensaje = this.mensajeDefault;
@@ -49455,13 +49461,34 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _c("span", { staticClass: "container-fluid" }, [
-        _c("h3", { attrs: { id: "mensaje" } }, [_vm._v(_vm._s(_vm.mensaje))])
+      _c("div", { staticStyle: { "text-align": "center" } }, [
+        _c(
+          "div",
+          {
+            staticClass: "container",
+            staticStyle: {
+              "text-align": "center",
+              "font-size": "18px",
+              color: "black"
+            }
+          },
+          [
+            _vm._v(
+              "\n            Disponibilidad Horaria del Docente:  " +
+                _vm._s(_vm.wdocente) +
+                "\n        "
+            )
+          ]
+        )
       ]),
       _vm._v(" "),
       _vm.sw_cambio
         ? _c("span", [
             _c("div", { staticStyle: { "text-align": "center" } }, [
+              _c("h3", { attrs: { id: "mensaje" } }, [
+                _vm._v(_vm._s(_vm.mensaje))
+              ]),
+              _vm._v(" "),
               _c("button", { on: { click: _vm.save } }, [
                 _vm._v(
                   "Grabar " + _vm._s(_vm.cuenta) + " franjas seleccionadas"

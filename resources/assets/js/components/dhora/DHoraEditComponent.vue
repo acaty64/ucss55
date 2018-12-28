@@ -1,14 +1,17 @@
 <template>
   <div class="container">
     <div class="row">
-    <span class="container-fluid">
-      <h3 id="mensaje">{{ mensaje }}</h3>
-    </span>
-    <span v-if="sw_cambio">
-      <div style="text-align: center;">
-        <button @click="save">Grabar {{ cuenta }} franjas seleccionadas</button>
-      </div>
-    </span>
+        <div style="text-align: center;">
+          <div class="container" style="text-align: center; font-size: 18px; color: black">
+              Disponibilidad Horaria del Docente:  {{ wdocente }}
+          </div>
+        </div>
+      <span v-if="sw_cambio">
+        <div style="text-align: center;">
+          <h3 id="mensaje">{{ mensaje }}</h3>
+          <button @click="save">Grabar {{ cuenta }} franjas seleccionadas</button>
+        </div>
+      </span>
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
           <div class="panel-body">
@@ -61,7 +64,7 @@
             'dhoras', 
             'rhoras',
             'docente_id', 
-            'wdocente' 
+            'wdocente',
           ],
     data(){
       return {
@@ -74,6 +77,7 @@
     },
     methods:{
       getData: function () {
+console.log('this.dhoras: ', this.dhoras);
         this.cuenta = this.dhoras.length;
         if(!this.sw_cambio){
           this.mensaje = this.mensajeDefault;
