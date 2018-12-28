@@ -1,7 +1,7 @@
 <template>
     <div id="registrations" dusk="dcursoregistrations-component">
         <div class="summary">
-            <span v-if="total > 0">
+            <span v-if="total > 0 && sw_cambio">
                 <button @click="save">Grabar cursos seleccionados</button>
             </span>
             <h3>Cursos Seleccionados</h3>
@@ -16,7 +16,7 @@
 
 <script>
     export default {
-        props: ['registrations'],
+        props: ['registrations', 'sw_cambio'],
         methods: {
             unregister(registration) {
                 this.$emit('itemUnregistered', registration);

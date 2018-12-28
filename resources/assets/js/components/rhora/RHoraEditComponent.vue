@@ -4,10 +4,8 @@
     <span class="container-fluid">
       <p id="mensaje">{{ mensaje }}</p>
     </span>
-    <div style="text-align: center;">
-      <div v-if="sw_modificado">
+    <div v-if="sw_modificado" style="text-align: center;">
         <button @click="save">Grabar modificaciones</button>
-      </div>
     </div>
   </div>
   <div class="panel-body">

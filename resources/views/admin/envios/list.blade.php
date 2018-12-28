@@ -35,7 +35,7 @@
 
  					</td>
  					<td>
- 						@if($envio->sw_rpta == 1)
+ 						@if($envio->sw_rpta1 == 1 && $envio->sw_rpta2 == 1)
  							<a href="#" class="btn btn-success" data-toggle="tooltip" title="El docente respondió"><span class="glyphicon glyphicon-ok" aria-hidden='true'></span></a>
  						@else
  							<a href="#" class="btn btn-danger" data-toggle="tooltip" title="El docente no ha respondido"><span class="glyphicon glyphicon-remove" aria-hidden='true'></span></a>

@@ -65,6 +65,7 @@
             'sede_id',
             'docente_id', 
             'sw_cambio', 
+            'wdocente'
           ],
     data(){
       return {

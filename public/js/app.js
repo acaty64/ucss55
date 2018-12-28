@@ -47817,6 +47817,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -47829,7 +47843,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.getData();
     },
 
-    props: ['docente_id', 'facultad_id', 'sede_id'],
+    props: ['docente_id', 'facultad_id', 'sede_id', 'sw_cambio', 'wdocente'],
 
     components: {
         appGrupo: __WEBPACK_IMPORTED_MODULE_1__DCursoGrupo_vue___default.a,
@@ -47842,13 +47856,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             URLdomain: window.location.host,
             protocol: window.location.protocol,
             items: [],
-            // facultad_id:0,
-            // sede_id:0,
-            // docente_id:0,
             grupos: [],
             grupo_id: 0,
 
-            registrations: []
+            registrations: [],
+            mensajeDefault: "La fecha límite de modificación ha expirado. Si necesita modificar su disponibilidad comuníquese con la dirección académica."
         };
     },
 
@@ -48406,7 +48418,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['registrations'],
+    props: ['registrations', 'sw_cambio'],
     methods: {
         unregister: function unregister(registration) {
             this.$emit('itemUnregistered', registration);
@@ -48435,7 +48447,7 @@ var render = function() {
     { attrs: { id: "registrations", dusk: "dcursoregistrations-component" } },
     [
       _c("div", { staticClass: "summary" }, [
-        _vm.total > 0
+        _vm.total > 0 && _vm.sw_cambio
           ? _c("span", [
               _c("button", { on: { click: _vm.save } }, [
                 _vm._v("Grabar cursos seleccionados")
@@ -48494,22 +48506,61 @@ var render = function() {
     "div",
     { attrs: { id: "app" } },
     [
-      _c("app-grupo", {
-        attrs: { grupos: _vm.grupos },
-        on: { changeGrupo: _vm.changeGrupo }
-      }),
+      _c("div", { staticStyle: { "text-align": "center" } }, [
+        _c(
+          "div",
+          {
+            staticClass: "container",
+            staticStyle: {
+              "text-align": "center",
+              "font-size": "18px",
+              color: "black"
+            }
+          },
+          [
+            _vm._v(
+              "\n          Disponibilidad de Cursos del Docente:  " +
+                _vm._s(_vm.wdocente) +
+                "\n      "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        !_vm.sw_cambio
+          ? _c("span", [
+              _c("div", { staticStyle: { "text-align": "center" } }, [
+                _c("h3", { attrs: { id: "mensaje" } }, [
+                  _vm._v(_vm._s(_vm.mensajeDefault))
+                ])
+              ])
+            ])
+          : _vm._e()
+      ]),
       _vm._v(" "),
-      _c("app-registration", {
-        attrs: {
-          items: _vm.unregisteredItems,
-          URLdomain: _vm.URLdomain,
-          protocol: _vm.protocol
-        },
-        on: { itemRegistered: _vm.itemRegistered }
-      }),
+      _vm.sw_cambio
+        ? _c(
+            "span",
+            [
+              _c("app-grupo", {
+                attrs: { grupos: _vm.grupos },
+                on: { changeGrupo: _vm.changeGrupo }
+              }),
+              _vm._v(" "),
+              _c("app-registration", {
+                attrs: {
+                  items: _vm.unregisteredItems,
+                  URLdomain: _vm.URLdomain,
+                  protocol: _vm.protocol
+                },
+                on: { itemRegistered: _vm.itemRegistered }
+              })
+            ],
+            1
+          )
+        : _vm._e(),
       _vm._v(" "),
       _c("app-registrations", {
-        attrs: { registrations: _vm.registrations },
+        attrs: { registrations: _vm.registrations, sw_cambio: _vm.sw_cambio },
         on: { itemUnregistered: _vm.itemUnregistered, save: _vm.save }
       })
     ],
@@ -49365,7 +49416,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     this.getData();
   },
 
-  props: ['facultad_id', 'sede_id', 'docente_id', 'sw_cambio'],
+  props: ['facultad_id', 'sede_id', 'docente_id', 'sw_cambio', 'wdocente'],
   data: function data() {
     return {
       item: [],
@@ -49779,8 +49830,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -49953,15 +50002,13 @@ var render = function() {
         _c("p", { attrs: { id: "mensaje" } }, [_vm._v(_vm._s(_vm.mensaje))])
       ]),
       _vm._v(" "),
-      _c("div", { staticStyle: { "text-align": "center" } }, [
-        _vm.sw_modificado
-          ? _c("div", [
-              _c("button", { on: { click: _vm.save } }, [
-                _vm._v("Grabar modificaciones")
-              ])
+      _vm.sw_modificado
+        ? _c("div", { staticStyle: { "text-align": "center" } }, [
+            _c("button", { on: { click: _vm.save } }, [
+              _vm._v("Grabar modificaciones")
             ])
-          : _vm._e()
-      ])
+          ])
+        : _vm._e()
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "panel-body" }, [

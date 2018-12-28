@@ -122,11 +122,14 @@ class DCursoController extends Controller
         $docente = User::findOrFail($docente_id);
         $facultad_id = \Session::get('facultad_id');
         $sede_id = \Session::get('sede_id');
+        $check = User::editable('disp',$docente_id);
+
         return view('admin.dcurso.edit')
                 ->with('docente_id',$docente_id)
                 ->with('facultad_id', $facultad_id)
                 ->with('sede_id', $sede_id)
-                ->with('docente', $docente);        
+                ->with('wdocente', $docente->datauser->wdocente())
+                ->with('sw_cambio', $check);        
     }
     public function bkedit($docente_id)
     {

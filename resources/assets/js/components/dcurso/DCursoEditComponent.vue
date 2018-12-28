@@ -1,15 +1,29 @@
 <template>
-  <div id="app">  
-      <app-grupo @changeGrupo="changeGrupo" :grupos="grupos"></app-grupo>
-      <app-registration 
-        @itemRegistered="itemRegistered" 
-        :items="unregisteredItems"
-        :URLdomain="URLdomain"
-        :protocol="protocol"></app-registration>
+  <div id="app"> 
+      <div style="text-align: center;">
+        <div class="container" style="text-align: center; font-size: 18px; color: black">
+            Disponibilidad de Cursos del Docente:  {{ wdocente }}
+        </div>
+        <span v-if="!sw_cambio">
+          <div style="text-align: center;">
+            <h3 id="mensaje">{{ mensajeDefault }}</h3>
+          </div>
+        </span>      
+      </div>
+      <span v-if="sw_cambio">      
+        <app-grupo @changeGrupo="changeGrupo" :grupos="grupos"></app-grupo>
+        <app-registration 
+          @itemRegistered="itemRegistered" 
+          :items="unregisteredItems"
+          :URLdomain="URLdomain"
+          :protocol="protocol"
+          ></app-registration>
+      </span>
       <app-registrations 
         @itemUnregistered="itemUnregistered" 
         @save="save" 
-        :registrations="registrations"></app-registrations>
+        :registrations="registrations"
+        :sw_cambio="sw_cambio"></app-registrations>
   </div>
 </template>
 
@@ -24,7 +38,7 @@
           console.log('Dcurso-component mounted.');
           this.getData();
       },
-      props: ['docente_id', 'facultad_id', 'sede_id'],
+      props: ['docente_id', 'facultad_id', 'sede_id', 'sw_cambio', 'wdocente'],
 
       components: {
           appGrupo: Grupo,
@@ -37,13 +51,11 @@
               URLdomain: window.location.host,
               protocol: window.location.protocol,
               items:[],
-              // facultad_id:0,
-              // sede_id:0,
-              // docente_id:0,
               grupos:[],
               grupo_id:0,
               
               registrations: [],
+              mensajeDefault: "La fecha límite de modificación ha expirado. Si necesita modificar su disponibilidad comuníquese con la dirección académica.",
           }
       },
       computed: {
