@@ -11,11 +11,11 @@
 		sede_id="{{ $sede_id }}" 
 		docente_id="{{ $docente_id }}" 
 		sw_cambio="{{ $sw_cambio }}" 
-		:dhoras="{{ $dhoras }}" 
+{{-- 		:dhoras="{{ $dhoras }}" 
 		:rhoras="{{ $rhoras }}"
 		:cfranjas="{{ $cfranjas }}" 
 		:gfranjas="{{ $gfranjas }}"
-		wdocente="{{ $wdocente }}"
+		wdocente="{{ $wdocente }}" --}}
 		></Dhora_edit-component>
 @endsection
 

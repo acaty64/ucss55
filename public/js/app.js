@@ -49353,6 +49353,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -49360,33 +49365,58 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     this.getData();
   },
 
-  props: ['facultad_id', 'sede_id', 'sw_cambio', 'cfranjas', 'gfranjas', 'dhoras', 'rhoras', 'docente_id', 'wdocente'],
+  props: ['facultad_id', 'sede_id', 'docente_id', 'sw_cambio'],
   data: function data() {
     return {
       item: [],
       semana: ['lun', 'mar', 'mie', 'jue', 'vie', 'sab'],
       mensaje: "",
       mensajeDefault: "La fecha límite de modificación ha expirado. Si necesita modificar su disponibilidad comuníquese con la dirección académica.",
-      cuenta: 0
+      cuenta: 0,
+      cfranjas: [],
+      gfranjas: [],
+      dhoras: [],
+      rhoras: 0,
+      wdocente: ""
     };
   },
 
   methods: {
     getData: function getData() {
-      console.log('this.dhoras: ', this.dhoras);
-      this.cuenta = this.dhoras.length;
-      if (!this.sw_cambio) {
-        this.mensaje = this.mensajeDefault;
-      } else {
-        this.mensaje = "Debe seleccionar como mínimo: " + this.rhoras / 2 + " casillas.";
+      var _this = this;
+
+      var request = {
+        'docente_id': this.docente_id,
+        'facultad_id': this.facultad_id,
+        'sede_id': this.sede_id
       };
+      var URLdomain = window.location.host;
+      var protocol = window.location.protocol;
+      var url = protocol + '//' + URLdomain + '/api/dhoras/getData/';
+      axios.post(url, request).then(function (response) {
+        console.log('getData response.data: ', response.data);
+        _this.cfranjas = response.data.cfranjas;
+        _this.gfranjas = response.data.gfranjas;
+        _this.dhoras = response.data.dhoras;
+        _this.rhoras = response.data.rhoras;
+        _this.wdocente = response.data.wdocente;
+
+        // console.log('this.dhoras: ', this.dhoras);
+        _this.cuenta = _this.dhoras.length;
+        if (!_this.sw_cambio) {
+          _this.mensaje = _this.mensajeDefault;
+        } else {
+          _this.mensaje = "Debe seleccionar como mínimo: " + _this.rhoras / 2 + " casillas.";
+        };
+      }).catch(function (error) {
+        console.log(error);
+      });
     },
     on: function on(dia, gfranja) {
       var nDia = this.semana.findIndex(function (element) {
         return element == dia;
       }) + 1;
       var franja = 'D' + nDia + '_H' + gfranja['turno'] + gfranja['hora'];
-      // console.log('on: ',franja);
       this.dhoras.push(franja);
       this.cuenta = this.dhoras.length;
     },
@@ -49395,7 +49425,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return element == dia;
       }) + 1;
       var franja = 'D' + nDia + '_H' + gfranja['turno'] + gfranja['hora'];
-      // console.log('off: ',franja);
       var index = this.dhoras.indexOf(franja);
       if (index > -1) {
         this.dhoras.splice(index, 1);
@@ -49403,29 +49432,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }
     },
     existeFranja: function existeFranja(dia, gfranja) {
-      // console.log('existeFranja.gfranja:', gfranja);
       var cfranjas = Object.values(this.cfranjas);
       var nDia = this.semana.findIndex(function (element) {
         return element == dia;
       }) + 1;
       var franja = 'D' + nDia + '_H' + gfranja['turno'] + gfranja['hora'];
-      // console.log('existeFranja.franja: ', franja);
-      // console.log('existeFranja: ', cfranjas.includes(franja));
       return cfranjas.includes(franja);
     },
     disponible: function disponible(dia, gfranja) {
-      // console.log('disponible.dia:', dia);
       var nDia = this.semana.findIndex(function (element) {
         return element == dia;
       }) + 1;
-      // console.log('gfranja.constructor: ',gfranja.constructor);
       var franja = 'D' + nDia + '_H' + gfranja['turno'] + gfranja['hora'];
-      // console.log('disponible.franja: ', franja);
-      // console.log('disponible: ', this.dhoras.includes(franja));
       return this.dhoras.includes(franja);
     },
     save: function save() {
-      var _this = this;
+      var _this2 = this;
 
       if (this.cuenta >= this.rhoras / 2) {
         var request = {
@@ -49438,10 +49460,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var protocol = window.location.protocol;
         var url = protocol + '//' + URLdomain + '/api/dhoras/save/';
         axios.post(url, request).then(function (response) {
-          console.log(response.data);
-          _this.mensaje = "Registros grabados: " + response.data.contador;
+          console.log('save response.data: ', response.data);
+          _this2.mensaje = "Registros grabados: " + response.data.contador;
         }).catch(function (error) {
-          // this.mensaje = "Registros NO grabados. Error(EnvioComponent.vue)"
           console.log(error);
         });
       } else {
@@ -49482,6 +49503,16 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
+      !_vm.sw_cambio
+        ? _c("span", [
+            _c("div", { staticStyle: { "text-align": "center" } }, [
+              _c("h3", { attrs: { id: "mensaje" } }, [
+                _vm._v(_vm._s(_vm.mensajeDefault))
+              ])
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
       _vm.sw_cambio
         ? _c("span", [
             _c("div", { staticStyle: { "text-align": "center" } }, [
@@ -49501,8 +49532,6 @@ var render = function() {
       _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
         _c("div", { staticClass: "panel panel-default" }, [
           _c("div", { staticClass: "panel-body" }, [
-            _c("p", [_vm._v("Checks: " + _vm._s(_vm.cuenta))]),
-            _vm._v(" "),
             _c("table", [
               _c(
                 "tbody",

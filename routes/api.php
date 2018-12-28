@@ -11,6 +11,10 @@ Route::get('model/index/{page?}', [
  * Dhora's Api Route
  *
  */
+Route::post('dhoras/getData', [
+		'as'	=> 'api.dhoras.getData',
+		'uses'	=> 'Api\DhoraController@getData',	
+	]);
 Route::post('dhoras/save', [
 		'as'	=> 'api.dhoras.save',
 		'uses'	=> 'Api\DhoraController@save',	

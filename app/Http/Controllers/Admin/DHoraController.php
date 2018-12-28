@@ -29,6 +29,10 @@ class DHoraController extends Controller
      */
     public function edit($user_id)
     {
+        $facultad_id = \Session::get('facultad_id');
+        $sede_id = \Session::get('sede_id');
+        $check = User::editable('disp',$user_id);
+
         if(\Session::get('ctype')=='Master' || 
             \Session::get('ctype')=='Administrador'){
             $editable = true;
@@ -38,66 +42,12 @@ class DHoraController extends Controller
 
         $user = User::findOrFail($user_id);
         if($user->rhora > 0 || $editable){
-                
-            $facultad_id = \Session::get('facultad_id');
-            $sede_id = \Session::get('sede_id');
-            
-            $franjas = Franja::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
-            if(!$franjas){
-                dd('No hay franjas');
-            }
-            
-            $turnos = $franjas->sortBy('turno')->groupBy('turno');
-            $gfranjas=array();
-            foreach ($turnos as $key_turno => $turno) {
-                $horas = $turno->where('turno',$key_turno)->sortBy('hora')->groupBy('hora');
-                foreach ($horas as $key_hora => $hora) {
-                    $xfranja = Franja::where('turno', $key_turno)
-                                    ->where('hora', $key_hora)
-                                    ->first();
-                    array_push($gfranjas, ['turno'=>$key_turno,'hora'=>$key_hora, 'wfranja'=>$xfranja->wfranja]);
-                }
-            }
-
-            $cfranjas = [];
-            foreach ($franjas as $franja) {
-                $campo = "D".$franja->dia.'_H'.$franja->turno.$franja->hora;
-                array_push($cfranjas, $campo);
-            }
-
-            $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();
-
-            $collect_dhoras = DHora::where('user_id', $user_id)->where('sede_id', $sede_id)->where('facultad_id', $facultad_id)->get();
-
-            $dhoras = [];
-            foreach ($collect_dhoras as $value) {
-                $xfranja = $value->wfranja;
-                array_push($dhoras, $xfranja);
-            }
-
-            $check = User::editable('disp',$user_id);
-            
-            $rhora = Rhora::where('facultad_id', $facultad_id)
-                        ->where('sede_id', $sede_id)
-                        ->where('user_id', $user_id)
-                        ->first();
-
-            if(!$rhora){
-                $rhoras = 0;
-            }else{
-                $rhoras = $rhora->rhoras;
-            }
             return view('admin.dhora.vue_edit')
-                ->with('sw_cambio', $check)
-                ->with('cfranjas', collect($cfranjas))
-                ->with('gfranjas', collect($gfranjas))
-                ->with('dhoras', collect($dhoras))
-                ->with('wdocente', $wdocente)
-                ->with('docente_id', $user_id)
-                ->with('rhoras', $rhoras)
-                ->with('facultad_id', $facultad_id)
-                ->with('sede_id', $sede_id)
-                ;
+                    ->with('facultad_id', $facultad_id)
+                    ->with('sede_id', $sede_id)
+                    ->with('docente_id', $user_id)
+                    ->with('sw_cambio', $check)
+                    ;
         }else{
             Flash::warning('El docente '.$user->name.' no tiene requerimiento de horario');
             return back();
