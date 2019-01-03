@@ -49830,6 +49830,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -49847,7 +49856,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       nPage: 1,
       offset: 4,
       pagination: [],
-      sw_modificado: false
+      sw_modificado: false,
+      search: "",
+      data_work: []
     };
   },
 
@@ -49875,7 +49886,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.sw_modificado = false;
       var data = Object.values(this.data);
       for (var i = data.length - 1; i >= 0; i--) {
-        if (data[i]['rhoras'] != this.allData[i]['rhoras']) {
+        if (this.allData[i]['rhoras'] > 0) {
           this.sw_modificado = true;
         }
       }
@@ -49910,6 +49921,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getData: function getData() {
       this.allData = Object.values(this.data);
       this.pagination = this.data_pages;
+      this.data_work = this.allData;
       this.getDataPage(1);
     },
     getDataPage: function getDataPage(nPage) {
@@ -49920,7 +49932,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       } else {
         this.pagination.to = this.pagination.total;
       }
-      this.users = this.allData.filter(function (user) {
+      this.users = this.data_work.filter(function (user) {
         return user.nPage == nPage;
       });
       this.users = this.users.sort(function (a, b) {
@@ -49954,9 +49966,52 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         // this.mensaje = "Registros NO grabados. Error(RhoraComponent.vue)"
         console.log(error);
       });
+    },
+    filtro: function filtro() {
+      var cadena = this.search;
+      if (cadena == "") {
+        this.data_work = this.allData;
+      } else {
+        this.data_work = this.allData.filter(function (user) {
+          var nn = user.wdocente.toUpperCase().indexOf(cadena.toUpperCase());
+          if (nn > -1) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+      }
+      this.rePage();
+      this.changePage(1);
+    },
+    rePage: function rePage() {
+      this.data_work = this.data_work.sort(function (a, b) {
+        if (a['wdocente'] > b['wdocente']) {
+          return 1;
+        } else if (a['wdocente'] < b['wdocente']) {
+          return -1;
+        }
+        return 0;
+      });
+      var row = 0;
+      var rowPage = 0;
+      var nPage = 1;
+      this.pagination.total = this.data_work.length;
+      for (var i = 0; i <= this.pagination.total - 1; i++) {
+        // console.log(this.data_work[i]);
+        this.data_work[i].row = ++row;
+        this.data_work[i].rowPage = ++rowPage;
+        if (rowPage == this.pagination.per_page) {
+          rowPage = 0;
+          ++nPage;
+        }
+        this.data_work[i].nPage = nPage;
+      }
+      this.pagination.last_page = nPage;
     }
   },
   computed: {
+
     /* COMPUTED for pagination INIT */
     isActived: function isActived() {
       return this.pagination.current_page;
@@ -50008,7 +50063,49 @@ var render = function() {
               _vm._v("Grabar modificaciones")
             ])
           ])
-        : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticStyle: { "text-align": "center" } }, [
+        _vm._v("\n      Filtro: "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.search,
+              expression: "search"
+            }
+          ],
+          attrs: { type: "text" },
+          domProps: { value: _vm.search },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.search = $event.target.value
+            }
+          }
+        }),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-success",
+            attrs: { "data-toggle": "tooltip", title: "Mínimo" },
+            on: {
+              click: function($event) {
+                _vm.filtro()
+              }
+            }
+          },
+          [
+            _c("span", {
+              staticClass: "glyphicon glyphicon-search",
+              attrs: { "aria-hidden": "true", id: "filter" }
+            })
+          ]
+        )
+      ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "panel-body" }, [
@@ -50026,93 +50123,100 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(user.wdocente))]),
                 _vm._v(" "),
-                _c("td", { staticStyle: { "text-align": "center" } }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-danger",
-                      attrs: { "data-toggle": "tooltip", title: "Mínimo" },
-                      on: {
-                        click: function($event) {
-                          _vm.minimun(user)
+                _c("td", [
+                  _c("span", { staticStyle: { "text-align": "center" } }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { "data-toggle": "tooltip", title: "Mínimo" },
+                        on: {
+                          click: function($event) {
+                            _vm.minimun(user)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c("span", {
-                        staticClass: "glyphicon glyphicon-backward",
-                        attrs: { "aria-hidden": "true", id: "minimun" }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-danger",
-                      attrs: {
-                        "data-toggle": "tooltip",
-                        title: "Menos 2 horas"
                       },
-                      on: {
-                        click: function($event) {
-                          _vm.minus(user)
+                      [
+                        _c("span", {
+                          staticClass: "glyphicon glyphicon-backward",
+                          attrs: { "aria-hidden": "true", id: "minimun" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          title: "Menos 2 horas"
+                        },
+                        on: {
+                          click: function($event) {
+                            _vm.minus(user)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c("span", {
-                        staticClass: "glyphicon glyphicon-minus-sign",
-                        attrs: { "aria-hidden": "true", id: "minus" }
-                      })
-                    ]
-                  )
+                      },
+                      [
+                        _c("span", {
+                          staticClass: "glyphicon glyphicon-minus-sign",
+                          attrs: { "aria-hidden": "true", id: "minus" }
+                        })
+                      ]
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("td", { staticStyle: { "text-align": "center" } }, [
                   _vm._v(
-                    "\n            " + _vm._s(user.rhoras) + "\n          "
+                    "\n              " + _vm._s(user.rhoras) + "\n            "
                   )
                 ]),
                 _vm._v(" "),
-                _c("td", { staticStyle: { "text-align": "center" } }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success",
-                      attrs: { "data-toggle": "tooltip", title: "Más 2 horas" },
-                      on: {
-                        click: function($event) {
-                          _vm.plus(user)
+                _c("td", [
+                  _c("span", { staticStyle: { "text-align": "center" } }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          title: "Más 2 horas"
+                        },
+                        on: {
+                          click: function($event) {
+                            _vm.plus(user)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c("span", {
-                        staticClass: "glyphicon glyphicon-plus-sign",
-                        attrs: { "aria-hidden": "true", id: "plus" }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success",
-                      attrs: { "data-toggle": "tooltip", title: "Máximo" },
-                      on: {
-                        click: function($event) {
-                          _vm.maximun(user)
+                      },
+                      [
+                        _c("span", {
+                          staticClass: "glyphicon glyphicon-plus-sign",
+                          attrs: { "aria-hidden": "true", id: "plus" }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success",
+                        attrs: { "data-toggle": "tooltip", title: "Máximo" },
+                        on: {
+                          click: function($event) {
+                            _vm.maximun(user)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c("span", {
-                        staticClass: "glyphicon glyphicon-forward",
-                        attrs: { "aria-hidden": "true", id: "maximun" }
-                      })
-                    ]
-                  )
+                      },
+                      [
+                        _c("span", {
+                          staticClass: "glyphicon glyphicon-forward",
+                          attrs: { "aria-hidden": "true", id: "maximun" }
+                        })
+                      ]
+                    )
+                  ])
                 ])
               ])
             })

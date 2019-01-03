@@ -4,8 +4,11 @@
     <span class="container-fluid">
       <p id="mensaje">{{ mensaje }}</p>
     </span>
-    <div v-if="sw_modificado" style="text-align: center;">
+    <div v-if="sw_modificado" style="text-align: center">
         <button @click="save">Grabar modificaciones</button>
+    </div>
+    <div style="text-align: center">
+      Filtro: <input type="text" v-model="search"><button @click="filtro()" class="btn btn-success" data-toggle="tooltip" title="Mínimo"><span class="glyphicon glyphicon-search" aria-hidden='true' id='filter'></span></button>
     </div>
   </div>
   <div class="panel-body">
@@ -18,21 +21,27 @@
       </thead>
       <tbody>
         <tr v-for="user in users">
-          <td>{{ user.row }}</td>
-          <!-- <td>{{ user.id }}</td> -->
-          <td>{{ user.wdocente }}</td>
-          <td style="text-align: center">
-            <button @click="minimun(user)" class="btn btn-danger" data-toggle="tooltip" title="Mínimo"><span class="glyphicon glyphicon-backward" aria-hidden='true' id='minimun'></span></button>
-            <button @click="minus(user)" class="btn btn-danger" data-toggle="tooltip" title="Menos 2 horas"><span class="glyphicon glyphicon-minus-sign" aria-hidden='true' id='minus'></span></button>
-          </td>
-          <td style="text-align: center">
-            <!-- <input type="" v-model="user.rhoras"> -->
-            {{ user.rhoras }}
-          </td>
-          <td style="text-align: center">
-            <button @click="plus(user)" class="btn btn-success" data-toggle="tooltip" title="Más 2 horas"><span class="glyphicon glyphicon-plus-sign" aria-hidden='true' id='plus'></span></button>
-            <button @click="maximun(user)" class="btn btn-success" data-toggle="tooltip" title="Máximo"><span class="glyphicon glyphicon-forward" aria-hidden='true' id='maximun'></span></button>
-          </td>
+          <!-- <span v-if="filtro(user)">           -->
+            <td>{{ user.row }}</td>
+            <!-- <td>{{ user.id }}</td> -->
+            <td>{{ user.wdocente }}</td>
+            <td>
+              <span style="text-align: center">              
+                <button @click="minimun(user)" class="btn btn-danger" data-toggle="tooltip" title="Mínimo"><span class="glyphicon glyphicon-backward" aria-hidden='true' id='minimun'></span></button>
+                <button @click="minus(user)" class="btn btn-danger" data-toggle="tooltip" title="Menos 2 horas"><span class="glyphicon glyphicon-minus-sign" aria-hidden='true' id='minus'></span></button>
+              </span>
+            </td>
+            <td style="text-align: center">
+              <!-- <input type="" v-model="user.rhoras"> -->
+              {{ user.rhoras }}
+            </td>
+            <td>
+              <span style="text-align: center">              
+                <button @click="plus(user)" class="btn btn-success" data-toggle="tooltip" title="Más 2 horas"><span class="glyphicon glyphicon-plus-sign" aria-hidden='true' id='plus'></span></button>
+                <button @click="maximun(user)" class="btn btn-success" data-toggle="tooltip" title="Máximo"><span class="glyphicon glyphicon-forward" aria-hidden='true' id='maximun'></span></button>
+              </span>
+            </td>
+          <!-- </span> -->
         </tr>
       </tbody>
     </table>
@@ -75,7 +84,9 @@
         nPage: 1,
         offset: 4,
         pagination: [],
-        sw_modificado: false,    
+        sw_modificado: false,
+        search: "", 
+        data_work: [], 
       }
     },
     methods:{
@@ -101,7 +112,7 @@
         this.sw_modificado = false;
         var data = Object.values(this.data);
         for (var i = data.length - 1; i >= 0; i--) {
-          if(data[i]['rhoras'] != this.allData[i]['rhoras']){
+          if(this.allData[i]['rhoras'] > 0){
             this.sw_modificado = true;
           }
         }
@@ -136,6 +147,7 @@
       getData: function () {
         this.allData = Object.values(this.data);
         this.pagination = this.data_pages;
+        this.data_work = this.allData;
         this.getDataPage(1);
       },
       getDataPage: function (nPage) {
@@ -146,7 +158,7 @@
         }else{
           this.pagination.to = this.pagination.total;
         }
-        this.users = this.allData.filter(function(user) { 
+        this.users = this.data_work.filter(function(user) { 
             return user.nPage == nPage;
           });
         this.users = this.users.sort(function(a,b){
@@ -179,8 +191,51 @@
             console.log(error);
         });
       },
+      filtro(){
+        var cadena = this.search;
+        if(cadena == ""){
+          this.data_work = this.allData;
+        }else{        
+          this.data_work = this.allData.filter(function(user) {        
+            var nn = user.wdocente.toUpperCase().indexOf(cadena.toUpperCase()); 
+            if( nn > -1 ){
+              return true;
+            }else{
+              return false;
+            }
+          });
+        }
+        this.rePage();
+        this.changePage(1);
+      },
+      rePage(){
+        this.data_work = this.data_work.sort(function (a,b){
+          if( a['wdocente'] > b['wdocente']){
+              return 1;
+          }else if( a['wdocente'] < b['wdocente'] ){
+              return -1;
+          }
+          return 0;          
+        });
+        var row = 0;
+        var rowPage = 0;
+        var nPage = 1;
+        this.pagination.total = this.data_work.length;
+        for (var i = 0; i <= this.pagination.total-1; i++) {
+// console.log(this.data_work[i]);
+          this.data_work[i].row = ++row;
+          this.data_work[i].rowPage = ++rowPage;
+          if(rowPage == this.pagination.per_page){
+            rowPage = 0;
+            ++nPage;
+          }
+          this.data_work[i].nPage = nPage;
+        }
+        this.pagination.last_page = nPage;
+      },
     },
     computed: { 
+
       /* COMPUTED for pagination INIT */
       isActived : function() {    
         return this.pagination.current_page;    
