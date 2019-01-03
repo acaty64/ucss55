@@ -33,11 +33,11 @@ class MenuTypeTableSeeder extends Seeder
         $type = Type::find(3);
         $type->menus()->sync([
 1 => ['level' => 0, 'order' => 0, ],
-9 => ['level' => 0, 'order' => 1, ],
+// 9 => ['level' => 0, 'order' => 1, ],
 10 => ['level' => 0, 'order' => 2, ],
 11 => ['level' => 1, 'order' => 2, ],
 12 => ['level' => 2, 'order' => 2, ],
-13 => ['level' => 0, 'order' => 3, ],
+// 13 => ['level' => 0, 'order' => 3, ],
 
             ]);
         $type = Type::find(4);

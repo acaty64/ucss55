@@ -12,6 +12,10 @@ Route::get('/pagination', [
 	'as'	=> 'pagination',
 	'uses'	=> 'HomeController@pagination']);
 
+Route::get('/dbf/import', [
+	'as'	=> 'dbf.import',
+	'uses'	=> 'DBF\DBFController@import']);
+
 Route::get('/', function () {
     \Session()->put('facultad_id', 0);
     \Session()->put('sede_id', 0);

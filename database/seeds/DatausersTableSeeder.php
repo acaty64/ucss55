@@ -28,9 +28,18 @@ class DataUsersTableSeeder extends Seeder
 
         $users = User::where('id','>',1)->get();
         foreach ($users as $user) {
+            $pos = strpos($user->name, ' ');
+
+            $wdoc1 = substr ( $user->name , 0 , $pos );
+            $wdoc2 = substr ( $user->name , $pos );
+            $wdoc3 = $wdoc2;
+
             factory(App\DataUser::class)->create([
                     'user_id' => $user->id,
                     'cdocente' => str_pad($user->id, 6, '0', STR_PAD_LEFT),
+                    'wdoc1' => $wdoc1,
+                    'wdoc2' => $wdoc2,
+                    'wdoc3' => $wdoc3,    
                     'email1' => $user->email,
                 ]);    
         }

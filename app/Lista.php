@@ -28,7 +28,11 @@ class Lista extends Model
         //      Respuesta: fecha de respuesta
         $facultad_id = Session::get('facultad_id');
         $sede_id = Session::get('sede_id');
-        $accesos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id','>',1)->get();
+        // $accesos = Acceso::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->where('user_id','>',1)->get();
+        $accesos = Acceso::join('rhoras as nick', 'nick.user_id', '=', 'accesos.user_id')
+                    ->select('accesos.*')
+                    ->where('nick.rhoras','>',0)
+                    ->get();
         $contador = 0;
         $xlista = [];
         $registro = collect([]);

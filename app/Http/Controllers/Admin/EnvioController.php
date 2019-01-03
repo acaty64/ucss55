@@ -49,8 +49,8 @@ class EnvioController extends Controller
                         // 'bcc'=>auth()->user()->email,
                         // 'auth_name' => auth()->user()->datauser->wdocente(),
                         // 'tx_need'=>$correo->menvio->tx_need,
-                        'cfacultad' => \Session::get('wfacultad'),
-                        'csede' => \Session::get('wsede')
+                        'wfacultad' => \Session::get('wfacultad'),
+                        'wsede' => \Session::get('wsede')
                     ];
                 $request = [
                         'output' => 'email',

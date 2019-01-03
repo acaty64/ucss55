@@ -10,6 +10,10 @@ Su usuario es: {{ $data['email_to'] }}
 
 Su contraseña es: el número de su DNI.
 
+Seleccione la facultad: {{ $data['wfacultad'] }}
+
+y la sede: {{ $data['wsede'] }}
+
 
 @component('mail::button', ['url' => 'http://www.ucssfcec.xyz'])
 Acceso al módulo

@@ -35,12 +35,16 @@
 
  					</td>
  					<td>
- 						@if($envio->sw_rpta1 == 1 && $envio->sw_rpta2 == 1)
- 							<a href="#" class="btn btn-success" data-toggle="tooltip" title="El docente respondió"><span class="glyphicon glyphicon-ok" aria-hidden='true'></span></a>
+ 						@if($envio->sw_rpta1 == 1 )
+ 							<a href="#" class="btn btn-success" data-toggle="tooltip" title="Disponibilidad Horaria"><span class="glyphicon glyphicon-calendar" aria-hidden='true'></span></a>
  						@else
- 							<a href="#" class="btn btn-danger" data-toggle="tooltip" title="El docente no ha respondido"><span class="glyphicon glyphicon-remove" aria-hidden='true'></span></a>
+ 							<a href="#" class="btn btn-danger" data-toggle="tooltip" title="El docente no ha respondido Disponibilidad Horaria"><span class="glyphicon glyphicon-calendar" aria-hidden='true'></span></a>
  						@endif
-
+ 						@if($envio->sw_rpta2 == 1 )
+ 							<a href="#" class="btn btn-success" data-toggle="tooltip" title="Disponibilidad de Cursos"><span class="glyphicon glyphicon-list-alt" aria-hidden='true'></span></a>
+ 						@else
+ 							<a href="#" class="btn btn-danger" data-toggle="tooltip" title="El docente no ha respondido Disponibilidad de Cursos"><span class="glyphicon glyphicon-list-alt" aria-hidden='true'></span></a>
+ 						@endif
  					</td>
 	 			</tr>
  			@endforeach 			

@@ -6,6 +6,7 @@ use App\Acceso;
 use App\Denvio;
 use App\Menvio;
 use App\Rhora;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Session;
@@ -145,7 +146,11 @@ class User extends Authenticatable
                         $ultimo = $denvio->menvio->flimite;
                     }
                 }
-                if( $ultimo > date('Y-m-d')) {
+                $hoy = Carbon::now()->format('Y-m-d');
+                $limite = new Carbon($ultimo);
+// dd($hoy, $limite->format('Y-m-d'));
+
+                if( $limite->format('Y-m-d') >= $hoy) {
                     $editable = true;
                 }else{
                     $editable = false;
