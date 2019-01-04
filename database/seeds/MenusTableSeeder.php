@@ -18,7 +18,7 @@ Menu::create(['id' => 3, 'name' => 'Generar', 'sw_auth' => false, 'help' => 'Gen
 Menu::create(['id' => 4, 'name' => 'Generar Menus', 'href' => 'menu/generar', 'sw_auth' => true, ]);
 Menu::create(['id' => 5, 'name' => 'Generar Ayuda', 'href' => 'menu/generarhelp', 'sw_auth' => true, ]);
 Menu::create(['id' => 6, 'name' => 'Tipos de Usuarios', 'href' => 'type/index', 'sw_auth' => true, 'help' => 'CRUD Tipo de usuario.', ]);
-Menu::create(['id' => 7, 'name' => 'Asignacion de Menus', 'href' => 'menutype/index', 'sw_auth' => true, 'help' => 'Asignación de opciones de menú a Tipo de Usuario.', ]);
+Menu::create(['id' => 7, 'name' => 'Asignacion de Menus', 'href' => 'menutype/edit', 'sw_auth' => true, 'help' => 'Asignación de opciones de menú a Tipo de Usuario.', ]);
 
 Menu::create(['id' => 8, 'name' => 'Lista de Usuarios', 'href' => 'user/index', 'sw_auth' => true, 'help' => 'Lista de todos los usuarios de la facultad y sede seleccionada.', ]);
 

@@ -46513,6 +46513,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -46529,11 +46547,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       menutypes: [],
       ntype: 1,
       grid: [],
-      last_item: 0
+      last_item: 0,
+      new_menu: false,
+      modify: false,
+      nivel_add: 0,
+      preitem: []
     };
   },
 
   methods: {
+    renumber: function renumber() {
+      var order = 0;
+      for (var i = 0; i <= this.grid.length - 1; i++) {
+        this.grid[i].order = order;
+        var level = 0;
+        if (this.grid[i].data) {
+          for (var j = 0; j <= this.grid[i].data.length - 1; j++) {
+            this.grid[i].data[j].order = order;
+            this.grid[i].data[j].level = ++level;
+          }
+        }
+        order = order + 1;
+      }
+    },
+    view_new: function view_new(nivel, item) {
+      this.nivel_add = nivel;
+      this.preitem = item;
+      alert("view_new. En construccion. ");
+      this.new_menu = true;
+    },
     destroy: function destroy(type, nivel0, nivel1) {
       if (type == 0) {
         var id = nivel0.menu_id;
@@ -46555,11 +46597,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.grid = [];
         this.grid = new_data;
       }
+      this.modify = true;
     },
 
     getIndex: function getIndex(item, items) {
-      console.log('item: ', item);
-      console.log('items: ', items);
+      // console.log('item: ', item);
+      // console.log('items: ', items);
       var index = 0;
       for (var i = items.length - 1; i >= 0; i--) {
         if (items[i].id == item.id) {
@@ -46568,8 +46611,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         index++;
       }
     },
-
     up: function up(type, item, items) {
+      this.modify = true;
       alert("up(item). En construccion. " + item.id);
       // var nIndex = this.getIndex(item, items);
       // console.log("up item.index: ", nIndex);
@@ -46591,10 +46634,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       // }
     },
     down: function down(type, item) {
+      this.modify = true;
       alert("down(item). En construccion. " + item.id);
     },
     add: function add(type, item) {
+      this.view_new(1, item);
+      this.modify = true;
       alert("add(item). En construccion. " + item.id);
+    },
+    save: function save() {
+      this.renumber();
+      this.modify = false;
+      this.new_menu = false;
+      alert("save(). En construccion. ");
+      // this.getData();
     },
     menu_name: function menu_name(menu_id) {
       var data = this.menus.filter(function (menu) {
@@ -46633,15 +46686,52 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
       };
       this.grid = nivel0;
-      // var grid = nivel0;
-      // this.last_item = grid.length;
       this.last_item = this.grid.length;
-      // console.log("app.$vm: ", app.$el);
-      // Vue.nextTick(function (grid) {
-      //   app.$el.grid === grid; // true
-      // });
     },
 
+    check_menu: function check_menu(item) {
+      var nivel = this.nivel_add;
+      var preitem = this.preitem;
+      if (nivel == 0) {
+        // Busca order
+        var order = 0;
+        for (var i = 0; i <= this.grid.length - 1; i++) {
+          if (this.grid[i].order > order) {
+            order = this.grid[i].order;
+          }
+        }
+        var new_item = {
+          id: 'new',
+          level: this.nivel_add,
+          menu_id: item.id,
+          order: order,
+          type_id: this.ntype
+        };
+        this.grid.push(new_item);
+      } else {
+        // Busca level
+        var level = 0;
+        for (var i = 0; i <= this.preitem.data.length - 1; i++) {
+          if (this.preitem.data[i].level > level) {
+            level = this.preitem.data[i].level;
+          }
+        }
+        for (var i = this.grid.length - 1; i >= 0; i--) {
+          if (this.grid[i].id == this.preitem.id) {
+            var new_item = {
+              id: 'new',
+              level: ++level,
+              menu_id: item.id,
+              order: this.preitem.order,
+              type_id: this.ntype
+            };
+            this.grid[i].data.push(new_item);
+          }
+        }
+      }
+      this.new_menu = false;
+      this.modify = true;
+    },
     checked_type: function checked_type() {
       for (var i = this.types.length - 1; i >= 0; i--) {
         this.types[i].checked = false;
@@ -46655,6 +46745,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.checked_type();
       this.checked_menu();
       this.setGrid();
+      this.new_menu = false;
+      this.modify = false;
     },
     checked_menu: function checked_menu() {
       var _this2 = this;
@@ -46811,107 +46903,23 @@ var render = function() {
               )
             ])
           })
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "container" },
-      _vm._l(_vm.grid, function(nivel0) {
-        return _c("span", [
-          _c("div", { staticClass: "row row-body" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-sm-4" }, [
-                _vm._v(
-                  _vm._s(_vm.menu_name(nivel0.menu_id)) +
-                    " (href: " +
-                    _vm._s(_vm.menu_href(nivel0.menu_id)) +
-                    ")"
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-sm-4" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-sm-4" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-danger",
-                    attrs: {
-                      id: "destroy" + nivel0.menu_id,
-                      "data-toggle": "tooltip",
-                      title: "Elimina registro"
-                    },
-                    on: {
-                      click: function($event) {
-                        _vm.destroy(0, nivel0, 0)
-                      }
-                    }
-                  },
-                  [_c("span", { staticClass: "glyphicon glyphicon-trash" })]
-                ),
-                _vm._v(" "),
+        ),
+        _vm._v(" "),
+        _c("div", [
+          !_vm.new_menu && !_vm.modify
+            ? _c("span", [
                 _c(
                   "button",
                   {
                     staticClass: "btn btn-success",
                     attrs: {
-                      id: "up" + nivel0.menu_id,
+                      id: "add_menu",
                       "data-toggle": "tooltip",
-                      title: "Sube de Orden"
+                      title: "Agrega Menu"
                     },
                     on: {
                       click: function($event) {
-                        _vm.up(0, nivel0, _vm.grid)
-                      }
-                    }
-                  },
-                  [
-                    _c("span", {
-                      staticClass: "glyphicon glyphicon-arrow-up",
-                      attrs: { "aria-hidden": "true" }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-success",
-                    attrs: {
-                      id: "down" + nivel0.menu_id,
-                      "data-toggle": "tooltip",
-                      title: "Baja de Orden"
-                    },
-                    on: {
-                      click: function($event) {
-                        _vm.down(0, nivel0)
-                      }
-                    }
-                  },
-                  [
-                    _c("span", {
-                      staticClass: "glyphicon glyphicon-arrow-down",
-                      attrs: { "aria-hidden": "true" }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-warning",
-                    attrs: {
-                      id: "add" + nivel0.menu_id,
-                      "data-toggle": "tooltip",
-                      title: "Agrega Opción Nivel 1"
-                    },
-                    on: {
-                      click: function($event) {
-                        _vm.add(0, nivel0)
+                        _vm.view_new(0, "")
                       }
                     }
                   },
@@ -46923,103 +46931,315 @@ var render = function() {
                   ]
                 )
               ])
-            ]),
-            _vm._v(" "),
-            nivel0.data
-              ? _c(
-                  "div",
-                  { staticClass: "row" },
-                  _vm._l(nivel0.data, function(nivel1) {
-                    return _c("span", [
-                      _c("div", { staticClass: "col-sm-4" }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-4" }, [
-                        _vm._v(
-                          "\n                " +
-                            _vm._s(_vm.menu_name(nivel1.menu_id)) +
-                            " (href: " +
-                            _vm._s(_vm.menu_href(nivel1.menu_id)) +
-                            ")\n            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-4" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-danger",
-                            attrs: {
-                              id: "destroy" + nivel0.menu_id,
-                              "data-toggle": "tooltip",
-                              title: "Elimina registro"
-                            },
-                            on: {
-                              click: function($event) {
-                                _vm.destroy(1, nivel0, nivel1)
-                              }
-                            }
-                          },
-                          [
-                            _c("span", {
-                              staticClass: "glyphicon glyphicon-trash"
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-success",
-                            attrs: {
-                              id: "up" + nivel0.menu_id,
-                              "data-toggle": "tooltip",
-                              title: "Sube de Orden"
-                            },
-                            on: {
-                              click: function($event) {
-                                _vm.up(1, nivel1, nivel0.data)
-                              }
-                            }
-                          },
-                          [
-                            _c("span", {
-                              staticClass: "glyphicon glyphicon-arrow-up",
-                              attrs: { "aria-hidden": "true" }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-success",
-                            attrs: {
-                              id: "down" + nivel0.menu_id,
-                              "data-toggle": "tooltip",
-                              title: "Baja de Orden"
-                            },
-                            on: {
-                              click: function($event) {
-                                _vm.down(1, nivel1)
-                              }
-                            }
-                          },
-                          [
-                            _c("span", {
-                              staticClass: "glyphicon glyphicon-arrow-down",
-                              attrs: { "aria-hidden": "true" }
-                            })
-                          ]
-                        )
-                      ])
-                    ])
-                  })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.modify
+            ? _c("span", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success",
+                    attrs: {
+                      id: "save",
+                      "data-toggle": "tooltip",
+                      title: "Grabar"
+                    },
+                    on: {
+                      click: function($event) {
+                        _vm.save()
+                      }
+                    }
+                  },
+                  [
+                    _c("span", {
+                      staticClass: "glyphicon glyphicon-ok",
+                      attrs: { "aria-hidden": "true" }
+                    })
+                  ]
                 )
-              : _vm._e()
-          ])
+              ])
+            : _vm._e()
         ])
-      })
-    )
+      ])
+    ]),
+    _vm._v(" "),
+    !_vm.new_menu
+      ? _c("span", [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "container" },
+            _vm._l(_vm.grid, function(nivel0) {
+              return _c("span", [
+                _c("div", { staticClass: "row row-body" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-sm-4" }, [
+                      _vm._v(
+                        _vm._s(_vm.menu_name(nivel0.menu_id)) +
+                          " (href: " +
+                          _vm._s(_vm.menu_href(nivel0.menu_id)) +
+                          ")"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-4" }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-4" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: {
+                            id: "destroy" + nivel0.menu_id,
+                            "data-toggle": "tooltip",
+                            title: "Elimina registro"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.destroy(0, nivel0, 0)
+                            }
+                          }
+                        },
+                        [
+                          _c("span", {
+                            staticClass: "glyphicon glyphicon-trash"
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-success",
+                          attrs: {
+                            id: "up" + nivel0.menu_id,
+                            "data-toggle": "tooltip",
+                            title: "Sube de Orden"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.up(0, nivel0, _vm.grid)
+                            }
+                          }
+                        },
+                        [
+                          _c("span", {
+                            staticClass: "glyphicon glyphicon-arrow-up",
+                            attrs: { "aria-hidden": "true" }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-success",
+                          attrs: {
+                            id: "down" + nivel0.menu_id,
+                            "data-toggle": "tooltip",
+                            title: "Baja de Orden"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.down(0, nivel0)
+                            }
+                          }
+                        },
+                        [
+                          _c("span", {
+                            staticClass: "glyphicon glyphicon-arrow-down",
+                            attrs: { "aria-hidden": "true" }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-warning",
+                          attrs: {
+                            id: "add" + nivel0.menu_id,
+                            "data-toggle": "tooltip",
+                            title: "Agrega Opción Nivel 1"
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.add(0, nivel0)
+                            }
+                          }
+                        },
+                        [
+                          _c("span", {
+                            staticClass: "glyphicon glyphicon-plus",
+                            attrs: { "aria-hidden": "true" }
+                          })
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  nivel0.data
+                    ? _c(
+                        "div",
+                        { staticClass: "row" },
+                        _vm._l(nivel0.data, function(nivel1) {
+                          return _c("span", [
+                            _c("div", { staticClass: "col-sm-4" }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-sm-4" }, [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(_vm.menu_name(nivel1.menu_id)) +
+                                  " (href: " +
+                                  _vm._s(_vm.menu_href(nivel1.menu_id)) +
+                                  ")\n              "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-sm-4" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-danger",
+                                  attrs: {
+                                    id: "destroy" + nivel0.menu_id,
+                                    "data-toggle": "tooltip",
+                                    title: "Elimina registro"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.destroy(1, nivel0, nivel1)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "glyphicon glyphicon-trash"
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-success",
+                                  attrs: {
+                                    id: "up" + nivel0.menu_id,
+                                    "data-toggle": "tooltip",
+                                    title: "Sube de Orden"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.up(1, nivel1, nivel0.data)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "glyphicon glyphicon-arrow-up",
+                                    attrs: { "aria-hidden": "true" }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-success",
+                                  attrs: {
+                                    id: "down" + nivel0.menu_id,
+                                    "data-toggle": "tooltip",
+                                    title: "Baja de Orden"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.down(1, nivel1)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass:
+                                      "glyphicon glyphicon-arrow-down",
+                                    attrs: { "aria-hidden": "true" }
+                                  })
+                                ]
+                              )
+                            ])
+                          ])
+                        })
+                      )
+                    : _vm._e()
+                ])
+              ])
+            })
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.new_menu
+      ? _c(
+          "div",
+          { staticClass: "container" },
+          [
+            _c("p", [_vm._v("Menus a agregar")]),
+            _vm._v(" "),
+            _vm._l(_vm.menus, function(menu) {
+              return _c("div", [
+                !menu.checked
+                  ? _c("span", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: menu.checked,
+                            expression: "menu.checked"
+                          }
+                        ],
+                        attrs: { type: "checkbox" },
+                        domProps: {
+                          checked: Array.isArray(menu.checked)
+                            ? _vm._i(menu.checked, null) > -1
+                            : menu.checked
+                        },
+                        on: {
+                          change: [
+                            function($event) {
+                              var $$a = menu.checked,
+                                $$el = $event.target,
+                                $$c = $$el.checked ? true : false
+                              if (Array.isArray($$a)) {
+                                var $$v = null,
+                                  $$i = _vm._i($$a, $$v)
+                                if ($$el.checked) {
+                                  $$i < 0 && (menu.checked = $$a.concat([$$v]))
+                                } else {
+                                  $$i > -1 &&
+                                    (menu.checked = $$a
+                                      .slice(0, $$i)
+                                      .concat($$a.slice($$i + 1)))
+                                }
+                              } else {
+                                _vm.$set(menu, "checked", $$c)
+                              }
+                            },
+                            function($event) {
+                              _vm.check_menu(menu)
+                            }
+                          ]
+                        }
+                      }),
+                      _vm._v(_vm._s(menu.name) + "\n      ")
+                    ])
+                  : _vm._e()
+              ])
+            })
+          ],
+          2
+        )
+      : _vm._e()
   ])
 }
 var staticRenderFns = [

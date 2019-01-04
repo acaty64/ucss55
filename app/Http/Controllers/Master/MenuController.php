@@ -50,20 +50,20 @@ class MenuController extends Controller
         $menu->href = $request->href;
         $menu->save();
 
-        $menu_id = Menu::all()->last()->id;
-        $level = $request->level;
-        $order = $request->order;
+        // $menu_id = Menu::all()->last()->id;
+        // $level = $request->level;
+        // $order = $request->order;
 
-        foreach ($request->all() as $xtype => $value) {
-            if(substr(trim($xtype),0,4) =='type'){
-                $menu_type = new MenuType;
-                $menu_type->type_id = substr(trim($xtype),4,3);
-                $menu_type->menu_id = $menu_id;
-                $menu_type->level = $level;
-                $menu_type->order = $order;
-                $menu_type->save();
-            }
-        }
+        // foreach ($request->all() as $xtype => $value) {
+        //     if(substr(trim($xtype),0,4) =='type'){
+        //         $menu_type = new MenuType;
+        //         $menu_type->type_id = substr(trim($xtype),4,3);
+        //         $menu_type->menu_id = $menu_id;
+        //         $menu_type->level = $level;
+        //         $menu_type->order = $order;
+        //         $menu_type->save();
+        //     }
+        // }
 
         return redirect()->route('master.menu.index');
         
