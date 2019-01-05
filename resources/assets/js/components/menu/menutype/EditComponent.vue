@@ -35,13 +35,11 @@
                 <div class="col-sm-4">{{ menu_name(nivel0.menu_id) }} (href: {{ menu_href(nivel0.menu_id) }})</div>
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
-                  <button :id="'destroy'+nivel0.menu_id" @click="destroy(0, nivel0, 0)" class="btn btn-danger" data-toggle="tooltip" title="Elimina registro" ><span class="glyphicon glyphicon-trash"></span></button>
-
-                  <button :id="'up'+nivel0.menu_id" @click="up(0, nivel0, grid)" class="btn btn-success" data-toggle="tooltip" title="Sube de Orden" ><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
-
-                  <button :id="'down'+nivel0.menu_id" @click="down(0, nivel0)" class="btn btn-success" data-toggle="tooltip" title="Baja de Orden" ><span class="glyphicon glyphicon-arrow-down" aria-hidden='true'></span></button>
-                  <button :id="'add'+nivel0.menu_id" @click="add(0, nivel0)" class="btn btn-warning" data-toggle="tooltip" title="Agrega Opción Nivel 1" ><span class="glyphicon glyphicon-plus" aria-hidden='true'></span></button>
                   <!-- Elimina / Sube / Baja / Agrega Opción Nivel1 -->
+                  <button :id="'destroy'+nivel0.menu_id" @click="destroy(0, nivel0, 0)" class="btn btn-danger" data-toggle="tooltip" title="Elimina registro" ><span class="glyphicon glyphicon-trash"></span></button>
+                  <button :id="'up'+nivel0.menu_id" @click="up(0, nivel0, grid)" class="btn btn-success" data-toggle="tooltip" title="Sube de Orden" ><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+                  <button :id="'down'+nivel0.menu_id" @click="down(0, nivel0, grid)" class="btn btn-success" data-toggle="tooltip" title="Baja de Orden" ><span class="glyphicon glyphicon-arrow-down" aria-hidden='true'></span></button>
+                  <button :id="'add'+nivel0.menu_id" @click="add(0, nivel0)" class="btn btn-warning" data-toggle="tooltip" title="Agrega Opción Nivel 1" ><span class="glyphicon glyphicon-plus" aria-hidden='true'></span></button>
                 </div>
               </div>
               <div class="row" v-if="nivel0.data">
@@ -51,12 +49,10 @@
                       {{ menu_name(nivel1.menu_id) }} (href: {{ menu_href(nivel1.menu_id) }})
                   </div>
                   <div class="col-sm-4">
-                    <button :id="'destroy'+nivel0.menu_id" @click="destroy(1, nivel0, nivel1)" class="btn btn-danger" data-toggle="tooltip" title="Elimina registro" ><span class="glyphicon glyphicon-trash"></span></button>
-
-                    <button :id="'up'+nivel0.menu_id" @click="up(1, nivel1, nivel0)" class="btn btn-success" data-toggle="tooltip" title="Sube de Orden" ><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
-
-                    <button :id="'down'+nivel0.menu_id" @click="down(1, nivel1)" class="btn btn-success" data-toggle="tooltip" title="Baja de Orden" ><span class="glyphicon glyphicon-arrow-down" aria-hidden='true'></span></button>
                     <!-- Elimina / Sube / Baja -->
+                    <button :id="'destroy'+nivel0.menu_id" @click="destroy(1, nivel0, nivel1)" class="btn btn-danger" data-toggle="tooltip" title="Elimina registro" ><span class="glyphicon glyphicon-trash"></span></button>
+                    <button :id="'up'+nivel0.menu_id" @click="up(1, nivel1, nivel0)" class="btn btn-success" data-toggle="tooltip" title="Sube de Orden" ><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+                    <button :id="'down'+nivel0.menu_id" @click="down(1, nivel1, nivel0)" class="btn btn-success" data-toggle="tooltip" title="Baja de Orden" ><span class="glyphicon glyphicon-arrow-down" aria-hidden='true'></span></button>
                   </div>
                 </span>
               </div>
@@ -183,14 +179,48 @@
           }
         }
       },
-      down(type, item){
+      down(type, item, items){
         this.modify = true;
-        alert("down(item). En construccion. "+ item.id);
+        var index = (type == 0 ? this.findById(items, item.id) : this.findById(items.data, item.id));
+        var data = (type == 0 ? items : items.data);
+        var last_item = (type == 0 ? this.grid.length - 1 : items.data.length - 1);
+        if(index == last_item){
+          alert("No se puede bajar de orden.");
+        }else{
+          if(type == 0){
+            var order = item.order;
+            var xPre = ( data.lastIndexOf(item) > 0 ? data.filter( (i) => i.order < order || i.order == order + 1 ) : data.filter( (i) => i.order == order + 1 ) );
+            var pre = Object.values(xPre);
+            var xPost = data.filter( (i) => i.order > order + 1 );
+            var post = Object.values(xPost);
+            this.grid = [];
+            this.grid = pre;
+            this.grid.push(item);
+            for (var i = 0;  i <= post.length - 1; i++) {
+              this.grid.push(post[i]);
+            }
+            this.renumber();
+          }else{
+            var level = item.level;
+            var xPre = ( data.lastIndexOf(item) > 0 ? data.filter( (i) => i.level < level || i.level == level + 1 ) : data.filter( (i) => i.level == level + 1 ) );
+            var pre = Object.values(xPre);
+            var xPost = data.filter( (i) => i.level > level + 1 );
+            var post = Object.values(xPost);            
+            var result = pre;
+            result.push(item);
+            for (var i = 0;  i <= post.length - 1; i++) {
+              result.push(post[i]);
+            }
+            var n = this.findById(this.grid, items.id);
+            this.grid[n].data = result; 
+            this.renumber();
+            this.$forceUpdate();
+          }
+        }
       },
       add(type, item){
         this.view_new(1, item);
         this.modify = true;
-        alert("add(item). En construccion. "+ item.id);
       },
       save: function () {
         var request = {

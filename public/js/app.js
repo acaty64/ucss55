@@ -46531,10 +46531,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -46659,14 +46655,60 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
       }
     },
-    down: function down(type, item) {
+    down: function down(type, item, items) {
       this.modify = true;
-      alert("down(item). En construccion. " + item.id);
+      var index = type == 0 ? this.findById(items, item.id) : this.findById(items.data, item.id);
+      var data = type == 0 ? items : items.data;
+      var last_item = type == 0 ? this.grid.length - 1 : items.data.length - 1;
+      if (index == last_item) {
+        alert("No se puede bajar de orden.");
+      } else {
+        if (type == 0) {
+          var order = item.order;
+          var xPre = data.lastIndexOf(item) > 0 ? data.filter(function (i) {
+            return i.order < order || i.order == order + 1;
+          }) : data.filter(function (i) {
+            return i.order == order + 1;
+          });
+          var pre = Object.values(xPre);
+          var xPost = data.filter(function (i) {
+            return i.order > order + 1;
+          });
+          var post = Object.values(xPost);
+          this.grid = [];
+          this.grid = pre;
+          this.grid.push(item);
+          for (var i = 0; i <= post.length - 1; i++) {
+            this.grid.push(post[i]);
+          }
+          this.renumber();
+        } else {
+          var level = item.level;
+          var xPre = data.lastIndexOf(item) > 0 ? data.filter(function (i) {
+            return i.level < level || i.level == level + 1;
+          }) : data.filter(function (i) {
+            return i.level == level + 1;
+          });
+          var pre = Object.values(xPre);
+          var xPost = data.filter(function (i) {
+            return i.level > level + 1;
+          });
+          var post = Object.values(xPost);
+          var result = pre;
+          result.push(item);
+          for (var i = 0; i <= post.length - 1; i++) {
+            result.push(post[i]);
+          }
+          var n = this.findById(this.grid, items.id);
+          this.grid[n].data = result;
+          this.renumber();
+          this.$forceUpdate();
+        }
+      }
     },
     add: function add(type, item) {
       this.view_new(1, item);
       this.modify = true;
-      alert("add(item). En construccion. " + item.id);
     },
 
     save: function save() {
@@ -47081,7 +47123,7 @@ var render = function() {
                           },
                           on: {
                             click: function($event) {
-                              _vm.down(0, nivel0)
+                              _vm.down(0, nivel0, _vm.grid)
                             }
                           }
                         },
@@ -47193,7 +47235,7 @@ var render = function() {
                                   },
                                   on: {
                                     click: function($event) {
-                                      _vm.down(1, nivel1)
+                                      _vm.down(1, nivel1, nivel0)
                                     }
                                   }
                                 },
