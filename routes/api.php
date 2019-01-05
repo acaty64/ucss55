@@ -98,17 +98,19 @@ Route::get('generar/{type_id}/{auth_id?}', [
 	'uses' =>'Api\MenuController@generar'
 ]);
 
-
-
 Route::get('generarHelp/{type_id}', [
 	'as' => 'generarHelp',
 	'uses' =>'Api\MenuController@generarHelp'
 ]);
 
-
 Route::get('menutype/edit/', [
 	'as' => 'menuType.edit',
 	'uses' =>'Api\MenuTypeController@edit'
+]);
+
+Route::post('menutype/store/', [
+	'as' => 'menuType.store',
+	'uses' =>'Api\MenuTypeController@store'
 ]);
 
 /*

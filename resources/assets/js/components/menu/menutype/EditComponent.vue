@@ -36,7 +36,9 @@
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
                   <button :id="'destroy'+nivel0.menu_id" @click="destroy(0, nivel0, 0)" class="btn btn-danger" data-toggle="tooltip" title="Elimina registro" ><span class="glyphicon glyphicon-trash"></span></button>
+
                   <button :id="'up'+nivel0.menu_id" @click="up(0, nivel0, grid)" class="btn btn-success" data-toggle="tooltip" title="Sube de Orden" ><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+
                   <button :id="'down'+nivel0.menu_id" @click="down(0, nivel0)" class="btn btn-success" data-toggle="tooltip" title="Baja de Orden" ><span class="glyphicon glyphicon-arrow-down" aria-hidden='true'></span></button>
                   <button :id="'add'+nivel0.menu_id" @click="add(0, nivel0)" class="btn btn-warning" data-toggle="tooltip" title="Agrega Opción Nivel 1" ><span class="glyphicon glyphicon-plus" aria-hidden='true'></span></button>
                   <!-- Elimina / Sube / Baja / Agrega Opción Nivel1 -->
@@ -50,7 +52,9 @@
                   </div>
                   <div class="col-sm-4">
                     <button :id="'destroy'+nivel0.menu_id" @click="destroy(1, nivel0, nivel1)" class="btn btn-danger" data-toggle="tooltip" title="Elimina registro" ><span class="glyphicon glyphicon-trash"></span></button>
-                    <button :id="'up'+nivel0.menu_id" @click="up(1, nivel1, nivel0.data)" class="btn btn-success" data-toggle="tooltip" title="Sube de Orden" ><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+
+                    <button :id="'up'+nivel0.menu_id" @click="up(1, nivel1, nivel0)" class="btn btn-success" data-toggle="tooltip" title="Sube de Orden" ><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+
                     <button :id="'down'+nivel0.menu_id" @click="down(1, nivel1)" class="btn btn-success" data-toggle="tooltip" title="Baja de Orden" ><span class="glyphicon glyphicon-arrow-down" aria-hidden='true'></span></button>
                     <!-- Elimina / Sube / Baja -->
                   </div>
@@ -145,25 +149,39 @@
       },
       up(type, item, items){
         this.modify = true;
-        alert("up(item). En construccion. "+ item.id);
-        // var nIndex = this.getIndex(item, items);
-        // console.log("up item.index: ", nIndex);
-        // if(nIndex > 0){
-        //   var pre = items.filter(function(item) {
-        //     if(this.getIndex(item,items) < nIndex){
-        //       return item;
-        //     }
-        //   });
-        //   console.log("up pre: ", pre);
-          
-        //   // var post = items.filter(function(item) {
-        //   //   return this.getIndex(item,items) > nIndex;
-        //   // });
-        //   // console.log("up post: ", post);
-
-        // }else{
-        //   alert("No se puede subir de orden.");
-        // }
+        var index = (type == 0 ? this.findById(items, item.id) : this.findById(items.data, item.id));
+        var data = (type == 0 ? items : items.data);
+        if(index == 0){
+          alert("No se puede subir de orden.");
+        }else{
+          if(type == 0){
+            var order = item.order;
+            var xPre = ( data.lastIndexOf(item) > 0 ? data.filter( (i) => i.order < order - 1 ) : [] );
+            var pre = Object.values(xPre);
+            var xPost = data.filter( (i) => i.order != order && i.order > order -2);
+            var post = Object.values(xPost);
+            this.grid = [];
+            this.grid = pre;
+            this.grid.push(item);
+            for (var i = 0;  i <= post.length - 1; i++) {
+              this.grid.push(post[i]);
+            }
+            this.renumber();
+          }else{
+            var level = item.level;
+            var result = data.filter( (i) => i.level < level - 1 );
+            var post = data.filter( (i) => i.level != level && i.level > level -2);
+            var post = Object.values(post);
+            result.push(item);
+            for (var i = 0;  i <= post.length - 1; i++) {
+              result.push(post[i]);
+            }
+            var n = this.findById(this.grid, items.id);
+            this.grid[n].data = result; 
+            this.renumber();
+            this.$forceUpdate();
+          }
+        }
       },
       down(type, item){
         this.modify = true;
@@ -174,13 +192,24 @@
         this.modify = true;
         alert("add(item). En construccion. "+ item.id);
       },
-      save(){
-        this.renumber();
-        this.modify = false;
-        this.new_menu = false;
-        alert("save(). En construccion. ");
-        // this.getData();
+      save: function () {
+        var request = {
+                    'type': this.ntype,
+                    'data': Object.values(this.grid),
+                  };
+        var protocol = window.location.protocol;
+        var URLdomain = window.location.host;
+        var urlItems = protocol+'//'+URLdomain+'/api/menutype/store';
+        axios.post(urlItems, request).then(response=>{
+// console.log('data: ', response.data);
+          this.modify = false;
+          this.new_menu = false;
+        })
+        .catch(() => {
+          console.log('handle server error from MenuTypeEditComponent.vue');
+        });                
       },
+
       menu_name(menu_id){
         var data = this.menus.filter( (menu) => menu.id == menu_id );        
         return data[0].name;
@@ -207,6 +236,7 @@
         };
         this.grid = nivel0;
         this.last_item = this.grid.length;
+        this.renumber();
       },
       check_menu: function (item) {
         var nivel = this.nivel_add;
@@ -314,7 +344,6 @@
         }
         return null;
       },
-
       sortOrder(){
           this.menus.sort(function (a, b){
               return (a.order - b.order);

@@ -56,10 +56,10 @@ class I10_MenusActionsTest extends TestCase
 		$request = [
 				'name' => 'Nuevo menú',
 				'href' => '/new/route',
-				'level' => 0,
-				'order' => 0,
-				'type1' => 1,
-				'type3' => 1
+				// 'level' => 0,
+				// 'order' => 0,
+				// 'type1' => 1,
+				// 'type3' => 1
 			];
 		$response = $this->post('master/menu/store',$request);
 
@@ -69,18 +69,18 @@ class I10_MenusActionsTest extends TestCase
 				'href' => '/new/route'
 				]);
 		$newMenu = Menu::where('name','Nuevo menú')->first();
-		$this->assertDatabaseHas('menu_type',[
-				'type_id' => 1,
-				'menu_id' => $newMenu->id,
-				'level'	=> 0,
-				'order' => 0
-				]);
-		$this->assertDatabaseHas('menu_type',[
-				'type_id' => 3,
-				'menu_id' => $newMenu->id,
-				'level'	=> 0,
-				'order' => 0
-				]);
+		// $this->assertDatabaseHas('menu_type',[
+		// 		'type_id' => 1,
+		// 		'menu_id' => $newMenu->id, 
+		// 		'level'	=> 0,
+		// 		'order' => 0
+		// 		]);
+		// $this->assertDatabaseHas('menu_type',[
+		// 		'type_id' => 3,
+		// 		'menu_id' => $newMenu->id,
+		// 		'level'	=> 0,
+		// 		'order' => 0
+		// 		]);
 
 	}
 

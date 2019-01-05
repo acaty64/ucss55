@@ -46531,6 +46531,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -46613,25 +46617,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     up: function up(type, item, items) {
       this.modify = true;
-      alert("up(item). En construccion. " + item.id);
-      // var nIndex = this.getIndex(item, items);
-      // console.log("up item.index: ", nIndex);
-      // if(nIndex > 0){
-      //   var pre = items.filter(function(item) {
-      //     if(this.getIndex(item,items) < nIndex){
-      //       return item;
-      //     }
-      //   });
-      //   console.log("up pre: ", pre);
-
-      //   // var post = items.filter(function(item) {
-      //   //   return this.getIndex(item,items) > nIndex;
-      //   // });
-      //   // console.log("up post: ", post);
-
-      // }else{
-      //   alert("No se puede subir de orden.");
-      // }
+      var index = type == 0 ? this.findById(items, item.id) : this.findById(items.data, item.id);
+      var data = type == 0 ? items : items.data;
+      if (index == 0) {
+        alert("No se puede subir de orden.");
+      } else {
+        if (type == 0) {
+          var order = item.order;
+          var xPre = data.lastIndexOf(item) > 0 ? data.filter(function (i) {
+            return i.order < order - 1;
+          }) : [];
+          var pre = Object.values(xPre);
+          var xPost = data.filter(function (i) {
+            return i.order != order && i.order > order - 2;
+          });
+          var post = Object.values(xPost);
+          this.grid = [];
+          this.grid = pre;
+          this.grid.push(item);
+          for (var i = 0; i <= post.length - 1; i++) {
+            this.grid.push(post[i]);
+          }
+          this.renumber();
+        } else {
+          var level = item.level;
+          var result = data.filter(function (i) {
+            return i.level < level - 1;
+          });
+          var post = data.filter(function (i) {
+            return i.level != level && i.level > level - 2;
+          });
+          var post = Object.values(post);
+          result.push(item);
+          for (var i = 0; i <= post.length - 1; i++) {
+            result.push(post[i]);
+          }
+          var n = this.findById(this.grid, items.id);
+          this.grid[n].data = result;
+          this.renumber();
+          this.$forceUpdate();
+        }
+      }
     },
     down: function down(type, item) {
       this.modify = true;
@@ -46642,13 +46668,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.modify = true;
       alert("add(item). En construccion. " + item.id);
     },
+
     save: function save() {
-      this.renumber();
-      this.modify = false;
-      this.new_menu = false;
-      alert("save(). En construccion. ");
-      // this.getData();
+      var _this = this;
+
+      var request = {
+        'type': this.ntype,
+        'data': Object.values(this.grid)
+      };
+      var protocol = window.location.protocol;
+      var URLdomain = window.location.host;
+      var urlItems = protocol + '//' + URLdomain + '/api/menutype/store';
+      axios.post(urlItems, request).then(function (response) {
+        // console.log('data: ', response.data);
+        _this.modify = false;
+        _this.new_menu = false;
+      }).catch(function () {
+        console.log('handle server error from MenuTypeEditComponent.vue');
+      });
     },
+
     menu_name: function menu_name(menu_id) {
       var data = this.menus.filter(function (menu) {
         return menu.id == menu_id;
@@ -46662,11 +46701,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       return data[0].href;
     },
     setGrid: function setGrid() {
-      var _this = this;
+      var _this2 = this;
 
       var nivel0 = [];
       var data = this.menutypes.filter(function (menutype) {
-        return menutype.type_id == _this.ntype;
+        return menutype.type_id == _this2.ntype;
       });
       var level0 = data.filter(function (menutype) {
         return menutype.level == 0;
@@ -46687,6 +46726,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       };
       this.grid = nivel0;
       this.last_item = this.grid.length;
+      this.renumber();
     },
 
     check_menu: function check_menu(item) {
@@ -46749,13 +46789,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.modify = false;
     },
     checked_menu: function checked_menu() {
-      var _this2 = this;
+      var _this3 = this;
 
       for (var i = this.menus.length - 1; i >= 0; i--) {
         this.menus[i].checked = false;
       }
       var checked = this.menutypes.filter(function (menutype) {
-        return menutype.type_id == _this2.ntype;
+        return menutype.type_id == _this3.ntype;
       });
       for (var i = checked.length - 1; i >= 0; i--) {
         var item = checked[i];
@@ -46764,24 +46804,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }
     },
     getData: function getData() {
-      var _this3 = this;
+      var _this4 = this;
 
       var protocol = window.location.protocol;
       var URLdomain = window.location.host;
       var urlItems = protocol + '//' + URLdomain + '/api/menutype/edit';
       axios.get(urlItems).then(function (response) {
         // console.log('data: ', response.data);
-        _this3.types = response.data.types;
-        _this3.menus = response.data.menus;
-        _this3.menutypes = response.data.menutypes;
-        _this3.checked_type();
-        _this3.checked_menu();
+        _this4.types = response.data.types;
+        _this4.menus = response.data.menus;
+        _this4.menutypes = response.data.menutypes;
+        _this4.checked_type();
+        _this4.checked_menu();
         /* order, level, menu_id, type_id */
-        _this3.sortOrder();
-        _this3.sortLevel();
-        _this3.sortMenu_id();
-        _this3.sortType_id();
-        _this3.setGrid();
+        _this4.sortOrder();
+        _this4.sortLevel();
+        _this4.sortMenu_id();
+        _this4.sortType_id();
+        _this4.setGrid();
       }).catch(function () {
         console.log('handle server error from MenuTypeEditComponent.vue');
       });
@@ -46800,7 +46840,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }
       return null;
     },
-
     sortOrder: function sortOrder() {
       this.menus.sort(function (a, b) {
         return a.order - b.order;
@@ -47131,7 +47170,7 @@ var render = function() {
                                   },
                                   on: {
                                     click: function($event) {
-                                      _vm.up(1, nivel1, nivel0.data)
+                                      _vm.up(1, nivel1, nivel0)
                                     }
                                   }
                                 },
