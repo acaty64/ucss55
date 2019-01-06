@@ -13,6 +13,7 @@ class A00_AccessTest extends DuskTestCase
 
     public function testHome()
     {
+        $this->artisan('db:seed');
         $this->browse(function(Browser $browser)
         {
             // Having
@@ -21,6 +22,7 @@ class A00_AccessTest extends DuskTestCase
                     'email' => 'jdoe@gmail.com',
                     'password'  => bcrypt('secret')
                 ]);
+            $this->authUser($user->id, 1, 1, 5);
 
             $browser->loginAs($user, 'web')
                     ->visit('/home')

@@ -24,6 +24,24 @@ class AccesosTableSeeder extends Seeder
             'sede_id' => 1,
             'type_id' => 1,
             ]);
+        Acceso::create([
+            'user_id' => $user_id,
+            'facultad_id' => 1, 
+            'sede_id' => 2,
+            'type_id' => 1,
+            ]);
+        Acceso::create([
+            'user_id' => $user_id,
+            'facultad_id' => 1, 
+            'sede_id' => 3,
+            'type_id' => 1,
+            ]);
+        Acceso::create([
+            'user_id' => $user_id,
+            'facultad_id' => 1, 
+            'sede_id' => 4,
+            'type_id' => 1,
+            ]);
 
         $user_id = 2; // ADMINISTRADOR
         $wdocente = DataUser::where('user_id',$user_id)->first()->wdocente();

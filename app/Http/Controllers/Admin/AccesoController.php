@@ -48,15 +48,17 @@ class accesoController extends Controller
             $opc_sede[$sede->id] = $sede->wsede;
         }
 
-        if(auth()->user()->can('is_master',Acceso::class)){        
-            $types = Type::all();
-        }else{
-            $types = Type::where('name','<>','Master')->where('name','<>','Administrador')->get();
-        }
+        // if(auth()->user()->can('is_master',Acceso::class)){        
+        //     $types = Type::all();
+        // }else{
+        //     $types = Type::where('name','<>','Master')->where('name','<>','Administrador')->get();
+        // }
+
+        $types = Type::all();
         foreach ($types as $type) {
             $opc_type[$type->id] = $type->name;
         }
-
+        
         return view('admin.acceso.edit')
             ->with('acceso',$acceso)
             ->with('facultades', $opc_facu)

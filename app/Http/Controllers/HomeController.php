@@ -31,21 +31,32 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // \Session::flush();
-        
-        $facultades = Facultad::all();
-        foreach ($facultades as $facultad) {
-            $opc_facu[$facultad->id] = $facultad->wfacultad;
-        }
+        // \Session::flush();''
+        $user_id = auth()->user()->id;
+        $accesos = Acceso::where('user_id', $user_id)->get();
+        if($accesos->count() > 0){
+            foreach ($accesos as $acceso) {
+                $opc_facu[$acceso->facultad_id] = $acceso->wfacultad;
+                $opc_sede[$acceso->sede_id] = $acceso->wsede;
+            }
 
-        $sedes = Sede::all();
-        foreach ($sedes as $sede) {
-            $opc_sede[$sede->id] = $sede->wsede;
-        }
+            // $facultades = Facultad::all();
+            // foreach ($facultades as $facultad) {
+            //     $opc_facu[$facultad->id] = $facultad->wfacultad;
+            // }
 
-        return view('home')
-            ->with('opc_facu',$opc_facu)
-            ->with('opc_sede',$opc_sede);
+            // $sedes = Sede::all();
+            // foreach ($sedes as $sede) {
+            //     $opc_sede[$sede->id] = $sede->wsede;
+            // }
+
+            return view('home')
+                ->with('opc_facu',$opc_facu)
+                ->with('opc_sede',$opc_sede);
+        }else{
+            Flash::error("Solicite su acceso al Departamento Académico de la Facultad.");
+            return back();
+        }
     }
 
 

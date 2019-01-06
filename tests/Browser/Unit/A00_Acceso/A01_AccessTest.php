@@ -13,18 +13,20 @@ class A01_AccessTest extends DuskTestCase
 
     public function testAccess()
     {
+        $this->artisan('db:seed');
         $this->browse(function(Browser $browser)
         {
             $browser->visit('/')
                 ->assertPathIs('/')
                 ->waitForText('E-Mail Address', 10)
             ;
-            $user = User::create([
-                    'name' => 'Administrador Lima',
-                    'email' => 'ucss.fcec.lim@gmail.com',
-                    'password'  => bcrypt('secret')
-                ]);
-
+            // $user = User::create([
+            //         'name' => 'Administrador Lima',
+            //         'email' => 'ucss.fcec.lim@gmail.com',
+            //         'password'  => bcrypt('secret')
+            //     ]);
+            // $this->authUser($user->id, 1, 1, 5);
+            
             $browser->visit('/')
                 ->waitForText('E-Mail Address', 10)
                 ->type('email', 'ucss.fcec.lim@gmail.com')

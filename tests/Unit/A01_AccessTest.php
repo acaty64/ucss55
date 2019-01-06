@@ -30,7 +30,7 @@ class A01_AccessTest extends TestCase
         Artisan::call('db:seed');
         // Having
         $user = $this->defaultUser();
-
+        $this->authUser($user->id, 1, 1, 5);
         // Check database
         $this->assertDatabaseHas('users',[
             'name' => $user->name,
