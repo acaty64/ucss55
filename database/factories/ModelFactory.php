@@ -7,6 +7,7 @@ use App\DataUser;
 use App\MenuType;
 use App\Type;
 use App\User;
+use Illuminate\Database\Eloquent\Faker;
 
 /*
 |--------------------------------------------------------------------------
