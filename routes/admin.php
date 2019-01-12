@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 // ROUTES
 
+/** SYLLABUS ********************************************/
+Route::get('syllabus/upload', [
+		'as'	=> 'administrador.syllabus.upload',
+		'uses'	=> 'SyllabusController@upload',	
+	]);
+Route::post('syllabus/save', [
+		'as'	=> 'administrador.syllabus.save',
+		'uses'	=> 'SyllabusController@save',	
+	]);
+
 /** RHORA ********************************************/
 Route::get('rhora/index', [
 		'as'	=> 'administrador.rhora.index',

@@ -8,6 +8,19 @@ Route::get('model/index/{page?}', [
 ]);
 
 /**
+ * CursoGrupo's Api Route
+ *
+ */
+Route::post('cursogrupo/load', [
+		'as'	=> 'api.cursogrupo.load',
+		'uses'	=> 'Api\CursogrupoController@load',	
+	]);
+Route::post('cursogrupo/update', [
+		'as'	=> 'api.cursogrupo.update',
+		'uses'	=> 'Api\CursogrupoController@update',	
+	]);
+
+/**
  * Dhora's Api Route
  *
  */

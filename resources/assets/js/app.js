@@ -28,7 +28,11 @@ Vue.component('dcurso_orden-component', require('./components/dcurso/DcursoOrden
 Vue.component('envio-component', require('./components/envio/EnvioComponent.vue'));
 Vue.component('dhora_edit-component', require('./components/dhora/DHoraEditComponent.vue'));
 Vue.component('rhora_edit-component', require('./components/rhora/RHoraEditComponent.vue'));
+Vue.component('cursogrupo_edit-component', require('./components/cursogrupo/CursoGrupoEditComponent.vue'));
+
+import { store } from './components/cursogrupo/store.js';
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store,
 });

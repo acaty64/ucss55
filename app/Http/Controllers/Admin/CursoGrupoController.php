@@ -32,8 +32,12 @@ class CursoGrupoController extends Controller
             ->with('acceso_auth',$acceso_auth);
     }
 
+    public function edit($grupo_id)
+    {
+        return view('admin.cursogrupo.edit')->with('grupo_id', $grupo_id);
+    }
 
-    public function edit($id)
+    public function bkedit($id)
     {
         /* @todo: Only courses not assigned */
         $grupo = Grupo::find($id);

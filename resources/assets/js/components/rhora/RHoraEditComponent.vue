@@ -8,7 +8,7 @@
         <button @click="save">Grabar modificaciones</button>
     </div>
     <div style="text-align: center">
-      Filtro: <input type="text" v-model="search"><button @click="filtro()" class="btn btn-success" data-toggle="tooltip" title="Mínimo"><span class="glyphicon glyphicon-search" aria-hidden='true' id='filter'></span></button>
+      Filtro: <input type="text" v-model="search"><button @click="filtro()" class="btn btn-success" data-toggle="tooltip" title="Filtro"><span class="glyphicon glyphicon-search" aria-hidden='true' id='filter'></span></button>
     </div>
   </div>
   <div class="panel-body">

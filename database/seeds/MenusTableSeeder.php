@@ -51,6 +51,8 @@ Menu::create(['id' => 23, 'name' => 'Envío de Correos Electrónicos', 'href' =>
 
 Menu::create(['id' => 24, 'name' => 'Requerimiento de horas', 'href' => 'rhora/index', 'sw_auth' => true, 'help' => 'En esta opción podrá definir el requerimiento de horas a los docentes.', ]);
 
+Menu::create(['id' => 25, 'name' => 'Carga de Syllabus', 'href' => 'syllabus/upload', 'sw_auth' => true, 'help' => 'En esta opción podrá cargar los archivos PDF de los syllabus al servidor.', ]);
+
 
     }
 

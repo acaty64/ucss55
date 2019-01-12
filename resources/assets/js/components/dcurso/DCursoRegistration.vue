@@ -4,7 +4,7 @@
         <hr>
         <div class="row" v-for="item in items">
             <!-- <button @click="viewItem(item)">View</button> -->
-            <a :href="viewItem(item)" >View</a>
+            <a :href="viewItem(item)" target="_blank">View</a>
             <a href="#" @click="registerItem(item)">{{ item.wcurso }}</a>
         </div>
     </div>

@@ -119,97 +119,31 @@ class DCursoController extends Controller
      */
     public function edit($docente_id)
     {
+        if(\Session::get('ctype')=='Master' || 
+            \Session::get('ctype')=='Administrador'){
+            $editable = true;
+        }else{
+            $editable = false;
+        }
         $docente = User::findOrFail($docente_id);
-        $facultad_id = \Session::get('facultad_id');
-        $sede_id = \Session::get('sede_id');
-        $check = User::editable('disp',$docente_id);
+        if($docente->rhora > 0 || $editable){
+            // $docente = User::findOrFail($docente_id);
+            $facultad_id = \Session::get('facultad_id');
+            $sede_id = \Session::get('sede_id');
+            $check = User::editable('disp',$docente_id);
 
-        return view('admin.dcurso.edit')
-                ->with('docente_id',$docente_id)
-                ->with('facultad_id', $facultad_id)
-                ->with('sede_id', $sede_id)
-                ->with('wdocente', $docente->datauser->wdocente())
-                ->with('sw_cambio', $check);        
+            return view('admin.dcurso.edit')
+                    ->with('docente_id',$docente_id)
+                    ->with('facultad_id', $facultad_id)
+                    ->with('sede_id', $sede_id)
+                    ->with('wdocente', $docente->datauser->wdocente())
+                    ->with('sw_cambio', $check);
+        }else{
+            Flash::warning('El docente '.$docente->name.' no tiene requerimiento de horario');
+            return view('help');
+        }
     }
-    public function bkedit($docente_id)
-    {
-        $facultad_id = \Session::get('facultad_id');
-        $sede_id = \Session::get('sede_id');
-        /***********************************************************************************/
-        /* Datos para el CHOSEN superior */
-        $datauser = DataUser::where('user_id',$docente_id)->first();           
-        $dcursos = User::find($docente_id)->dcursos;
-        /* Crea el array para el CHOSEN select multiple  */
-        //$ch_cursos = $dcursos->lists('curso_id')->toArray();
-        $ch_cursos = [];
-        foreach ($dcursos as $dcurso) {
-            $ch_cursos[] = $dcurso->curso_id;  
-        }
-        /* Crea la lista de cursos */
-        $xgrupos = Grupo::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
-        $xgrupos->each(function($xgrupos)
-        {
-            $xcursos = $xgrupos->cursogrupo;
-            $xcursos->each(function($xcursos)
-            {
-                $xcursos->curso;
-            });
-            $xgrupos = $xcursos;
-        });
-/**
-        $xcursos = CursoGrupo::where('facultad_id',$facultad_id)->where('sede_id',$sede_id);
-        $xcursos->each(function($xcursos){
-            $xcursos->curso;
-        });
-*/
-        //$lcursos = $xcursos->list('curso.wcurso','curso_id');
-        foreach ($xgrupos as $grupo) {
-            foreach ($grupo->cursogrupo as $cursogrupo) {
-                $lcursos[] = [
-                    'curso_id' => $cursogrupo->curso->id,
-                    'wcurso' => $cursogrupo->curso->wcurso,
-                    ];
-            }
-        }
-
-        /***********************************************************************************/
-
-        /***********************************************************************************/
-        /* Datos para el CHOSEN inferior
-        /* xlgrupos : Collection de grupos con cursos por grupo */
-        $xlgrupos = [];
-        $grupos = Grupo::where('facultad_id',$facultad_id)->where('sede_id',$sede_id)->get();
-        foreach ($grupos as $grupo)
-        {
-            array_push($xlgrupos, $grupo->cursogrupo);
-        }
-        /* lxgrupos : Array como lista para el CHOSEN select separado por grupos  */
-        $lxgrupos = [];
-        foreach($xlgrupos as $grupos)
-        {  
-            foreach($grupos as $cursos)
-            {
-                $lxgrupos[$grupos[0]->grupo->wgrupo][$cursos->curso->id] = $cursos->curso->wcurso ;
-            }
-        }
-/*************************/
-
-        $sw_cambio = $this->sw_cambio($docente_id,'disp');
-
-
-/*********************************************/
-        /* $dcursos: disponibilidad de cursos del usuario  */
-        /* $lcursos: lista de cursos para el select  */
-        /* $ch_cursos: Array de cursos del usuario para el chosen  */
-        return view('admin.dcurso.edit')
-                ->with('sw_cambio',$sw_cambio)
-                ->with('docente',$datauser)
-                ->with('dcursos', $dcursos)
-                ->with('lcursos', $lcursos)
-                ->with('ch_cursos', $ch_cursos)
-                ->with('lxgrupos',$lxgrupos);
-    }
-
+    
     /**
      * Update the specified resource in storage.
      *

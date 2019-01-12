@@ -45,39 +45,47 @@ class userController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-        $cdocente = DataUser::first()->newcodigo();
 
-        // Recibe los datos del formulario de resources\admin\users\create.blade.php
-        $facultad_id = \Session::get('facultad_id');
-        $sede_id = \Session::get('sede_id');
+        /* Consistencia el correo electronico */
+        $correo = $request->email;
+        $check = User::where('email', $correo)->get();
 
-        $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
+        if($check->count() == 0){
+            $cdocente = DataUser::first()->newcodigo();
 
-        $user->save(); 
-        
-        // Crea un registro en DataUser
-        $datauser = new DataUser();
-        $datauser->user()->associate($user);
-        $datauser->cdocente = $cdocente;
-        $datauser->wdoc1 = $user->name;
-        $datauser->email1 = $user->email;
-        $datauser->save();
-        
-        // Crea un registro en Accesos
-        $acceso = new Acceso();
-        $acceso->user()->associate($user);           
-        $acceso->facultad_id = $facultad_id;
-        $acceso->sede_id = $sede_id;
-        /// $acceso->type_id = 2; Default = 2 ** Consulta   
-        $acceso->swcierre = false;
-        $acceso->save();
+            $facultad_id = \Session::get('facultad_id');
+            $sede_id = \Session::get('sede_id');
 
-        Flash::success('Se ha registrado '.$user->name.' de forma exitosa');
-        return redirect()->route('administrador.user.index');
+            $user = new User();
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = bcrypt($request->password);
 
+            $user->save(); 
+            
+            // Crea un registro en DataUser
+            $datauser = new DataUser();
+            $datauser->user()->associate($user);
+            $datauser->cdocente = $cdocente;
+            $datauser->wdoc1 = $user->name;
+            $datauser->email1 = $user->email;
+            $datauser->save();
+            
+            // Crea un registro en Accesos
+            $acceso = new Acceso();
+            $acceso->user()->associate($user);           
+            $acceso->facultad_id = $facultad_id;
+            $acceso->sede_id = $sede_id;
+            /// $acceso->type_id = 2; Default = 2 ** Consulta   
+            $acceso->swcierre = false;
+            $acceso->save();
+
+            Flash::success('Se ha registrado '.$user->name.' de forma exitosa');
+            return redirect()->route('administrador.user.index');
+        }else{
+            Flash::success('El correo electrónico '.$correo.' ya existe.');
+            return back();
+        }
     }
   
 

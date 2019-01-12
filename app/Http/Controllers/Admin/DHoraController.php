@@ -50,7 +50,7 @@ class DHoraController extends Controller
                     ;
         }else{
             Flash::warning('El docente '.$user->name.' no tiene requerimiento de horario');
-            return back();
+            return view('help');
         }
     }
 

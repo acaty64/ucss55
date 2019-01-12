@@ -82,6 +82,7 @@ class HomeController extends Controller
             $ayer = Carbon::now()->subDays(1);
             
             $acceso = Acceso::acceso_auth();
+            $errors = [];
             $denvio = Denvio::find('disp_id');
             if($denvio){
                 $menvio = $denvio->menvio;
@@ -91,6 +92,7 @@ class HomeController extends Controller
                 if($denvio->sw_rpta2 == 0 && $menvio->flimite > $ayer){
                     $aerrors[$contador++] = 'Debe actualizar su disponibilidad de cursos.';
                 }
+                $errors = collect($aerrors);
             }
 
             $denvio = Denvio::find('carga_id');
@@ -99,8 +101,8 @@ class HomeController extends Controller
                 if($denvio->sw_rpta1 == 0 && $menvio->flimite > $ayer){
                     $aerrors[$contador++] = 'Debe confirmar su carga asignada.';
                 }
+                $errors = collect($aerrors);
             }
-            $errors = collect($aerrors);
             return view('help')
                 ->with('errors',$errors);
         } else {

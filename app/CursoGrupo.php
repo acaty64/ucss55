@@ -34,4 +34,9 @@ class CursoGrupo extends Model
         $grupo = Grupo::where('cod_grupo', 'cod_grupo')->first;
         return $grupo->id;
     }
+    public function getWcursoAttribute($value='')
+    {
+        $grupo = Grupo::where('cod_grupo', 'cod_grupo')->first;
+        return $grupo->wcurso;
+    }
 }
