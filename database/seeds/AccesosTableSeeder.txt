@@ -54,15 +54,14 @@ class AccesosTableSeeder extends Seeder
 
         $all = User::where('id','>',2)->get();
         foreach ($all as $item) {
-            'user_id' => $item->id,
+            $user_id = $item->id;
+            Acceso::create([
+            'user_id' => $user_id,
+            'facultad_id' => 1, 
+            'sede_id' => 1,
+            'type_id' => 3,
 
-
-
-
-
-
-
-
+            ]);
          } 
 
     }
