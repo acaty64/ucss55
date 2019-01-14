@@ -22,6 +22,7 @@ class MenuTypeTableSeeder extends Seeder
 5 => ['level' => 2, 'order' => 2, ],
 6 => ['level' => 0, 'order' => 3, ],
 7 => ['level' => 0, 'order' => 4, ],
+26 => ['level' => 0, 'order' => 5, ],
 
             ]);
         $type = Type::find(2);

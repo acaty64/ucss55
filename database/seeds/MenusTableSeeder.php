@@ -53,6 +53,8 @@ Menu::create(['id' => 24, 'name' => 'Requerimiento de horas', 'href' => 'rhora/i
 
 Menu::create(['id' => 25, 'name' => 'Carga de Syllabus', 'href' => 'syllabus/upload', 'sw_auth' => true, 'help' => 'En esta opción podrá cargar los archivos PDF de los syllabus al servidor.', ]);
 
+Menu::create(['id' => 26, 'name' => 'Backup', 'href' => 'sys/backup', 'sw_auth' => true, 'help' => 'En esta opción podrá generar la copia de respaldo y luego descargarlo al disco local.', ]);
+
 
     }
 

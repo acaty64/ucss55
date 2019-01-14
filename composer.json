@@ -13,7 +13,9 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
         "maatwebsite/excel": "~2.1.0",
-        "styde/html": "~1.4"
+        "styde/html": "~1.4",
+        "nesbot/carbon": "^1.24",
+        "spatie/laravel-backup": "^5.11"
     },
     "require-dev": {
         "laravel/dusk": "^2.0",
