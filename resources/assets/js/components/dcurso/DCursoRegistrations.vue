@@ -9,7 +9,11 @@
         </div>
         <hr>
         <div class="row" v-for="registration in registrations">
-            <p>{{ registration.wcurso }} <button @click="unregister(registration)">X</button></p>
+            <p>{{ registration.wcurso }} 
+                <span title="Deseleccionar curso">
+                    <button @click="unregister(registration)">X</button>
+                </span>
+            </p>
         </div>
     </div>
 </template>
@@ -65,4 +69,16 @@
         color: darkred;
     }
 
+    .unselect button {
+        background-color: red;
+        border: none;
+        box-shadow: 1px 1px 1px black;
+        font-size: inherit;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    .unselect button:hover {
+        background-color: green;
+    }
 </style>

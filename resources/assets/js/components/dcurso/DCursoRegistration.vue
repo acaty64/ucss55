@@ -4,8 +4,12 @@
         <hr>
         <div class="row" v-for="item in items">
             <!-- <button @click="viewItem(item)">View</button> -->
-            <a :href="viewItem(item)" target="_blank">View</a>
-            <a href="#" @click="registerItem(item)">{{ item.wcurso }}</a>
+            <span title="Ver syllabus del curso">            
+                <a :href="viewItem(item)" target="_blank">View</a>
+            </span>
+            <span title="Selecciona el curso">            
+                <a href="#" @click="registerItem(item)">{{ item.wcurso }}</a>
+            </span>
         </div>
     </div>
 </template>
@@ -21,7 +25,7 @@
 
             viewItem(item) {
                 return this.protocol + "//" + this.URLdomain + "/docente/pdf/syllabus/" + item.curso_id;
-                alert("Pendiente vista PDF del syllabus del curso ("+item.ccurso+"): "+item.wcurso);
+                // alert("Pendiente vista PDF del syllabus del curso ("+item.ccurso+"): "+item.wcurso);
             }
         }
     }
@@ -44,16 +48,12 @@
         margin: 0 0 10px 0;
     }
 
-    button {
-        background-color: lightgreen;
-        border: none;
-        box-shadow: 1px 1px 1px black;
-        font-size: inherit;
-        text-align: right;
-        cursor: pointer;
+    .view a {
+        color: blue
     }
 
-    button:hover {
-        background-color: green;
+    .selection a{
+        color: green
     }
+
 </style>

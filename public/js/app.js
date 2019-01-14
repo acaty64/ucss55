@@ -49470,7 +49470,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n#registration[data-v-0bce7641] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n}\n.row h4[data-v-0bce7641] {\n    display: inline-block;\n    width: 70%;\n    text-align: left;\n    margin: 0 0 10px 0;\n}\nbutton[data-v-0bce7641] {\n    background-color: lightgreen;\n    border: none;\n    -webkit-box-shadow: 1px 1px 1px black;\n            box-shadow: 1px 1px 1px black;\n    font-size: inherit;\n    text-align: right;\n    cursor: pointer;\n}\nbutton[data-v-0bce7641]:hover {\n    background-color: green;\n}\n", ""]);
+exports.push([module.i, "\n#registration[data-v-0bce7641] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n}\n.row h4[data-v-0bce7641] {\n    display: inline-block;\n    width: 70%;\n    text-align: left;\n    margin: 0 0 10px 0;\n}\n.view a[data-v-0bce7641] {\n    color: blue\n}\n.selection a[data-v-0bce7641]{\n    color: green\n}\n\n", ""]);
 
 // exports
 
@@ -49493,6 +49493,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['items', 'URLdomain', 'protocol'],
@@ -49503,7 +49507,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         viewItem: function viewItem(item) {
             return this.protocol + "//" + this.URLdomain + "/docente/pdf/syllabus/" + item.curso_id;
-            alert("Pendiente vista PDF del syllabus del curso (" + item.ccurso + "): " + item.wcurso);
+            // alert("Pendiente vista PDF del syllabus del curso ("+item.ccurso+"): "+item.wcurso);
         }
     }
 });
@@ -49526,22 +49530,26 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.items, function(item) {
         return _c("div", { staticClass: "row" }, [
-          _c("a", { attrs: { href: _vm.viewItem(item), target: "_blank" } }, [
-            _vm._v("View")
+          _c("span", { attrs: { title: "Ver syllabus del curso" } }, [
+            _c("a", { attrs: { href: _vm.viewItem(item), target: "_blank" } }, [
+              _vm._v("View")
+            ])
           ]),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  _vm.registerItem(item)
+          _c("span", { attrs: { title: "Selecciona el curso" } }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "#" },
+                on: {
+                  click: function($event) {
+                    _vm.registerItem(item)
+                  }
                 }
-              }
-            },
-            [_vm._v(_vm._s(item.wcurso))]
-          )
+              },
+              [_vm._v(_vm._s(item.wcurso))]
+            )
+          ])
         ])
       })
     ],
@@ -49644,7 +49652,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\n#registrations[data-v-71abf302] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n    text-align: left;\n}\n.summary[data-v-71abf302] {\n    text-align: center;\n}\n.row h4[data-v-71abf302] {\n    display: inline-block;\n    width: 30%;\n    margin: 0 0 10px 0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.row span[data-v-71abf302] {\n    width: 30%;\n    color: red;\n    cursor: pointer;\n}\n.row span[data-v-71abf302]:hover {\n    color: darkred;\n}\n\n", ""]);
+exports.push([module.i, "\n#registrations[data-v-71abf302] {\n    -webkit-box-shadow: 1px 1px 2px 1px #ccc;\n            box-shadow: 1px 1px 2px 1px #ccc;\n    margin: 20px;\n    padding: 20px;\n    display: inline-block;\n    width: 300px;\n    vertical-align: top;\n    text-align: left;\n}\n.summary[data-v-71abf302] {\n    text-align: center;\n}\n.row h4[data-v-71abf302] {\n    display: inline-block;\n    width: 30%;\n    margin: 0 0 10px 0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.row span[data-v-71abf302] {\n    width: 30%;\n    color: red;\n    cursor: pointer;\n}\n.row span[data-v-71abf302]:hover {\n    color: darkred;\n}\n.unselect button[data-v-71abf302] {\n    background-color: red;\n    border: none;\n    -webkit-box-shadow: 1px 1px 1px black;\n            box-shadow: 1px 1px 1px black;\n    font-size: inherit;\n    text-align: right;\n    cursor: pointer;\n}\n.unselect button[data-v-71abf302]:hover {\n    background-color: green;\n}\n", ""]);
 
 // exports
 
@@ -49655,6 +49663,10 @@ exports.push([module.i, "\n#registrations[data-v-71abf302] {\n    -webkit-box-sh
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -49720,18 +49732,20 @@ var render = function() {
       _vm._l(_vm.registrations, function(registration) {
         return _c("div", { staticClass: "row" }, [
           _c("p", [
-            _vm._v(_vm._s(registration.wcurso) + " "),
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    _vm.unregister(registration)
+            _vm._v(_vm._s(registration.wcurso) + " \n            "),
+            _c("span", { attrs: { title: "Deseleccionar curso" } }, [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.unregister(registration)
+                    }
                   }
-                }
-              },
-              [_vm._v("X")]
-            )
+                },
+                [_vm._v("X")]
+              )
+            ])
           ])
         ])
       })
