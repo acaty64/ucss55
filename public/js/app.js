@@ -50611,7 +50611,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "\nth{\n  width: 17%;\n}\n,\n#mensaje {\n  color: white;\n  background-color: DodgerBlue;\n  text-align: center\n}\n\n", ""]);
+exports.push([module.i, "\nth{\n  width: 17%;\n}\n,\n#mensaje {\n  color: white;\n  background-color: DodgerBlue;\n  text-align: center\n}\n.linea {\n  border: 1px solid blue;\n}\n.casilla {\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -50859,10 +50859,24 @@ var render = function() {
                   _c(
                     "tr",
                     [
-                      _c("th", [_vm._v("Franja")]),
+                      _c(
+                        "th",
+                        {
+                          staticClass: "col-md-1",
+                          staticStyle: { "text-align": "center" }
+                        },
+                        [_vm._v("Franja")]
+                      ),
                       _vm._v(" "),
                       _vm._l(_vm.semana, function(dia) {
-                        return _c("th", [_vm._v(_vm._s(dia))])
+                        return _c(
+                          "th",
+                          {
+                            staticClass: "col-md-1",
+                            staticStyle: { "text-align": "center" }
+                          },
+                          [_vm._v(_vm._s(dia))]
+                        )
                       })
                     ],
                     2
@@ -50871,6 +50885,7 @@ var render = function() {
                   _vm._l(_vm.gfranjas, function(gfranja) {
                     return _c(
                       "tr",
+                      { staticClass: "linea" },
                       [
                         _c("td", [
                           _c("p", [
@@ -50883,39 +50898,46 @@ var render = function() {
                         ]),
                         _vm._v(" "),
                         _vm._l(_vm.semana, function(dia) {
-                          return _c("td", [
-                            _vm.existeFranja(dia, gfranja)
-                              ? _c("span", [
-                                  _vm.disponible(dia, gfranja)
-                                    ? _c("span", [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "checkbox",
-                                            checked: ""
-                                          },
-                                          on: {
-                                            click: function($event) {
-                                              _vm.off(dia, gfranja)
+                          return _c(
+                            "td",
+                            {
+                              staticClass: "col-md-1",
+                              staticStyle: { "text-align": "center" }
+                            },
+                            [
+                              _vm.existeFranja(dia, gfranja)
+                                ? _c("span", [
+                                    _vm.disponible(dia, gfranja)
+                                      ? _c("span", [
+                                          _c("input", {
+                                            attrs: {
+                                              type: "checkbox",
+                                              checked: ""
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                _vm.off(dia, gfranja)
+                                              }
                                             }
-                                          }
-                                        })
-                                      ])
-                                    : _c("span", [
-                                        _c("input", {
-                                          attrs: {
-                                            type: "checkbox",
-                                            unchecked: ""
-                                          },
-                                          on: {
-                                            click: function($event) {
-                                              _vm.on(dia, gfranja)
+                                          })
+                                        ])
+                                      : _c("span", [
+                                          _c("input", {
+                                            attrs: {
+                                              type: "checkbox",
+                                              unchecked: ""
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                _vm.on(dia, gfranja)
+                                              }
                                             }
-                                          }
-                                        })
-                                      ])
-                                ])
-                              : _vm._e()
-                          ])
+                                          })
+                                        ])
+                                  ])
+                                : _vm._e()
+                            ]
+                          )
                         })
                       ],
                       2

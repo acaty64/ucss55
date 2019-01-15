@@ -24,16 +24,16 @@
             <table>
               <tbody>
                 <tr>
-                  <th>Franja</th>
-                  <th v-for="dia in semana">{{ dia }}</th>
+                  <th class="col-md-1" style="text-align: center" >Franja</th>
+                  <th class="col-md-1" style="text-align: center" v-for="dia in semana">{{ dia }}</th>
                 </tr>
-                <tr v-for="gfranja in gfranjas">
+                <tr class="linea" v-for="gfranja in gfranjas">
                   <td> 
                     <p>
                       {{ gfranja.wfranja }}
                     </p> 
                   </td>
-                  <td v-for="dia in semana">
+                  <td v-for="dia in semana" class="col-md-1" style="text-align: center" >
                       <span v-if="existeFranja(dia, gfranja)">
                         <span v-if="disponible(dia, gfranja)">
                           <input type="checkbox" checked @click="off(dia, gfranja)">
@@ -170,5 +170,10 @@ console.log('save response.data: ', response.data);
     background-color: DodgerBlue;
     text-align: center
   }
-
+  .linea {
+    border: 1px solid blue;
+  }
+  .casilla {
+    text-align: center;
+  }
 </style>

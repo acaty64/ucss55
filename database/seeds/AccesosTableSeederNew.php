@@ -8,7 +8,7 @@ use App\Type;
 use App\User;
 use Illuminate\Database\Seeder;
 
-class AccesosTableSeeder extends Seeder
+class AccesosTableSeederNew extends Seeder
 {
     /**
      * Run the database seeds.

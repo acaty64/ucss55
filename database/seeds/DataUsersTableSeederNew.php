@@ -1,11 +1,10 @@
 <?php
 use App\DataUser;
 use Illuminate\Database\Seeder;
-class DataUsersTableSeeder extends Seeder
+class DataUsersTableSeederNew extends Seeder
 {
      public function run()
      {
-
           DataUser::create([
                'wdoc1' => 'USUARIO',
                'wdoc2' => 'MASTER',
@@ -15,6 +14,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ucss.horarios@gmail.com',
                'email2' => '',
+               'user_id' => '1',
           ]);
 
           DataUser::create([
@@ -26,6 +26,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ucss.fcec.lim@gmail.com',
                'email2' => '',
+               'user_id' => '2',
           ]);
 
           DataUser::create([
@@ -37,6 +38,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jabanto@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '3',
           ]);
           DataUser::create([
                'wdoc1' => 'CINTHIA DENISSE',
@@ -47,46 +49,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cabanto@ucss.edu.pe',
                'email2' => 'cinthia.abanto@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NESTOR PORFIRIO',
-               'wdoc2' => 'ABANTO',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '001581',
-               'fono1' => '942315871',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'abantol28@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDESBITER',
-               'wdoc2' => 'ABANTO',
-               'wdoc3' => 'QUINTANA',
-               'cdocente' => '001564',
-               'fono1' => '955892304',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'quintana_or2@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO',
-               'wdoc2' => 'ABANTO',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '000243',
-               'fono1' => '9314843',
-               'fono2' => '5787483',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SHAINA',
-               'wdoc2' => 'ABER',
-               'wdoc3' => 'OLISA',
-               'cdocente' => '000320',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '4',
           ]);
           DataUser::create([
                'wdoc1' => 'ROMAN CARLOS',
@@ -97,26 +60,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4742195',
                'email1' => 'racevedo@ucss.edu.pe',
                'email2' => 'romanacevedoespinola@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN FRANCISCO',
-               'wdoc2' => 'ACEVEDO',
-               'wdoc3' => 'GODINEZ',
-               'cdocente' => '002798',
-               'fono1' => '932804931',
-               'fono2' => '4404274',
-               'email1' => '',
-               'email2' => 'acevedo.jf@pucp.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ISABEL MARGOT',
-               'wdoc2' => 'ACEVEDO',
-               'wdoc3' => 'RIQUE',
-               'cdocente' => '001271',
-               'fono1' => '997207177',
-               'fono2' => '9648458',
-               'email1' => '',
-               'email2' => 'marisa1034@hotmail.com',
+               'user_id' => '5',
           ]);
           DataUser::create([
                'wdoc1' => 'NIMIA',
@@ -127,26 +71,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nacho@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL DEMETRIO',
-               'wdoc2' => 'ACOSTA',
-               'wdoc3' => 'CERRON',
-               'cdocente' => '002221',
-               'fono1' => '964450009',
-               'fono2' => '251694',
-               'email1' => '',
-               'email2' => 'maneco090454@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO GONZALO',
-               'wdoc2' => 'ACOSTA',
-               'wdoc3' => 'PORTOCARRERO',
-               'cdocente' => '002505',
-               'fono1' => '952885306',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'pedgonac@gmail.com',
+               'user_id' => '6',
           ]);
           DataUser::create([
                'wdoc1' => 'PAUL HENRY',
@@ -157,56 +82,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5218481',
                'email1' => 'pacosta@ucss.edu.pe',
                'email2' => 'paul.haq@gmail.com',
+               'user_id' => '7',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEX',
-               'wdoc2' => 'ACUÑA',
+               'wdoc2' => 'ACUÃ‘A',
                'wdoc3' => 'BERROSPI',
                'cdocente' => '000806',
                'fono1' => '988120143',
                'fono2' => '4531569',
                'email1' => 'aacuna@ucss.edu.pe',
                'email2' => 'acunab.alex@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LILER',
-               'wdoc2' => 'ACUÑA',
-               'wdoc3' => 'REGALADO',
-               'cdocente' => '001382',
-               'fono1' => '942445598',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'liareg1002@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SILVIA ESTHER',
-               'wdoc2' => 'ADRIANZEN',
-               'wdoc3' => 'AZABACHE',
-               'cdocente' => '001411',
-               'fono1' => '975131305',
-               'fono2' => '4212113',
-               'email1' => '',
-               'email2' => 'silvia_adrianzen@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDWIN',
-               'wdoc2' => 'ADRIANZEN',
-               'wdoc3' => 'COLLANTES',
-               'cdocente' => '001844',
-               'fono1' => '969111461',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'adrian_leo887@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADRIAN JESUS',
-               'wdoc2' => 'ADRIANZEN',
-               'wdoc3' => 'COLONA',
-               'cdocente' => '002571',
-               'fono1' => '990057870',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'aadrianzen3521@hotmail.com',
+               'user_id' => '8',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ANTONIO',
@@ -217,6 +104,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3480516',
                'email1' => 'jadvinculac@ucss.edu.pe',
                'email2' => 'jantonio_1207@hotmail.com',
+               'user_id' => '9',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO NOE',
@@ -227,6 +115,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ragreda@ucss.edu.pe',
                'email2' => 'ricardonoeagreda@hotmail.com',
+               'user_id' => '10',
           ]);
           DataUser::create([
                'wdoc1' => 'GABRIEL FELIX',
@@ -237,16 +126,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gaguilarc@ucss.edu.pe',
                'email2' => 'gabrielfaco@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KAREN',
-               'wdoc2' => 'AGUILAR',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '001883',
-               'fono1' => '994477547',
-               'fono2' => '2808945',
-               'email1' => '',
-               'email2' => 'karenaf940@hotmail.com',
+               'user_id' => '11',
           ]);
           DataUser::create([
                'wdoc1' => 'ALBERTO FELIX',
@@ -257,6 +137,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3481303',
                'email1' => 'aaguilar@ucss.edu.pe',
                'email2' => 'a_aguilar12@yahoo.es',
+               'user_id' => '12',
           ]);
           DataUser::create([
                'wdoc1' => 'ASTRID',
@@ -267,6 +148,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aaguilarl@ucss.edu.pe',
                'email2' => 'godelina@gmail.com',
+               'user_id' => '13',
           ]);
           DataUser::create([
                'wdoc1' => 'NEISER ALBERTO',
@@ -277,16 +159,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'naguilar@ucss.edu.pe',
                'email2' => 'econam_09@hotmail.com',
+               'user_id' => '14',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ENRIQUE GUADALUPE',
                'wdoc2' => 'AGUILAR',
-               'wdoc3' => 'MUÑOZ',
+               'wdoc3' => 'MUÃ‘OZ',
                'cdocente' => '002616',
                'fono1' => '993568628',
                'fono2' => '4725927',
                'email1' => 'jaguilar@ucss.edu.pe',
                'email2' => 'jenriqueaguilarm@gmail.com',
+               'user_id' => '15',
           ]);
           DataUser::create([
                'wdoc1' => 'ERNESTO',
@@ -297,16 +181,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eaguilarp@ucss.edu.pe',
                'email2' => 'ernestodarwin@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EMMA DORIS',
-               'wdoc2' => 'AGUILAR',
-               'wdoc3' => 'PONCE',
-               'cdocente' => '001236',
-               'fono1' => '955760794',
-               'fono2' => '5713001',
-               'email1' => '',
-               'email2' => 'eaguilarponce@yahoo.es',
+               'user_id' => '16',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL',
@@ -317,6 +192,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'daguilar@ucss.edu.pe',
                'email2' => 'danielaguilarruiz1@gmail.com',
+               'user_id' => '17',
           ]);
           DataUser::create([
                'wdoc1' => 'EZSEQUIEL',
@@ -327,6 +203,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eaguilar@ucss.edu.pe',
                'email2' => 'aruiz_2@hotmail.com',
+               'user_id' => '18',
           ]);
           DataUser::create([
                'wdoc1' => 'FIORELLA DEL ROSARIO',
@@ -337,6 +214,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5233537',
                'email1' => 'faguilar@ucss.edu.pe',
                'email2' => 'fioav_412@hotmail.com',
+               'user_id' => '19',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN',
@@ -347,26 +225,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2639365',
                'email1' => 'caguirre@ucss.edu.pe',
                'email2' => 'caguirre2703@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AUGUSTO',
-               'wdoc2' => 'AGUIRRE',
-               'wdoc3' => 'COLONIO',
-               'cdocente' => '002214',
-               'fono1' => '964613444',
-               'fono2' => '386878',
-               'email1' => '',
-               'email2' => 'aguicoagusto@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RONALD',
-               'wdoc2' => 'AGUIRRE',
-               'wdoc3' => 'DELGADO',
-               'cdocente' => '000871',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '20',
           ]);
           DataUser::create([
                'wdoc1' => 'MERLE MILAGROS',
@@ -377,16 +236,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6557461',
                'email1' => 'maguirre@ucss.edu.pe',
                'email2' => 'merle_aguirre@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RUTH NOEMI',
-               'wdoc2' => 'AGUIRRE',
-               'wdoc3' => 'ROMERO',
-               'cdocente' => '002202',
-               'fono1' => '969255683',
-               'fono2' => '213506',
-               'email1' => '',
-               'email2' => 'raguirresiagie@hotmail.com',
+               'user_id' => '21',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM ROBERTO',
@@ -397,6 +247,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2920032',
                'email1' => 'waguirre@ucss.edu.pe',
                'email2' => 'trebor81a@gmail.com',
+               'user_id' => '22',
           ]);
           DataUser::create([
                'wdoc1' => 'MARGARITA ESTHER',
@@ -407,6 +258,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7976946',
                'email1' => 'mahumada@ucss.edu.pe',
                'email2' => 'maga2204@hotmail.com',
+               'user_id' => '23',
           ]);
           DataUser::create([
                'wdoc1' => 'MARITA YSABEL',
@@ -417,6 +269,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5443920',
                'email1' => 'malama@ucss.edu.pe',
                'email2' => 'myatraa@hotmail.com',
+               'user_id' => '24',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -427,6 +280,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jalarcon@ucss.edu.pe',
                'email2' => 'jcalarcon@uni.edu.pe',
+               'user_id' => '25',
           ]);
           DataUser::create([
                'wdoc1' => 'PATRICIA ELSA',
@@ -437,6 +291,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5424011',
                'email1' => 'palarcon@ucss.edu.pe',
                'email2' => 'patricia_alarcon@hotmail.com',
+               'user_id' => '26',
           ]);
           DataUser::create([
                'wdoc1' => 'MODESTO',
@@ -447,6 +302,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5297977',
                'email1' => 'malarcon@ucss.edu.pe',
                'email2' => 'malarcon444@gmail.com',
+               'user_id' => '27',
           ]);
           DataUser::create([
                'wdoc1' => 'ERICK LEONARDO',
@@ -457,6 +313,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2654408',
                'email1' => 'ealata@ucss.edu.pe',
                'email2' => 'erick.alata@gmail.com',
+               'user_id' => '28',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA MELVA',
@@ -467,6 +324,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5238297',
                'email1' => 'aalba@ucss.edu.pe',
                'email2' => 'melvanita@hotmail.com',
+               'user_id' => '29',
           ]);
           DataUser::create([
                'wdoc1' => 'CLEODALIA',
@@ -477,6 +335,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5231638',
                'email1' => 'calbites@ucss.edu.pe',
                'email2' => 'cleodalia@hotmail.com',
+               'user_id' => '30',
           ]);
           DataUser::create([
                'wdoc1' => 'JHONNY JAVIER',
@@ -487,6 +346,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jalbitres@ucss.edu.pe',
                'email2' => 'jjai1426@hotmail.com',
+               'user_id' => '31',
           ]);
           DataUser::create([
                'wdoc1' => 'ANUSKA',
@@ -497,6 +357,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aalbornoz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '32',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA MALENA',
@@ -507,16 +368,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'malbujar@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLA LORENA',
-               'wdoc2' => 'ALBURQUEQUE',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '002484',
-               'fono1' => '947848178',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'carlaalcas@hotmail.com',
+               'user_id' => '33',
           ]);
           DataUser::create([
                'wdoc1' => 'LEYLA ELSA',
@@ -527,6 +379,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4822584',
                'email1' => 'lalburqueque@ucss.edu.pe',
                'email2' => 'leylazk@gmail.com',
+               'user_id' => '34',
           ]);
           DataUser::create([
                'wdoc1' => 'SILVIA JOHANNA',
@@ -537,16 +390,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2748967',
                'email1' => 'salburqueque@ucss.edu.pe',
                'email2' => 'siavanti@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LOURDES IVONNE DEL CARMEN',
-               'wdoc2' => 'ALCAIDE',
-               'wdoc3' => 'ARANDA',
-               'cdocente' => '001991',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '35',
           ]);
           DataUser::create([
                'wdoc1' => 'RAMON FERNANDO',
@@ -557,6 +401,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3367035',
                'email1' => 'ralcalde@ucss.edu.pe',
                'email2' => 'rfalcalde@hotmail.com',
+               'user_id' => '36',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCISCO ALEJANDRO',
@@ -567,26 +412,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5230479',
                'email1' => 'falcantara@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADRIAN',
-               'wdoc2' => 'ALCANTARA',
-               'wdoc3' => 'CORTEZ',
-               'cdocente' => '000139',
-               'fono1' => '9045635',
-               'fono2' => '3820484',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIRIAM',
-               'wdoc2' => 'ALCAZAR',
-               'wdoc3' => 'GAMARRA DE VELARDE',
-               'cdocente' => '000065',
-               'fono1' => '8480833',
-               'fono2' => '4246306',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '37',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ENRIQUE',
@@ -597,16 +423,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'alegre@ucss.edu.pe',
                'email2' => 'leac-cpc@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS EMILIO',
-               'wdoc2' => 'ALEGRIA',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '001553',
-               'fono1' => '5281373',
-               'fono2' => '5365020',
-               'email1' => '',
-               'email2' => 'carlos.alegriarojas@gmail.com',
+               'user_id' => '38',
           ]);
           DataUser::create([
                'wdoc1' => 'DIEGO CRISTOBAL',
@@ -617,6 +434,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dalegria@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '39',
           ]);
           DataUser::create([
                'wdoc1' => 'NATIVIDAD DE JESUS',
@@ -627,6 +445,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5555555',
                'email1' => 'nalejos@ucss.edu.pe',
                'email2' => 'ALEJOS-50@hotmail.com',
+               'user_id' => '40',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO ARTURO',
@@ -637,26 +456,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5334121',
                'email1' => 'malfaro@ucss.edu.pe',
                'email2' => 'malfalu23@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAMIRO ANTONIO',
-               'wdoc2' => 'ALFARO',
-               'wdoc3' => 'MENDEZ',
-               'cdocente' => '002150',
-               'fono1' => '985298460',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alfaromra@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KAREN LIZETH',
-               'wdoc2' => 'ALFARO',
-               'wdoc3' => 'MENDIVES',
-               'cdocente' => '001114',
-               'fono1' => '99271010',
-               'fono2' => '5743570',
-               'email1' => '',
-               'email2' => 'karen_alfaro@hotmail.com',
+               'user_id' => '41',
           ]);
           DataUser::create([
                'wdoc1' => 'EDITH BETTY',
@@ -667,6 +467,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4254907',
                'email1' => 'ealfaro@ucss.edu.pe',
                'email2' => 'balfarop@gmail.com',
+               'user_id' => '42',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER YURI',
@@ -677,36 +478,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4239848',
                'email1' => 'waliaga@ucss.edu.pe',
                'email2' => 'medaliaga3@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUILLERMO PERCY',
-               'wdoc2' => 'ALIAGA',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '002508',
-               'fono1' => '992736923',
-               'fono2' => '2324744',
-               'email1' => '',
-               'email2' => 'guilermo29@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS OSWALDO',
-               'wdoc2' => 'ALIAGA',
-               'wdoc3' => 'MARQUEZ',
-               'cdocente' => '000642',
-               'fono1' => '',
-               'fono2' => '4521571',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'REBECA VILMA',
-               'wdoc2' => 'ALIAGA',
-               'wdoc3' => 'ORDOÑEZ',
-               'cdocente' => '002195',
-               'fono1' => '971319068',
-               'fono2' => '224133',
-               'email1' => '',
-               'email2' => 'rebecaaliaga30@hotmail.com',
+               'user_id' => '43',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS HUMBERTO',
@@ -717,6 +489,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'laliaga@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '44',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ANTONIO',
@@ -727,6 +500,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2702435',
                'email1' => 'laliagar@ucss.edu.pe',
                'email2' => 'laliagarota1@yahoo.es',
+               'user_id' => '45',
           ]);
           DataUser::create([
                'wdoc1' => 'FREDY ITALO',
@@ -737,6 +511,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3665220',
                'email1' => 'faliaga@ucss.edu.pe',
                'email2' => 'faliaga@soluclouderp.com',
+               'user_id' => '46',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR',
@@ -747,6 +522,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5338203',
                'email1' => 'calipazaga@ucss.edu.pe',
                'email2' => 'cesar.alipazaga@gmail.com',
+               'user_id' => '47',
           ]);
           DataUser::create([
                'wdoc1' => 'DORIS',
@@ -757,36 +533,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dallende@ucss.edu.pe',
                'email2' => 'dorisat17@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL DEMETRIO',
-               'wdoc2' => 'ALMEIDA',
-               'wdoc3' => 'ALBORNOZ',
-               'cdocente' => '002222',
-               'fono1' => '943704946',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'almeidaya@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS FEDERICO',
-               'wdoc2' => 'ALONSO',
-               'wdoc3' => 'BUSSO',
-               'cdocente' => '000527',
-               'fono1' => '8021475',
-               'fono2' => '4251723',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JIMNER',
-               'wdoc2' => 'ALTAMIRANO',
-               'wdoc3' => 'CORAL',
-               'cdocente' => '000902',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '48',
           ]);
           DataUser::create([
                'wdoc1' => 'WILMER',
@@ -797,6 +544,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'waltamirano@ucss.edu.pe',
                'email2' => 'wilmeraltamirano@hotmail.com',
+               'user_id' => '49',
           ]);
           DataUser::create([
                'wdoc1' => 'ALDO JORGE',
@@ -807,6 +555,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6587299',
                'email1' => 'aaltamirano@ucss.edu.pe',
                'email2' => 'altamirano.ing.civil@gmail.com',
+               'user_id' => '50',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR HERNANDO',
@@ -817,6 +566,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'caltamirano@ucss.edu.pe',
                'email2' => 'cehealre@hotmail.com',
+               'user_id' => '51',
           ]);
           DataUser::create([
                'wdoc1' => 'SAMUEL',
@@ -827,6 +577,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'saltamirano@ucss.edu.pe',
                'email2' => 'saltamir24@gmail.com',
+               'user_id' => '52',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -837,6 +588,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3565202',
                'email1' => 'jaltuna@ucss.edu.pe',
                'email2' => 'juancarlosaltuna@gmail.com',
+               'user_id' => '53',
           ]);
           DataUser::create([
                'wdoc1' => 'RUBEN JESUS',
@@ -847,6 +599,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4843159',
                'email1' => 'rjalva@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '54',
           ]);
           DataUser::create([
                'wdoc1' => 'LEONARDO ALFREDO',
@@ -857,6 +610,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lalva@ucss.edu.pe',
                'email2' => 'leoalva01@hotmail.com',
+               'user_id' => '55',
           ]);
           DataUser::create([
                'wdoc1' => 'GLADIA MARIBEL',
@@ -867,6 +621,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'galvap@ucss.edu.pe',
                'email2' => 'gmalvap@hotmail.com',
+               'user_id' => '56',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSSIO DEL PILAR',
@@ -877,6 +632,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ralva@ucss.edu.pe',
                'email2' => 'rossioap@hotmail.com',
+               'user_id' => '57',
           ]);
           DataUser::create([
                'wdoc1' => 'SUSANA OFELIA',
@@ -887,6 +643,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2477639',
                'email1' => 'salva@ucss.edu.pe',
                'email2' => 'susyalva_4@hotmail.com',
+               'user_id' => '58',
           ]);
           DataUser::create([
                'wdoc1' => 'SERGIO HERMES',
@@ -897,16 +654,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2617396',
                'email1' => 'salvan@ucss.edu.pe',
                'email2' => 'sergioalvan@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CHRISTIAN MAURICIO',
-               'wdoc2' => 'ALVAN',
-               'wdoc3' => 'SILVA',
-               'cdocente' => '002783',
-               'fono1' => '990325722',
-               'fono2' => '4465629',
-               'email1' => '',
-               'email2' => 'calvan@estudioalvan.com',
+               'user_id' => '59',
           ]);
           DataUser::create([
                'wdoc1' => 'EVELYN',
@@ -917,16 +665,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5317836',
                'email1' => 'ealvarado@ucss.edu.pe',
                'email2' => 'ealvarado019@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICHAR',
-               'wdoc2' => 'ALVARADO',
-               'wdoc3' => 'CANCHIHUAMAN',
-               'cdocente' => '002680',
-               'fono1' => '956867342',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'richialvarado36@gmail.com',
+               'user_id' => '60',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCO ANTONIO',
@@ -937,6 +676,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'malvaradoc@ucss.edu.pe',
                'email2' => 'markoalvarado79@gmail.com',
+               'user_id' => '61',
           ]);
           DataUser::create([
                'wdoc1' => 'GERMAN FELIPE',
@@ -947,6 +687,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5644466',
                'email1' => 'galvarado@ucss.edu.pe',
                'email2' => 'germanalvarado@hotmail.com',
+               'user_id' => '62',
           ]);
           DataUser::create([
                'wdoc1' => 'ARNALDO MARTIN',
@@ -957,16 +698,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aalvarado@ucss.edu.pe',
                'email2' => 'aalvaradol@outlook.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARMEN',
-               'wdoc2' => 'ALVARADO',
-               'wdoc3' => 'MANCHEGO',
-               'cdocente' => '001112',
-               'fono1' => '994993096',
-               'fono2' => '3545328',
-               'email1' => '',
-               'email2' => 'calvarado@esan.edu.pe',
+               'user_id' => '63',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE SALOMON',
@@ -977,16 +709,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jalvaradop@ucss.edu.pe',
                'email2' => 'jorgesaalpan1981@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DELIBES HIGEL',
-               'wdoc2' => 'ALVARADO',
-               'wdoc3' => 'VARA',
-               'cdocente' => '002294',
-               'fono1' => '975329135',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'delibes_62@hotmail.com',
+               'user_id' => '64',
           ]);
           DataUser::create([
                'wdoc1' => 'NOEMI',
@@ -997,6 +720,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nalvarado@ucss.edu.pe',
                'email2' => 'consultorageoambiental@gmail.com',
+               'user_id' => '65',
           ]);
           DataUser::create([
                'wdoc1' => 'JOILER',
@@ -1007,6 +731,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jalvarado@ucss.edu.pe',
                'email2' => 'joalvi66@hotmail.com',
+               'user_id' => '66',
           ]);
           DataUser::create([
                'wdoc1' => 'ROXANNA MARIA DE LOURDES',
@@ -1017,6 +742,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4714765',
                'email1' => 'malvarado@ucss.edu.pe',
                'email2' => 'roxannalvarado@gmail.com',
+               'user_id' => '67',
           ]);
           DataUser::create([
                'wdoc1' => 'BETSY ROCIO',
@@ -1027,26 +753,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5710860',
                'email1' => 'balvarado@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME FERNANDO',
-               'wdoc2' => 'ALVARES RUIZ',
-               'wdoc3' => 'AROSTEGUI',
-               'cdocente' => '002166',
-               'fono1' => '959822727',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'feralvaruiz@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MABEL YANNETT',
-               'wdoc2' => 'ALVAREZ',
-               'wdoc3' => 'ARCE',
-               'cdocente' => '001914',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mabelyannett@hotmail.com',
+               'user_id' => '68',
           ]);
           DataUser::create([
                'wdoc1' => 'RENZO IVAN',
@@ -1057,26 +764,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ralvarez@ucss.edu.pe',
                'email2' => 'renzo_sud@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO CESAR',
-               'wdoc2' => 'ALVAREZ',
-               'wdoc3' => 'CARASSA',
-               'cdocente' => '002171',
-               'fono1' => '965348215',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'aaron_0110@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ANTONIO',
-               'wdoc2' => 'ALVAREZ',
-               'wdoc3' => 'DE PRADO',
-               'cdocente' => '000635',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '69',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO PABLO',
@@ -1087,6 +775,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4354465',
                'email1' => 'palvarez@ucss.edu.pe',
                'email2' => 'catecol@hotmail.com',
+               'user_id' => '70',
           ]);
           DataUser::create([
                'wdoc1' => 'HENDERSON EDUARDO',
@@ -1097,26 +786,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '331962',
                'email1' => 'halvarez@ucss.edu.pe',
                'email2' => 'edualvarez01@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LIVIO SANTIAGO',
-               'wdoc2' => 'ALVAREZ',
-               'wdoc3' => 'LAZARO',
-               'cdocente' => '002272',
-               'fono1' => '962312262',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'laalvarezlazaro@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ROVINO',
-               'wdoc2' => 'ALVAREZ',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '002297',
-               'fono1' => '981616106',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'joal14@gmail.com',
+               'user_id' => '71',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIAN',
@@ -1127,26 +797,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jalvarez@ucss.edu.pe',
                'email2' => 'jalvarezp2013@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HERBERT FRANCISCO',
-               'wdoc2' => 'ALVAREZ',
-               'wdoc3' => 'PURACA',
-               'cdocente' => '000933',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wanyu0116@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARITO BETHSABE',
-               'wdoc2' => 'ALVARO',
-               'wdoc3' => 'BALDEON',
-               'cdocente' => '001118',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'carolynalvaro77@hotmail.com',
+               'user_id' => '72',
           ]);
           DataUser::create([
                'wdoc1' => 'CLEOFE GENOVEVA',
@@ -1157,6 +808,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5572788',
                'email1' => 'calvites@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '73',
           ]);
           DataUser::create([
                'wdoc1' => 'SEGUNDO JUAN',
@@ -1167,26 +819,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '513892',
                'email1' => 'salzamora@ucss.edu.pe',
                'email2' => 'vikysoldevilla17@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PERCY',
-               'wdoc2' => 'ALZAMORA',
-               'wdoc3' => 'TINAJEROS',
-               'cdocente' => '000064',
-               'fono1' => '',
-               'fono2' => '3376034',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDY ALFONSO',
-               'wdoc2' => 'AMARO',
-               'wdoc3' => 'POMA',
-               'cdocente' => '000993',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '74',
           ]);
           DataUser::create([
                'wdoc1' => 'JANETH CRISTINA',
@@ -1197,6 +830,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2525345',
                'email1' => 'jamaya@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '75',
           ]);
           DataUser::create([
                'wdoc1' => 'GIULLIANA PATRICIA',
@@ -1207,36 +841,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4780042',
                'email1' => 'gambrosio@ucss.edu.pe',
                'email2' => 'yuli_patty@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TEODOCIO',
-               'wdoc2' => 'AMBROSIO',
-               'wdoc3' => 'OSORIO',
-               'cdocente' => '002210',
-               'fono1' => '998433274',
-               'fono2' => '4394392',
-               'email1' => '',
-               'email2' => 'ambrosio1101@hotmail.com',
+               'user_id' => '76',
           ]);
           DataUser::create([
                'wdoc1' => 'JOHNNY PERCY',
                'wdoc2' => 'AMBULAY',
-               'wdoc3' => 'BRICEÑO',
+               'wdoc3' => 'BRICEÃ‘O',
                'cdocente' => '001687',
                'fono1' => '987638640',
                'fono2' => '',
                'email1' => 'jambulay@ucss.edu.pe',
                'email2' => 'johnnyambulay@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'AMES',
-               'wdoc3' => 'SANTILLAN',
-               'cdocente' => '000249',
-               'fono1' => '',
-               'fono2' => '4570254',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '77',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO ANTONIO',
@@ -1247,6 +863,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3590952',
                'email1' => 'manaya@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '78',
           ]);
           DataUser::create([
                'wdoc1' => 'JULISSA DEL CARMEN',
@@ -1257,6 +874,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jancajimae@ucss.edu.pe',
                'email2' => 'jcae_66@hotmail.com',
+               'user_id' => '79',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -1267,46 +885,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jancajima@ucss.edu.pe',
                'email2' => 'juancarlosancajima@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDGAR',
-               'wdoc2' => 'ANCCASI',
-               'wdoc3' => 'TAYPE',
-               'cdocente' => '002226',
-               'fono1' => '954649551',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'edgarac@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARGOT ERIKA',
-               'wdoc2' => 'ANCHANTE',
-               'wdoc3' => 'RAMOS',
-               'cdocente' => '000319',
-               'fono1' => '7457659',
-               'fono2' => '4570672',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'ANCHIRAYCO',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '000905',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANIEL ENRIQUE',
-               'wdoc2' => 'ANDALUZ',
-               'wdoc3' => 'MIDEIRO',
-               'cdocente' => '000656',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '80',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID HERNAN',
@@ -1317,36 +896,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4398625',
                'email1' => 'dandia@ucss.edu.pe',
                'email2' => 'davidandia84@hotmail.com',
+               'user_id' => '81',
           ]);
           DataUser::create([
                'wdoc1' => 'LILIANA JESUS',
                'wdoc2' => 'ANDRADE',
-               'wdoc3' => 'QUIÑONES',
+               'wdoc3' => 'QUIÃ‘ONES',
                'cdocente' => '002105',
                'fono1' => '997876762',
                'fono2' => '4647662',
                'email1' => 'landrade@ucss.edu.pe',
                'email2' => 'ili2558@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUGO ALFREDO',
-               'wdoc2' => 'ANDRICH',
-               'wdoc3' => 'FERRER',
-               'cdocente' => '000618',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ERNESTO',
-               'wdoc2' => 'ANGLAS',
-               'wdoc3' => 'LA TORRE',
-               'cdocente' => '001238',
-               'fono1' => '97917552',
-               'fono2' => '6392852',
-               'email1' => '',
-               'email2' => 'anglasmiguel@hotmail.com',
+               'user_id' => '82',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -1357,16 +918,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4524056',
                'email1' => 'canglas@ucss.edu.pe',
                'email2' => 'canglos@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ZOSIMO DAVID',
-               'wdoc2' => 'ANGLAS',
-               'wdoc3' => 'URDANEGUI',
-               'cdocente' => '002177',
-               'fono1' => '951954990',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'zanglas@continental.edu.pe',
+               'user_id' => '83',
           ]);
           DataUser::create([
                'wdoc1' => 'RAFAEL MARTIN',
@@ -1377,6 +929,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rangulo@ucss.edu.pe',
                'email2' => 'rafaelangulovaldivia@hotmail.com',
+               'user_id' => '84',
           ]);
           DataUser::create([
                'wdoc1' => 'SANDRO FABRICIO',
@@ -1387,16 +940,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '322355',
                'email1' => 'santicona@ucss.edu.pe',
                'email2' => 'fabrizioanticona@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELENA',
-               'wdoc2' => 'ANTO',
-               'wdoc3' => 'PASACHE',
-               'cdocente' => '001445',
-               'fono1' => '944664431',
-               'fono2' => '378566',
-               'email1' => '',
-               'email2' => 'elenarsm@hotmail.com',
+               'user_id' => '85',
           ]);
           DataUser::create([
                'wdoc1' => 'DORILA TEODOSIA',
@@ -1407,26 +951,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6883554',
                'email1' => 'dantonio@ucss.edu.pe',
                'email2' => 'dorila.antonio@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUCIA SUSANA',
-               'wdoc2' => 'APOLINARIO',
-               'wdoc3' => 'VEGA',
-               'cdocente' => '002601',
-               'fono1' => '975459872',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lusuapolinario@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ONOFRIO',
-               'wdoc2' => 'AQUINO',
-               'wdoc3' => 'TACSA',
-               'cdocente' => '002194',
-               'fono1' => '954605100',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bruno_04147@hotmail.com',
+               'user_id' => '86',
           ]);
           DataUser::create([
                'wdoc1' => 'ELSA',
@@ -1437,6 +962,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3543734',
                'email1' => 'eaquino@ucss.edu.pe',
                'email2' => 'elsaaquino1@hotmail.com',
+               'user_id' => '87',
           ]);
           DataUser::create([
                'wdoc1' => 'TEODORO',
@@ -1447,6 +973,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5431520',
                'email1' => 'taquisse@ucss.edu.pe',
                'email2' => 'teodoro_67@yahoo.es',
+               'user_id' => '88',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -1457,6 +984,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4492711',
                'email1' => 'maragon@ucss.edu.pe',
                'email2' => 'aragonmiguel2007@yahoo.es',
+               'user_id' => '89',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGELLA ROXANA',
@@ -1467,6 +995,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5743378',
                'email1' => 'aarakaki@ucss.edu.pe',
                'email2' => 'angellarakaki@hotmail.com',
+               'user_id' => '90',
           ]);
           DataUser::create([
                'wdoc1' => 'MILAGRITO AQUILA',
@@ -1477,6 +1006,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5234674',
                'email1' => 'maramburu@ucss.edu.pe',
                'email2' => 'milyaramburu@hotmail.com',
+               'user_id' => '91',
           ]);
           DataUser::create([
                'wdoc1' => 'JUNIOR MEDARDO',
@@ -1487,6 +1017,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jarana@ucss.edu.pe',
                'email2' => 'jrarana@globalproyectsac.com',
+               'user_id' => '92',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR GUSTAVO',
@@ -1497,6 +1028,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'oarana@ucss.edu.pe',
                'email2' => 'oaranacabrera@gmail.com',
+               'user_id' => '93',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN PILAR',
@@ -1507,16 +1039,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'carana@ucss.edu.pe',
                'email2' => 'carmenmaresca@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDGAR ALEXS',
-               'wdoc2' => 'ARANA',
-               'wdoc3' => 'OLIVOS',
-               'cdocente' => '001515',
-               'fono1' => '990184253',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alexs.arana@gmail.com',
+               'user_id' => '94',
           ]);
           DataUser::create([
                'wdoc1' => 'PAOLA JOHANA',
@@ -1527,26 +1050,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4258752',
                'email1' => 'parana@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALFONSO',
-               'wdoc2' => 'ARANDA',
-               'wdoc3' => 'ORE',
-               'cdocente' => '002249',
-               'fono1' => '948686879',
-               'fono2' => '7453349',
-               'email1' => '',
-               'email2' => 'arandaore@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARINO CESAR',
-               'wdoc2' => 'ARANDA',
-               'wdoc3' => 'RIVERA',
-               'cdocente' => '002398',
-               'fono1' => '969744495',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mark_free12@hotmail.com',
+               'user_id' => '95',
           ]);
           DataUser::create([
                'wdoc1' => 'RUTH MILAGROS',
@@ -1557,16 +1061,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4603808',
                'email1' => 'raranibar@ucss.edu.pe',
                'email2' => 'rutharanibar@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUZ MARINA',
-               'wdoc2' => 'ARAOZ',
-               'wdoc3' => 'CHAVEZ',
-               'cdocente' => '001257',
-               'fono1' => '995180691',
-               'fono2' => '3322807',
-               'email1' => '',
-               'email2' => 'araoz.luz@gmail.com',
+               'user_id' => '96',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CANCIO',
@@ -1577,6 +1072,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4481932',
                'email1' => 'jaraoz@ucss.edu.pe',
                'email2' => 'Juaraoz2003@yahoo.com',
+               'user_id' => '97',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA CECILIA',
@@ -1587,6 +1083,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4610823',
                'email1' => 'aarashiro@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '98',
           ]);
           DataUser::create([
                'wdoc1' => 'FREDO',
@@ -1597,6 +1094,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'farauzo@ucss.edu.pe',
                'email2' => 'farauzor@usmp.edu.pe',
+               'user_id' => '99',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ARMANDO',
@@ -1607,6 +1105,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2430657',
                'email1' => 'jarce@ucss.edu.pe',
                'email2' => 'jhaarcee@hotmail.com',
+               'user_id' => '100',
           ]);
           DataUser::create([
                'wdoc1' => 'MONICA YULIANA',
@@ -1617,6 +1116,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'marce@ucss.edu.pe',
                'email2' => 'nimo84@hotmail.com',
+               'user_id' => '101',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL JESUS',
@@ -1627,6 +1127,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'marellanoa@ucss.edu.pe',
                'email2' => 'maje_270@hotmail.com',
+               'user_id' => '102',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIETTA ZORAIDA SOCORRO',
@@ -1637,26 +1138,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4496308',
                'email1' => 'marellano@ucss.edu.pe',
                'email2' => 'marietta_arellanoc@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL FRANCISCO',
-               'wdoc2' => 'ARELLANO',
-               'wdoc3' => 'CRUZ',
-               'cdocente' => '001725',
-               'fono1' => '969185896',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marellano2710@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FEDERICO ALBERTO',
-               'wdoc2' => 'ARELLANO',
-               'wdoc3' => 'ORJEDA',
-               'cdocente' => '000003',
-               'fono1' => '',
-               'fono2' => '2214312',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '103',
           ]);
           DataUser::create([
                'wdoc1' => 'CRISTHIAN ERICK',
@@ -1667,26 +1149,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6751723',
                'email1' => 'carellano@ucss.edu.pe',
                'email2' => 'crisarellanovega@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA DEL CARMEN',
-               'wdoc2' => 'ARENAS',
-               'wdoc3' => 'ALFARO',
-               'cdocente' => '000541',
-               'fono1' => '7006950',
-               'fono2' => '5228160',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADALIDES',
-               'wdoc2' => 'ARENAS',
-               'wdoc3' => 'SANTIAGO',
-               'cdocente' => '001784',
-               'fono1' => '999796732',
-               'fono2' => '4611211',
-               'email1' => '',
-               'email2' => 'adalrenas@yahoo.com',
+               'user_id' => '104',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCIS LOIS PHILIP',
@@ -1697,36 +1160,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'farevalo@ucss.edu.pe',
                'email2' => 'lois857@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO DAVID',
-               'wdoc2' => 'AREVALO',
-               'wdoc3' => 'MEDINA',
-               'cdocente' => '000366',
-               'fono1' => '999103719',
-               'fono2' => '4204232',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'AREVALO',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '001728',
-               'fono1' => '94288482',
-               'fono2' => '454673',
-               'email1' => '',
-               'email2' => 'larami1104@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'AREVALO',
-               'wdoc3' => 'VELA',
-               'cdocente' => '001229',
-               'fono1' => '961658437',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'leoduque19@gmail.com',
+               'user_id' => '105',
           ]);
           DataUser::create([
                'wdoc1' => 'EDITH',
@@ -1737,6 +1171,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4930333',
                'email1' => 'eariasa@ucss.edu.pe',
                'email2' => 'ediari_char@yahoo.es',
+               'user_id' => '106',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS',
@@ -1747,6 +1182,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2516335',
                'email1' => 'jarias@ucss.edu.pe',
                'email2' => 'jac_curso@hotmail.com',
+               'user_id' => '107',
           ]);
           DataUser::create([
                'wdoc1' => 'ADA GRABIELA',
@@ -1757,6 +1193,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4813511',
                'email1' => 'garias@ucss.edu.pe',
                'email2' => 'gabriela64@gmail.com',
+               'user_id' => '108',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCO ANTONIO',
@@ -1767,6 +1204,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3508320',
                'email1' => 'ariaspm@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '109',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIANA MARIA',
@@ -1777,16 +1215,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'erimari@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO ALBERTO',
-               'wdoc2' => 'ARMAS',
-               'wdoc3' => 'ASIN',
-               'cdocente' => '000316',
-               'fono1' => '996749530',
-               'fono2' => '4601485',
-               'email1' => '',
-               'email2' => 'fernandoarmasa@gmail.com',
+               'user_id' => '110',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL MARCELO',
@@ -1797,6 +1226,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5310665',
                'email1' => 'rarmas@ucss.edu.pe',
                'email2' => 'rarmasc@yahoo.com',
+               'user_id' => '111',
           ]);
           DataUser::create([
                'wdoc1' => 'PRUDENCIO ELEUTERIO',
@@ -1807,56 +1237,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'parmas@ucss.edu.pe',
                'email2' => 'nolose@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAYMUNDO ILDEFONZO',
-               'wdoc2' => 'ARNAO',
-               'wdoc3' => 'RONDAN',
-               'cdocente' => '001992',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL MARTIN',
-               'wdoc2' => 'ARONES',
-               'wdoc3' => 'MALLQUI',
-               'cdocente' => '002172',
-               'fono1' => '987766696',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'manuelarones@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE ENRIQUE',
-               'wdoc2' => 'ARREDONDO',
-               'wdoc3' => 'RODRIGUEZ',
-               'cdocente' => '001376',
-               'fono1' => '997929083',
-               'fono2' => '4456711',
-               'email1' => '',
-               'email2' => 'arrejorge@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADA ELVIRA',
-               'wdoc2' => 'ARRIETA',
-               'wdoc3' => 'ALVAREZ',
-               'cdocente' => '000785',
-               'fono1' => '999533039',
-               'fono2' => '2756765',
-               'email1' => '',
-               'email2' => 'aearriet@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'ARRIOLA',
-               'wdoc3' => 'ACUÑA',
-               'cdocente' => '001987',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '112',
           ]);
           DataUser::create([
                'wdoc1' => 'DIANA DEL CARMEN',
@@ -1867,16 +1248,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'darriola@ucss.edu.pe',
                'email2' => 'darriola20@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAMON BENITO JOSE',
-               'wdoc2' => 'ARROSPIDE',
-               'wdoc3' => 'NOERING',
-               'cdocente' => '000237',
-               'fono1' => '',
-               'fono2' => '4469137',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '113',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO TARCISIO',
@@ -1887,6 +1259,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5432560',
                'email1' => 'jarroyo@ucss.edu.pe',
                'email2' => 'julioarroyo_1@hotmail.com',
+               'user_id' => '114',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ANTONIO',
@@ -1897,26 +1270,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'carroyo@ucss.edu.pe',
                'email2' => 'cal.arroyo@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANA CECILIA',
-               'wdoc2' => 'ARROYO',
-               'wdoc3' => 'MONJA',
-               'cdocente' => '001559',
-               'fono1' => '976649407',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'anace.nt@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROGER LUIS',
-               'wdoc2' => 'ARROYO',
-               'wdoc3' => 'VERGARA',
-               'cdocente' => '000266',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '115',
           ]);
           DataUser::create([
                'wdoc1' => 'SILVER ANDRES',
@@ -1927,6 +1281,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sarrunategui@ucss.edu.pe',
                'email2' => 'silver_matlic@hotmail.com',
+               'user_id' => '116',
           ]);
           DataUser::create([
                'wdoc1' => 'JONY MARTIN',
@@ -1937,6 +1292,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '322853',
                'email1' => 'jarteaga@ucss.edu.pe',
                'email2' => 'jmarteagac@yahoo.es',
+               'user_id' => '117',
           ]);
           DataUser::create([
                'wdoc1' => 'NATIVIDAD LOURDES',
@@ -1947,6 +1303,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nartica@ucss.edu.pe',
                'email2' => 'lartica_360@hotmail.com',
+               'user_id' => '118',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO ALEJANDRO',
@@ -1957,16 +1314,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2359390',
                'email1' => 'martica@ucss.edu.pe',
                'email2' => 'MARIOARTICA63@GMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CHRISTIAN EDUARDO',
-               'wdoc2' => 'ARZAPALO',
-               'wdoc3' => 'TRUJILLO',
-               'cdocente' => '001835',
-               'fono1' => '989596573',
-               'fono2' => '5431118',
-               'email1' => '',
-               'email2' => 'christian.arzapalo@gmail.com',
+               'user_id' => '119',
           ]);
           DataUser::create([
                'wdoc1' => 'JUDITH PETRONILA',
@@ -1977,16 +1325,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jascencio@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '120',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR HUGO',
                'wdoc2' => 'ASENCIOS',
-               'wdoc3' => 'ORMEÑO',
+               'wdoc3' => 'ORMEÃ‘O',
                'cdocente' => '002716',
                'fono1' => '',
                'fono2' => '',
                'email1' => 'vasencios@ucss.edu.pe',
                'email2' => 'robaggio90@hotmail.com',
+               'user_id' => '121',
           ]);
           DataUser::create([
                'wdoc1' => 'YOVANNY JESUS',
@@ -1997,6 +1347,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5518966',
                'email1' => 'yasenjo@ucss.edu.pe',
                'email2' => 'yovanny.asenjo@gmail.com',
+               'user_id' => '122',
           ]);
           DataUser::create([
                'wdoc1' => 'JENNIFER LINNET',
@@ -2007,6 +1358,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jaspauza@ucss.edu.pe',
                'email2' => 'jenli_2484@hotmail.com',
+               'user_id' => '123',
           ]);
           DataUser::create([
                'wdoc1' => 'CRISTOBAL URIEL',
@@ -2017,6 +1369,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5751635',
                'email1' => 'caspilcueta@ucss.edu.pe',
                'email2' => 'uaspi@hotmail.com',
+               'user_id' => '124',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ERNESTO',
@@ -2027,16 +1380,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5615231',
                'email1' => 'castete@ucss.edu.pe',
                'email2' => 'p.carlos.astete@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'REBECA',
-               'wdoc2' => 'ATA',
-               'wdoc3' => 'MUÑOZ',
-               'cdocente' => '002599',
-               'fono1' => '',
-               'fono2' => '2862035',
-               'email1' => '',
-               'email2' => 'beca149@hotmail.com',
+               'user_id' => '125',
           ]);
           DataUser::create([
                'wdoc1' => 'WILMER MANUEL',
@@ -2047,16 +1391,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'watachahua@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NEOFOL SILVESTRE',
-               'wdoc2' => 'ATANACIO',
-               'wdoc3' => 'VENTURO',
-               'cdocente' => '001561',
-               'fono1' => '961048611',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'neoaven_4@hotmail.com',
+               'user_id' => '126',
           ]);
           DataUser::create([
                'wdoc1' => 'ANIBAL JAVIER',
@@ -2067,16 +1402,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aaurora@ucss.edu.pe',
                'email2' => 'javi_aaaff@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME OSCAR',
-               'wdoc2' => 'AVENDAÑO',
-               'wdoc3' => 'VILLANUEVA',
-               'cdocente' => '000997',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '127',
           ]);
           DataUser::create([
                'wdoc1' => 'BENITO LEANDRO',
@@ -2087,16 +1413,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'bavila@ucss.edu.pe',
                'email2' => 'beni200373@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ENRIQUE',
-               'wdoc2' => 'AVILA',
-               'wdoc3' => 'MORALES',
-               'cdocente' => '002389',
-               'fono1' => '964602689',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jeam71@hotmail.com',
+               'user_id' => '128',
           ]);
           DataUser::create([
                'wdoc1' => 'KRISTHIAN OLIVER',
@@ -2107,6 +1424,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4752548',
                'email1' => 'kayala@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '129',
           ]);
           DataUser::create([
                'wdoc1' => 'RODRIGO HERNANDO',
@@ -2117,6 +1435,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4752548',
                'email1' => 'rayala@ucss.edu.pe',
                'email2' => 'drigope@yahoo.com',
+               'user_id' => '130',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCOS AQUILES',
@@ -2127,36 +1446,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mayala@ucss.edu.pe',
                'email2' => 'maad_18@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEX ERNESTO',
-               'wdoc2' => 'AYALA',
-               'wdoc3' => 'ESPINOZA',
-               'cdocente' => '000861',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TEOFILO',
-               'wdoc2' => 'AYALA',
-               'wdoc3' => 'ESPINOZA',
-               'cdocente' => '000124',
-               'fono1' => '9422253',
-               'fono2' => '5661063',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ENRIQUE PALESTINO',
-               'wdoc2' => 'AYALA',
-               'wdoc3' => 'GODOS',
-               'cdocente' => '001090',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '131',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBINSON WILMER',
@@ -2167,26 +1457,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7862746',
                'email1' => 'rwayala@ucss.edu.pe',
                'email2' => 'robinson_red@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE BENJAMIN',
-               'wdoc2' => 'AYALA',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '000187',
-               'fono1' => '',
-               'fono2' => '5641331',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO MIGUEL',
-               'wdoc2' => 'AYASTA',
-               'wdoc3' => 'CORNEJO',
-               'cdocente' => '001602',
-               'fono1' => '',
-               'fono2' => '5657262',
-               'email1' => '',
-               'email2' => 'pmayastac@hotmail.com',
+               'user_id' => '132',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ARTURO',
@@ -2197,6 +1468,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cayllon@ucss.edu.pe',
                'email2' => 'ayllon.ca@hotmail.com',
+               'user_id' => '133',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIZABETH',
@@ -2207,6 +1479,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330008',
                'email1' => 'eayudante@ucss.edu.pe',
                'email2' => 'eliayudante@hotmail.com',
+               'user_id' => '134',
           ]);
           DataUser::create([
                'wdoc1' => 'GUISELLA',
@@ -2217,26 +1490,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4256387',
                'email1' => 'gazcona@ucss.edu.pe',
                'email2' => 'eleanor_milani_86@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANDRES',
-               'wdoc2' => 'AZIANI',
-               'wdoc3' => 'SAMEK-LODOVICI',
-               'cdocente' => '000012',
-               'fono1' => '3041177',
-               'fono2' => '4419306',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CAROLINA',
-               'wdoc2' => 'AZNAR',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '000158',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '135',
           ]);
           DataUser::create([
                'wdoc1' => 'HENRY EDILBERTO',
@@ -2247,46 +1501,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hazula@ucss.edu.pe',
                'email2' => 'henryazula@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FIDEL ERNESTO',
-               'wdoc2' => 'BABILON',
-               'wdoc3' => 'GRADOS',
-               'cdocente' => '002799',
-               'fono1' => '998939373',
-               'fono2' => '2623033',
-               'email1' => '',
-               'email2' => 'fbabilon@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PILAR',
-               'wdoc2' => 'BADILLO',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '000300',
-               'fono1' => '',
-               'fono2' => '5722650',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIVEL',
-               'wdoc2' => 'BAHAMONDE',
-               'wdoc3' => 'QUINTEROS',
-               'cdocente' => '002159',
-               'fono1' => '981836529',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mrbq_10@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SOFIA IRENE',
-               'wdoc2' => 'BAHAMONDE',
-               'wdoc3' => 'QUINTEROS',
-               'cdocente' => '001247',
-               'fono1' => '980289695',
-               'fono2' => '5255384',
-               'email1' => '',
-               'email2' => 'sibq211@hotmail.com',
+               'user_id' => '136',
           ]);
           DataUser::create([
                'wdoc1' => 'SONIA AURORA',
@@ -2297,6 +1512,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5356188',
                'email1' => 'sbahamonde@ucss.edu.pe',
                'email2' => 'pscsoniabq@gmail.com',
+               'user_id' => '137',
           ]);
           DataUser::create([
                'wdoc1' => 'JORSI ERICSON JOEL',
@@ -2307,6 +1523,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jbalcazar@ucss.edu.pe',
                'email2' => 'jorsbg27@gmail.com',
+               'user_id' => '138',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR ALFONSO',
@@ -2317,6 +1534,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '321615',
                'email1' => 'obaldeon@ucss.edu.pe',
                'email2' => 'oabd_1964@hotmail.com',
+               'user_id' => '139',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA LUISA',
@@ -2327,6 +1545,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4319348',
                'email1' => 'mbaldeon@ucss.edu.pe',
                'email2' => 'lic.marybaldeon@hotmail.com',
+               'user_id' => '140',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR GIOVANNY',
@@ -2337,6 +1556,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5555555',
                'email1' => 'vballena@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '141',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FERNANDO',
@@ -2347,16 +1567,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lballesteros@ucss.edu.pe',
                'email2' => 'luis.ballesteros@pucp.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OSCAR',
-               'wdoc2' => 'BALTAZAR',
-               'wdoc3' => 'VELA',
-               'cdocente' => '001098',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '142',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL IVAN',
@@ -2367,16 +1578,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5260378',
                'email1' => 'rbaltodano@ucss.edu.pe',
                'email2' => 'rabaldi72@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SERGIO LUIS',
-               'wdoc2' => 'BALUARTE',
-               'wdoc3' => 'CELIS',
-               'cdocente' => '002600',
-               'fono1' => '975354955',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sbaluarte69@hotmail.com',
+               'user_id' => '143',
           ]);
           DataUser::create([
                'wdoc1' => 'EFRAIN',
@@ -2387,6 +1589,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6934064',
                'email1' => 'ebalvin@ucss.edu.pe',
                'email2' => 'efrain_balvin@hotmail.com',
+               'user_id' => '144',
           ]);
           DataUser::create([
                'wdoc1' => 'ALCIBIADES',
@@ -2397,6 +1600,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'abances@ucss.edu.pe',
                'email2' => 'bancesm_25@hotmail.com',
+               'user_id' => '145',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM HENRY',
@@ -2407,6 +1611,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wbances@ucss.edu.pe',
                'email2' => 'wbancesmeza@gmail.com',
+               'user_id' => '146',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS MIGUEL',
@@ -2417,16 +1622,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2621030',
                'email1' => 'lbaquerizo@ucss.edu.pe',
                'email2' => 'luis.baquerizo.s@upch.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GLAVER ROLAND',
-               'wdoc2' => 'BARBIERI',
-               'wdoc3' => 'PIÑARRETA',
-               'cdocente' => '001867',
-               'fono1' => '990754288',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'grbpquimica39@hotmail.com',
+               'user_id' => '147',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DEL CARMEN',
@@ -2437,26 +1633,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4462196',
                'email1' => 'mbarbosa@ucss.edu.pe',
                'email2' => 'cbarbosape@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUILLERMO ENRIQUE',
-               'wdoc2' => 'BARBOZA',
-               'wdoc3' => 'MORANTE',
-               'cdocente' => '002483',
-               'fono1' => '996560181',
-               'fono2' => '364056',
-               'email1' => '',
-               'email2' => 'barboza1185@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'BARBOZA',
-               'wdoc3' => 'ZELADA',
-               'cdocente' => '000383',
-               'fono1' => '7436140',
-               'fono2' => '4649472',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '148',
           ]);
           DataUser::create([
                'wdoc1' => 'PAOLO',
@@ -2467,6 +1644,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4867590',
                'email1' => 'pbargigia@ucss.edu.pe',
                'email2' => 'paolo@bargigia.net',
+               'user_id' => '149',
           ]);
           DataUser::create([
                'wdoc1' => 'LIDA ESTHER',
@@ -2477,6 +1655,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4819948',
                'email1' => 'lbarnett@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '150',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE MASSARO',
@@ -2487,16 +1666,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jbarragan@ucss.edu.pe',
                'email2' => 'massaro.barraga@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO ISIDRO',
-               'wdoc2' => 'BARRAZA',
-               'wdoc3' => 'DORADOR',
-               'cdocente' => '001371',
-               'fono1' => '999053682',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'fbarraza@gobconsult.com',
+               'user_id' => '151',
           ]);
           DataUser::create([
                'wdoc1' => 'WILSON EDGARD',
@@ -2507,16 +1677,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4502280',
                'email1' => 'wbarreto@ucss.edu.pe',
                'email2' => 'edbarretoqc@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN FRANCISCO',
-               'wdoc2' => 'BARRETO',
-               'wdoc3' => 'LAZO',
-               'cdocente' => '000062',
-               'fono1' => '',
-               'fono2' => '5213349',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '152',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ALEXANDER',
@@ -2527,36 +1688,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jbarreto@ucss.edu.pe',
                'email2' => 'elfortivo_85@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL ENRIQUE',
-               'wdoc2' => 'BARRIGA',
-               'wdoc3' => 'ALEGRIA',
-               'cdocente' => '000112',
-               'fono1' => '9381096',
-               'fono2' => '4245708',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE',
-               'wdoc2' => 'BARRIOS',
-               'wdoc3' => 'PANTOJA',
-               'cdocente' => '002253',
-               'fono1' => '953568049',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'j_barrios@hotmail.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER OSWALDO',
-               'wdoc2' => 'BARRON',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '001156',
-               'fono1' => '987216990',
-               'fono2' => '2323538',
-               'email1' => '',
-               'email2' => 'estudio_barron_salvador@hotmail.com',
+               'user_id' => '153',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS MARTIN',
@@ -2567,6 +1699,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5687764',
                'email1' => 'cbartolo@ucss.edu.pe',
                'email2' => 'carlos_147_83@hotmail.com',
+               'user_id' => '154',
           ]);
           DataUser::create([
                'wdoc1' => 'CRISTIAN SANTOS',
@@ -2577,6 +1710,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cbarturen@ucss.edu.pe',
                'email2' => 'cristianbarturen@gmail.com',
+               'user_id' => '155',
           ]);
           DataUser::create([
                'wdoc1' => 'NELIDA HAYDEE',
@@ -2587,16 +1721,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nbarzola@ucss.edu.pe',
                'email2' => 'nbch2012@hotmail.com',
+               'user_id' => '156',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA LILIANA',
                'wdoc2' => 'BASTO',
-               'wdoc3' => 'MUÑOZ',
+               'wdoc3' => 'MUÃ‘OZ',
                'cdocente' => '001303',
                'fono1' => '999410924',
                'fono2' => '5311764',
                'email1' => 'rbasto@ucss.edu.pe',
                'email2' => 'lbasto3@gmail.com',
+               'user_id' => '157',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIAS IVAN',
@@ -2607,6 +1743,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5357188',
                'email1' => 'ebasualdo@ucss.edu.pe',
                'email2' => 'basualdo_elias_ivan@hotmail.com',
+               'user_id' => '158',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ',
@@ -2617,16 +1754,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lbasualdo@ucss.edu.pe',
                'email2' => 'luzbasualdo@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIO ROSAS',
-               'wdoc2' => 'BAUTISTA',
-               'wdoc3' => 'CASTRO',
-               'cdocente' => '002694',
-               'fono1' => '990162095',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mbautista8@hotmail.com',
+               'user_id' => '159',
           ]);
           DataUser::create([
                'wdoc1' => 'EVA',
@@ -2637,16 +1765,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ebautista@ucss.edu.pe',
                'email2' => 'evabaut@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSSANA YULIETA',
-               'wdoc2' => 'BAUTISTA',
-               'wdoc3' => 'ZEREMELCO',
-               'cdocente' => '001993',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '160',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -2657,46 +1776,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2325183',
                'email1' => 'jbazalar@ucss.edu.pe',
                'email2' => 'jobazalarca@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANTIAGO',
-               'wdoc2' => 'BAZAN',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '000283',
-               'fono1' => '999323151',
-               'fono2' => '4252253',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AURORA DOMINGA',
-               'wdoc2' => 'BAZAN',
-               'wdoc3' => 'TASAICO DE LENNERS',
-               'cdocente' => '001575',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jemajoya2008@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR MARTIN',
-               'wdoc2' => 'BECERRA',
-               'wdoc3' => 'COBA',
-               'cdocente' => '001671',
-               'fono1' => '976632771',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'martin_bc1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSA MARIA',
-               'wdoc2' => 'BECERRA',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '001552',
-               'fono1' => '999606017',
-               'fono2' => '5621032',
-               'email1' => '',
-               'email2' => 'pochabecerra@hotmail.com',
+               'user_id' => '161',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL',
@@ -2707,26 +1787,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dbecerra@ucss.edu.pe',
                'email2' => 'dbgdoctorado@hotmail.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSECARLOS IGNACIO',
-               'wdoc2' => 'BECERRA',
-               'wdoc3' => 'MENDEZ',
-               'cdocente' => '000368',
-               'fono1' => '9492013',
-               'fono2' => '3303865',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO EDUARDO',
-               'wdoc2' => 'BECERRA',
-               'wdoc3' => 'MONTOYA',
-               'cdocente' => '000847',
-               'fono1' => '987215281',
-               'fono2' => '4646647',
-               'email1' => '',
-               'email2' => 'jbecerra_upsp@hotmail.com',
+               'user_id' => '162',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO ANGEL',
@@ -2737,26 +1798,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4842701',
                'email1' => 'pbecerra@ucss.edu.pe',
                'email2' => 'p_becerra_p@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LLICELY YOVANY',
-               'wdoc2' => 'BECERRIL',
-               'wdoc3' => 'SOPLA',
-               'cdocente' => '001574',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'llybs0106@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA PATRICIA',
-               'wdoc2' => 'BELLEZA',
-               'wdoc3' => 'YLLANES',
-               'cdocente' => '001007',
-               'fono1' => '964613367',
-               'fono2' => '323235',
-               'email1' => '',
-               'email2' => 'marypati27@hotmail.com',
+               'user_id' => '163',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO WALTER',
@@ -2767,6 +1809,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4463942',
                'email1' => 'fbellido@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '164',
           ]);
           DataUser::create([
                'wdoc1' => 'GIANCARLO JOSE',
@@ -2777,16 +1820,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gbellina@ucss.edu.pe',
                'email2' => 'gcbellina@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MELVA LIZETTE',
-               'wdoc2' => 'BELON',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '000607',
-               'fono1' => '997148018',
-               'fono2' => '4591013',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '165',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR OSCAR',
@@ -2797,6 +1831,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cbeltran@ucss.edu.pe',
                'email2' => 'cesar.beltran.vega@gmail.con',
+               'user_id' => '166',
           ]);
           DataUser::create([
                'wdoc1' => 'SHALON MARTIN',
@@ -2807,26 +1842,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4527412',
                'email1' => 'sbenamu@ucss.edu.pe',
                'email2' => 'benamushalom@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ALBERTO',
-               'wdoc2' => 'BENAVIDES',
-               'wdoc3' => 'ESPIRITU',
-               'cdocente' => '002034',
-               'fono1' => '940253592',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'kgb038@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIGI',
-               'wdoc2' => 'BENCETTI',
-               'wdoc3' => 'BENCETTI',
-               'cdocente' => '000446',
-               'fono1' => '7107597',
-               'fono2' => '5502128',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '167',
           ]);
           DataUser::create([
                'wdoc1' => 'JERBER EMILIO',
@@ -2837,16 +1853,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jbendezuz@ucss.edu.pe',
                'email2' => 'inglocovancouver@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CLARA',
-               'wdoc2' => 'BENEVOLO',
-               'wdoc3' => '',
-               'cdocente' => '002117',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '168',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DEL PILAR',
@@ -2857,26 +1864,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mbenites@ucss.edu.pe',
                'email2' => 'mariapia9600@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'BENITES',
-               'wdoc3' => 'LA FUENTE',
-               'cdocente' => '000928',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDO',
-               'wdoc2' => 'BENITO',
-               'wdoc3' => 'ACHAHUI',
-               'cdocente' => '002201',
-               'fono1' => '998921278',
-               'fono2' => '5267398',
-               'email1' => '',
-               'email2' => 'ribea44@hotmail.com',
+               'user_id' => '169',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ANTONIO',
@@ -2887,26 +1875,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2618601',
                'email1' => 'jbenito@ucss.edu.pe',
                'email2' => 'joseantoniobenito@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HECTOR SANTIAGO',
-               'wdoc2' => 'BENVENUTO',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '001199',
-               'fono1' => '997200210',
-               'fono2' => '5689964',
-               'email1' => '',
-               'email2' => 'hectorbenvenuto@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MICHELE',
-               'wdoc2' => 'BERCHI',
-               'wdoc3' => 'GAIA',
-               'cdocente' => '000115',
-               'fono1' => '7918668',
-               'fono2' => '4867590',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '170',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -2917,6 +1886,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jbermejo@ucss.edu.pe',
                'email2' => 'jober72@hotmail.com',
+               'user_id' => '171',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL ALEXIS',
@@ -2927,16 +1897,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mbermudez@ucss.edu.pe',
                'email2' => 'mbermudez@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GILMER WALTER',
-               'wdoc2' => 'BERNABE',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '000156',
-               'fono1' => '',
-               'fono2' => '3285834',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '172',
           ]);
           DataUser::create([
                'wdoc1' => 'ORLANDO RAUL',
@@ -2947,6 +1908,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2322962',
                'email1' => 'obernal@ucss.edu.pe',
                'email2' => 'rbernal.latinlab@gmail.com',
+               'user_id' => '173',
           ]);
           DataUser::create([
                'wdoc1' => 'AMPARO DE JESUS',
@@ -2957,6 +1919,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5390604',
                'email1' => 'abernardo@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '174',
           ]);
           DataUser::create([
                'wdoc1' => 'IGNACIO',
@@ -2967,26 +1930,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'iberrios@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GILBERTO',
-               'wdoc2' => 'BERROSPI',
-               'wdoc3' => 'MORI',
-               'cdocente' => '002572',
-               'fono1' => '939298218',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gilberr.hco@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME JESUS',
-               'wdoc2' => 'BETALLELUZ',
-               'wdoc3' => 'FERNANDINI',
-               'cdocente' => '001503',
-               'fono1' => '992980467',
-               'fono2' => '4618284',
-               'email1' => '',
-               'email2' => 'jbetalleluz@hotmail.com',
+               'user_id' => '175',
           ]);
           DataUser::create([
                'wdoc1' => 'TERESA',
@@ -2997,6 +1941,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'tbettini@ucss.edu.pe',
                'email2' => 'teresa.bettini@yahoo.it',
+               'user_id' => '176',
           ]);
           DataUser::create([
                'wdoc1' => 'PAOLO',
@@ -3007,6 +1952,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pbidinost@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '177',
           ]);
           DataUser::create([
                'wdoc1' => 'CRISTOPHER DANIEL',
@@ -3017,6 +1963,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5746656',
                'email1' => 'cbieberachm@ucss.edu.pe',
                'email2' => 'domadordeincertidumbres@gmail.com',
+               'user_id' => '178',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ROBERTO',
@@ -3027,6 +1974,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cbieberach@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '179',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLA MARIA',
@@ -3037,6 +1985,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'carlabio@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '180',
           ]);
           DataUser::create([
                'wdoc1' => 'FAUSTO MICHELE',
@@ -3047,6 +1996,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4513161',
                'email1' => 'fbio@ucss.edu.pe',
                'email2' => 'fbiog@sima.com.pe',
+               'user_id' => '181',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL',
@@ -3057,56 +2007,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rbizarro@ucss.edu.pe',
                'email2' => 'bizarro78@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AMERICO ANDRES',
-               'wdoc2' => 'BLANCAS',
-               'wdoc3' => 'MONTES',
-               'cdocente' => '002789',
-               'fono1' => '995956691',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'xamiands211820@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DIONISIO',
-               'wdoc2' => 'BLANCO',
-               'wdoc3' => 'GIL',
-               'cdocente' => '000287',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'BLANCO',
-               'wdoc3' => 'SINCHE',
-               'cdocente' => '002273',
-               'fono1' => '948172151',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'MIGUELBLANCOS@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ENRIQUE ESTEBAN',
-               'wdoc2' => 'BLANCO',
-               'wdoc3' => 'TECERO',
-               'cdocente' => '002264',
-               'fono1' => '964706352',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'enriqueblancot@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BEATRIZ GLADIS',
-               'wdoc2' => 'BLAS',
-               'wdoc3' => 'ALIPAZAGA',
-               'cdocente' => '002305',
-               'fono1' => '990145455',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gladysblas_a@hotmail.com',
+               'user_id' => '182',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ PETRONILA',
@@ -3117,36 +2018,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lblas@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROCIO MARIANELLA',
-               'wdoc2' => 'BOLAÑOS',
-               'wdoc3' => 'ARIAS',
-               'cdocente' => '000038',
-               'fono1' => '7166722',
-               'fono2' => '4830771',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUZ A.',
-               'wdoc2' => 'BOLAÑOS',
-               'wdoc3' => 'BERNAL',
-               'cdocente' => '000217',
-               'fono1' => '',
-               'fono2' => '2395651',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AUREA JULIA',
-               'wdoc2' => 'BOLAÑOS',
-               'wdoc3' => 'HIDALGO',
-               'cdocente' => '000422',
-               'fono1' => '',
-               'fono2' => '4612471',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '183',
           ]);
           DataUser::create([
                'wdoc1' => 'GIAN BATTISTA FAUSTO',
@@ -3157,6 +2029,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4418073',
                'email1' => 'gbattista@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '184',
           ]);
           DataUser::create([
                'wdoc1' => 'GABRIEL AUGUSTO',
@@ -3167,6 +2040,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2512061',
                'email1' => 'gbolivar@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '185',
           ]);
           DataUser::create([
                'wdoc1' => 'MAURO ENRIQUE',
@@ -3177,6 +2051,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2513826',
                'email1' => 'mbolivar@ucss.edu.pe',
                'email2' => 'mbolivarbravo@hotmail',
+               'user_id' => '186',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO JESUS',
@@ -3187,16 +2062,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5732599',
                'email1' => 'pbonifacio@ucss.edu.pe',
                'email2' => 'pp@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUBERLINDA JUANA',
-               'wdoc2' => 'BORDA',
-               'wdoc3' => 'CUTIPA',
-               'cdocente' => '002229',
-               'fono1' => '999941374',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'belinda1970-3@hotmail.com',
+               'user_id' => '187',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA MARLENE',
@@ -3207,6 +2073,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nborda@ucss.edu.pe',
                'email2' => 'marleyuen11@hotmail.com',
+               'user_id' => '188',
           ]);
           DataUser::create([
                'wdoc1' => 'MABEL TEODORA',
@@ -3217,46 +2084,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5212523',
                'email1' => 'mborda@ucss.edu.pe',
                'email2' => 'mabelborda@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUZ MILAGROS',
-               'wdoc2' => 'BORDA',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '002486',
-               'fono1' => '983325219',
-               'fono2' => '5330969',
-               'email1' => '',
-               'email2' => 'milbotor@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIO GASTON',
-               'wdoc2' => 'BORJA',
-               'wdoc3' => 'BORJA',
-               'cdocente' => '000403',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'BOSSIO',
-               'wdoc3' => 'VALDIVIA',
-               'cdocente' => '000725',
-               'fono1' => '991110569',
-               'fono2' => '5620344',
-               'email1' => '',
-               'email2' => 'bossiovalidivia@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FRANCISCA',
-               'wdoc2' => 'BOUBY',
-               'wdoc3' => 'TOLENTINO',
-               'cdocente' => '002654',
-               'fono1' => '991998399',
-               'fono2' => '3330163',
-               'email1' => '',
-               'email2' => 'f_boubyt1@yahoo.es',
+               'user_id' => '189',
           ]);
           DataUser::create([
                'wdoc1' => 'MARGARITA LUISA',
@@ -3267,26 +2095,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5286854',
                'email1' => 'mboza@ucss.edu.pe',
                'email2' => 'mlboza@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALESSANDRO',
-               'wdoc2' => 'BRAGA',
-               'wdoc3' => '',
-               'cdocente' => '001988',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUELA ISABEL',
-               'wdoc2' => 'BRAN',
-               'wdoc3' => 'LOZADA',
-               'cdocente' => '000427',
-               'fono1' => '5123260',
-               'fono2' => '3274601',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '190',
           ]);
           DataUser::create([
                'wdoc1' => 'NATALY CLAUDIA',
@@ -3297,26 +2106,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nbravo@ucss.edu.pe',
                'email2' => 'nataly_b_c@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RUBI YSABEL',
-               'wdoc2' => 'BRAVO',
-               'wdoc3' => 'CUEVAS',
-               'cdocente' => '001228',
-               'fono1' => '948920671',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUZ ELIZABETH',
-               'wdoc2' => 'BRAVO',
-               'wdoc3' => 'ESQUIVEL',
-               'cdocente' => '002677',
-               'fono1' => '989244591',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luzbrav@hotmail.com',
+               'user_id' => '191',
           ]);
           DataUser::create([
                'wdoc1' => 'NATALY',
@@ -3327,6 +2117,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4215121',
                'email1' => 'nbravol@ucss.edu.pe',
                'email2' => 'bravolopeznataly@gmail.com',
+               'user_id' => '192',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO',
@@ -3337,6 +2128,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fbravo@ucss.edu.pe',
                'email2' => 'fernandobravor@hotmail.com',
+               'user_id' => '193',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ORLANDO',
@@ -3347,6 +2139,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5786016',
                'email1' => 'jbravo@ucss.edu.pe',
                'email2' => 'jbravo@luma.com.pe',
+               'user_id' => '194',
           ]);
           DataUser::create([
                'wdoc1' => 'NOEMI PAOLA',
@@ -3357,6 +2150,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4855005',
                'email1' => 'npbravo@ucss.edu.pe',
                'email2' => 'drapbravosaavedra@yahoo.es',
+               'user_id' => '195',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER ALEJANDRO',
@@ -3367,16 +2161,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4819731',
                'email1' => 'wbravo@ucss.edu.pe',
                'email2' => 'cpc_walterbravo@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS JOAQUIN',
-               'wdoc2' => 'BRIONES',
-               'wdoc3' => 'ZAVALETA',
-               'cdocente' => '002471',
-               'fono1' => '989184458',
-               'fono2' => '5611101',
-               'email1' => '',
-               'email2' => 'cajobriza@hotmail.com',
+               'user_id' => '196',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA TERESA',
@@ -3387,6 +2172,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2515901',
                'email1' => 'tbriozzo@ucss.edu.pe',
                'email2' => 'tbriozzopereyra@yahoo.es',
+               'user_id' => '197',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSMELL',
@@ -3397,16 +2183,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2325845',
                'email1' => 'jbrito@ucss.edu.pe',
                'email2' => 'jobrav1984@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LEON',
-               'wdoc2' => 'BRUN',
-               'wdoc3' => 'LOZADA',
-               'cdocente' => '001854',
-               'fono1' => '973857663',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'tecnologobrun@hotmail.com',
+               'user_id' => '198',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ANTONIO',
@@ -3417,6 +2194,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4855158',
                'email1' => 'cbuendia@ucss.edu.pe',
                'email2' => 'ceburo@hotmail.com',
+               'user_id' => '199',
           ]);
           DataUser::create([
                'wdoc1' => 'SYCHELLES',
@@ -3427,16 +2205,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sbueno@ucss.edu.pe',
                'email2' => 'sbuenob_28_10@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BETY ESTHER',
-               'wdoc2' => 'BUENO',
-               'wdoc3' => 'BULLON',
-               'cdocente' => '002173',
-               'fono1' => '942900333',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bbuenob25@hotmail.com',
+               'user_id' => '200',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -3447,6 +2216,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lbuitron@ucss.edu.pe',
                'email2' => 'chencheko_16@hotmail.com',
+               'user_id' => '201',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO MANUEL',
@@ -3457,6 +2227,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6550482',
                'email1' => 'rbullon@ucss.edu.pe',
                'email2' => 'rbullon@crymef.com',
+               'user_id' => '202',
           ]);
           DataUser::create([
                'wdoc1' => 'SEGUNDO',
@@ -3467,6 +2238,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sburga@ucss.edu.pe',
                'email2' => 'sbucaprom@hotmail.com',
+               'user_id' => '203',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA MARIA',
@@ -3477,16 +2249,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rburga@ucss.edu.pe',
                'email2' => 'rosieburguti@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELSA',
-               'wdoc2' => 'BURGA',
-               'wdoc3' => 'MUÑOZ',
-               'cdocente' => '001573',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elsa_burga@hotmail.com',
+               'user_id' => '204',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGIE ROMY',
@@ -3497,16 +2260,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5210020',
                'email1' => 'aburgos@ucss.edu.pe',
                'email2' => 'angieromina14@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KYLE STEVEN',
-               'wdoc2' => 'BURK',
-               'wdoc3' => '',
-               'cdocente' => '000325',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '205',
           ]);
           DataUser::create([
                'wdoc1' => 'SHERLY TANIA',
@@ -3517,26 +2271,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sbustamante@ucss.edu.pe',
                'email2' => 'ps.bustamante01@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RUBENS LEONARDO',
-               'wdoc2' => 'BUSTILLOS',
-               'wdoc3' => 'CASTAÑEDA',
-               'cdocente' => '002274',
-               'fono1' => '963648199',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rubensbuscas@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN EUDES',
-               'wdoc2' => 'BUSTINZA',
-               'wdoc3' => 'MAMANI',
-               'cdocente' => '002208',
-               'fono1' => '964463517',
-               'fono2' => '231496',
-               'email1' => '',
-               'email2' => 'jebm265@hotmail.com',
+               'user_id' => '206',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE JEREMIAS',
@@ -3547,26 +2282,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4930978',
                'email1' => 'jcaballero@ucss.edu.pe',
                'email2' => 'jjcc94@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VERONICA',
-               'wdoc2' => 'CABALLERO',
-               'wdoc3' => 'REYNOSO',
-               'cdocente' => '000511',
-               'fono1' => '7464503',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANTONY HECTOR',
-               'wdoc2' => 'CABANILLAS',
-               'wdoc3' => 'ALVAREZ',
-               'cdocente' => '001020',
-               'fono1' => '976417267',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'antpsico@yahoo.es',
+               'user_id' => '207',
           ]);
           DataUser::create([
                'wdoc1' => 'JUDITH JOHANA',
@@ -3577,6 +2293,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2364048',
                'email1' => 'jcabanillas@ucss.edu.pe',
                'email2' => 'johanita_111@hotmail.com',
+               'user_id' => '208',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM EUGENIO',
@@ -3587,16 +2304,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2074800',
                'email1' => 'wcabanillas@ucss.edu.pe',
                'email2' => 'wcabanillas@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUMBERTO',
-               'wdoc2' => 'CABELLO',
-               'wdoc3' => 'CARUAJULCA',
-               'cdocente' => '002796',
-               'fono1' => '926879313',
-               'fono2' => '4535315',
-               'email1' => '',
-               'email2' => 'cabellohumberto@hotmail.com',
+               'user_id' => '209',
           ]);
           DataUser::create([
                'wdoc1' => 'RITA JAQUELINE',
@@ -3607,6 +2315,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rcabello@ucss.edu.pe',
                'email2' => 'rcabello@hotmail.com',
+               'user_id' => '210',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FELIPE',
@@ -3617,6 +2326,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lcabeza@ucss.edu.pe',
                'email2' => 'luisfelipe0007@hotmail.com',
+               'user_id' => '211',
           ]);
           DataUser::create([
                'wdoc1' => 'LENIN ROLANDO',
@@ -3627,6 +2337,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3933751',
                'email1' => 'lcabracancha@ucss.edu.pe',
                'email2' => 'lenin_rolandounac@hotmail.com',
+               'user_id' => '212',
           ]);
           DataUser::create([
                'wdoc1' => 'KEILA',
@@ -3637,6 +2348,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'kcabrejos@ucss.edu.pe',
                'email2' => 'nolose3@hotmail.com',
+               'user_id' => '213',
           ]);
           DataUser::create([
                'wdoc1' => 'PERCY MARTIN',
@@ -3647,36 +2359,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pcabrera@ucss.edu.pe',
                'email2' => 'pcabrera34@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUZ ELIZABETH',
-               'wdoc2' => 'CABRERA',
-               'wdoc3' => 'GONZALES',
-               'cdocente' => '001673',
-               'fono1' => '999677732',
-               'fono2' => '5398559',
-               'email1' => '',
-               'email2' => 'luzcabrerag1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARINO',
-               'wdoc2' => 'CABRERA',
-               'wdoc3' => 'LESCANO',
-               'cdocente' => '001380',
-               'fono1' => '968558564',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mcl_j@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LUIS',
-               'wdoc2' => 'CABRERA',
-               'wdoc3' => 'MELENDEZ',
-               'cdocente' => '001738',
-               'fono1' => '986281539',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'odresnuevosperu@gmail.com',
+               'user_id' => '214',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA MERCEDES',
@@ -3687,6 +2370,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3284129',
                'email1' => 'rcabrera@ucss.edu.pe',
                'email2' => 'rosamercedes8@hotmail.com',
+               'user_id' => '215',
           ]);
           DataUser::create([
                'wdoc1' => 'MISTER JOEL',
@@ -3697,6 +2381,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mcabrera@ucss.edu.pe',
                'email2' => 'misterjoel21@hotmail.com',
+               'user_id' => '216',
           ]);
           DataUser::create([
                'wdoc1' => 'MERCEDES MARTINA',
@@ -3707,6 +2392,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5239111',
                'email1' => 'mcabreraz@ucss.edu.pe',
                'email2' => 'mcabreraz@hotmail.com',
+               'user_id' => '217',
           ]);
           DataUser::create([
                'wdoc1' => 'FREDY OMIS',
@@ -3717,6 +2403,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5340439',
                'email1' => 'fcaceres@ucss.edu.pe',
                'email2' => 'frdcaceres@gmail.com',
+               'user_id' => '218',
           ]);
           DataUser::create([
                'wdoc1' => 'ZALESKY DIANA',
@@ -3727,6 +2414,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'zcaceres@ucss.edu.pe',
                'email2' => 'zcaceres44@gmail.com',
+               'user_id' => '219',
           ]);
           DataUser::create([
                'wdoc1' => 'PATRICIA',
@@ -3737,16 +2425,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4302148',
                'email1' => 'pcaceres@ucss.edu.pe',
                'email2' => 'patriciacaceres333@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AUGUSTO FELIPE',
-               'wdoc2' => 'CACERES',
-               'wdoc3' => 'ROSELL',
-               'cdocente' => '000726',
-               'fono1' => '999437378',
-               'fono2' => '4418392',
-               'email1' => '',
-               'email2' => 'augustocaceresrosell@yahoo.es',
+               'user_id' => '220',
           ]);
           DataUser::create([
                'wdoc1' => 'WILHELM',
@@ -3757,16 +2436,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wcachay@ucss.edu.pe',
                'email2' => 'CACHAYORTIZ@YAHOO.ES',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELENA',
-               'wdoc2' => 'CACHAY',
-               'wdoc3' => 'PERALTA',
-               'cdocente' => '000343',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '221',
           ]);
           DataUser::create([
                'wdoc1' => 'NEDDA NATIVIDAD',
@@ -3777,16 +2447,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4368969',
                'email1' => 'ncadenillas@ucss.edu.pe',
                'email2' => 'ncadenillas@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NORMA',
-               'wdoc2' => 'CAHUANA',
-               'wdoc3' => 'ESPINIOZA',
-               'cdocente' => '002227',
-               'fono1' => '948470505',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'normacarol98@hotmail.com',
+               'user_id' => '222',
           ]);
           DataUser::create([
                'wdoc1' => 'ESTEFANY CAROL',
@@ -3797,16 +2458,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2936555',
                'email1' => 'ecahuana@ucss.edu.pe',
                'email2' => 'carito.rcahuana19@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ALBERTO',
-               'wdoc2' => 'CAHUAYA',
-               'wdoc3' => 'CHOQUE',
-               'cdocente' => '001432',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jhakjshj@hotmail.com',
+               'user_id' => '223',
           ]);
           DataUser::create([
                'wdoc1' => 'EDWIN WILLIAM',
@@ -3817,26 +2469,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ecajacuri@ucss.edu.pe',
                'email2' => 'eduwcm1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELVIA JOSEFINA',
-               'wdoc2' => 'CALAMPA',
-               'wdoc3' => 'MAS',
-               'cdocente' => '001314',
-               'fono1' => '942142492',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'eljocamas@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO',
-               'wdoc2' => 'CALAMPA',
-               'wdoc3' => 'ZUTA',
-               'cdocente' => '001560',
-               'fono1' => '947880721',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'fcalampa@gmail.com',
+               'user_id' => '224',
           ]);
           DataUser::create([
                'wdoc1' => 'DIANA LUCIA',
@@ -3847,6 +2480,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5572025',
                'email1' => 'dcalderon@ucss.edu.pe',
                'email2' => 'dianalucc@gmail.com',
+               'user_id' => '225',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGAR SANTIAGO',
@@ -3857,6 +2491,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5490226',
                'email1' => 'ecalderon@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '226',
           ]);
           DataUser::create([
                'wdoc1' => 'JAIME TOMAS',
@@ -3867,6 +2502,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '9969933',
                'email1' => 'jcalderonc@ucss.edu.pe',
                'email2' => 'jaime_peru60@hotmail.com',
+               'user_id' => '227',
           ]);
           DataUser::create([
                'wdoc1' => 'GRIMALDO EDWIN',
@@ -3877,6 +2513,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4671334',
                'email1' => 'gcalderon@ucss.edu.pe',
                'email2' => 'edwincaldi70@hotmail.com',
+               'user_id' => '228',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL ROLANDO',
@@ -3887,6 +2524,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5403700',
                'email1' => 'dcalderonf@ucss.edu.pe',
                'email2' => 'daneditor76@gmail.com',
+               'user_id' => '229',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN MANUEL',
@@ -3897,26 +2535,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6410226',
                'email1' => 'jcalderon@ucss.edu.pe',
                'email2' => 'juan_mcl@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIA EDIT',
-               'wdoc2' => 'CALDERON',
-               'wdoc3' => 'LEANDRO',
-               'cdocente' => '002223',
-               'fono1' => '951774768',
-               'fono2' => '2464213',
-               'email1' => '',
-               'email2' => 'jualiacalderon1021@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE LUIS',
-               'wdoc2' => 'CALDERON',
-               'wdoc3' => 'RAFFO',
-               'cdocente' => '001995',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '230',
           ]);
           DataUser::create([
                'wdoc1' => 'ANTHONY',
@@ -3927,16 +2546,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '509729',
                'email1' => 'acalderon@ucss.edu.pe',
                'email2' => 'anthony_calderon@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FRANCISCO ANTENOR',
-               'wdoc2' => 'CALDERON',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '002727',
-               'fono1' => '996628979',
-               'fono2' => '2381009',
-               'email1' => '',
-               'email2' => 'fco_cal@hotmail.com',
+               'user_id' => '231',
           ]);
           DataUser::create([
                'wdoc1' => 'SILVIO GUSTAVO',
@@ -3947,6 +2557,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'scalixto@ucss.edu.pe',
                'email2' => 'guscalix6@hotmail.com',
+               'user_id' => '232',
           ]);
           DataUser::create([
                'wdoc1' => 'SEGUNDO GERARDO',
@@ -3957,6 +2568,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'scalle@ucss.edu.pe',
                'email2' => 'gerardocalle2000@yahoo.com',
+               'user_id' => '233',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO ALONSO',
@@ -3967,6 +2579,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7337807',
                'email1' => 'rcalle@ucss.edu.pe',
                'email2' => 'ricardoalon50@hotmail.com',
+               'user_id' => '234',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIPE',
@@ -3977,6 +2590,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4816279',
                'email1' => 'fcalle@ucss.edu.pe',
                'email2' => 'pbro.alado60@hotmail.com',
+               'user_id' => '235',
           ]);
           DataUser::create([
                'wdoc1' => 'YURI HOLSIN',
@@ -3987,6 +2601,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ycalle@ucss.edu.pe',
                'email2' => 'yuricalle@hotmail.com',
+               'user_id' => '236',
           ]);
           DataUser::create([
                'wdoc1' => 'JUVER DUBERLY',
@@ -3997,6 +2612,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7330687',
                'email1' => 'jcalle@ucss.edu.pe',
                'email2' => 'juverc@hotmail.com',
+               'user_id' => '237',
           ]);
           DataUser::create([
                'wdoc1' => 'YONATAN FIDEL',
@@ -4007,26 +2623,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '539165',
                'email1' => 'ycallec@ucss.edu.pe',
                'email2' => 'yocaqui@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERTO FRANCISCO',
-               'wdoc2' => 'CALMET',
-               'wdoc3' => 'AGNELLI',
-               'cdocente' => '000076',
-               'fono1' => '',
-               'fono2' => '4296156',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILLY HUGO',
-               'wdoc2' => 'CALSINA',
-               'wdoc3' => 'MIRAMIRA',
-               'cdocente' => '002670',
-               'fono1' => '986786270',
-               'fono2' => '5343971',
-               'email1' => '',
-               'email2' => 'wilcalmi@hotmail.com',
+               'user_id' => '238',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID',
@@ -4037,46 +2634,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dcalua@ucss.edu.pe',
                'email2' => 'davidcalua49@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO JUNIOR',
-               'wdoc2' => 'CALVAY',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '002615',
-               'fono1' => '986637010',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'pedrocalvay@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ANTONIO',
-               'wdoc2' => 'CALVI',
-               'wdoc3' => 'DEL RISCO',
-               'cdocente' => '000478',
-               'fono1' => '7923926',
-               'fono2' => '4454641',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA  INMACULADA',
-               'wdoc2' => 'CALZADO',
-               'wdoc3' => 'ESCOBAR',
-               'cdocente' => '000100',
-               'fono1' => '',
-               'fono2' => '4224076',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUISELLE',
-               'wdoc2' => 'CAMACHO',
-               'wdoc3' => 'OLIVARES',
-               'cdocente' => '002570',
-               'fono1' => '987684234',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gcamacho@mba.pad.edu',
+               'user_id' => '239',
           ]);
           DataUser::create([
                'wdoc1' => 'JHON JHONY',
@@ -4087,26 +2645,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4827000',
                'email1' => 'jcamarena@ucss.edu.pe',
                'email2' => 'yonicam001@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TANIA ROCIO',
-               'wdoc2' => 'CAMARGO',
-               'wdoc3' => 'ESPINOZA',
-               'cdocente' => '001477',
-               'fono1' => '976974033',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'tany-jka19@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DENNIS',
-               'wdoc2' => 'CAMAYTERI',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '000580',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '240',
           ]);
           DataUser::create([
                'wdoc1' => 'CRISTIAN ENMANUEL',
@@ -4117,6 +2656,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ccamino@ucss.edu.pe',
                'email2' => 'caminoriveracristian@gmail.com',
+               'user_id' => '241',
           ]);
           DataUser::create([
                'wdoc1' => 'VIVIANA YSABEL',
@@ -4127,16 +2667,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5825715',
                'email1' => 'vcampoblanco@ucss.edu.pe',
                'email2' => 'vcampoblanco@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERMINA',
-               'wdoc2' => 'CAMPOS',
-               'wdoc3' => 'ALCALA',
-               'cdocente' => '002211',
-               'fono1' => '942486996',
-               'fono2' => '4364254',
-               'email1' => '',
-               'email2' => 'fercal29@hotmail.com',
+               'user_id' => '242',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR ALBERTO',
@@ -4147,6 +2678,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hcampos@ucss.edu.pe',
                'email2' => 'nolose@hotmail.com',
+               'user_id' => '243',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN MARTIN',
@@ -4157,26 +2689,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7196804',
                'email1' => 'jcampos@ucss.edu.pe',
                'email2' => 'jmch@viabcpc.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER EDUARDO',
-               'wdoc2' => 'CAMPOS',
-               'wdoc3' => 'MURILLO',
-               'cdocente' => '000284',
-               'fono1' => '9094181',
-               'fono2' => '5365306',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FLORENCIA TERESA',
-               'wdoc2' => 'CAMPOS',
-               'wdoc3' => 'ORELLANA',
-               'cdocente' => '002258',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '244',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS MOISES',
@@ -4187,6 +2700,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ccampos@ucss.edu.pe',
                'email2' => 'camposer_444@hotmail.com',
+               'user_id' => '245',
           ]);
           DataUser::create([
                'wdoc1' => 'DIOGENES',
@@ -4197,16 +2711,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dcampos@ucss.edu.pe',
                'email2' => 'diogenescampos1990@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGEL',
-               'wdoc2' => 'CANALES',
-               'wdoc3' => 'JERI',
-               'cdocente' => '000066',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '246',
           ]);
           DataUser::create([
                'wdoc1' => 'NANCY CARMELA',
@@ -4217,6 +2722,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5511969',
                'email1' => 'ncanales@ucss.edu.pe',
                'email2' => 'nc_canales_sarmiento@hotmail.com',
+               'user_id' => '247',
           ]);
           DataUser::create([
                'wdoc1' => 'EDELMIRA',
@@ -4227,76 +2733,29 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4232996',
                'email1' => 'ecanchucaja@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ARNALDO CESAR',
-               'wdoc2' => 'CANCINO',
-               'wdoc3' => 'LAOS',
-               'cdocente' => '001862',
-               'fono1' => '993131523',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'C.CANCINOBIO45@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ALESSANDRA',
-               'wdoc2' => 'CANESSA',
-               'wdoc3' => 'UCCELLI',
-               'cdocente' => '001240',
-               'fono1' => '994070253',
-               'fono2' => '2421300',
-               'email1' => '',
-               'email2' => 'libreliber@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SAUL ENRIQUE',
-               'wdoc2' => 'CANO',
-               'wdoc3' => 'CRISOSTOMO',
-               'cdocente' => '001329',
-               'fono1' => '954957208',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'nolose3@hotmail.com',
+               'user_id' => '248',
           ]);
           DataUser::create([
                'wdoc1' => 'VADHI',
-               'wdoc2' => 'CAÑOTE',
+               'wdoc2' => 'CAÃ‘OTE',
                'wdoc3' => 'TABAKO',
                'cdocente' => '002124',
                'fono1' => '997274865',
                'fono2' => '4249488',
                'email1' => 'vcanote@ucss.edu.pe',
                'email2' => 'vadhicanote@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EUGENIO',
-               'wdoc2' => 'CAPERCHIONE',
-               'wdoc3' => '',
-               'cdocente' => '001996',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '249',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA LIDIA',
-               'wdoc2' => 'CAPUÑAY',
+               'wdoc2' => 'CAPUÃ‘AY',
                'wdoc3' => 'GONZALES',
                'cdocente' => '001312',
                'fono1' => '968581890',
                'fono2' => '',
                'email1' => 'mcapunay@ucss.edu.pe',
                'email2' => 'mlic5179@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS MANUEL',
-               'wdoc2' => 'CAPURRO',
-               'wdoc3' => 'GONZALES',
-               'cdocente' => '000451',
-               'fono1' => '7125174',
-               'fono2' => '5334476',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '250',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS RODOLFO',
@@ -4307,6 +2766,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5216462',
                'email1' => 'ccarbajal@ucss.edu.pe',
                'email2' => 'pr_caen@yahoo.es',
+               'user_id' => '251',
           ]);
           DataUser::create([
                'wdoc1' => 'GIOVANNA ROCIO',
@@ -4317,46 +2777,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gcarbajal@ucss.edu.pe',
                'email2' => 'grcmorris@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELIZABETH GEORGINA',
-               'wdoc2' => 'CARBAJAL',
-               'wdoc3' => 'ZEGARRA',
-               'cdocente' => '000942',
-               'fono1' => '988213273',
-               'fono2' => '5211673',
-               'email1' => '',
-               'email2' => 'elitacarbajal@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO IGNASIO',
-               'wdoc2' => 'CARBONE',
-               'wdoc3' => 'CAMPOVERDE',
-               'cdocente' => '001441',
-               'fono1' => '996776869',
-               'fono2' => '2249956',
-               'email1' => '',
-               'email2' => 'scr1@speedy.com.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR AUGUSTO',
-               'wdoc2' => 'CARBONEL',
-               'wdoc3' => 'CABRERA',
-               'cdocente' => '001736',
-               'fono1' => '963516213',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ccarbonelc@sunat.gob.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS CESAR',
-               'wdoc2' => 'CARDENAS',
-               'wdoc3' => 'BERNUY',
-               'cdocente' => '001878',
-               'fono1' => '98755431',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ganimedes361@hotmail.com',
+               'user_id' => '252',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS MEDALIT',
@@ -4367,26 +2788,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2656678',
                'email1' => 'mcardenas@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE FERNANDO',
-               'wdoc2' => 'CARDENAS',
-               'wdoc3' => 'CANCHANYA',
-               'cdocente' => '002536',
-               'fono1' => '993878174',
-               'fono2' => '2215365',
-               'email1' => '',
-               'email2' => 'jorgecardenasc@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA JULIA',
-               'wdoc2' => 'CARDENAS',
-               'wdoc3' => 'DEL CARPIO DE WERTHEMAN',
-               'cdocente' => '000331',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '253',
           ]);
           DataUser::create([
                'wdoc1' => 'BLUIDSON',
@@ -4397,6 +2799,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4002540',
                'email1' => 'bcardenas@ucss.edu.pe',
                'email2' => 'blucar1966@hotmail.com',
+               'user_id' => '254',
           ]);
           DataUser::create([
                'wdoc1' => 'DIEGO FERMIN',
@@ -4407,6 +2810,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4218593',
                'email1' => 'fcardenas@ucss.edu.pe',
                'email2' => 'diegofermin@controlambiental.com.co',
+               'user_id' => '255',
           ]);
           DataUser::create([
                'wdoc1' => 'CAROLA LUCIA',
@@ -4417,16 +2821,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ccardenas@ucss.edu.pe',
                'email2' => 'carolalcm@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GABRIELA DORA',
-               'wdoc2' => 'CARDENAS',
-               'wdoc3' => 'OLAGUIBEL',
-               'cdocente' => '001244',
-               'fono1' => '950493273',
-               'fono2' => '6613403',
-               'email1' => '',
-               'email2' => 'gradco1@hotmail.com',
+               'user_id' => '256',
           ]);
           DataUser::create([
                'wdoc1' => 'ABRAHAM',
@@ -4437,56 +2832,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4611560',
                'email1' => 'acardenas@ucss.edu.pe',
                'email2' => 'acarsav@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GISSELLA CAROLINA',
-               'wdoc2' => 'CARDENAS',
-               'wdoc3' => 'TORO',
-               'cdocente' => '001038',
-               'fono1' => '999412874',
-               'fono2' => '4816816',
-               'email1' => '',
-               'email2' => 'gigicaroli@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BEATRIZ HERMINA',
-               'wdoc2' => 'CARHUACHIN',
-               'wdoc3' => 'VELASQUEZ',
-               'cdocente' => '002242',
-               'fono1' => '974637161',
-               'fono2' => '5362937',
-               'email1' => '',
-               'email2' => 'bcv_75@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANIEL FELIX',
-               'wdoc2' => 'CARHUAMACA',
-               'wdoc3' => 'LOYA',
-               'cdocente' => '001492',
-               'fono1' => '964652633',
-               'fono2' => '323543',
-               'email1' => '',
-               'email2' => 'dfcl_2007@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DORA GUILLERMINA',
-               'wdoc2' => 'CARHUAMACA',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '000539',
-               'fono1' => '6962433',
-               'fono2' => '4295337',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FULLER VICTORIANO',
-               'wdoc2' => 'CARHUAPOMA',
-               'wdoc3' => 'CAMPO',
-               'cdocente' => '002275',
-               'fono1' => '963954647',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'FULERHCE@GMAIL.COM',
+               'user_id' => '257',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -4497,26 +2843,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6506275',
                'email1' => 'jcarhuaricra@ucss.edu.pe',
                'email2' => 'ing_jose_2013@outlook.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NOEMI ESTHER',
-               'wdoc2' => 'CARHUARICRA',
-               'wdoc3' => 'SANTOS',
-               'cdocente' => '002402',
-               'fono1' => '964413330',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'noemicarhuaricrasa@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELISABETTA',
-               'wdoc2' => 'CARPINO',
-               'wdoc3' => '',
-               'cdocente' => '002441',
-               'fono1' => '299807578',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elibetta_crp@hotmail.it',
+               'user_id' => '258',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL JOHN ROLLY',
@@ -4527,6 +2854,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5400687',
                'email1' => 'mcarpio@ucss.edu.pe',
                'email2' => 'miguel.carpiovargas@gmail.com',
+               'user_id' => '259',
           ]);
           DataUser::create([
                'wdoc1' => 'OLGA MARINA',
@@ -4537,6 +2865,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4516091',
                'email1' => 'ocarranza@ucss.edu.pe',
                'email2' => 'ocarranza21@hotmail.com',
+               'user_id' => '260',
           ]);
           DataUser::create([
                'wdoc1' => 'SAMUEL',
@@ -4547,6 +2876,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'scarranza@ucss.edu.pe',
                'email2' => 'sacav7@hotmail.com',
+               'user_id' => '261',
           ]);
           DataUser::create([
                'wdoc1' => 'URSULA',
@@ -4557,6 +2887,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6392337',
                'email1' => 'ucarrascal@ucss.edu.pe',
                'email2' => 'ucarrascalecologia@gmail.com',
+               'user_id' => '262',
           ]);
           DataUser::create([
                'wdoc1' => 'CIRILO',
@@ -4567,16 +2898,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3860194',
                'email1' => 'ccarrasco@ucss.edu.pe',
                'email2' => 'fisiotecnomedica@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NIKOLL ALAIN',
-               'wdoc2' => 'CARRASCO',
-               'wdoc3' => 'LAZO',
-               'cdocente' => '001289',
-               'fono1' => '987784937',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ernickal@hotmail.com',
+               'user_id' => '263',
           ]);
           DataUser::create([
                'wdoc1' => 'ILIANOV PABLO',
@@ -4587,36 +2909,29 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5360307',
                'email1' => 'icarrasco@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '264',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ELIAS',
-               'wdoc2' => 'CARREÑO',
+               'wdoc2' => 'CARREÃ‘O',
                'wdoc3' => 'MARTINEZ',
                'cdocente' => '001420',
                'fono1' => '996776165',
                'fono2' => '2237265',
                'email1' => 'jcarreno@ucss.edu.pe',
                'email2' => 'jcm080172@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANILO HUGO',
-               'wdoc2' => 'CARREÑO',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '002507',
-               'fono1' => '998688686',
-               'fono2' => '2393661',
-               'email1' => '',
-               'email2' => 'danilo.hugo1607@gmail.com',
+               'user_id' => '265',
           ]);
           DataUser::create([
                'wdoc1' => 'ALBERTO DANILO',
-               'wdoc2' => 'CARREÑO',
+               'wdoc2' => 'CARREÃ‘O',
                'wdoc3' => 'ROLDAN',
                'cdocente' => '001335',
                'fono1' => '929292722',
                'fono2' => '',
                'email1' => 'acarreno@ucss.edu.pe',
                'email2' => 'adcar64@hotmail.com',
+               'user_id' => '266',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR EDUARDO',
@@ -4627,6 +2942,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5791364',
                'email1' => 'ccarrera@ucss.edu.pe',
                'email2' => 'cecarrera26@hotmail.com',
+               'user_id' => '267',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGARD JHONAS',
@@ -4637,6 +2953,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5229826',
                'email1' => 'ecarril@ucss.edu.pe',
                'email2' => 'edgardcarril@hotmail.com',
+               'user_id' => '268',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL ANDRES',
@@ -4647,26 +2964,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5262075',
                'email1' => 'dcarrillo@ucss.edu.pe',
                'email2' => 'dcarrillojara@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS IGNACIO',
-               'wdoc2' => 'CARRILLO',
-               'wdoc3' => 'MUÑOZ',
-               'cdocente' => '000434',
-               'fono1' => '',
-               'fono2' => '5634602',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELENA',
-               'wdoc2' => 'CARRILLO',
-               'wdoc3' => 'VALVERDE',
-               'cdocente' => '001043',
-               'fono1' => '976035138',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'malenita51@hotmail.com',
+               'user_id' => '269',
           ]);
           DataUser::create([
                'wdoc1' => 'ROQUE VLADIMIR',
@@ -4677,6 +2975,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5694654',
                'email1' => 'rcarrion@ucss.edu.pe',
                'email2' => 'vladimir_cr1@hotmail.com',
+               'user_id' => '270',
           ]);
           DataUser::create([
                'wdoc1' => 'HENDERSON NOE',
@@ -4687,36 +2986,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hcarrion@ucss.edu.pe',
                'email2' => 'hender_7@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR',
-               'wdoc2' => 'CARRION',
-               'wdoc3' => 'VALLE',
-               'cdocente' => '000591',
-               'fono1' => '5353316',
-               'fono2' => '2193600',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MAGNO HUGO',
-               'wdoc2' => 'CARTAGENA',
-               'wdoc3' => 'ANDUEZA',
-               'cdocente' => '000425',
-               'fono1' => '',
-               'fono2' => '5363529',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '271',
           ]);
           DataUser::create([
                'wdoc1' => 'YOCELIN ERMILA',
                'wdoc2' => 'CASASOLA',
-               'wdoc3' => 'PEÑA',
+               'wdoc3' => 'PEÃ‘A',
                'cdocente' => '001909',
                'fono1' => '993069795',
                'fono2' => '5404927',
                'email1' => 'ycasasola@ucss.edu.pe',
                'email2' => 'yocelin.casasola@gmail.com',
+               'user_id' => '272',
           ]);
           DataUser::create([
                'wdoc1' => 'CLARA GEMMA MARIA ESTER',
@@ -4727,6 +3008,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2249403',
                'email1' => 'ccaselli@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '273',
           ]);
           DataUser::create([
                'wdoc1' => 'AMALIA RUBIELA',
@@ -4737,6 +3019,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'acasique@ucss.edu.pe',
                'email2' => 'amaliacasique26@gmail.com',
+               'user_id' => '274',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZMILA',
@@ -4747,66 +3030,40 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '1798411',
                'email1' => 'lcasique@ucss.edu.pe',
                'email2' => 'chochoqui@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS',
-               'wdoc2' => 'CASTAÑEDA',
-               'wdoc3' => 'AZCURRA',
-               'cdocente' => '000690',
-               'fono1' => '988830293',
-               'fono2' => '4243560',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN FRANCISCO',
-               'wdoc2' => 'CASTAÑEDA',
-               'wdoc3' => 'CARRILLO',
-               'cdocente' => '001022',
-               'fono1' => '978164173',
-               'fono2' => '224202',
-               'email1' => '',
-               'email2' => 'frac_3@hotmail.com',
+               'user_id' => '275',
           ]);
           DataUser::create([
                'wdoc1' => 'ELVIRA TEOFILA',
-               'wdoc2' => 'CASTAÑEDA',
+               'wdoc2' => 'CASTAÃ‘EDA',
                'wdoc3' => 'CHIRRE',
                'cdocente' => '002131',
                'fono1' => '999382393',
                'fono2' => '',
                'email1' => 'ecastaneda@ucss.edu.pe',
                'email2' => 'elviracch@hotmail.com',
+               'user_id' => '276',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR WALTER',
-               'wdoc2' => 'CASTAÑEDA',
+               'wdoc2' => 'CASTAÃ‘EDA',
                'wdoc3' => 'RAMIREZ',
                'cdocente' => '000452',
                'fono1' => '996428905',
                'fono2' => '5403047',
                'email1' => 'ccastaneda@ucss.edu.pe',
                'email2' => 'cwcastane@hispavista.com',
+               'user_id' => '277',
           ]);
           DataUser::create([
                'wdoc1' => 'MAGDA  ISABEL',
-               'wdoc2' => 'CASTAÑEDA',
+               'wdoc2' => 'CASTAÃ‘EDA',
                'wdoc3' => 'SANCHEZ',
                'cdocente' => '000585',
                'fono1' => '',
                'fono2' => '5421045',
                'email1' => 'mcastanedas@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA RITA',
-               'wdoc2' => 'CASTI',
-               'wdoc3' => '',
-               'cdocente' => '001042',
-               'fono1' => '943550570',
-               'fono2' => '4852403',
-               'email1' => '',
-               'email2' => 'ritahuaraz_05@hotmail.com',
+               'user_id' => '278',
           ]);
           DataUser::create([
                'wdoc1' => 'HILARIO',
@@ -4817,6 +3074,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '1798575',
                'email1' => 'hcastilla@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '279',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS HILDEBRANDO',
@@ -4827,16 +3085,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ccastillo@ucss.edu.pe',
                'email2' => 'chall905@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PABLO JAVIER',
-               'wdoc2' => 'CASTILLO',
-               'wdoc3' => 'CCANTO',
-               'cdocente' => '002247',
-               'fono1' => '998985255',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'javier_sistem_03@hotmail.com',
+               'user_id' => '280',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE MARTIN',
@@ -4847,16 +3096,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jcastillo@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELEONORE',
-               'wdoc2' => 'CASTILLO',
-               'wdoc3' => 'FIGUEROA',
-               'cdocente' => '001948',
-               'fono1' => '956164733',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ele_cfigueroa@hotmail.com',
+               'user_id' => '281',
           ]);
           DataUser::create([
                'wdoc1' => 'GIANCARLO',
@@ -4867,6 +3107,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4645397',
                'email1' => 'gcastillo@ucss.edu.pe',
                'email2' => 'gian_xto@hotmail.com',
+               'user_id' => '282',
           ]);
           DataUser::create([
                'wdoc1' => 'ARACELY',
@@ -4877,6 +3118,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6849219',
                'email1' => 'acastillo@ucss.edu.pe',
                'email2' => 'aracelycj@gmail.com',
+               'user_id' => '283',
           ]);
           DataUser::create([
                'wdoc1' => 'SIXTA ISABEL',
@@ -4887,26 +3129,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'scastillo@ucss.edu.pe',
                'email2' => 'nolose@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOHN PETER',
-               'wdoc2' => 'CASTILLO',
-               'wdoc3' => 'MENDOZA',
-               'cdocente' => '000919',
-               'fono1' => '985092036',
-               'fono2' => '3716261',
-               'email1' => '',
-               'email2' => 'jofn_peter_c@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NORMA LUZ ESPERANZA',
-               'wdoc2' => 'CASTILLO',
-               'wdoc3' => 'MORALES',
-               'cdocente' => '000712',
-               'fono1' => '989066631',
-               'fono2' => '3540935',
-               'email1' => '',
-               'email2' => 'nlecastillo@yahoo.es',
+               'user_id' => '284',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCISCO',
@@ -4917,6 +3140,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2394882',
                'email1' => 'fcastillo@ucss.edu.pe',
                'email2' => 'fcmore095@gmail.com',
+               'user_id' => '285',
           ]);
           DataUser::create([
                'wdoc1' => 'VERONICA MILAGROS',
@@ -4927,6 +3151,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3280969',
                'email1' => 'mcastillo@ucss.edu.pe',
                'email2' => 'vermicas@yahoo.es',
+               'user_id' => '286',
           ]);
           DataUser::create([
                'wdoc1' => 'SEGUNDO CESAR',
@@ -4937,6 +3162,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '693963',
                'email1' => 'scastillop@ucss.edu.pe',
                'email2' => 'cesarcpma@hotmail.com',
+               'user_id' => '287',
           ]);
           DataUser::create([
                'wdoc1' => 'YENNIFER DEL PILAR',
@@ -4947,26 +3173,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ycastillo@ucss.edu.pe',
                'email2' => 'yennifercp7@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ENRIQUE',
-               'wdoc2' => 'CASTILLO',
-               'wdoc3' => 'RAFAEL',
-               'cdocente' => '000140',
-               'fono1' => '8796833',
-               'fono2' => '4223052',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JHONATAN ANDERSON',
-               'wdoc2' => 'CASTILLO',
-               'wdoc3' => 'REQUE',
-               'cdocente' => '001831',
-               'fono1' => '978013701',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jcastilloreque@gmail.com',
+               'user_id' => '288',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERTO GALO',
@@ -4977,6 +3184,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5332282',
                'email1' => 'rgcastillo@ucss.edu.pe',
                'email2' => 'rcastillot@pucp.pe',
+               'user_id' => '289',
           ]);
           DataUser::create([
                'wdoc1' => 'PAOLA DEL MILAGRO',
@@ -4987,16 +3195,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pcastro@ucss.edu.pe',
                'email2' => 'pao_c20@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELAINE ELVA',
-               'wdoc2' => 'CASTRO',
-               'wdoc3' => 'ARIAS',
-               'cdocente' => '002496',
-               'fono1' => '997351351',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'eelaine1967@gmail.com',
+               'user_id' => '290',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR JORGE',
@@ -5007,6 +3206,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hcastro@ucss.edu.pe',
                'email2' => 'hectorjorge1@hotmail.com',
+               'user_id' => '291',
           ]);
           DataUser::create([
                'wdoc1' => 'SABINA',
@@ -5017,16 +3217,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'scastro@ucss.edu.pe',
                'email2' => 'sacacu2@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELSA NATALIA',
-               'wdoc2' => 'CASTRO',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '002224',
-               'fono1' => '973878791',
-               'fono2' => '418586',
-               'email1' => '',
-               'email2' => 'natita_08@hotmail.com',
+               'user_id' => '292',
           ]);
           DataUser::create([
                'wdoc1' => 'GLADYS ANTONIETA',
@@ -5037,26 +3228,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gcastro@ucss.edu.pe',
                'email2' => 'antoniet289@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DAVID ALBERTO',
-               'wdoc2' => 'CASTRO',
-               'wdoc3' => 'FALCON',
-               'cdocente' => '000031',
-               'fono1' => '',
-               'fono2' => '5539618',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA CRISTINA JOSEFINA E',
-               'wdoc2' => 'CASTRO',
-               'wdoc3' => 'GARCIA DE SEGOVIA',
-               'cdocente' => '001375',
-               'fono1' => '991930266',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mcastro@metodologias.net',
+               'user_id' => '293',
           ]);
           DataUser::create([
                'wdoc1' => 'ELMER',
@@ -5067,6 +3239,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ecastro@ucss.edu.pe',
                'email2' => 'caploy-104@hotmail.com',
+               'user_id' => '294',
           ]);
           DataUser::create([
                'wdoc1' => 'ABEL GREGORIO',
@@ -5077,6 +3250,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4485868',
                'email1' => 'acastro@ucss.edu.pe',
                'email2' => 'abelcastrolarrea@yahoo.com',
+               'user_id' => '295',
           ]);
           DataUser::create([
                'wdoc1' => 'MAXIMILIANA IRENE',
@@ -5087,6 +3261,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mcastro@ucss.edu.pe',
                'email2' => 'irene_castro_m@hotmail.com',
+               'user_id' => '296',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE DAVID',
@@ -5097,16 +3272,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jcastro@ucss.edu.pe',
                'email2' => 'jcastro@geofrontperu.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIAN',
-               'wdoc2' => 'CASTRO',
-               'wdoc3' => 'PARI',
-               'cdocente' => '002158',
-               'fono1' => '951346665',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'julian.castro2012@hotmail.com',
+               'user_id' => '297',
           ]);
           DataUser::create([
                'wdoc1' => 'AUGUSTO ANGEL',
@@ -5117,16 +3283,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5644815',
                'email1' => 'acastror@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LUIS',
-               'wdoc2' => 'CASTRO',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '001501',
-               'fono1' => '996601207',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jorlucastro@hotmail.com',
+               'user_id' => '298',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ANTONIO',
@@ -5137,6 +3294,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jcauti@ucss.edu.pe',
                'email2' => 'jorge.cauti@outlook.com',
+               'user_id' => '299',
           ]);
           DataUser::create([
                'wdoc1' => 'VANESSA ALESSANDRA',
@@ -5147,46 +3305,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vcavenago@ucss.edu.pe',
                'email2' => 'VALEVINCEN@YAHOO.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ENRIQUE',
-               'wdoc2' => 'CAYATOPA',
-               'wdoc3' => 'RIVERA',
-               'cdocente' => '002673',
-               'fono1' => '992086659',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luis.enrique.cayatopa.rivera@outlook.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SERAPIO',
-               'wdoc2' => 'CAZANA',
-               'wdoc3' => 'CANCHIS',
-               'cdocente' => '001997',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIO VICTOR',
-               'wdoc2' => 'CCANTO',
-               'wdoc3' => 'APAZA',
-               'cdocente' => '002733',
-               'fono1' => '9992546',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mario_ccanto@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDGARDO',
-               'wdoc2' => 'CCORA',
-               'wdoc3' => 'CASAVILCA',
-               'cdocente' => '002492',
-               'fono1' => '956932129',
-               'fono2' => '382494',
-               'email1' => '',
-               'email2' => 'edccor@hotmail.es',
+               'user_id' => '300',
           ]);
           DataUser::create([
                'wdoc1' => 'SHIRLEY',
@@ -5197,46 +3316,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sceciliano@ucss.edu.pe',
                'email2' => 'shirley_12_18@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADOLFO',
-               'wdoc2' => 'CENTENO',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '000265',
-               'fono1' => '9017987',
-               'fono2' => '5214153',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HERBER WILLY',
-               'wdoc2' => 'CENTURION',
-               'wdoc3' => 'PIZANGO',
-               'cdocente' => '001897',
-               'fono1' => '957170516',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hwcp_3@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DAVID',
-               'wdoc2' => 'CERMEÑO',
-               'wdoc3' => 'TORPOCO',
-               'cdocente' => '002138',
-               'fono1' => '959060776',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'pieronet1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILLAR AUGUSTO',
-               'wdoc2' => 'CERNA',
-               'wdoc3' => 'ALTAMIRANO',
-               'cdocente' => '001855',
-               'fono1' => '943980276',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ing.wil9@hotmail.com',
+               'user_id' => '301',
           ]);
           DataUser::create([
                'wdoc1' => 'WILMER VICTORIANO',
@@ -5247,16 +3327,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5367457',
                'email1' => 'wcerna@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LINO',
-               'wdoc2' => 'CERNA',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '000071',
-               'fono1' => '8780924',
-               'fono2' => '4481461',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '302',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA JULIETA',
@@ -5267,36 +3338,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5294324',
                'email1' => 'nceron@ucss.edu.pe',
                'email2' => 'cesala26@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SARITA ASUNCION',
-               'wdoc2' => 'CERPA',
-               'wdoc3' => 'LAYA',
-               'cdocente' => '002735',
-               'fono1' => '945044663',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sacel@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA DEL CARMEN',
-               'wdoc2' => 'CERVANTES',
-               'wdoc3' => 'QUISPE',
-               'cdocente' => '001640',
-               'fono1' => '987148634',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'maria29cervantes@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DILMER OMAR',
-               'wdoc2' => 'CESPEDES',
-               'wdoc3' => 'MEDINA',
-               'cdocente' => '001476',
-               'fono1' => '942880085',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'dilmeromar74@hotmail.com',
+               'user_id' => '303',
           ]);
           DataUser::create([
                'wdoc1' => 'BERNARDO',
@@ -5307,6 +3349,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'bcespedes@ucss.edu.pe',
                'email2' => 'estadistico_bernardo@hotmail.com',
+               'user_id' => '304',
           ]);
           DataUser::create([
                'wdoc1' => 'JACOBA DEL PILAR',
@@ -5317,6 +3360,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pcespedes@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '305',
           ]);
           DataUser::create([
                'wdoc1' => 'SUGEIT EMPERATRIZ',
@@ -5327,6 +3371,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3241440',
                'email1' => 'scespedes@ucss.edu.pe',
                'email2' => 'sugeit_cp@hotmail.com',
+               'user_id' => '306',
           ]);
           DataUser::create([
                'wdoc1' => 'FANNY ISABEL',
@@ -5337,56 +3382,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5555555',
                'email1' => 'fchalco@ucss.edu.pe',
                'email2' => 'fchallco@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDINA GLADYS',
-               'wdoc2' => 'CHAMBILLO',
-               'wdoc3' => 'VICUÑA',
-               'cdocente' => '000695',
-               'fono1' => '998591848',
-               'fono2' => '4710393',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS JOEL',
-               'wdoc2' => 'CHAMORRO',
-               'wdoc3' => 'HUETE',
-               'cdocente' => '002295',
-               'fono1' => '981803341',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luisjoelchamorrohuete@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KATHLEEN DAMARIS',
-               'wdoc2' => 'CHAMORRO',
-               'wdoc3' => 'PABLO',
-               'cdocente' => '002563',
-               'fono1' => '993763671',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'kchamorrop@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TONY NARCISO',
-               'wdoc2' => 'CHANG',
-               'wdoc3' => 'ZUÑIGA',
-               'cdocente' => '000404',
-               'fono1' => '9282999',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JENNIFER',
-               'wdoc2' => 'CHANGANA',
-               'wdoc3' => 'GONZALES',
-               'cdocente' => '002123',
-               'fono1' => '991216970',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jchanganag@gmail.com',
+               'user_id' => '307',
           ]);
           DataUser::create([
                'wdoc1' => 'KATIA DENISSE',
@@ -5397,26 +3393,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2322288',
                'email1' => 'kchaparro@ucss.edu.pe',
                'email2' => 'katiachaparrog@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEJANDRO ALBERTO',
-               'wdoc2' => 'CHAUPIZ',
-               'wdoc3' => 'OLIVERA',
-               'cdocente' => '001891',
-               'fono1' => '954085561',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'chaupiz@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELIZABETH',
-               'wdoc2' => 'CHAVARRY',
-               'wdoc3' => 'NORIEGA',
-               'cdocente' => '000624',
-               'fono1' => '98309490',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '308',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIX ALFONSO',
@@ -5427,6 +3404,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6225636',
                'email1' => 'fchavez@ucss.edu.pe',
                'email2' => 'dr.alfonsoch@gmail.com',
+               'user_id' => '309',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ELENA',
@@ -5437,6 +3415,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5679255',
                'email1' => 'echavez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '310',
           ]);
           DataUser::create([
                'wdoc1' => 'BAYRON FANOR',
@@ -5447,16 +3426,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4230995',
                'email1' => 'bchavez@ucss.edu.pe',
                'email2' => 'bayron_chavez@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE BERNABE',
-               'wdoc2' => 'CHAVEZ',
-               'wdoc3' => 'CARDEÑA',
-               'cdocente' => '000375',
-               'fono1' => '8834806',
-               'fono2' => '5362190',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '311',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -5467,6 +3437,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5388141',
                'email1' => 'jchavezc@ucss.edu.pe',
                'email2' => 'luischocano.chavez@gmail.com',
+               'user_id' => '312',
           ]);
           DataUser::create([
                'wdoc1' => 'JIMMY RICHARD',
@@ -5477,16 +3448,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5233554',
                'email1' => 'rchavez@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HELENN',
-               'wdoc2' => 'CHAVEZ',
-               'wdoc3' => 'DE PAZ DE HUAMBO',
-               'cdocente' => '001998',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '313',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA PILAR',
@@ -5497,6 +3459,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mchavez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '314',
           ]);
           DataUser::create([
                'wdoc1' => 'TATIANA MYRLENKO',
@@ -5507,6 +3470,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '53300',
                'email1' => 'tchavez@ucss.edu.pe',
                'email2' => 'tatichavezf@hotmail.com',
+               'user_id' => '315',
           ]);
           DataUser::create([
                'wdoc1' => 'HERNANDO',
@@ -5517,6 +3481,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5435020',
                'email1' => 'hchavezh@ucss.edu.pe',
                'email2' => 'hernando.chavez@sjm.edu.pe',
+               'user_id' => '316',
           ]);
           DataUser::create([
                'wdoc1' => 'KELY',
@@ -5527,16 +3492,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'kchavezh@ucss.edu.pe',
                'email2' => 'chefkelychidalgo@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NELIDA ISABEL',
-               'wdoc2' => 'CHAVEZ',
-               'wdoc3' => 'LINARES DE LOCK',
-               'cdocente' => '000647',
-               'fono1' => '98811593',
-               'fono2' => '4627845',
-               'email1' => '',
-               'email2' => 'nechali08@yahoo.com',
+               'user_id' => '317',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR RICARDO',
@@ -5547,6 +3503,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6687232',
                'email1' => 'vchavez@ucss.edu.pe',
                'email2' => 'vrps.chavez@hotmail.com',
+               'user_id' => '318',
           ]);
           DataUser::create([
                'wdoc1' => 'KARINA JUDITH',
@@ -5557,6 +3514,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4827929',
                'email1' => 'kchavez@ucss.edu.pe',
                'email2' => 'karcha_2004@yahoo.es',
+               'user_id' => '319',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGELICA MARITZA',
@@ -5567,6 +3525,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2249403',
                'email1' => 'achavez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '320',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO NICOLAS',
@@ -5577,6 +3536,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pchavez@ucss.edu.pe',
                'email2' => 'pechepe_1@hotmail.com',
+               'user_id' => '321',
           ]);
           DataUser::create([
                'wdoc1' => 'ERIC MIGUEL',
@@ -5587,6 +3547,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'echavezr@ucss.edu.pe',
                'email2' => 'e.chavez@hotmail.com',
+               'user_id' => '322',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS',
@@ -5597,16 +3558,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2503786',
                'email1' => 'cchavez@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE CARLOS',
-               'wdoc2' => 'CHAYAN',
-               'wdoc3' => 'COLOMA',
-               'cdocente' => '001690',
-               'fono1' => '949449614',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jocarloz@hotmail.com',
+               'user_id' => '323',
           ]);
           DataUser::create([
                'wdoc1' => 'ARMANDO',
@@ -5617,6 +3569,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'achiclla@ucss.edu.pe',
                'email2' => 'achiclla1@gmail.com',
+               'user_id' => '324',
           ]);
           DataUser::create([
                'wdoc1' => 'JULISSA JANET',
@@ -5627,6 +3580,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4855153',
                'email1' => 'jchiclote@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '325',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -5637,16 +3591,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jchicoma@ucss.edu.pe',
                'email2' => 'jchicomab@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUDOVICA MARIA',
-               'wdoc2' => 'CHIEPPA',
-               'wdoc3' => '',
-               'cdocente' => '002055',
-               'fono1' => '953017156',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ludovica0maria@gmail.com',
+               'user_id' => '326',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA MARIA NINOSHKA',
@@ -5657,6 +3602,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3724528',
                'email1' => 'achincha@ucss.edu.pe',
                'email2' => 'ninoshka.chincha@yahoo.es',
+               'user_id' => '327',
           ]);
           DataUser::create([
                'wdoc1' => 'CAROLINA ROSARIO',
@@ -5667,6 +3613,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5720668',
                'email1' => 'cchinchay@ucss.edu.pe',
                'email2' => 'chinchay.cr@gmail.com',
+               'user_id' => '328',
           ]);
           DataUser::create([
                'wdoc1' => 'EUSEBIO',
@@ -5677,6 +3624,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'echineri@ucss.edu.pe',
                'email2' => 'echineri@gmail.com',
+               'user_id' => '329',
           ]);
           DataUser::create([
                'wdoc1' => 'AGRIPINO',
@@ -5687,16 +3635,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'achinguel@ucss.edu.pe',
                'email2' => 'chinguelrij@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL AUGUSTO',
-               'wdoc2' => 'CHIRHUANA',
-               'wdoc3' => 'SARMIENTO',
-               'cdocente' => '001418',
-               'fono1' => '978469751',
-               'fono2' => '4593782',
-               'email1' => '',
-               'email2' => 'consultormet@hotmail.com',
+               'user_id' => '330',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS ANTONIO',
@@ -5707,16 +3646,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5286205',
                'email1' => 'jachirinos@ucss.edu.pe',
                'email2' => 'jesuschirinos1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN JONEL',
-               'wdoc2' => 'CHIRINOS',
-               'wdoc3' => 'LOZADA',
-               'cdocente' => '001324',
-               'fono1' => '959571300',
-               'fono2' => '7378271',
-               'email1' => '',
-               'email2' => 'juanjonel@hotmail.com',
+               'user_id' => '331',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -5727,6 +3657,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lchiroque@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '332',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR MANUEL',
@@ -5737,6 +3668,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vchiroque@ucss.edu.pe',
                'email2' => 'of_pastoral@yahoo.es',
+               'user_id' => '333',
           ]);
           DataUser::create([
                'wdoc1' => 'GRISEL VIOLETA',
@@ -5747,6 +3679,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2359820',
                'email1' => 'gchiroque@ucss.edu.pe',
                'email2' => 'grysel.cherokee@gmail.com',
+               'user_id' => '334',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGEL',
@@ -5757,6 +3690,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6360528',
                'email1' => 'achocano@ucss.edu.pe',
                'email2' => 'angel_chocano@msn.com',
+               'user_id' => '335',
           ]);
           DataUser::create([
                'wdoc1' => 'ERNESTO GALVARINO',
@@ -5767,6 +3701,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5646059',
                'email1' => 'echong@ucss.edu.pe',
                'email2' => 'echongc@hotmail.com',
+               'user_id' => '336',
           ]);
           DataUser::create([
                'wdoc1' => 'LEONOR',
@@ -5777,26 +3712,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4825347',
                'email1' => 'lchoquehuanca@ucss.edu.pe',
                'email2' => 'leonores20@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER ANTONIO',
-               'wdoc2' => 'CHOY YI',
-               'wdoc3' => 'TARAZONA',
-               'cdocente' => '000089',
-               'fono1' => '',
-               'fono2' => '4312645',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GIOVANNA',
-               'wdoc2' => 'CHUCHON',
-               'wdoc3' => 'OCHOA',
-               'cdocente' => '000514',
-               'fono1' => '7498890',
-               'fono2' => '3521102',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '337',
           ]);
           DataUser::create([
                'wdoc1' => 'SEGUNDO NICOLAS',
@@ -5807,6 +3723,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3923271',
                'email1' => 'schumacero@ucss.edu.pe',
                'email2' => 'nicolas_fic@hotmail.com',
+               'user_id' => '338',
           ]);
           DataUser::create([
                'wdoc1' => 'LILIANA ROCIO',
@@ -5817,16 +3734,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lchumbes@ucss.edu.pe',
                'email2' => 'lyly1235@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YESSICA ARACELLI',
-               'wdoc2' => 'CHUNGA',
-               'wdoc3' => 'BERMEJO',
-               'cdocente' => '001929',
-               'fono1' => '959578973',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yessachube@yahoo.com',
+               'user_id' => '339',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM NEMESIO',
@@ -5837,36 +3745,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '305307',
                'email1' => 'wchunga@ucss.edu.pe',
                'email2' => 'wchungat@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN ENRIQUE',
-               'wdoc2' => 'CHUQUILLAHUA',
-               'wdoc3' => 'CANO',
-               'cdocente' => '001610',
-               'fono1' => '954801030',
-               'fono2' => '367166',
-               'email1' => '',
-               'email2' => 'juanchuo2004@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IVONNE NATIVIDAD',
-               'wdoc2' => 'CHUQUIPIONDO',
-               'wdoc3' => 'LA TORRE',
-               'cdocente' => '001773',
-               'fono1' => '961554565',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ivonne_ch@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR',
-               'wdoc2' => 'CHURA',
-               'wdoc3' => 'GOMEZ',
-               'cdocente' => '002785',
-               'fono1' => '993349570',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cchurag@gmail.com',
+               'user_id' => '340',
           ]);
           DataUser::create([
                'wdoc1' => 'EDDY RUBEN',
@@ -5877,6 +3756,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'echura@ucss.edu.pe',
                'email2' => 'eddychura@gmail.com',
+               'user_id' => '341',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ GLADYS',
@@ -5887,16 +3767,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5664740',
                'email1' => 'lcielo@ucss.edu.pe',
                'email2' => 'luzgladysc@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA BEATRIZ',
-               'wdoc2' => 'CIPRIANI',
-               'wdoc3' => 'THORNE',
-               'cdocente' => '000610',
-               'fono1' => '',
-               'fono2' => '4630793',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '342',
           ]);
           DataUser::create([
                'wdoc1' => 'CLAUDIA',
@@ -5907,16 +3778,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ccisnerosa@ucss.edu.pe',
                'email2' => 'lastarupa@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CHISTIAN JOSE',
-               'wdoc2' => 'CISNEROS',
-               'wdoc3' => 'CASARIEGO',
-               'cdocente' => '001216',
-               'fono1' => '968910769',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cisne47@hotmail.com',
+               'user_id' => '343',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLA ROCIO',
@@ -5927,6 +3789,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ccisneros@ucss.edu.pe',
                'email2' => 'carlacisnerosh@gmail.com',
+               'user_id' => '344',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA CATALINA',
@@ -5937,6 +3800,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4440605',
                'email1' => 'rciudad@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '345',
           ]);
           DataUser::create([
                'wdoc1' => 'ZITA SILVIA',
@@ -5947,6 +3811,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4824515',
                'email1' => 'zcjahua@ucss.edu.pe',
                'email2' => 'zitasilvia2005@hotmail.com',
+               'user_id' => '346',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS EDUARDO',
@@ -5957,6 +3822,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cclaros@ucss.edu.pe',
                'email2' => 'clarossantiago1979@hotmail.com',
+               'user_id' => '347',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -5967,6 +3833,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5221350',
                'email1' => 'jclavijo@ucss.edu.pe',
                'email2' => 'joseclavijotarazona@gmail.com',
+               'user_id' => '348',
           ]);
           DataUser::create([
                'wdoc1' => 'GIOVANNA MAGALY',
@@ -5977,6 +3844,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5747969',
                'email1' => 'gcoarite@ucss.edu.pe',
                'email2' => 'magalycoarite@yahoo.com',
+               'user_id' => '349',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGAR DAVID',
@@ -5987,6 +3855,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ecolachagua@ucss.edu.pe',
                'email2' => 'ing.dcolachagua@gmail.com',
+               'user_id' => '350',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR EDUARDO',
@@ -5997,16 +3866,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ccolan@ucss.edu.pe',
                'email2' => 'colan06@hotmail.com',
+               'user_id' => '351',
           ]);
           DataUser::create([
                'wdoc1' => 'VLADIMIR',
                'wdoc2' => 'COLCAS',
-               'wdoc3' => 'ACUÑA',
+               'wdoc3' => 'ACUÃ‘A',
                'cdocente' => '001649',
                'fono1' => '984151473',
                'fono2' => '5657869',
                'email1' => 'vcolcas@ucss.edu.pe',
                'email2' => 'vladimircolcas@hotmail.com',
+               'user_id' => '352',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ABEL',
@@ -6017,16 +3888,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jacoll@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CECILIA ROSALIA',
-               'wdoc2' => 'COLLANTES',
-               'wdoc3' => 'CARBONELL',
-               'cdocente' => '000691',
-               'fono1' => '993446281',
-               'fono2' => '5349088',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '353',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR EDUARDO',
@@ -6037,36 +3899,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vcollantes@ucss.edu.pe',
                'email2' => 'cpcvictorcollantes@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELMER MIGUEL',
-               'wdoc2' => 'COLLAO',
-               'wdoc3' => 'BAZAN',
-               'cdocente' => '002276',
-               'fono1' => '976955531',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elmercollao@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FRANCISCO EDUARDO',
-               'wdoc2' => 'COLLAZOS',
-               'wdoc3' => 'BELTRAN',
-               'cdocente' => '000254',
-               'fono1' => '9302478',
-               'fono2' => '5281294',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JESUS NEMESIO',
-               'wdoc2' => 'COLLAZOS',
-               'wdoc3' => 'CERRON',
-               'cdocente' => '000231',
-               'fono1' => '6564868',
-               'fono2' => '5281294',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '354',
           ]);
           DataUser::create([
                'wdoc1' => 'ADELMA ELIZABETH',
@@ -6077,16 +3910,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4872955',
                'email1' => 'acollazos@ucss.edu.pe',
                'email2' => 'adelma17@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN NELSON',
-               'wdoc2' => 'COLONIA',
-               'wdoc3' => 'CHACPI',
-               'cdocente' => '001868',
-               'fono1' => '954404816',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'juancitonelson@hotmail.com',
+               'user_id' => '355',
           ]);
           DataUser::create([
                'wdoc1' => 'SHERRYL HEIDI',
@@ -6097,6 +3921,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'scolonia@ucss.edu.pe',
                'email2' => 'heidicol@hotmail.com',
+               'user_id' => '356',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL FRANCISCO',
@@ -6107,6 +3932,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5410601',
                'email1' => 'mcolonna@ucss.edu.pe',
                'email2' => 'mcolonna_aranda@hotmail.com',
+               'user_id' => '357',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN LUISA',
@@ -6117,26 +3943,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5366873',
                'email1' => 'ccondemarin@ucss.edu.pe',
                'email2' => 'clcsagradocorazon@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ARNOLD DAVID',
-               'wdoc2' => 'CONDOR',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '002642',
-               'fono1' => '992527738',
-               'fono2' => '5640968',
-               'email1' => '',
-               'email2' => 'arnoldcondorc@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELENA AIDA',
-               'wdoc2' => 'CONTERNO',
-               'wdoc3' => 'MARTINELLI',
-               'cdocente' => '001986',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '358',
           ]);
           DataUser::create([
                'wdoc1' => 'GIULIANA',
@@ -6147,6 +3954,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gcontini@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '359',
           ]);
           DataUser::create([
                'wdoc1' => 'LEONARDO JAVIER',
@@ -6157,6 +3965,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2420027',
                'email1' => 'lcontreras@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '360',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER PEDRO',
@@ -6167,6 +3976,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2420027',
                'email1' => 'wcontreras@ucss.edu.pe',
                'email2' => 'contreraswp@gmail.com',
+               'user_id' => '361',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIAN ARMANDO',
@@ -6177,6 +3987,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3876250',
                'email1' => 'jcontreras@ucss.edu.pe',
                'email2' => 'juliancll@hotmail.com',
+               'user_id' => '362',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS MANUEL',
@@ -6187,16 +3998,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmcontreras@ucss.edu.pe',
                'email2' => 'geografo.jc@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL',
-               'wdoc2' => 'COPE',
-               'wdoc3' => 'TOBAJA',
-               'cdocente' => '000102',
-               'fono1' => '',
-               'fono2' => '5330008',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '363',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIA VILMA',
@@ -6207,6 +4009,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5332585',
                'email1' => 'jcoral@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '364',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCO ANTONIO',
@@ -6217,6 +4020,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5695846',
                'email1' => 'mcoral@ucss.edu.pe',
                'email2' => 'macy.mcoral@gmail.com',
+               'user_id' => '365',
           ]);
           DataUser::create([
                'wdoc1' => 'SABRINA ZARELLA',
@@ -6227,26 +4031,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'scordero@ucss.edu.pe',
                'email2' => 's.cordero.g@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE ALFREDO',
-               'wdoc2' => 'CORDERO',
-               'wdoc3' => 'VALERA',
-               'cdocente' => '002793',
-               'fono1' => '976048168',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jcorderov@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RODRIGO ARTURO',
-               'wdoc2' => 'CORDOVA',
-               'wdoc3' => 'ALEMAN',
-               'cdocente' => '000428',
-               'fono1' => '',
-               'fono2' => '8887870',
-               'email1' => '',
-               'email2' => 'noexister@hotmail.com',
+               'user_id' => '366',
           ]);
           DataUser::create([
                'wdoc1' => 'GERARDO ANTONIO',
@@ -6257,16 +4042,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gcordova@ucss.edu.pe',
                'email2' => 'asesoriacontable_16@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ULISES',
-               'wdoc2' => 'CORDOVA',
-               'wdoc3' => 'BERNEJO',
-               'cdocente' => '001568',
-               'fono1' => '969072157',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ucordova@cipca.org.pe',
+               'user_id' => '367',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIBEL MERCEDES',
@@ -6277,6 +4053,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5311118',
                'email1' => 'mcordovac@ucss.edu.pe',
                'email2' => 'maribelcordova86@hotmail.com',
+               'user_id' => '368',
           ]);
           DataUser::create([
                'wdoc1' => 'ERIKA MILAGROS',
@@ -6287,6 +4064,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ecordova@ucss.edu.pe',
                'email2' => 'erikacordovaah@gmail.com',
+               'user_id' => '369',
           ]);
           DataUser::create([
                'wdoc1' => 'SAUL JORGE',
@@ -6297,16 +4075,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4711672',
                'email1' => 'scordova@ucss.edu.pe',
                'email2' => 'scordovah@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUZBEL AIDA',
-               'wdoc2' => 'CORDOVA',
-               'wdoc3' => 'MARTINEZ',
-               'cdocente' => '002287',
-               'fono1' => '962504939',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luzbelaida14@hotmail.com',
+               'user_id' => '370',
           ]);
           DataUser::create([
                'wdoc1' => 'JESSICA JANETH',
@@ -6317,6 +4086,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jcordova@ucss.edu.pe',
                'email2' => 'jessica_cr15@hotmail.com',
+               'user_id' => '371',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIMON DOMINGO',
@@ -6327,36 +4097,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5217438',
                'email1' => 'fcordova@ucss.edu.pe',
                'email2' => 'fecorsal2010@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEX',
-               'wdoc2' => 'CORDOVA',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '001585',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cordova1503@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL',
-               'wdoc2' => 'CORNEJO',
-               'wdoc3' => 'CHAPARRO',
-               'cdocente' => '000636',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAUL ANTONIO',
-               'wdoc2' => 'CORNEJO',
-               'wdoc3' => 'CORRALES',
-               'cdocente' => '000132',
-               'fono1' => '',
-               'fono2' => '5684934',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '372',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALEJANDRO',
@@ -6367,6 +4108,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2245559',
                'email1' => 'ccornejog@ucss.edu.pe',
                'email2' => 'carloscornejoguerrero@yahoo.com',
+               'user_id' => '373',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS EDUARDO',
@@ -6377,36 +4119,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '321134',
                'email1' => 'ccornejo@ucss.edu.pe',
                'email2' => 'claucar12@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SOFIA DEL PILAR',
-               'wdoc2' => 'CORNEJO',
-               'wdoc3' => 'GUERRERO',
-               'cdocente' => '001480',
-               'fono1' => '992715229',
-               'fono2' => '4372425',
-               'email1' => '',
-               'email2' => 'pili_corn@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSA BERTHA',
-               'wdoc2' => 'CORNEJO',
-               'wdoc3' => 'PAICO',
-               'cdocente' => '002231',
-               'fono1' => '964168281',
-               'fono2' => '5741883',
-               'email1' => '',
-               'email2' => 'rosaodeccas@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUSTAVO IVANOVICH',
-               'wdoc2' => 'CORNEJO',
-               'wdoc3' => 'SAAVEDRA',
-               'cdocente' => '001668',
-               'fono1' => '964048852',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cornejo_gustavo@hotmail.com',
+               'user_id' => '374',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS AUGUSTO',
@@ -6417,16 +4130,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '8',
                'email1' => 'lcoronado@ucss.edu.pe',
                'email2' => 'luiscoronado31@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR ORLANDO',
-               'wdoc2' => 'CORONEL',
-               'wdoc3' => 'COTRINA',
-               'cdocente' => '001974',
-               'fono1' => '945626943',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'CHECOTRINA_C2@HOTMAIL.COM',
+               'user_id' => '375',
           ]);
           DataUser::create([
                'wdoc1' => 'ELMER TEOFILO',
@@ -6437,6 +4141,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ecoroneld@ucss.edu.pe',
                'email2' => 'elmertpiscis@hotmail.com',
+               'user_id' => '376',
           ]);
           DataUser::create([
                'wdoc1' => 'EDITH MARIA',
@@ -6447,26 +4152,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ecoronel@ucss.edu.pe',
                'email2' => 'edith_mp2@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO MARTIN',
-               'wdoc2' => 'CORREA',
-               'wdoc3' => 'MORAN',
-               'cdocente' => '001404',
-               'fono1' => '9979342',
-               'fono2' => '5686836',
-               'email1' => '',
-               'email2' => 'icaro10-13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOHANNA',
-               'wdoc2' => 'CORTEZ',
-               'wdoc3' => 'BUSTAMANTE',
-               'cdocente' => '001797',
-               'fono1' => '995751206',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'johannacortez@hotmail.com',
+               'user_id' => '377',
           ]);
           DataUser::create([
                'wdoc1' => 'NORBERTO PIERO',
@@ -6477,6 +4163,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ncortez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '378',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR SEGUNDO',
@@ -6487,16 +4174,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5331075',
                'email1' => 'ccortez@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROGER UBEDELINDO',
-               'wdoc2' => 'CORTEZ',
-               'wdoc3' => 'SALDAÑA',
-               'cdocente' => '001713',
-               'fono1' => '947414150',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rogercortez_3@hotmail.com',
+               'user_id' => '379',
           ]);
           DataUser::create([
                'wdoc1' => 'AUGUSTO PARCEMON',
@@ -6507,6 +4185,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4851866',
                'email1' => 'acortez@ucss.edu.pe',
                'email2' => 'cortez_augusto@yahoo.fr',
+               'user_id' => '380',
           ]);
           DataUser::create([
                'wdoc1' => 'BEATRIZ NORMA LEONOR',
@@ -6517,6 +4196,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5615144',
                'email1' => 'bcorzo@ucss.edu.pe',
                'email2' => 'pelangochacorzo@hotmail.com',
+               'user_id' => '381',
           ]);
           DataUser::create([
                'wdoc1' => 'FRESIA BRUSELAS',
@@ -6527,16 +4207,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3645249',
                'email1' => 'fcorzo@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICENTE DANIEL',
-               'wdoc2' => 'CORZO',
-               'wdoc3' => 'VALDIGLESIAS',
-               'cdocente' => '000956',
-               'fono1' => '971865796',
-               'fono2' => '2243647',
-               'email1' => '',
-               'email2' => 'corzo.vicente@gmail.com',
+               'user_id' => '382',
           ]);
           DataUser::create([
                'wdoc1' => 'MIRYAM MILAGROS',
@@ -6547,6 +4218,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mcosme@ucss.edu.pe',
                'email2' => 'miryamcosme@gmail.com',
+               'user_id' => '383',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE EDUARDO',
@@ -6557,6 +4229,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4952718',
                'email1' => 'jcosta@ucss.edu.pe',
                'email2' => 'jorgecostarodriguez@yahoo.com',
+               'user_id' => '384',
           ]);
           DataUser::create([
                'wdoc1' => 'SOFIA',
@@ -6567,6 +4240,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6242124',
                'email1' => 'scoz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '385',
           ]);
           DataUser::create([
                'wdoc1' => 'VANESA CAROLINA',
@@ -6577,16 +4251,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4476708',
                'email1' => 'vcoz@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSSELLA',
-               'wdoc2' => 'CRAMAROSSA',
-               'wdoc3' => '',
-               'cdocente' => '001550',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rossella_cramarossa@yahoo.it',
+               'user_id' => '386',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO LORENZO',
@@ -6597,6 +4262,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2573433',
                'email1' => 'pcriollo@ucss.edu.pe',
                'email2' => 'pcl89-1@hotmail.com',
+               'user_id' => '387',
           ]);
           DataUser::create([
                'wdoc1' => 'ILICH CARLOS DEMETRIO',
@@ -6607,6 +4273,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'icrisanto@ucss.edu.pe',
                'email2' => 'ilich.crisanto@gmail.com',
+               'user_id' => '388',
           ]);
           DataUser::create([
                'wdoc1' => 'DORIS HILDA',
@@ -6617,16 +4284,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4480602',
                'email1' => 'dcristobal@ucss.edu.pe',
                'email2' => 'dorishcv@yahoo.com',
+               'user_id' => '389',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGAR ODON',
                'wdoc2' => 'CRUZ',
-               'wdoc3' => 'ACUÑA',
+               'wdoc3' => 'ACUÃ‘A',
                'cdocente' => '000348',
                'fono1' => '1546804',
                'fono2' => '5283031',
                'email1' => 'ecruz@ucss.edu.pe',
                'email2' => 'edgar.cruz@pucp.edu.pe',
+               'user_id' => '390',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS EDUARDO',
@@ -6637,6 +4306,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4873783',
                'email1' => 'ccruz@ucss.edu.pe',
                'email2' => 'ceca_2691@hotmail.com',
+               'user_id' => '391',
           ]);
           DataUser::create([
                'wdoc1' => 'GILMER',
@@ -6647,36 +4317,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gcruz@ucss.edu.pe',
                'email2' => 'kmpoverde@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUANA EVANGELINA',
-               'wdoc2' => 'CRUZ',
-               'wdoc3' => 'CONDORI',
-               'cdocente' => '001276',
-               'fono1' => '959604420',
-               'fono2' => '4247764',
-               'email1' => '',
-               'email2' => 'juanacc_1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME',
-               'wdoc2' => 'CRUZ',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '002788',
-               'fono1' => '964971498',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jecruzdiaz@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DAVID JOSE',
-               'wdoc2' => 'CRUZ',
-               'wdoc3' => 'HUAMAN',
-               'cdocente' => '000429',
-               'fono1' => '',
-               'fono2' => '2743827',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '392',
           ]);
           DataUser::create([
                'wdoc1' => 'OSWALDO',
@@ -6687,16 +4328,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ocruiz@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULISSA MARGARETH',
-               'wdoc2' => 'CRUZ',
-               'wdoc3' => 'TIRADO',
-               'cdocente' => '000426',
-               'fono1' => '3032134',
-               'fono2' => '2749509',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '393',
           ]);
           DataUser::create([
                'wdoc1' => 'AUGUSTO ARMANDO',
@@ -6707,6 +4339,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '355096',
                'email1' => 'acruz@ucss.edu.pe',
                'email2' => 'acvproyectos@yahoo.es',
+               'user_id' => '394',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ARMANDO II',
@@ -6717,6 +4350,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '341648',
                'email1' => 'jcruz@ucss.edu.pe',
                'email2' => 'jorge091179@gmail.com',
+               'user_id' => '395',
           ]);
           DataUser::create([
                'wdoc1' => 'MELINA ROXANA',
@@ -6727,6 +4361,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2577028',
                'email1' => 'mcruzado@ucss.edu.pe',
                'email2' => 'minacruzado@gmail.com',
+               'user_id' => '396',
           ]);
           DataUser::create([
                'wdoc1' => 'JOHN EDWARD',
@@ -6737,6 +4372,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7339523',
                'email1' => 'jcuadros@ucss.edu.pe',
                'email2' => 'cuadrosjohn001@gmail.com',
+               'user_id' => '397',
           ]);
           DataUser::create([
                'wdoc1' => 'YNEZ ESTRELLA',
@@ -6747,6 +4383,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ycuba@ucss.edu.pe',
                'email2' => 'cubitadelcielo@hotmail.com.pe',
+               'user_id' => '398',
           ]);
           DataUser::create([
                'wdoc1' => 'UVER',
@@ -6757,16 +4394,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7443260',
                'email1' => 'ucubos@ucss.edu.pe',
                'email2' => 'uver_cubos1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FRANCISCO ALFREDO',
-               'wdoc2' => 'CUCHO',
-               'wdoc3' => 'GUEVARA',
-               'cdocente' => '000586',
-               'fono1' => '',
-               'fono2' => '3247053',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '399',
           ]);
           DataUser::create([
                'wdoc1' => 'VIOLETA EMPERATRIZ',
@@ -6777,6 +4405,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7985024',
                'email1' => 'vcuenca@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '400',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCO ANTONIO',
@@ -6787,26 +4416,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '200879',
                'email1' => 'mcuevaq@ucss.edu.pe',
                'email2' => 'marcocueva39@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ESTHER',
-               'wdoc2' => 'CUIPAL',
-               'wdoc3' => 'RUIZ',
-               'cdocente' => '002430',
-               'fono1' => '999874319',
-               'fono2' => '3816044',
-               'email1' => '',
-               'email2' => 'licmaricuipal@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MOISES',
-               'wdoc2' => 'CUMPA',
-               'wdoc3' => 'VALENCIA',
-               'cdocente' => '001864',
-               'fono1' => '987715088',
-               'fono2' => '3305001',
-               'email1' => '',
-               'email2' => 'jmcuval@hotmail.com',
+               'user_id' => '401',
           ]);
           DataUser::create([
                'wdoc1' => 'DEYVI DAVID',
@@ -6817,16 +4427,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dcunguia@ucss.edu.pe',
                'email2' => 'deyvi_10_6@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NICOLAS EUDOCIO',
-               'wdoc2' => 'CURCIO',
-               'wdoc3' => 'OLIVA',
-               'cdocente' => '000222',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '402',
           ]);
           DataUser::create([
                'wdoc1' => 'SAMUEL RUBEN',
@@ -6837,16 +4438,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '266615',
                'email1' => 'scuri@ucss.edu.pe',
                'email2' => 'sabefg2@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'CURI',
-               'wdoc3' => 'ROSALES',
-               'cdocente' => '001735',
-               'fono1' => '975316365',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'miguelcuri_rosales@hotmail.com',
+               'user_id' => '403',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIX AMADOR',
@@ -6857,76 +4449,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fcurotto@ucss.edu.pe',
                'email2' => 'felixcurottoalmeida@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO ENRIQUE',
-               'wdoc2' => 'CUYA',
-               'wdoc3' => 'CURO',
-               'cdocente' => '001491',
-               'fono1' => '975175450',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'enriquecuyacuro@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BIAGIO',
-               'wdoc2' => 'D ANGELO',
-               'wdoc3' => '',
-               'cdocente' => '000119',
-               'fono1' => '7263443',
-               'fono2' => '4419306',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGHELLINA DEL CONSUELO',
-               'wdoc2' => 'D´ARRIGO',
-               'wdoc3' => 'AGUIRRE',
-               'cdocente' => '002493',
-               'fono1' => '993733528',
-               'fono2' => '6476182',
-               'email1' => '',
-               'email2' => 'anghellinadarrigo@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANDRO ROBERTO',
-               'wdoc2' => 'D´ONOFRIO',
-               'wdoc3' => 'CASTRILLON',
-               'cdocente' => '001369',
-               'fono1' => '993458908',
-               'fono2' => '4461826',
-               'email1' => '',
-               'email2' => 'sdonofrio@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MAX DANFER',
-               'wdoc2' => 'DAMIAN',
-               'wdoc3' => 'MARCELO',
-               'cdocente' => '002277',
-               'fono1' => '943454669',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'MAXTEKKEN33@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELVA BERTHA',
-               'wdoc2' => 'DAMIAN',
-               'wdoc3' => 'ROMERO',
-               'cdocente' => '002163',
-               'fono1' => '968888095',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elvadamianr@hotmail.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARTHA VICTORIA',
-               'wdoc2' => 'DAMIAN',
-               'wdoc3' => 'ROMERO',
-               'cdocente' => '002164',
-               'fono1' => '990911564',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mvdamianr@hotmail.com',
+               'user_id' => '404',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSEPH KENNETH',
@@ -6937,6 +4460,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5362855',
                'email1' => 'jdavalos@ucss.edu.pe',
                'email2' => 'josephdavalos@hotmail.com',
+               'user_id' => '405',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ELENA',
@@ -6947,16 +4471,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4340997',
                'email1' => 'mdavila@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JACK CARLOS',
-               'wdoc2' => 'DAVILA',
-               'wdoc3' => 'HERNANDEZ',
-               'cdocente' => '000824',
-               'fono1' => '990245890',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'qfdavila@hotmail.com',
+               'user_id' => '406',
           ]);
           DataUser::create([
                'wdoc1' => 'GIANNINA',
@@ -6967,6 +4482,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gdavila@ucss.edu.pe',
                'email2' => 'gdh1712@hotmail.com',
+               'user_id' => '407',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD FERNANDO',
@@ -6977,6 +4493,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2269904',
                'email1' => 'rdavila@ucss.edu.pe',
                'email2' => 'ronalddavilalaguna@gmail.com',
+               'user_id' => '408',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -6987,46 +4504,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jdavilam@ucss.edu.pe',
                'email2' => 'vinsonmass@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KELLY JENIFER',
-               'wdoc2' => 'DAVILA',
-               'wdoc3' => 'OCHOA',
-               'cdocente' => '002056',
-               'fono1' => '973814804',
-               'fono2' => '3601889',
-               'email1' => '',
-               'email2' => 'kellyjeni@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO HECTOR RAUL',
-               'wdoc2' => 'DAVILA',
-               'wdoc3' => 'PUÑO',
-               'cdocente' => '001308',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'juhector@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HORACIO FELIX',
-               'wdoc2' => 'DAVILA',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '002487',
-               'fono1' => '999641299',
-               'fono2' => '3580535',
-               'email1' => '',
-               'email2' => 'pepeinca@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OSCAR MELANIO',
-               'wdoc2' => 'DAVILA',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '001999',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '409',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE VICENTE',
@@ -7037,6 +4515,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2553928',
                'email1' => 'jdavila@ucss.edu.pe',
                'email2' => 'jdavila@uni.edu.pe',
+               'user_id' => '410',
           ]);
           DataUser::create([
                'wdoc1' => 'CLOTILDE ZORAIDA',
@@ -7047,6 +4526,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5663484',
                'email1' => 'cdefreitas@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '411',
           ]);
           DataUser::create([
                'wdoc1' => 'PAOLO RENZO',
@@ -7057,6 +4537,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '227678',
                'email1' => 'pdelacalle@ucss.edu.pe',
                'email2' => 'pdelacalle@hotmail.com',
+               'user_id' => '412',
           ]);
           DataUser::create([
                'wdoc1' => 'DANTE PEDRO',
@@ -7067,36 +4548,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ddelacruz@ucss.edu.pe',
                'email2' => 'DANTE349@GMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LESLY MARIELA',
-               'wdoc2' => 'DE LA CRUZ',
-               'wdoc3' => 'HUAMAN',
-               'cdocente' => '001438',
-               'fono1' => '997807974',
-               'fono2' => '5367305',
-               'email1' => '',
-               'email2' => 'lesma.delacruz@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PERCY LINO',
-               'wdoc2' => 'DE LA CRUZ',
-               'wdoc3' => 'INGA',
-               'cdocente' => '001806',
-               'fono1' => '964211324',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'percy1606@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO',
-               'wdoc2' => 'DE LA CRUZ',
-               'wdoc3' => 'ONOFRE',
-               'cdocente' => '000215',
-               'fono1' => '',
-               'fono2' => '4814123',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '413',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS',
@@ -7107,26 +4559,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cdelacruz@ucss.edu.pe',
                'email2' => 'carlitos_2383@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL ROBERTO',
-               'wdoc2' => 'DE LA FLOR',
-               'wdoc3' => 'MATOS',
-               'cdocente' => '002066',
-               'fono1' => '998029229',
-               'fono2' => '3655855',
-               'email1' => '',
-               'email2' => 'mdelaflorm@pj.gob.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSSY MERY',
-               'wdoc2' => 'DE LA PEÑA',
-               'wdoc3' => 'GAMARRA',
-               'cdocente' => '002480',
-               'fono1' => '990016890',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rosmeryta_37@hotmail.com',
+               'user_id' => '414',
           ]);
           DataUser::create([
                'wdoc1' => 'CECILIA MELCHORA',
@@ -7137,6 +4570,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cdelarosa@ucss.edu.pe',
                'email2' => 'ceci.delarosav@gmail.com',
+               'user_id' => '415',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO LUIS ENRIQUE',
@@ -7147,16 +4581,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5620785',
                'email1' => 'pdelarosa@ucss.edu.pe',
                'email2' => 'delarosavalverde@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AURORA JOSEFINA',
-               'wdoc2' => 'DE LA VEGA',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '000787',
-               'fono1' => '',
-               'fono2' => '3482730',
-               'email1' => '',
-               'email2' => 'avega26@gmail.com',
+               'user_id' => '416',
           ]);
           DataUser::create([
                'wdoc1' => 'ERICA MERCEDES',
@@ -7167,6 +4592,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5318149',
                'email1' => 'edepaz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '417',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ANIBAL',
@@ -7177,26 +4603,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4521970',
                'email1' => 'cdesouza@ucss.edu.pe',
                'email2' => 'xcadsfll@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NINELL JANETT',
-               'wdoc2' => 'DEDIOS',
-               'wdoc3' => 'MIMBELA',
-               'cdocente' => '001721',
-               'fono1' => '969467452',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cidma_peru@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VANESSA VICTORIA',
-               'wdoc2' => 'DEFILIPPI',
-               'wdoc3' => 'PANTA',
-               'cdocente' => '002084',
-               'fono1' => '991253129',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'vanessa_defilippi@hotmail.com',
+               'user_id' => '418',
           ]);
           DataUser::create([
                'wdoc1' => 'LIA LUZ',
@@ -7207,6 +4614,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ldaguila@ucss.edu.pe',
                'email2' => 'liadelaguila@hotmeil.com',
+               'user_id' => '419',
           ]);
           DataUser::create([
                'wdoc1' => 'MERCY MILUSKA',
@@ -7217,6 +4625,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mdelaguila@ucss.edu.pe',
                'email2' => 'mercydelaguila@gmail.com',
+               'user_id' => '420',
           ]);
           DataUser::create([
                'wdoc1' => 'NONOY',
@@ -7227,6 +4636,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '1507613',
                'email1' => 'ndaguila@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '421',
           ]);
           DataUser::create([
                'wdoc1' => 'RAFAEL MARTIN',
@@ -7237,6 +4647,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2640465',
                'email1' => 'rdbusto@ucss.edu.pe',
                'email2' => 'rafadb@hotmail.com',
+               'user_id' => '422',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL ENRIQUE',
@@ -7247,6 +4658,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2640398',
                'email1' => 'rbustob@ucss.edu.pe',
                'email2' => 'rbbe123@gmail.com',
+               'user_id' => '423',
           ]);
           DataUser::create([
                'wdoc1' => 'TEOBALDO JULIO',
@@ -7257,6 +4669,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4456481',
                'email1' => 'tdelcampos@ucss.edu.pe',
                'email2' => 'juliodelcampogaytan@gmail.com',
+               'user_id' => '424',
           ]);
           DataUser::create([
                'wdoc1' => 'ERICK',
@@ -7267,36 +4680,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'edcastillo@ucss.edu.pe',
                'email2' => 'delcastillo_edcv@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILFREDO',
-               'wdoc2' => 'DEL PIELAGO',
-               'wdoc3' => 'LARREA',
-               'cdocente' => '000424',
-               'fono1' => '',
-               'fono2' => '2261045',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER AUGUSTO',
-               'wdoc2' => 'DEL RIO',
-               'wdoc3' => 'ALBA',
-               'cdocente' => '000225',
-               'fono1' => '9441113',
-               'fono2' => '4207910',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CECILIA SABY',
-               'wdoc2' => 'DELA COLINA',
-               'wdoc3' => 'SOTELO',
-               'cdocente' => '002588',
-               'fono1' => '956054306',
-               'fono2' => '4827907',
-               'email1' => '',
-               'email2' => 'ceciliasaby95@gmail.com',
+               'user_id' => '425',
           ]);
           DataUser::create([
                'wdoc1' => 'DORA BELISA',
@@ -7307,6 +4691,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5369786',
                'email1' => 'ddelgado@ucss.edu.pe',
                'email2' => 'bdelgado@ltmaceros.com.pe',
+               'user_id' => '426',
           ]);
           DataUser::create([
                'wdoc1' => 'ORLANDO ROSSBEL',
@@ -7317,6 +4702,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6575177',
                'email1' => 'odelgado@ucss.edu.pe',
                'email2' => 'ecorlando@libero.it',
+               'user_id' => '427',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIAS',
@@ -7327,36 +4713,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2324672',
                'email1' => 'edelgado@ucss.edu.pe',
                'email2' => 'e_delgadoheredia@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HERMIAS',
-               'wdoc2' => 'DELGADO',
-               'wdoc3' => 'INGA',
-               'cdocente' => '001608',
-               'fono1' => '965800247',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hdelgadoinga@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICENTE GUMERSINDO',
-               'wdoc2' => 'DELGADO',
-               'wdoc3' => 'JAIME',
-               'cdocente' => '001206',
-               'fono1' => '975150956',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'vdelgadoj@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDO',
-               'wdoc2' => 'DELGADO',
-               'wdoc3' => 'PINO',
-               'cdocente' => '000629',
-               'fono1' => '92981151',
-               'fono2' => '5298671',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '428',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIX GERMAN',
@@ -7367,6 +4724,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5286854',
                'email1' => 'fdelgado@ucss.edu.pe',
                'email2' => 'delgado.fg@gmail.com',
+               'user_id' => '429',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -7377,6 +4735,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4822538',
                'email1' => 'ldelgado@ucss.edu.pe',
                'email2' => 'albertodr18@yahoo.es',
+               'user_id' => '430',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE MIGUEL',
@@ -7387,6 +4746,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4292652',
                'email1' => 'jmdelgado@ucss.edu.pe',
                'email2' => 'jdelgadota@hotmail.com',
+               'user_id' => '431',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR CARLOS ANTONIO',
@@ -7397,56 +4757,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2713726',
                'email1' => 'odesulovich@ucss.edu.pe',
                'email2' => 'ingenieria@obispadocarabayllo.org.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'D',
-               'wdoc2' => 'DEXTRE',
-               'wdoc3' => 'D',
-               'cdocente' => '000409',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELIZABETH',
-               'wdoc2' => 'DEZA',
-               'wdoc3' => 'MARTI',
-               'cdocente' => '000774',
-               'fono1' => '988700711',
-               'fono2' => '5617804',
-               'email1' => '',
-               'email2' => 'lizdeza@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MICHELANGELO',
-               'wdoc2' => 'DI BIAGIO',
-               'wdoc3' => '',
-               'cdocente' => '000709',
-               'fono1' => '997406059',
-               'fono2' => '2479296',
-               'email1' => '',
-               'email2' => 'dibiagio_m@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LALO RUBEN',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'CABANILLAS',
-               'cdocente' => '001666',
-               'fono1' => '957474940',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ruben1603_@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILIAM',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'CALLE',
-               'cdocente' => '002296',
-               'fono1' => '944688245',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wilidi55555@hotmail.com',
+               'user_id' => '432',
           ]);
           DataUser::create([
                'wdoc1' => 'JAIME EDUARDO',
@@ -7457,16 +4768,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7815483',
                'email1' => 'jdiaz@ucss.edu.pe',
                'email2' => 'jdiazcano@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JESUS MARCO ANTONIO',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'DE LA COTERA',
-               'cdocente' => '000650',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '433',
           ]);
           DataUser::create([
                'wdoc1' => 'LILIANA',
@@ -7477,6 +4779,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ldiazd@ucss.edu.pe',
                'email2' => 'ddliliana@hotmail.com',
+               'user_id' => '434',
           ]);
           DataUser::create([
                'wdoc1' => 'NOELIA',
@@ -7487,6 +4790,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5710035',
                'email1' => 'ndiaz@ucss.edu.pe',
                'email2' => 'fisioterapia.ndp@gmail.com',
+               'user_id' => '435',
           ]);
           DataUser::create([
                'wdoc1' => 'PATRICIA DEL PILAR',
@@ -7497,6 +4801,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4253650',
                'email1' => 'pdiaz@ucss.edu.pe',
                'email2' => 'pdiazgamarra@hotmail.com',
+               'user_id' => '436',
           ]);
           DataUser::create([
                'wdoc1' => 'GIOVANI MARTIN',
@@ -7507,6 +4812,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gdiaz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '437',
           ]);
           DataUser::create([
                'wdoc1' => 'EMITERIO',
@@ -7517,6 +4823,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ediaz@ucss.edu.pe',
                'email2' => 'emdigo38@hotmail.com',
+               'user_id' => '438',
           ]);
           DataUser::create([
                'wdoc1' => 'MILAGROS CECILIA',
@@ -7527,6 +4834,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4521636',
                'email1' => 'mdiaz@ucss.edu.pe',
                'email2' => 'diazhermoza@hotmail.com',
+               'user_id' => '439',
           ]);
           DataUser::create([
                'wdoc1' => 'LLIMY',
@@ -7537,6 +4845,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '123456',
                'email1' => 'ldiaz@ucss.edu.pe',
                'email2' => 'llimy1962@hotmail.com',
+               'user_id' => '440',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR LUIS',
@@ -7547,6 +4856,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vdiazl@ucss.edu.pe',
                'email2' => 'diazlvl@hotmail.com',
+               'user_id' => '441',
           ]);
           DataUser::create([
                'wdoc1' => 'IRMA BEATRIZ',
@@ -7557,16 +4867,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2616496',
                'email1' => 'bdiaz@ucss.edu.pe',
                'email2' => 'batichy@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANTIAGO',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'MENDOZA',
-               'cdocente' => '001834',
-               'fono1' => '949509130',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'santiago.fabel@gmail.com',
+               'user_id' => '442',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DE LOURDES',
@@ -7577,6 +4878,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mdiazmo@ucss.edu.pe',
                'email2' => 'lulita85_3@hotmail.com',
+               'user_id' => '443',
           ]);
           DataUser::create([
                'wdoc1' => 'MILUSKA ZULEMA',
@@ -7587,6 +4889,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5226134',
                'email1' => 'mdiazm@ucss.edu.pe',
                'email2' => 'milzu21@gmail.com',
+               'user_id' => '444',
           ]);
           DataUser::create([
                'wdoc1' => 'YOLANDA ANTUANETH',
@@ -7597,6 +4900,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5226134',
                'email1' => 'ydiaz@ucss.edu.pe',
                'email2' => 'yolyantu@hotmail.com',
+               'user_id' => '445',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ALCIDES',
@@ -7607,6 +4911,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mdiazn@ucss.edu.pe',
                'email2' => 'campovalle1@hotmail.com',
+               'user_id' => '446',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ALEJANDRO',
@@ -7617,6 +4922,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jdiazn@ucss.edu.pe',
                'email2' => 'diaz.jorge.905@gmail.com',
+               'user_id' => '447',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -7627,6 +4933,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mdiazp@ucss.edu.pe',
                'email2' => 'miguel.fic2005@gmail.com',
+               'user_id' => '448',
           ]);
           DataUser::create([
                'wdoc1' => 'HERCILIA',
@@ -7637,6 +4944,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hdiaz@ucss.edu.pe',
                'email2' => 'fiera_76_1@hotmail.com',
+               'user_id' => '449',
           ]);
           DataUser::create([
                'wdoc1' => 'MONICA',
@@ -7647,26 +4955,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2610598',
                'email1' => 'mdiazr@ucss.edu.pe',
                'email2' => 'monicdre@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSA MARIA',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'RIVERA',
-               'cdocente' => '000258',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BRUNO JUAN',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'SEBASTIAN',
-               'cdocente' => '002263',
-               'fono1' => '989376409',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bruno.diaz@aol.com',
+               'user_id' => '450',
           ]);
           DataUser::create([
                'wdoc1' => 'SAMUEL',
@@ -7677,6 +4966,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sdiazv@ucss.edu.pe',
                'email2' => 'divarsam@hotmail.com',
+               'user_id' => '451',
           ]);
           DataUser::create([
                'wdoc1' => 'SELENI ADILIA',
@@ -7687,26 +4977,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sadiaz@ucss.edu.pe',
                'email2' => 'sele_dv@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTHER GUILLERMO',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '001288',
-               'fono1' => '996872083',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'waldi4@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR JAVIER',
-               'wdoc2' => 'DIAZ',
-               'wdoc3' => 'VISITACION',
-               'cdocente' => '001484',
-               'fono1' => '981846589',
-               'fono2' => '4256148',
-               'email1' => '',
-               'email2' => 'malulo5@hotmail.com',
+               'user_id' => '452',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO CESAR',
@@ -7717,6 +4988,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jdiazze@ucss.edu.pe',
                'email2' => 'julinio64@hotmail.com',
+               'user_id' => '453',
           ]);
           DataUser::create([
                'wdoc1' => 'JOANY DEL PILAR',
@@ -7727,6 +4999,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jdiazz@ucss.edu.pe',
                'email2' => 'kryskat@hotmail.com',
+               'user_id' => '454',
           ]);
           DataUser::create([
                'wdoc1' => 'CHRISTIAN VICENTE',
@@ -7737,6 +5010,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cdiego@ucss.edu.pe',
                'email2' => 'xtian_99@hotmail.com',
+               'user_id' => '455',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN GABRIEL',
@@ -7747,6 +5021,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '366909',
                'email1' => 'jdionisio@ucss.edu.pe',
                'email2' => 'diony_sony@hotmail.com',
+               'user_id' => '456',
           ]);
           DataUser::create([
                'wdoc1' => 'GRETTEL LIZBETH',
@@ -7757,6 +5032,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gdios@ucss.edu.pe',
                'email2' => 'grelidicas@hotmail.com',
+               'user_id' => '457',
           ]);
           DataUser::create([
                'wdoc1' => 'CECILIA JUBLEVERY',
@@ -7767,6 +5043,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4516457',
                'email1' => 'cdioses@ucss.edu.pe',
                'email2' => 'ceciliadioses21@gmail.com',
+               'user_id' => '458',
           ]);
           DataUser::create([
                'wdoc1' => 'DEFINIR',
@@ -7777,6 +5054,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330008',
                'email1' => 'aestrada@ucss.edu.pe',
                'email2' => 'ajeb_1977@hotmail.com',
+               'user_id' => '459',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR ARTURO',
@@ -7787,26 +5065,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vdominguez@ucss.edu.pe',
                'email2' => 'victordominguez99@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SHEYLA',
-               'wdoc2' => 'DOMINGUEZ',
-               'wdoc3' => 'BERNAOLA',
-               'cdocente' => '001917',
-               'fono1' => '959362759',
-               'fono2' => '5284993',
-               'email1' => '',
-               'email2' => 'sheylagdb@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAFAEL RUFINO',
-               'wdoc2' => 'DOMINGUEZ',
-               'wdoc3' => 'CONTRERAS',
-               'cdocente' => '000288',
-               'fono1' => '7488050',
-               'fono2' => '5262023',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '460',
           ]);
           DataUser::create([
                'wdoc1' => 'DANNY',
@@ -7817,6 +5076,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3873236',
                'email1' => 'ddomingueza@ucss.edu.pe',
                'email2' => 'dannydominguezde@hotmail.com',
+               'user_id' => '461',
           ]);
           DataUser::create([
                'wdoc1' => 'ALICIO VICTOR',
@@ -7827,6 +5087,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5345077',
                'email1' => 'adominguez@ucss.edu.pe',
                'email2' => 'alicio25157@yahoo.es',
+               'user_id' => '462',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA PATRICIA',
@@ -7837,6 +5098,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5260130',
                'email1' => 'mdominguezq@ucss.edu.pe',
                'email2' => 'patricia22do@yahoo.es',
+               'user_id' => '463',
           ]);
           DataUser::create([
                'wdoc1' => 'DELIA ROSARIO',
@@ -7847,6 +5109,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3366426',
                'email1' => 'ddonayre@ucss.edu.pe',
                'email2' => 'delia.donayre@gmail.com',
+               'user_id' => '464',
           ]);
           DataUser::create([
                'wdoc1' => 'ALAIN DONUHUE',
@@ -7857,6 +5120,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4755450',
                'email1' => 'adongo@ucss.edu.pe',
                'email2' => 'alain.dongo@gmail.com',
+               'user_id' => '465',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MANUEL',
@@ -7867,6 +5131,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2635193',
                'email1' => 'jdora@ucss.edu.pe',
                'email2' => 'josemanueldoramoscoso03@gmail.com',
+               'user_id' => '466',
           ]);
           DataUser::create([
                'wdoc1' => 'GIAN CARLO',
@@ -7877,6 +5142,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gdoria@ucss.edu.pe',
                'email2' => 'gigadopa@hotmail.com',
+               'user_id' => '467',
           ]);
           DataUser::create([
                'wdoc1' => 'TEODORICO JESUS ADOLFO ST',
@@ -7887,26 +5153,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'tducos@ucss.edu.pe',
                'email2' => 'jesusducos@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR AUGUSTO',
-               'wdoc2' => 'DUEÑAS',
-               'wdoc3' => 'GUTIERREZ',
-               'cdocente' => '001603',
-               'fono1' => '964338514',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cesrdg2001@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULISSA',
-               'wdoc2' => 'DUQUE',
-               'wdoc3' => 'BERNAL',
-               'cdocente' => '001601',
-               'fono1' => '992195755',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'anydube@gmail.com',
+               'user_id' => '468',
           ]);
           DataUser::create([
                'wdoc1' => 'LEANDRO MILTON',
@@ -7917,16 +5164,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '8285635',
                'email1' => 'lduque@ucss.edu.pe',
                'email2' => 'jungleboyleo19@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AMANDA',
-               'wdoc2' => 'DURAN',
-               'wdoc3' => 'CARHUAMACA',
-               'cdocente' => '001320',
-               'fono1' => '959656535',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'amandaduran01@hotmail.com',
+               'user_id' => '469',
           ]);
           DataUser::create([
                'wdoc1' => 'ANIKA GUADALUPE',
@@ -7937,16 +5175,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aecaa@ucss.edu.pe',
                'email2' => 'anikaeca@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIAN FRANCISCO',
-               'wdoc2' => 'ECHANDIA',
-               'wdoc3' => 'SARMIENTO',
-               'cdocente' => '000393',
-               'fono1' => '6650628',
-               'fono2' => '4655344',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '470',
           ]);
           DataUser::create([
                'wdoc1' => 'YUDITH MARLENI',
@@ -7957,6 +5186,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '654455',
                'email1' => 'yechavigurin@ucss.edu.pe',
                'email2' => 'y.echavigurin@gmail.com',
+               'user_id' => '471',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS GABRIEL',
@@ -7967,6 +5197,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '503678',
                'email1' => 'leche@ucss.edu.pe',
                'email2' => 'gabrieleche_20@hotmail.com',
+               'user_id' => '472',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR ORLANDO',
@@ -7977,6 +5208,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2324534',
                'email1' => 'hechegaray@ucss.edu.pe',
                'email2' => 'hoer2508@hotmail.com',
+               'user_id' => '473',
           ]);
           DataUser::create([
                'wdoc1' => 'EDWIN',
@@ -7987,6 +5219,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eedquen@ucss.edu.pe',
                'email2' => 'edwinedquen@gmail.com',
+               'user_id' => '474',
           ]);
           DataUser::create([
                'wdoc1' => 'PERCY GRIMANIEL',
@@ -7997,16 +5230,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pedquen@ucss.edu.pe',
                'email2' => 'percy01edquen@hot.mail',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO GIOVANNI',
-               'wdoc2' => 'EFFIO',
-               'wdoc3' => 'LEON',
-               'cdocente' => '002298',
-               'fono1' => '945571451',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'juleffio@yahoo.com',
+               'user_id' => '475',
           ]);
           DataUser::create([
                'wdoc1' => 'GUILLERMO MOISES',
@@ -8017,6 +5241,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'geffio@ucss.edu.pe',
                'email2' => 'grimeyeperu@live.com',
+               'user_id' => '476',
           ]);
           DataUser::create([
                'wdoc1' => 'ROXANNA LUCIA',
@@ -8027,6 +5252,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3450199',
                'email1' => 'reggerstedt@ucss.edu.pe',
                'email2' => 'reggerstedt_r@yahoo.es',
+               'user_id' => '477',
           ]);
           DataUser::create([
                'wdoc1' => 'IRMA ALIDA',
@@ -8037,6 +5263,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2240987',
                'email1' => 'iegoavil@ucss.edu.pe',
                'email2' => 'irmaegoavil@hotmail.com',
+               'user_id' => '478',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS HUGO',
@@ -8047,6 +5274,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cegoavil@ucss.edu.pe',
                'email2' => 'carloseg@qnet.com.pe',
+               'user_id' => '479',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ MARIBEL',
@@ -8057,6 +5285,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5340681',
                'email1' => 'eluz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '480',
           ]);
           DataUser::create([
                'wdoc1' => 'WILFREDO CLEMENTE',
@@ -8067,16 +5296,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5711407',
                'email1' => 'welescano@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAFAEL ALBERTO',
-               'wdoc2' => 'ELIZALDE',
-               'wdoc3' => 'DE LA CRUZ MELO',
-               'cdocente' => '002155',
-               'fono1' => '997280017',
-               'fono2' => '3361491',
-               'email1' => '',
-               'email2' => 'rafael-elizalde@hotmail.com',
+               'user_id' => '481',
           ]);
           DataUser::create([
                'wdoc1' => 'FAUSTA ISABEL',
@@ -8087,6 +5307,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ienciso@ucss.edu.pe',
                'email2' => 'isabel_ez2000@yahoo.es',
+               'user_id' => '482',
           ]);
           DataUser::create([
                'wdoc1' => 'ELBERT',
@@ -8097,6 +5318,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eenrique@ucss.edu.pe',
                'email2' => 'e_enrique1@ymail.com',
+               'user_id' => '483',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL IGNACIO',
@@ -8107,6 +5329,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'menriquez@ucss.edu.pe',
                'email2' => 'enriquez4m@hotmail.com',
+               'user_id' => '484',
           ]);
           DataUser::create([
                'wdoc1' => 'YORDANIS',
@@ -8117,6 +5340,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'yenriquez@ucss.edu.pe',
                'email2' => 'yordanizenriquez@yahoo.es',
+               'user_id' => '485',
           ]);
           DataUser::create([
                'wdoc1' => 'MILTON ROYER',
@@ -8127,16 +5351,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2393287',
                'email1' => 'merazo@ucss.edu.pe',
                'email2' => 'miltonr48@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALONSO',
-               'wdoc2' => 'ESCOBAR',
-               'wdoc3' => 'CHIROQUE',
-               'cdocente' => '001362',
-               'fono1' => '969917129',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alonsoescobarchiroque@hotmail.com',
+               'user_id' => '486',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR ALONSO',
@@ -8147,6 +5362,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '311541',
                'email1' => 'hescobar@ucss.edu.pe',
                'email2' => 'hescobar1990@gmail.com',
+               'user_id' => '487',
           ]);
           DataUser::create([
                'wdoc1' => 'SAUL',
@@ -8157,6 +5373,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sescobar@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '488',
           ]);
           DataUser::create([
                'wdoc1' => 'TANIA SILVIA',
@@ -8167,16 +5384,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'tescobar@ucss.edu.pe',
                'email2' => 'tescobarsoldevilla@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILDER',
-               'wdoc2' => 'ESCRIBAS',
-               'wdoc3' => 'DAMAS',
-               'cdocente' => '002241',
-               'fono1' => '947425825',
-               'fono2' => '3629398',
-               'email1' => '',
-               'email2' => 'nocheto_wed@hotmail.com',
+               'user_id' => '489',
           ]);
           DataUser::create([
                'wdoc1' => 'SILVANA PAOLA',
@@ -8187,6 +5395,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4610429',
                'email1' => 'sescudero@ucss.edu.pe',
                'email2' => 'silvanaescudero19@hotmail.com',
+               'user_id' => '490',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN JANET',
@@ -8197,16 +5406,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5210918',
                'email1' => 'cescudero@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '491',
           ]);
           DataUser::create([
                'wdoc1' => 'FLOR ANGEL',
                'wdoc2' => 'ESCUDERO',
-               'wdoc3' => 'SALDAÑA',
+               'wdoc3' => 'SALDAÃ‘A',
                'cdocente' => '002649',
                'fono1' => '',
                'fono2' => '',
                'email1' => 'fescudero@ucss.edu.pe',
                'email2' => 'flor-crisma@hotmail.com',
+               'user_id' => '492',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LENIN',
@@ -8217,56 +5428,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jescudero@ucss.edu.pe',
                'email2' => 'jorlen2014@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE',
-               'wdoc2' => 'ESLAVA',
-               'wdoc3' => 'CALVO',
-               'cdocente' => '001237',
-               'fono1' => '',
-               'fono2' => '4469399',
-               'email1' => '',
-               'email2' => 'jeslava@correo.ulima.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN JOSE',
-               'wdoc2' => 'ESPARRAGA',
-               'wdoc3' => 'CARO',
-               'cdocente' => '002780',
-               'fono1' => '962581348',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'juanjoesparraga@hotmail.com',
+               'user_id' => '493',
           ]);
           DataUser::create([
                'wdoc1' => 'WILDER  ALEX',
                'wdoc2' => 'ESPINOLA',
-               'wdoc3' => 'MARIÑOS',
+               'wdoc3' => 'MARIÃ‘OS',
                'cdocente' => '001021',
                'fono1' => '948116175',
                'fono2' => '384062',
                'email1' => 'wespinola@ucss.edu.pe',
                'email2' => 'esmed_wa@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUMBERTO ALEJANDRO',
-               'wdoc2' => 'ESPINOSA',
-               'wdoc3' => 'ARIZA',
-               'cdocente' => '002667',
-               'fono1' => '995741789',
-               'fono2' => '2222971',
-               'email1' => '',
-               'email2' => 'espnosa.humberto@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER SALOMON',
-               'wdoc2' => 'ESPINOSA',
-               'wdoc3' => 'GONZALES',
-               'cdocente' => '000909',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '494',
           ]);
           DataUser::create([
                'wdoc1' => 'REYNALDO VICTOR',
@@ -8277,6 +5450,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4872955',
                'email1' => 'respinoza@ucss.edu.pe',
                'email2' => 'reyvitto@hotmail.com',
+               'user_id' => '495',
           ]);
           DataUser::create([
                'wdoc1' => 'GILMER LORENZO',
@@ -8287,16 +5461,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gespinoza@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ULISES',
-               'wdoc2' => 'ESPINOZA',
-               'wdoc3' => 'APOLINARIO',
-               'cdocente' => '002288',
-               'fono1' => '963638700',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ulises2912@gmail.com',
+               'user_id' => '496',
           ]);
           DataUser::create([
                'wdoc1' => 'YUDIT ZULEMA',
@@ -8307,26 +5472,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6776213',
                'email1' => 'yespinoza@ucss.edu.pe',
                'email2' => 'yespinoza@ucss.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANIEL ENRIQUE',
-               'wdoc2' => 'ESPINOZA',
-               'wdoc3' => 'ARENAS',
-               'cdocente' => '000379',
-               'fono1' => '7021104',
-               'fono2' => '5785573',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEX WILLY',
-               'wdoc2' => 'ESPINOZA',
-               'wdoc3' => 'CABALLERO',
-               'cdocente' => '001860',
-               'fono1' => '985501969',
-               'fono2' => '5380027',
-               'email1' => '',
-               'email2' => 'espinozacaballeroalex@gmail.com',
+               'user_id' => '497',
           ]);
           DataUser::create([
                'wdoc1' => 'ELVIS HENRRY',
@@ -8337,26 +5483,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eespinoza@ucss.edu.pe',
                'email2' => 'elvisespinoza77@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO ANTONIO',
-               'wdoc2' => 'ESPINOZA',
-               'wdoc3' => 'HUACAYCHUCO',
-               'cdocente' => '002174',
-               'fono1' => '964482242',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'manesh.xp@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUDITH ERIKA',
-               'wdoc2' => 'ESPINOZA',
-               'wdoc3' => 'MENDOZA',
-               'cdocente' => '002738',
-               'fono1' => '990344420',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jerikaem@gmail.com',
+               'user_id' => '498',
           ]);
           DataUser::create([
                'wdoc1' => 'GUMERCINDO',
@@ -8367,6 +5494,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gespinozar@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '499',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGARD MARTIN',
@@ -8377,16 +5505,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eesquen@ucss.edu.pe',
                'email2' => 'skenpe11@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDWIN',
-               'wdoc2' => 'ESQUIVIAS',
-               'wdoc3' => 'ASTETE',
-               'cdocente' => '000248',
-               'fono1' => '8560001',
-               'fono2' => '4618274',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '500',
           ]);
           DataUser::create([
                'wdoc1' => 'OMAR EDUARDO',
@@ -8397,6 +5516,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'oestares@ucss.edu.pe',
                'email2' => 'omedespo@hotmail.com',
+               'user_id' => '501',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS RICARDO',
@@ -8407,16 +5527,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jesteban@ucss.edu.pe',
                'email2' => 'joseluis_esteban@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JESSICA',
-               'wdoc2' => 'ESTELA',
-               'wdoc3' => 'BALLARTE',
-               'cdocente' => '002235',
-               'fono1' => '962070476',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jessicaestelaballarte@gmail.com',
+               'user_id' => '502',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR MANUEL',
@@ -8427,46 +5538,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3625401',
                'email1' => 'vestrada@ucss.edu.pe',
                'email2' => 'victorestradah@hotmail.com',
+               'user_id' => '503',
           ]);
           DataUser::create([
                'wdoc1' => 'MAXIMO AUGUSTO',
-               'wdoc2' => 'ESTUPIÑAN',
+               'wdoc2' => 'ESTUPIÃ‘AN',
                'wdoc3' => 'MALDONADO',
                'cdocente' => '000131',
                'fono1' => '7186395',
                'fono2' => '5225373',
                'email1' => 'mestupinan@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BEATRIZ ANASTACIA',
-               'wdoc2' => 'FABIAN',
-               'wdoc3' => 'ARIAS',
-               'cdocente' => '000894',
-               'fono1' => '',
-               'fono2' => '531378',
-               'email1' => '',
-               'email2' => 'beafarias2004@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALEJANDRO',
-               'wdoc2' => 'FABIAN',
-               'wdoc3' => 'NAZAR',
-               'cdocente' => '002278',
-               'fono1' => '964650007',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'FABIANNAZAR@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'FAHSBENDER',
-               'wdoc3' => 'CESPEDES',
-               'cdocente' => '001373',
-               'fono1' => '96917710',
-               'fono2' => '302984',
-               'email1' => '',
-               'email2' => 'jcfahsbender@fahsbender.com',
+               'user_id' => '504',
           ]);
           DataUser::create([
                'wdoc1' => 'NARDA STELLA',
@@ -8477,16 +5560,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5215600',
                'email1' => 'nfajardo@ucss.edu.pe',
                'email2' => 'stella_fv@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MERCEDES YOLANDA',
-               'wdoc2' => 'FALCON',
-               'wdoc3' => 'GUARDIA',
-               'cdocente' => '002316',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mercedita42@gmail.com',
+               'user_id' => '505',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN TEODORO',
@@ -8497,16 +5571,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jfalconi@ucss.edu.pe',
                'email2' => 'j.falconigalvez@icloud.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIRYAM PATRICIA',
-               'wdoc2' => 'FALLA',
-               'wdoc3' => 'GUIRAO DE GÜICH',
-               'cdocente' => '000490',
-               'fono1' => '6891618',
-               'fono2' => '4451448',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '506',
           ]);
           DataUser::create([
                'wdoc1' => 'HAROLD MARTIN',
@@ -8517,26 +5582,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '200506',
                'email1' => 'hfarfan@ucss.edu.pe',
                'email2' => 'haroldfarfan@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER',
-               'wdoc2' => 'FAVARO',
-               'wdoc3' => 'VANIN',
-               'cdocente' => '000307',
-               'fono1' => '7344691',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FLAVIO',
-               'wdoc2' => 'FELICE',
-               'wdoc3' => '',
-               'cdocente' => '002134',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'felice@pul.it',
+               'user_id' => '507',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL',
@@ -8547,6 +5593,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mfernandeza@ucss.edu.pe',
                'email2' => 'maferal25@hotmail.com',
+               'user_id' => '508',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ARMANDO MARTIN',
@@ -8557,6 +5604,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jfernandez@ucss.edu.pe',
                'email2' => 'jfernandez@jfcabogados.pe',
+               'user_id' => '509',
           ]);
           DataUser::create([
                'wdoc1' => 'JANET DEL ROSARIO',
@@ -8567,16 +5615,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '378766',
                'email1' => 'jfernandezc@ucss.edu.pe',
                'email2' => 'yanefer49@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDGAR',
-               'wdoc2' => 'FERNANDEZ',
-               'wdoc3' => 'CONDORI',
-               'cdocente' => '000306',
-               'fono1' => '975169349',
-               'fono2' => '5410278',
-               'email1' => '',
-               'email2' => 'edgarfernandez2002@yahoo.es',
+               'user_id' => '510',
           ]);
           DataUser::create([
                'wdoc1' => 'ROXANA CARLA',
@@ -8587,6 +5626,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5386800',
                'email1' => 'rfernandez@ucss.edu.pe',
                'email2' => 'roxananutricion@yahoo.com',
+               'user_id' => '511',
           ]);
           DataUser::create([
                'wdoc1' => 'EMILIANO',
@@ -8597,46 +5637,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'efernandezc@ucss.edu.pe',
                'email2' => 'emifer_99@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LILIANA',
-               'wdoc2' => 'FERNANDEZ',
-               'wdoc3' => 'FABIAN',
-               'cdocente' => '001828',
-               'fono1' => '',
-               'fono2' => '5481158',
-               'email1' => '',
-               'email2' => 'imatlife@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'FERNANDEZ',
-               'wdoc3' => 'GALVEZ',
-               'cdocente' => '002500',
-               'fono1' => '964164858',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ps.juanfernandezg@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JESSICA',
-               'wdoc2' => 'FERNANDEZ',
-               'wdoc3' => 'MAYO',
-               'cdocente' => '000133',
-               'fono1' => '8558220',
-               'fono2' => '4257150',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SILVINO',
-               'wdoc2' => 'FERNANDEZ',
-               'wdoc3' => 'MEGO',
-               'cdocente' => '000489',
-               'fono1' => '5631251',
-               'fono2' => '5631250',
-               'email1' => '',
-               'email2' => 'notiene@notuvo.com',
+               'user_id' => '512',
           ]);
           DataUser::create([
                'wdoc1' => 'WILTON NERI',
@@ -8647,6 +5648,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wfernandez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '513',
           ]);
           DataUser::create([
                'wdoc1' => 'VERONICA INES',
@@ -8657,6 +5659,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vfernandez@ucss.edu.pe',
                'email2' => 'verito1423@gmail.com',
+               'user_id' => '514',
           ]);
           DataUser::create([
                'wdoc1' => 'JAIME NAPOLEON',
@@ -8667,6 +5670,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jfernandezp@ucss.edu.pe',
                'email2' => 'jaimefernandez1@hotmail.com',
+               'user_id' => '515',
           ]);
           DataUser::create([
                'wdoc1' => 'EDEN BERLY',
@@ -8677,16 +5681,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'efernandez@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IVONNE IRIS DEL PILAR',
-               'wdoc2' => 'FERNANDEZ',
-               'wdoc3' => 'ROMERO',
-               'cdocente' => '001935',
-               'fono1' => '986199975',
-               'fono2' => '4871266',
-               'email1' => '',
-               'email2' => 'frivonne0@gmail.com',
+               'user_id' => '516',
           ]);
           DataUser::create([
                'wdoc1' => 'SELENA CELESTE',
@@ -8697,56 +5692,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4321949',
                'email1' => 'scfernandez@ucss.edu.pe',
                'email2' => 'selenna2fer@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SOFIA HAMELAC',
-               'wdoc2' => 'FERNANDEZ',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '001285',
-               'fono1' => '966599580',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'soffern-19@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILLIAM CESAR',
-               'wdoc2' => 'FERRER',
-               'wdoc3' => 'JAUREGUI',
-               'cdocente' => '000583',
-               'fono1' => '9343906',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LUIS',
-               'wdoc2' => 'FERRER',
-               'wdoc3' => 'URIBE',
-               'cdocente' => '001280',
-               'fono1' => '991734256',
-               'fono2' => '6555760',
-               'email1' => '',
-               'email2' => 'jf2306@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BLANCA',
-               'wdoc2' => 'FIASCUNARI',
-               'wdoc3' => 'CAMPOS',
-               'cdocente' => '000505',
-               'fono1' => '8301751',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARICELA',
-               'wdoc2' => 'FIESTAS',
-               'wdoc3' => 'HUAYANEY',
-               'cdocente' => '001242',
-               'fono1' => '945628868',
-               'fono2' => '4436280',
-               'email1' => '',
-               'email2' => 'maricela.fiestas@gmail.com',
+               'user_id' => '517',
           ]);
           DataUser::create([
                'wdoc1' => 'DENNIS EDWARD',
@@ -8757,26 +5703,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dfigueroa@ucss.edu.pe',
                'email2' => 'dennisfigueroa@outlook.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ROCIO',
-               'wdoc2' => 'FIGUEROA',
-               'wdoc3' => 'ALVEAR',
-               'cdocente' => '001368',
-               'fono1' => '951938558',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mariarocio.figueroa@upaep.mx',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ENGELS FELIX',
-               'wdoc2' => 'FIGUEROA',
-               'wdoc3' => 'ANAMARIA',
-               'cdocente' => '002623',
-               'fono1' => '995216970',
-               'fono2' => '743365',
-               'email1' => '',
-               'email2' => 'engelsfigueroa@gmail.com',
+               'user_id' => '518',
           ]);
           DataUser::create([
                'wdoc1' => 'ERIKA LUZ',
@@ -8787,6 +5714,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4177702',
                'email1' => 'efigueroa@ucss.edu.pe',
                'email2' => 'erika.figueroaa@gmail.com',
+               'user_id' => '519',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE HUGO',
@@ -8797,6 +5725,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jfigueroa@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '520',
           ]);
           DataUser::create([
                'wdoc1' => 'IVAN JESUS',
@@ -8807,16 +5736,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7978465',
                'email1' => 'ifigueroa@ucss.edu.pe',
                'email2' => 'ivanfigueroa@peru.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'FIGUEROA',
-               'wdoc3' => 'NUÑEZ',
-               'cdocente' => '000484',
-               'fono1' => '9386925',
-               'fono2' => '4641751',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '521',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN EMILIO',
@@ -8827,6 +5747,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jfigueroar@ucss.edu.pe',
                'email2' => 'jemiliofr@gmail.com',
+               'user_id' => '522',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN FIDEL',
@@ -8837,6 +5758,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5565132',
                'email1' => 'ffigueroa@ucss.edu.pe',
                'email2' => 'arquimides70@hotmail.com',
+               'user_id' => '523',
           ]);
           DataUser::create([
                'wdoc1' => 'FELICITAS YRENE',
@@ -8847,6 +5769,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4311161',
                'email1' => 'fflores@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '524',
           ]);
           DataUser::create([
                'wdoc1' => 'TEODORO EMILIO',
@@ -8857,16 +5780,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3814951',
                'email1' => 'eflores@ucss.edu.pe',
                'email2' => 'emiliofloresb@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE LUIS',
-               'wdoc2' => 'FLORES',
-               'wdoc3' => 'BAUTISTA',
-               'cdocente' => '001877',
-               'fono1' => '943286095',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'j.floresb@pucp.edu.pe',
+               'user_id' => '525',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL RAFAEL',
@@ -8877,6 +5791,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dflores@ucss.edu.pe',
                'email2' => 'serums2002@hotmail.com',
+               'user_id' => '526',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -8887,16 +5802,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cfloresc@ucss.edu.pe',
                'email2' => 'carlitosfloresc@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALBERTO FRANCISCO',
-               'wdoc2' => 'FLORES',
-               'wdoc3' => 'CUROTTO',
-               'cdocente' => '001788',
-               'fono1' => '992079476',
-               'fono2' => '6367399',
-               'email1' => '',
-               'email2' => 'alberto_flores_ctt@hotmail.com',
+               'user_id' => '527',
           ]);
           DataUser::create([
                'wdoc1' => 'RUDY WALTER',
@@ -8907,6 +5813,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rflores@ucss.edu.pe',
                'email2' => 'rudy260879@outlook.com',
+               'user_id' => '528',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS GERARDO',
@@ -8917,16 +5824,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '245058',
                'email1' => 'cflorese@ucss.edu.pe',
                'email2' => 'carlosgfe@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUERALD',
-               'wdoc2' => 'FLORES',
-               'wdoc3' => 'HURTADO',
-               'cdocente' => '002082',
-               'fono1' => '963851317',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'guerald.flores@gmail.com',
+               'user_id' => '529',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO ALBERTO',
@@ -8937,6 +5835,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5312824',
                'email1' => 'efloresf@ucss.edu.pe',
                'email2' => 'eafl209@yahoo.com',
+               'user_id' => '530',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIA ELENA',
@@ -8947,16 +5846,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6514049',
                'email1' => 'jfloresl@ucss.edu.pe',
                'email2' => 'mdi_julia@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ALFONSO',
-               'wdoc2' => 'FLORES',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '001006',
-               'fono1' => '999262511',
-               'fono2' => '2487158',
-               'email1' => '',
-               'email2' => 'cflores@cecapp.com.pe',
+               'user_id' => '531',
           ]);
           DataUser::create([
                'wdoc1' => 'LUCERO DEL MILAGRO',
@@ -8967,6 +5857,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lflores@ucss.edu.pe',
                'email2' => 'luceromfm@gmail.com',
+               'user_id' => '532',
           ]);
           DataUser::create([
                'wdoc1' => 'INGRID',
@@ -8977,6 +5868,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5236353',
                'email1' => 'iflores@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '533',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ALBERTO',
@@ -8987,6 +5879,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jfloresm@ucss.edu.pe',
                'email2' => 'jorge3236@hotmail.com',
+               'user_id' => '534',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL CALEB',
@@ -8997,6 +5890,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dfloresm@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '535',
           ]);
           DataUser::create([
                'wdoc1' => 'YESSIKA GRAYA',
@@ -9007,6 +5901,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4608131',
                'email1' => 'yflores@ucss.edu.pe',
                'email2' => 'grayflowers@hotmail.com',
+               'user_id' => '536',
           ]);
           DataUser::create([
                'wdoc1' => 'FLORESMILO',
@@ -9017,26 +5912,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5404851',
                'email1' => 'fpalomino@ucss.edu.pe',
                'email2' => 'floresmilofp@hotmail.com',
+               'user_id' => '537',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN ROSA',
                'wdoc2' => 'FLORES',
-               'wdoc3' => 'PEÑA',
+               'wdoc3' => 'PEÃ‘A',
                'cdocente' => '001653',
                'fono1' => '976320229',
                'fono2' => '6053727',
                'email1' => 'cflores@ucss.edu.pe',
                'email2' => 'caflope2001@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER ENRIQUE',
-               'wdoc2' => 'FLORES',
-               'wdoc3' => 'RIOS',
-               'cdocente' => '001455',
-               'fono1' => '635067',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'javierios26@hotmail.com',
+               'user_id' => '538',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSELPH LEONARDO',
@@ -9047,26 +5934,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jflores@ucss.edu.pe',
                'email2' => 'joselphfr@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LORENA DE LOURDES',
-               'wdoc2' => 'FLORES',
-               'wdoc3' => 'TORO',
-               'cdocente' => '001416',
-               'fono1' => '989210624',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lflorestoro@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ANTONIO',
-               'wdoc2' => 'FLORES',
-               'wdoc3' => 'URPE',
-               'cdocente' => '001872',
-               'fono1' => '992090412',
-               'fono2' => '3376282',
-               'email1' => '',
-               'email2' => 'pucara20@yahoo.es',
+               'user_id' => '539',
           ]);
           DataUser::create([
                'wdoc1' => 'WEIDI',
@@ -9077,6 +5945,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wfloresv@ucss.edu.pe',
                'email2' => 'esvaquia@gmail.com',
+               'user_id' => '540',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS CHRISTIAN GUILLERMO',
@@ -9087,6 +5956,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3101947',
                'email1' => 'jflorian@ucss.edu.pe',
                'email2' => 'xtianfc@gmail.com',
+               'user_id' => '541',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -9097,6 +5967,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5315915',
                'email1' => 'lflorindez@ucss.edu.pe',
                'email2' => 'lflorindez@ifb-asbanc.edu.pe',
+               'user_id' => '542',
           ]);
           DataUser::create([
                'wdoc1' => 'VICENTE RAFAEL',
@@ -9107,16 +5978,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4855158',
                'email1' => 'vfolgado@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GIUSSEPPE',
-               'wdoc2' => 'FOLLONI',
-               'wdoc3' => 'F.',
-               'cdocente' => '000114',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '543',
           ]);
           DataUser::create([
                'wdoc1' => 'IRMA CAROLINA',
@@ -9127,6 +5989,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3652618',
                'email1' => 'ifonseca@ucss.edu.pe',
                'email2' => 'cafori@hotmail.com',
+               'user_id' => '544',
           ]);
           DataUser::create([
                'wdoc1' => 'VICENT JOSEP',
@@ -9137,6 +6000,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4855158',
                'email1' => 'vjfont@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '545',
           ]);
           DataUser::create([
                'wdoc1' => 'GLORIA NADIA',
@@ -9147,6 +6011,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3480548',
                'email1' => 'gfranco@ucss.edu.pe',
                'email2' => 'nfranco64@hotmail.com',
+               'user_id' => '546',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ANTONIO',
@@ -9157,46 +6022,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2745941',
                'email1' => 'jfranco@ucss.edu.pe',
                'email2' => 'jfranco@mef.gob.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GIL',
-               'wdoc2' => 'FRANCO',
-               'wdoc3' => 'MELENDREZ',
-               'cdocente' => '002199',
-               'fono1' => '999758027',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'francomelen19@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HILDA BEATRIZ',
-               'wdoc2' => 'FREYRE',
-               'wdoc3' => 'CORDOVA',
-               'cdocente' => '000028',
-               'fono1' => '',
-               'fono2' => '8712122',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARTINO',
-               'wdoc2' => 'FRIGERIO',
-               'wdoc3' => '',
-               'cdocente' => '001576',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'martino.frigerio@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JHONNY ZAS',
-               'wdoc2' => 'FRIZ',
-               'wdoc3' => 'BURGA',
-               'cdocente' => '001985',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '547',
           ]);
           DataUser::create([
                'wdoc1' => 'ELVA',
@@ -9207,6 +6033,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'efuentes@ucss.edu.pe',
                'email2' => 'elva_701@hotmail.com',
+               'user_id' => '548',
           ]);
           DataUser::create([
                'wdoc1' => 'WILMER LUIS',
@@ -9217,6 +6044,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3563079',
                'email1' => 'wfuentes@ucss.edu.pe',
                'email2' => 'WILPI@HOTMAIL.COM',
+               'user_id' => '549',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA',
@@ -9227,6 +6055,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2613822',
                'email1' => 'nfuentes@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '550',
           ]);
           DataUser::create([
                'wdoc1' => 'JHON CRISTIAN',
@@ -9237,6 +6066,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jfuentes@ucss.edu.pe',
                'email2' => 'jhoncrisfuentesvasquez@hotmail.com',
+               'user_id' => '551',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO',
@@ -9247,26 +6077,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4600838',
                'email1' => 'ffukunaga@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDDY',
-               'wdoc2' => 'FUKUNAGA',
-               'wdoc3' => 'FUENTES',
-               'cdocente' => '000273',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VILMA OTILIA',
-               'wdoc2' => 'FUNG',
-               'wdoc3' => 'HENRIQUEZ',
-               'cdocente' => '000783',
-               'fono1' => '',
-               'fono2' => '4582968',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '552',
           ]);
           DataUser::create([
                'wdoc1' => 'KRZYSZTOF',
@@ -9277,6 +6088,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'kgabrys@ucss.edu.pe',
                'email2' => 'gabkrzy@gmail.com',
+               'user_id' => '553',
           ]);
           DataUser::create([
                'wdoc1' => 'KATIA ELVA',
@@ -9287,36 +6099,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5363835',
                'email1' => 'kgago@ucss.edu.pe',
                'email2' => 'katia_gago@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HAYDEE',
-               'wdoc2' => 'GALA',
-               'wdoc3' => 'PALOMINO',
-               'cdocente' => '002270',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hayde_gala@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ANTONIO',
-               'wdoc2' => 'GALARRETA',
-               'wdoc3' => 'AGUILAR',
-               'cdocente' => '002149',
-               'fono1' => '996670053',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luan_r8@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDGAR MARCEL',
-               'wdoc2' => 'GALARZA',
-               'wdoc3' => 'AQUINO',
-               'cdocente' => '002393',
-               'fono1' => '999603872',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marcelgalarza@gmail.com',
+               'user_id' => '554',
           ]);
           DataUser::create([
                'wdoc1' => 'TANIA DEL CARMEN',
@@ -9327,6 +6110,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5684011',
                'email1' => 'tgalindo@ucss.edu.pe',
                'email2' => 'tcapri14@hotmail.com',
+               'user_id' => '555',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE CARLOS',
@@ -9337,16 +6121,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgallardo@ucss.edu.pe',
                'email2' => 'cgallardo@fibraforte.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS WALTER',
-               'wdoc2' => 'GALLEGOS',
-               'wdoc3' => 'MOLINA',
-               'cdocente' => '002000',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '556',
           ]);
           DataUser::create([
                'wdoc1' => 'LETICIA',
@@ -9357,16 +6132,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lgallo@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YANET',
-               'wdoc2' => 'GALVAN',
-               'wdoc3' => 'AYBAR',
-               'cdocente' => '001982',
-               'fono1' => '964821346',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yanet_galvan1@hotmail.com',
+               'user_id' => '557',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ANTONIO',
@@ -9377,16 +6143,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5290473',
                'email1' => 'cgalvez@ucss.edu.pe',
                'email2' => 'dggcggg@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGIE',
-               'wdoc2' => 'GALVEZ',
-               'wdoc3' => 'ZEBALLOS',
-               'cdocente' => '001600',
-               'fono1' => '980938433',
-               'fono2' => '4253613',
-               'email1' => '',
-               'email2' => 'samyangiesam@hotmail.com',
+               'user_id' => '558',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEXANDER',
@@ -9397,16 +6154,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'agamarra@ucss.edu.pe',
                'email2' => 'gamarra_cnaa@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'STELLA NATALIA JOSEFINA',
-               'wdoc2' => 'GAMARRA',
-               'wdoc3' => 'GOYZUETA',
-               'cdocente' => '000437',
-               'fono1' => '9965552',
-               'fono2' => '2631769',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '559',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -9417,26 +6165,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2501882',
                'email1' => 'jgamarra@ucss.edu.pe',
                'email2' => 'gamarra.joseluis@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ROSA',
-               'wdoc2' => 'GAMARRA',
-               'wdoc3' => 'PASTOR',
-               'cdocente' => '001377',
-               'fono1' => '981454063',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mgamarrapastor@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME',
-               'wdoc2' => 'GAMARRA',
-               'wdoc3' => 'TORRE',
-               'cdocente' => '001874',
-               'fono1' => '987161',
-               'fono2' => '5675432',
-               'email1' => '',
-               'email2' => 'jgt_elect@hotmail.com',
+               'user_id' => '560',
           ]);
           DataUser::create([
                'wdoc1' => 'RUGGIERO',
@@ -9447,36 +6176,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rgambatesa@ucss.edu.pe',
                'email2' => 'roccio.percu@htmail.it',
+               'user_id' => '561',
           ]);
           DataUser::create([
                'wdoc1' => 'ARTURO',
                'wdoc2' => 'GAMBINI',
-               'wdoc3' => 'MIÑAN',
+               'wdoc3' => 'MIÃ‘AN',
                'cdocente' => '000573',
                'fono1' => '7266461',
                'fono2' => '5513253',
                'email1' => 'agambini@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROGER',
-               'wdoc2' => 'GAMONAL',
-               'wdoc3' => 'ALARCON',
-               'cdocente' => '001670',
-               'fono1' => '973973949',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rogergamonal@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN ALBERTO',
-               'wdoc2' => 'GARAY',
-               'wdoc3' => 'PEREZ',
-               'cdocente' => '000175',
-               'fono1' => '',
-               'fono2' => '5710498',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '562',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MARCELINO',
@@ -9487,6 +6198,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2355116',
                'email1' => 'jgaray@ucss.edu.pe',
                'email2' => 'garaytorres7@gmail.com',
+               'user_id' => '563',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR',
@@ -9497,6 +6209,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vgarces@ucss.edu.pe',
                'email2' => 'americanbiomedic@gmail.com',
+               'user_id' => '564',
           ]);
           DataUser::create([
                'wdoc1' => 'MILNER',
@@ -9507,6 +6220,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mgarciaa@ucss.edu.pe',
                'email2' => 'mildergarcia@hotmail.com',
+               'user_id' => '565',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO ALBERTO',
@@ -9517,6 +6231,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3951156',
                'email1' => 'pgarcia@ucss.edu.pe',
                'email2' => 'pgarcia52@gmail.com',
+               'user_id' => '566',
           ]);
           DataUser::create([
                'wdoc1' => 'ARTEMIZA',
@@ -9527,66 +6242,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'agarciaa@ucss.edu.pe',
                'email2' => 'artemiza_garcia28@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IRENE SOFIA',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'BENAVIDES',
-               'cdocente' => '000183',
-               'fono1' => '',
-               'fono2' => '4725042',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DIANA DEL CARMEN',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'BONILLA',
-               'cdocente' => '001296',
-               'fono1' => '995740302',
-               'fono2' => '2647101',
-               'email1' => '',
-               'email2' => 'diana.garcia@esan.org.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'CALDERON',
-               'cdocente' => '000458',
-               'fono1' => '',
-               'fono2' => '4582058',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VERONICA',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '000877',
-               'fono1' => '999999999',
-               'fono2' => '5555555',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANDERSON',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'CHAVEZ',
-               'cdocente' => '001525',
-               'fono1' => '955881199',
-               'fono2' => '4755853',
-               'email1' => '',
-               'email2' => 'andersongar@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GERARDO MANUEL',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'CHINCHAY',
-               'cdocente' => '000848',
-               'fono1' => '962337238',
-               'fono2' => '3926097',
-               'email1' => '',
-               'email2' => 'gerardo8217@hotmail.com',
+               'user_id' => '567',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -9597,46 +6253,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4203437',
                'email1' => 'cgarcia@ucss.edu.pe',
                'email2' => 'cgarcia@fibraforte.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NILD',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'CORDOVA',
-               'cdocente' => '001814',
-               'fono1' => '950625899',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'nild_0310@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS JORGE',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'DE LA CRUZ',
-               'cdocente' => '001746',
-               'fono1' => '991845608',
-               'fono2' => '5257035',
-               'email1' => '',
-               'email2' => 'lgdc_217@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'DEDIOS',
-               'cdocente' => '001927',
-               'fono1' => '975743930',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ajgd2001@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ANTONIO',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '002001',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '568',
           ]);
           DataUser::create([
                'wdoc1' => 'NILTON ALAN',
@@ -9647,6 +6264,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nagarcia@ucss.edu.pe',
                'email2' => 'alan_ngh@hotmail.com',
+               'user_id' => '569',
           ]);
           DataUser::create([
                'wdoc1' => 'JESSICA VANESSA',
@@ -9657,6 +6275,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgmasias@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '570',
           ]);
           DataUser::create([
                'wdoc1' => 'OTILIO',
@@ -9667,16 +6286,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5352165',
                'email1' => 'ogarcia@ucss.edu.pe',
                'email2' => 'garcia2000moya@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GALI GIOVANA',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'PALOMINO',
-               'cdocente' => '001720',
-               'fono1' => '942629399',
-               'fono2' => '5781232',
-               'email1' => '',
-               'email2' => 'garcia.gali@gmail.com',
+               'user_id' => '571',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE MIGUEL',
@@ -9687,16 +6297,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgarciap@ucss.edu.pe',
                'email2' => 'cerhamig21@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'PERALTA',
-               'cdocente' => '000232',
-               'fono1' => '8971542',
-               'fono2' => '3309075',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '572',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA TERESA',
@@ -9707,6 +6308,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3711111',
                'email1' => 'agarcia@ucss.edu.pe',
                'email2' => 'atgp2006@gmail.com',
+               'user_id' => '573',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL FRANCISCO',
@@ -9717,6 +6319,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3651807',
                'email1' => 'rgarcia@ucss.edu.pe',
                'email2' => 'rfgarciaregal@terra.com.pe',
+               'user_id' => '574',
           ]);
           DataUser::create([
                'wdoc1' => 'KARINA LISSETT',
@@ -9727,6 +6330,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'kgarcia@ucss.edu.pe',
                'email2' => 'nolose@hotmail.com',
+               'user_id' => '575',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL',
@@ -9737,6 +6341,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5411080',
                'email1' => 'mgarcia@ucss.edu.pe',
                'email2' => 'miguelgarcia@hotmail.com',
+               'user_id' => '576',
           ]);
           DataUser::create([
                'wdoc1' => 'VIDAL SATURNINO',
@@ -9747,6 +6352,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3271786',
                'email1' => 'vgarcia@ucss.edu.pe',
                'email2' => 'vidalcarpediem@hotmail.com',
+               'user_id' => '577',
           ]);
           DataUser::create([
                'wdoc1' => 'YRMA DORIS',
@@ -9757,6 +6363,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5372473',
                'email1' => 'ygarcia@ucss.edu.pe',
                'email2' => 'yrmagarcia60@yahoo.es',
+               'user_id' => '578',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS',
@@ -9767,6 +6374,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgarciar@ucss.edu.pe',
                'email2' => 'jesus-gr@hotmail.com',
+               'user_id' => '579',
           ]);
           DataUser::create([
                'wdoc1' => 'GILMER HERNANDO',
@@ -9777,36 +6385,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ghgarcia@ucss.edu.pe',
                'email2' => 'icatarma@hotmail.com',
+               'user_id' => '580',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ENRIQUE',
                'wdoc2' => 'GARCIA',
-               'wdoc3' => 'SALDAÑA',
+               'wdoc3' => 'SALDAÃ‘A',
                'cdocente' => '002424',
                'fono1' => '945411434',
                'fono2' => '',
                'email1' => 'cgarcias@ucss.edu.pe',
                'email2' => 'garcia_11146@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PERCY',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '000920',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS EMILIO',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'SANDOVAL',
-               'cdocente' => '000486',
-               'fono1' => '8094198',
-               'fono2' => '4613327',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '581',
           ]);
           DataUser::create([
                'wdoc1' => 'MARITZA GIOVANA',
@@ -9817,6 +6407,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mggarcia@ucss.edu.pe',
                'email2' => 'giovags@yahoo.es',
+               'user_id' => '582',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ABEL',
@@ -9827,16 +6418,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2649077',
                'email1' => 'jagarcia@ucss.edu.pe',
                'email2' => 'JGARCIAUCSS@YAHOO.ES',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE ERNESTO',
-               'wdoc2' => 'GARCIA',
-               'wdoc3' => 'VELA',
-               'cdocente' => '001597',
-               'fono1' => '942861248',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jgarcia@hotmail.com',
+               'user_id' => '583',
           ]);
           DataUser::create([
                'wdoc1' => 'RENZO MARTIN',
@@ -9847,6 +6429,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5402481',
                'email1' => 'rgarciav@ucss.edu.pe',
                'email2' => 'rgarciavergara2@hotmail.com',
+               'user_id' => '584',
           ]);
           DataUser::create([
                'wdoc1' => 'GLADYS HORTENCIA',
@@ -9857,36 +6440,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5410278',
                'email1' => 'ggarcia@ucss.edu.pe',
                'email2' => 'gvgladys2004@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERTO',
-               'wdoc2' => 'GARELLI',
-               'wdoc3' => '',
-               'cdocente' => '002383',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE',
-               'wdoc2' => 'GARMA',
-               'wdoc3' => 'MALPARTRIDA',
-               'cdocente' => '002160',
-               'fono1' => '967666200',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'garma500@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAFAEL GERMAN',
-               'wdoc2' => 'GARRIDO',
-               'wdoc3' => 'POMAJAMBO',
-               'cdocente' => '000026',
-               'fono1' => '',
-               'fono2' => '5414246',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '585',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLY',
@@ -9897,26 +6451,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4851214',
                'email1' => 'wgastello@ucss.edu.pe',
                'email2' => 'willygastello@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUSTINO',
-               'wdoc2' => 'GENG',
-               'wdoc3' => 'MONTALVAN',
-               'cdocente' => '002395',
-               'fono1' => '964470640',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jgengm@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARJORIE GISELLY',
-               'wdoc2' => 'GIL',
-               'wdoc3' => 'ROQUE',
-               'cdocente' => '000874',
-               'fono1' => '999999999',
-               'fono2' => '5555555',
-               'email1' => '',
-               'email2' => 'gr_0280@hotmail.com',
+               'user_id' => '586',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR ANTONIO',
@@ -9927,6 +6462,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hgil@ucss.edu.pe',
                'email2' => 'antoniogils@yahoo.es',
+               'user_id' => '587',
           ]);
           DataUser::create([
                'wdoc1' => 'MONICA ROCIO',
@@ -9937,26 +6473,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4672406',
                'email1' => 'mgiron@ucss.edu.pe',
                'email2' => 'rociogirone@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA',
-               'wdoc2' => 'GITTO',
-               'wdoc3' => 'LA SPADA',
-               'cdocente' => '000159',
-               'fono1' => '7260238',
-               'fono2' => '2249403',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '588',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD ARMANDO',
                'wdoc2' => 'GOGIN',
-               'wdoc3' => 'CARREÑO',
+               'wdoc3' => 'CARREÃ‘O',
                'cdocente' => '000350',
                'fono1' => '9678123',
                'fono2' => '5255524',
                'email1' => 'rgogin@ucss.edu.pe',
                'email2' => 'rgogin@hotmail.com',
+               'user_id' => '589',
           ]);
           DataUser::create([
                'wdoc1' => 'CLARA ROSIO',
@@ -9967,6 +6495,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4584517',
                'email1' => 'cgomero@ucss.edu.pe',
                'email2' => 'rosigomero@yahoo.com',
+               'user_id' => '590',
           ]);
           DataUser::create([
                'wdoc1' => 'HEMER ANUNCIACION',
@@ -9977,36 +6506,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4308305',
                'email1' => 'hgomero@ucss.edu.pe',
                'email2' => 'hemergomero@hotmail.com',
+               'user_id' => '591',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS MARTIN CARLOS',
                'wdoc2' => 'GOMEZ',
-               'wdoc3' => 'ACUÑA',
+               'wdoc3' => 'ACUÃ‘A',
                'cdocente' => '001180',
                'fono1' => '',
                'fono2' => '4238698',
                'email1' => 'lgomez@ucss.edu.pe',
                'email2' => 'lugomezzi@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GISELA ELIZABETH',
-               'wdoc2' => 'GOMEZ',
-               'wdoc3' => 'AVELLANEDA',
-               'cdocente' => '002801',
-               'fono1' => '993801382',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'giselanutricionista@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALLEN PATRICK',
-               'wdoc2' => 'GOMEZ',
-               'wdoc3' => 'CARRERA',
-               'cdocente' => '001843',
-               'fono1' => '956406764',
-               'fono2' => '508418',
-               'email1' => '',
-               'email2' => 'allengomez84@gmail.com',
+               'user_id' => '592',
           ]);
           DataUser::create([
                'wdoc1' => 'GILMER',
@@ -10017,36 +6528,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ggomez@ucss.edu.pe',
                'email2' => 'yilghon@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGEL GUILLERMO',
-               'wdoc2' => 'GOMEZ',
-               'wdoc3' => 'NAVARRO',
-               'cdocente' => '002745',
-               'fono1' => '996163126',
-               'fono2' => '3253330',
-               'email1' => '',
-               'email2' => 'agomezn@pucp.pe',
+               'user_id' => '593',
           ]);
           DataUser::create([
                'wdoc1' => 'DANILO',
                'wdoc2' => 'GOMEZ',
-               'wdoc3' => 'PEÑAHERRERA',
+               'wdoc3' => 'PEÃ‘AHERRERA',
                'cdocente' => '001129',
                'fono1' => '998058573',
                'fono2' => '7824619',
                'email1' => 'dgomez@ucss.edu.pe',
                'email2' => 'danilo.gomez@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ARMANDO',
-               'wdoc2' => 'GOMEZ',
-               'wdoc3' => 'VICTOR',
-               'cdocente' => '000903',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '594',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA NELLY',
@@ -10057,6 +6550,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2502259',
                'email1' => 'mgonzaga@ucss.edu.pe',
                'email2' => 'marytaborbor@hotmail.com',
+               'user_id' => '595',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEXANDER',
@@ -10067,6 +6561,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '520111',
                'email1' => 'agonzalesa@ucss.edu.pe',
                'email2' => 'nirvalez80@hotmail.com',
+               'user_id' => '596',
           ]);
           DataUser::create([
                'wdoc1' => 'ENRIQUE MIRKO',
@@ -10077,6 +6572,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4853949',
                'email1' => 'egonzalez@ucss.edu.pe',
                'email2' => 'mirko.gonzales@gmail.com',
+               'user_id' => '597',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS  OMAR',
@@ -10087,6 +6583,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4853949',
                'email1' => 'lgonzales@ucss.edu.pe',
                'email2' => 'omarc037@hotmail.com',
+               'user_id' => '598',
           ]);
           DataUser::create([
                'wdoc1' => 'RODRIGO',
@@ -10097,6 +6594,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rsgonzales@ucss.edu.pe',
                'email2' => 'rodrigo.gonzalesb@cip.org.pe',
+               'user_id' => '599',
           ]);
           DataUser::create([
                'wdoc1' => 'FREDY ABELARDO',
@@ -10107,6 +6605,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2429703',
                'email1' => 'fgonzales@ucss.edu.pe',
                'email2' => 'fredygcalle@hotmail.com',
+               'user_id' => '600',
           ]);
           DataUser::create([
                'wdoc1' => 'VERONICA JANET',
@@ -10117,16 +6616,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5403098',
                'email1' => 'vgonzales@ucss.edu.pe',
                'email2' => 'veronica.gonzales.c@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANIEL',
-               'wdoc2' => 'GONZALES',
-               'wdoc3' => 'CHU',
-               'cdocente' => '002482',
-               'fono1' => '997369318',
-               'fono2' => '3460593',
-               'email1' => '',
-               'email2' => 'degonzaleschu@hotmail.com',
+               'user_id' => '601',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA DE LOS MILAGROS',
@@ -10137,6 +6627,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ngonzales@ucss.edu.pe',
                'email2' => 'MILYSTAR14@hotmail.com',
+               'user_id' => '602',
           ]);
           DataUser::create([
                'wdoc1' => 'JUSTO VIRGILIO',
@@ -10147,6 +6638,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2630279',
                'email1' => 'jvgonzales@ucss.edu.pe',
                'email2' => 'justovirgilio@gmail.com',
+               'user_id' => '603',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO CESAR',
@@ -10157,26 +6649,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgonzalesc@ucss.edu.pe',
                'email2' => 'jcgonzalesc1980@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROCIO MERCEDES',
-               'wdoc2' => 'GONZALES',
-               'wdoc3' => 'ESTRELLA',
-               'cdocente' => '002726',
-               'fono1' => '983260918',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rocio.gonzales.estrella@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CLARIBEL',
-               'wdoc2' => 'GONZALES',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '001839',
-               'fono1' => '947441222',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'pscgonzales@outlook.com',
+               'user_id' => '604',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEJANDRO LORENZO',
@@ -10187,6 +6660,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330227',
                'email1' => 'agonzales@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '605',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO ROSS',
@@ -10197,6 +6671,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pgonzalesg@ucss.edu.pe',
                'email2' => 'pablor_gonzalesg@yahoo.com',
+               'user_id' => '606',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE SMITH',
@@ -10207,6 +6682,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgonzalesh@ucss.edu.pe',
                'email2' => 'josesmithg25@gmail.com',
+               'user_id' => '607',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD VLADIMIR',
@@ -10217,6 +6693,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5826732',
                'email1' => 'rgonzalesm@ucss.edu.pe',
                'email2' => 'plandtesis@gmail.com',
+               'user_id' => '608',
           ]);
           DataUser::create([
                'wdoc1' => 'JHOSEP GUSTAVO',
@@ -10227,6 +6704,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgonzalesm@ucss.edu.pe',
                'email2' => 'jhosepgonzalesmore@gmail.com',
+               'user_id' => '609',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSSELYNE DENISE',
@@ -10237,6 +6715,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330187',
                'email1' => 'jgonzales@ucss.edu.pe',
                'email2' => 'noexiste@hotmail.com',
+               'user_id' => '610',
           ]);
           DataUser::create([
                'wdoc1' => 'RIGOBERTO',
@@ -10247,6 +6726,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '344439',
                'email1' => 'rgonzalesp@ucss.edu.pe',
                'email2' => 'rigogon@hotmail.com',
+               'user_id' => '611',
           ]);
           DataUser::create([
                'wdoc1' => 'HUMBERTO FERNANDO',
@@ -10257,6 +6737,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hgonzales@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '612',
           ]);
           DataUser::create([
                'wdoc1' => 'GAMANIEL DOMINGO',
@@ -10267,6 +6748,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2110950',
                'email1' => 'ggonzales@ucss.edu.pe',
                'email2' => 'gogamaniel@gmail.com',
+               'user_id' => '613',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR RAUL',
@@ -10277,16 +6759,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vgonzalest@ucss.edu.pe',
                'email2' => 'amachay.lex.gonzales@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCIAL',
-               'wdoc2' => 'GONZALEZ',
-               'wdoc3' => 'CACHO',
-               'cdocente' => '000321',
-               'fono1' => '995416759',
-               'fono2' => '5334230',
-               'email1' => '',
-               'email2' => 'mgonzalezcacho@yahoo.es',
+               'user_id' => '614',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA EUGENIA',
@@ -10297,6 +6770,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6556012',
                'email1' => 'megonzalez@ucss.edu.pe',
                'email2' => 'megbaha@yahoo.com',
+               'user_id' => '615',
           ]);
           DataUser::create([
                'wdoc1' => 'OMAR ALFREDO',
@@ -10307,6 +6781,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2655369',
                'email1' => 'ogonzalez@ucss.edu.pe',
                'email2' => 'omi4@hotmail.com',
+               'user_id' => '616',
           ]);
           DataUser::create([
                'wdoc1' => 'MODESTA MARIA ADELA',
@@ -10317,26 +6792,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6262943',
                'email1' => 'mogonzalez@ucss.edu.pe',
                'email2' => 'mgonzalez@cidir.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NIRIA MARLENY',
-               'wdoc2' => 'GOÑI',
-               'wdoc3' => 'AVILA',
-               'cdocente' => '002002',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ENRIQUE GINO',
-               'wdoc2' => 'GORDILLO',
-               'wdoc3' => 'CISNEROS',
-               'cdocente' => '000653',
-               'fono1' => '997246054',
-               'fono2' => '4208747',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '617',
           ]);
           DataUser::create([
                'wdoc1' => 'MARLENE ESTHER',
@@ -10347,6 +6803,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mgoyburu@ucss.edu.pe',
                'email2' => 'megoyburu@yahoo.com',
+               'user_id' => '618',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -10357,26 +6814,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5673824',
                'email1' => 'mgrados@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANA MARIA',
-               'wdoc2' => 'GRADOS',
-               'wdoc3' => 'FUERTES',
-               'cdocente' => '002175',
-               'fono1' => '996409660',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ANAGRADOS28@HOTMAIL.COM',
+               'user_id' => '619',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS WILFREDO',
                'wdoc2' => 'GRADOS',
-               'wdoc3' => 'MAGUIÑA',
+               'wdoc3' => 'MAGUIÃ‘A',
                'cdocente' => '002100',
                'fono1' => '970950805',
                'fono2' => '3633806',
                'email1' => 'cgrados@ucss.edu.pe',
                'email2' => 'carlosgradosm@gmail.com',
+               'user_id' => '620',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR FERNANDO',
@@ -10387,16 +6836,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vgrados@ucss.edu.pe',
                'email2' => 'gradosvictor@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LISER',
-               'wdoc2' => 'GRANDEZ',
-               'wdoc3' => 'BARDALES',
-               'cdocente' => '001222',
-               'fono1' => '111111111',
-               'fono2' => '111111',
-               'email1' => '',
-               'email2' => 'lisergra@hotmail.com',
+               'user_id' => '621',
           ]);
           DataUser::create([
                'wdoc1' => 'AUGUSTO MARINO',
@@ -10407,16 +6847,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4256320',
                'email1' => 'agrandez@ucss.edu.pe',
                'email2' => 'aumagrapo@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BLANCA CECILIA',
-               'wdoc2' => 'GUADALUPE',
-               'wdoc3' => 'GUERRERO',
-               'cdocente' => '000109',
-               'fono1' => '9655590',
-               'fono2' => '3723563',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '622',
           ]);
           DataUser::create([
                'wdoc1' => 'JUDITH ELENA',
@@ -10427,16 +6858,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5748857',
                'email1' => 'jguanilo@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ERIKA KARIM',
-               'wdoc2' => 'GUARNIZ',
-               'wdoc3' => 'RODRIGUEZ',
-               'cdocente' => '000327',
-               'fono1' => '8551720',
-               'fono2' => '7912436',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '623',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO NESTOR',
@@ -10447,46 +6869,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fguerra@ucss.edu.pe',
                'email2' => 'ferguerral@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILHELM VLADIMIR',
-               'wdoc2' => 'GUERRA',
-               'wdoc3' => 'CONDOR',
-               'cdocente' => '001807',
-               'fono1' => '976085958',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'willvgc@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LEONCIO',
-               'wdoc2' => 'GUERRA',
-               'wdoc3' => 'GUERRA',
-               'cdocente' => '000257',
-               'fono1' => '9616729',
-               'fono2' => '9616729',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DINA LILIANA',
-               'wdoc2' => 'GUERRA',
-               'wdoc3' => 'HILARES',
-               'cdocente' => '001443',
-               'fono1' => '978927760',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hidili@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGEL',
-               'wdoc2' => 'GUERRERO',
-               'wdoc3' => 'EDQUEN',
-               'cdocente' => '001549',
-               'fono1' => '962924794',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gales17@hotmail.com',
+               'user_id' => '624',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -10497,6 +6880,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jguerrero@ucss.edu.pe',
                'email2' => 'jorgeluis_1204@hotmail.com',
+               'user_id' => '625',
           ]);
           DataUser::create([
                'wdoc1' => 'CASTINALDO BALDOMERO',
@@ -10507,36 +6891,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cguerrero@ucss.edu.pe',
                'email2' => 'castygm@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VILMA FAUSTA',
-               'wdoc2' => 'GUERRERO',
-               'wdoc3' => 'ZAVALA',
-               'cdocente' => '000864',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE TITONERI',
-               'wdoc2' => 'GUEVARA',
-               'wdoc3' => 'DELGADO',
-               'cdocente' => '002040',
-               'fono1' => '942824509',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'josdel_777@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DORA LUZ',
-               'wdoc2' => 'GUEVARA',
-               'wdoc3' => 'GALARZA',
-               'cdocente' => '002573',
-               'fono1' => '986400577',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'dguevara60@hotmail.es',
+               'user_id' => '626',
           ]);
           DataUser::create([
                'wdoc1' => 'HERLINDA ESTELA',
@@ -10547,56 +6902,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4719710',
                'email1' => 'hguevara@ucss.edu.pe',
                'email2' => 'herlindag53@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ISABEL',
-               'wdoc2' => 'GUEVARA',
-               'wdoc3' => 'PRECIADO',
-               'cdocente' => '002481',
-               'fono1' => '945093690',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'maisaquevara84@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NELSON ALFREDO',
-               'wdoc2' => 'GUEVARA',
-               'wdoc3' => 'VELEZ',
-               'cdocente' => '001493',
-               'fono1' => '966557322',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'nelguevara_27@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS CARLOS',
-               'wdoc2' => 'GUEVARA',
-               'wdoc3' => 'VILA',
-               'cdocente' => '001680',
-               'fono1' => '979777722',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yerovig@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO',
-               'wdoc2' => 'GUILLENA',
-               'wdoc3' => 'BARDALES',
-               'cdocente' => '000900',
-               'fono1' => '725217',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JONATHAN RICARDO',
-               'wdoc2' => 'GUIMET',
-               'wdoc3' => 'RASMUSSEN',
-               'cdocente' => '001885',
-               'fono1' => '989967873',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'profeguimet@hotmail.com',
+               'user_id' => '627',
           ]);
           DataUser::create([
                'wdoc1' => 'GEORGE KENNETH',
@@ -10607,6 +6913,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '702676',
                'email1' => 'gguisano@ucss.edu.pe',
                'email2' => 'gguisano@yahoo.com',
+               'user_id' => '628',
           ]);
           DataUser::create([
                'wdoc1' => 'GERMAN JHONEL',
@@ -10617,16 +6924,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ggupioc@ucss.edu.pe',
                'email2' => 'gjhonel@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IRENE',
-               'wdoc2' => 'GUTARRA',
-               'wdoc3' => 'GUTARRA',
-               'cdocente' => '002299',
-               'fono1' => '998740199',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'iregutarra@gmail.com',
+               'user_id' => '629',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ YOLANDA',
@@ -10637,6 +6935,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7927352',
                'email1' => 'ygutierrez@ucss.edu.pe',
                'email2' => 'luz_gutierrez_ascarza@hotmail.com',
+               'user_id' => '630',
           ]);
           DataUser::create([
                'wdoc1' => 'DORIS EDITH',
@@ -10647,6 +6946,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7927352',
                'email1' => 'dgutierrez@ucss.edu.pe',
                'email2' => 'dorisgutierrezazcarza@hotmail.com',
+               'user_id' => '631',
           ]);
           DataUser::create([
                'wdoc1' => 'SILVIA',
@@ -10657,16 +6957,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sgutierrez@ucss.edu.pe',
                'email2' => 'apanteles720@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KARIN MAGALI',
-               'wdoc2' => 'GUTIERREZ',
-               'wdoc3' => 'ESPINOLA',
-               'cdocente' => '001652',
-               'fono1' => '971825094',
-               'fono2' => '5363599',
-               'email1' => '',
-               'email2' => 'karinguti13@gmail.com',
+               'user_id' => '632',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSEPH CRISTHIAN',
@@ -10677,6 +6968,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jgutierrezm@ucss.edu.pe',
                'email2' => 'gutierrezcpc@gmail.com',
+               'user_id' => '633',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ MARLENE',
@@ -10687,6 +6979,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330202',
                'email1' => 'lgutierrez@ucss.edu.pe',
                'email2' => 'carapachos@yahoo.com',
+               'user_id' => '634',
           ]);
           DataUser::create([
                'wdoc1' => 'JUSTINIANO',
@@ -10697,16 +6990,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5754250',
                'email1' => 'jgutierrez@ucss.edu.pe',
                'email2' => 'jguti16@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSE MARY',
-               'wdoc2' => 'GUTIERREZ',
-               'wdoc3' => 'QUEQUEZANA',
-               'cdocente' => '001741',
-               'fono1' => '959416009',
-               'fono2' => '4377938',
-               'email1' => '',
-               'email2' => 'rosemarygutque@gmail.com',
+               'user_id' => '635',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS AUGUSTO',
@@ -10717,6 +7001,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lagutierrez@ucss.edu.pe',
                'email2' => 'lgutierrez333@yahoo.es',
+               'user_id' => '636',
           ]);
           DataUser::create([
                'wdoc1' => 'ASTRID DOMY',
@@ -10727,36 +7012,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'agutierrezr@ucss.edu.pe',
                'email2' => 'astridomy@gmail.com',
+               'user_id' => '637',
           ]);
           DataUser::create([
                'wdoc1' => 'BRIGIDA CAROLINA',
                'wdoc2' => 'GUTIERREZ',
-               'wdoc3' => 'ZUÑIGA',
+               'wdoc3' => 'ZUÃ‘IGA',
                'cdocente' => '001837',
                'fono1' => '940921169',
                'fono2' => '',
                'email1' => 'bgutierrez@ucss.edu.pe',
                'email2' => 'caritogz_71@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDER',
-               'wdoc2' => 'GUZMAN',
-               'wdoc3' => 'CRUZ',
-               'cdocente' => '002261',
-               'fono1' => '992978368',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ederguzman1986@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DORIS GIOCONDA',
-               'wdoc2' => 'GUZMAN',
-               'wdoc3' => 'SOTO',
-               'cdocente' => '002292',
-               'fono1' => '962915554',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'dorisguz7@gmail.com',
+               'user_id' => '638',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS MARCELINO',
@@ -10767,16 +7034,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7686177',
                'email1' => 'cguzman@ucss.edu.pe',
                'email2' => 'guzmantenazoa@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANA',
-               'wdoc2' => 'HENSHAW',
-               'wdoc3' => '.',
-               'cdocente' => '000354',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '639',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR EDUARDO',
@@ -10787,6 +7045,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5390214',
                'email1' => 'vhernandez@ucss.edu.pe',
                'email2' => 'veha120@hotmail.com',
+               'user_id' => '640',
           ]);
           DataUser::create([
                'wdoc1' => 'PILLY YENIFER',
@@ -10797,6 +7056,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'phernandez@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '641',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIAS ROBESPIERRE',
@@ -10807,6 +7067,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '671835',
                'email1' => 'ehernandez@ucss.edu.pe',
                'email2' => 'elspierre9@hotmail.com',
+               'user_id' => '642',
           ]);
           DataUser::create([
                'wdoc1' => 'LUQUE GUSMAN',
@@ -10817,6 +7078,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lhernandez@ucss.edu.pe',
                'email2' => 'luquehernandez@hotmail.com',
+               'user_id' => '643',
           ]);
           DataUser::create([
                'wdoc1' => 'GIOVANA LOURDES',
@@ -10827,6 +7089,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4242799',
                'email1' => 'ghernandez@ucss.edu.pe',
                'email2' => 'gioviher@hotmail.com',
+               'user_id' => '644',
           ]);
           DataUser::create([
                'wdoc1' => 'ERICK BRANDUZ',
@@ -10837,6 +7100,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ebhernandez@ucss.edu.pe',
                'email2' => 'branduz_007@hotmail.com',
+               'user_id' => '645',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ANDRES',
@@ -10847,6 +7111,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4729268',
                'email1' => 'chernando@ucss.edu.pe',
                'email2' => 'chernandocastro@yahoo.es',
+               'user_id' => '646',
           ]);
           DataUser::create([
                'wdoc1' => 'RENAN ALBERTO',
@@ -10857,6 +7122,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2501103',
                'email1' => 'rherrerac@ucss.edu.pe',
                'email2' => 'renanherrera80@gmail.com',
+               'user_id' => '647',
           ]);
           DataUser::create([
                'wdoc1' => 'SANTOS CLEMENTE',
@@ -10867,6 +7133,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'sherrera@ucss.edu.pe',
                'email2' => 'herreradiaz27@hotmail.com',
+               'user_id' => '648',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR MANUEL',
@@ -10877,36 +7144,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vherrera@ucss.edu.pe',
                'email2' => 'vherrerapastor@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MAHLY',
-               'wdoc2' => 'HERRERA',
-               'wdoc3' => 'QUISPE',
-               'cdocente' => '001529',
-               'fono1' => '969342160',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mahly.herrera@cip.org.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ANTONIO',
-               'wdoc2' => 'HERRERA',
-               'wdoc3' => 'ROQUE',
-               'cdocente' => '002191',
-               'fono1' => '950834587',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hrcamgpds@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE LUIS',
-               'wdoc2' => 'HERRERA',
-               'wdoc3' => 'SALAZAR',
-               'cdocente' => '000988',
-               'fono1' => '988475097',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jose210281@hotmail.com',
+               'user_id' => '649',
           ]);
           DataUser::create([
                'wdoc1' => 'JOFRRE EDWIN',
@@ -10917,6 +7155,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4593805',
                'email1' => 'jherreras@ucss.edu.pe',
                'email2' => 'herrerasanchez001@hotmail.com',
+               'user_id' => '650',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA VANESA',
@@ -10927,16 +7166,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ahervias@ucss.edu.pe',
                'email2' => 'annie_viashero7@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KAREN ELIZABETH',
-               'wdoc2' => 'HICKSON',
-               'wdoc3' => 'H',
-               'cdocente' => '000295',
-               'fono1' => '',
-               'fono2' => '5622003',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '651',
           ]);
           DataUser::create([
                'wdoc1' => 'ALFONSO GREGORIO',
@@ -10947,16 +7177,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '321245',
                'email1' => 'ahidalgo@ucss.edu.pe',
                'email2' => 'alfonsohidalgog@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAFAEL',
-               'wdoc2' => 'HIDALGO',
-               'wdoc3' => 'VALDA',
-               'cdocente' => '000234',
-               'fono1' => '',
-               'fono2' => '2612571',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '652',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIA MARCELA',
@@ -10967,6 +7188,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jhilario@ucss.edu.pe',
                'email2' => 'hilariomarcela@hotmail.com',
+               'user_id' => '653',
           ]);
           DataUser::create([
                'wdoc1' => 'PERCY ANGEL',
@@ -10977,6 +7199,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'phinostroza@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '654',
           ]);
           DataUser::create([
                'wdoc1' => 'SARA MARISOL',
@@ -10987,16 +7210,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6215583',
                'email1' => 'shonorio@ucss.edu.pe',
                'email2' => 'saramarisol2003@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS TARKER',
-               'wdoc2' => 'HUACACHI',
-               'wdoc3' => 'CORONADO',
-               'cdocente' => '002265',
-               'fono1' => '999621575',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luistarker@gmail.com',
+               'user_id' => '655',
           ]);
           DataUser::create([
                'wdoc1' => 'RUBEN DARIO',
@@ -11007,26 +7221,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rhuallanca@ucss.edu.pe',
                'email2' => 'rdhuallanca@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BETHSABE',
-               'wdoc2' => 'HUAMAN',
-               'wdoc3' => 'ANDIA',
-               'cdocente' => '000345',
-               'fono1' => '8522894',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELENA CATALINA',
-               'wdoc2' => 'HUAMAN',
-               'wdoc3' => 'ARROYO',
-               'cdocente' => '002279',
-               'fono1' => '969050968',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'HELEN_20_2@HOTMAIL.COM',
+               'user_id' => '656',
           ]);
           DataUser::create([
                'wdoc1' => 'EDILBERTO',
@@ -11037,6 +7232,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4953026',
                'email1' => 'ehuaman@ucss.edu.pe',
                'email2' => 'edhu24@hotmail.com',
+               'user_id' => '657',
           ]);
           DataUser::create([
                'wdoc1' => 'EVER',
@@ -11047,6 +7243,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ehuamanc@ucss.edu.pe',
                'email2' => 'everhc04@yahoo.es',
+               'user_id' => '658',
           ]);
           DataUser::create([
                'wdoc1' => 'RICHARD WILLY',
@@ -11057,16 +7254,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5434163',
                'email1' => 'rhuaman@ucss.edu.pe',
                'email2' => 'richardhc77@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NORMA GENNY',
-               'wdoc2' => 'HUAMAN',
-               'wdoc3' => 'CHUQUIYURE',
-               'cdocente' => '002436',
-               'fono1' => '988386320',
-               'fono2' => '2763568',
-               'email1' => '',
-               'email2' => 'genyamiga@gmail.com',
+               'user_id' => '659',
           ]);
           DataUser::create([
                'wdoc1' => 'IRMA CONSUELO',
@@ -11077,16 +7265,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ihuaman@ucss.edu.pe',
                'email2' => 'irmaugel02@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS GUSTAVO',
-               'wdoc2' => 'HUAMAN',
-               'wdoc3' => 'DE LA TORRE',
-               'cdocente' => '002479',
-               'fono1' => '988881210',
-               'fono2' => '238178',
-               'email1' => '',
-               'email2' => 'carlitosghdlt1@gmail.com',
+               'user_id' => '660',
           ]);
           DataUser::create([
                'wdoc1' => 'LEONARDO OMAR',
@@ -11097,6 +7276,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lhuaman@ucss.edu.pe',
                'email2' => 'omarhuamanespinoza@gmail.com',
+               'user_id' => '661',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MANUEL',
@@ -11107,6 +7287,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jhuaman@ucss.edu.pe',
                'email2' => 'JOSE_HUAMAN_123@HOTMAIL.COM',
+               'user_id' => '662',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR GUSTAVO',
@@ -11117,26 +7298,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ohuaman@ucss.edu.pe',
                'email2' => 'oscarhuaman@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YANDERY JANENT',
-               'wdoc2' => 'HUAMAN',
-               'wdoc3' => 'LEON',
-               'cdocente' => '002792',
-               'fono1' => '941950403',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'anyldre@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO',
-               'wdoc2' => 'HUAMAN',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '000075',
-               'fono1' => '7391504',
-               'fono2' => '4523093',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '663',
           ]);
           DataUser::create([
                'wdoc1' => 'SARA PATRICIA',
@@ -11147,16 +7309,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'shuaman@ucss.edu.pe',
                'email2' => 'patty_1184@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDO FIDEL',
-               'wdoc2' => 'HUAMAN',
-               'wdoc3' => 'ZUÑIGA',
-               'cdocente' => '002756',
-               'fono1' => '999634511',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ricardohuaman@pucp.pe',
+               'user_id' => '664',
           ]);
           DataUser::create([
                'wdoc1' => 'DIANA LUCILA',
@@ -11167,26 +7320,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dhuamani@ucss.edu.pe',
                'email2' => 'diana.hab6@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ARCADIO ELIAS',
-               'wdoc2' => 'HUAMANI',
-               'wdoc3' => 'GODOY',
-               'cdocente' => '001578',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'arcadio_e_h_g@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RONY',
-               'wdoc2' => 'HUANCA',
-               'wdoc3' => 'SARMIENTO',
-               'cdocente' => '002168',
-               'fono1' => '998427982',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ronyhuancas@gmail.com',
+               'user_id' => '665',
           ]);
           DataUser::create([
                'wdoc1' => 'URSULA IDALINA',
@@ -11197,36 +7331,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4832453',
                'email1' => 'uhuancas@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDITH MARINA',
-               'wdoc2' => 'HUANCAYA',
-               'wdoc3' => 'PIZARRO',
-               'cdocente' => '002260',
-               'fono1' => '949831097',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'edithmarina7@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ABED DUILIO',
-               'wdoc2' => 'HUANIO',
-               'wdoc3' => 'VALDERRAMA',
-               'cdocente' => '001230',
-               'fono1' => '961635900',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'leoduque19@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELIZABETH DELFINA',
-               'wdoc2' => 'HUANUCO',
-               'wdoc3' => 'GASPAR',
-               'cdocente' => '002257',
-               'fono1' => '964919939',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elihgprof1@hotmail.com',
+               'user_id' => '666',
           ]);
           DataUser::create([
                'wdoc1' => 'CAROLINA STEFANY',
@@ -11237,6 +7342,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'chuapaya@ucss.edu.pe',
                'email2' => 'carolinahuapaya@hotmail.com',
+               'user_id' => '667',
           ]);
           DataUser::create([
                'wdoc1' => 'RICHARD JOAO',
@@ -11247,6 +7353,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rhuapaya@ucss.edu.pe',
                'email2' => 'rhp1520@gmail.com',
+               'user_id' => '668',
           ]);
           DataUser::create([
                'wdoc1' => 'MARINA URGANDA REYNA',
@@ -11257,6 +7364,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mrhuapaya@ucss.edu.pe',
                'email2' => 'rhuapaya12@gmail.com',
+               'user_id' => '669',
           ]);
           DataUser::create([
                'wdoc1' => 'JHONNY ANGEL',
@@ -11267,6 +7375,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jhuaroc@ucss.edu.pe',
                'email2' => 'oasisjhs@hotmail.com',
+               'user_id' => '670',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS TARDELLI',
@@ -11277,26 +7386,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'chuaroco@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HELMER ALCIDES',
-               'wdoc2' => 'HUATUCO',
-               'wdoc3' => 'BUITRON',
-               'cdocente' => '000473',
-               'fono1' => '8524811',
-               'fono2' => '5346510',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIRIAM LUZ',
-               'wdoc2' => 'HUATUCO',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '002162',
-               'fono1' => '988969891',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ramirezhuatuco@hotmail.com',
+               'user_id' => '671',
           ]);
           DataUser::create([
                'wdoc1' => 'SERGIO ANGEL',
@@ -11307,16 +7397,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5404660',
                'email1' => 'shuatuco@ucss.edu.pe',
                'email2' => 'sergio672@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ANDRES',
-               'wdoc2' => 'HUAYANAY',
-               'wdoc3' => 'ESPINOZA',
-               'cdocente' => '001557',
-               'fono1' => '997915901',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'carlos.huayanay@upch.pe',
+               'user_id' => '672',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS',
@@ -11327,6 +7408,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'chuayanay@ucss.edu.pe',
                'email2' => 'carloshuayanaypantoja@hotmail.com',
+               'user_id' => '673',
           ]);
           DataUser::create([
                'wdoc1' => 'JHON',
@@ -11337,16 +7419,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jhuayhua@ucss.edu.pe',
                'email2' => 'jhuayhuab@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER JULIO',
-               'wdoc2' => 'HUAYLINOS',
-               'wdoc3' => 'VILLALVA',
-               'cdocente' => '001677',
-               'fono1' => '989169987',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wjvillalva@yahoo.es',
+               'user_id' => '674',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA LOURDES',
@@ -11357,6 +7430,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '317291',
                'email1' => 'mhuaynates@ucss.edu.pe',
                'email2' => 'malurhb@yahoo.es',
+               'user_id' => '675',
           ]);
           DataUser::create([
                'wdoc1' => 'NERIDA RENEE',
@@ -11367,6 +7441,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nhuaytalla@ucss.edu.pe',
                'email2' => 'reneehuco@hotmail.com',
+               'user_id' => '676',
           ]);
           DataUser::create([
                'wdoc1' => 'CANDELARIA',
@@ -11377,6 +7452,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'chuertas@ucss.edu.pe',
                'email2' => 'huertas02@hotmail.com',
+               'user_id' => '677',
           ]);
           DataUser::create([
                'wdoc1' => 'GUSTAVO ANTONIO',
@@ -11387,16 +7463,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4729469',
                'email1' => 'ghuertas@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HECTOR JESUS',
-               'wdoc2' => 'HUERTO',
-               'wdoc3' => 'VIZCARRA',
-               'cdocente' => '000715',
-               'fono1' => '993258125',
-               'fono2' => '4952552',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '678',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ALBERTO',
@@ -11407,16 +7474,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7738616',
                'email1' => 'jhuiman@ucss.edu.pe',
                'email2' => 'JHUIMANS@GMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSALIA MARILU',
-               'wdoc2' => 'HUMPERI',
-               'wdoc3' => 'CCOPA',
-               'cdocente' => '001598',
-               'fono1' => '985277698',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rosalia1169@gmail.com',
+               'user_id' => '679',
           ]);
           DataUser::create([
                'wdoc1' => 'PAULA',
@@ -11427,6 +7485,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6647688',
                'email1' => 'phurtado@ucss.edu.pe',
                'email2' => 'pauhurtado@gmail.com',
+               'user_id' => '680',
           ]);
           DataUser::create([
                'wdoc1' => 'ALBERTO ZACARIAS',
@@ -11437,16 +7496,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '201804',
                'email1' => 'ahurtado@ucss.edu.pe',
                'email2' => 'a_hurtado22@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PERCY',
-               'wdoc2' => 'HURTADO',
-               'wdoc3' => 'NORIEGA',
-               'cdocente' => '000229',
-               'fono1' => '9195882',
-               'fono2' => '2250900',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '681',
           ]);
           DataUser::create([
                'wdoc1' => 'CECIBEL SORAYA',
@@ -11457,26 +7507,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'churtado@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE FEDERICO',
-               'wdoc2' => 'IBAÑEZ',
-               'wdoc3' => 'VIZCARRA',
-               'cdocente' => '001055',
-               'fono1' => '951307678',
-               'fono2' => '4257834',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'STIVEN YONGLEN TIBERIO',
-               'wdoc2' => 'IBARRA',
-               'wdoc3' => 'SERNA',
-               'cdocente' => '002574',
-               'fono1' => '962601095',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yonglen7@hotmail.com',
+               'user_id' => '682',
           ]);
           DataUser::create([
                'wdoc1' => 'ROLANDO RAMIRO',
@@ -11487,6 +7518,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4602149',
                'email1' => 'riberico@ucss.edu.pe',
                'email2' => 'raepir.54@hotmail.com',
+               'user_id' => '683',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA ISABEL',
@@ -11497,6 +7529,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330366',
                'email1' => 'aigreda@ucss.edu.pe',
                'email2' => 'aigreda@yahoo.com',
+               'user_id' => '684',
           ]);
           DataUser::create([
                'wdoc1' => 'ISAAC ALBERTO',
@@ -11507,6 +7540,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7365892',
                'email1' => 'iiguia@ucss.edu.pe',
                'email2' => 'iguia.uni@gmail.com',
+               'user_id' => '685',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGHELA MIRELLA',
@@ -11517,6 +7551,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aiman@ucss.edu.pe',
                'email2' => 'anmi_25_168@hotmail.com',
+               'user_id' => '686',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO',
@@ -11527,6 +7562,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6510883',
                'email1' => 'finca@ucss.edu.pe',
                'email2' => 'f_inca@hotmail.com',
+               'user_id' => '687',
           ]);
           DataUser::create([
                'wdoc1' => 'GENARO',
@@ -11537,6 +7573,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2924456',
                'email1' => 'ginchicaqui@ucss.edu.pe',
                'email2' => 'gibingenier@hotmail.com',
+               'user_id' => '688',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL SERGIO',
@@ -11547,6 +7584,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6483788',
                'email1' => 'sinfante@ucss.edu.pe',
                'email2' => 'rsinfante@gmail.com',
+               'user_id' => '689',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO',
@@ -11557,6 +7595,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2615590',
                'email1' => 'einfantes@ucss.edu.pe',
                'email2' => 'eduinfantes@yahoo.com',
+               'user_id' => '690',
           ]);
           DataUser::create([
                'wdoc1' => 'JANET GABY',
@@ -11567,36 +7606,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jinga@ucss.edu.pe',
                'email2' => 'jgingag@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN',
-               'wdoc2' => 'INGA',
-               'wdoc3' => 'MARTINEZ',
-               'cdocente' => '000501',
-               'fono1' => '6853584',
-               'fono2' => '4941380',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDDY JESUS',
-               'wdoc2' => 'INGARUCA',
-               'wdoc3' => 'ORIHUELA',
-               'cdocente' => '002043',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RUTH',
-               'wdoc2' => 'INOCENCIO',
-               'wdoc3' => 'VARGAS',
-               'cdocente' => '002306',
-               'fono1' => '967657514',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ruthi_cielo@hotmail.com',
+               'user_id' => '691',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO CARLOS',
@@ -11607,16 +7617,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '9999999',
                'email1' => 'rinquilla@ucss.edu.pe',
                'email2' => 'rinquilla2002@gmail.com',
+               'user_id' => '692',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN MANUEL',
                'wdoc2' => 'IPANAQUE',
-               'wdoc3' => 'ROÑA',
+               'wdoc3' => 'ROÃ‘A',
                'cdocente' => '002146',
                'fono1' => '999841270',
                'fono2' => '',
                'email1' => 'jipanaque@ucss.edu.pe',
                'email2' => 'manuel_ipa@hotmail.com',
+               'user_id' => '693',
           ]);
           DataUser::create([
                'wdoc1' => 'RINA LIZ',
@@ -11627,6 +7639,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3546592',
                'email1' => 'riparraguirre@ucss.edu.pe',
                'email2' => 'rinalizim@hotmail.com',
+               'user_id' => '694',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -11637,6 +7650,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cirigoin@ucss.edu.pe',
                'email2' => 'fcirigoin@gmail.com',
+               'user_id' => '695',
           ]);
           DataUser::create([
                'wdoc1' => 'POUL MICHELL',
@@ -11647,6 +7661,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pizaguirre@ucss.edu.pe',
                'email2' => 'michellizaguirre@outlook.com',
+               'user_id' => '696',
           ]);
           DataUser::create([
                'wdoc1' => 'DENIS',
@@ -11657,26 +7672,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dizquierdo@ucss.edu.pe',
                'email2' => 'denis_sheccid@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DONY RAFAEL',
-               'wdoc2' => 'JAIME',
-               'wdoc3' => 'DE LA CRUZ',
-               'cdocente' => '001845',
-               'fono1' => '967985195',
-               'fono2' => '283691',
-               'email1' => '',
-               'email2' => 'danyjaime_3@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LOURDES CRUMENCIA',
-               'wdoc2' => 'JAIME',
-               'wdoc3' => 'MATOS',
-               'cdocente' => '002178',
-               'fono1' => '964671763',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lujama27@hotmail.com',
+               'user_id' => '697',
           ]);
           DataUser::create([
                'wdoc1' => 'FANNY ELENA',
@@ -11687,6 +7683,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2354700',
                'email1' => 'fjaime@ucss.edu.pe',
                'email2' => 'fjaimes20@hotmail.com',
+               'user_id' => '698',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -11697,6 +7694,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mjalanocca@ucss.edu.pe',
                'email2' => 'migueljm_121@hotmail.com',
+               'user_id' => '699',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS  RAFAEL',
@@ -11707,6 +7705,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5744147',
                'email1' => 'cjanampa@ucss.edu.pe',
                'email2' => 'carlos_uni2005@hotmail.com',
+               'user_id' => '700',
           ]);
           DataUser::create([
                'wdoc1' => 'IRMA VICTORIA',
@@ -11717,16 +7716,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5333409',
                'email1' => 'ijara@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE ALEX',
-               'wdoc2' => 'JARA',
-               'wdoc3' => 'CHIPARA',
-               'cdocente' => '001588',
-               'fono1' => '996678325',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jorgejarachipara@gmail.com',
+               'user_id' => '701',
           ]);
           DataUser::create([
                'wdoc1' => 'ELMER',
@@ -11737,6 +7727,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ejara@ucss.edu.pe',
                'email2' => 'elmerje@hotmail.com',
+               'user_id' => '702',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN REYNALDA',
@@ -11747,16 +7738,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '323733',
                'email1' => 'cjara@ucss.edu.pe',
                'email2' => 'reyna_jara@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BEATRIZ',
-               'wdoc2' => 'JARAMILLO',
-               'wdoc3' => 'COZ',
-               'cdocente' => '002291',
-               'fono1' => '988800474',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'betyjaracoz@gmail.com',
+               'user_id' => '703',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -11767,16 +7749,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330008',
                'email1' => 'cjaramillo@ucss.edu.pe',
                'email2' => 'seven25_10@hotmail.com',
+               'user_id' => '704',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO AMADEO',
                'wdoc2' => 'JARAMILLO',
-               'wdoc3' => 'SALDAÑA',
+               'wdoc3' => 'SALDAÃ‘A',
                'cdocente' => '000333',
                'fono1' => '999926246',
                'fono2' => '5335628',
                'email1' => 'fjaramillo@ucss.edu.pe',
                'email2' => 'ArTFyN@yahoo.es',
+               'user_id' => '705',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ANDRES',
@@ -11787,6 +7771,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2327210',
                'email1' => 'jjauregui@ucss.edu.pe',
                'email2' => 'andres2319@hotmail.com',
+               'user_id' => '706',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DEL ROSARIO',
@@ -11797,6 +7782,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4535621',
                'email1' => 'mjauregui@ucss.edu.pe',
                'email2' => 'mrjmorris64@hotmail.com',
+               'user_id' => '707',
           ]);
           DataUser::create([
                'wdoc1' => 'NAPOLEON',
@@ -11807,16 +7793,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'njauregui@ucss.edu.pe',
                'email2' => 'najano_l@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO MARTIN',
-               'wdoc2' => 'JAUREGUI',
-               'wdoc3' => 'PUERTAS',
-               'cdocente' => '002384',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'fernando.jauregui@yahoo.es',
+               'user_id' => '708',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ ALEXANDRA',
@@ -11827,26 +7804,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ljavier@ucss.edu.pe',
                'email2' => 'lualjasigeo@gimail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER ROLANDO',
-               'wdoc2' => 'JESUS',
-               'wdoc3' => 'TOLENTINO',
-               'cdocente' => '002300',
-               'fono1' => '954838922',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'WALTERJESUSTOLENTINO@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NENE',
-               'wdoc2' => 'JHARDENSON',
-               'wdoc3' => 'NASSI',
-               'cdocente' => '000318',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '709',
           ]);
           DataUser::create([
                'wdoc1' => 'OMAR ENRIQUE',
@@ -11857,6 +7815,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '630766',
                'email1' => 'ojibaja@ucss.edu.pe',
                'email2' => 'oejc84@hotmail.com',
+               'user_id' => '710',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANK EULER',
@@ -11867,6 +7826,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fjibaja@ucss.edu.pe',
                'email2' => 'frank_240486@hotmail.com',
+               'user_id' => '711',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN NEPOMUCENO',
@@ -11877,16 +7837,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '350613',
                'email1' => 'jnjimenez@ucss.edu.pe',
                'email2' => 'jjb216@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUSTAVO RUY',
-               'wdoc2' => 'JIMENEZ',
-               'wdoc3' => 'MENDOZA',
-               'cdocente' => '002762',
-               'fono1' => '956348756',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gustavojx@icloud.com',
+               'user_id' => '712',
           ]);
           DataUser::create([
                'wdoc1' => 'ENRIQUE',
@@ -11897,6 +7848,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2240638',
                'email1' => 'ejimenez@ucss.edu.pe',
                'email2' => 'cpc42462@ccpl.org.pe',
+               'user_id' => '713',
           ]);
           DataUser::create([
                'wdoc1' => 'ALBERTO JESUS',
@@ -11907,6 +7859,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4716211',
                'email1' => 'jjimenez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '714',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO JESUS',
@@ -11917,6 +7870,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2608463',
                'email1' => 'rjimenez@ucss.edu.pe',
                'email2' => 'ricardojv@gmail.com',
+               'user_id' => '715',
           ]);
           DataUser::create([
                'wdoc1' => 'KJERSTI',
@@ -11927,16 +7881,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '558071',
                'email1' => 'kjuep@ucss.edu.pe',
                'email2' => 'cris.juep24@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ISABEL',
-               'wdoc2' => 'JUGO',
-               'wdoc3' => 'CAIRO',
-               'cdocente' => '000503',
-               'fono1' => '5065481',
-               'fono2' => '4721791',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '716',
           ]);
           DataUser::create([
                'wdoc1' => 'ZENAIDA BLANDINA',
@@ -11947,16 +7892,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'zjuipa@ucss.edu.pe',
                'email2' => 'zenaidablandinajc@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LUIS',
-               'wdoc2' => 'JULCA',
-               'wdoc3' => 'CABANILLAS',
-               'cdocente' => '001615',
-               'fono1' => '954095084',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jorjul_14@hotmail.com',
+               'user_id' => '717',
           ]);
           DataUser::create([
                'wdoc1' => 'EVELYN',
@@ -11967,16 +7903,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ejulca@ucss.edu.pe',
                'email2' => 'evelynjulca2405@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SEGUNDO RONALD',
-               'wdoc2' => 'JULON',
-               'wdoc3' => 'TAPIA',
-               'cdocente' => '001698',
-               'fono1' => '984548420',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ronald.julon@hotmail.com',
+               'user_id' => '718',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO EDUARDO',
@@ -11987,6 +7914,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7322528',
                'email1' => 'jjuscamayta@ucss.edu.pe',
                'email2' => 'ejuscamaytal@hotmail.com',
+               'user_id' => '719',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FREDY',
@@ -11997,26 +7925,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ljusto@ucss.edu.pe',
                'email2' => 'luisrojas95@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CRISTIAN',
-               'wdoc2' => 'KATIP',
-               'wdoc3' => 'NANCHIJAM',
-               'cdocente' => '001582',
-               'fono1' => '978284852',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ckatip78@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANKE',
-               'wdoc2' => 'KAULARD',
-               'wdoc3' => '',
-               'cdocente' => '001370',
-               'fono1' => '986010030',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'akauco@yahoo.com',
+               'user_id' => '720',
           ]);
           DataUser::create([
                'wdoc1' => 'OLINDA ROXANA',
@@ -12027,16 +7936,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6285634',
                'email1' => 'rkcomt@ucss.edu.pe',
                'email2' => 'rkcomt@tesorosdelperu.org',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELEANA ANDREA',
-               'wdoc2' => 'KOSOY',
-               'wdoc3' => '.',
-               'cdocente' => '000123',
-               'fono1' => '3258125',
-               'fono2' => '4472762',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '721',
           ]);
           DataUser::create([
                'wdoc1' => 'SHERIN LUZ',
@@ -12047,6 +7947,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4487768',
                'email1' => 'skrederdt@ucss.edu.pe',
                'email2' => 'sherinkrederdt@yahoo.com',
+               'user_id' => '722',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -12057,16 +7958,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7880992',
                'email1' => 'mkuong@ucss.edu.pe',
                'email2' => 'makuong@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CHIARA',
-               'wdoc2' => 'LA LONGA',
-               'wdoc3' => '',
-               'cdocente' => '001626',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'chiaralalonga@infinito.it',
+               'user_id' => '723',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS GIOVANI',
@@ -12077,6 +7969,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2321715',
                'email1' => 'clarosa@ucss.edu.pe',
                'email2' => 'giovani_15_6@hotmail.com',
+               'user_id' => '724',
           ]);
           DataUser::create([
                'wdoc1' => 'JAVIER',
@@ -12087,26 +7980,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4618242',
                'email1' => 'jlarosa@ucss.edu.pe',
                'email2' => 'jotalrb1@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LOURDES GUADALUPE',
-               'wdoc2' => 'LA ROSA',
-               'wdoc3' => 'COLLANTES',
-               'cdocente' => '000032',
-               'fono1' => '',
-               'fono2' => '3329496',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA CECILI',
-               'wdoc2' => 'LA ROSA',
-               'wdoc3' => 'GALLARDO',
-               'cdocente' => '002401',
-               'fono1' => '981592216',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cecichancay@gmail.com',
+               'user_id' => '725',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR',
@@ -12117,6 +7991,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '463568',
                'email1' => 'vlaban@ucss.edu.pe',
                'email2' => 'victor_laban@hotmail.com',
+               'user_id' => '726',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -12127,16 +8002,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4521636',
                'email1' => 'jlafosse@ucss.edu.pe',
                'email2' => 'lafosse_masias@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILFREDO JESUS',
-               'wdoc2' => 'LAFOSSE',
-               'wdoc3' => 'QUINTANA',
-               'cdocente' => '000365',
-               'fono1' => '9090340',
-               'fono2' => '4295769',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '727',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID',
@@ -12147,6 +8013,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4208717',
                'email1' => 'dlagos@ucss.edu.pe',
                'email2' => 'david.lagos84@gmail.com',
+               'user_id' => '728',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE HUMBERTO',
@@ -12157,6 +8024,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jlalupu@ucss.edu.pe',
                'email2' => 'joselalupuv@hotmail.com',
+               'user_id' => '729',
           ]);
           DataUser::create([
                'wdoc1' => 'HERNAN ALEJANDRO',
@@ -12167,46 +8035,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4671319',
                'email1' => 'hlandaveri@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER ADRIAN',
-               'wdoc2' => 'LANDEO',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '000499',
-               'fono1' => '9910143',
-               'fono2' => '5642051',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA DEL CARMEN',
-               'wdoc2' => 'LAOS',
-               'wdoc3' => 'DE MESIAS',
-               'cdocente' => '002400',
-               'fono1' => '975259494',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mlaosguevara@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CLAUDIA',
-               'wdoc2' => 'LAPEYRE',
-               'wdoc3' => 'BRINGAS',
-               'cdocente' => '000381',
-               'fono1' => '7941913',
-               'fono2' => '4614538',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSA LIZETTE',
-               'wdoc2' => 'LARA',
-               'wdoc3' => 'PARDO',
-               'cdocente' => '002232',
-               'fono1' => '991978130',
-               'fono2' => '2743480',
-               'email1' => '',
-               'email2' => 'lizettelara919@hotmail.com',
+               'user_id' => '730',
           ]);
           DataUser::create([
                'wdoc1' => 'AMADA VICTORIA',
@@ -12217,26 +8046,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'alarco@ucss.edu.pe',
                'email2' => 'victorialarco@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YSIDRO YSMAEL',
-               'wdoc2' => 'LARIOS',
-               'wdoc3' => 'GRIMALDI',
-               'cdocente' => '001470',
-               'fono1' => '998191966',
-               'fono2' => '2327828',
-               'email1' => '',
-               'email2' => 'ylariosg@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ABEL ABELARDO',
-               'wdoc2' => 'LARREA',
-               'wdoc3' => 'BELMUNT',
-               'cdocente' => '001364',
-               'fono1' => '',
-               'fono2' => '3329295',
-               'email1' => '',
-               'email2' => 'abelorum147@hotmail.com',
+               'user_id' => '731',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ALEJANDRO',
@@ -12247,16 +8057,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5675708',
                'email1' => 'jlastarria@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CHRISTIAM ALBERTO',
-               'wdoc2' => 'LAURA',
-               'wdoc3' => 'PRADA',
-               'cdocente' => '001091',
-               'fono1' => '949304748',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '732',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL ISMAEL',
@@ -12267,6 +8068,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2730621',
                'email1' => 'mlaurencio@ucss.edu.pe',
                'email2' => 'mlaurencio27@hotmail.com',
+               'user_id' => '733',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR AUGUSTO',
@@ -12277,6 +8079,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4610404',
                'email1' => 'clavalle@ucss.edu.pe',
                'email2' => 'pplabra@hotmail.com',
+               'user_id' => '734',
           ]);
           DataUser::create([
                'wdoc1' => 'IVAN JORGE',
@@ -12287,46 +8090,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3450840',
                'email1' => 'ilazarte@ucss.edu.pe',
                'email2' => 'ilazarte@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SIXTO',
-               'wdoc2' => 'LAZON',
-               'wdoc3' => 'PEREIRA',
-               'cdocente' => '002504',
-               'fono1' => '937508634',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lazonpereirasixto@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HERVE',
-               'wdoc2' => 'LE GARGEAN',
-               'wdoc3' => 'CRUZADO',
-               'cdocente' => '001496',
-               'fono1' => '956213093',
-               'fono2' => '5435319',
-               'email1' => '',
-               'email2' => 'hlg1976@yahoo.fr',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GERMAN',
-               'wdoc2' => 'LE-BAUT',
-               'wdoc3' => 'GOUEROU',
-               'cdocente' => '002003',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUILLERMO',
-               'wdoc2' => 'LECARNAQUE',
-               'wdoc3' => 'MOLINA',
-               'cdocente' => '000380',
-               'fono1' => '9171151',
-               'fono2' => '4361464',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '735',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSSINA ALDA',
@@ -12337,36 +8101,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3583946',
                'email1' => 'rleceta@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO JESUS',
-               'wdoc2' => 'LEDESMA',
-               'wdoc3' => 'ESCOBAR',
-               'cdocente' => '002206',
-               'fono1' => '964656598',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'filedesmae@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS MARTIN',
-               'wdoc2' => 'LEIVA',
-               'wdoc3' => 'ALE',
-               'cdocente' => '000041',
-               'fono1' => '',
-               'fono2' => '4599327',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLA REBECA',
-               'wdoc2' => 'LEIVA',
-               'wdoc3' => 'OLIVERA',
-               'cdocente' => '002564',
-               'fono1' => '943399621',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'becky.leiva@hotmail.com',
+               'user_id' => '736',
           ]);
           DataUser::create([
                'wdoc1' => 'KARIN ROCIO',
@@ -12377,6 +8112,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'klengua@ucss.edu.pe',
                'email2' => 'psico_krla@hotmail.com',
+               'user_id' => '737',
           ]);
           DataUser::create([
                'wdoc1' => 'INDIRA CRISTINA',
@@ -12387,16 +8123,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3365295',
                'email1' => 'ilengua@ucss.edu.pe',
                'email2' => 'indira.lengua.a@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICHARD JOEL',
-               'wdoc2' => 'LENNERS',
-               'wdoc3' => 'CEDRIC',
-               'cdocente' => '001595',
-               'fono1' => '985784363',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sirdarkosperu@gmail.com',
+               'user_id' => '738',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIANA',
@@ -12407,6 +8134,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4441884',
                'email1' => 'mlchavez@ucss.edu.pe',
                'email2' => 'leon.mariana@gmail.com',
+               'user_id' => '739',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -12417,26 +8145,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5335632',
                'email1' => 'lleon@ucss.edu.pe',
                'email2' => 'leondezar@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OSCAR ZENON',
-               'wdoc2' => 'LEON',
-               'wdoc3' => 'GARAY',
-               'cdocente' => '001046',
-               'fono1' => '999918761',
-               'fono2' => '2395865',
-               'email1' => '',
-               'email2' => 'oscar_abogados@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ENRIQUE MANUEL',
-               'wdoc2' => 'LEON',
-               'wdoc3' => 'HUAMAN',
-               'cdocente' => '000008',
-               'fono1' => '',
-               'fono2' => '2617517',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '740',
           ]);
           DataUser::create([
                'wdoc1' => 'ROLANDO ALEXANDER',
@@ -12447,16 +8156,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rleon@ucss.edu.pe',
                'email2' => 'ralj001@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OSCAR FEDERICO',
-               'wdoc2' => 'LEON',
-               'wdoc3' => 'MARTINEZ',
-               'cdocente' => '001637',
-               'fono1' => '999572207',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'oleonm57@gmail.com',
+               'user_id' => '741',
           ]);
           DataUser::create([
                'wdoc1' => 'RUTH GIOVANNA',
@@ -12467,26 +8167,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rleonm@ucss.edu.pe',
                'email2' => 'ruthleonm@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IVONNE CARLA',
-               'wdoc2' => 'LEON',
-               'wdoc3' => 'RONDINEL',
-               'cdocente' => '001913',
-               'fono1' => '997460310',
-               'fono2' => '2874514',
-               'email1' => '',
-               'email2' => 'ivonne_303@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSEFA FABIOLA',
-               'wdoc2' => 'LEON',
-               'wdoc3' => 'RUIDIAS',
-               'cdocente' => '001624',
-               'fono1' => '',
-               'fono2' => '738',
-               'email1' => '',
-               'email2' => 'faleru@outlook.com',
+               'user_id' => '742',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO CESAR',
@@ -12497,16 +8178,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jleons@ucss.edu.pe',
                'email2' => 'jleon.pcm@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BETTY',
-               'wdoc2' => 'LEON',
-               'wdoc3' => 'TRUJILLO',
-               'cdocente' => '002575',
-               'fono1' => '964030320',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bettyleon001@gmail.com',
+               'user_id' => '743',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -12517,6 +8189,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mleon@ucss.edu.pe',
                'email2' => 'miguel.leon.u@gmail.com',
+               'user_id' => '744',
           ]);
           DataUser::create([
                'wdoc1' => 'MILAGROS ELISA',
@@ -12527,6 +8200,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mleonardo@ucss.edu.pe',
                'email2' => 'milagros.leonardo@hotmail.com',
+               'user_id' => '745',
           ]);
           DataUser::create([
                'wdoc1' => 'GUSTAVO ADOLFO',
@@ -12537,6 +8211,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4290571',
                'email1' => 'gleonardo@ucss.edu.pe',
                'email2' => 'GUADOFM@HOTMAIL.COM',
+               'user_id' => '746',
           ]);
           DataUser::create([
                'wdoc1' => 'MAURIZIO',
@@ -12547,16 +8222,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5338162',
                'email1' => 'mleva@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ENRIQUE',
-               'wdoc2' => 'LEVANO',
-               'wdoc3' => 'FUENTES',
-               'cdocente' => '000259',
-               'fono1' => '9535966',
-               'fono2' => '2631297',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '747',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -12567,6 +8233,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4419306',
                'email1' => 'cleyton@ucss.edu.pe',
                'email2' => 'leytoncardenas7@gmail.com',
+               'user_id' => '748',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FERNANDO',
@@ -12577,6 +8244,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4810423',
                'email1' => 'lleyva@ucss.edu.pe',
                'email2' => 'luisleyvacampoblanco@hotmail.com',
+               'user_id' => '749',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL',
@@ -12587,26 +8255,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3826089',
                'email1' => 'mleyva@ucss.edu.pe',
                'email2' => 'mleyvac9@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR JESUS',
-               'wdoc2' => 'LI',
-               'wdoc3' => 'QUITO',
-               'cdocente' => '002139',
-               'fono1' => '945993622',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'educesarli14@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ENRICO',
-               'wdoc2' => 'LICINI',
-               'wdoc3' => '-',
-               'cdocente' => '001166',
-               'fono1' => '946091801',
-               'fono2' => '6574674',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '750',
           ]);
           DataUser::create([
                'wdoc1' => 'JAVIER',
@@ -12617,6 +8266,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5269428',
                'email1' => 'jlijarza@ucss.edu.pe',
                'email2' => 'ljavicho@hotmail.com',
+               'user_id' => '751',
           ]);
           DataUser::create([
                'wdoc1' => 'BLANCA IRENE',
@@ -12627,6 +8277,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'blimaco@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '752',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE',
@@ -12637,16 +8288,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3850121',
                'email1' => 'jlimaymanta@ucss.edu.pe',
                'email2' => 'boche.54@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ALBERTO MARTIN',
-               'wdoc2' => 'LIMO',
-               'wdoc3' => 'FERNANDEZ',
-               'cdocente' => '001383',
-               'fono1' => '965883829',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jlimof@hotmail.com',
+               'user_id' => '753',
           ]);
           DataUser::create([
                'wdoc1' => 'ITALO ALDO',
@@ -12657,16 +8299,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3081351',
                'email1' => 'ilimonchi@ucss.edu.pe',
                'email2' => 'atenaitalo@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GIANCARLO',
-               'wdoc2' => 'LINARES',
-               'wdoc3' => 'GUEVARA',
-               'cdocente' => '002613',
-               'fono1' => '997090677',
-               'fono2' => '2633559',
-               'email1' => '',
-               'email2' => 'giancarlo_linares@hotmail.com',
+               'user_id' => '754',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIZABETH ROCIO',
@@ -12677,46 +8310,29 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'elinares@ucss.edu.pe',
                'email2' => 'chiolinaresve@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREY LUIS',
-               'wdoc2' => 'LINAREZ',
-               'wdoc3' => 'RUIZ',
-               'cdocente' => '002053',
-               'fono1' => '950667034',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'freyex_sm@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HENRY FREDDY',
-               'wdoc2' => 'LINDO',
-               'wdoc3' => 'OYOLA',
-               'cdocente' => '001707',
-               'fono1' => '993322234',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'henryoyo@hotmail.com',
+               'user_id' => '755',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR JOSE',
                'wdoc2' => 'LINO',
-               'wdoc3' => 'QUICAÑA',
+               'wdoc3' => 'QUICAÃ‘A',
                'cdocente' => '001808',
                'fono1' => '997076002',
                'fono2' => '4338692',
                'email1' => 'hlino@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '756',
           ]);
           DataUser::create([
                'wdoc1' => 'JESSICA GLORIA',
-               'wdoc2' => 'LIÑAN',
+               'wdoc2' => 'LIÃ‘AN',
                'wdoc3' => 'PALOMINO',
                'cdocente' => '000213',
                'fono1' => '7367002',
                'fono2' => '3495167',
                'email1' => 'jlinan@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '757',
           ]);
           DataUser::create([
                'wdoc1' => 'YASMIN GREGORIA',
@@ -12727,26 +8343,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ylitano@ucss.edu.pe',
                'email2' => 'yasminlitanofan@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PAULA VIVIANA',
-               'wdoc2' => 'LIZA',
-               'wdoc3' => 'DUBOIS',
-               'cdocente' => '000110',
-               'fono1' => '9389443',
-               'fono2' => '5670631',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MODESTO ARCADIO',
-               'wdoc2' => 'LIZANA',
-               'wdoc3' => 'PEÑA',
-               'cdocente' => '001081',
-               'fono1' => '957517412',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'molizpe@gmail.com',
+               'user_id' => '758',
           ]);
           DataUser::create([
                'wdoc1' => 'LAZARO ELIAS',
@@ -12757,6 +8354,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'llizano@ucss.edu.pe',
                'email2' => 'lelizanocarmen@hotmail.com',
+               'user_id' => '759',
           ]);
           DataUser::create([
                'wdoc1' => 'DARWIN MACOLL PRIMERO',
@@ -12767,16 +8365,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dllacsaguache@ucss.edu.pe',
                'email2' => 'estadisticodarwin@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS MANUEL',
-               'wdoc2' => 'LLAMO',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '001381',
-               'fono1' => '942912250',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'carllato1@hotmail.com',
+               'user_id' => '760',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL EDUARDO',
@@ -12787,6 +8376,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mllanos@ucss.edu.pe',
                'email2' => 'manuellanoj@hotmail.com',
+               'user_id' => '761',
           ]);
           DataUser::create([
                'wdoc1' => 'HAYDEE',
@@ -12797,56 +8387,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hllanosd@ucss.edu.pe',
                'email2' => 'halladelmc@hotmail.com',
+               'user_id' => '762',
           ]);
           DataUser::create([
                'wdoc1' => 'HORSLEY EMERSON',
                'wdoc2' => 'LLANOS',
-               'wdoc3' => 'MUÑOZ',
+               'wdoc3' => 'MUÃ‘OZ',
                'cdocente' => '000931',
                'fono1' => '',
                'fono2' => '',
                'email1' => 'hllanos@ucss.edu.pe',
                'email2' => 'UCSSLLANOS@GMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICHARD PINETT',
-               'wdoc2' => 'LLANTO',
-               'wdoc3' => 'CERCEDO',
-               'cdocente' => '002602',
-               'fono1' => '934934608',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'richardllanto@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'LLEELLISH',
-               'wdoc3' => 'JUSCAMAITA',
-               'cdocente' => '002192',
-               'fono1' => '955952872',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mlleellish@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN UBALDO',
-               'wdoc2' => 'LLUNCOR',
-               'wdoc3' => 'GRANADOS',
-               'cdocente' => '000091',
-               'fono1' => '9490290',
-               'fono2' => '5365694',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CRISTINA',
-               'wdoc2' => 'LO CASCIO',
-               'wdoc3' => 'L',
-               'cdocente' => '000328',
-               'fono1' => '7436092',
-               'fono2' => '4454278',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '763',
           ]);
           DataUser::create([
                'wdoc1' => 'FRILL ENMA',
@@ -12857,16 +8409,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5281949',
                'email1' => 'floayza@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AMADEO BENJAMIN',
-               'wdoc2' => 'LOAYZA',
-               'wdoc3' => 'SANDOVAL',
-               'cdocente' => '002394',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'amabelos10@hotmail.com',
+               'user_id' => '764',
           ]);
           DataUser::create([
                'wdoc1' => 'GODOFREDO ROMAN',
@@ -12877,6 +8420,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'globato@ucss.edu.pe',
                'email2' => 'globatoc@hotmail.com',
+               'user_id' => '765',
           ]);
           DataUser::create([
                'wdoc1' => 'CRISTIAN AMADOR',
@@ -12887,6 +8431,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5613203',
                'email1' => 'cloli@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '766',
           ]);
           DataUser::create([
                'wdoc1' => 'NATALY OIJANI',
@@ -12897,6 +8442,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nloloy@ucss.edu.pe',
                'email2' => 'vidnatyk15@hotmail.com',
+               'user_id' => '767',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO ERNESTO',
@@ -12907,6 +8453,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5430173',
                'email1' => 'plomparte@ucss.edu.pe',
                'email2' => 'plomparte@hotmail.com',
+               'user_id' => '768',
           ]);
           DataUser::create([
                'wdoc1' => 'NESTOR MANUEL',
@@ -12917,6 +8464,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4675688',
                'email1' => 'nlopez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '769',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN',
@@ -12927,6 +8475,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jlopezb@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '770',
           ]);
           DataUser::create([
                'wdoc1' => 'RODOLFO ODLANIER',
@@ -12937,6 +8486,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rlopez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '771',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -12947,16 +8497,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jllopez@ucss.edu.pe',
                'email2' => 'biologobulnes@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PATRICIA ANGELICA',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'CAHUANA DE GUILLERMO',
-               'cdocente' => '001805',
-               'fono1' => '994591466',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'launica_angelica@hotmail.com',
+               'user_id' => '772',
           ]);
           DataUser::create([
                'wdoc1' => 'BENJAMIN',
@@ -12967,6 +8508,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4252529',
                'email1' => 'blopez@ucss.edu.pe',
                'email2' => 'blopezca@hotmail.com',
+               'user_id' => '773',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERTO',
@@ -12977,16 +8519,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rlopezc@ucss.edu.pe',
                'email2' => 'cahuaza01@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LEE SANDRA',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'CASTRO',
-               'cdocente' => '002757',
-               'fono1' => '996217789',
-               'fono2' => '4714763',
-               'email1' => '',
-               'email2' => 'leesanllc@hotmail.com',
+               'user_id' => '774',
           ]);
           DataUser::create([
                'wdoc1' => 'SAMUEL',
@@ -12997,6 +8530,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'slopez@ucss.edu.pe',
                'email2' => 'samuel2504@hotmail.com',
+               'user_id' => '775',
           ]);
           DataUser::create([
                'wdoc1' => 'TORIBIO',
@@ -13007,6 +8541,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'tlopez@ucss.edu.pe',
                'email2' => 'trabajos_asesor_educ@hotmail.com',
+               'user_id' => '776',
           ]);
           DataUser::create([
                'wdoc1' => 'JOEL BENIGNO',
@@ -13017,36 +8552,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5679255',
                'email1' => 'jlopez@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NESTOR AUGUSTO',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'DEL MAR',
-               'cdocente' => '000497',
-               'fono1' => '6964753',
-               'fono2' => '2632365',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JESSICA LOURDES',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'DONGO',
-               'cdocente' => '000517',
-               'fono1' => '9765672',
-               'fono2' => '3484654',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JHONNY LUIS',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'LEON',
-               'cdocente' => '002586',
-               'fono1' => '934509961',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'foro.pedagogico.peru@gmail.com',
+               'user_id' => '777',
           ]);
           DataUser::create([
                'wdoc1' => 'ARNALDO',
@@ -13057,6 +8563,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2561033',
                'email1' => 'alopezl@ucss.edu.pe',
                'email2' => 'lopezarnol@hotmail.com',
+               'user_id' => '778',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS',
@@ -13067,36 +8574,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'clopezl@ucss.edu.pe',
                'email2' => 'clopezloja@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL JESUS',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'MACHIAVELLO',
-               'cdocente' => '000013',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'MANUEL',
-               'cdocente' => '001286',
-               'fono1' => '971018743',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'w.lopez_38@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ISABEL JANETH DEL ROSARIO',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'MEJIA',
-               'cdocente' => '000657',
-               'fono1' => '996214637',
-               'fono2' => '5231307',
-               'email1' => '',
-               'email2' => 'janethbells@yahoo.es',
+               'user_id' => '779',
           ]);
           DataUser::create([
                'wdoc1' => 'LOURDES MERCEDES',
@@ -13107,16 +8585,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2617916',
                'email1' => 'llopezm@ucss.edu.pe',
                'email2' => 'llopezm2001@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NILDA HORTENCIA',
-               'wdoc2' => 'LOPEZ',
-               'wdoc3' => 'MULLER',
-               'cdocente' => '002213',
-               'fono1' => '963702032',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'nildalo_18@hotmail.com',
+               'user_id' => '780',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERT JOSE DEL CARMEN',
@@ -13127,6 +8596,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rlopezo@ucss.edu.pe',
                'email2' => 'ROBERTLOPEZ_15@HOTMAIL.COM',
+               'user_id' => '781',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN EDUARDO',
@@ -13137,6 +8607,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jelopez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '782',
           ]);
           DataUser::create([
                'wdoc1' => 'JHON JAIRO',
@@ -13147,6 +8618,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jlopezro@ucss.edu.pe',
                'email2' => 'lopezrojasjhonhairo@hormail.com',
+               'user_id' => '783',
           ]);
           DataUser::create([
                'wdoc1' => 'GLADIS YOLANDA',
@@ -13157,6 +8629,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2744578',
                'email1' => 'gylopez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '784',
           ]);
           DataUser::create([
                'wdoc1' => 'MELANY LISETT',
@@ -13167,6 +8640,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5328472',
                'email1' => 'mlopez@ucss.edu.pe',
                'email2' => 'lvmelany@hotmail.com',
+               'user_id' => '785',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO EDWIN',
@@ -13177,26 +8651,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7365461',
                'email1' => 'plopez@ucss.edu.pe',
                'email2' => 'pabloedwin@peru.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GLADYS SUSANA',
-               'wdoc2' => 'LORCA',
-               'wdoc3' => 'MIRANDA',
-               'cdocente' => '000631',
-               'fono1' => '999329470',
-               'fono2' => '5391188',
-               'email1' => '',
-               'email2' => 'gladyslm65@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PAUL EDUARDO',
-               'wdoc2' => 'LORENZO',
-               'wdoc3' => 'GALLARDO',
-               'cdocente' => '001116',
-               'fono1' => '970970001',
-               'fono2' => '4890497',
-               'email1' => '',
-               'email2' => 'plorenzog@gmail.com',
+               'user_id' => '786',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEJANDRO',
@@ -13207,6 +8662,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4409632',
                'email1' => 'alostaunau@ucss.edu.pe',
                'email2' => 'alostau@gmail.com',
+               'user_id' => '787',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN ISABEL MODESTA',
@@ -13217,16 +8673,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2791505',
                'email1' => 'clovera@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER',
-               'wdoc2' => 'LOYOLA',
-               'wdoc3' => 'AVILES',
-               'cdocente' => '000212',
-               'fono1' => '1111111',
-               'fono2' => '2210109',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '788',
           ]);
           DataUser::create([
                'wdoc1' => 'GIANPAUL',
@@ -13237,6 +8684,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5312472',
                'email1' => 'gloyola@ucss.edu.pe',
                'email2' => 'gianpaul_l@hotmail.com',
+               'user_id' => '789',
           ]);
           DataUser::create([
                'wdoc1' => 'JUANA YANIRA',
@@ -13247,16 +8695,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4774519',
                'email1' => 'yloyola@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERTO CARLOS',
-               'wdoc2' => 'LOZA',
-               'wdoc3' => 'LANDA',
-               'cdocente' => '000972',
-               'fono1' => '986513855',
-               'fono2' => '2393291',
-               'email1' => '',
-               'email2' => 'rocloland13@hotmail.com',
+               'user_id' => '790',
           ]);
           DataUser::create([
                'wdoc1' => 'PERCY ARMANDO',
@@ -13267,6 +8706,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4570162',
                'email1' => 'plucich@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '791',
           ]);
           DataUser::create([
                'wdoc1' => 'WILFREDO ARMANDO',
@@ -13277,16 +8717,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2327340',
                'email1' => 'wlucumi@ucss.edu.pe',
                'email2' => 'tumancito@hotmail.com',
+               'user_id' => '792',
           ]);
           DataUser::create([
                'wdoc1' => 'WILSON ROBERTO',
-               'wdoc2' => 'LUDEÑA',
+               'wdoc2' => 'LUDEÃ‘A',
                'wdoc3' => 'MARIN',
                'cdocente' => '002529',
                'fono1' => '954987225',
                'fono2' => '',
                'email1' => 'wludena@ucss.edu.pe',
                'email2' => 'wiroluma@gmail.com',
+               'user_id' => '793',
           ]);
           DataUser::create([
                'wdoc1' => 'TEOFILO',
@@ -13297,26 +8739,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4869157',
                'email1' => 'tlugo@ucss.edu.pe',
                'email2' => 'titolugo23@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IDO',
-               'wdoc2' => 'LUGO',
-               'wdoc3' => 'VILLEGAS',
-               'cdocente' => '002289',
-               'fono1' => '962543124',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'idolugovillegas@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MAN WAI',
-               'wdoc2' => 'LUI',
-               'wdoc3' => '',
-               'cdocente' => '001733',
-               'fono1' => '970973334',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luimw@yahoo.com',
+               'user_id' => '794',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ISAAC',
@@ -13327,6 +8750,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cluna@ucss.edu.pe',
                'email2' => 'kljoshua@gmail.com',
+               'user_id' => '795',
           ]);
           DataUser::create([
                'wdoc1' => 'JAVIER GONZALO',
@@ -13337,6 +8761,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jlunag@ucss.edu.pe',
                'email2' => 'gonzalogarcia56@hotmail.com',
+               'user_id' => '796',
           ]);
           DataUser::create([
                'wdoc1' => 'VILMA AUGUSTA',
@@ -13347,6 +8772,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2730621',
                'email1' => 'vluna@ucss.edu.pe',
                'email2' => 'vilma_mdi@yahoo.es',
+               'user_id' => '797',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL',
@@ -13357,6 +8783,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6668966',
                'email1' => 'rluna@ucss.edu.pe',
                'email2' => 'rlunam@gmail.com',
+               'user_id' => '798',
           ]);
           DataUser::create([
                'wdoc1' => 'EDITH NORMA',
@@ -13367,6 +8794,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4855610',
                'email1' => 'nluna@ucss.edu.pe',
                'email2' => 'enlr_2002@hotmail.com',
+               'user_id' => '799',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -13377,26 +8805,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2322781',
                'email1' => 'jluna@ucss.edu.pe',
                'email2' => 'vlsjcls48@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN ALBERTO',
-               'wdoc2' => 'LUQUE',
-               'wdoc3' => 'MAMANI',
-               'cdocente' => '002280',
-               'fono1' => '935085022',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'JULUMA30@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FLORENCIO',
-               'wdoc2' => 'LUQUE',
-               'wdoc3' => 'RAFAEL',
-               'cdocente' => '000315',
-               'fono1' => '8021539',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '800',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA MARIA',
@@ -13407,6 +8816,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5311270',
                'email1' => 'rluque@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '801',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS AUGUSTO',
@@ -13417,16 +8827,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6554340',
                'email1' => 'aluy@ucss.edu.pe',
                'email2' => 'fracarlitos@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BARTOLOME',
-               'wdoc2' => 'MACAVILCA',
-               'wdoc3' => 'TELLO',
-               'cdocente' => '000769',
-               'fono1' => '999668420',
-               'fono2' => '4856784',
-               'email1' => '',
-               'email2' => 'bmacavilcatello@hotmail.com',
+               'user_id' => '802',
           ]);
           DataUser::create([
                'wdoc1' => 'EUFEMIO MAGNO',
@@ -13437,6 +8838,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'emacedo@ucss.edu.pe',
                'email2' => 'nutmacedo2008@hotmail.com',
+               'user_id' => '803',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS OMAR',
@@ -13447,6 +8849,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cmacedo@ucss.edu.pe',
                'email2' => 'omarmacedo@gmail.com',
+               'user_id' => '804',
           ]);
           DataUser::create([
                'wdoc1' => 'ITALO LEANDRO',
@@ -13457,6 +8860,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2608796',
                'email1' => 'imacha@ucss.edu.pe',
                'email2' => 'm_italo@hotmail.com',
+               'user_id' => '805',
           ]);
           DataUser::create([
                'wdoc1' => 'MABEL',
@@ -13467,6 +8871,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5256458',
                'email1' => 'mmagallanes@ucss.edu.pe',
                'email2' => 'mabel_magallanes@hotmail.com',
+               'user_id' => '806',
           ]);
           DataUser::create([
                'wdoc1' => 'GUIDO EUGENIO MARIO',
@@ -13477,56 +8882,40 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gmaggi@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '807',
           ]);
           DataUser::create([
                'wdoc1' => 'MIRIAM GRACIELA',
-               'wdoc2' => 'MAGUIÑA',
+               'wdoc2' => 'MAGUIÃ‘A',
                'wdoc3' => 'ALVAREZ',
                'cdocente' => '001965',
                'fono1' => '998411201',
                'fono2' => '3461395',
                'email1' => 'mgmaguina@ucss.edu.pe',
                'email2' => 'miriam_071100@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ERNESTO ANDRES',
-               'wdoc2' => 'MAGUIÑA',
-               'wdoc3' => 'ARNAO',
-               'cdocente' => '001889',
-               'fono1' => '944212827',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ernestomaguina@hotmail.com',
+               'user_id' => '808',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO ARTURO',
-               'wdoc2' => 'MAGUIÑA',
+               'wdoc2' => 'MAGUIÃ‘A',
                'wdoc3' => 'MENDOZA',
                'cdocente' => '000509',
                'fono1' => '994461134',
                'fono2' => '3365649',
                'email1' => 'mmaguina@ucss.edu.pe',
                'email2' => 'mmaguina8@yahoo.es',
+               'user_id' => '809',
           ]);
           DataUser::create([
                'wdoc1' => 'GINO ENRIQUE',
-               'wdoc2' => 'MAGUIÑA',
+               'wdoc2' => 'MAGUIÃ‘A',
                'wdoc3' => 'VARGAS',
                'cdocente' => '000804',
                'fono1' => '991170294',
                'fono2' => '5236235',
                'email1' => 'gmaguina@ucss.edu.pe',
                'email2' => 'quique_unac@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL HUGO',
-               'wdoc2' => 'MAGUIÑO',
-               'wdoc3' => 'VENEROS',
-               'cdocente' => '000078',
-               'fono1' => '',
-               'fono2' => '2243788',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '810',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR HUGO',
@@ -13537,6 +8926,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2923718',
                'email1' => 'hmaldonado@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '811',
           ]);
           DataUser::create([
                'wdoc1' => 'ORLANDO OSCAR',
@@ -13547,16 +8937,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'omaldonado@ucss.edu.pe',
                'email2' => 'm@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER HIGIDIO',
-               'wdoc2' => 'MALLMA',
-               'wdoc3' => 'TOMAILLA',
-               'cdocente' => '001832',
-               'fono1' => '941386650',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wmallma@hotmail.com',
+               'user_id' => '812',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN DAVID',
@@ -13567,6 +8948,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3749003',
                'email1' => 'jmalpartidap@ucss.edu.pe',
                'email2' => 'jdporrasm@gmail.com',
+               'user_id' => '813',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -13577,6 +8959,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3795379',
                'email1' => 'mmalpartida@ucss.edu.pe',
                'email2' => 'arsnriz@hotmail.com',
+               'user_id' => '814',
           ]);
           DataUser::create([
                'wdoc1' => 'ANAMELBA',
@@ -13587,26 +8970,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6065040',
                'email1' => 'amalpartida@ucss.edu.pe',
                'email2' => 'anamelba19@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER',
-               'wdoc2' => 'MALPARTIDA',
-               'wdoc3' => 'ROSALES',
-               'cdocente' => '001345',
-               'fono1' => '954408640',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jmalpartida8@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FELIPE EUSTAQUIO',
-               'wdoc2' => 'MAMANI',
-               'wdoc3' => 'COILA',
-               'cdocente' => '002421',
-               'fono1' => '976720260',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'felipemamanicoila5@gmail.com',
+               'user_id' => '815',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEX',
@@ -13617,16 +8981,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'amamani@ucss.edu.pe',
                'email2' => 'alex.mamani@inei.gob.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LILIANA PAOLA',
-               'wdoc2' => 'MAMANI',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '000639',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lilipms@gmail.com',
+               'user_id' => '816',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS',
@@ -13637,6 +8992,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4259889',
                'email1' => 'cmanayay@ucss.edu.pe',
                'email2' => 'carlosli28@hotmail.com',
+               'user_id' => '817',
           ]);
           DataUser::create([
                'wdoc1' => 'MIRIAM LILIANA',
@@ -13647,16 +9003,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4755450',
                'email1' => 'mmancilla@ucss.edu.pe',
                'email2' => 'miriammancilla@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARITZA ELVA J.',
-               'wdoc2' => 'MANOSALVA',
-               'wdoc3' => 'MENDOZA',
-               'cdocente' => '002004',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '818',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -13667,6 +9014,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4352843',
                'email1' => 'jmanrique@ucss.edu.pe',
                'email2' => 'jomanrique@hotmail.com',
+               'user_id' => '819',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR',
@@ -13677,16 +9025,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'omanrique@ucss.edu.pe',
                'email2' => 'omanriquepino@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAMON TITO',
-               'wdoc2' => 'MANTILLA',
-               'wdoc3' => 'MUÑOZ',
-               'cdocente' => '000044',
-               'fono1' => '',
-               'fono2' => '4517182',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '820',
           ]);
           DataUser::create([
                'wdoc1' => 'PATRICIA',
@@ -13697,16 +9036,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2519550',
                'email1' => 'pmaquera@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANABEL',
-               'wdoc2' => 'MARCA',
-               'wdoc3' => 'SAICO',
-               'cdocente' => '001700',
-               'fono1' => '985890785',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'anamarcasaico@hotmail.com',
+               'user_id' => '821',
           ]);
           DataUser::create([
                'wdoc1' => 'FAUSTO MIGUEL',
@@ -13717,16 +9047,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7738308',
                'email1' => 'fmarcelo@ucss.edu.pe',
                'email2' => 'faustomar44@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BELMIRA YUNET',
-               'wdoc2' => 'MARCELO',
-               'wdoc3' => 'VELIZ',
-               'cdocente' => '000326',
-               'fono1' => '9065514',
-               'fono2' => '5211682',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '822',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MANUEL',
@@ -13737,6 +9058,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmarchena@ucss.edu.pe',
                'email2' => 'jmarchena132@gmail.com',
+               'user_id' => '823',
           ]);
           DataUser::create([
                'wdoc1' => 'GELI MELQUIADES',
@@ -13747,46 +9069,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gmariano@ucss.edu.pe',
                'email2' => 'mariano.bravo15@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CLAUDIA',
-               'wdoc2' => 'MARIN',
-               'wdoc3' => 'CABRERA',
-               'cdocente' => '000024',
-               'fono1' => '',
-               'fono2' => '9336984',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CAROLINE GABRIELA',
-               'wdoc2' => 'MARIN',
-               'wdoc3' => 'CIPRIANO',
-               'cdocente' => '002797',
-               'fono1' => '990745427',
-               'fono2' => '5643066',
-               'email1' => '',
-               'email2' => 'egmarin1708@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANNY',
-               'wdoc2' => 'MARIN',
-               'wdoc3' => 'RODRIGUEZ',
-               'cdocente' => '001731',
-               'fono1' => '968246895',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mannykankun@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO',
-               'wdoc2' => 'MARINELLI',
-               'wdoc3' => '',
-               'cdocente' => '000211',
-               'fono1' => '8495662',
-               'fono2' => '5532155',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '824',
           ]);
           DataUser::create([
                'wdoc1' => 'JAVIER ALEJANDRO',
@@ -13797,6 +9080,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6956132',
                'email1' => 'jmarquez@ucss.edu.pe',
                'email2' => 'catojps@hotmail.com',
+               'user_id' => '825',
           ]);
           DataUser::create([
                'wdoc1' => 'WILFREDO JAVIER',
@@ -13807,6 +9091,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wmarquina@ucss.edu.pe',
                'email2' => 'consultor.marquina@gmail.com',
+               'user_id' => '826',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO BLADIMIR',
@@ -13817,46 +9102,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mmarrufo@ucss.edu.pe',
                'email2' => 'mariomarrufod@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUCY MARIA',
-               'wdoc2' => 'MARTEL',
-               'wdoc3' => 'RIVERA',
-               'cdocente' => '002399',
-               'fono1' => '997242132',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lucimarive@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LIDIA',
-               'wdoc2' => 'MARTINEZ',
-               'wdoc3' => 'ALCALDE',
-               'cdocente' => '000411',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALFREDO',
-               'wdoc2' => 'MARTINEZ',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '000957',
-               'fono1' => '995132559',
-               'fono2' => '5685653',
-               'email1' => '',
-               'email2' => 'almaupch@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARGARITA ASUNCION',
-               'wdoc2' => 'MARTINEZ',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '002161',
-               'fono1' => '995700565',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'margaritaandmichael@hotmail.com',
+               'user_id' => '827',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA SANTOS',
@@ -13867,26 +9113,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3753254',
                'email1' => 'mmartinez@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BIANCA MAKEY',
-               'wdoc2' => 'MARTINEZ',
-               'wdoc3' => 'MALQUI',
-               'cdocente' => '002669',
-               'fono1' => '987577561',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'biancamakey@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HEYLER',
-               'wdoc2' => 'MARTINEZ',
-               'wdoc3' => 'ORBEGOSO',
-               'cdocente' => '001892',
-               'fono1' => '952077371',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hemor.amauta@gmail.com',
+               'user_id' => '828',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO JAVIER',
@@ -13897,6 +9124,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fmartinez@ucss.edu.pe',
                'email2' => 'fjmrperu@gmail.com',
+               'user_id' => '829',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR YAIR',
@@ -13907,26 +9135,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cmartinez@ucss.edu.pe',
                'email2' => 'yair.martinezsi@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RODOLFO',
-               'wdoc2' => 'MARTINEZ',
-               'wdoc3' => 'SILVA',
-               'cdocente' => '002587',
-               'fono1' => '991765685',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'masiro39@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS FELIX',
-               'wdoc2' => 'MARTINEZ',
-               'wdoc3' => 'SUAREZ',
-               'cdocente' => '002734',
-               'fono1' => '981339907',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'a20045137@pucp.edu.pe',
+               'user_id' => '830',
           ]);
           DataUser::create([
                'wdoc1' => 'JEANETTE MARIA DEL PILAR',
@@ -13937,6 +9146,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5213886',
                'email1' => 'pmartinez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '831',
           ]);
           DataUser::create([
                'wdoc1' => 'JOAQUIN',
@@ -13947,6 +9157,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmartinez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '832',
           ]);
           DataUser::create([
                'wdoc1' => 'SHIRLEY PAMELA',
@@ -13957,6 +9168,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'smartos@ucss.edu.pe',
                'email2' => 'shirleypamela87@hotmail.com',
+               'user_id' => '833',
           ]);
           DataUser::create([
                'wdoc1' => 'NIXON LUIS',
@@ -13967,16 +9179,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nmas@ucss.edu.pe',
                'email2' => 'nixon_mascaro@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARY SILVIA',
-               'wdoc2' => 'MASCARO',
-               'wdoc3' => 'BAZAN',
-               'cdocente' => '000039',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '834',
           ]);
           DataUser::create([
                'wdoc1' => 'GIANCARLO ENZO PASCQUALE',
@@ -13987,6 +9190,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gmascellaro@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '835',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE PERCY',
@@ -13997,16 +9201,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3005607',
                'email1' => 'jmasgo@ucss.edu.pe',
                'email2' => 'ricardoperezalcorza@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LITA MARITA',
-               'wdoc2' => 'MASGO',
-               'wdoc3' => 'LARA',
-               'cdocente' => '000628',
-               'fono1' => '96591718',
-               'fono2' => '3813609',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '836',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -14017,16 +9212,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3823381',
                'email1' => 'lmasgo@ucss.edu.pe',
                'email2' => 'lgomas2011@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEJANDRA AZUCENA',
-               'wdoc2' => 'MATEO',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '000329',
-               'fono1' => '9708830',
-               'fono2' => '4856269',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '837',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE HERNANDO',
@@ -14037,6 +9223,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2882093',
                'email1' => 'jmatheus@ucss.edu.pe',
                'email2' => 'jorgematheus@hotmail.com',
+               'user_id' => '838',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS EDGARDO',
@@ -14047,56 +9234,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lmatias@ucss.edu.pe',
                'email2' => 'luismatiash@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUZMILA',
-               'wdoc2' => 'MATOS',
-               'wdoc3' => 'DE PIZARRO',
-               'cdocente' => '002418',
-               'fono1' => '964759723',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luzmaria_543@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANA MARIA',
-               'wdoc2' => 'MATOS',
-               'wdoc3' => 'DE RODRIGUEZ',
-               'cdocente' => '002419',
-               'fono1' => '964417906',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'anamatrodiguez@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MAURICIA',
-               'wdoc2' => 'MATOS',
-               'wdoc3' => 'PAMPAS',
-               'cdocente' => '001572',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mary1397@hotmail.com',
+               'user_id' => '839',
           ]);
           DataUser::create([
                'wdoc1' => 'KARINA',
                'wdoc2' => 'MATTA',
-               'wdoc3' => 'SANTIVAÑEZ',
+               'wdoc3' => 'SANTIVAÃ‘EZ',
                'cdocente' => '000915',
                'fono1' => '',
                'fono2' => '3488246',
                'email1' => 'kmatta@ucss.edu.pe',
                'email2' => 'mattakerina@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIA ERNESTINA',
-               'wdoc2' => 'MATTA',
-               'wdoc3' => 'TITO',
-               'cdocente' => '002269',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '840',
           ]);
           DataUser::create([
                'wdoc1' => 'CINDY VANESA',
@@ -14107,6 +9256,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cmauricio@ucss.edu.pe',
                'email2' => 'cinva_ma34@hotmail.com',
+               'user_id' => '841',
           ]);
           DataUser::create([
                'wdoc1' => 'RIGOBERTO MIGLE',
@@ -14117,16 +9267,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4402794',
                'email1' => 'rmaya@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '842',
           ]);
           DataUser::create([
                'wdoc1' => 'ELVIRA ADELA',
                'wdoc2' => 'MAYO',
-               'wdoc3' => 'NUÑEZ DE FERNANDEZ',
+               'wdoc3' => 'NUÃ‘EZ DE FERNANDEZ',
                'cdocente' => '000120',
                'fono1' => '3498811',
                'fono2' => '4256157',
                'email1' => 'eamayo@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '843',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGELA GIOVANA',
@@ -14137,46 +9289,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5410594',
                'email1' => 'amaza@ucss.edu.pe',
                'email2' => 'angela.maza@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'MAZEKINA',
-               'wdoc3' => 'OSHIRO',
-               'cdocente' => '001479',
-               'fono1' => '',
-               'fono2' => '4855158',
-               'email1' => '',
-               'email2' => 'luis.mazekina@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SARA ISABEL',
-               'wdoc2' => 'MAZEKINA',
-               'wdoc3' => 'OSHIRO',
-               'cdocente' => '001457',
-               'fono1' => '965749767',
-               'fono2' => '5682111',
-               'email1' => '',
-               'email2' => 'isara19_88@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GERMAN FELIPE',
-               'wdoc2' => 'MCKENZIE',
-               'wdoc3' => 'GONZALEZ',
-               'cdocente' => '001372',
-               'fono1' => '',
-               'fono2' => '4485579',
-               'email1' => '',
-               'email2' => '95MCKENZIE@CUA.EDU',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SOFIA ELENA',
-               'wdoc2' => 'MEDINA',
-               'wdoc3' => 'ESCUDERO',
-               'cdocente' => '002414',
-               'fono1' => '986247370',
-               'fono2' => '4856714',
-               'email1' => '',
-               'email2' => 'sofi_4856714@hotmail.com',
+               'user_id' => '844',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM',
@@ -14187,6 +9300,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wmedina@ucss.edu.pe',
                'email2' => 'wmmf95@hotmail.com',
+               'user_id' => '845',
           ]);
           DataUser::create([
                'wdoc1' => 'ALDO WILLIAM',
@@ -14197,16 +9311,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'amedina@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LUIS',
-               'wdoc2' => 'MEDINA',
-               'wdoc3' => 'GUTIERREZ',
-               'cdocente' => '000073',
-               'fono1' => '',
-               'fono2' => '4240057',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '846',
           ]);
           DataUser::create([
                'wdoc1' => 'LUCERO CAROLL',
@@ -14217,16 +9322,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2229086',
                'email1' => 'lmedina@ucss.edu.pe',
                'email2' => 'luc.mehu@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'MEDINA',
-               'wdoc3' => 'HUAMANI',
-               'cdocente' => '001865',
-               'fono1' => '993690066',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ciudadinvisible7@hotmail.com',
+               'user_id' => '847',
           ]);
           DataUser::create([
                'wdoc1' => 'MAGALY BETZABE',
@@ -14237,36 +9333,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6863820',
                'email1' => 'bmedina@ucss.edu.pe',
                'email2' => 'betzymedina17@hotmail.com',
+               'user_id' => '848',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA MERCEDES',
                'wdoc2' => 'MEDINA',
-               'wdoc3' => 'MUÑOZ',
+               'wdoc3' => 'MUÃ‘OZ',
                'cdocente' => '001192',
                'fono1' => '989210634',
                'fono2' => '',
                'email1' => 'mmedinam@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ABRAHAM FRANCISCO',
-               'wdoc2' => 'MEDINA',
-               'wdoc3' => 'NAUPARI',
-               'cdocente' => '002145',
-               'fono1' => '987964935',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'abraham19fmn@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELENA',
-               'wdoc2' => 'MEDINA',
-               'wdoc3' => 'NAUPARI',
-               'cdocente' => '001732',
-               'fono1' => '956624043',
-               'fono2' => '2761780',
-               'email1' => '',
-               'email2' => 'medinaelena90@gmail.com',
+               'user_id' => '849',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA YOVANO',
@@ -14277,16 +9355,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mmedinap@ucss.edu.pe',
                'email2' => 'mariayovani@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS LENIN',
-               'wdoc2' => 'MEDINA',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '000964',
-               'fono1' => '999839269',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cmedina@esan.org.pe',
+               'user_id' => '850',
           ]);
           DataUser::create([
                'wdoc1' => 'MARTHA',
@@ -14297,16 +9366,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4653589',
                'email1' => 'mmedina@ucss.edu.pe',
                'email2' => 'marthamedinasirlopu@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR DEMETRIO',
-               'wdoc2' => 'MEDINA',
-               'wdoc3' => 'UGARTE',
-               'cdocente' => '002390',
-               'fono1' => '966011898',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'victormedina_34@hotmail.com',
+               'user_id' => '851',
           ]);
           DataUser::create([
                'wdoc1' => 'CIRO RIQUELME',
@@ -14317,6 +9377,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5216657',
                'email1' => 'cmedina@ucss.edu.pe',
                'email2' => 'ciromedina45@hotmail.com',
+               'user_id' => '852',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE',
@@ -14327,6 +9388,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmedina@ucss.edu.pe',
                'email2' => 'vicentevargas535@hotmail.com',
+               'user_id' => '853',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL',
@@ -14337,6 +9399,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2871907',
                'email1' => 'rmedina@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '854',
           ]);
           DataUser::create([
                'wdoc1' => 'MILAGRO DEL ROSARIO',
@@ -14347,6 +9410,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5221075',
                'email1' => 'mmedrano@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '855',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -14357,16 +9421,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2540225',
                'email1' => 'jmedrano@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS JAVIER',
-               'wdoc2' => 'MEDRANO',
-               'wdoc3' => 'HUAMANCHUMO',
-               'cdocente' => '001359',
-               'fono1' => '987120623',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'carlosmh18@gmail.com',
+               'user_id' => '856',
           ]);
           DataUser::create([
                'wdoc1' => 'JAIRO',
@@ -14377,6 +9432,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmejia@ucss.edu.pe',
                'email2' => 'jairo8615@gmail.com',
+               'user_id' => '857',
           ]);
           DataUser::create([
                'wdoc1' => 'ENA LUZ',
@@ -14387,6 +9443,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4713980',
                'email1' => 'emejia@ucss.edu.pe',
                'email2' => 'ena.mejia@gmail.com',
+               'user_id' => '858',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER FRAX',
@@ -14397,36 +9454,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wmejia@ucss.edu.pe',
                'email2' => 'walterfrax@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDDY PABLO',
-               'wdoc2' => 'MEJIA',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '002215',
-               'fono1' => '954482473',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'pamejva@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GERARDO AUGUSTO',
-               'wdoc2' => 'MELENDEZ',
-               'wdoc3' => 'COZ',
-               'cdocente' => '001542',
-               'fono1' => '996948418',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gmelendezc@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARITZA',
-               'wdoc2' => 'MELENDEZ',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '001718',
-               'fono1' => '998527216',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mamega16@hotmail.com',
+               'user_id' => '859',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIGI EDUARDO',
@@ -14437,16 +9465,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4728249',
                'email1' => 'lmelendez@ucss.edu.pe',
                'email2' => 'lemp_20@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILBER ERNESTO',
-               'wdoc2' => 'MELENDEZ',
-               'wdoc3' => 'SUAREZ',
-               'cdocente' => '002603',
-               'fono1' => '942659110',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wilberperu@hotmail.com',
+               'user_id' => '860',
           ]);
           DataUser::create([
                'wdoc1' => 'FERNANDO',
@@ -14457,6 +9476,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fmelendez@ucss.edu.pe',
                'email2' => 'fmelendezt@gmail.com',
+               'user_id' => '861',
           ]);
           DataUser::create([
                'wdoc1' => 'MARLLURY YNES',
@@ -14467,16 +9487,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mmelgarejoa@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER RICARDO',
-               'wdoc2' => 'MELGAREJO',
-               'wdoc3' => 'MORALES',
-               'cdocente' => '002190',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'javier.melgarejo.morales@gmail.com',
+               'user_id' => '862',
           ]);
           DataUser::create([
                'wdoc1' => 'MARGARITA GLADYS',
@@ -14487,16 +9498,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6396401',
                'email1' => 'mmelgarejo@ucss.edu.pe',
                'email2' => 'margaritamelgarejosalazar@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PATRICIA ELIZABETH',
-               'wdoc2' => 'MELGAREJO',
-               'wdoc3' => 'TRUJILLO',
-               'cdocente' => '002179',
-               'fono1' => '963514743',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'liapatriciamelga@gmail.com',
+               'user_id' => '863',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -14507,26 +9509,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4754934',
                'email1' => 'lmelo@ucss.edu.pe',
                'email2' => 'luis_melo14@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUGO BERARDO',
-               'wdoc2' => 'MENDEZ',
-               'wdoc3' => 'CASTILLEJO',
-               'cdocente' => '002604',
-               'fono1' => '959696017',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hugo_sys2@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARITZA',
-               'wdoc2' => 'MENDEZ',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '001715',
-               'fono1' => '998527216',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mumega_16@hotmail.com',
+               'user_id' => '864',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIX ROBERTO MARTIN',
@@ -14537,6 +9520,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '249603',
                'email1' => 'fmendez@ucss.edu.pe',
                'email2' => 'fmendez@continental.edu.pe',
+               'user_id' => '865',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGAR',
@@ -14547,6 +9531,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330381',
                'email1' => 'emendoza@ucss.edu.pe',
                'email2' => 'edgarmendozabello@yahoo.com',
+               'user_id' => '866',
           ]);
           DataUser::create([
                'wdoc1' => 'WILFREDO',
@@ -14557,6 +9542,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2639215',
                'email1' => 'wmendoza@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '867',
           ]);
           DataUser::create([
                'wdoc1' => 'ARMANDO',
@@ -14567,6 +9553,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'amendozac@ucss.edu.pe',
                'email2' => 'mendozacenteno@gmail.com',
+               'user_id' => '868',
           ]);
           DataUser::create([
                'wdoc1' => 'ALPINO',
@@ -14577,6 +9564,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'amendozag@ucss.edu.pe',
                'email2' => 'almegar@yahoo.es',
+               'user_id' => '869',
           ]);
           DataUser::create([
                'wdoc1' => 'AIDA LUZ',
@@ -14587,16 +9575,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3878616',
                'email1' => 'lmendoza@ucss.edu.pe',
                'email2' => 'aluzmn@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EVA',
-               'wdoc2' => 'MENDOZA',
-               'wdoc3' => 'ORELLANA',
-               'cdocente' => '002259',
-               'fono1' => '976085747',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'licevamo@hotmail.com',
+               'user_id' => '870',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA ELVIRA',
@@ -14607,16 +9586,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '200575',
                'email1' => 'rmendoza@ucss.edu.pe',
                'email2' => 'roelmepa@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANDRA',
-               'wdoc2' => 'MENDOZA',
-               'wdoc3' => 'PALACIOS',
-               'cdocente' => '001650',
-               'fono1' => '987419853',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sandra.mendozap@gmail.com',
+               'user_id' => '871',
           ]);
           DataUser::create([
                'wdoc1' => 'ADRIAN PEDRO',
@@ -14627,26 +9597,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4690905',
                'email1' => 'amendoza@ucss.edu.pe',
                'email2' => 'elprofe_am@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ISAIAS MARTIN',
-               'wdoc2' => 'MENDOZA',
-               'wdoc3' => 'TARAMONA',
-               'cdocente' => '000163',
-               'fono1' => '',
-               'fono2' => '4258851',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SIXTO SANTIAGO',
-               'wdoc2' => 'MENDOZA',
-               'wdoc3' => 'VILCA',
-               'cdocente' => '000103',
-               'fono1' => '',
-               'fono2' => '5402425',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '872',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA',
@@ -14657,6 +9608,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3551086',
                'email1' => 'rmenendez@ucss.edu.pe',
                'email2' => 'rositamm1@hotmail.com',
+               'user_id' => '873',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGEL RENATO',
@@ -14667,16 +9619,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ameneses@ucss.edu.pe',
                'email2' => 'angelrenatom@gmail.com',
+               'user_id' => '874',
           ]);
           DataUser::create([
                'wdoc1' => 'JANET SILVIA',
                'wdoc2' => 'MENESES',
-               'wdoc3' => 'ÑAÑACC HUARI',
+               'wdoc3' => 'Ã‘AÃ‘ACC HUARI',
                'cdocente' => '002027',
                'fono1' => '995448501',
                'fono2' => '',
                'email1' => 'jmeneses@ucss.edu.pe',
                'email2' => 'jalvine@hotmail.com',
+               'user_id' => '875',
           ]);
           DataUser::create([
                'wdoc1' => 'HUGO JAIME',
@@ -14687,26 +9641,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hmera@ucss.edu.pe',
                'email2' => 'hjmnav@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BERLIN',
-               'wdoc2' => 'MERA',
-               'wdoc3' => 'TANTALEAN',
-               'cdocente' => '001613',
-               'fono1' => '942813370',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bemeta4@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NELLY CECIBEL',
-               'wdoc2' => 'MERCADO',
-               'wdoc3' => 'MARQUEZ',
-               'cdocente' => '001384',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'nnell20@gmail.com',
+               'user_id' => '876',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ANTONIO',
@@ -14717,16 +9652,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4598233',
                'email1' => 'cmerino@ucss.edu.pe',
                'email2' => 'camzperu@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS GUILLERMO',
-               'wdoc2' => 'MERINO',
-               'wdoc3' => 'ZUMAETA',
-               'cdocente' => '000260',
-               'fono1' => '9160107',
-               'fono2' => '5211628',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '877',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -14737,6 +9663,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mmerma@ucss.edu.pe',
                'email2' => 'miguelangelmerma@gmail.com',
+               'user_id' => '878',
           ]);
           DataUser::create([
                'wdoc1' => 'ROGER MANUEL',
@@ -14747,16 +9674,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3652022',
                'email1' => 'rmestas@ucss.edu.pe',
                'email2' => 'rogermestas@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER ENRIQUE',
-               'wdoc2' => 'MEZA',
-               'wdoc3' => 'ESCOBEDO',
-               'cdocente' => '002005',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '879',
           ]);
           DataUser::create([
                'wdoc1' => 'FLOR DE MARIA',
@@ -14767,6 +9685,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5360682',
                'email1' => 'fmeza@ucss.edu.pe',
                'email2' => 'flormeza2000@yahoo.es',
+               'user_id' => '880',
           ]);
           DataUser::create([
                'wdoc1' => 'ERIKA LEUCADIA',
@@ -14777,6 +9696,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'emeza@ucss.edu.pe',
                'email2' => 'leuky_1@hotmail.com',
+               'user_id' => '881',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCO ANTONIO',
@@ -14787,6 +9707,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4262998',
                'email1' => 'mmeza@ucss.edu.pe',
                'email2' => 'marcomeza51@hotmail.com',
+               'user_id' => '882',
           ]);
           DataUser::create([
                'wdoc1' => 'SILVIO JESUS',
@@ -14797,46 +9718,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'smezarina@ucss.edu.pe',
                'email2' => 'sjmezarina@yahoo.com',
+               'user_id' => '883',
           ]);
           DataUser::create([
                'wdoc1' => 'MARY HELLEN MARIELA',
                'wdoc2' => 'MICHCA',
-               'wdoc3' => 'MAGUIÑA',
+               'wdoc3' => 'MAGUIÃ‘A',
                'cdocente' => '000977',
                'fono1' => '992912046',
                'fono2' => '5255474',
                'email1' => 'mmichca@ucss.edu.pe',
                'email2' => 'MARYMICHCA@GMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JACKELINE ANDREA',
-               'wdoc2' => 'MICHUE',
-               'wdoc3' => 'BOHARQUEZ',
-               'cdocente' => '002290',
-               'fono1' => '980351354',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'aladen@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS',
-               'wdoc2' => 'MIER Y TERAN',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '000901',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELENA ANATOLIEVNA',
-               'wdoc2' => 'MIJAILOVA',
-               'wdoc3' => 'DE REYES',
-               'cdocente' => '000250',
-               'fono1' => '9229365',
-               'fono2' => '4515817',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '884',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO ANTONIO',
@@ -14847,6 +9740,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pmilachay@ucss.edu.pe',
                'email2' => 'p_milachay@hotmail.com',
+               'user_id' => '885',
           ]);
           DataUser::create([
                'wdoc1' => 'AMERICO CARLOS',
@@ -14857,6 +9751,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5236406',
                'email1' => 'amilla@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '886',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -14867,6 +9762,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2353492',
                'email1' => 'mmilla@ucss.edu.pe',
                'email2' => 'millasamillanabogado@hotmail.com',
+               'user_id' => '887',
           ]);
           DataUser::create([
                'wdoc1' => 'NELIDA MARGARITA',
@@ -14877,16 +9773,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3872247',
                'email1' => 'nmillones@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSA BERTHA',
-               'wdoc2' => 'MILLONES',
-               'wdoc3' => 'RIVALLES',
-               'cdocente' => '000125',
-               'fono1' => '997018644',
-               'fono2' => '4523401',
-               'email1' => '',
-               'email2' => 'millones.rosa@gmail.com',
+               'user_id' => '888',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -14897,16 +9784,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5335586',
                'email1' => 'mminaya@ucss.edu.pe',
                'email2' => 'mmaa07@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HANS HIMBLER',
-               'wdoc2' => 'MINCHAN',
-               'wdoc3' => 'VELAYARCE',
-               'cdocente' => '002790',
-               'fono1' => '975329122',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hansminchan@gmail.com',
+               'user_id' => '889',
           ]);
           DataUser::create([
                'wdoc1' => 'MILDER EDGAR',
@@ -14917,6 +9795,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mminga@ucss.edu.pe',
                'email2' => 'mingaries@hotmail.com',
+               'user_id' => '890',
           ]);
           DataUser::create([
                'wdoc1' => 'ROLANDO NOLVERTHY',
@@ -14927,6 +9806,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rminga@ucss.edu.pe',
                'email2' => 'rolan1975@hotmail.com',
+               'user_id' => '891',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL JESUS',
@@ -14937,16 +9817,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mmiranda@ucss.edu.pe',
                'email2' => 'mmirandac@tc.gob.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADRIAN',
-               'wdoc2' => 'MIRANDA',
-               'wdoc3' => 'LOZANO',
-               'cdocente' => '001712',
-               'fono1' => '964896120',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'adriano_10_88@hotmail.com',
+               'user_id' => '892',
           ]);
           DataUser::create([
                'wdoc1' => 'ALI',
@@ -14957,36 +9828,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'amiranda@ucss.edu.pe',
                'email2' => 'miranda17018@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CINTIA',
-               'wdoc2' => 'MIRANDA',
-               'wdoc3' => 'RIOS',
-               'cdocente' => '002230',
-               'fono1' => '964010331',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cdemiranda-rios@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'MIRANDA',
-               'wdoc3' => 'RODRIGUEZ',
-               'cdocente' => '002216',
-               'fono1' => '999213163',
-               'fono2' => '2742716',
-               'email1' => '',
-               'email2' => 'mmirandaa6@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADAN JORDAN',
-               'wdoc2' => 'MITAC',
-               'wdoc3' => 'MELGAREJO',
-               'cdocente' => '001497',
-               'fono1' => '952685495',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ajmime_1130@hotmail.com',
+               'user_id' => '893',
           ]);
           DataUser::create([
                'wdoc1' => 'EVER RAMIRO',
@@ -14997,16 +9839,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4571586',
                'email1' => 'emitta@ucss.edu.pe',
                'email2' => 'emittacuray@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN DOMINGO',
-               'wdoc2' => 'MOGROVEJO',
-               'wdoc3' => 'ROSALES',
-               'cdocente' => '000784',
-               'fono1' => '999677595',
-               'fono2' => '4673267',
-               'email1' => '',
-               'email2' => 'jmogrov@gmail.com',
+               'user_id' => '894',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA ROCIO',
@@ -15017,16 +9850,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nmoises@ucss.edu.pe',
                'email2' => 'nomimg25@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ZOSIMO',
-               'wdoc2' => 'MOLINA',
-               'wdoc3' => 'ALVARADO',
-               'cdocente' => '000171',
-               'fono1' => '9099166',
-               'fono2' => '5233451',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '895',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD A.',
@@ -15037,16 +9861,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rmolocho@ucss.edu.pe',
                'email2' => 'ronaldmh@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIO',
-               'wdoc2' => 'MOLTENI',
-               'wdoc3' => '',
-               'cdocente' => '002136',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mario.molteni@unicatt.it',
+               'user_id' => '896',
           ]);
           DataUser::create([
                'wdoc1' => 'WILBER',
@@ -15057,6 +9872,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '222028',
                'email1' => 'wmondalgo@ucss.edu.pe',
                'email2' => 'wilito7603@hotmail.com',
+               'user_id' => '897',
           ]);
           DataUser::create([
                'wdoc1' => 'MARITZA ELIZABETH',
@@ -15067,6 +9883,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '507889',
                'email1' => 'mmondragon@ucss.edu.pe',
                'email2' => 'maemoli0226@gmail.com',
+               'user_id' => '898',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN',
@@ -15077,6 +9894,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4640888',
                'email1' => 'jmonroe@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '899',
           ]);
           DataUser::create([
                'wdoc1' => 'LEYTER CROVER',
@@ -15087,16 +9905,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lmontalban@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DAYANA MELISSA',
-               'wdoc2' => 'MONTAÑEZ',
-               'wdoc3' => 'LIÑAN',
-               'cdocente' => '000634',
-               'fono1' => '9517234',
-               'fono2' => '2261479',
-               'email1' => '',
-               'email2' => 'melissamontanez@yahoo.es',
+               'user_id' => '900',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MIGUEL',
@@ -15107,6 +9916,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmontemayor@ucss.edu.pe',
                'email2' => 'josemontemayor18@hotmail.com',
+               'user_id' => '901',
           ]);
           DataUser::create([
                'wdoc1' => 'SEGUNDO MANUEL',
@@ -15117,26 +9927,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'smontenegro@ucss.edu.pe',
                'email2' => 'manuel_monal@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR ANDRES',
-               'wdoc2' => 'MONTERO',
-               'wdoc3' => 'CAM',
-               'cdocente' => '000389',
-               'fono1' => '9351194',
-               'fono2' => '4576198',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TERESA CONSTANTINA',
-               'wdoc2' => 'MONTERO',
-               'wdoc3' => 'CAMPOS',
-               'cdocente' => '000023',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '902',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEXEI ARMANDO',
@@ -15147,16 +9938,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4723621',
                'email1' => 'amontero@ucss.edu.pe',
                'email2' => 'alexeimontero@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERT MOISES',
-               'wdoc2' => 'MONTERO',
-               'wdoc3' => 'TIMANA',
-               'cdocente' => '001657',
-               'fono1' => '988353529',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'moisesmontero@hotmail.com',
+               'user_id' => '903',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ANTONIO',
@@ -15167,16 +9949,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4468840',
                'email1' => 'amonterroso@ucss.edu.pe',
                'email2' => 'monterroso_coronado@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JESUS HUGO',
-               'wdoc2' => 'MONTES DE OCA',
-               'wdoc3' => 'SERPA',
-               'cdocente' => '001243',
-               'fono1' => '999902752',
-               'fono2' => '2736695',
-               'email1' => '',
-               'email2' => 'hugomontesdeoca@yahoo.es',
+               'user_id' => '904',
           ]);
           DataUser::create([
                'wdoc1' => 'NILDA DORIS',
@@ -15187,6 +9960,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nmontes@ucss.edu.pe',
                'email2' => 'nildadorismv@gmail.com',
+               'user_id' => '905',
           ]);
           DataUser::create([
                'wdoc1' => 'ROGER',
@@ -15197,6 +9971,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rmonteza@ucss.edu.pe',
                'email2' => 'acenjo_14march@hotmail.com',
+               'user_id' => '906',
           ]);
           DataUser::create([
                'wdoc1' => 'EVER OSWALDO',
@@ -15207,6 +9982,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'emonteza@ucss.edu.pe',
                'email2' => 'evermonteza_tj@hotmail.com',
+               'user_id' => '907',
           ]);
           DataUser::create([
                'wdoc1' => 'IMER',
@@ -15217,46 +9993,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'imonteza@ucss.edu.pe',
                'email2' => 'imer_10_8@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GUSTAVO',
-               'wdoc2' => 'MONTOYA',
-               'wdoc3' => 'CARDENAS',
-               'cdocente' => '001003',
-               'fono1' => '992771824',
-               'fono2' => '4764580',
-               'email1' => '',
-               'email2' => 'gmontoya@gmproyectos.com.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO AURELIO HERMILIO',
-               'wdoc2' => 'MONTOYA',
-               'wdoc3' => 'LAZARTE',
-               'cdocente' => '002329',
-               'fono1' => '996295800',
-               'fono2' => '4215012',
-               'email1' => '',
-               'email2' => 'montlazart@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERT ADOLFO',
-               'wdoc2' => 'MONTOYA',
-               'wdoc3' => 'MELENDEZ',
-               'cdocente' => '001881',
-               'fono1' => '999448291',
-               'fono2' => '2617140',
-               'email1' => '',
-               'email2' => 'robt-adm@hotmail.com',
+               'user_id' => '908',
           ]);
           DataUser::create([
                'wdoc1' => 'SILVIA MARIANA',
                'wdoc2' => 'MONTOYA',
-               'wdoc3' => 'SALDAÑA',
+               'wdoc3' => 'SALDAÃ‘A',
                'cdocente' => '001033',
                'fono1' => '940253632',
                'fono2' => '2245142',
                'email1' => 'smontoya@ucss.edu.pe',
                'email2' => 'smontoya@esan.org.pe',
+               'user_id' => '909',
           ]);
           DataUser::create([
                'wdoc1' => 'WILSON EDUARDO',
@@ -15267,6 +10015,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wmontoya@ucss.edu.pe',
                'email2' => 'purorockes@yahoo.es',
+               'user_id' => '910',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -15277,6 +10026,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmoquillaza@ucss.edu.pe',
                'email2' => 'jlmc061969@hotmail.com',
+               'user_id' => '911',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ENRIQUE',
@@ -15287,6 +10037,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lmora@ucss.edu.pe',
                'email2' => 'LUISMORA68@HOTMAIL.COM.PE',
+               'user_id' => '912',
           ]);
           DataUser::create([
                'wdoc1' => 'RAFAEL FELIX',
@@ -15297,6 +10048,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4247973',
                'email1' => 'rmora@ucss.edu.pe',
                'email2' => 'rafael.f.mora@hotmail.com',
+               'user_id' => '913',
           ]);
           DataUser::create([
                'wdoc1' => 'GUSTAVO LUIS',
@@ -15307,6 +10059,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6542042',
                'email1' => 'gmoral@ucss.edu.pe',
                'email2' => 'glml32@yahoo.es',
+               'user_id' => '914',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE DIONICIO',
@@ -15317,6 +10070,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jdmorales@ucss.edu.pe',
                'email2' => 'josemorales24@gmail.com',
+               'user_id' => '915',
           ]);
           DataUser::create([
                'wdoc1' => 'JAVIER JULIAN',
@@ -15327,16 +10081,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmorales@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NANCY',
-               'wdoc2' => 'MORALES',
-               'wdoc3' => 'MONTES',
-               'cdocente' => '001678',
-               'fono1' => '992765447',
-               'fono2' => '4931438',
-               'email1' => '',
-               'email2' => 'NANCYMRTES@HOTMAIL.COM',
+               'user_id' => '916',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAN ANTONY',
@@ -15347,6 +10092,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'amorales@ucss.edu.pe',
                'email2' => 'antony.morales@pucp.pe',
+               'user_id' => '917',
           ]);
           DataUser::create([
                'wdoc1' => 'MARTIN ALFONSSO',
@@ -15357,6 +10103,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mmorales@ucss.edu.pe',
                'email2' => 'martin_22967@hotmail.com',
+               'user_id' => '918',
           ]);
           DataUser::create([
                'wdoc1' => 'ROXANA',
@@ -15367,6 +10114,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5218431',
                'email1' => 'rmoraless@ucss.edu.pe',
                'email2' => 'flaquisrox@gmail.com',
+               'user_id' => '919',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FELIPE',
@@ -15377,6 +10125,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5743403',
                'email1' => 'lmorales@ucss.edu.pe',
                'email2' => 'felipemorales21@yahoo.es',
+               'user_id' => '920',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ALBERTO',
@@ -15387,26 +10136,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5710860',
                'email1' => 'cmorales@ucss.edu.pe',
                'email2' => 'morales_vasquez@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARTIN CESAR',
-               'wdoc2' => 'MORAN',
-               'wdoc3' => 'MOYANO',
-               'cdocente' => '002724',
-               'fono1' => '987508250',
-               'fono2' => '2542699',
-               'email1' => '',
-               'email2' => 'martinmoran25@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDY PEDRO',
-               'wdoc2' => 'MORAN',
-               'wdoc3' => 'VALENCIA',
-               'cdocente' => '001417',
-               'fono1' => '992718289',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ingfredymv@gmail.com',
+               'user_id' => '921',
           ]);
           DataUser::create([
                'wdoc1' => 'MAXIMO ALBERTO',
@@ -15417,6 +10147,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4201592',
                'email1' => 'mmoreno@ucss.edu.pe',
                'email2' => 'morenouni@gmail.com',
+               'user_id' => '922',
           ]);
           DataUser::create([
                'wdoc1' => 'JEAN PAUL',
@@ -15427,6 +10158,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '643232',
                'email1' => 'jmoreno@ucss.edu.pe',
                'email2' => 'morepablo55@gmail.com',
+               'user_id' => '923',
           ]);
           DataUser::create([
                'wdoc1' => 'TITO',
@@ -15437,26 +10169,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'tmorenop@ucss.edu.pe',
                'email2' => 'morenoperez.tito@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JENNY VICTORIA',
-               'wdoc2' => 'MORENO',
-               'wdoc3' => 'SAENZ',
-               'cdocente' => '002243',
-               'fono1' => '999247630',
-               'fono2' => '3322178',
-               'email1' => '',
-               'email2' => 'jenny_victoria75@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TORIBIO ARTEMIO',
-               'wdoc2' => 'MOREYRA',
-               'wdoc3' => 'INOCENCIO',
-               'cdocente' => '000090',
-               'fono1' => '9955273',
-               'fono2' => '4821034',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '924',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEX',
@@ -15467,6 +10180,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4259501',
                'email1' => 'amorillo@ucss.edu.pe',
                'email2' => 'alex_morillo@hotmail.com',
+               'user_id' => '925',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO LUCAS',
@@ -15477,6 +10191,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4718702',
                'email1' => 'emoron@ucss.edu.pe',
                'email2' => 'eduardo.moes@hotmail.com',
+               'user_id' => '926',
           ]);
           DataUser::create([
                'wdoc1' => 'NESTOR CESAR',
@@ -15487,6 +10202,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '461015',
                'email1' => 'ntacunan@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '927',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM EDUARDO',
@@ -15497,6 +10213,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5572233',
                'email1' => 'wmchiparra@ucss.edu.pe',
                'email2' => 'eduardomory@yahoo.es',
+               'user_id' => '928',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO RICARDO',
@@ -15507,16 +10224,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmoscoso@ucss.edu.pe',
                'email2' => '1304020@esan.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCOS',
-               'wdoc2' => 'MOSCOSO',
-               'wdoc3' => 'GARAY',
-               'cdocente' => '000612',
-               'fono1' => '',
-               'fono2' => '3852174',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '929',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL GIANCARLO',
@@ -15527,6 +10235,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4728803',
                'email1' => 'mmoscoso@ucss.edu.pe',
                'email2' => 'miguel.moscoso.p@upch.pe',
+               'user_id' => '930',
           ]);
           DataUser::create([
                'wdoc1' => 'NINA KARINNA',
@@ -15537,16 +10246,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mcancho@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FRANCISCA MARIANA',
-               'wdoc2' => 'MOULD',
-               'wdoc3' => 'SARAVIA VDA DE PEASE',
-               'cdocente' => '000834',
-               'fono1' => '98677012',
-               'fono2' => '4457069',
-               'email1' => '',
-               'email2' => 'curaca@terra.com.pe',
+               'user_id' => '931',
           ]);
           DataUser::create([
                'wdoc1' => 'RUTH HAYDEE',
@@ -15557,16 +10257,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5440123',
                'email1' => 'rmucha@ucss.edu.pe',
                'email2' => 'trabajos_ucss@hotmail.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RODOLFO PEDRO',
-               'wdoc2' => 'MUENTE',
-               'wdoc3' => 'URRUNAGA',
-               'cdocente' => '002542',
-               'fono1' => '959791642',
-               'fono2' => '2717764',
-               'email1' => '',
-               'email2' => 'rodolfo.muente@gmail.com',
+               'user_id' => '932',
           ]);
           DataUser::create([
                'wdoc1' => 'ALFREDO EULOGIO',
@@ -15577,6 +10268,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5578738',
                'email1' => 'amujica@ucss.edu.pe',
                'email2' => 'alfredo_mujica@hotmail.com',
+               'user_id' => '933',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -15587,16 +10279,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmujica@ucss.edu.pe',
                'email2' => 'juancarlos.mujica@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CORNELIO',
-               'wdoc2' => 'MULATILLO',
-               'wdoc3' => 'RUIZ',
-               'cdocente' => '002635',
-               'fono1' => '943175162',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'comurrey@hotmail.com',
+               'user_id' => '934',
           ]);
           DataUser::create([
                'wdoc1' => 'HONORIO ELOY',
@@ -15607,106 +10290,95 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4624128',
                'email1' => 'hmunive@ucss.edu.pe',
                'email2' => 'eloymunive@hotmail.com',
+               'user_id' => '935',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGAR JESUS',
-               'wdoc2' => 'MUÑANTE',
+               'wdoc2' => 'MUÃ‘ANTE',
                'wdoc3' => 'VILLAFUERTE',
                'cdocente' => '001398',
                'fono1' => '989293193',
                'fono2' => '5213508',
                'email1' => 'emunante@ucss.edu.pe',
                'email2' => 'edgarmunante@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDGARD RAYMUNDO',
-               'wdoc2' => 'MUÑICO',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '001004',
-               'fono1' => '992936679',
-               'fono2' => '5410712',
-               'email1' => '',
-               'email2' => 'emunico@yahoo.com',
+               'user_id' => '936',
           ]);
           DataUser::create([
                'wdoc1' => 'ABEL ALBERTO',
-               'wdoc2' => 'MUÑIZ',
+               'wdoc2' => 'MUÃ‘IZ',
                'wdoc3' => 'PAUCARMAYTA',
                'cdocente' => '001765',
                'fono1' => '999882984',
                'fono2' => '5231842',
                'email1' => 'amuniz@ucss.edu.pe',
                'email2' => 'aampic@hotmail.com',
+               'user_id' => '937',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCO HERBER',
-               'wdoc2' => 'MUÑIZ',
+               'wdoc2' => 'MUÃ‘IZ',
                'wdoc3' => 'PAUCARMAYTA',
                'cdocente' => '002064',
                'fono1' => '997013911',
                'fono2' => '',
                'email1' => 'mmuniz@ucss.edu.pe',
                'email2' => 'munizmh@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NEHIL INDALICIO',
-               'wdoc2' => 'MUÑOZ',
-               'wdoc3' => 'CASILDO',
-               'cdocente' => '000816',
-               'fono1' => '989891133',
-               'fono2' => '7912605',
-               'email1' => '',
-               'email2' => 'nehilmc@gmail.com',
+               'user_id' => '938',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
-               'wdoc2' => 'MUÑOZ',
+               'wdoc2' => 'MUÃ‘OZ',
                'wdoc3' => 'MARTICORENA',
                'cdocente' => '002682',
                'fono1' => '',
                'fono2' => '2466303',
                'email1' => 'jmunozm@ucss.edu.pe',
                'email2' => 'jorgemm1_@hotmail.com',
+               'user_id' => '939',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM AMADEO',
-               'wdoc2' => 'MUÑOZ',
+               'wdoc2' => 'MUÃ‘OZ',
                'wdoc3' => 'MARTICORENA',
                'cdocente' => '000007',
                'fono1' => '997514307',
                'fono2' => '5330063',
                'email1' => 'wmunoz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '940',
           ]);
           DataUser::create([
                'wdoc1' => 'JAVIER ANGEL',
-               'wdoc2' => 'MUÑOZ',
+               'wdoc2' => 'MUÃ‘OZ',
                'wdoc3' => 'QUICHIZ',
                'cdocente' => '001399',
                'fono1' => '966011938',
                'fono2' => '3976487',
                'email1' => 'jmunoz@ucss.edu.pe',
                'email2' => 'jmunozq93@hotmail.com',
+               'user_id' => '941',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS AVELINO',
-               'wdoc2' => 'MUÑOZ',
+               'wdoc2' => 'MUÃ‘OZ',
                'wdoc3' => 'RAMOS',
                'cdocente' => '001537',
                'fono1' => '997931477',
                'fono2' => '2737749',
                'email1' => 'lmunoz@ucss.edu.pe',
                'email2' => 'lumura06@hotmail.com',
+               'user_id' => '942',
           ]);
           DataUser::create([
                'wdoc1' => 'HERLINDA MARLENI',
-               'wdoc2' => 'MUÑOZ',
+               'wdoc2' => 'MUÃ‘OZ',
                'wdoc3' => 'TORRE',
                'cdocente' => '000660',
                'fono1' => '993273955',
                'fono2' => '5295994',
                'email1' => 'hmunoz@ucss.edu.pe',
                'email2' => 'munozm@mef.gob.pe',
+               'user_id' => '943',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO VICTOR',
@@ -15717,16 +10389,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7356726',
                'email1' => 'rmurillo@ucss.edu.pe',
                'email2' => 'rikymurillop@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EMILY JENNIFER',
-               'wdoc2' => 'MURO',
-               'wdoc3' => 'AVALOS',
-               'cdocente' => '001502',
-               'fono1' => '',
-               'fono2' => '5470175',
-               'email1' => '',
-               'email2' => 'chinita2186@hotmail.com',
+               'user_id' => '944',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID ANGEL DE JESUS',
@@ -15737,36 +10400,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dmuro@ucss.edu.pe',
                'email2' => 'david.muro.lopez@gmail.com',
+               'user_id' => '945',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA LAURA',
                'wdoc2' => 'MURO',
-               'wdoc3' => 'ZUÑIGA',
+               'wdoc3' => 'ZUÃ‘IGA',
                'cdocente' => '002412',
                'fono1' => '945286061',
                'fono2' => '',
                'email1' => 'mmuro@ucss.edu.pe',
                'email2' => 'maria.laura.muro@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PAOLO',
-               'wdoc2' => 'MUSSO',
-               'wdoc3' => '',
-               'cdocente' => '000759',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGELA',
-               'wdoc2' => 'NARAZA',
-               'wdoc3' => 'JIMENEZ',
-               'cdocente' => '001241',
-               'fono1' => '99005471',
-               'fono2' => '3444799',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '946',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM NICOLAS',
@@ -15777,6 +10422,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wnarro@ucss.edu.pe',
                'email2' => 'William.narro0812@gmail.com',
+               'user_id' => '947',
           ]);
           DataUser::create([
                'wdoc1' => 'HEROINA DINA',
@@ -15787,16 +10433,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4840017',
                'email1' => 'dnaupari@ucss.edu.pe',
                'email2' => 'leer_siempre@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MILUSKA BEATRIZ',
-               'wdoc2' => 'NAVARRETE',
-               'wdoc3' => 'ZAMORA',
-               'cdocente' => '000846',
-               'fono1' => '989922816',
-               'fono2' => '574043',
-               'email1' => '',
-               'email2' => 'miluskabeatriz@gmail.com',
+               'user_id' => '948',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO ALFREDO RICARDO',
@@ -15807,16 +10444,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5649143',
                'email1' => 'mnavarro@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ZOSIMO ARMANDO',
-               'wdoc2' => 'NAVARRO',
-               'wdoc3' => 'AYLAS',
-               'cdocente' => '000953',
-               'fono1' => '998011730',
-               'fono2' => '5310760',
-               'email1' => '',
-               'email2' => 'armandonavarroa@hotmail.com',
+               'user_id' => '949',
           ]);
           DataUser::create([
                'wdoc1' => 'TITO RICARDO',
@@ -15827,6 +10455,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5684913',
                'email1' => 'tnavarro@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '950',
           ]);
           DataUser::create([
                'wdoc1' => 'JANINA DEL ROCIO',
@@ -15837,16 +10466,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4143840',
                'email1' => 'jnavarro@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAFAEL',
-               'wdoc2' => 'NAVARRO',
-               'wdoc3' => 'MIRA',
-               'cdocente' => '000074',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '951',
           ]);
           DataUser::create([
                'wdoc1' => 'BERTHA CONSUELO',
@@ -15857,6 +10477,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4255139',
                'email1' => 'bnavarro@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '952',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGEL FERNANDO',
@@ -15867,6 +10488,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'anavarror@ucss.edu.pe',
                'email2' => 'angelnr22@msn.com',
+               'user_id' => '953',
           ]);
           DataUser::create([
                'wdoc1' => 'LEONORE LADY',
@@ -15877,6 +10499,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3546663',
                'email1' => 'lnavarro@ucss.edu.pe',
                'email2' => 'navale_10@hotmail.com',
+               'user_id' => '954',
           ]);
           DataUser::create([
                'wdoc1' => 'IGOR',
@@ -15887,6 +10510,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'inavarro@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '955',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO',
@@ -15897,6 +10521,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5267291',
                'email1' => 'rnavea@ucss.edu.pe',
                'email2' => 'cardo_navea@yahoo.es',
+               'user_id' => '956',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR AUGUSTO',
@@ -15907,6 +10532,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4206627',
                'email1' => 'cneira@ucss.edu.pe',
                'email2' => 'cesarneiramagan@hotmail.com',
+               'user_id' => '957',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUF SAUD',
@@ -15917,6 +10543,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5370832',
                'email1' => 'rneme@ucss.edu.pe',
                'email2' => 'raufneme@gmail.com',
+               'user_id' => '958',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS',
@@ -15927,6 +10554,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4333032',
                'email1' => 'Lneyradlr@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '959',
           ]);
           DataUser::create([
                'wdoc1' => 'NILDRE GERALDINE',
@@ -15937,6 +10565,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4333032',
                'email1' => 'nneyra@ucss.edu.pe',
                'email2' => 'ng_neyra@gmail.com',
+               'user_id' => '960',
           ]);
           DataUser::create([
                'wdoc1' => 'LIDIA',
@@ -15947,6 +10576,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2924593',
                'email1' => 'lneyrah@ucss.edu.pe',
                'email2' => 'lilyneyra6@yahoo.com',
+               'user_id' => '961',
           ]);
           DataUser::create([
                'wdoc1' => 'HILDA VICTORIA',
@@ -15957,6 +10587,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4604447',
                'email1' => 'hneyra@ucss.edu.pe',
                'email2' => 'hivenere01@yahoo.com',
+               'user_id' => '962',
           ]);
           DataUser::create([
                'wdoc1' => 'VIRGINIA ISABEL',
@@ -15967,36 +10598,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2391975',
                'email1' => 'vniebles@ucss.edu.pe',
                'email2' => 'virginiaisab@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN MATEO',
-               'wdoc2' => 'NIETO',
-               'wdoc3' => 'QUINTANA',
-               'cdocente' => '000858',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jumanquin@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MAYDA ALVINA',
-               'wdoc2' => 'NIEVA',
-               'wdoc3' => 'VILLEGAS',
-               'cdocente' => '001802',
-               'fono1' => '953966680',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'arqmaydanieva@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FABIAN ENRIQUE',
-               'wdoc2' => 'NIMA',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '002321',
-               'fono1' => '931274535',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'fabinima@hotmail.com',
+               'user_id' => '963',
           ]);
           DataUser::create([
                'wdoc1' => 'JOEL',
@@ -16007,6 +10609,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '249649',
                'email1' => 'jninanya@ucss.edu.pe',
                'email2' => 'joniro_111@hotmail.com',
+               'user_id' => '964',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE YAMSER',
@@ -16017,6 +10620,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2933926',
                'email1' => 'jnoel@ucss.edu.pe',
                'email2' => 'yamser_noel@hotmail.com',
+               'user_id' => '965',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ARTURO',
@@ -16027,16 +10631,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lnolasco@ucss.edu.pe',
                'email2' => 'riojaperuluis@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS RICARDO',
-               'wdoc2' => 'NORIEGA',
-               'wdoc3' => 'FIGUEROA',
-               'cdocente' => '001023',
-               'fono1' => '942680070',
-               'fono2' => '6229670',
-               'email1' => '',
-               'email2' => 'ricardonoriegafigueroa@yahoo.com.pe',
+               'user_id' => '966',
           ]);
           DataUser::create([
                'wdoc1' => 'TATIANA CAROLINA',
@@ -16047,6 +10642,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5935401',
                'email1' => 'tnoriega@ucss.edu.pe',
                'email2' => 'tnoriegah@gmail.com',
+               'user_id' => '967',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE',
@@ -16057,96 +10653,95 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5370862',
                'email1' => 'jnoriega@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '968',
           ]);
           DataUser::create([
                'wdoc1' => 'BETSY JUANA',
-               'wdoc2' => 'NUÑEZ',
+               'wdoc2' => 'NUÃ‘EZ',
                'wdoc3' => 'APOLINARIO',
                'cdocente' => '002736',
                'fono1' => '949718014',
                'fono2' => '',
                'email1' => 'bnunez@ucss.edu.pe',
                'email2' => 'benuap_juana@hotmail.com',
+               'user_id' => '969',
           ]);
           DataUser::create([
                'wdoc1' => 'ERICKA MILAGROS',
-               'wdoc2' => 'NUÑEZ',
+               'wdoc2' => 'NUÃ‘EZ',
                'wdoc3' => 'CORREA',
                'cdocente' => '002351',
                'fono1' => '968966135',
                'fono2' => '',
                'email1' => 'enunez@ucss.edu.pe',
                'email2' => 'emilly22@hotmail.com',
+               'user_id' => '970',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA MARIA',
-               'wdoc2' => 'NUÑEZ',
+               'wdoc2' => 'NUÃ‘EZ',
                'wdoc3' => 'MANRIQUE',
                'cdocente' => '000351',
                'fono1' => '993520943',
                'fono2' => '2757280',
                'email1' => 'amnunez@ucss.edu.pe',
                'email2' => 'amnunez2000@hotmail.com',
+               'user_id' => '971',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS GUILLERMO',
-               'wdoc2' => 'NUÑEZ',
+               'wdoc2' => 'NUÃ‘EZ',
                'wdoc3' => 'SOTO',
                'cdocente' => '000786',
                'fono1' => '998083422',
                'fono2' => '3878616',
                'email1' => 'lnunez@ucss.edu.pe',
                'email2' => 'luis3400@speedy.com.pe',
+               'user_id' => '972',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FERNANDO',
-               'wdoc2' => 'NUÑEZ',
+               'wdoc2' => 'NUÃ‘EZ',
                'wdoc3' => 'VILELA',
                'cdocente' => '001528',
                'fono1' => '960347649',
                'fono2' => '',
                'email1' => 'lfnunez@ucss.edu.pe',
                'email2' => 'luis.nunezv@cip.org.pe',
+               'user_id' => '973',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ANTONIO',
-               'wdoc2' => 'NUREÑA',
+               'wdoc2' => 'NUREÃ‘A',
                'wdoc3' => 'PRADO',
                'cdocente' => '000464',
                'fono1' => '',
                'fono2' => '5684934',
                'email1' => 'jnurena@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '974',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM JUAN',
-               'wdoc2' => 'ÑAUPARI',
+               'wdoc2' => 'Ã‘AUPARI',
                'wdoc3' => 'BALVIN',
                'cdocente' => '001401',
                'fono1' => '991572506',
                'fono2' => '2323715',
                'email1' => 'wnaupari@ucss.edu.pe',
                'email2' => 'williamnaupari@gmail.com',
+               'user_id' => '975',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL OSCAR',
-               'wdoc2' => 'ÑIQUE',
+               'wdoc2' => 'Ã‘IQUE',
                'wdoc3' => 'CADILLO',
                'cdocente' => '000046',
                'fono1' => '',
                'fono2' => '2612475',
                'email1' => 'monc@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HENRY ROYER',
-               'wdoc2' => 'ÑIQUEN',
-               'wdoc3' => 'NECIOSUP',
-               'cdocente' => '001873',
-               'fono1' => '994749747',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'henry.niquen.n@upch.pe',
+               'user_id' => '976',
           ]);
           DataUser::create([
                'wdoc1' => 'JHON HERBERT',
@@ -16157,6 +10752,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jobispog@ucss.edu.pe',
                'email2' => 'jhon_herbert@hotmail.com',
+               'user_id' => '977',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE EULER',
@@ -16167,26 +10763,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'joblitas@ucss.edu.pe',
                'email2' => 'ed_euler_j@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILSON',
-               'wdoc2' => 'OBLITAS',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '001616',
-               'fono1' => '968807120',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'enith261@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERTO CARLOS',
-               'wdoc2' => 'OBLITAS',
-               'wdoc3' => 'OTERO',
-               'cdocente' => '001685',
-               'fono1' => '957899223',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'comercialcoloco@hotmail.com',
+               'user_id' => '978',
           ]);
           DataUser::create([
                'wdoc1' => 'MAXIMO',
@@ -16197,6 +10774,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3813139',
                'email1' => 'mobregon@ucss.edu.pe',
                'email2' => 'maxobregon@gmail.com',
+               'user_id' => '979',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MAXIMO',
@@ -16207,66 +10785,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5671434',
                'email1' => 'jochoa@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE RAFAEL',
-               'wdoc2' => 'OCUPA',
-               'wdoc3' => 'RUIZ',
-               'cdocente' => '001669',
-               'fono1' => '995526149',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'estadisticorafaelocupa@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JEAN CARLO',
-               'wdoc2' => 'OJEDA',
-               'wdoc3' => 'TUNQUE',
-               'cdocente' => '001734',
-               'fono1' => '992852188',
-               'fono2' => '3437828',
-               'email1' => '',
-               'email2' => 'jeankausmp@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE RAUL',
-               'wdoc2' => 'OLAECHEA',
-               'wdoc3' => 'CATTER',
-               'cdocente' => '002006',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROYDICHAN',
-               'wdoc2' => 'OLANO',
-               'wdoc3' => 'AREVALO',
-               'cdocente' => '001895',
-               'fono1' => '968934334',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rolar_77@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'OLAYA',
-               'wdoc3' => 'ALVARADO',
-               'cdocente' => '001448',
-               'fono1' => '244986',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'olayaalvaradoj@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RUBER DENNYS',
-               'wdoc2' => 'OLAYA',
-               'wdoc3' => 'LUNA',
-               'cdocente' => '001723',
-               'fono1' => '972859440',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'RDOLAYA27@GMAIL.COM',
+               'user_id' => '980',
           ]);
           DataUser::create([
                'wdoc1' => 'ISRAEL WLADIMIR',
@@ -16277,16 +10796,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4830771',
                'email1' => 'iolaya@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEJANDRO MARTIN',
-               'wdoc2' => 'OLIVA',
-               'wdoc3' => 'NAVARRO',
-               'cdocente' => '002088',
-               'fono1' => '989086986',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alejandrooliva26@hotmai.com',
+               'user_id' => '981',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ALEJANDRO',
@@ -16297,6 +10807,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6219810',
                'email1' => 'joliva@ucss.edu.pe',
                'email2' => 'jorgeoliva26@gmail.com',
+               'user_id' => '982',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO EDMUNDO',
@@ -16307,6 +10818,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4781269',
                'email1' => 'eolivares@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '983',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS REYNALDO',
@@ -16317,36 +10829,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '9999999',
                'email1' => 'jolivares@ucss.edu.pe',
                'email2' => 'tulosabes62@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS SEBASTIAN',
-               'wdoc2' => 'OLIVERA',
-               'wdoc3' => 'SOTO',
-               'cdocente' => '002396',
-               'fono1' => '964675046',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'efolivera@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'OLOYA',
-               'wdoc3' => 'MANRIQUE',
-               'cdocente' => '000859',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ESTHER',
-               'wdoc2' => 'OMONTE',
-               'wdoc3' => 'LLIUYA',
-               'cdocente' => '000482',
-               'fono1' => '',
-               'fono2' => '5609589',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '984',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ALICIA',
@@ -16357,56 +10840,29 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'montaneda@ucss.edu.pe',
                'email2' => 'alicia.ontaneda@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE',
-               'wdoc2' => 'ORBEGOSO',
-               'wdoc3' => 'RABINES',
-               'cdocente' => '001291',
-               'fono1' => '975588440',
-               'fono2' => '4511874',
-               'email1' => '',
-               'email2' => 'orbegosojorge@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CAROL GEIMY',
-               'wdoc2' => 'ORDOÑEZ',
-               'wdoc3' => 'AQUINO',
-               'cdocente' => '001281',
-               'fono1' => '993958658',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ordonez.carol26@gmail.com',
+               'user_id' => '985',
           ]);
           DataUser::create([
                'wdoc1' => 'IRIS CECILIA',
-               'wdoc2' => 'ORDOÑEZ',
+               'wdoc2' => 'ORDOÃ‘EZ',
                'wdoc3' => 'GUERRERO',
                'cdocente' => '002447',
                'fono1' => '993546866',
                'fono2' => '',
                'email1' => 'iordonez@ucss.edu.pe',
                'email2' => 'iriscecilia10@hotmail.com',
+               'user_id' => '986',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ALEXANDER',
-               'wdoc2' => 'ORDOÑEZ',
+               'wdoc2' => 'ORDOÃ‘EZ',
                'wdoc3' => 'GUEVARA',
                'cdocente' => '002662',
                'fono1' => '942800179',
                'fono2' => '',
                'email1' => 'jordonez@ucss.edu.pe',
                'email2' => 'jordonezguevara@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN',
-               'wdoc2' => 'ORDOÑEZ',
-               'wdoc3' => '',
-               'cdocente' => '000412',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '987',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL JAVIER',
@@ -16417,36 +10873,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2438695',
                'email1' => 'rore@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CECILIA',
-               'wdoc2' => 'ORE',
-               'wdoc3' => 'SOSA',
-               'cdocente' => '002803',
-               'fono1' => '948072967',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'coredc@mpfn.go.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BRUNA ISABEL',
-               'wdoc2' => 'ORELLANA',
-               'wdoc3' => 'SALOME',
-               'cdocente' => '002217',
-               'fono1' => '56666633',
-               'fono2' => '2232159',
-               'email1' => '',
-               'email2' => 'brunaorel100@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RANULFO',
-               'wdoc2' => 'ORIHUELA',
-               'wdoc3' => 'COAQUIRA',
-               'cdocente' => '001108',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '988',
           ]);
           DataUser::create([
                'wdoc1' => 'JHON RICHARD',
@@ -16457,36 +10884,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jorosco@ucss.edu.pe',
                'email2' => 'jrnadaes@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BELIZARIO',
-               'wdoc2' => 'OROSCO',
-               'wdoc3' => 'FERNANDEZ',
-               'cdocente' => '000263',
-               'fono1' => '8972994',
-               'fono2' => '4266838',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDILBERTO',
-               'wdoc2' => 'OROSCO',
-               'wdoc3' => 'USCAMAYTA',
-               'cdocente' => '001629',
-               'fono1' => '986632606',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'edi_orosco@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR AUGUSTO',
-               'wdoc2' => 'ORREGO',
-               'wdoc3' => 'AZULA',
-               'cdocente' => '002007',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '989',
           ]);
           DataUser::create([
                'wdoc1' => 'MIRTHA JUANA',
@@ -16497,36 +10895,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5333618',
                'email1' => 'mjorrillo@ucss.edu.pe',
                'email2' => 'mirtha_ascama@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANIEL JOSE',
-               'wdoc2' => 'ORTEGA',
-               'wdoc3' => 'BRICEÑO',
-               'cdocente' => '001490',
-               'fono1' => '969244960',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'danielortega777@hotmail.com',
+               'user_id' => '990',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS',
                'wdoc2' => 'ORTEGA',
-               'wdoc3' => 'MUÑOZ',
+               'wdoc3' => 'MUÃ‘OZ',
                'cdocente' => '001410',
                'fono1' => '994506182',
                'fono2' => '5210470',
                'email1' => 'cortega@ucss.edu.pe',
                'email2' => 'cortega_m19@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FLOIRAN AUGUSTO',
-               'wdoc2' => 'ORTEGA',
-               'wdoc3' => 'SANTILLAN',
-               'cdocente' => '000936',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '991',
           ]);
           DataUser::create([
                'wdoc1' => 'DOIVE SALVADOR',
@@ -16537,6 +10917,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4894887',
                'email1' => 'dortegas@ucss.edu.pe',
                'email2' => 'sortega611@gmail.com',
+               'user_id' => '992',
           ]);
           DataUser::create([
                'wdoc1' => 'MARITZA MORAYMA',
@@ -16547,6 +10928,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4351621',
                'email1' => 'mortiz@ucss.edu.pe',
                'email2' => 'maritza.ortiz_uis@yahoo.es',
+               'user_id' => '993',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE WALTER',
@@ -16557,16 +10939,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jortizb@ucss.edu.pe',
                'email2' => 'walterortiz24@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ANGEL',
-               'wdoc2' => 'ORTIZ',
-               'wdoc3' => 'BLANCAS',
-               'cdocente' => '002442',
-               'fono1' => '994991361',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'aangeloortiz@gmail.com',
+               'user_id' => '994',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO',
@@ -16577,6 +10950,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5681275',
                'email1' => 'eortiz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '995',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID RUBEN',
@@ -16587,6 +10961,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dortiz@ucss.edu.pe',
                'email2' => 'rubenortizdamiano@gmail.com',
+               'user_id' => '996',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -16597,6 +10972,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4770022',
                'email1' => 'jortizd@ucss.edu.pe',
                'email2' => 'contacto@ucssvirtual.edu.pe',
+               'user_id' => '997',
           ]);
           DataUser::create([
                'wdoc1' => 'YONATHAN JOSUE',
@@ -16607,16 +10983,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6825441',
                'email1' => 'yortiz@ucss.edu.pe',
                'email2' => 'yonatanortiz79@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JEANNE LUZ',
-               'wdoc2' => 'ORTIZ',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '000317',
-               'fono1' => '9427150',
-               'fono2' => '4854295',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '998',
           ]);
           DataUser::create([
                'wdoc1' => 'KATHERINE JENNY',
@@ -16627,6 +10994,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'kortiz@ucss.edu.pe',
                'email2' => 'kathyortiz95@gmail.com',
+               'user_id' => '999',
           ]);
           DataUser::create([
                'wdoc1' => 'NIRIA',
@@ -16637,26 +11005,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nortiz@ucss.edu.pe',
                'email2' => 'niria3011@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA LUZ',
-               'wdoc2' => 'OSCATEGUI',
-               'wdoc3' => 'ARTETA',
-               'cdocente' => '001482',
-               'fono1' => '947444987',
-               'fono2' => '2651453',
-               'email1' => '',
-               'email2' => 'maarieta7@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GASTON JEREMIAS',
-               'wdoc2' => 'OSCATEGUI',
-               'wdoc3' => 'NAJERA',
-               'cdocente' => '002303',
-               'fono1' => '988466767',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gaston1567@gmail.com',
+               'user_id' => '1000',
           ]);
           DataUser::create([
                'wdoc1' => 'ALVARO JAVIER',
@@ -16667,16 +11016,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4851556',
                'email1' => 'aosorio@ucss.edu.pe',
                'email2' => 'alvaroosorio78@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ARTURO',
-               'wdoc2' => 'OTINIANO',
-               'wdoc3' => 'ARTEAGA',
-               'cdocente' => '002794',
-               'fono1' => '962346141',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jotiaga67@gmail.com',
+               'user_id' => '1001',
           ]);
           DataUser::create([
                'wdoc1' => 'GRACIELA RAQUEL',
@@ -16687,6 +11027,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2719532',
                'email1' => 'gotsu@ucss.edu.pe',
                'email2' => 'graciela.otsu@yahoo.it',
+               'user_id' => '1002',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEXIS',
@@ -16697,6 +11038,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aovalle@ucss.edu.pe',
                'email2' => 'lyroe_aqp@hotmail.com',
+               'user_id' => '1003',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL EDUARDO',
@@ -16707,6 +11049,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3332319',
                'email1' => 'moyola@ucss.edu.pe',
                'email2' => 'manu_524@hotmail.com',
+               'user_id' => '1004',
           ]);
           DataUser::create([
                'wdoc1' => 'EVELYN',
@@ -16717,6 +11060,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5402574',
                'email1' => 'epaan@ucss.edu.pe',
                'email2' => 'evelynpq@gmail.com',
+               'user_id' => '1005',
           ]);
           DataUser::create([
                'wdoc1' => 'DARINKA',
@@ -16727,26 +11071,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dpacaya@ucss.edu.pe',
                'email2' => 'darinkapacaya@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BEDER',
-               'wdoc2' => 'PACAYA',
-               'wdoc3' => 'SHAHUANO',
-               'cdocente' => '001937',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bederps@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RENZO RICARDO',
-               'wdoc2' => 'PACCINI',
-               'wdoc3' => 'VEGA',
-               'cdocente' => '002008',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1006',
           ]);
           DataUser::create([
                'wdoc1' => 'GIOVANNI',
@@ -16757,6 +11082,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'paccosi@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1007',
           ]);
           DataUser::create([
                'wdoc1' => 'SALOME',
@@ -16767,16 +11093,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5563664',
                'email1' => 'spaccotaipe@ucss.edu.pe',
                'email2' => 'salome_1405@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KRISTHIAN LUIS',
-               'wdoc2' => 'PACHAS',
-               'wdoc3' => 'CONDOR',
-               'cdocente' => '002281',
-               'fono1' => '959275829',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'kristhianluis@kpachascoondor.com',
+               'user_id' => '1008',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ANTONIO',
@@ -16787,16 +11104,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3326866',
                'email1' => 'cpachas@ucss.edu.pe',
                'email2' => 'cesarpachas@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ESTHER',
-               'wdoc2' => 'PACHE',
-               'wdoc3' => 'MAURICIO',
-               'cdocente' => '002301',
-               'fono1' => '978075025',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mariamlester878@gmail.com',
+               'user_id' => '1009',
           ]);
           DataUser::create([
                'wdoc1' => 'LEMUEL ELMER',
@@ -16807,26 +11115,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3975204',
                'email1' => 'lpacheco@ucss.edu.pe',
                'email2' => 'elmerpclaros@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ESTHE',
-               'wdoc2' => 'PACHECO',
-               'wdoc3' => 'MAURICIO',
-               'cdocente' => '002302',
-               'fono1' => '978075025',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mariamlester878@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOHNY AURELIO',
-               'wdoc2' => 'PACHECO',
-               'wdoc3' => 'MEDINA',
-               'cdocente' => '000974',
-               'fono1' => '999666863',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jpachmedi@hotmail.com',
+               'user_id' => '1010',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -16837,26 +11126,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5780721',
                'email1' => 'cpacheco@ucss.edu.pe',
                'email2' => 'cpacheco@estudiopachecoalza.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEX',
-               'wdoc2' => 'PACHECO',
-               'wdoc3' => 'MOYA',
-               'cdocente' => '000063',
-               'fono1' => '',
-               'fono2' => '4338716',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO',
-               'wdoc2' => 'PACHERRES',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '001462',
-               'fono1' => '945839194',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'pedro-7512@hotmail.com',
+               'user_id' => '1011',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS DELFIN',
@@ -16867,16 +11137,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2327768',
                'email1' => 'cpacifico@ucss.edu.pe',
                'email2' => 'carlosdpacifico@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEXANDER',
-               'wdoc2' => 'PACORICONA',
-               'wdoc3' => 'QUISPE',
-               'cdocente' => '001316',
-               'fono1' => '942497594',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'Alexander_p_q78@hotmail.com',
+               'user_id' => '1012',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN LIZ',
@@ -16887,16 +11148,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cpadilla@ucss.edu.pe',
                'email2' => 'padillaromero92@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDY',
-               'wdoc2' => 'PAINADO',
-               'wdoc3' => 'VIDAL',
-               'cdocente' => '002248',
-               'fono1' => '967999059',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ffppvv@hotmail.com',
+               'user_id' => '1013',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAN EDUARDO',
@@ -16907,16 +11159,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wpalacios@ucss.edu.pe',
                'email2' => 'willians_7294@hotmail.com',
+               'user_id' => '1014',
           ]);
           DataUser::create([
                'wdoc1' => 'MERCEDES RENEE',
                'wdoc2' => 'PALACIOS',
-               'wdoc3' => 'DE BRICEÑO',
+               'wdoc3' => 'DE BRICEÃ‘O',
                'cdocente' => '002354',
                'fono1' => '968060260',
                'fono2' => '',
                'email1' => 'mpalacios@ucss.edu.pe',
                'email2' => 'mechedeb@yahoo.es',
+               'user_id' => '1015',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO MIGUEL',
@@ -16927,6 +11181,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '378421',
                'email1' => 'ppalacios@ucss.edu.pe',
                'email2' => 'ppalacios@hotmail.com',
+               'user_id' => '1016',
           ]);
           DataUser::create([
                'wdoc1' => 'VIVIANA DEL ROSARIO',
@@ -16937,6 +11192,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vpalacios@ucss.edu.pe',
                'email2' => 'vivipalaciosf@hotmail.com',
+               'user_id' => '1017',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ENRIQUE',
@@ -16947,6 +11203,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4203138',
                'email1' => 'cpalacios@ucss.edu.pe',
                'email2' => 'palacios_asociados@hotmail.com',
+               'user_id' => '1018',
           ]);
           DataUser::create([
                'wdoc1' => 'GLORIA VERONICA',
@@ -16957,6 +11214,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gpalacios@ucss.edu.pe',
                'email2' => 'verogiss22@hotmail.com',
+               'user_id' => '1019',
           ]);
           DataUser::create([
                'wdoc1' => 'MARITZA YSOLDA',
@@ -16967,36 +11225,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6690044',
                'email1' => 'mpalomares@ucss.edu.pe',
                'email2' => 'maritapalorosa@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARILUZ SEVERINA',
-               'wdoc2' => 'PALOMINO',
-               'wdoc3' => 'OCHOA DE GERBI',
-               'cdocente' => '002256',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALFREDO',
-               'wdoc2' => 'PALOMINO',
-               'wdoc3' => 'OCHOA',
-               'cdocente' => '002170',
-               'fono1' => '942615924',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'apofre@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARISOL',
-               'wdoc2' => 'PALOMINO',
-               'wdoc3' => 'PALOMINO',
-               'cdocente' => '002499',
-               'fono1' => '966007878',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marisolw3uvpx8t@hotmail.com',
+               'user_id' => '1020',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ISABEL',
@@ -17007,36 +11236,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mpalomino@ucss.edu.pe',
                'email2' => 'bukysabel@hotmail.com',
+               'user_id' => '1021',
           ]);
           DataUser::create([
                'wdoc1' => 'GLADYS ZULY',
                'wdoc2' => 'PALOMINO',
-               'wdoc3' => 'VELAPATIÑO',
+               'wdoc3' => 'VELAPATIÃ‘O',
                'cdocente' => '001693',
                'fono1' => '994670695',
                'fono2' => '2659700',
                'email1' => 'gpalomino@ucss.edu.pe',
                'email2' => 'zulypv@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DORA ALICIA',
-               'wdoc2' => 'PALOMO',
-               'wdoc3' => 'VILLANUEVA',
-               'cdocente' => '000837',
-               'fono1' => '',
-               'fono2' => '4673267',
-               'email1' => '',
-               'email2' => 'dpalomo@pucp.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ESTEBAN',
-               'wdoc2' => 'PANDURO',
-               'wdoc3' => 'LABAJOS',
-               'cdocente' => '001688',
-               'fono1' => '942957264',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'estebanpandura@yahoo.com',
+               'user_id' => '1022',
           ]);
           DataUser::create([
                'wdoc1' => 'ISBERT JOSE',
@@ -17047,16 +11258,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4247933',
                'email1' => 'ipanez@ucss.edu.pe',
                'email2' => 'ipanezw@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ARTURO',
-               'wdoc2' => 'PANTA',
-               'wdoc3' => 'BERRIOS',
-               'cdocente' => '001169',
-               'fono1' => '998574801',
-               'fono2' => '2230230',
-               'email1' => '',
-               'email2' => 'artpanta@hotmail.com',
+               'user_id' => '1023',
           ]);
           DataUser::create([
                'wdoc1' => 'VERONICA',
@@ -17067,6 +11269,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vpantoja@ucss.edu.pe',
                'email2' => 'vpantojar6873@hotmail.com',
+               'user_id' => '1024',
           ]);
           DataUser::create([
                'wdoc1' => 'YAZMYN LIZETTE',
@@ -17077,16 +11280,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4250188',
                'email1' => 'yparaguay@ucss.edu.pe',
                'email2' => 'yazmynlizette@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YUL GERONIMO',
-               'wdoc2' => 'PARDO',
-               'wdoc3' => 'BERASTEIN',
-               'cdocente' => '002067',
-               'fono1' => '962708128',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ygpb@hotmail.com',
+               'user_id' => '1025',
           ]);
           DataUser::create([
                'wdoc1' => 'FIORELLA CRISTINA',
@@ -17097,6 +11291,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fpardo@ucss.edu.pe',
                'email2' => 'fpardocastillo@gmail.com',
+               'user_id' => '1026',
           ]);
           DataUser::create([
                'wdoc1' => 'FREDY ROMAN',
@@ -17107,16 +11302,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fparedes@ucss.edu.pe',
                'email2' => 'fredyquimico@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALDO JOEL',
-               'wdoc2' => 'PAREDES',
-               'wdoc3' => 'GIRALDO',
-               'cdocente' => '001704',
-               'fono1' => '997703697',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'aldojpg@hotmail.com',
+               'user_id' => '1027',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA SALOME',
@@ -17127,16 +11313,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '693963',
                'email1' => 'mparedes@ucss.edu.pe',
                'email2' => 'mariapa68@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSA',
-               'wdoc2' => 'PAREDES',
-               'wdoc3' => 'VILLEGAS',
-               'cdocente' => '001527',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rosa_yarenis@hotmail.com',
+               'user_id' => '1028',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA CECILIA',
@@ -17147,36 +11324,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'apareja@ucss.edu.pe',
                'email2' => 'anacepareja@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSABEL ROBERTINA',
-               'wdoc2' => 'PAREJA',
-               'wdoc3' => 'SALAS',
-               'cdocente' => '002433',
-               'fono1' => '968133790',
-               'fono2' => '2424802',
-               'email1' => '',
-               'email2' => 'rpmaestra11@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'PARRAGA',
-               'wdoc3' => 'CORREA',
-               'cdocente' => '001861',
-               'fono1' => '981322033',
-               'fono2' => '3652234',
-               'email1' => '',
-               'email2' => 'mparragac@outlook.com.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YUDITH MADELEINE',
-               'wdoc2' => 'PASACA',
-               'wdoc3' => 'LUCANA',
-               'cdocente' => '002576',
-               'fono1' => '951595195',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yudyp45@hotmail.com',
+               'user_id' => '1029',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -17187,16 +11335,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cpasache@ucss.edu.pe',
                'email2' => 'caralpaya@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'PASCO',
-               'wdoc3' => 'HERRERA',
-               'cdocente' => '002009',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1030',
           ]);
           DataUser::create([
                'wdoc1' => 'EDISSON PEDRO',
@@ -17207,6 +11346,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'epascual@ucss.edu.pe',
                'email2' => 'e.di.sson22@hotmail.com',
+               'user_id' => '1031',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN IGNACIO',
@@ -17217,6 +11357,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6241442',
                'email1' => 'jpasten@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1032',
           ]);
           DataUser::create([
                'wdoc1' => 'JESSICA MIRIAM',
@@ -17227,26 +11368,29 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5251424',
                'email1' => 'jpastrana@ucss.edu.pe',
                'email2' => 'jp_fisioterapia@yahoo.com',
+               'user_id' => '1033',
           ]);
           DataUser::create([
                'wdoc1' => 'LOURDES',
-               'wdoc2' => 'PATIÑO',
+               'wdoc2' => 'PATIÃ‘O',
                'wdoc3' => 'DURAND',
                'cdocente' => '001679',
                'fono1' => '955908436',
                'fono2' => '',
                'email1' => 'lpatino@ucss.edu.pe',
                'email2' => 'quriripra@hotmail.com',
+               'user_id' => '1034',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS DIEGO',
-               'wdoc2' => 'PATIÑO',
+               'wdoc2' => 'PATIÃ‘O',
                'wdoc3' => 'VIDAL',
                'cdocente' => '002692',
                'fono1' => '961060172',
                'fono2' => '4362692',
                'email1' => 'cpatino@ucss.edu.pe',
                'email2' => 'cpatinovidal@gmail.com',
+               'user_id' => '1035',
           ]);
           DataUser::create([
                'wdoc1' => 'EDDY',
@@ -17257,26 +11401,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'epaucarm@ucss.edu.pe',
                'email2' => 'edypaucar@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KELLY YEN',
-               'wdoc2' => 'PAUCAR',
-               'wdoc3' => 'ROMERO',
-               'cdocente' => '002285',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'KELLYYENKELLYYEN@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELENKA IRMA',
-               'wdoc2' => 'PAZ',
-               'wdoc3' => 'ESPINOZA',
-               'cdocente' => '002750',
-               'fono1' => '980679363',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elenkapb@hotmail.com',
+               'user_id' => '1036',
           ]);
           DataUser::create([
                'wdoc1' => 'MOISES NEIL',
@@ -17287,16 +11412,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2432920',
                'email1' => 'mpaz@ucss.edu.pe',
                'email2' => 'mpaz@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SEGUNDO SEBERIANO',
-               'wdoc2' => 'PAZ',
-               'wdoc3' => 'PASTOR',
-               'cdocente' => '001817',
-               'fono1' => '969148928',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bhiadac@hotmail.com',
+               'user_id' => '1037',
           ]);
           DataUser::create([
                'wdoc1' => 'GLENY DHAYANA',
@@ -17307,6 +11423,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gpaz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1038',
           ]);
           DataUser::create([
                'wdoc1' => 'IRMA ROXANA',
@@ -17317,16 +11434,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3387707',
                'email1' => 'ipeceros@ucss.edu.pe',
                'email2' => 'chanipeceros@yahoo.com.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BENIGNO',
-               'wdoc2' => 'PECEROS',
-               'wdoc3' => 'PINTO',
-               'cdocente' => '002407',
-               'fono1' => '955646090',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bennip@gmail.com',
+               'user_id' => '1039',
           ]);
           DataUser::create([
                'wdoc1' => 'WILSON MARCIAL',
@@ -17337,126 +11445,95 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wpelaez@ucss.edu.pe',
                'email2' => 'wilpeva28@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GIAN CORRADO',
-               'wdoc2' => 'PELUSO',
-               'wdoc3' => '',
-               'cdocente' => '000002',
-               'fono1' => '9620825',
-               'fono2' => '4419306',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1040',
           ]);
           DataUser::create([
                'wdoc1' => 'HUGO EDUARDO',
-               'wdoc2' => 'PEÑA',
+               'wdoc2' => 'PEÃ‘A',
                'wdoc3' => 'CANGA',
                'cdocente' => '002722',
                'fono1' => '990062879',
                'fono2' => '2323253',
                'email1' => 'hpena@ucss.edu.pe',
                'email2' => 'huguchapc@gmail.com',
+               'user_id' => '1041',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN LUZ',
-               'wdoc2' => 'PEÑA',
+               'wdoc2' => 'PEÃ‘A',
                'wdoc3' => 'HERRERA',
                'cdocente' => '000918',
                'fono1' => '993502200',
                'fono2' => '',
                'email1' => 'cpena@ucss.edu.pe',
                'email2' => 'carmenluzh@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MAXIMO',
-               'wdoc2' => 'PEÑA',
-               'wdoc3' => 'LEANDRO',
-               'cdocente' => '002225',
-               'fono1' => '597856125',
-               'fono2' => '3888746',
-               'email1' => '',
-               'email2' => 'map3lo@hotmail.com',
+               'user_id' => '1042',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO DARIO',
-               'wdoc2' => 'PEÑA',
+               'wdoc2' => 'PEÃ‘A',
                'wdoc3' => 'LEON',
                'cdocente' => '001292',
                'fono1' => '946850747',
                'fono2' => '',
                'email1' => 'ppena@ucss.edu.pe',
                'email2' => 'pedro_dario@terra.com',
+               'user_id' => '1043',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANK JONATHAN',
-               'wdoc2' => 'PEÑA',
+               'wdoc2' => 'PEÃ‘A',
                'wdoc3' => 'MORENO',
                'cdocente' => '002614',
                'fono1' => '992774259',
                'fono2' => '',
                'email1' => 'fpena@ucss.edu.pe',
                'email2' => 'p.m.frank.j@gmail.com',
+               'user_id' => '1044',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR JESUS',
-               'wdoc2' => 'PEÑA',
+               'wdoc2' => 'PEÃ‘A',
                'wdoc3' => 'OXOLON',
                'cdocente' => '002699',
                'fono1' => '983281644',
                'fono2' => '803538',
                'email1' => 'cjpena@ucss.edu.pe',
                'email2' => 'oxolon1@hotmail.com',
+               'user_id' => '1045',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO CESAR',
-               'wdoc2' => 'PEÑA',
+               'wdoc2' => 'PEÃ‘A',
                'wdoc3' => 'QUISPE',
                'cdocente' => '001798',
                'fono1' => '994723240',
                'fono2' => '',
                'email1' => 'pcpena@ucss.edu.pe',
                'email2' => 'pablo.cpq@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YMBER',
-               'wdoc2' => 'PEÑA',
-               'wdoc3' => 'ROBALINO',
-               'cdocente' => '002304',
-               'fono1' => '955502560',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ymberpero@gmail.com',
+               'user_id' => '1046',
           ]);
           DataUser::create([
                'wdoc1' => 'EDER JAVIER',
-               'wdoc2' => 'PEÑA',
+               'wdoc2' => 'PEÃ‘A',
                'wdoc3' => 'VALENZUELA',
                'cdocente' => '000614',
                'fono1' => '',
                'fono2' => '2616220',
                'email1' => 'epena@ucss.edu.pe',
                'email2' => 'eder.pena@academiaperuanadelalengua.org',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JEAN WILMER',
-               'wdoc2' => 'PEÑA',
-               'wdoc3' => 'ZAPATA',
-               'cdocente' => '001703',
-               'fono1' => '956485809',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jeanwil2583@gmail.com',
+               'user_id' => '1047',
           ]);
           DataUser::create([
                'wdoc1' => 'DIEGO JOSE',
-               'wdoc2' => 'PEÑAHERRERA',
+               'wdoc2' => 'PEÃ‘AHERRERA',
                'wdoc3' => 'LAZO',
                'cdocente' => '000692',
                'fono1' => '995198322',
                'fono2' => '5570949',
                'email1' => 'dpenaherrera@ucss.edu.pe',
                'email2' => 'diegopenaherrera@hotmail.com',
+               'user_id' => '1048',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLA',
@@ -17467,6 +11544,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3322839',
                'email1' => 'cperacchi@ucss.edu.pe',
                'email2' => 'carla78per@hotmail.com',
+               'user_id' => '1049',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANK JORDAN',
@@ -17477,6 +11555,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fperalta@ucss.edu.pe',
                'email2' => 'frank.peralta@upch.pe',
+               'user_id' => '1050',
           ]);
           DataUser::create([
                'wdoc1' => 'UVA',
@@ -17487,6 +11566,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'uperalta@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1051',
           ]);
           DataUser::create([
                'wdoc1' => 'JIMMY LADISLAO',
@@ -17497,6 +11577,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jlperalta@ucss.edu.pe',
                'email2' => 'JIMLADPER@GMAIL.COM',
+               'user_id' => '1052',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -17507,6 +11588,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6224572',
                'email1' => 'jcperalta@ucss.edu.pe',
                'email2' => 'juancarlos.pv@gmail.com',
+               'user_id' => '1053',
           ]);
           DataUser::create([
                'wdoc1' => 'JENNY MAGALY',
@@ -17517,16 +11599,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jperalta@ucss.edu.pe',
                'email2' => 'jennyperalta60@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER',
-               'wdoc2' => 'PEREDA',
-               'wdoc3' => 'CACHAY',
-               'cdocente' => '000330',
-               'fono1' => '',
-               'fono2' => '2635060',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1054',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -17537,16 +11610,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jperes@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FELIPE GUILLERMO',
-               'wdoc2' => 'PEREYRA',
-               'wdoc3' => 'NOLASCO',
-               'cdocente' => '000524',
-               'fono1' => '8691682',
-               'fono2' => '4208629',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1055',
           ]);
           DataUser::create([
                'wdoc1' => 'FLOR DE MARIA',
@@ -17557,16 +11621,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4851512',
                'email1' => 'fpereyra@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KARIN ROCIO',
-               'wdoc2' => 'PEREYRA',
-               'wdoc3' => 'VIVAR',
-               'cdocente' => '000984',
-               'fono1' => '992657188',
-               'fono2' => '5295436',
-               'email1' => '',
-               'email2' => 'cabana@hotmail.com',
+               'user_id' => '1056',
           ]);
           DataUser::create([
                'wdoc1' => 'MIRELLA HAYDEE',
@@ -17577,6 +11632,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mpereza@ucss.edu.pe',
                'email2' => 'lamirel@hotmail.com',
+               'user_id' => '1057',
           ]);
           DataUser::create([
                'wdoc1' => 'ANTONIO MARTIN',
@@ -17587,6 +11643,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'apereza@ucss.edu.pe',
                'email2' => 'antonioperez5411@hotmail.com',
+               'user_id' => '1058',
           ]);
           DataUser::create([
                'wdoc1' => 'MARLENE HAYDEE',
@@ -17597,16 +11654,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3300727',
                'email1' => 'mhperez@ucss.edu.pe',
                'email2' => 'marle2674_80@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO',
-               'wdoc2' => 'PEREZ DE SANTAMARIA',
-               'wdoc3' => 'LLEDO',
-               'cdocente' => '001322',
-               'fono1' => '944894328',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'fpsml83@hotmail.com',
+               'user_id' => '1059',
           ]);
           DataUser::create([
                'wdoc1' => 'RUBY SUSSY',
@@ -17617,6 +11665,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4713098',
                'email1' => 'rperez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1060',
           ]);
           DataUser::create([
                'wdoc1' => 'EPIFANIA EULOGIA',
@@ -17627,6 +11676,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eperez@ucss.edu.pe',
                'email2' => 'epi.estrella@gmail.com',
+               'user_id' => '1061',
           ]);
           DataUser::create([
                'wdoc1' => 'MAURO',
@@ -17637,16 +11687,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4431575',
                'email1' => 'mpereze@ucss.edu.pe',
                'email2' => 'mperezestrella@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'FALCON',
-               'cdocente' => '002307',
-               'fono1' => '961107638',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'manuel60@hotmail.com',
+               'user_id' => '1062',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE HIGINIO',
@@ -17657,36 +11698,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2750698',
                'email1' => 'jperezf@ucss.edu.pe',
                'email2' => 'jperezf@esan.org.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALAN ANDRES',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'GONZALES',
-               'cdocente' => '001143',
-               'fono1' => '987757823',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KARINA',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'LARA',
-               'cdocente' => '000504',
-               'fono1' => '5031683',
-               'fono2' => '4241754',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDO GABRIEL',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'LUYO',
-               'cdocente' => '002385',
-               'fono1' => '998783897',
-               'fono2' => '2968697',
-               'email1' => '',
-               'email2' => 'rperezl33@yahoo.com',
+               'user_id' => '1063',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -17697,16 +11709,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jperezm@ucss.edu.pe',
                'email2' => 'chorri10pm@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGEL RUBEN',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'MARTINEZ',
-               'cdocente' => '000468',
-               'fono1' => '',
-               'fono2' => '5330008',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1064',
           ]);
           DataUser::create([
                'wdoc1' => 'ANDERSON LEONID',
@@ -17717,26 +11720,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aperezm@ucss.edu.pe',
                'email2' => 'andersonperez501@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BINA LUZMILA',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'NIETO',
-               'cdocente' => '000472',
-               'fono1' => '',
-               'fono2' => '5842176',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JHELLY REYNALUZ',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'NUÑEZ',
-               'cdocente' => '001754',
-               'fono1' => '943570046',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'reynaluz4@hotmail.com',
+               'user_id' => '1065',
           ]);
           DataUser::create([
                'wdoc1' => 'ITALA',
@@ -17747,16 +11731,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4820909',
                'email1' => 'iperez@ucss.edu.pe',
                'email2' => 'italop@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER MANUEL',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'PINELO',
-               'cdocente' => '002804',
-               'fono1' => '997615876',
-               'fono2' => '5223987',
-               'email1' => '',
-               'email2' => 'wmpp291183@gmail.com',
+               'user_id' => '1066',
           ]);
           DataUser::create([
                'wdoc1' => 'RUTH EVELY',
@@ -17767,36 +11742,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4205486',
                'email1' => 'reperez@ucss.edu.pe',
                'email2' => 'ruth_e_perez_r@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KARIN LULYANA',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'SEGURA',
-               'cdocente' => '001431',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'kaps3303@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GENEVIEVE MARAGARITA',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'SUAREZ',
-               'cdocente' => '002169',
-               'fono1' => '954070762',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gennipsyey@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDSON MARTIN',
-               'wdoc2' => 'PEREZ',
-               'wdoc3' => 'TAPIA',
-               'cdocente' => '000390',
-               'fono1' => '1111111',
-               'fono2' => '1111111',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1067',
           ]);
           DataUser::create([
                'wdoc1' => 'GUILIANA TOMASA',
@@ -17807,6 +11753,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5317855',
                'email1' => 'gperez@ucss.edu.pe',
                'email2' => 'guiliana_p7@hotmail.com',
+               'user_id' => '1068',
           ]);
           DataUser::create([
                'wdoc1' => 'MANFREDO RICARDO',
@@ -17817,6 +11764,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3340028',
                'email1' => 'mperiche@ucss.edu.pe',
                'email2' => 'manfry_1303@hotmail.com',
+               'user_id' => '1069',
           ]);
           DataUser::create([
                'wdoc1' => 'CANDELARIO',
@@ -17827,26 +11775,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cperleche@ucss.edu.pe',
                'email2' => 'canper100@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALFREDO',
-               'wdoc2' => 'PERSICO',
-               'wdoc3' => 'GUTIERREZ',
-               'cdocente' => '002568',
-               'fono1' => '995582090',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alfredopersico@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSH',
-               'wdoc2' => 'PETRUNIW',
-               'wdoc3' => 'MYKOLAJ',
-               'cdocente' => '000432',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1070',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE AUGUSTO',
@@ -17857,16 +11786,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpezo@ucss.edu.pe',
                'email2' => 'josepzoucv@gmail.com',
+               'user_id' => '1071',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO',
                'wdoc2' => 'PICASSO',
-               'wdoc3' => 'MUÑOZ',
+               'wdoc3' => 'MUÃ‘OZ',
                'cdocente' => '000182',
                'fono1' => '',
                'fono2' => '4616910',
                'email1' => 'jpicasso@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1072',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA',
@@ -17877,6 +11808,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5217503',
                'email1' => 'rpicoy@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1073',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -17887,36 +11819,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpiedra@ucss.edu.pe',
                'email2' => 'jospie1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSUE',
-               'wdoc2' => 'PILCO',
-               'wdoc3' => 'PEZO',
-               'cdocente' => '001726',
-               'fono1' => '942476397',
-               'fono2' => '521334',
-               'email1' => '',
-               'email2' => 'josuepilco@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LADY LAURA',
-               'wdoc2' => 'PILLACA',
-               'wdoc3' => 'OGOSI',
-               'cdocente' => '001261',
-               'fono1' => '952322806',
-               'fono2' => '2656531',
-               'email1' => '',
-               'email2' => 'lpillaca@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ENRIQUE MANUEL',
-               'wdoc2' => 'PIMINCHUMO',
-               'wdoc3' => 'LEYTON',
-               'cdocente' => '001265',
-               'fono1' => '949193086',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'quiquepiley@hotmail.com',
+               'user_id' => '1074',
           ]);
           DataUser::create([
                'wdoc1' => 'RENE ALFREDO',
@@ -17927,36 +11830,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2501848',
                'email1' => 'rpinazo@ucss.edu.pe',
                'email2' => 'renepherencia@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NORMA',
-               'wdoc2' => 'PINCHI',
-               'wdoc3' => 'VALDEZ DE LESCANO',
-               'cdocente' => '000184',
-               'fono1' => '7492689',
-               'fono2' => '2755940',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOHN RICHARD',
-               'wdoc2' => 'PINEDA',
-               'wdoc3' => 'GALARZA',
-               'cdocente' => '002559',
-               'fono1' => '997928101',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jrpgalarza@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OSCAR VIDAL',
-               'wdoc2' => 'PINEDA',
-               'wdoc3' => 'HUERTA',
-               'cdocente' => '000322',
-               'fono1' => '9280074',
-               'fono2' => '4821028',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1075',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERTO',
@@ -17967,6 +11841,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rpineda@ucss.edu.pe',
                'email2' => 'eeeee@yahoo.com',
+               'user_id' => '1076',
           ]);
           DataUser::create([
                'wdoc1' => 'JHOANNA DEL PILAR',
@@ -17977,6 +11852,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpinedo@ucss.edu.pe',
                'email2' => 'jhoannap86@gmail.com',
+               'user_id' => '1077',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN JOSE',
@@ -17987,6 +11863,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpinedoc@ucss.edu.pe',
                'email2' => 'jjpinedocanta@hotmail.com',
+               'user_id' => '1078',
           ]);
           DataUser::create([
                'wdoc1' => 'TONY',
@@ -17997,6 +11874,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'tpinedo@ucss.edu.pe',
                'email2' => 'pinedochaveztony@gmail.com',
+               'user_id' => '1079',
           ]);
           DataUser::create([
                'wdoc1' => 'MARINA',
@@ -18007,36 +11885,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mpinedo@ucss.edu.pe',
                'email2' => 'marcielo281966@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO CESAR',
-               'wdoc2' => 'PINEDO',
-               'wdoc3' => 'LAUREL',
-               'cdocente' => '001823',
-               'fono1' => '961008366',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'emp-jrl@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HERBERT EDGARDO',
-               'wdoc2' => 'PINEDO',
-               'wdoc3' => 'PAZ',
-               'cdocente' => '000605',
-               'fono1' => '5783815',
-               'fono2' => '5672307',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'PINGLO',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '000498',
-               'fono1' => '',
-               'fono2' => '3311682',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1080',
           ]);
           DataUser::create([
                'wdoc1' => 'PATRICIA TERESA',
@@ -18047,6 +11896,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5377253',
                'email1' => 'ppinto@ucss.edu.pe',
                'email2' => 'paterepi@yahoo.es',
+               'user_id' => '1081',
           ]);
           DataUser::create([
                'wdoc1' => 'IRIS KATHERINE',
@@ -18057,6 +11907,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4546474',
                'email1' => 'ipinto@ucss.edu.pe',
                'email2' => 'kathy_pintoj@hotmail.com',
+               'user_id' => '1082',
           ]);
           DataUser::create([
                'wdoc1' => 'ALBERTO DONALD',
@@ -18067,26 +11918,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3850105',
                'email1' => 'apinto@ucss.edu.pe',
                'email2' => 'alberto.pinto.t@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARISA LAURA',
-               'wdoc2' => 'PISCONTE',
-               'wdoc3' => 'HERNANDEZ',
-               'cdocente' => '000247',
-               'fono1' => '7398674',
-               'fono2' => '4742793',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PATRICIA NOEMI',
-               'wdoc2' => 'PISCOYA',
-               'wdoc3' => 'ANGELES',
-               'cdocente' => '002569',
-               'fono1' => '978763155',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'patriciapiscoya@gmail.com',
+               'user_id' => '1083',
           ]);
           DataUser::create([
                'wdoc1' => 'LETICIA',
@@ -18097,6 +11929,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5356266',
                'email1' => 'lpiscoya@ucss.edu.pe',
                'email2' => 'jjjapsico@yahoo.com',
+               'user_id' => '1084',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO ROLANDO',
@@ -18107,6 +11940,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4720205',
                'email1' => 'ppizardi@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1085',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS MARIO',
@@ -18117,6 +11951,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpizarro@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1086',
           ]);
           DataUser::create([
                'wdoc1' => 'ARTURO LEONEL',
@@ -18127,6 +11962,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'apizarro@ucss.edu.pe',
                'email2' => 'aleonelpp_67@hotmail.com',
+               'user_id' => '1087',
           ]);
           DataUser::create([
                'wdoc1' => 'WILDER',
@@ -18137,6 +11973,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5222906',
                'email1' => 'wpizarro@ucss.edu.pe',
                'email2' => 'wwallacep@hotmail.com',
+               'user_id' => '1088',
           ]);
           DataUser::create([
                'wdoc1' => 'HANAI MILUSKA',
@@ -18147,46 +11984,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hpoicon@ucss.edu.pe',
                'email2' => 'anamilusca_pc@homtail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALESSIO',
-               'wdoc2' => 'POLANI',
-               'wdoc3' => '.',
-               'cdocente' => '001061',
-               'fono1' => '990109602',
-               'fono2' => '5570488',
-               'email1' => '',
-               'email2' => 'alessio.polani@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDO MARTIN',
-               'wdoc2' => 'POLO',
-               'wdoc3' => 'BARROSO',
-               'cdocente' => '002434',
-               'fono1' => '945573780',
-               'fono2' => '5638082',
-               'email1' => '',
-               'email2' => 'rpb2006@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROLANDO SEVERO',
-               'wdoc2' => 'POLO',
-               'wdoc3' => 'COLLANTES',
-               'cdocente' => '001869',
-               'fono1' => '997275043',
-               'fono2' => '4315710',
-               'email1' => '',
-               'email2' => 'rolando.polo@hotmail.com',
+               'user_id' => '1089',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLA MARISELLA',
                'wdoc2' => 'POLO',
-               'wdoc3' => 'NUÑEZ',
+               'wdoc3' => 'NUÃ‘EZ',
                'cdocente' => '000530',
                'fono1' => '9123903',
                'fono2' => '2632584',
                'email1' => 'cmpolo@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1090',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MARTIN',
@@ -18197,6 +12006,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5646954',
                'email1' => 'jpolo@ucss.edu.pe',
                'email2' => 'jmpolop@gmail.com',
+               'user_id' => '1091',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN DOMINGO',
@@ -18207,6 +12017,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpoma@ucss.edu.pe',
                'email2' => 'kajazpolo@hotmail.com',
+               'user_id' => '1092',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ARTURO',
@@ -18217,26 +12028,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpomar@ucss.edu.pe',
                'email2' => 'josart1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LOLA MARGOT',
-               'wdoc2' => 'POMA',
-               'wdoc3' => 'TELLO',
-               'cdocente' => '002239',
-               'fono1' => '951379022',
-               'fono2' => '4731457',
-               'email1' => '',
-               'email2' => 'mpomatello@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME',
-               'wdoc2' => 'POMAHUALLCA',
-               'wdoc3' => 'ANGULO',
-               'cdocente' => '000999',
-               'fono1' => '222222222',
-               'fono2' => '1111112',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1093',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE WILLIAN',
@@ -18247,6 +12039,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpompa@ucss.edu.pe',
                'email2' => 'josewpc26@hotmail.com',
+               'user_id' => '1094',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO CESAR',
@@ -18257,26 +12050,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2879513',
                'email1' => 'jpon@ucss.edu.pe',
                'email2' => 'JULIOPON85@GMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SARITA MAGALY',
-               'wdoc2' => 'PONCE',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '001898',
-               'fono1' => '965026858',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'p_poncecg@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANIEL',
-               'wdoc2' => 'PONCE',
-               'wdoc3' => 'LUCAS',
-               'cdocente' => '002282',
-               'fono1' => '981637271',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'dapcel1977@hotmail.com',
+               'user_id' => '1095',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSEPH JESUS',
@@ -18287,6 +12061,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4942109',
                'email1' => 'jjponce@ucss.edu.pe',
                'email2' => 'joecolors@hotmail.com',
+               'user_id' => '1096',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -18297,16 +12072,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4422148',
                'email1' => 'lponce@ucss.edu.pe',
                'email2' => 'lponce@pucp.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELSA',
-               'wdoc2' => 'PONS MUZZO',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '000070',
-               'fono1' => '8540952',
-               'fono2' => '4637651',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1097',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGEL',
@@ -18317,16 +12083,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '509647',
                'email1' => 'apoquioma@ucss.edu.pe',
                'email2' => 'apoquioma_2009@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUCY MARLENE',
-               'wdoc2' => 'PORLLES',
-               'wdoc3' => 'CAMPOS',
-               'cdocente' => '001300',
-               'fono1' => '995882762',
-               'fono2' => '5287184',
-               'email1' => '',
-               'email2' => 'lucymar_pc@hotmail.com',
+               'user_id' => '1098',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR',
@@ -18337,26 +12094,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'oporras@ucss.edu.pe',
                'email2' => 'oscar.porras.cardenas@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARUJA ANTONIA',
-               'wdoc2' => 'PORRAS',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '002283',
-               'fono1' => '963422192',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'MARUJITAPORRAS@HOTMAIL.COM',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALFREDO HERNAN',
-               'wdoc2' => 'PORTILLA',
-               'wdoc3' => 'CLAUDIO',
-               'cdocente' => '002512',
-               'fono1' => '996316699',
-               'fono2' => '4725162',
-               'email1' => '',
-               'email2' => 'ahportilla@yahoo.com',
+               'user_id' => '1099',
           ]);
           DataUser::create([
                'wdoc1' => 'LUISA PRISCILIANA',
@@ -18367,6 +12105,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5753419',
                'email1' => 'lportilla@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1100',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR  FELIX',
@@ -18377,6 +12116,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2741566',
                'email1' => 'vportocarrero@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1101',
           ]);
           DataUser::create([
                'wdoc1' => 'JHONNY EULER',
@@ -18387,6 +12127,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7925546',
                'email1' => 'jportocarrero@ucss.edu.pe',
                'email2' => 'jportocarrero@ucssvirtual.edu.pe',
+               'user_id' => '1102',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL ANGEL',
@@ -18397,6 +12138,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3450199',
                'email1' => 'mportugal@ucss.edu.pe',
                'email2' => 'PORTUGAL_ALI@YAHOO.ES',
+               'user_id' => '1103',
           ]);
           DataUser::create([
                'wdoc1' => 'ZOSIMO REGULO',
@@ -18407,16 +12149,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'zpozo@ucss.edu.pe',
                'email2' => 'zpcyeni@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSANNA',
-               'wdoc2' => 'POZZI',
-               'wdoc3' => '',
-               'cdocente' => '000545',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1104',
           ]);
           DataUser::create([
                'wdoc1' => 'AMALIA',
@@ -18427,6 +12160,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aprado@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1105',
           ]);
           DataUser::create([
                'wdoc1' => 'MISAEL JOSE',
@@ -18437,6 +12171,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mpriale@ucss.edu.pe',
                'email2' => 'misael.priari@gmail.com',
+               'user_id' => '1106',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ MERCEDES',
@@ -18447,6 +12182,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5330202',
                'email1' => 'lprivat@ucss.edu.pe',
                'email2' => 'lmprivat@yahoo.com',
+               'user_id' => '1107',
           ]);
           DataUser::create([
                'wdoc1' => 'EGO LUIS',
@@ -18457,6 +12193,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4527018',
                'email1' => 'eprudencio@ucss.edu.pe',
                'email2' => 'prud53_luis@yahoo.es',
+               'user_id' => '1108',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS MIGUEL',
@@ -18467,6 +12204,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lpucuhuaranga@ucss.edu.pe',
                'email2' => 'ingpucuhuaranga@gmail.com',
+               'user_id' => '1109',
           ]);
           DataUser::create([
                'wdoc1' => 'JOHN',
@@ -18477,6 +12215,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jpuelles@ucss.edu.pe',
                'email2' => 'puellesjohn@gmail.com',
+               'user_id' => '1110',
           ]);
           DataUser::create([
                'wdoc1' => 'LUSGARDO WIAN',
@@ -18487,6 +12226,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '559598',
                'email1' => 'lpuelles@ucss.edu.pe',
                'email2' => 'wiansud@gmail.com',
+               'user_id' => '1111',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS WILBER',
@@ -18497,6 +12237,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4221605',
                'email1' => 'cpuente@ucss.edu.pe',
                'email2' => 'carloswpuente@gmail.com',
+               'user_id' => '1112',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER FELIX',
@@ -18507,6 +12248,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wpuente@ucss.edu.pe',
                'email2' => 'mrsmwalter@hotmail.com',
+               'user_id' => '1113',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ELIZABETH',
@@ -18517,9 +12259,10 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4310772',
                'email1' => 'mpuertas@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1114',
           ]);
           DataUser::create([
-               'wdoc1' => 'CÉSAR',
+               'wdoc1' => 'CÃ‰SAR',
                'wdoc2' => 'PUICON',
                'wdoc3' => 'MONTERO',
                'cdocente' => '000130',
@@ -18527,6 +12270,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5395377',
                'email1' => 'cpuicon@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1115',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIBEL ESTRELLA',
@@ -18537,6 +12281,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3404357',
                'email1' => 'mpulache@ucss.edu.pe',
                'email2' => 'mariest20@gmail.com',
+               'user_id' => '1116',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR CARLOS',
@@ -18547,16 +12292,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'opulido@ucss.edu.pe',
                'email2' => 'racsomat@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HECTOR JUAN',
-               'wdoc2' => 'PUMAYAULI',
-               'wdoc3' => 'ZAVALETA',
-               'cdocente' => '002781',
-               'fono1' => '986222128',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'hpumayauli12@gmail.com',
+               'user_id' => '1117',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD JOSEPH',
@@ -18567,6 +12303,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rpurca@ucss.edu.pe',
                'email2' => 'rjpurca@gmail.com',
+               'user_id' => '1118',
           ]);
           DataUser::create([
                'wdoc1' => 'ARTHUR PATRICK',
@@ -18577,16 +12314,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'apurcaro@ucss.edu.pe',
                'email2' => 'appurcaro@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TARCICIO',
-               'wdoc2' => 'PUSMA',
-               'wdoc3' => 'IBAÑEZ',
-               'cdocente' => '001959',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'tarcicio_9@hotmail.com',
+               'user_id' => '1119',
           ]);
           DataUser::create([
                'wdoc1' => 'GRIMALDO',
@@ -18597,6 +12325,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4502526',
                'email1' => 'gquerevalu@ucss.edu.pe',
                'email2' => 'grielco@hotmail.com',
+               'user_id' => '1120',
           ]);
           DataUser::create([
                'wdoc1' => 'ERICK FELIX',
@@ -18607,6 +12336,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5436683',
                'email1' => 'equesquen@ucss.edu.pe',
                'email2' => 'a_fastmind@hotmail.com',
+               'user_id' => '1121',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR EDGARDO',
@@ -18617,6 +12347,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vquesquen@ucss.edu.pe',
                'email2' => 'maiki_nike17@hotmail.com',
+               'user_id' => '1122',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR ENRIQUE',
@@ -18627,6 +12358,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5263825',
                'email1' => 'vquevedo@ucss.edu.pe',
                'email2' => 'victor-quevedo@hotmail.com',
+               'user_id' => '1123',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER ANIBAL',
@@ -18637,6 +12369,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '403403',
                'email1' => 'wquevedo@ucss.edu.pe',
                'email2' => 'wal_quevedo@hotmail.com',
+               'user_id' => '1124',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL',
@@ -18647,16 +12380,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5699396',
                'email1' => 'dquezada@ucss.edu.pe',
                'email2' => 'dquezada2125@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILBER SAMUEL',
-               'wdoc2' => 'QUIJANO',
-               'wdoc3' => 'PACHECO',
-               'cdocente' => '000911',
-               'fono1' => '966648428',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wilberqs@hotmail.edu.pe',
+               'user_id' => '1125',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO EDGAR',
@@ -18667,6 +12391,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5433927',
                'email1' => 'pquijano@ucss.edu.pe',
                'email2' => 'pquijanou@unmsm.edu.pe',
+               'user_id' => '1126',
           ]);
           DataUser::create([
                'wdoc1' => 'FREDY JEREMY',
@@ -18677,6 +12402,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4825058',
                'email1' => 'fquintana@ucss.edu.pe',
                'email2' => 'fredyjeremy@outlook.com',
+               'user_id' => '1127',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN FRANCISCO',
@@ -18687,6 +12413,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jquintana@ucss.edu.pe',
                'email2' => 'fquintana94@gmail.com',
+               'user_id' => '1128',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA LUZ',
@@ -18697,6 +12424,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5332633',
                'email1' => 'nquinteros@ucss.edu.pe',
                'email2' => 'nquinteros_16@hotmail.com',
+               'user_id' => '1129',
           ]);
           DataUser::create([
                'wdoc1' => 'ISAYO',
@@ -18707,66 +12435,40 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'iquinto@ucss.edu.pe',
                'email2' => 'isayo@engineer.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ISMAEL',
-               'wdoc2' => 'QUIÑONES',
-               'wdoc3' => 'ALLEMANT',
-               'cdocente' => '000364',
-               'fono1' => '',
-               'fono2' => '4714796',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALDO RONAL',
-               'wdoc2' => 'QUIÑONES',
-               'wdoc3' => 'BECERRA',
-               'cdocente' => '001612',
-               'fono1' => '949930432',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alquibe515@gmail.com',
+               'user_id' => '1130',
           ]);
           DataUser::create([
                'wdoc1' => 'BIDELMINA MARUJA',
-               'wdoc2' => 'QUIÑONES',
+               'wdoc2' => 'QUIÃ‘ONES',
                'wdoc3' => 'CORDOVA',
                'cdocente' => '000764',
                'fono1' => '993785673',
                'fono2' => '5584114',
                'email1' => 'bquinones@ucss.edu.pe',
                'email2' => 'bimaru56@yahoo.com',
+               'user_id' => '1131',
           ]);
           DataUser::create([
                'wdoc1' => 'KARIM SARITA',
-               'wdoc2' => 'QUIÑONES',
+               'wdoc2' => 'QUIÃ‘ONES',
                'wdoc3' => 'ROJAS',
                'cdocente' => '000679',
                'fono1' => '992995551',
                'fono2' => '5683630',
                'email1' => 'kquinones@ucss.edu.pe',
                'email2' => 'karim_qr@hotmail.com',
+               'user_id' => '1132',
           ]);
           DataUser::create([
                'wdoc1' => 'CHRISTIAN',
-               'wdoc2' => 'QUIÑONEZ',
+               'wdoc2' => 'QUIÃ‘ONEZ',
                'wdoc3' => 'REYES',
                'cdocente' => '001636',
                'fono1' => '985483844',
                'fono2' => '',
                'email1' => 'cquinonez@ucss.edu.pe',
                'email2' => 'ing_geografo_qr@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IRIS CRISTINA',
-               'wdoc2' => 'QUIROZ',
-               'wdoc3' => 'AVILES DE RIVERA',
-               'cdocente' => '002746',
-               'fono1' => '926315172',
-               'fono2' => '4647261',
-               'email1' => '',
-               'email2' => 'irirquirozderivera@gmail.com',
+               'user_id' => '1133',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS NAPOLEON',
@@ -18777,16 +12479,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4368158',
                'email1' => 'lquiroz@ucss.edu.pe',
                'email2' => 'lquiroza@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ESTELA MARGARITA',
-               'wdoc2' => 'QUIROZ',
-               'wdoc3' => 'MALCA',
-               'cdocente' => '001389',
-               'fono1' => '999319879',
-               'fono2' => '6230506',
-               'email1' => '',
-               'email2' => 'esteliqm@yahoo.com',
+               'user_id' => '1134',
           ]);
           DataUser::create([
                'wdoc1' => 'OSWALDO RODOLFO',
@@ -18797,6 +12490,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'oquiroz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1135',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE GUILLERMO',
@@ -18807,6 +12501,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jquirozv@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1136',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ENRIQUE',
@@ -18817,6 +12512,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3651529',
                'email1' => 'jquiroz@ucss.edu.pe',
                'email2' => 'juan.quiroz@pucp.pe',
+               'user_id' => '1137',
           ]);
           DataUser::create([
                'wdoc1' => 'ELENA RUT',
@@ -18827,6 +12523,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'equiroz@ucss.edu.pe',
                'email2' => 'estcon_q@hotmail.com',
+               'user_id' => '1138',
           ]);
           DataUser::create([
                'wdoc1' => 'JHONNATAN HILARIO',
@@ -18837,26 +12534,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jquispea@ucss.edu.pe',
                'email2' => 'jquispea@cip.org.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DONALD',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'CAPCHA',
-               'cdocente' => '002193',
-               'fono1' => '99907931',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'donaldquispe@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PAUL',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'CHOCOS',
-               'cdocente' => '001884',
-               'fono1' => '940209286',
-               'fono2' => '2618324',
-               'email1' => '',
-               'email2' => 'paul_quispech@yahoo.com',
+               'user_id' => '1139',
           ]);
           DataUser::create([
                'wdoc1' => 'STALIN ELIOT',
@@ -18867,6 +12545,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'squispe@ucss.edu.pe',
                'email2' => 'quispecisneros68@gmail.com',
+               'user_id' => '1140',
           ]);
           DataUser::create([
                'wdoc1' => 'JANET',
@@ -18877,46 +12556,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '425567',
                'email1' => 'jquispe@ucss.edu.pe',
                'email2' => 'janeth1020@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCELA',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'CRUZ',
-               'cdocente' => '000738',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alecram.qc@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUMBERTO',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'HERNANDEZ',
-               'cdocente' => '000475',
-               'fono1' => '',
-               'fono2' => '3273586',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CIRO',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '001109',
-               'fono1' => '997046073',
-               'fono2' => '4711541',
-               'email1' => '',
-               'email2' => 'ciroql@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ZOSIMO',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'PAITAN',
-               'cdocente' => '002228',
-               'fono1' => '999008469',
-               'fono2' => '369256',
-               'email1' => '',
-               'email2' => 'quispepaitanz@gmail.com',
+               'user_id' => '1141',
           ]);
           DataUser::create([
                'wdoc1' => 'FLOR ROXANA',
@@ -18927,36 +12567,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fquispe@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILFREDO',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '001495',
-               'fono1' => '988628871',
-               'fono2' => '793185',
-               'email1' => '',
-               'email2' => 'wilfredorg@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS GABRIEL',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'VALENCIA',
-               'cdocente' => '001442',
-               'fono1' => '980176359',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gabriel_med_xl@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BARLOW ANDERSON',
-               'wdoc2' => 'QUISPE',
-               'wdoc3' => 'VENTOCILLA',
-               'cdocente' => '002238',
-               'fono1' => '954793113',
-               'fono2' => '322903',
-               'email1' => '',
-               'email2' => 'bandersq@hotmail.com',
+               'user_id' => '1142',
           ]);
           DataUser::create([
                'wdoc1' => 'BEYALETY MINERVA',
@@ -18967,6 +12578,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '644211',
                'email1' => 'bquito@ucss.edu.pe',
                'email2' => 'beyalety@gmail.com',
+               'user_id' => '1143',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO CESAR MARTIN',
@@ -18977,6 +12589,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5331863',
                'email1' => 'mquito@ucss.edu.pe',
                'email2' => 'mcmquito@yahoo.es',
+               'user_id' => '1144',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA GUISELA',
@@ -18987,6 +12600,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '508582',
                'email1' => 'mramirez@ucss.edu.pe',
                'email2' => 'dyosu@hotmail.com',
+               'user_id' => '1145',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGARD JULIAN',
@@ -18997,6 +12611,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eramireza@ucss.edu.pe',
                'email2' => 'eramirez.a82@gmail.com',
+               'user_id' => '1146',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -19007,26 +12622,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '643210',
                'email1' => 'maramirez@ucss.edu.pe',
                'email2' => 'consultores_ryz@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDY FRANCISCO',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'AREVALO',
-               'cdocente' => '002672',
-               'fono1' => '933301537',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'fframirezar@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IVAN CRUZ',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'BANDA',
-               'cdocente' => '002030',
-               'fono1' => '958536835',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'musico2422@gmail.com',
+               'user_id' => '1147',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS FERNANDO',
@@ -19037,6 +12633,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5684510',
                'email1' => 'jramirezb@ucss.edu.pe',
                'email2' => 'jefer682004@yahoo.es',
+               'user_id' => '1148',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA ETELVINA',
@@ -19047,6 +12644,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3817790',
                'email1' => 'eramirez@ucss.edu.pe',
                'email2' => 'acunorma@hotmail.com',
+               'user_id' => '1149',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA SUSANA',
@@ -19057,36 +12655,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5571389',
                'email1' => 'mramirezc@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PABLO ADOLFO',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'CELIS',
-               'cdocente' => '000891',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LAURA MARISA',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'COLLAZOS',
-               'cdocente' => '000736',
-               'fono1' => '',
-               'fono2' => '2525552',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RENAN',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'DEL AGUILA',
-               'cdocente' => '000341',
-               'fono1' => '9013814',
-               'fono2' => '4634478',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1150',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -19097,26 +12666,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cramirez@ucss.edu.pe',
                'email2' => 'carlosramirezd5@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VERONICA CECILIA',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '000878',
-               'fono1' => '942660671',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'vero_03ram@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NINFA ELVA',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'INGUIL',
-               'cdocente' => '001087',
-               'fono1' => '991314181',
-               'fono2' => '4525941',
-               'email1' => '',
-               'email2' => 'n-ramirezinguil@hotmail.com',
+               'user_id' => '1151',
           ]);
           DataUser::create([
                'wdoc1' => 'WILMER ULISES',
@@ -19127,26 +12677,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wramirez@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR ELADIO',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '001584',
-               'fono1' => '948026403',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'vielralo20@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIANO',
-               'wdoc2' => 'RAMIREZ',
-               'wdoc3' => 'MORENO',
-               'cdocente' => '000092',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1152',
           ]);
           DataUser::create([
                'wdoc1' => 'YURI HARRY',
@@ -19157,6 +12688,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'yramirez@ucss.edu.pe',
                'email2' => 'yuri_r83@hotmail.com',
+               'user_id' => '1153',
           ]);
           DataUser::create([
                'wdoc1' => 'NESTOR ALFONSO',
@@ -19167,6 +12699,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3491223',
                'email1' => 'nramirez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1154',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN LEONIDAS',
@@ -19177,6 +12710,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4524496',
                'email1' => 'jramon@ucss.edu.pe',
                'email2' => 'JUANRAMON1010@HOTMAIL.COM',
+               'user_id' => '1155',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERT BARTOLOME',
@@ -19187,16 +12721,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rramosa@ucss.edu.pe',
                'email2' => 'alonzoroberth@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELENA',
-               'wdoc2' => 'RAMOS',
-               'wdoc3' => 'BARDALES',
-               'cdocente' => '001354',
-               'fono1' => '961752395',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mramosbardales@gmail.com',
+               'user_id' => '1156',
           ]);
           DataUser::create([
                'wdoc1' => 'MAXIMO DAVID',
@@ -19207,16 +12732,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mramosc@ucss.edu.pe',
                'email2' => 'drch07@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HAYDEE',
-               'wdoc2' => 'RAMOS',
-               'wdoc3' => 'CORRO',
-               'cdocente' => '001481',
-               'fono1' => '995681060',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'haydee_656@hotmail.com',
+               'user_id' => '1157',
           ]);
           DataUser::create([
                'wdoc1' => 'CLAUDIA DANIELA',
@@ -19227,26 +12743,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cramos@ucss.edu.pe',
                'email2' => 'claudiarade@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE VICENTE',
-               'wdoc2' => 'RAMOS',
-               'wdoc3' => 'LALUPU',
-               'cdocente' => '002308',
-               'fono1' => '996620474',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'josevicenterl@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LEONARDO',
-               'wdoc2' => 'RAMOS',
-               'wdoc3' => 'LALUPU',
-               'cdocente' => '000413',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1158',
           ]);
           DataUser::create([
                'wdoc1' => 'YSABEL',
@@ -19257,6 +12754,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3139588',
                'email1' => 'yramos@ucss.edu.pe',
                'email2' => 'ysalumen@yahoo.es',
+               'user_id' => '1159',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALVARO',
@@ -19267,16 +12765,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6470776',
                'email1' => 'lramos@ucss.edu.pe',
                'email2' => 'lramos3434@hotmail.com',
+               'user_id' => '1160',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA MARIA',
                'wdoc2' => 'RAMOS',
-               'wdoc3' => 'NIÑO NEIRA',
+               'wdoc3' => 'NIÃ‘O NEIRA',
                'cdocente' => '001277',
                'fono1' => '992790818',
                'fono2' => '4602523',
                'email1' => 'aramos@ucss.edu.pe',
                'email2' => 'anmar_ramos@hotmail.com',
+               'user_id' => '1161',
           ]);
           DataUser::create([
                'wdoc1' => 'ERICK WILLIAMS',
@@ -19287,6 +12787,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5481655',
                'email1' => 'eramos@ucss.edu.pe',
                'email2' => 'williams20787@hotmail.com',
+               'user_id' => '1162',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL FERNANDO',
@@ -19297,6 +12798,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2391543',
                'email1' => 'mframos@ucss.edu.pe',
                'email2' => 'migue_ramos_romero@hotmail.com',
+               'user_id' => '1163',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ARTURO',
@@ -19307,6 +12809,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4407797',
                'email1' => 'jramos@ucss.edu.pe',
                'email2' => 'jramos@aloe.ulima.edu.pe',
+               'user_id' => '1164',
           ]);
           DataUser::create([
                'wdoc1' => 'REYNA TEODOSIA',
@@ -19317,6 +12820,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5441834',
                'email1' => 'tramos@ucss.edu.pe',
                'email2' => 'hereysaje_21@hotmail.com',
+               'user_id' => '1165',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR',
@@ -19327,26 +12831,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vramos@ucss.edu.pe',
                'email2' => 'vicramos3@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUISA ABIGAIDA',
-               'wdoc2' => 'RAMOS',
-               'wdoc3' => 'VILLANUEVA',
-               'cdocente' => '002583',
-               'fono1' => '971796723',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luisa_1199k@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KATIA LASKARINA',
-               'wdoc2' => 'RAMOS',
-               'wdoc3' => 'VITE',
-               'cdocente' => '002236',
-               'fono1' => '994665577',
-               'fono2' => '4299767',
-               'email1' => '',
-               'email2' => 'katty_vit@hotmail.com',
+               'user_id' => '1166',
           ]);
           DataUser::create([
                'wdoc1' => 'ANTIA',
@@ -19357,46 +12842,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '614943',
                'email1' => 'arangel@ucss.edu.pe',
                'email2' => 'anita8_6@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS GINO',
-               'wdoc2' => 'RATTO',
-               'wdoc3' => 'RAEZ',
-               'cdocente' => '001433',
-               'fono1' => '986631816',
-               'fono2' => '2235212',
-               'email1' => '',
-               'email2' => 'ginoratto@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KAREN VICTORIA',
-               'wdoc2' => 'RAZURI',
-               'wdoc3' => 'TAPIA',
-               'cdocente' => '001512',
-               'fono1' => '991683395',
-               'fono2' => '2499240',
-               'email1' => '',
-               'email2' => 'karenrazuritapia@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAMES',
-               'wdoc2' => 'REAGAN',
-               'wdoc3' => 'MAINVILLE',
-               'cdocente' => '000637',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AGUSTIN ALEJANDRO',
-               'wdoc2' => 'REAÑO',
-               'wdoc3' => 'ROBLES',
-               'cdocente' => '000454',
-               'fono1' => '6864198',
-               'fono2' => '4312175',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1167',
           ]);
           DataUser::create([
                'wdoc1' => 'DANTE LUIS',
@@ -19407,16 +12853,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dreategui@ucss.edu.pe',
                'email2' => 'dante_85_25@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN ALFREDO',
-               'wdoc2' => 'REATEGUI',
-               'wdoc3' => 'BALLON',
-               'cdocente' => '001780',
-               'fono1' => '978449148',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jreateguib@gmail.com',
+               'user_id' => '1168',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR',
@@ -19427,16 +12864,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '676776',
                'email1' => 'cremicio@ucss.edu.pe',
                'email2' => 'cesar_1911@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FLAVIA MARIELLE',
-               'wdoc2' => 'REMO',
-               'wdoc3' => '',
-               'cdocente' => '002116',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1169',
           ]);
           DataUser::create([
                'wdoc1' => 'EVELIN MARIA',
@@ -19447,6 +12875,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3515647',
                'email1' => 'eremuzgo@ucss.edu.pe',
                'email2' => 'eremuzgo@gmail.com',
+               'user_id' => '1170',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIAS',
@@ -19457,6 +12886,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5443548',
                'email1' => 'erengifo@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1171',
           ]);
           DataUser::create([
                'wdoc1' => 'LENARD IBSEN',
@@ -19467,6 +12897,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lrengifo@ucss.edu.pe',
                'email2' => 'lrengifo20@hotmail.com',
+               'user_id' => '1172',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIZA DEL CARMEN',
@@ -19477,16 +12908,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mrengifo@ucss.edu.pe',
                'email2' => 'mrengifomontes@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GRIMALDO SEGUNDO',
-               'wdoc2' => 'RENGIFO',
-               'wdoc3' => 'RUIZ',
-               'cdocente' => '002641',
-               'fono1' => '942471658',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gregiforuiz@gmail.com',
+               'user_id' => '1173',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ANTONIO',
@@ -19497,6 +12919,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jrenteria@ucss.edu.pe',
                'email2' => 'jrenteriamv@gmail.com',
+               'user_id' => '1174',
           ]);
           DataUser::create([
                'wdoc1' => 'GLADYS',
@@ -19507,6 +12930,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'grequejo@ucss.edu.pe',
                'email2' => 'gladysrequejop@gmail.com',
+               'user_id' => '1175',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIANA',
@@ -19517,6 +12941,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2761375',
                'email1' => 'erequena@ucss.edu.pe',
                'email2' => 'elianarequena14@hotmail.com',
+               'user_id' => '1176',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ALBERTO',
@@ -19527,6 +12952,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lrespicio@ucss.edu.pe',
                'email2' => 'a_respicio@yahoo.com',
+               'user_id' => '1177',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA MARITZA',
@@ -19537,46 +12963,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5661253',
                'email1' => 'mretamozo@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ENRIQUE',
-               'wdoc2' => 'REVILLA',
-               'wdoc3' => 'FIGUEROA',
-               'cdocente' => '000430',
-               'fono1' => '9751902',
-               'fono2' => '2616604',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALVARO ARTURO',
-               'wdoc2' => 'REVOLLEDO',
-               'wdoc3' => 'NOVOA',
-               'cdocente' => '000314',
-               'fono1' => '4987523',
-               'fono2' => '4209409',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NERIDA GLADYS',
-               'wdoc2' => 'REY',
-               'wdoc3' => 'CORDOVA DE VELAZQUEZ',
-               'cdocente' => '000018',
-               'fono1' => '9265463',
-               'fono2' => '5335754',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE MANUEL',
-               'wdoc2' => 'REYES',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '001975',
-               'fono1' => '945722495',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'reyesdiaz28@gmail.com',
+               'user_id' => '1178',
           ]);
           DataUser::create([
                'wdoc1' => 'LENIN HENRY',
@@ -19587,16 +12974,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lreyes@ucss.edu.pe',
                'email2' => 'lereydi@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE LUIS',
-               'wdoc2' => 'REYES',
-               'wdoc3' => 'DORIA',
-               'cdocente' => '000196',
-               'fono1' => '9315938',
-               'fono2' => '5335000',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1179',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR ANTOLIN',
@@ -19607,16 +12985,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4662766',
                'email1' => 'vreyes@ucss.edu.pe',
                'email2' => 'vigustamar@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LIZ ROXANA',
-               'wdoc2' => 'REYES',
-               'wdoc3' => 'ROMERO',
-               'cdocente' => '002391',
-               'fono1' => '982144903',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lizreyes81@hotmail.com',
+               'user_id' => '1180',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR RAUL',
@@ -19627,6 +12996,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'creyes@ucss.edu.pe',
                'email2' => 'cesar.resil@hotmail.com',
+               'user_id' => '1181',
           ]);
           DataUser::create([
                'wdoc1' => 'YRMA KUSSY',
@@ -19637,6 +13007,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5389477',
                'email1' => 'yreyes@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1182',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCK KARLOS',
@@ -19647,36 +13018,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'freyna@ucss.edu.pe',
                'email2' => 'freyna@live.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DARWIN OCTAVIO',
-               'wdoc2' => 'REYNA',
-               'wdoc3' => 'ODICIO',
-               'cdocente' => '000897',
-               'fono1' => '931923',
-               'fono2' => '5911561',
-               'email1' => '',
-               'email2' => 'dororeyleo@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GLADYS NORINA',
-               'wdoc2' => 'RICCI',
-               'wdoc3' => 'CRUZ',
-               'cdocente' => '000892',
-               'fono1' => '2617706',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'noricci3030@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROCIO PILAR',
-               'wdoc2' => 'RICSE',
-               'wdoc3' => 'GALARZA',
-               'cdocente' => '002234',
-               'fono1' => '950567142',
-               'fono2' => '217777',
-               'email1' => '',
-               'email2' => 'ateneayhestia@hotmail.com',
+               'user_id' => '1183',
           ]);
           DataUser::create([
                'wdoc1' => 'JANETT KARIN',
@@ -19687,16 +13029,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7516912',
                'email1' => 'jrimachi@ucss.edu.pe',
                'email2' => 'karinrimachig@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GIANNINA CLAUDIA',
-               'wdoc2' => 'RIMARACHIN',
-               'wdoc3' => 'VEGA',
-               'cdocente' => '001386',
-               'fono1' => '949831463',
-               'fono2' => '2417276',
-               'email1' => '',
-               'email2' => 'grimarachinv@gmail.com',
+               'user_id' => '1184',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -19707,6 +13040,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5395925',
                'email1' => 'mrimari@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1185',
           ]);
           DataUser::create([
                'wdoc1' => 'WILFREDO TOMAS',
@@ -19717,26 +13051,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5570629',
                'email1' => 'wrimari@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER ISIDORO',
-               'wdoc2' => 'RINZA',
-               'wdoc3' => 'DIAZ',
-               'cdocente' => '001294',
-               'fono1' => '979452519',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jird_unprg@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALBERTO HUGO',
-               'wdoc2' => 'RIOJA',
-               'wdoc3' => 'COBOS',
-               'cdocente' => '001422',
-               'fono1' => '966689946',
-               'fono2' => '4811526',
-               'email1' => '',
-               'email2' => 'alberto_rioja_cobos@hotmail.com',
+               'user_id' => '1186',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN LILIAN',
@@ -19747,6 +13062,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4823240',
                'email1' => 'crioja@ucss.edu.pe',
                'email2' => 'carmenlilian23@yahoo.es',
+               'user_id' => '1187',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN CARLOS',
@@ -19757,6 +13073,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jrioja@ucss.edu.pe',
                'email2' => 'jrioja45@hotmail.com',
+               'user_id' => '1188',
           ]);
           DataUser::create([
                'wdoc1' => 'OLIVER',
@@ -19767,6 +13084,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'orios@ucss.edu.pe',
                'email2' => 'rocsom@hotmail.com',
+               'user_id' => '1189',
           ]);
           DataUser::create([
                'wdoc1' => 'HUMBERTO MOISES',
@@ -19777,6 +13095,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5223589',
                'email1' => 'hmrios@ucss.edu.pe',
                'email2' => 'humberto@estudiorios.com.pe',
+               'user_id' => '1190',
           ]);
           DataUser::create([
                'wdoc1' => 'RODDY',
@@ -19787,6 +13106,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rriosg@ucss.edu.pe',
                'email2' => 'roddyj53@hotmail.com',
+               'user_id' => '1191',
           ]);
           DataUser::create([
                'wdoc1' => 'CYNTHIA EDITH',
@@ -19797,6 +13117,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'criosh@ucss.edu.pe',
                'email2' => 'rioshuamanice@hotmail.com',
+               'user_id' => '1192',
           ]);
           DataUser::create([
                'wdoc1' => 'GRETI',
@@ -19807,6 +13128,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'grios@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1193',
           ]);
           DataUser::create([
                'wdoc1' => 'ELVIS ROLDAN',
@@ -19817,6 +13139,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5743600',
                'email1' => 'erios@ucss.edu.pe',
                'email2' => 'elviswushu@yahoo.es',
+               'user_id' => '1194',
           ]);
           DataUser::create([
                'wdoc1' => 'CHRISTIAN EDWARD',
@@ -19827,6 +13150,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'crios@ucss.edu.pe',
                'email2' => 'VIRGO856@HOTMAIL.COM',
+               'user_id' => '1195',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS HUMBERTO',
@@ -19837,46 +13161,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lrios@ucss.edu.pe',
                'email2' => 'tubebe814@hotmail.com.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO ANTONIO',
-               'wdoc2' => 'RIOS',
-               'wdoc3' => 'ROMERO',
-               'cdocente' => '001691',
-               'fono1' => '976048129',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marcorios55@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PAUL ALONSO',
-               'wdoc2' => 'RIOS',
-               'wdoc3' => 'SANCA',
-               'cdocente' => '001962',
-               'fono1' => '993429284',
-               'fono2' => '5538825',
-               'email1' => '',
-               'email2' => 'paul.rios.07@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA MAGALI',
-               'wdoc2' => 'RIOS',
-               'wdoc3' => 'SAYAN',
-               'cdocente' => '000414',
-               'fono1' => '',
-               'fono2' => '5390810',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE JOSE',
-               'wdoc2' => 'RIOS',
-               'wdoc3' => 'TAPIA',
-               'cdocente' => '001879',
-               'fono1' => '9854157',
-               'fono2' => '4511370',
-               'email1' => '',
-               'email2' => 'jorgerios2712@hotmail.com',
+               'user_id' => '1196',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL ERNESTO',
@@ -19887,6 +13172,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3654884',
                'email1' => 'rrios@ucss.edu.pe',
                'email2' => 'raul.riost@hotmail.com',
+               'user_id' => '1197',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE MARCELL',
@@ -19897,6 +13183,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3444582',
                'email1' => 'jrios@ucss.edu.pe',
                'email2' => 'jrv2604@gmail.com',
+               'user_id' => '1198',
           ]);
           DataUser::create([
                'wdoc1' => 'PERCY ANTONIO',
@@ -19907,6 +13194,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3727283',
                'email1' => 'privadeneira@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1199',
           ]);
           DataUser::create([
                'wdoc1' => 'VIRGINIA',
@@ -19917,36 +13205,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6249152',
                'email1' => 'vrivadeneira@ucss.edu.pe',
                'email2' => 'virginia.rivadeneira@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LAURA',
-               'wdoc2' => 'RIVADENEYRA',
-               'wdoc3' => 'HORNA',
-               'cdocente' => '000370',
-               'fono1' => '3812090',
-               'fono2' => '3460397',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KARINA',
-               'wdoc2' => 'RIVADENEYRA',
-               'wdoc3' => 'ROMAN',
-               'cdocente' => '000415',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE',
-               'wdoc2' => 'RIVAS',
-               'wdoc3' => '.',
-               'cdocente' => '000045',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1200',
           ]);
           DataUser::create([
                'wdoc1' => 'IVAN JOEL',
@@ -19957,26 +13216,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'irivas@ucss.edu.pe',
                'email2' => 'raij77@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN MANUEL',
-               'wdoc2' => 'RIVAS',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '001916',
-               'fono1' => '940148591',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'juanmanuel263@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ZOILA NIEVES',
-               'wdoc2' => 'RIVAS',
-               'wdoc3' => 'GOMEZ',
-               'cdocente' => '000899',
-               'fono1' => '522027',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1201',
           ]);
           DataUser::create([
                'wdoc1' => 'JUNNIOR ARTURO',
@@ -19987,16 +13227,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jrivasm@ucss.edu.pe',
                'email2' => 'arturo.rivas.92@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROGER VICENTE',
-               'wdoc2' => 'RIVAS',
-               'wdoc3' => 'RAMOS',
-               'cdocente' => '002284',
-               'fono1' => '988251573',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ROGER_933@HOTMAIL.COM',
+               'user_id' => '1202',
           ]);
           DataUser::create([
                'wdoc1' => 'URBANO RAUL',
@@ -20007,6 +13238,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'urivas@ucss.edu.pe',
                'email2' => 'r.rivasv2@hotmail.com',
+               'user_id' => '1203',
           ]);
           DataUser::create([
                'wdoc1' => 'FULTON PAUL',
@@ -20017,16 +13249,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6828882',
                'email1' => 'frivera@ucss.edu.pe',
                'email2' => 'fulton.rivera@gmail.com',
+               'user_id' => '1204',
           ]);
           DataUser::create([
                'wdoc1' => 'GLORIA AIDA',
                'wdoc2' => 'RIVERA',
-               'wdoc3' => 'AÑAGUARI',
+               'wdoc3' => 'AÃ‘AGUARI',
                'cdocente' => '001931',
                'fono1' => '986918381',
                'fono2' => '5416899',
                'email1' => 'griveraa@ucss.edu.pe',
                'email2' => 'rivera.gloria.inggeo@gmail.com',
+               'user_id' => '1205',
           ]);
           DataUser::create([
                'wdoc1' => 'HUMBERTO',
@@ -20037,6 +13271,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hrivera@ucss.edu.pe',
                'email2' => 'huricall@hotmail.com',
+               'user_id' => '1206',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO MANUEL',
@@ -20047,16 +13282,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'privera@ucss.edu.pe',
                'email2' => 'pedroplanck@hotmail.com',
+               'user_id' => '1207',
           ]);
           DataUser::create([
                'wdoc1' => 'KARL DENNIS',
                'wdoc2' => 'RIVERA',
-               'wdoc3' => 'CARREÑO',
+               'wdoc3' => 'CARREÃ‘O',
                'cdocente' => '002685',
                'fono1' => '981407746',
                'fono2' => '',
                'email1' => 'krivera@ucss.edu.pe',
                'email2' => 'karldennis.organic@gmail.com',
+               'user_id' => '1208',
           ]);
           DataUser::create([
                'wdoc1' => 'SHEYLA MILAGROS',
@@ -20067,6 +13304,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'srivera@ucss.edu.pe',
                'email2' => 'sheyla_rivera@hotmail.com',
+               'user_id' => '1209',
           ]);
           DataUser::create([
                'wdoc1' => 'GISELLA ALICIA',
@@ -20077,6 +13315,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'grivera@ucss.edu.pe',
                'email2' => 'gigiarccoropuna@hotmail.com',
+               'user_id' => '1210',
           ]);
           DataUser::create([
                'wdoc1' => 'ENVER ALEMBERT',
@@ -20087,26 +13326,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'erivera@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDO',
-               'wdoc2' => 'RIVERA',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '002632',
-               'fono1' => '968062724',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rrflores_200@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NIKOLAI HOMERO',
-               'wdoc2' => 'RIVERA',
-               'wdoc3' => 'LUCAS',
-               'cdocente' => '002577',
-               'fono1' => '984074008',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'nikorivera@outlook.es',
+               'user_id' => '1211',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID SOSIMO',
@@ -20117,16 +13337,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3717379',
                'email1' => 'drivera@ucss.edu.pe',
                'email2' => 'driveraromero@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS',
-               'wdoc2' => 'RIVERA',
-               'wdoc3' => 'RUA',
-               'cdocente' => '002010',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1212',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN PABLO',
@@ -20137,36 +13348,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4248062',
                'email1' => 'jrivera@ucss.edu.pe',
                'email2' => 'rivera.taboada@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELSA NELLY',
-               'wdoc2' => 'RIVERA',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '002397',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'enritauro72@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO ANTONIO',
-               'wdoc2' => 'RIVERA',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '002405',
-               'fono1' => '943135270',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marcorivera_7@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUCILA ASALIA',
-               'wdoc2' => 'ROBLES',
-               'wdoc3' => 'AGREDA',
-               'cdocente' => '002250',
-               'fono1' => '993464342',
-               'fono2' => '3385257',
-               'email1' => '',
-               'email2' => 'lucilarobles7@gmail.com',
+               'user_id' => '1213',
           ]);
           DataUser::create([
                'wdoc1' => 'HENRY',
@@ -20177,16 +13359,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hrobles@ucss.edu.pe',
                'email2' => 'hrc_21@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO ALBERTO',
-               'wdoc2' => 'ROCHA',
-               'wdoc3' => 'FLORES',
-               'cdocente' => '002485',
-               'fono1' => '945155578',
-               'fono2' => '7468078',
-               'email1' => '',
-               'email2' => 'pedro.arof@hotmail.com',
+               'user_id' => '1214',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO SALOMON',
@@ -20197,16 +13370,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3301318',
                'email1' => 'rrodas@ucss.edu.pe',
                'email2' => 'ricardo.rodas@matfis.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SAMUEL',
-               'wdoc2' => 'RODRICH',
-               'wdoc3' => 'IGLESIAS',
-               'cdocente' => '001886',
-               'fono1' => '965791429',
-               'fono2' => '7333995',
-               'email1' => '',
-               'email2' => 'ariessri@hotmail.com',
+               'user_id' => '1215',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO CELSO',
@@ -20217,6 +13381,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'erodrigo@ucss.edu.pe',
                'email2' => 'eduardorodrigo16@gmail.com',
+               'user_id' => '1216',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ANTONIO',
@@ -20227,6 +13392,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7973354',
                'email1' => 'crodriguez@ucss.edu.pe',
                'email2' => 'cesar_rodri@yahoo.com',
+               'user_id' => '1217',
           ]);
           DataUser::create([
                'wdoc1' => 'ALINA PATRICIA',
@@ -20237,16 +13403,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aprodriguez@ucss.edu.pe',
                'email2' => 'alinaalvites@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RUBEN',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'ASTO',
-               'cdocente' => '002309',
-               'fono1' => '979878786',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rubcom@hotmail.com',
+               'user_id' => '1218',
           ]);
           DataUser::create([
                'wdoc1' => 'NELLY GABRIELA',
@@ -20257,6 +13414,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6247919',
                'email1' => 'nrodriguez@ucss.edu.pe',
                'email2' => 'gabyrodriguez.pe@gmail.com',
+               'user_id' => '1219',
           ]);
           DataUser::create([
                'wdoc1' => 'EDITH',
@@ -20267,6 +13425,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2746049',
                'email1' => 'erodriguez@ucss.edu.pe',
                'email2' => 'editerap_11@hotmail.com',
+               'user_id' => '1220',
           ]);
           DataUser::create([
                'wdoc1' => 'REYLER YULFO',
@@ -20277,26 +13436,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4100700',
                'email1' => 'rrodriguezc@ucss.edu.pe',
                'email2' => 'reyler6@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALFREDO CARLOS',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'COBOS',
-               'cdocente' => '001093',
-               'fono1' => '',
-               'fono2' => '3650575',
-               'email1' => '',
-               'email2' => 'infecarlos@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER ALEXANDER',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'DUEÑAS',
-               'cdocente' => '001880',
-               'fono1' => '981594317',
-               'fono2' => '5265129',
-               'email1' => '',
-               'email2' => 'alfrednobel_2002@hotmail.com',
+               'user_id' => '1221',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ALEJANDRO',
@@ -20307,6 +13447,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4117750',
                'email1' => 'jrodrigueze@ucss.edu.pe',
                'email2' => 'joro_en@yahoo.com',
+               'user_id' => '1222',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD FERNANDO',
@@ -20317,16 +13458,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rrodriguez@ucss.edu.pe',
                'email2' => 'ronaldferd@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'XAVIER JOSE',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '002786',
-               'fono1' => '946557149',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'xjrg16@gmail.com',
+               'user_id' => '1223',
           ]);
           DataUser::create([
                'wdoc1' => 'OSWALDO JEHOSHUA',
@@ -20337,16 +13469,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jrodriguezh@ucss.edu.pe',
                'email2' => 'rjehoshua@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OSCAR ALFREDO',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'HURTADO',
-               'cdocente' => '000324',
-               'fono1' => '8580641',
-               'fono2' => '5310438',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1224',
           ]);
           DataUser::create([
                'wdoc1' => 'ROGER RAFAEL ESTANISLAO',
@@ -20357,6 +13480,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'riturri@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1225',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM RENATO',
@@ -20367,36 +13491,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wrodriguez@ucss.edu.pe',
                'email2' => 'wrenatosandro@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO MARTIN',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'MANSILLA',
-               'cdocente' => '000190',
-               'fono1' => '9585990',
-               'fono2' => '5341768',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDY NELSON',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'MOREL DE LA PRADA',
-               'cdocente' => '002011',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1226',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
                'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'NUÑEZ',
+               'wdoc3' => 'NUÃ‘EZ',
                'cdocente' => '001589',
                'fono1' => '99993361',
                'fono2' => '',
                'email1' => 'jrodriguezn@ucss.edu.pe',
                'email2' => 'jlrodriguezn@hotmail.com',
+               'user_id' => '1227',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS EDUARDO',
@@ -20407,6 +13513,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lrodriguez@ucss.edu.pe',
                'email2' => 'riojanito2010@hotmail.com',
+               'user_id' => '1228',
           ]);
           DataUser::create([
                'wdoc1' => 'ROCIO GUADALUPE',
@@ -20417,6 +13524,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rcrodriguez@ucss.edu.pe',
                'email2' => 'rociogrq@yahoo.com.mx',
+               'user_id' => '1229',
           ]);
           DataUser::create([
                'wdoc1' => 'PAOLA CATHERINE',
@@ -20427,16 +13535,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5390169',
                'email1' => 'prodriguez@ucss.edu.pe',
                'email2' => 'cathyneat@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ENRIQUE',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'RIOS',
-               'cdocente' => '001875',
-               'fono1' => '993937998',
-               'fono2' => '3623147',
-               'email1' => '',
-               'email2' => 'carlosrodriguez583@hotmail.com',
+               'user_id' => '1230',
           ]);
           DataUser::create([
                'wdoc1' => 'JANET MILAGROS',
@@ -20447,6 +13546,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5346079',
                'email1' => 'jrodriguez@ucss.edu.pe',
                'email2' => 'jrodrig2000@hotmail.com',
+               'user_id' => '1231',
           ]);
           DataUser::create([
                'wdoc1' => 'BIANNY EUDES',
@@ -20457,6 +13557,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'brodriguez@ucss.edu.pe',
                'email2' => 'produce_63@hotmail.com',
+               'user_id' => '1232',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MARTIN',
@@ -20467,46 +13568,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jmrodriguez@ucss.edu.pe',
                'email2' => 'josemartinjesus@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SARITA LUZ  DEL CARMEN',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'SANDOVAL',
-               'cdocente' => '001464',
-               'fono1' => '975818274',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lucesandoval@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YRMA',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'SANDOVAL',
-               'cdocente' => '001925',
-               'fono1' => '951918517',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yrmarodriguez1204@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER JESUS',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'TACUNAN',
-               'cdocente' => '002495',
-               'fono1' => '988553144',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'bichort2016@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIETA AYDEE',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'TAPIA',
-               'cdocente' => '002212',
-               'fono1' => '963698925',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'oxamary702@hotmail.com',
+               'user_id' => '1233',
           ]);
           DataUser::create([
                'wdoc1' => 'LAURA DEL MILAGRO',
@@ -20517,16 +13579,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lrodriguezt@ucss.edu.pe',
                'email2' => 'laumi_chu@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL',
-               'wdoc2' => 'RODRIGUEZ',
-               'wdoc3' => 'VARGAS',
-               'cdocente' => '000592',
-               'fono1' => '9416093',
-               'fono2' => '6106300',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1234',
           ]);
           DataUser::create([
                'wdoc1' => 'FLOR DE MARIA',
@@ -20537,26 +13590,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5434104',
                'email1' => 'frodriguez@ucss.edu.pe',
                'email2' => 'flovisaloth@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR HUGO',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'BAUTISTA',
-               'cdocente' => '001437',
-               'fono1' => '998036033',
-               'fono2' => '2737146',
-               'email1' => '',
-               'email2' => 'victorhugor@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SALLY',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'BENAVENTE',
-               'cdocente' => '001905',
-               'fono1' => '992251492',
-               'fono2' => '6389810',
-               'email1' => '',
-               'email2' => 'srojas1389@gmail.com',
+               'user_id' => '1235',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO DENYS',
@@ -20567,26 +13601,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mrojasb@ucss.edu.pe',
                'email2' => 'mrojasb@ucss.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN ALBERTO',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '001894',
-               'fono1' => '966675744',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'juan_rojas_castillo_untrm@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DEMETRIO',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '001374',
-               'fono1' => '942075139',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'demerojasgar@gmail.com',
+               'user_id' => '1236',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM JESUS',
@@ -20597,16 +13612,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wrojas@ucss.edu.pe',
                'email2' => 'williamtor@hoymail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WENDY MARLENY',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '002012',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1237',
           ]);
           DataUser::create([
                'wdoc1' => 'TEODORO',
@@ -20617,16 +13623,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'trojas@ucss.edu.pe',
                'email2' => 'teorojas2014@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANA CECILIA',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'MIRANDA',
-               'cdocente' => '000037',
-               'fono1' => '',
-               'fono2' => '2610718',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1238',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS DAVID',
@@ -20637,36 +13634,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'crojas@ucss.edu.pe',
                'email2' => 'carlosdavidrojasmora@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAUL FERNANDO',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'PAREDES',
-               'cdocente' => '002167',
-               'fono1' => '987740653',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'raulito_36_1@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELITA',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'PEREZ',
-               'cdocente' => '001730',
-               'fono1' => '941951002',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elitarp_1503@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR JAVIER',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'QUISPE',
-               'cdocente' => '001245',
-               'fono1' => '993182305',
-               'fono2' => '2488207',
-               'email1' => '',
-               'email2' => 'jrojas1305@yahoo.com',
+               'user_id' => '1239',
           ]);
           DataUser::create([
                'wdoc1' => 'GUSTAVO ADOLFO',
@@ -20677,26 +13645,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'grojas@ucss.edu.pe',
                'email2' => 'gustavorojassegura@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ATILIO JESUS',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'VILLANUEVA',
-               'cdocente' => '001762',
-               'fono1' => '965877648',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'atilio_rojas@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PATRICIA',
-               'wdoc2' => 'ROJAS',
-               'wdoc3' => 'VILLANUEVA',
-               'cdocente' => '000374',
-               'fono1' => '9479909',
-               'fono2' => '4361464',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1240',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO',
@@ -20707,6 +13656,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'erojasy@ucss.edu.pe',
                'email2' => 'marido42_43@hotmail.com',
+               'user_id' => '1241',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCESCO',
@@ -20717,6 +13667,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3443352',
                'email1' => 'frolli@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1242',
           ]);
           DataUser::create([
                'wdoc1' => 'FLOR DEL ROCIO',
@@ -20727,6 +13678,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'froman@ucss.edu.pe',
                'email2' => 'rocioromanc@yahoo.es',
+               'user_id' => '1243',
           ]);
           DataUser::create([
                'wdoc1' => 'YESSER BENJAMIN',
@@ -20737,6 +13689,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '378479',
                'email1' => 'yroman@ucss.edu.pe',
                'email2' => 'yeclacu@hotmail.com',
+               'user_id' => '1244',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL ANTONY',
@@ -20747,16 +13700,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rromani@ucss.edu.pe',
                'email2' => 'raulromaniramirez@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ALBERTO',
-               'wdoc2' => 'ROMANI',
-               'wdoc3' => 'SEMINARIO',
-               'cdocente' => '000399',
-               'fono1' => '6626565',
-               'fono2' => '2255174',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1245',
           ]);
           DataUser::create([
                'wdoc1' => 'HENRY JOSE',
@@ -20767,16 +13711,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6225242',
                'email1' => 'hromero@ucss.edu.pe',
                'email2' => 'henryromero0810@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELFER ALONSO',
-               'wdoc2' => 'ROMERO',
-               'wdoc3' => 'BOBADILLA',
-               'cdocente' => '001583',
-               'fono1' => '967655203',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alonso4297@gmail.com',
+               'user_id' => '1246',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO GUILLERMO',
@@ -20787,6 +13722,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5353113',
                'email1' => 'eromero@ucss.edu.pe',
                'email2' => 'lalochang2000@hotmail.com',
+               'user_id' => '1247',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEJANDRA  DULVINA',
@@ -20797,16 +13733,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3683840',
                'email1' => 'aromero@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARTHA ALICIA',
-               'wdoc2' => 'ROMERO',
-               'wdoc3' => 'ECHEVARRIA',
-               'cdocente' => '000652',
-               'fono1' => '999251523',
-               'fono2' => '5231404',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1248',
           ]);
           DataUser::create([
                'wdoc1' => 'CLAUDIA LISSETH',
@@ -20817,6 +13744,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5217999',
                'email1' => 'cromero@ucss.edu.pe',
                'email2' => 'english20100@hotmail.com',
+               'user_id' => '1249',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR MANUEL',
@@ -20827,6 +13755,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4924781',
                'email1' => 'hmromero@ucss.edu.pe',
                'email2' => 'biogenioma@gmail.com',
+               'user_id' => '1250',
           ]);
           DataUser::create([
                'wdoc1' => 'ISABEL',
@@ -20837,6 +13766,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'iromero@ucss.edu.pe',
                'email2' => 'iromero@redondos.com.pe',
+               'user_id' => '1251',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ANTONIO',
@@ -20847,6 +13777,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5360485',
                'email1' => 'jromero@ucss.edu.pe',
                'email2' => 'romeroromero10@hotmail.com',
+               'user_id' => '1252',
           ]);
           DataUser::create([
                'wdoc1' => 'ISAIAS',
@@ -20857,46 +13788,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'iromeror@ucss.edu.pe',
                'email2' => 'isaiasromerorosas@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SEGUNDO MANUEL ENCARNACI',
-               'wdoc2' => 'ROMERO',
-               'wdoc3' => 'SUAREZ',
-               'cdocente' => '000080',
-               'fono1' => '',
-               'fono2' => '3304009',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDSON NILTON',
-               'wdoc2' => 'ROQUE',
-               'wdoc3' => 'HUACHO',
-               'cdocente' => '001592',
-               'fono1' => '980844857',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'edson_2905@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTORIA ELIZABETH',
-               'wdoc2' => 'ROSADO',
-               'wdoc3' => 'ARTICA',
-               'cdocente' => '001468',
-               'fono1' => '988866295',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'rosadoarticav@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RENZO',
-               'wdoc2' => 'ROSALES',
-               'wdoc3' => 'BARRANTES',
-               'cdocente' => '001107',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '1253',
           ]);
           DataUser::create([
                'wdoc1' => 'ALDO HORACIO',
@@ -20907,6 +13799,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3238855',
                'email1' => 'arosales@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1254',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ANTONIO',
@@ -20917,6 +13810,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '996',
                'email1' => 'lrosales@ucss.edu.pe',
                'email2' => 'rral_65@hotmail.com',
+               'user_id' => '1255',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO CESAR',
@@ -20927,26 +13821,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2042973',
                'email1' => 'prosales@ucss.edu.pe',
                'email2' => 'pablo.rosalesz@pucp.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN FRANCISCO',
-               'wdoc2' => 'ROSARIO',
-               'wdoc3' => 'DOMINGUEZ',
-               'cdocente' => '002777',
-               'fono1' => '999093373',
-               'fono2' => '4683870',
-               'email1' => '',
-               'email2' => 'jrosario73@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELIANA',
-               'wdoc2' => 'ROSAS',
-               'wdoc3' => 'GONZALES',
-               'cdocente' => '000087',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'a1@a1.com',
+               'user_id' => '1256',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA LOURDES',
@@ -20957,6 +13832,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6507567',
                'email1' => 'lrosell@ucss.edu.pe',
                'email2' => 'urplu@yahoo.es',
+               'user_id' => '1257',
           ]);
           DataUser::create([
                'wdoc1' => 'ELENA MARIA',
@@ -20967,16 +13843,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4222071',
                'email1' => 'erossato@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SERENA',
-               'wdoc2' => 'ROSSETTI',
-               'wdoc3' => '',
-               'cdocente' => '001627',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'SERE.ROSSETTI@LIBERO.IT',
+               'user_id' => '1258',
           ]);
           DataUser::create([
                'wdoc1' => 'CLAUDIO LORENZO',
@@ -20987,6 +13854,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'crovegno@ucss.edu.pe',
                'email2' => 'crovegno@gmail.com',
+               'user_id' => '1259',
           ]);
           DataUser::create([
                'wdoc1' => 'EDINSON',
@@ -20997,16 +13865,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'erua@ucss.edu.pe',
                'email2' => 'rua_humo@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAVIER ALVINO',
-               'wdoc2' => 'RUA',
-               'wdoc3' => 'MONTES',
-               'cdocente' => '001095',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'j.rua.montes@gmail.com',
+               'user_id' => '1260',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO CESAR',
@@ -21017,6 +13876,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5671871',
                'email1' => 'jrubio@ucss.edu.pe',
                'email2' => 'jrubio40@yahoo.es',
+               'user_id' => '1261',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA VICTORIA',
@@ -21027,6 +13887,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4291237',
                'email1' => 'rrueda@ucss.edu.pe',
                'email2' => 'roxxita@hotmail.com',
+               'user_id' => '1262',
           ]);
           DataUser::create([
                'wdoc1' => 'ROSA MARIA',
@@ -21037,6 +13898,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5291084',
                'email1' => 'rruestas@ucss.edu.pe',
                'email2' => 'rosaruestasmauricio@gmail.com',
+               'user_id' => '1263',
           ]);
           DataUser::create([
                'wdoc1' => 'MARINA',
@@ -21047,36 +13909,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '200613',
                'email1' => 'mruidias@ucss.edu.pe',
                'email2' => 'marirui9@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEJANDRO',
-               'wdoc2' => 'RUIDIAS',
-               'wdoc3' => 'OJEDA',
-               'cdocente' => '001475',
-               'fono1' => '944890775',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'alejandroruidiaz0@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ISIDORO',
-               'wdoc2' => 'RUIZ',
-               'wdoc3' => 'ARANGO',
-               'cdocente' => '000094',
-               'fono1' => '9177359',
-               'fono2' => '5434548',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE LUIS',
-               'wdoc2' => 'RUIZ',
-               'wdoc3' => 'CARDENAS',
-               'cdocente' => '001019',
-               'fono1' => '942989996',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jlgem15@hotmail.com',
+               'user_id' => '1264',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE VICTOR',
@@ -21087,6 +13920,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3585495',
                'email1' => 'jruizc@ucss.edu.pe',
                'email2' => 'jovirucc@hotmail.com',
+               'user_id' => '1265',
           ]);
           DataUser::create([
                'wdoc1' => 'DORIS VIOLETA',
@@ -21097,6 +13931,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '412793',
                'email1' => 'druiz@ucss.edu.pe',
                'email2' => 'dorisruiz_942@hotmail.com',
+               'user_id' => '1266',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ELENA',
@@ -21107,16 +13942,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '412793',
                'email1' => 'mruize@ucss.edu.pe',
                'email2' => 'ruega2000@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN RUBEN',
-               'wdoc2' => 'RUIZ',
-               'wdoc3' => 'GARNELO',
-               'cdocente' => '000022',
-               'fono1' => '7201061',
-               'fono2' => '4819803',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1267',
           ]);
           DataUser::create([
                'wdoc1' => 'CLAUDIA DEL PILAR',
@@ -21127,26 +13953,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cruizg@ucss.edu.pe',
                'email2' => 'clapirugon@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS BERNARDINO',
-               'wdoc2' => 'RUIZ',
-               'wdoc3' => 'HUARAZ',
-               'cdocente' => '002775',
-               'fono1' => '996853260',
-               'fono2' => '3965955',
-               'email1' => '',
-               'email2' => 'huaraz520@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FEDERICO EUSTAQUIO',
-               'wdoc2' => 'RUIZ',
-               'wdoc3' => 'HURTADO',
-               'cdocente' => '001344',
-               'fono1' => '988881889',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ficohurtado79@hotmail.com',
+               'user_id' => '1268',
           ]);
           DataUser::create([
                'wdoc1' => 'BERTHA MARCELINA',
@@ -21157,6 +13964,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3585495',
                'email1' => 'bruiz@ucss.edu.pe',
                'email2' => 'BERTHARUIZJANGE@HOTMAIL.COM',
+               'user_id' => '1269',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEJANDRO',
@@ -21167,6 +13975,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'aruiz@ucss.edu.pe',
                'email2' => 'aruizj_22@hotmail.com',
+               'user_id' => '1270',
           ]);
           DataUser::create([
                'wdoc1' => 'EBERALDO',
@@ -21177,6 +13986,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eruizl@ucss.edu.pe',
                'email2' => 'eber39@hotmail.com',
+               'user_id' => '1271',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -21187,6 +13997,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jruizr@ucss.edu.pe',
                'email2' => 'jlruizrafael@hotmail.com',
+               'user_id' => '1272',
           ]);
           DataUser::create([
                'wdoc1' => 'JAVIER',
@@ -21197,6 +14008,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jruizri@ucss.edu.pe',
                'email2' => 'jaruri100@gmail.com',
+               'user_id' => '1273',
           ]);
           DataUser::create([
                'wdoc1' => 'ERIBERTO',
@@ -21207,6 +14019,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '352928',
                'email1' => 'eruiz@ucss.edu.pe',
                'email2' => 'eruizr168@yahoo.com',
+               'user_id' => '1274',
           ]);
           DataUser::create([
                'wdoc1' => 'GUADALUPE',
@@ -21217,6 +14030,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2503207',
                'email1' => 'gruiz@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1275',
           ]);
           DataUser::create([
                'wdoc1' => 'XIUXA',
@@ -21227,16 +14041,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4776309',
                'email1' => 'xruiz@ucss.edu.pe',
                'email2' => 'xiuxa_r@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILLAN CALIN',
-               'wdoc2' => 'RUIZ',
-               'wdoc3' => 'TIRADO',
-               'cdocente' => '001699',
-               'fono1' => '984548420',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wcrt_10@hotmail.com',
+               'user_id' => '1276',
           ]);
           DataUser::create([
                'wdoc1' => 'RUBEN',
@@ -21247,6 +14052,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rruiz@ucss.edu.pe',
                'email2' => 'ruruva_8757@hotmail.com',
+               'user_id' => '1277',
           ]);
           DataUser::create([
                'wdoc1' => 'CHRISTIAN',
@@ -21257,6 +14063,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cruiz@ucss.edu.pe',
                'email2' => 'juanjuisillo2013@hotmail.com',
+               'user_id' => '1278',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FELIPE',
@@ -21267,6 +14074,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lruiz@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '1279',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN RUBEN',
@@ -21277,16 +14085,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jruizz@ucss.edu.pe',
                'email2' => 'jruben.ruiz@outlook.com.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GASPAR ABELIO',
-               'wdoc2' => 'RUMI',
-               'wdoc3' => 'BENANCIO',
-               'cdocente' => '002578',
-               'fono1' => '962586960',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'garube_20@hotmail.com',
+               'user_id' => '1280',
           ]);
           DataUser::create([
                'wdoc1' => 'JACQUELIN VERONICA',
@@ -21297,6 +14096,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsaavedra@ucss.edu.pe',
                'email2' => 'jsaavedra1492@hotmail.com.es',
+               'user_id' => '1281',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER HUGO',
@@ -21307,6 +14107,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wsaavedra@ucss.edu.pe',
                'email2' => 'belenwalter@hotmail.com',
+               'user_id' => '1282',
           ]);
           DataUser::create([
                'wdoc1' => 'ROXANA MARGARITA',
@@ -21317,6 +14118,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7236074',
                'email1' => 'rsaavedra@ucss.edu.pe',
                'email2' => 'roxsaa@gmail.com',
+               'user_id' => '1283',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERT ROY',
@@ -21327,36 +14129,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3227273',
                'email1' => 'rsaavedraj@ucss.edu.pe',
                'email2' => 'rsaavedra25uni@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR PAUL',
-               'wdoc2' => 'SAAVEDRA',
-               'wdoc3' => 'MENDOZA',
-               'cdocente' => '001593',
-               'fono1' => '997711345',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cesarpsm19@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS RICARDO',
-               'wdoc2' => 'SAAVEDRA',
-               'wdoc3' => 'MUÑOZ',
-               'cdocente' => '001424',
-               'fono1' => '997210379',
-               'fono2' => '4618760',
-               'email1' => '',
-               'email2' => 'celktr@hotmail.com',
+               'user_id' => '1284',
           ]);
           DataUser::create([
                'wdoc1' => 'NESTOR',
                'wdoc2' => 'SAAVEDRA',
-               'wdoc3' => 'MUÑOZ',
+               'wdoc3' => 'MUÃ‘OZ',
                'cdocente' => '000742',
                'fono1' => '',
                'fono2' => '',
                'email1' => 'nsaavedra@ucss.edu.pe',
                'email2' => 'nestw@hotmail.com',
+               'user_id' => '1285',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS HUGO',
@@ -21367,26 +14151,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '847165',
                'email1' => 'csabino@ucss.edu.pe',
                'email2' => 'chusa1103@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GODOFREDO NADAL',
-               'wdoc2' => 'SAENZ',
-               'wdoc3' => 'LUNA',
-               'cdocente' => '000553',
-               'fono1' => '1264739',
-               'fono2' => '5335141',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NICOLAS CONRADO',
-               'wdoc2' => 'SAEZ',
-               'wdoc3' => 'YANO',
-               'cdocente' => '001407',
-               'fono1' => '945076644',
-               'fono2' => '4470844',
-               'email1' => '',
-               'email2' => 'nico.saez.yano@gmail.com',
+               'user_id' => '1286',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD FLAVIO',
@@ -21397,26 +14162,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rsalas@ucss.edu.pe',
                'email2' => 'ronsal_10@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEX MARTIN',
-               'wdoc2' => 'SALAS',
-               'wdoc3' => 'MARTINEZ',
-               'cdocente' => '001684',
-               'fono1' => '988258503',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'aleonardo_15@hotmail.com',
+               'user_id' => '1287',
           ]);
           DataUser::create([
                'wdoc1' => 'ALBINA',
                'wdoc2' => 'SALAS',
-               'wdoc3' => 'ORDOÑO',
+               'wdoc3' => 'ORDOÃ‘O',
                'cdocente' => '001184',
                'fono1' => '',
                'fono2' => '3746917',
                'email1' => 'asalas@ucss.edu.pe',
                'email2' => 'albinasalas@hotmail.com',
+               'user_id' => '1288',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS MANUEL',
@@ -21427,16 +14184,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2326711',
                'email1' => 'csalas@ucss.edu.pe',
                'email2' => 'casara7777@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MALCO CAYO',
-               'wdoc2' => 'SALAS',
-               'wdoc3' => 'REYES',
-               'cdocente' => '001870',
-               'fono1' => '',
-               'fono2' => '5236861',
-               'email1' => '',
-               'email2' => 'malcosalas@outlook.com',
+               'user_id' => '1289',
           ]);
           DataUser::create([
                'wdoc1' => 'PAOLA EVELYN',
@@ -21447,6 +14195,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '123456',
                'email1' => 'psalazar@ucss.edu.pe',
                'email2' => 'paola_2708@hotmail.com',
+               'user_id' => '1290',
           ]);
           DataUser::create([
                'wdoc1' => 'AUGUSTO ALBERTO',
@@ -21457,6 +14206,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'asalazar@ucss.edu.pe',
                'email2' => 'gut2k3@hotmail.com',
+               'user_id' => '1291',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DEL ROSARIO',
@@ -21467,16 +14217,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5287767',
                'email1' => 'msalazarf@ucss.edu.pe',
                'email2' => 'msalazarfarfan@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANGELICA TERESA',
-               'wdoc2' => 'SALAZAR',
-               'wdoc3' => 'GUTIERREZ',
-               'cdocente' => '001115',
-               'fono1' => '998671589',
-               'fono2' => '5265652',
-               'email1' => '',
-               'email2' => 'ang93_salazar@yahoo.com',
+               'user_id' => '1292',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ENRIQUE',
@@ -21487,6 +14228,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lsalazar@ucss.edu.pe',
                'email2' => 'mashitafyl@hotmail.com',
+               'user_id' => '1293',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERTO',
@@ -21497,6 +14239,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '345962',
                'email1' => 'rsalazar@ucss.edu.pe',
                'email2' => 'rsalazarperu@hotmail.com',
+               'user_id' => '1294',
           ]);
           DataUser::create([
                'wdoc1' => 'DAMIAN',
@@ -21507,6 +14250,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dsalazar@ucss.edu.pe',
                'email2' => 'dsalazar666@yahoo.es',
+               'user_id' => '1295',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN FRANCISCO',
@@ -21517,6 +14261,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsalazar@ucss.edu.pe',
                'email2' => 'jfsalazart@yahoo.es',
+               'user_id' => '1296',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM',
@@ -21527,6 +14272,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wsalazar@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1297',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIO ALBERTO',
@@ -21537,6 +14283,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5372417',
                'email1' => 'msalazar@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1298',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE FRANCISCO',
@@ -21547,46 +14294,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsalcedo@ucss.edu.pe',
                'email2' => 'jose.salcedo.reyes@gmail.com',
+               'user_id' => '1299',
           ]);
           DataUser::create([
                'wdoc1' => 'ORLANDO',
-               'wdoc2' => 'SALDAÑA',
+               'wdoc2' => 'SALDAÃ‘A',
                'wdoc3' => 'FUSTAMANTE',
                'cdocente' => '002036',
                'fono1' => '988849252',
                'fono2' => '',
                'email1' => 'osaldana@ucss.edu.pe',
                'email2' => 'orlando_565@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RUBEL',
-               'wdoc2' => 'SALDAÑA',
-               'wdoc3' => 'PADILLA',
-               'cdocente' => '000818',
-               'fono1' => '942462010',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'perursp@yahoo.com.br',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'SALDAÑA',
-               'wdoc3' => 'SALMON',
-               'cdocente' => '002065',
-               'fono1' => '987501917',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JACQUELINE ROSE MARY',
-               'wdoc2' => 'SALGUERO',
-               'wdoc3' => 'HUAMAN',
-               'cdocente' => '001378',
-               'fono1' => '995278506',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'salguero.jacqueliner@gmail.com',
+               'user_id' => '1300',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -21597,6 +14316,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5555555',
                'email1' => 'jsalinas@ucss.edu.pe',
                'email2' => 'jsalinas@gmail.com',
+               'user_id' => '1301',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL MOISES',
@@ -21607,6 +14327,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2325795',
                'email1' => 'msamanamud@ucss.edu.pe',
                'email2' => 'miguelsamanamud2000@hotmail.com',
+               'user_id' => '1302',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEJANDRO',
@@ -21617,6 +14338,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6692703',
                'email1' => 'asamaniego@ucss.edu.pe',
                'email2' => 'asamaniegosalcedo@gmail.com',
+               'user_id' => '1303',
           ]);
           DataUser::create([
                'wdoc1' => 'PAULO VINICIUS',
@@ -21627,36 +14349,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pcosta@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CLAUDIO',
-               'wdoc2' => 'SANABRIA',
-               'wdoc3' => 'RUIZ',
-               'cdocente' => '000663',
-               'fono1' => '990445234',
-               'fono2' => '5231933',
-               'email1' => '',
-               'email2' => 'csanabria30@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OSWALDO MARTIN',
-               'wdoc2' => 'SANABRIA',
-               'wdoc3' => 'SALAZAR',
-               'cdocente' => '000992',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'omsanabria70@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NARDA FANNY',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'ABAD',
-               'cdocente' => '002200',
-               'fono1' => '948477443',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sanchezfann1703@gmail.com',
+               'user_id' => '1304',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN SANTIAGO',
@@ -21667,26 +14360,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsancheza@ucss.edu.pe',
                'email2' => 'rejisa2010@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JEANETE LIZETH',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'AGUIRRE',
-               'cdocente' => '000603',
-               'fono1' => '5657784',
-               'fono2' => '5421167',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANDERSON',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'ALEGRIA',
-               'cdocente' => '001328',
-               'fono1' => '959542772',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '1305',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN BAUTISTA',
@@ -21697,6 +14371,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5748857',
                'email1' => 'bsanchez@ucss.edu.pe',
                'email2' => 'jubanchez@hotmail.com',
+               'user_id' => '1306',
           ]);
           DataUser::create([
                'wdoc1' => 'HENRY DENNYS',
@@ -21707,6 +14382,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hdsanchez@ucss.edu.pe',
                'email2' => 'hd_sanchez@hotmail.com',
+               'user_id' => '1307',
           ]);
           DataUser::create([
                'wdoc1' => 'ROMER',
@@ -21717,16 +14393,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rsanchezc@ucss.edu.pe',
                'email2' => 'romersanchezc@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GLORIA ROSA',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'CORDOVA',
-               'cdocente' => '002218',
-               'fono1' => '964671008',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'glorisancor@hotmail.com',
+               'user_id' => '1308',
           ]);
           DataUser::create([
                'wdoc1' => 'NANCY',
@@ -21737,6 +14404,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nsanchez@ucss.edu.pe',
                'email2' => 'xxxxxx@xxxx.gmail.com',
+               'user_id' => '1309',
           ]);
           DataUser::create([
                'wdoc1' => 'JHON',
@@ -21747,16 +14415,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsanchezd@ucss.edu.pe',
                'email2' => 'j_sanchez1983@hotmail.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILLIAM',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'EDQUEN',
-               'cdocente' => '001287',
-               'fono1' => '942111031',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wse_1981@hotmail.com',
+               'user_id' => '1310',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR ANGEL',
@@ -21767,6 +14426,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5795637',
                'email1' => 'vsanchez@ucss.edu.pe',
                'email2' => 'victorioso1@hotmail.com',
+               'user_id' => '1311',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -21777,16 +14437,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7319109',
                'email1' => 'jsanchezh@ucss.edu.pe',
                'email2' => 'jsanchezh001@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEX OSWALDO',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'HUARCAYA',
-               'cdocente' => '000961',
-               'fono1' => '997648553',
-               'fono2' => '5335438',
-               'email1' => '',
-               'email2' => 'alexsanch25@yahoo.com',
+               'user_id' => '1312',
           ]);
           DataUser::create([
                'wdoc1' => 'AGUSTIN ENRIQUE',
@@ -21797,26 +14448,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5222288',
                'email1' => 'asanchezm@ucss.edu.pe',
                'email2' => 'henry_28_8@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR HUGO',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'MIRANDA',
-               'cdocente' => '002671',
-               'fono1' => '997006124',
-               'fono2' => '4293944',
-               'email1' => '',
-               'email2' => 'profesorvhs@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO AUGUSTO',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'PAUTRE',
-               'cdocente' => '000523',
-               'fono1' => '5700397',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1313',
           ]);
           DataUser::create([
                'wdoc1' => 'DIEGO',
@@ -21827,6 +14459,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3873565',
                'email1' => 'dsanchez@ucss.edu.pe',
                'email2' => 'diego_squi@hotmail.com',
+               'user_id' => '1314',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ULISES',
@@ -21837,6 +14470,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '286292',
                'email1' => 'csanchez@ucss.edu.pe',
                'email2' => 'sanchez3460@hotmail.com',
+               'user_id' => '1315',
           ]);
           DataUser::create([
                'wdoc1' => 'KARLA ROCCIO',
@@ -21847,6 +14481,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3876699',
                'email1' => 'ksanchez@ucss.edu.pe',
                'email2' => 'karla_roccio@hotmail.com',
+               'user_id' => '1316',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANK OCTAVIO',
@@ -21857,6 +14492,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fsanchezs@ucss.edu.pe',
                'email2' => 'poetafoss@hotmail.com',
+               'user_id' => '1317',
           ]);
           DataUser::create([
                'wdoc1' => 'HEIDI ISABEL',
@@ -21867,6 +14503,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3462501',
                'email1' => 'hsanchezt@ucss.edu.pe',
                'email2' => 'heidi.isabel@gmail.com',
+               'user_id' => '1318',
           ]);
           DataUser::create([
                'wdoc1' => 'HOMERO',
@@ -21877,6 +14514,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hsanchezv@ucss.edu.pe',
                'email2' => 'homero22958@hotmail.com',
+               'user_id' => '1319',
           ]);
           DataUser::create([
                'wdoc1' => 'JAIME OMAR',
@@ -21887,16 +14525,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'josanchez@ucss.edu.pe',
                'email2' => 'omarsct666@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NAPO ORLANDO',
-               'wdoc2' => 'SANCHEZ',
-               'wdoc3' => 'VASQUEZ',
-               'cdocente' => '000875',
-               'fono1' => '',
-               'fono2' => '5330008',
-               'email1' => '',
-               'email2' => 'orlando14124@hotmail.com',
+               'user_id' => '1320',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE DEMETRIO',
@@ -21907,6 +14536,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5281549',
                'email1' => 'jsanchez@ucss.edu.pe',
                'email2' => 'jsanchez7575@hotmail.com',
+               'user_id' => '1321',
           ]);
           DataUser::create([
                'wdoc1' => 'RENE',
@@ -21917,16 +14547,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rsanchez@ucss.edu.pe',
                'email2' => 'constru_lider@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KATHERINE',
-               'wdoc2' => 'SANDOVAL',
-               'wdoc3' => 'HUAMAN',
-               'cdocente' => '001830',
-               'fono1' => '992306831',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'k_yuli_tlv@hotmail.com',
+               'user_id' => '1322',
           ]);
           DataUser::create([
                'wdoc1' => 'GIOVANI',
@@ -21937,6 +14558,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4307680',
                'email1' => 'gsandoval@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1323',
           ]);
           DataUser::create([
                'wdoc1' => 'SERGIO ALBERTO',
@@ -21947,6 +14569,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4307680',
                'email1' => 'ssandoval@ucss.edu.pe',
                'email2' => 'sergiosandoval2000@yahoo.com',
+               'user_id' => '1324',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTORIA PAULA',
@@ -21957,6 +14580,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5695070',
                'email1' => 'vsandoval@ucss.edu.pe',
                'email2' => 'vivi_123_33@hotmail.com',
+               'user_id' => '1325',
           ]);
           DataUser::create([
                'wdoc1' => 'ALFREDO JULIAN',
@@ -21967,66 +14591,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'asandoval@ucss.edu.pe',
                'email2' => 'asanor_4@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIRELLA',
-               'wdoc2' => 'SANDOVAL',
-               'wdoc3' => 'PALACIOS',
-               'cdocente' => '001902',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'misa19037@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PABLO MAXIMO',
-               'wdoc2' => 'SANTA CRUZ',
-               'wdoc3' => 'CARHUAMACA',
-               'cdocente' => '001848',
-               'fono1' => '995731884',
-               'fono2' => '4597717',
-               'email1' => '',
-               'email2' => 'i_geoambiental@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JACKELINE DEL MILAGRO',
-               'wdoc2' => 'SANTA CRUZ',
-               'wdoc3' => 'SEMINARIO',
-               'cdocente' => '001692',
-               'fono1' => '972910704',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jsantacruzseminario@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALICIA',
-               'wdoc2' => 'SANTANA',
-               'wdoc3' => 'ALIAGA',
-               'cdocente' => '002403',
-               'fono1' => '985666011',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'Peruedu.alicia@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEXEI VICENT',
-               'wdoc2' => 'SANTIANI',
-               'wdoc3' => 'ACOSTA',
-               'cdocente' => '000939',
-               'fono1' => '',
-               'fono2' => '7229917',
-               'email1' => '',
-               'email2' => 'asantiani@hotmail.com',
+               'user_id' => '1326',
           ]);
           DataUser::create([
                'wdoc1' => 'GABRIELA NOEMI',
-               'wdoc2' => 'SANTIBAÑEZ',
+               'wdoc2' => 'SANTIBAÃ‘EZ',
                'wdoc3' => 'ROJAS',
                'cdocente' => '000960',
                'fono1' => '997931363',
                'fono2' => '2558053',
                'email1' => 'gsantibanez@ucss.edu.pe',
                'email2' => 'gabynsr@yahoo.es',
+               'user_id' => '1327',
           ]);
           DataUser::create([
                'wdoc1' => 'RICHARD',
@@ -22037,6 +14613,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rsantillan@ucss.edu.pe',
                'email2' => 'richardsava27@gmail.com',
+               'user_id' => '1328',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS DARIO',
@@ -22047,6 +14624,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lsantillan@ucss.edu.pe',
                'email2' => 'luisdariosantillan@gmail.com',
+               'user_id' => '1329',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS JOSE',
@@ -22057,46 +14635,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lsantisteban@ucss.edu.pe',
                'email2' => 'luisjsantisteban@gmail.com',
+               'user_id' => '1330',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLA MARIA',
-               'wdoc2' => 'SANTIVAÑEZ',
+               'wdoc2' => 'SANTIVAÃ‘EZ',
                'wdoc3' => 'CALDERON',
                'cdocente' => '001536',
                'fono1' => '964369949',
                'fono2' => '4310458',
                'email1' => 'csantivanez@ucss.edu.pe',
                'email2' => 'carla_San30@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO AURELIO',
-               'wdoc2' => 'SANTOS',
-               'wdoc3' => 'CHAVEZ',
-               'cdocente' => '002467',
-               'fono1' => '958865460',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marco.santos@upch.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JACQUELINE JEANETTE',
-               'wdoc2' => 'SANTOS',
-               'wdoc3' => 'JULCA',
-               'cdocente' => '002494',
-               'fono1' => '964470910',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jackysantos10@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SABINO',
-               'wdoc2' => 'SANTOS',
-               'wdoc3' => 'PEÑALOZA',
-               'cdocente' => '001499',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sabino_santos@hotmail.com',
+               'user_id' => '1331',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS EDUARDO',
@@ -22107,6 +14657,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5641196',
                'email1' => 'lsantos@ucss.edu.pe',
                'email2' => 'luis_santos_salazar@yahoo.es',
+               'user_id' => '1332',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAM CESAR',
@@ -22117,16 +14668,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5392502',
                'email1' => 'wsantos@ucss.edu.pe',
                'email2' => 'wsantos_t@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YESELY SUSANA',
-               'wdoc2' => 'SARAVIA',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '002497',
-               'fono1' => '954966906',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yesusaro_81@hotmail.com',
+               'user_id' => '1333',
           ]);
           DataUser::create([
                'wdoc1' => 'HEBERT JAVIER',
@@ -22137,16 +14679,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7839935',
                'email1' => 'hsarmiento@ucss.edu.pe',
                'email2' => 'estudio.emccarranza@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CORY LIZ',
-               'wdoc2' => 'SARMIENTO',
-               'wdoc3' => 'GALVAN',
-               'cdocente' => '001729',
-               'fono1' => '958555651',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sarmientocory@gmail.com',
+               'user_id' => '1334',
           ]);
           DataUser::create([
                'wdoc1' => 'JACQUELINE',
@@ -22157,6 +14690,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsarmiento@ucss.edu.pe',
                'email2' => 'jasaoc31@gmail.com',
+               'user_id' => '1335',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ALBERTO',
@@ -22167,36 +14701,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3822004',
                'email1' => 'jsatake@ucss.edu.pe',
                'email2' => 'jorge.satake@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TINA',
-               'wdoc2' => 'SAVOI',
-               'wdoc3' => 'DARI',
-               'cdocente' => '000141',
-               'fono1' => '',
-               'fono2' => '2421011',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EDMUNDO DOCIAK',
-               'wdoc2' => 'SBARBARO',
-               'wdoc3' => 'DOCIAK',
-               'cdocente' => '000494',
-               'fono1' => '3657459',
-               'fono2' => '9223491',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERTA',
-               'wdoc2' => 'SCARSI',
-               'wdoc3' => '',
-               'cdocente' => '002386',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1336',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -22207,6 +14712,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jschenone@ucss.edu.pe',
                'email2' => 'nose@hotmail.com',
+               'user_id' => '1337',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ABEL',
@@ -22217,6 +14723,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'csebastian@ucss.edu.pe',
                'email2' => 'cesarsebastian72@yahoo.es',
+               'user_id' => '1338',
           ]);
           DataUser::create([
                'wdoc1' => 'GLORIA CLEMENTINA',
@@ -22227,16 +14734,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4516227',
                'email1' => 'gsebastiani@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELENA',
-               'wdoc2' => 'SECCHI VILLA',
-               'wdoc3' => '',
-               'cdocente' => '001719',
-               'fono1' => '949265818',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elena.secchivilla@live.it',
+               'user_id' => '1339',
           ]);
           DataUser::create([
                'wdoc1' => 'BORIS',
@@ -22247,26 +14745,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6204475',
                'email1' => 'bsegota@ucss.edu.pe',
                'email2' => 'bsegota@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER ARTURO',
-               'wdoc2' => 'SEGOVIA',
-               'wdoc3' => 'DE LA CRUZ',
-               'cdocente' => '001866',
-               'fono1' => '991016922',
-               'fono2' => '2801936',
-               'email1' => '',
-               'email2' => 'segovia@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELVA SUSANA',
-               'wdoc2' => 'SEGOVIA',
-               'wdoc3' => 'JIMENES',
-               'cdocente' => '002293',
-               'fono1' => '979501770',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'elvaseji@hotmail.com',
+               'user_id' => '1340',
           ]);
           DataUser::create([
                'wdoc1' => 'SOCRATES',
@@ -22277,26 +14756,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ssegovia@ucss.edu.pe',
                'email2' => 'socratesegovi@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ABDON SENON MAXIMO',
-               'wdoc2' => 'SEGUNDO',
-               'wdoc3' => 'ESPADA',
-               'cdocente' => '002522',
-               'fono1' => '995015291',
-               'fono2' => '5215826',
-               'email1' => '',
-               'email2' => 'segundo_espada@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'SEGURA',
-               'wdoc3' => 'ALANIA',
-               'cdocente' => '001075',
-               'fono1' => '990757677',
-               'fono2' => '323315',
-               'email1' => '',
-               'email2' => 'jc_seal@hotmail.com',
+               'user_id' => '1341',
           ]);
           DataUser::create([
                'wdoc1' => 'PERCY ENRIQUE',
@@ -22307,6 +14767,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'psegura@ucss.edu.pe',
                'email2' => 'pesepe29@hotmail.com',
+               'user_id' => '1342',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIELA',
@@ -22317,6 +14778,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2409095',
                'email1' => 'mseminario@ucss.edu.pe',
                'email2' => 'masemi150870@gmail.com',
+               'user_id' => '1343',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO HUGO',
@@ -22327,6 +14789,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4209511',
                'email1' => 'pseminario@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1344',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL MARTIN',
@@ -22337,16 +14800,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7225502',
                'email1' => 'rseminario@ucss.edu.pe',
                'email2' => 'r2006seminario@yahoo.es',
+               'user_id' => '1345',
           ]);
           DataUser::create([
                'wdoc1' => 'ELLIANA',
                'wdoc2' => 'SEQUEIROS',
-               'wdoc3' => 'PEÑA',
+               'wdoc3' => 'PEÃ‘A',
                'cdocente' => '001251',
                'fono1' => '951790234',
                'fono2' => '',
                'email1' => 'esequeiros@ucss.edu.pe',
                'email2' => 'elliana.sequeiros@gmail.com',
+               'user_id' => '1346',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL FERNANDO',
@@ -22357,16 +14822,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4825352',
                'email1' => 'mserna@ucss.edu.pe',
                'email2' => 'mfserna@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RIVER',
-               'wdoc2' => 'SERNA',
-               'wdoc3' => 'VALDIVIA',
-               'cdocente' => '002286',
-               'fono1' => '942059585',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'especialista.eva@gmail.com',
+               'user_id' => '1347',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER CESAR',
@@ -22377,6 +14833,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4491480',
                'email1' => 'wsernaque@ucss.edu.pe',
                'email2' => 'walterkftc@hotmail.com',
+               'user_id' => '1348',
           ]);
           DataUser::create([
                'wdoc1' => 'MARLENE REYNA',
@@ -22387,16 +14844,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2485408',
                'email1' => 'mserrano@ucss.edu.pe',
                'email2' => 'marle012004@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EMMANUEL ALEXANDER',
-               'wdoc2' => 'SESSAREGO',
-               'wdoc3' => 'DAVILA',
-               'cdocente' => '001594',
-               'fono1' => '986481840',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sessaregodavila14@hotmail.com',
+               'user_id' => '1349',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMELA',
@@ -22407,6 +14855,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'csfregola@ucss.edu.pe',
                'email2' => 'sfregolacarmela@gmail.cpm',
+               'user_id' => '1350',
           ]);
           DataUser::create([
                'wdoc1' => 'TERESA MILAGROS',
@@ -22417,6 +14866,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '563151',
                'email1' => 'tsiccha@ucss.edu.pe',
                'email2' => 'miliblue4@hotmail.com',
+               'user_id' => '1351',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL JOSE',
@@ -22427,6 +14877,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6598646',
                'email1' => 'msidia@ucss.edu.pe',
                'email2' => 'miguel@miguelsidia.com',
+               'user_id' => '1352',
           ]);
           DataUser::create([
                'wdoc1' => 'TEOFILO',
@@ -22437,6 +14888,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'tsifuentes@ucss.edu.pe',
                'email2' => 'teofilo333@hotmail.com',
+               'user_id' => '1353',
           ]);
           DataUser::create([
                'wdoc1' => 'ALCIDES',
@@ -22447,56 +14899,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '343989',
                'email1' => 'asilvaa@ucss.edu.pe',
                'email2' => 'agapito.05@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AURIA RUBI',
-               'wdoc2' => 'SILVA',
-               'wdoc3' => 'AZAÑEDO',
-               'cdocente' => '001478',
-               'fono1' => '992370030',
-               'fono2' => '3086723',
-               'email1' => '',
-               'email2' => 'rubisilva49@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BRITALDO',
-               'wdoc2' => 'SILVA',
-               'wdoc3' => 'CUBAS',
-               'cdocente' => '000164',
-               'fono1' => '',
-               'fono2' => '3655187',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PAOLA SARA',
-               'wdoc2' => 'SILVA',
-               'wdoc3' => 'JIMENEZ',
-               'cdocente' => '000178',
-               'fono1' => '7256291',
-               'fono2' => '2249403',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL ANGEL',
-               'wdoc2' => 'SILVA',
-               'wdoc3' => 'MARTEL',
-               'cdocente' => '001449',
-               'fono1' => '968186183',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'miangel179@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE EDUARDO',
-               'wdoc2' => 'SILVA',
-               'wdoc3' => 'MORI',
-               'cdocente' => '002674',
-               'fono1' => '997525269',
-               'fono2' => '4608861',
-               'email1' => '',
-               'email2' => 'jsilva@mba.pad.edu',
+               'user_id' => '1354',
           ]);
           DataUser::create([
                'wdoc1' => 'LUCIA CAROLINA',
@@ -22507,16 +14910,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lsilva@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANIEL CLINIO',
-               'wdoc2' => 'SILVA',
-               'wdoc3' => 'ZULUETA',
-               'cdocente' => '001722',
-               'fono1' => '965695745',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'danielsilvazulueta@hotmail.com',
+               'user_id' => '1355',
           ]);
           DataUser::create([
                'wdoc1' => 'SAVERIO',
@@ -22527,36 +14921,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ssimone@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PAMELA',
-               'wdoc2' => 'SMITH',
-               'wdoc3' => 'CASTRO',
-               'cdocente' => '002800',
-               'fono1' => '959279171',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'pamelasmithcastro@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANA MARIA',
-               'wdoc2' => 'SMITH',
-               'wdoc3' => 'ENCALADA',
-               'cdocente' => '002013',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SILVIA RAQUEL',
-               'wdoc2' => 'SOLANO',
-               'wdoc3' => 'BETETA',
-               'cdocente' => '002579',
-               'fono1' => '999235280',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'silviar_21@hotmail.com',
+               'user_id' => '1356',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE FRANCISCO',
@@ -22567,6 +14932,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsolano@ucss.edu.pe',
                'email2' => 'solano_321@hotmail.com',
+               'user_id' => '1357',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS MARIA SANTIAGO EDUAR',
@@ -22577,26 +14943,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lsolari@ucss.edu.pe',
                'email2' => 'lm.solari@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SAUL ODON',
-               'wdoc2' => 'SOLIER',
-               'wdoc3' => 'ZAPATA',
-               'cdocente' => '002176',
-               'fono1' => '947508753',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'shaolin_785@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KENNIDY',
-               'wdoc2' => 'SOLIS',
-               'wdoc3' => 'AGUIRRE',
-               'cdocente' => '002580',
-               'fono1' => '971103934',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'solis_aguirre@hotmail.com',
+               'user_id' => '1358',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ANIBAL',
@@ -22607,6 +14954,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsolis@ucss.edu.pe',
                'email2' => 'anibalsolisc@gmail.com',
+               'user_id' => '1359',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO ANIBAL',
@@ -22617,6 +14965,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'psolisc@ucss.edu.pe',
                'email2' => 'psoliscespedes@hotmail.com',
+               'user_id' => '1360',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN MARINA',
@@ -22627,6 +14976,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'csolis@ucss.edu.pe',
                'email2' => 'pscmsc20@hotmail.com',
+               'user_id' => '1361',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID',
@@ -22637,16 +14987,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dsolis@ucss.edu.pe',
                'email2' => 'dsmnfv@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SAUL EDGAR',
-               'wdoc2' => 'SOLIS',
-               'wdoc3' => 'ROJAS',
-               'cdocente' => '000683',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jjkjkljk',
+               'user_id' => '1362',
           ]);
           DataUser::create([
                'wdoc1' => 'PABLO',
@@ -22657,26 +14998,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'psolis@ucss.edu.pe',
                'email2' => 'psolva@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADA MARGARITA',
-               'wdoc2' => 'SOLIS',
-               'wdoc3' => 'VILLARREAL',
-               'cdocente' => '002204',
-               'fono1' => '996669374',
-               'fono2' => '3227344',
-               'email1' => '',
-               'email2' => 'amasovi@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUIS ANTONIO',
-               'wdoc2' => 'SOLORZANO',
-               'wdoc3' => 'NORABUENA',
-               'cdocente' => '002244',
-               'fono1' => '987763917',
-               'fono2' => '5534764',
-               'email1' => '',
-               'email2' => 'lsolorzano100@gmail.com',
+               'user_id' => '1363',
           ]);
           DataUser::create([
                'wdoc1' => 'SERGIO RAMON',
@@ -22687,46 +15009,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ssopla@ucss.edu.pe',
                'email2' => 'sersohua1983@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JONEL FRANCISCO',
-               'wdoc2' => 'SOPLIN',
-               'wdoc3' => 'PIÑA',
-               'cdocente' => '001665',
-               'fono1' => '951430437',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jofransoplin@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HENRY ALEXANDER',
-               'wdoc2' => 'SOPLIN',
-               'wdoc3' => 'ROQUE',
-               'cdocente' => '001275',
-               'fono1' => '966946094',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'henrysoplin@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME',
-               'wdoc2' => 'SORIANO',
-               'wdoc3' => 'CRSITOBAL',
-               'cdocente' => '002404',
-               'fono1' => '990922665',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jasocris8@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DAVID GERARDO',
-               'wdoc2' => 'SOSA',
-               'wdoc3' => 'LAZARO',
-               'cdocente' => '002597',
-               'fono1' => '943627971',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'davgersl@hotmail.com',
+               'user_id' => '1364',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE LUIS',
@@ -22737,26 +15020,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsosa@ucss.edu.pe',
                'email2' => 'sosaleon@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEJANDRO ALFONSO',
-               'wdoc2' => 'SOTELO',
-               'wdoc3' => 'MOREY',
-               'cdocente' => '000694',
-               'fono1' => '997903151',
-               'fono2' => '4634069',
-               'email1' => '',
-               'email2' => 'profasotelo@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CLAUDIO RENATO',
-               'wdoc2' => 'SOTELO',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '001768',
-               'fono1' => '949840634',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'renato_0489@hotmail.com',
+               'user_id' => '1365',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO PASCUAL',
@@ -22767,16 +15031,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'psoto@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROCIO LILIANA',
-               'wdoc2' => 'SOTO',
-               'wdoc3' => 'CASTAÑEDA',
-               'cdocente' => '000707',
-               'fono1' => '999336784',
-               'fono2' => '4457267',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1366',
           ]);
           DataUser::create([
                'wdoc1' => 'KAROL',
@@ -22787,6 +15042,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ksoto@ucss.edu.pe',
                'email2' => 'ksotoc2003@yahoo.com',
+               'user_id' => '1367',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLINA ROXANA',
@@ -22797,6 +15053,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'csoto@ucss.edu.pe',
                'email2' => 'rochi104@yahoo.com',
+               'user_id' => '1368',
           ]);
           DataUser::create([
                'wdoc1' => 'FELICITAS TEODOMIRA',
@@ -22807,6 +15064,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fsoto@ucss.edu.pe',
                'email2' => 'felicita.soto@gmail.com',
+               'user_id' => '1369',
           ]);
           DataUser::create([
                'wdoc1' => 'DONATO CESAR',
@@ -22817,16 +15075,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3262579',
                'email1' => 'dsoto@ucss.edu.pe',
                'email2' => 'donatocesar@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HAYDEE',
-               'wdoc2' => 'SOTO',
-               'wdoc3' => 'MONTOYA',
-               'cdocente' => '002392',
-               'fono1' => '943681793',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'haydee_sot1@hotmail.com',
+               'user_id' => '1370',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS GERARDO',
@@ -22837,6 +15086,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsoto@ucss.edu.pe',
                'email2' => 'gsotop2009@hotmail.com',
+               'user_id' => '1371',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA EUGENIA',
@@ -22847,16 +15097,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5338495',
                'email1' => 'msoto@ucss.edu.pe',
                'email2' => 'teresina_58@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE ENRIQUE',
-               'wdoc2' => 'SOTOMAYOR',
-               'wdoc3' => 'NIETO',
-               'cdocente' => '001824',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jossnieto@hotmail.com',
+               'user_id' => '1372',
           ]);
           DataUser::create([
                'wdoc1' => 'ABDIAS TEOFILO',
@@ -22867,56 +15108,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'asotomayor@ucss.edu.pe',
                'email2' => 'asotomayorv@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ERMELINDA',
-               'wdoc2' => 'SPAHO',
-               'wdoc3' => '',
-               'cdocente' => '002440',
-               'fono1' => '7363502',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ermelinda_spaho@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICCARDO',
-               'wdoc2' => 'SPINELLI',
-               'wdoc3' => '',
-               'cdocente' => '002014',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOHANN',
-               'wdoc2' => 'SPITZER',
-               'wdoc3' => 'CACERES',
-               'cdocente' => '002015',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CLARISA',
-               'wdoc2' => 'STINCONE',
-               'wdoc3' => '',
-               'cdocente' => '002054',
-               'fono1' => '953017159',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'clarissastincone@live.it',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'IRENE',
-               'wdoc2' => 'STRIPPOLI',
-               'wdoc3' => '.',
-               'cdocente' => '000461',
-               'fono1' => '7438783',
-               'fono2' => '4222071',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1373',
           ]);
           DataUser::create([
                'wdoc1' => 'ANTONIO OLAF',
@@ -22927,6 +15119,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6598734',
                'email1' => 'asuarez@ucss.edu.pe',
                'email2' => 'asuarez1976@yahoo.com.ar',
+               'user_id' => '1374',
           ]);
           DataUser::create([
                'wdoc1' => 'JOHN PAUL',
@@ -22937,16 +15130,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jsuarez@ucss.edu.pe',
                'email2' => 'johnsuarez@outlook.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FILEMON',
-               'wdoc2' => 'SUDARIO',
-               'wdoc3' => 'REMIGIO',
-               'cdocente' => '002310',
-               'fono1' => '',
-               'fono2' => '511682',
-               'email1' => '',
-               'email2' => 'filemon231163@hotmail.com',
+               'user_id' => '1375',
           ]);
           DataUser::create([
                'wdoc1' => 'GREMY',
@@ -22957,6 +15141,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gsueldo@ucss.edu.pe',
                'email2' => 'gsueldo@ucss.edu.pe',
+               'user_id' => '1376',
           ]);
           DataUser::create([
                'wdoc1' => 'SAUL ARNALDO',
@@ -22967,6 +15152,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '397579',
                'email1' => 'ssullon@ucss.edu.pe',
                'email2' => 'luas_sl@hotmail.com',
+               'user_id' => '1377',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCO',
@@ -22977,6 +15163,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4519404',
                'email1' => 'mtaboada@ucss.edu.pe',
                'email2' => 'taboadamarco1991@yahoo.com',
+               'user_id' => '1378',
           ]);
           DataUser::create([
                'wdoc1' => 'MISVELA',
@@ -22987,6 +15174,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mtacuchi@ucss.edu.pe',
                'email2' => 'misvetg@hotmail.com',
+               'user_id' => '1379',
           ]);
           DataUser::create([
                'wdoc1' => 'SANTIAGO',
@@ -22997,6 +15185,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5584241',
                'email1' => 'stacunan@ucss.edu.pe',
                'email2' => 'santiago_ucss@yahoo.es',
+               'user_id' => '1380',
           ]);
           DataUser::create([
                'wdoc1' => 'RAUL ARTURO',
@@ -23007,26 +15196,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4480613',
                'email1' => 'rtafur@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANDRES RICARDO',
-               'wdoc2' => 'TAFUR',
-               'wdoc3' => 'RIVERA',
-               'cdocente' => '000666',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE SLVADOR',
-               'wdoc2' => 'TAFUR',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '000536',
-               'fono1' => '6176725',
-               'fono2' => '5216799',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1381',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DEL CARMEN',
@@ -23037,6 +15207,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mtaipe@ucss.edu.pe',
                'email2' => 'maritaipe@hotmail.com',
+               'user_id' => '1382',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ENRIQUE',
@@ -23047,26 +15218,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '470221',
                'email1' => 'jtalledo@ucss.edu.pe',
                'email2' => 'dr.jorge.talledo@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUMBERTO',
-               'wdoc2' => 'TAMPES',
-               'wdoc3' => 'CHOQUE',
-               'cdocente' => '000479',
-               'fono1' => '3645761',
-               'fono2' => '2460686',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1383',
           ]);
           DataUser::create([
                'wdoc1' => 'RONALD',
                'wdoc2' => 'TANANTA',
-               'wdoc3' => 'USHIÑAHUA',
+               'wdoc3' => 'USHIÃ‘AHUA',
                'cdocente' => '002185',
                'fono1' => '990004065',
                'fono2' => '5330008',
                'email1' => 'rtananta@ucss.edu.pe',
                'email2' => 'rtananta@yahoo.com.ar',
+               'user_id' => '1384',
           ]);
           DataUser::create([
                'wdoc1' => 'PANCHO',
@@ -23077,6 +15240,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ptanques@ucss.edu.pe',
                'email2' => 'pantan_1958@hotmail.com',
+               'user_id' => '1385',
           ]);
           DataUser::create([
                'wdoc1' => 'MARTIN ALONSO',
@@ -23087,6 +15251,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3726127',
                'email1' => 'mtantalean@ucss.edu.pe',
                'email2' => 'mtantalean@gmail.com',
+               'user_id' => '1386',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBINSON',
@@ -23097,66 +15262,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rtantalean@ucss.edu.pe',
                'email2' => 'rtantalean3105@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MANUEL EDGARDO',
-               'wdoc2' => 'TANTALEAN',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '000898',
-               'fono1' => '1754734',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'matan6r@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOSE YNOCENCIO',
-               'wdoc2' => 'TANTARICO',
-               'wdoc3' => 'DELGADO',
-               'cdocente' => '001619',
-               'fono1' => '979092755',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jostandel@gmail.com',
+               'user_id' => '1387',
           ]);
           DataUser::create([
                'wdoc1' => 'LOURDES CECILIA',
                'wdoc2' => 'TAPIA',
-               'wdoc3' => 'NUÑEZ',
+               'wdoc3' => 'NUÃ‘EZ',
                'cdocente' => '000979',
                'fono1' => '994115480',
                'fono2' => '4614402',
                'email1' => 'ltapia@ucss.edu.pe',
                'email2' => 'lotapia_par@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SERGIO CARLOS BALTAZAR',
-               'wdoc2' => 'TAPIA',
-               'wdoc3' => 'TAPIA',
-               'cdocente' => '002534',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sctapia@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE ISAAC',
-               'wdoc2' => 'TARAZONA',
-               'wdoc3' => 'PAJUELO',
-               'cdocente' => '002246',
-               'fono1' => '948028007',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jorgetarazona72@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULISSA',
-               'wdoc2' => 'TARRILLO',
-               'wdoc3' => 'MARRUFO',
-               'cdocente' => '002435',
-               'fono1' => '992263206',
-               'fono2' => '3890384',
-               'email1' => '',
-               'email2' => 'julissa.tarrillo@gmail.com',
+               'user_id' => '1388',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA MARIA',
@@ -23167,16 +15284,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'atarrillov@ucss.edu.pe',
                'email2' => 'tarrillo67@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR ROMAN',
-               'wdoc2' => 'TASAICO',
-               'wdoc3' => 'CASAS',
-               'cdocente' => '001795',
-               'fono1' => '',
-               'fono2' => '3603560',
-               'email1' => '',
-               'email2' => 'tasaicovictor@gmail.com',
+               'user_id' => '1389',
           ]);
           DataUser::create([
                'wdoc1' => 'GINA PATRICIA',
@@ -23187,36 +15295,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2911117',
                'email1' => 'gtasso@ucss.edu.pe',
                'email2' => 'gptasso@yohoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARGARITA CAROLINA',
-               'wdoc2' => 'TAVARA',
-               'wdoc3' => 'GAMIO',
-               'cdocente' => '001327',
-               'fono1' => '968624090',
-               'fono2' => '378210',
-               'email1' => '',
-               'email2' => 'mctgtav@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANDRA LILIANA',
-               'wdoc2' => 'TAVARA',
-               'wdoc3' => 'TALLEDO',
-               'cdocente' => '001388',
-               'fono1' => '997354370',
-               'fono2' => '6529781',
-               'email1' => '',
-               'email2' => 'sandratavara@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUCIANO OMAR',
-               'wdoc2' => 'TAVARA',
-               'wdoc3' => 'VOYSEST',
-               'cdocente' => '002016',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1390',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ALFREDO',
@@ -23227,6 +15306,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5836523',
                'email1' => 'jtaxa@ucss.edu.pe',
                'email2' => 'jorgetaxa@unfv.edu.pe',
+               'user_id' => '1391',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR APOLINARIO',
@@ -23237,6 +15317,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vtaype@ucss.edu.pe',
                'email2' => 'victort12345@hotmail.com',
+               'user_id' => '1392',
           ]);
           DataUser::create([
                'wdoc1' => 'ANDREA GIULIANA',
@@ -23247,6 +15328,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'atejada@ucss.edu.pe',
                'email2' => 'andreakillari@hotmail.com',
+               'user_id' => '1393',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERTO ANTONIO',
@@ -23257,16 +15339,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5784843',
                'email1' => 'rtejada@ucss.edu.pe',
                'email2' => 'robertorivas@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NAPOLEON ENRIQUE',
-               'wdoc2' => 'TEJADA',
-               'wdoc3' => 'SALAZAR',
-               'cdocente' => '001654',
-               'fono1' => '969532355',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'enriquets6@hotmail.com',
+               'user_id' => '1394',
           ]);
           DataUser::create([
                'wdoc1' => 'JESSICA VICTORIA',
@@ -23277,6 +15350,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '9862256',
                'email1' => 'jvtello@ucss.edu.pe',
                'email2' => 'jecatello@hotmail.com',
+               'user_id' => '1395',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE REYNALDO',
@@ -23287,16 +15361,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4322737',
                'email1' => 'jrtello@ucss.edu.pe',
                'email2' => 'tello6068@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JESUS ENRIQUE',
-               'wdoc2' => 'TELLO',
-               'wdoc3' => 'GONZALEZ',
-               'cdocente' => '000895',
-               'fono1' => '7711351',
-               'fono2' => '5078144',
-               'email1' => '',
-               'email2' => 'enriquetello10@hotmail.',
+               'user_id' => '1396',
           ]);
           DataUser::create([
                'wdoc1' => 'ROLAN',
@@ -23307,6 +15372,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rtello@ucss.edu.pe',
                'email2' => 'tellomarin@hotmail.com',
+               'user_id' => '1397',
           ]);
           DataUser::create([
                'wdoc1' => 'JACQUELINE ANGELICA',
@@ -23317,6 +15383,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4253550',
                'email1' => 'atello@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1398',
           ]);
           DataUser::create([
                'wdoc1' => 'NILO',
@@ -23327,6 +15394,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ntello@ucss.edu.pe',
                'email2' => 'tellopandal@hotmail.com',
+               'user_id' => '1399',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -23337,26 +15405,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5474102',
                'email1' => 'jtello@ucss.edu.pe',
                'email2' => 'jor_tello@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JACQUELINE',
-               'wdoc2' => 'TEMBLADERA',
-               'wdoc3' => 'PEÑALOZA',
-               'cdocente' => '000418',
-               'fono1' => '5144245',
-               'fono2' => '7992420',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SAMUEL ISAAC',
-               'wdoc2' => 'TENICELA',
-               'wdoc3' => 'SORIANO',
-               'cdocente' => '000677',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1400',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL',
@@ -23367,6 +15416,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dtenorio@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1401',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER ORLANDO',
@@ -23377,6 +15427,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5315366',
                'email1' => 'otenorio@ucss.edu.pe',
                'email2' => 'wtenoriomendez@yahoo.es',
+               'user_id' => '1402',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ALBERTO',
@@ -23387,16 +15438,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6538065',
                'email1' => 'jtenorio@ucss.edu.pe',
                'email2' => 'jorgetenorio_m69@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR AUGUSTO',
-               'wdoc2' => 'TEPE',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '001454',
-               'fono1' => '943056987',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cetepesa@hotmail.com',
+               'user_id' => '1403',
           ]);
           DataUser::create([
                'wdoc1' => 'GERMAN ALEXANDER',
@@ -23407,16 +15449,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5780755',
                'email1' => 'gteran@ucss.edu.pe',
                'email2' => 'gats_1961@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIBEL MELBA',
-               'wdoc2' => 'TERBULLINO',
-               'wdoc3' => 'GUTARRA',
-               'cdocente' => '002203',
-               'fono1' => '964759792',
-               'fono2' => '261516',
-               'email1' => '',
-               'email2' => 'maribel_terbullino@hotmail.com',
+               'user_id' => '1404',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO ANDRE',
@@ -23427,26 +15460,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5685160',
                'email1' => 'eterron@ucss.edu.pe',
                'email2' => 'eterron@bdo.com.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO MARTIN',
-               'wdoc2' => 'TERRONES',
-               'wdoc3' => 'CARRERA',
-               'cdocente' => '000086',
-               'fono1' => '4468131',
-               'fono2' => '3582932',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VERONIKA',
-               'wdoc2' => 'TERRONES',
-               'wdoc3' => 'CATERIANO',
-               'cdocente' => '000659',
-               'fono1' => '95660649',
-               'fono2' => '5330946',
-               'email1' => '',
-               'email2' => 'veronika_terrones@hotmail.com',
+               'user_id' => '1405',
           ]);
           DataUser::create([
                'wdoc1' => 'ORLANDO',
@@ -23457,6 +15471,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'oterroness@ucss.edu.pe',
                'email2' => 'orlandoterrones@hotmail.com',
+               'user_id' => '1406',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL',
@@ -23467,6 +15482,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dticlla@ucss.edu.pe',
                'email2' => 'danieltb_7@hotmail.com',
+               'user_id' => '1407',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIA MERCEDES',
@@ -23477,6 +15493,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jticona@ucss.edu.pe',
                'email2' => 'july_biology@hotmail.com',
+               'user_id' => '1408',
           ]);
           DataUser::create([
                'wdoc1' => 'MARCOS',
@@ -23487,16 +15504,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mtimana@ucss.edu.pe',
                'email2' => 'marcosalvarez2305@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SABINO',
-               'wdoc2' => 'TINTA',
-               'wdoc3' => 'AYMA',
-               'cdocente' => '002498',
-               'fono1' => '952238595',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'seremosmillones@gmail.com',
+               'user_id' => '1409',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ANTONIO',
@@ -23507,6 +15515,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '317016',
                'email1' => 'jtirado@ucss.edu.pe',
                'email2' => 'ajtiradop@hotmail.com',
+               'user_id' => '1410',
           ]);
           DataUser::create([
                'wdoc1' => 'EDWIN HANSEL',
@@ -23517,6 +15526,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7910030',
                'email1' => 'etiravanti@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1411',
           ]);
           DataUser::create([
                'wdoc1' => 'VIRGILIO FREDY',
@@ -23527,6 +15537,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5315999',
                'email1' => 'vtito@ucss.edu.pe',
                'email2' => 'fredytito@gmail.com',
+               'user_id' => '1412',
           ]);
           DataUser::create([
                'wdoc1' => 'EUSEBIO',
@@ -23537,16 +15548,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'etocas@ucss.edu.pe',
                'email2' => 'tocas_mena@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALVARO RENE',
-               'wdoc2' => 'TOLEDO',
-               'wdoc3' => 'SAMAYOA',
-               'cdocente' => '002017',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1413',
           ]);
           DataUser::create([
                'wdoc1' => 'VIRGINIA',
@@ -23557,6 +15559,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4622727',
                'email1' => 'vtoledo@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1414',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN MANUEL',
@@ -23567,6 +15570,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4850552',
                'email1' => 'jtolentino@ucss.edu.pe',
                'email2' => 'tolentinojuan@hotmail.com',
+               'user_id' => '1415',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DEL ROSARIO',
@@ -23577,26 +15581,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mtongo@ucss.edu.pe',
                'email2' => 'charito_3_8@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS ALBERTO',
-               'wdoc2' => 'TORIBIO',
-               'wdoc3' => 'VALENZUELA',
-               'cdocente' => '002245',
-               'fono1' => '987816940',
-               'fono2' => '5410417',
-               'email1' => '',
-               'email2' => 'catoribiov@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR JULIO',
-               'wdoc2' => 'TORNIQUE',
-               'wdoc3' => 'SUSANIBAR',
-               'cdocente' => '002018',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1416',
           ]);
           DataUser::create([
                'wdoc1' => 'ELISEO',
@@ -23607,16 +15592,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2321153',
                'email1' => 'etoro@ucss.edu.pe',
                'email2' => 'etodex@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR ENRIQUE',
-               'wdoc2' => 'TORO',
-               'wdoc3' => 'LLANOS',
-               'cdocente' => '002802',
-               'fono1' => '989036585',
-               'fono2' => '2497694',
-               'email1' => '',
-               'email2' => 'victoro38@hotmail.com',
+               'user_id' => '1417',
           ]);
           DataUser::create([
                'wdoc1' => 'ESTEBAN JESUS',
@@ -23627,36 +15603,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'etorom@ucss.edu.pe',
                'email2' => 'jesustoro_2012@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO',
-               'wdoc2' => 'TORRE',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '001863',
-               'fono1' => '99341190',
-               'fono2' => '6854723',
-               'email1' => '',
-               'email2' => 'imperterritus@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TERESINA',
-               'wdoc2' => 'TORRE',
-               'wdoc3' => '',
-               'cdocente' => '001989',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JENRRY ALBERT',
-               'wdoc2' => 'TORRES',
-               'wdoc3' => 'ALFARO',
-               'cdocente' => '001310',
-               'fono1' => '990780298',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'albertjt6858@hotmail.com',
+               'user_id' => '1418',
           ]);
           DataUser::create([
                'wdoc1' => 'RODOLFO FERNANDO',
@@ -23667,6 +15614,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5336068',
                'email1' => 'rtorres@ucss.edu.pe',
                'email2' => 'ftorres_a@yahoo.com',
+               'user_id' => '1419',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR IVAN',
@@ -23677,6 +15625,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'itorres@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1420',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN',
@@ -23687,6 +15636,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jtorres@ucss.edu.pe',
                'email2' => 'ada_bp13@hotmail.com',
+               'user_id' => '1421',
           ]);
           DataUser::create([
                'wdoc1' => 'FIDEL ANGEL',
@@ -23697,6 +15647,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '310567',
                'email1' => 'ftorres@ucss.edu.pe',
                'email2' => 'fidel.torres@agrorednorte.org.pe',
+               'user_id' => '1422',
           ]);
           DataUser::create([
                'wdoc1' => 'EDGARDO',
@@ -23707,6 +15658,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'etorresl@ucss.edu.pe',
                'email2' => 'edgardotorres8@yahoo.com',
+               'user_id' => '1423',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEXANDER BRIAND',
@@ -23717,6 +15669,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'atorres@ucss.edu.pe',
                'email2' => 'alexkzb2@hotmail.com',
+               'user_id' => '1424',
           ]);
           DataUser::create([
                'wdoc1' => 'DANILO SANTIAGO',
@@ -23727,6 +15680,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'storres@ucss.edu.pe',
                'email2' => 'santiago.economist@gmail.com',
+               'user_id' => '1425',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN DANIEL',
@@ -23737,6 +15691,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '288789',
                'email1' => 'jdtorres@ucss.edu.pe',
                'email2' => 'jdaniel25@hotmail.com',
+               'user_id' => '1426',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL CHRISTIAN',
@@ -23747,6 +15702,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mtorres@ucss.edu.pe',
                'email2' => 'mtorres@pucp.edu.pe',
+               'user_id' => '1427',
           ]);
           DataUser::create([
                'wdoc1' => 'HUBER EDINSON',
@@ -23757,6 +15713,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '561216',
                'email1' => 'htorres@ucss.edu.pe',
                'email2' => 'pstorresrojas@gmail.com',
+               'user_id' => '1428',
           ]);
           DataUser::create([
                'wdoc1' => 'SALLY',
@@ -23767,6 +15724,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5783920',
                'email1' => 'storresr@ucss.edu.pe',
                'email2' => 'sallytr27@gmail.com',
+               'user_id' => '1429',
           ]);
           DataUser::create([
                'wdoc1' => 'EFRAIN',
@@ -23777,16 +15735,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'etorres@ucss.edu.pe',
                'email2' => 'etsan_01@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS',
-               'wdoc2' => 'TORRES',
-               'wdoc3' => 'TORO',
-               'cdocente' => '002262',
-               'fono1' => '973823397',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'catt_med@hotmail.com',
+               'user_id' => '1430',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSEPH LUIS',
@@ -23797,6 +15746,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '1111111',
                'email1' => 'jltorres@ucss.edu.pe',
                'email2' => 'josephy1023@hotmail.com',
+               'user_id' => '1431',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE ALBERTO',
@@ -23807,16 +15757,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jtorresv@ucss.edu.pe',
                'email2' => 'jotovaelmorro@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CESAR ARMANDO',
-               'wdoc2' => 'TORRES',
-               'wdoc3' => 'VARGAS',
-               'cdocente' => '001565',
-               'fono1' => '979946354',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cesitar_ing@hotmail.com',
+               'user_id' => '1432',
           ]);
           DataUser::create([
                'wdoc1' => 'MARILU',
@@ -23827,6 +15768,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mtovar@ucss.edu.pe',
                'email2' => 'malitb@hotmail.com',
+               'user_id' => '1433',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN NAPOLEON',
@@ -23837,16 +15779,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3810085',
                'email1' => 'jtrabucco@ucss.edu.pe',
                'email2' => 'jntr@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ZULEMA CARMEN',
-               'wdoc2' => 'TREJO',
-               'wdoc3' => 'COLLAZOS',
-               'cdocente' => '002437',
-               'fono1' => '990090691',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'zucatreco@gmail.com',
+               'user_id' => '1434',
           ]);
           DataUser::create([
                'wdoc1' => 'JENNY',
@@ -23857,6 +15790,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5501734',
                'email1' => 'jtrejo@ucss.edu.pe',
                'email2' => 'jtrejosare@gmail.com',
+               'user_id' => '1435',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL ANTONIO',
@@ -23867,6 +15801,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '305662',
                'email1' => 'mtrelles@ucss.edu.pe',
                'email2' => 'biotrelles@hotmail.com',
+               'user_id' => '1436',
           ]);
           DataUser::create([
                'wdoc1' => 'ROBERTO TITO',
@@ -23877,6 +15812,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rtrinidad@ucss.edu.pe',
                'email2' => 'rotrima2@hotmail.com',
+               'user_id' => '1437',
           ]);
           DataUser::create([
                'wdoc1' => 'PERCY',
@@ -23887,6 +15823,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ptroya@ucss.edu.pe',
                'email2' => 'percyt@hotmail.com',
+               'user_id' => '1438',
           ]);
           DataUser::create([
                'wdoc1' => 'DOMINIC DANISA',
@@ -23897,26 +15834,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dtrujilloa@ucss.edu.pe',
                'email2' => 'danisa1512@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANA MARIA',
-               'wdoc2' => 'TRUJILLO',
-               'wdoc3' => 'AMOROS',
-               'cdocente' => '000706',
-               'fono1' => '995464822',
-               'fono2' => '3377061',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WAGNER ABRAHAM',
-               'wdoc2' => 'TRUJILLO',
-               'wdoc3' => 'APONTE',
-               'cdocente' => '000975',
-               'fono1' => '991243102',
-               'fono2' => '2394463',
-               'email1' => '',
-               'email2' => 'wagnertrujillo7@hotmail.com',
+               'user_id' => '1439',
           ]);
           DataUser::create([
                'wdoc1' => 'DELSY MARIELA',
@@ -23927,26 +15845,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2663619',
                'email1' => 'dtrujillo@ucss.edu.pe',
                'email2' => 'delsytrujillo@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RICARDO WALDIR',
-               'wdoc2' => 'TRUJILLO',
-               'wdoc3' => 'FAJARDO',
-               'cdocente' => '000396',
-               'fono1' => '8083173',
-               'fono2' => '3790421',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ADOLFO',
-               'wdoc2' => 'TRUJILLO',
-               'wdoc3' => 'GIL',
-               'cdocente' => '000167',
-               'fono1' => '2224052',
-               'fono2' => '2635251',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1440',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE AUGUSTO',
@@ -23957,6 +15856,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5941581',
                'email1' => 'jtrujillo@ucss.edu.pe',
                'email2' => 'jorge.augusto.trujillo@gmail.com',
+               'user_id' => '1441',
           ]);
           DataUser::create([
                'wdoc1' => 'JOHN LEDGARD',
@@ -23967,6 +15867,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4314136',
                'email1' => 'jltrujillo@ucss.edu.pe',
                'email2' => 'johntrujillot@gmail.com',
+               'user_id' => '1442',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEJANDRO',
@@ -23977,6 +15878,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'atsajuput@ucss.edu.pe',
                'email2' => 'ajutapwaimat53@hotmail.com',
+               'user_id' => '1443',
           ]);
           DataUser::create([
                'wdoc1' => 'SONIA ELIZABETH',
@@ -23987,6 +15889,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4020864',
                'email1' => 'stucno@ucss.edu.pe',
                'email2' => 'capricornio_1680@hotmail.com',
+               'user_id' => '1444',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGEL',
@@ -23997,16 +15900,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'atuesta@ucss.edu.pe',
                'email2' => 'atctuesta@hotmail.com',
+               'user_id' => '1445',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR RAUL',
                'wdoc2' => 'TULLUME',
-               'wdoc3' => 'CAPUÑAY',
+               'wdoc3' => 'CAPUÃ‘AY',
                'cdocente' => '002350',
                'fono1' => '948995263',
                'fono2' => '',
                'email1' => 'vtullume@ucss.edu.pe',
                'email2' => 'victortull@hotmail.com',
+               'user_id' => '1446',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FELIPE',
@@ -24017,6 +15922,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ltume@ucss.edu.pe',
                'email2' => 'tumech@hotmail.com',
+               'user_id' => '1447',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN MANUEL',
@@ -24027,16 +15933,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jtume@ucss.edu.pe',
                'email2' => 'delfin_jtr@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUCIANO',
-               'wdoc2' => 'TUÑOQUE',
-               'wdoc3' => 'MORI',
-               'cdocente' => '001912',
-               'fono1' => '999344886',
-               'fono2' => '2542626',
-               'email1' => '',
-               'email2' => 'sipan1928@hotmail.com',
+               'user_id' => '1448',
           ]);
           DataUser::create([
                'wdoc1' => 'RUBEN',
@@ -24047,36 +15944,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '341391',
                'email1' => 'rubillus@ucss.edu.pe',
                'email2' => 'rubens2002@hotmail.com',
+               'user_id' => '1449',
           ]);
           DataUser::create([
                'wdoc1' => 'ROGER EUGENIO',
-               'wdoc2' => 'UCAÑAN',
+               'wdoc2' => 'UCAÃ‘AN',
                'wdoc3' => 'LEYTON',
                'cdocente' => '000174',
                'fono1' => '936586296',
                'fono2' => '5247168',
                'email1' => 'rucanan@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PEDRO',
-               'wdoc2' => 'UCEDA',
-               'wdoc3' => 'MARTINEZ',
-               'cdocente' => '000369',
-               'fono1' => '9423278',
-               'fono2' => '2633502',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SEBASTIANA DE FATIMA',
-               'wdoc2' => 'UCEDA',
-               'wdoc3' => 'RENTERIA',
-               'cdocente' => '001000',
-               'fono1' => '993134750',
-               'fono2' => '6162985',
-               'email1' => '',
-               'email2' => 'fatimaucedarenteria@hotmail.com',
+               'user_id' => '1450',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR HUGO',
@@ -24087,16 +15966,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4812536',
                'email1' => 'vucedo@ucss.edu.pe',
                'email2' => 'ucedosilva@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DANNER JUAN',
-               'wdoc2' => 'ULLOA',
-               'wdoc3' => 'RODRIGUEZ',
-               'cdocente' => '001776',
-               'fono1' => '942918076',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'danner121975@gmail.com',
+               'user_id' => '1451',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS AUGUSTO',
@@ -24107,46 +15977,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '323274',
                'email1' => 'culloque@ucss.edu.pe',
                'email2' => 'carlosulloque88@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROMEL ALDO',
-               'wdoc2' => 'UMASI',
-               'wdoc3' => 'HUAMANI',
-               'cdocente' => '001461',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'romeu_777@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NICOLINA BENITA',
-               'wdoc2' => 'UNGARO',
-               'wdoc3' => 'KAM',
-               'cdocente' => '000963',
-               'fono1' => '997709085',
-               'fono2' => '4521121',
-               'email1' => '',
-               'email2' => 'uknico@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN CARLOS',
-               'wdoc2' => 'UNTIVEROS',
-               'wdoc3' => 'MIRANDA',
-               'cdocente' => '002237',
-               'fono1' => '985731256',
-               'fono2' => '323733',
-               'email1' => '',
-               'email2' => 'jc_um@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROSARIO',
-               'wdoc2' => 'UNTIVEROS',
-               'wdoc3' => 'OLIVERA',
-               'cdocente' => '002219',
-               'fono1' => '964845556',
-               'fono2' => '265200',
-               'email1' => '',
-               'email2' => 'rosario_untiverosolivera@hotmail.com',
+               'user_id' => '1452',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGELICA EULALIA',
@@ -24157,6 +15988,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5230423',
                'email1' => 'aurbano@ucss.edu.pe',
                'email2' => 'aurbano.pe@gmail.com',
+               'user_id' => '1453',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS AUGUSTO',
@@ -24167,16 +15999,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5862266',
                'email1' => 'lurbano@ucss.edu.pe',
                'email2' => 'lurbano@senati.pe',
+               'user_id' => '1454',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN JOSE',
                'wdoc2' => 'URBINA',
-               'wdoc3' => 'PEÑAHERRERA',
+               'wdoc3' => 'PEÃ‘AHERRERA',
                'cdocente' => '001125',
                'fono1' => '943838564',
                'fono2' => '',
                'email1' => 'jurbina@ucss.edu.pe',
                'email2' => 'jiklaus491@hotmail.com',
+               'user_id' => '1455',
           ]);
           DataUser::create([
                'wdoc1' => 'ELVIS WILFREDO',
@@ -24187,6 +16021,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eurbizagastigue@ucss.edu.pe',
                'email2' => 'elvis_urbi@hotmail.com',
+               'user_id' => '1456',
           ]);
           DataUser::create([
                'wdoc1' => 'SANDRO ALEX',
@@ -24197,6 +16032,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'surco@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1457',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCESCO RENATO',
@@ -24207,6 +16043,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'furdanivia@ucss.edu.pe',
                'email2' => 'refrancesco6@hotmail.com',
+               'user_id' => '1458',
           ]);
           DataUser::create([
                'wdoc1' => 'DANIEL FRANCISCO',
@@ -24217,6 +16054,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5642883',
                'email1' => 'durday@ucss.edu.pe',
                'email2' => 'mcdaniel777@gmail.com',
+               'user_id' => '1459',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR ALBERTO',
@@ -24227,16 +16065,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4653589',
                'email1' => 'ouribe@ucss.edu.pe',
                'email2' => 'ouribe75@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUSTINA',
-               'wdoc2' => 'URIBE',
-               'wdoc3' => 'KAJAT',
-               'cdocente' => '001555',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'justinauribekajat@hotmail.com',
+               'user_id' => '1460',
           ]);
           DataUser::create([
                'wdoc1' => 'CAROLINA',
@@ -24247,6 +16076,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5224300',
                'email1' => 'curibe@ucss.edu.pe',
                'email2' => 'carolina69_9@hotmail.com',
+               'user_id' => '1461',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALBERTO',
@@ -24257,66 +16087,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6368710',
                'email1' => 'curibep@ucss.edu.pe',
                'email2' => 'carlosuribep@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HERMINIA LUZ',
-               'wdoc2' => 'URQUIAGA',
-               'wdoc3' => 'CABELLO',
-               'cdocente' => '002558',
-               'fono1' => '987256866',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'luzurquiaga@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO CESAR',
-               'wdoc2' => 'URQUIAGA',
-               'wdoc3' => 'JOHANSON',
-               'cdocente' => '002041',
-               'fono1' => '947594862',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'cesaruj@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO BULNES',
-               'wdoc2' => 'URRUTIA',
-               'wdoc3' => 'CASTRO',
-               'cdocente' => '001994',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ANA AMPARO',
-               'wdoc2' => 'URTECHO',
-               'wdoc3' => 'VILCHEZ DE CHAMOLI',
-               'cdocente' => '001485',
-               'fono1' => '942493662',
-               'fono2' => '558538',
-               'email1' => '',
-               'email2' => 'anuvi_5@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANDRA ESTHER',
-               'wdoc2' => 'USHIÑAHUA',
-               'wdoc3' => 'INUMA',
-               'cdocente' => '001790',
-               'fono1' => '962690747',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'sandraseui@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HUGO CESAR',
-               'wdoc2' => 'USHIÑAHUA',
-               'wdoc3' => 'SORIA',
-               'cdocente' => '001727',
-               'fono1' => '959957305',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'ushi_ing@hotmail.com',
+               'user_id' => '1462',
           ]);
           DataUser::create([
                'wdoc1' => 'MAGNO ALBERTO',
@@ -24327,16 +16098,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mvadillo@ucss.edu.pe',
                'email2' => 'bertodillo@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAKKE RAIMO MILAGRO',
-               'wdoc2' => 'VALAKIVI',
-               'wdoc3' => 'ALVAREZ',
-               'cdocente' => '002019',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1463',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER',
@@ -24347,26 +16109,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wvaldera@ucss.edu.pe',
                'email2' => 'valderas123@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELIZABETH',
-               'wdoc2' => 'VALDEZ',
-               'wdoc3' => 'BURGOS',
-               'cdocente' => '002060',
-               'fono1' => '954449490',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mixxigisselle@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELENA',
-               'wdoc2' => 'VALDEZ',
-               'wdoc3' => 'LANDEO',
-               'cdocente' => '002220',
-               'fono1' => '992653520',
-               'fono2' => '3016435',
-               'email1' => '',
-               'email2' => 'elenaalde@hotmail.com',
+               'user_id' => '1464',
           ]);
           DataUser::create([
                'wdoc1' => 'HAMER DEY',
@@ -24377,6 +16120,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hvaldez@ucss.edu.pe',
                'email2' => 'hamervaldez@gmail.com',
+               'user_id' => '1465',
           ]);
           DataUser::create([
                'wdoc1' => 'ALDO NESTOR',
@@ -24387,6 +16131,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5748010',
                'email1' => 'avaldez@ucss.edu.pe',
                'email2' => 'aldovaldez23@yahoo.es',
+               'user_id' => '1466',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN ROSA',
@@ -24397,26 +16142,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cvaldivia@ucss.edu.pe',
                'email2' => 'crva20@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HEBER ARNALDO',
-               'wdoc2' => 'VALDIVIA',
-               'wdoc3' => 'HUARANGA',
-               'cdocente' => '002209',
-               'fono1' => '980036236',
-               'fono2' => '5574022',
-               'email1' => '',
-               'email2' => 'hebervaldivia@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARMEN RAQUEL',
-               'wdoc2' => 'VALDIVIA',
-               'wdoc3' => 'ROSALES',
-               'cdocente' => '002313',
-               'fono1' => '941910504',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'CARMENVAL_38@HOTMAIL.COM',
+               'user_id' => '1467',
           ]);
           DataUser::create([
                'wdoc1' => 'AUGUSTO GILTTER',
@@ -24427,46 +16153,29 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3370320',
                'email1' => 'avaldivia@ucss.edu.pe',
                'email2' => 'valdivia.torres.augusto@hotmail.com',
+               'user_id' => '1468',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIBEL EMILIA',
                'wdoc2' => 'VALDIVIA',
-               'wdoc3' => 'ZUÑIGA',
+               'wdoc3' => 'ZUÃ‘IGA',
                'cdocente' => '001514',
                'fono1' => '980945021',
                'fono2' => '',
                'email1' => 'mvaldivia@ucss.edu.pe',
                'email2' => 'maribelvz@hotmail.com',
+               'user_id' => '1469',
           ]);
           DataUser::create([
                'wdoc1' => 'CLAUDIA ISABEL',
                'wdoc2' => 'VALDIVIEZO',
-               'wdoc3' => 'PATIÑO',
+               'wdoc3' => 'PATIÃ‘O',
                'cdocente' => '001346',
                'fono1' => '992875355',
                'fono2' => '',
                'email1' => 'cvaldiviezo@ucss.edu.pe',
                'email2' => 'civp1705@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUISA VANESSA',
-               'wdoc2' => 'VALENCIA',
-               'wdoc3' => 'ALBITRES',
-               'cdocente' => '001838',
-               'fono1' => '962812120',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'valenciaalbitres@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO CESAR',
-               'wdoc2' => 'VALENCIA',
-               'wdoc3' => 'BARDALES',
-               'cdocente' => '001888',
-               'fono1' => '999599461',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'iuva_aerocuete@hotmail.com',
+               'user_id' => '1470',
           ]);
           DataUser::create([
                'wdoc1' => 'BENITO ELPIDIO',
@@ -24477,6 +16186,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'bvalencia@ucss.edu.pe',
                'email2' => 'elpidiovalencia@gmail.com',
+               'user_id' => '1471',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ALFREDO',
@@ -24487,96 +16197,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cvalencia@ucss.edu.pe',
                'email2' => 'c_valencia_d@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'TEOFILO FELIX',
-               'wdoc2' => 'VALENTIN',
-               'wdoc3' => 'MELGAREJO',
-               'cdocente' => '002581',
-               'fono1' => '959075992',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'tevame33@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARITHZA',
-               'wdoc2' => 'VALENZUELA',
-               'wdoc3' => 'DAVILA',
-               'cdocente' => '002311',
-               'fono1' => '963988566',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marivalen5@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE ANTONIO',
-               'wdoc2' => 'VALENZUELA',
-               'wdoc3' => 'GARCES',
-               'cdocente' => '001239',
-               'fono1' => '995655960',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jorgevalenzuela4@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RONALD WILMER',
-               'wdoc2' => 'VALERIANO',
-               'wdoc3' => 'DE LA ROSA',
-               'cdocente' => '001705',
-               'fono1' => '968185216',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'valerianuz@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'BAUDILIO',
-               'wdoc2' => 'VALLADOLID',
-               'wdoc3' => 'CATPO',
-               'cdocente' => '001351',
-               'fono1' => '975687055',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yachaycuna@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN BRITMAN',
-               'wdoc2' => 'VALLEJOS',
-               'wdoc3' => 'TAFUR',
-               'cdocente' => '001614',
-               'fono1' => '959492613',
-               'fono2' => '561255',
-               'email1' => '',
-               'email2' => 'jbvallejos@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GEOMAR',
-               'wdoc2' => 'VALLEJOS',
-               'wdoc3' => 'TORRES',
-               'cdocente' => '002795',
-               'fono1' => '956477477',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'gvallejos@iiap.org.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'URSINO',
-               'wdoc2' => 'VALLES',
-               'wdoc3' => 'SANDOVAL',
-               'cdocente' => '000930',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1472',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ALFREDO',
                'wdoc2' => 'VALQUI',
-               'wdoc3' => 'CASTAÑEDA',
+               'wdoc3' => 'CASTAÃ‘EDA',
                'cdocente' => '002413',
                'fono1' => '943652738',
                'fono2' => '',
                'email1' => 'cvalqui@ucss.edu.pe',
                'email2' => 'carvalqui33@hotmail.com',
+               'user_id' => '1473',
           ]);
           DataUser::create([
                'wdoc1' => 'LUZ VIOLETA',
@@ -24587,16 +16219,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5493269',
                'email1' => 'lvalverde@ucss.edu.pe',
                'email2' => 'lvioleta100@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JOHNNY MOISES',
-               'wdoc2' => 'VALVERDE',
-               'wdoc3' => 'MONTORO',
-               'cdocente' => '000186',
-               'fono1' => '7300587',
-               'fono2' => '5220356',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1474',
           ]);
           DataUser::create([
                'wdoc1' => 'ESKIM SANTIAGO',
@@ -24607,6 +16230,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'evalverde@ucss.edu.pe',
                'email2' => 'eskimvalverdeobregon@yahoo.es',
+               'user_id' => '1475',
           ]);
           DataUser::create([
                'wdoc1' => 'HECTOR WILDER',
@@ -24617,6 +16241,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hvalverde@ucss.edu.pe',
                'email2' => 'wvs549@gmail.com',
+               'user_id' => '1476',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ELENA',
@@ -24627,16 +16252,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mvalverde@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA MERCEDES',
-               'wdoc2' => 'VAN DER REE',
-               'wdoc3' => 'DE ROJAS',
-               'cdocente' => '002020',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1477',
           ]);
           DataUser::create([
                'wdoc1' => 'YENY GLORIA',
@@ -24647,26 +16263,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'yvara@ucss.edu.pe',
                'email2' => 'to_shy2@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILLIAM ARTURO',
-               'wdoc2' => 'VARA',
-               'wdoc3' => 'RAMIREZ',
-               'cdocente' => '002582',
-               'fono1' => '962626051',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'wily991@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ISABEL',
-               'wdoc2' => 'VARGAS',
-               'wdoc3' => 'BILLON',
-               'cdocente' => '000836',
-               'fono1' => '991871150',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1478',
           ]);
           DataUser::create([
                'wdoc1' => 'MARITZA DE JESUS',
@@ -24677,16 +16274,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mvargasf@ucss.edu.pe',
                'email2' => 'maritzavargasf@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'AIDA CELIA',
-               'wdoc2' => 'VARGAS',
-               'wdoc3' => 'GILES',
-               'cdocente' => '001761',
-               'fono1' => '952514031',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'heraldicas2012@yahoo.es',
+               'user_id' => '1479',
           ]);
           DataUser::create([
                'wdoc1' => 'DELICIA DE JESUS',
@@ -24697,26 +16285,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dvargas@ucss.edu.pe',
                'email2' => 'deliciavargas08@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VICTOR ALEX',
-               'wdoc2' => 'VARGAS',
-               'wdoc3' => 'GUTIERREZ',
-               'cdocente' => '002165',
-               'fono1' => '976488057',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'valexvg7@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILSON',
-               'wdoc2' => 'VARGAS',
-               'wdoc3' => 'LOPEZ',
-               'cdocente' => '000431',
-               'fono1' => '8975667',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1480',
           ]);
           DataUser::create([
                'wdoc1' => 'KARINA',
@@ -24727,6 +16296,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'kvargas@ucss.edu.pe',
                'email2' => 'karivamel@gmail.com',
+               'user_id' => '1481',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ORLANDO',
@@ -24737,16 +16307,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jvargas@ucss.edu.pe',
                'email2' => 'juanachova@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'KARIM EDITH',
-               'wdoc2' => 'VARGAS',
-               'wdoc3' => 'TAVERA',
-               'cdocente' => '002021',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1482',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIX DORIAN',
@@ -24757,6 +16318,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7984425',
                'email1' => 'fvargas@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1483',
           ]);
           DataUser::create([
                'wdoc1' => 'JOVITA',
@@ -24767,6 +16329,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jvasquezb@ucss.edu.pe',
                'email2' => 'jvasquezbalarezo@gmail.com',
+               'user_id' => '1484',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN RAFAEL',
@@ -24777,26 +16340,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3634460',
                'email1' => 'jvasquezc@ucss.edu.pe',
                'email2' => 'vasquezcarranzaj@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PABLO LIBERATO',
-               'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'CARRION',
-               'cdocente' => '000085',
-               'fono1' => '',
-               'fono2' => '4781409',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1485',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA LUISA',
                'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'CASTAÑEDA',
+               'wdoc3' => 'CASTAÃ‘EDA',
                'cdocente' => '000267',
                'fono1' => '9887391',
                'fono2' => '3287215',
                'email1' => 'mvasquez@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1486',
           ]);
           DataUser::create([
                'wdoc1' => 'FLOR DE MARIA',
@@ -24807,6 +16362,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2744361',
                'email1' => 'fvasquezc@ucss.edu.pe',
                'email2' => 'florvasquezcastillo@hotmail.com',
+               'user_id' => '1487',
           ]);
           DataUser::create([
                'wdoc1' => 'JAIME',
@@ -24817,6 +16373,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jvasquezco@ucss.edu.pe',
                'email2' => 'javaco225@yahoo.es',
+               'user_id' => '1488',
           ]);
           DataUser::create([
                'wdoc1' => 'MIGUEL ANGEL',
@@ -24827,26 +16384,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3560130',
                'email1' => 'mavasquez@ucss.edu.pe',
                'email2' => 'micki0951@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL',
-               'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'GUILLEN',
-               'cdocente' => '001554',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mvasquezg1981@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FERNANDO',
-               'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'MANAY',
-               'cdocente' => '001298',
-               'fono1' => '985008868',
-               'fono2' => '5486881',
-               'email1' => '',
-               'email2' => 'fvmanay@gmail.com',
+               'user_id' => '1489',
           ]);
           DataUser::create([
                'wdoc1' => 'PEDRO JAMES',
@@ -24857,56 +16395,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pvasquez@ucss.edu.pe',
                'email2' => 'pedrovm300@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS EDIN',
-               'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'MOLOCHO',
-               'cdocente' => '001815',
-               'fono1' => '943952654',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'molochova@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WALTER MANUEL',
-               'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'MONDRAGON',
-               'cdocente' => '002205',
-               'fono1' => '966905999',
-               'fono2' => '6787969',
-               'email1' => '',
-               'email2' => 'walter.vasm@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALDO ALEJANDRO',
-               'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'RIOS',
-               'cdocente' => '002022',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SAMUEL',
-               'wdoc2' => 'VASQUEZ',
-               'wdoc3' => 'SANCHEZ',
-               'cdocente' => '001489',
-               'fono1' => '942841010',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'savasa_01@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GERMAN ABRAHAM',
-               'wdoc2' => 'VASQUEZ SOLIS',
-               'wdoc3' => 'TALAVERA',
-               'cdocente' => '000436',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1490',
           ]);
           DataUser::create([
                'wdoc1' => 'OCTAVIO JOEL',
@@ -24917,6 +16406,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ovasquez@ucss.edu.pe',
                'email2' => 'oc_ta_vio48@hotmail.com',
+               'user_id' => '1491',
           ]);
           DataUser::create([
                'wdoc1' => 'HENRY LOLAN',
@@ -24927,6 +16417,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '561104',
                'email1' => 'hvasquez@ucss.edu.pe',
                'email2' => 'jhenry.lolan@gmail.com',
+               'user_id' => '1492',
           ]);
           DataUser::create([
                'wdoc1' => 'DAVID MANUEL',
@@ -24937,6 +16428,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2393025',
                'email1' => 'dvasquez@ucss.edu.pe',
                'email2' => 'davidvasquezval13@gmail.com',
+               'user_id' => '1493',
           ]);
           DataUser::create([
                'wdoc1' => 'GREGORIO GUSTAVO',
@@ -24947,6 +16439,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4672275',
                'email1' => 'gvicario@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1494',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIGI EDGARDO',
@@ -24957,6 +16450,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lvassallo@ucss.edu.pe',
                'email2' => 'lvassallo_fernandez@hotmail.com',
+               'user_id' => '1495',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS',
@@ -24967,6 +16461,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cvazquez@ucss.edu.pe',
                'email2' => 'carlos.vazquez.zavala@gmail.com',
+               'user_id' => '1496',
           ]);
           DataUser::create([
                'wdoc1' => 'AGUSTIN HEBERT',
@@ -24977,6 +16472,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5281472',
                'email1' => 'avega@ucss.edu.pe',
                'email2' => 'hebertvega@gmail.com',
+               'user_id' => '1497',
           ]);
           DataUser::create([
                'wdoc1' => 'SHANIBET',
@@ -24987,16 +16483,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'svega@ucss.edu.pe',
                'email2' => 'shanibet_corazon@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARLENY',
-               'wdoc2' => 'VEGA',
-               'wdoc3' => 'HURTADO',
-               'cdocente' => '001967',
-               'fono1' => '979091715',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'maly0288@gmail.com',
+               'user_id' => '1498',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE JAVIER',
@@ -25007,6 +16494,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '413168',
                'email1' => 'jvega@ucss.edu.pe',
                'email2' => 'vequi4397@hotmail.com',
+               'user_id' => '1499',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA PRESENTACION',
@@ -25017,6 +16505,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mvega@ucss.edu.pe',
                'email2' => 'maryvegay@yahoo.es',
+               'user_id' => '1500',
           ]);
           DataUser::create([
                'wdoc1' => 'MANUEL JESUS',
@@ -25027,6 +16516,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5225588',
                'email1' => 'mvejarano@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1501',
           ]);
           DataUser::create([
                'wdoc1' => 'WEYDER',
@@ -25037,16 +16527,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wvela@ucss.edu.pe',
                'email2' => 'wevela@outlook.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE LUIS',
-               'wdoc2' => 'VELA',
-               'wdoc3' => 'MENDOZA',
-               'cdocente' => '001936',
-               'fono1' => '988822739',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jorgevelamendoza@hotmail.com',
+               'user_id' => '1502',
           ]);
           DataUser::create([
                'wdoc1' => 'EMERSON',
@@ -25057,6 +16538,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'evela@ucss.edu.pe',
                'email2' => 'eveno20011@yahoo.com.pe',
+               'user_id' => '1503',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS RAFAEL',
@@ -25067,6 +16549,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cvelarde@ucss.edu.pe',
                'email2' => 'cvelardealiaga@hotmail.com',
+               'user_id' => '1504',
           ]);
           DataUser::create([
                'wdoc1' => 'RUBEN ANTONIO',
@@ -25077,16 +16560,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5642639',
                'email1' => 'rvelarde@ucss.edu.pe',
                'email2' => 'rubenvelarde@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LUBINDA',
-               'wdoc2' => 'VELASQUEZ',
-               'wdoc3' => 'ARRIETA',
-               'cdocente' => '000462',
-               'fono1' => '9651667',
-               'fono2' => '2617997',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1505',
           ]);
           DataUser::create([
                'wdoc1' => 'MONICA',
@@ -25097,6 +16571,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mvelasquez@ucss.edu.pe',
                'email2' => 'VELASQUEZMONY@GMAIL.COM',
+               'user_id' => '1506',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIZABETH EMPERATRIZ',
@@ -25107,6 +16582,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'evelasquez@ucss.edu.pe',
                'email2' => 'elizabe_empera@yahoo.es',
+               'user_id' => '1507',
           ]);
           DataUser::create([
                'wdoc1' => 'ROGIANY DE LOS MILAGROS',
@@ -25117,6 +16593,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rvelasquez@ucss.edu.pe',
                'email2' => 'velasquezrivas.milagros17@gmail.com',
+               'user_id' => '1508',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA CONSTANZA',
@@ -25127,6 +16604,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4826277',
                'email1' => 'nvelasquez@ucss.edu.pe',
                'email2' => 'nvelasquez@pucp.edu.pe',
+               'user_id' => '1509',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIA GLADYS',
@@ -25137,6 +16615,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5431496',
                'email1' => 'jvelasquez@ucss.edu.pe',
                'email2' => 'juglave@hotmail.com',
+               'user_id' => '1510',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ALFREDO',
@@ -25147,26 +16626,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4496192',
                'email1' => 'jvelasquezv@ucss.edu.pe',
                'email2' => 'jvelasquezv@unmsm.edu.pe',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MOISES FERNANDO',
-               'wdoc2' => 'VELAZCO',
-               'wdoc3' => 'CUEVA',
-               'cdocente' => '002207',
-               'fono1' => '989405513',
-               'fono2' => '7470219',
-               'email1' => '',
-               'email2' => 'mofer2004@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NILTON CESAR',
-               'wdoc2' => 'VELAZCO',
-               'wdoc3' => 'LEVANO',
-               'cdocente' => '001556',
-               'fono1' => '997569827',
-               'fono2' => '3235170',
-               'email1' => '',
-               'email2' => 'niltonsj@hotmail.com',
+               'user_id' => '1511',
           ]);
           DataUser::create([
                'wdoc1' => 'GUILLERMO RENZO',
@@ -25177,6 +16637,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7330931',
                'email1' => 'gveliz@ucss.edu.pe',
                'email2' => 'gvp80@hotmail.com',
+               'user_id' => '1512',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE ANTONIO',
@@ -25187,6 +16648,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jveliz@ucss.edu.pe',
                'email2' => 'josevr12@hotmail.com',
+               'user_id' => '1513',
           ]);
           DataUser::create([
                'wdoc1' => 'MIRIAM ISABEL',
@@ -25197,6 +16659,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3764640',
                'email1' => 'mvenegas@ucss.edu.pe',
                'email2' => 'mirvec02@gmail.com',
+               'user_id' => '1514',
           ]);
           DataUser::create([
                'wdoc1' => 'JUANA TRACY',
@@ -25207,6 +16670,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jventocilla@ucss.edu.pe',
                'email2' => 'jtventocilla@gmail.com',
+               'user_id' => '1515',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAMS',
@@ -25217,6 +16681,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wventura@ucss.edu.pe',
                'email2' => 'wirtherventura@gmail.com',
+               'user_id' => '1516',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FERNANDO',
@@ -25227,6 +16692,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lvera@ucss.edu.pe',
                'email2' => 'psicologoluisvera06@hotmail.com',
+               'user_id' => '1517',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN FRANCISCO',
@@ -25237,96 +16703,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4585186',
                'email1' => 'jvera@ucss.edu.pe',
                'email2' => 'juanfvera@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA PETRONILA',
-               'wdoc2' => 'VERA',
-               'wdoc3' => 'CASTRO',
-               'cdocente' => '000021',
-               'fono1' => '9219265',
-               'fono2' => '5480876',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1518',
           ]);
           DataUser::create([
                'wdoc1' => 'ALVARO SAUL',
                'wdoc2' => 'VERA',
-               'wdoc3' => 'GASTAÑADUI',
+               'wdoc3' => 'GASTAÃ‘ADUI',
                'cdocente' => '000165',
                'fono1' => '',
                'fono2' => '4221557',
                'email1' => 'avera@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANDRA IRALDA',
-               'wdoc2' => 'VERA',
-               'wdoc3' => 'MERA',
-               'cdocente' => '000751',
-               'fono1' => '993706610',
-               'fono2' => '3560730',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCELA',
-               'wdoc2' => 'VERA',
-               'wdoc3' => 'TAPIA',
-               'cdocente' => '000294',
-               'fono1' => '7465074',
-               'fono2' => '2410226',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERT ANTHONY',
-               'wdoc2' => 'VERAMENDI',
-               'wdoc3' => 'AGUILAR',
-               'cdocente' => '000879',
-               'fono1' => '991994391',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OLGA MARLENE',
-               'wdoc2' => 'VERAMENDI',
-               'wdoc3' => 'SALINAS',
-               'cdocente' => '002432',
-               'fono1' => '952682295',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'olgamvs@live.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARITZA',
-               'wdoc2' => 'VERASTEGUI',
-               'wdoc3' => 'CORRALES',
-               'cdocente' => '002023',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NATIVIDAD',
-               'wdoc2' => 'VERGARA',
-               'wdoc3' => 'FALCON',
-               'cdocente' => '000664',
-               'fono1' => '980203035',
-               'fono2' => '4353452',
-               'email1' => '',
-               'email2' => 'terevere@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'GISELLE DEL ROCIO',
-               'wdoc2' => 'VERGARA',
-               'wdoc3' => 'GARCIA',
-               'cdocente' => '002024',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1519',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA ELENA',
@@ -25337,6 +16725,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mvergara@ucss.edu.pe',
                'email2' => 'mevm19_24@hotmail.com',
+               'user_id' => '1520',
           ]);
           DataUser::create([
                'wdoc1' => 'GLADYS ELIDA',
@@ -25347,6 +16736,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6487182',
                'email1' => 'gvergara@ucss.edu.pe',
                'email2' => 'gladyselida@yahoo.es',
+               'user_id' => '1521',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO DOUGLAS',
@@ -25357,56 +16747,29 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5483431',
                'email1' => 'jvergara@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA JACOBA HENDRIKA',
-               'wdoc2' => 'VERWEIJ',
-               'wdoc3' => 'V',
-               'cdocente' => '000339',
-               'fono1' => '9498809',
-               'fono2' => '7924732',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1522',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS GUILLERMO',
-               'wdoc2' => 'VIAÑA',
+               'wdoc2' => 'VIAÃ‘A',
                'wdoc3' => 'RUBIO',
                'cdocente' => '000849',
                'fono1' => '989207102',
                'fono2' => '2222747',
                'email1' => 'cviana@ucss.edu.pe',
                'email2' => 'egomurus@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ROBERTO ESTEBAN',
-               'wdoc2' => 'VICETTI',
-               'wdoc3' => 'VALVERDE',
-               'cdocente' => '000827',
-               'fono1' => '',
-               'fono2' => '2637917',
-               'email1' => '',
-               'email2' => 'tovicetti@yahoo.es',
+               'user_id' => '1523',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMELA EMPERATRIZ',
-               'wdoc2' => 'VICUÑA',
+               'wdoc2' => 'VICUÃ‘A',
                'wdoc3' => 'ORIHUELA',
                'cdocente' => '001621',
                'fono1' => '953547219',
                'fono2' => '',
                'email1' => 'cvicuna@ucss.edu.pe',
                'email2' => 'carmelavic@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SAMY',
-               'wdoc2' => 'VIDAL',
-               'wdoc3' => 'CHAVEZ',
-               'cdocente' => '000407',
-               'fono1' => '',
-               'fono2' => '3307082',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1524',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIANELLA IVY',
@@ -25417,6 +16780,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2619631',
                'email1' => 'mvidal@ucss.edu.pe',
                'email2' => 'ivyvidalrojas@hotmail.com',
+               'user_id' => '1525',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ANGEL',
@@ -25427,26 +16791,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '362522',
                'email1' => 'lvignolo@ucss.edu.pe',
                'email2' => 'luanvifa@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIA ELIZABETH',
-               'wdoc2' => 'VIGNOLO',
-               'wdoc3' => 'PACHECO',
-               'cdocente' => '001526',
-               'fono1' => '997445672',
-               'fono2' => '2649063',
-               'email1' => '',
-               'email2' => 'lichauno@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OMAR SADI',
-               'wdoc2' => 'VILA',
-               'wdoc3' => 'ALARCON',
-               'cdocente' => '000129',
-               'fono1' => '9437458',
-               'fono2' => '2255843',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1526',
           ]);
           DataUser::create([
                'wdoc1' => 'WILLIAMS SHANE',
@@ -25457,6 +16802,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4773968',
                'email1' => 'wvilca@ucss.edu.pe',
                'email2' => 'willyvilca@yahoo.com',
+               'user_id' => '1527',
           ]);
           DataUser::create([
                'wdoc1' => 'SOFIA ISOLINA',
@@ -25467,26 +16813,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6389578',
                'email1' => 'svilca@ucss.edu.pe',
                'email2' => 'isofia14@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FREDY DANIEL',
-               'wdoc2' => 'VILCA',
-               'wdoc3' => 'NINAJA',
-               'cdocente' => '001701',
-               'fono1' => '943472084',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'fredyvet_@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CECILIA IVONNE',
-               'wdoc2' => 'VILCA',
-               'wdoc3' => 'OCHARAN',
-               'cdocente' => '000533',
-               'fono1' => '7221600',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1528',
           ]);
           DataUser::create([
                'wdoc1' => 'PATRICIA BERNARDA',
@@ -25497,6 +16824,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5620864',
                'email1' => 'pvilcapuma@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1529',
           ]);
           DataUser::create([
                'wdoc1' => 'DARWIN',
@@ -25507,6 +16835,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dvilcherrez@ucss.edu.pe',
                'email2' => 'vilcherrezunp@hotmail.com',
+               'user_id' => '1530',
           ]);
           DataUser::create([
                'wdoc1' => 'RITA DANITZA',
@@ -25517,6 +16846,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '345368',
                'email1' => 'rvilcherrez@ucss.edu.pe',
                'email2' => 'rita_20_4@hotmail.com',
+               'user_id' => '1531',
           ]);
           DataUser::create([
                'wdoc1' => 'RICHARD JUNIOR',
@@ -25527,6 +16857,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rvilchez@ucss.edu.pe',
                'email2' => 'vilchezcampoverde@gmail.com',
+               'user_id' => '1532',
           ]);
           DataUser::create([
                'wdoc1' => 'KETTY',
@@ -25537,6 +16868,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'kvilchez@ucss.edu.pe',
                'email2' => 'kettyvilchezg@hotmail.com',
+               'user_id' => '1533',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE MIGUEL',
@@ -25547,16 +16879,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jvilchez@ucss.edu.pe',
                'email2' => 'vilchezguerrero@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EFRAIN ALFREDO',
-               'wdoc2' => 'VILCHEZ',
-               'wdoc3' => 'GUTARRA',
-               'cdocente' => '002240',
-               'fono1' => '978980477',
-               'fono2' => '214937',
-               'email1' => '',
-               'email2' => 'efrainvilchezg@gmail.com',
+               'user_id' => '1534',
           ]);
           DataUser::create([
                'wdoc1' => 'ANA MARIA ISABEL',
@@ -25567,16 +16890,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4318167',
                'email1' => 'avilchez@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MILKA ROSA',
-               'wdoc2' => 'VILCHEZ',
-               'wdoc3' => 'SECLEN',
-               'cdocente' => '001342',
-               'fono1' => '966519891',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'mil.kaeli@hotmail.com',
+               'user_id' => '1535',
           ]);
           DataUser::create([
                'wdoc1' => 'ALEJANDRO',
@@ -25587,6 +16901,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'avildoso@ucss.edu.pe',
                'email2' => 'alejandro.vildoso@coprovasrl.com',
+               'user_id' => '1536',
           ]);
           DataUser::create([
                'wdoc1' => 'VIRGINIA CONCEPCION',
@@ -25597,16 +16912,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vvildoso@ucss.edu.pe',
                'email2' => 'vicky_1602@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JACQUELINE',
-               'wdoc2' => 'VILELA',
-               'wdoc3' => 'AUCCA',
-               'cdocente' => '002431',
-               'fono1' => '966632266',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jvilelaaucca@yahoo.com',
+               'user_id' => '1537',
           ]);
           DataUser::create([
                'wdoc1' => 'MARIA DEL CARMEN',
@@ -25617,16 +16923,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3488671',
                'email1' => 'mvilela@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'FRANCIS ANGELICA',
-               'wdoc2' => 'VILELA',
-               'wdoc3' => 'TRAGODARA DE ESPINOZA',
-               'cdocente' => '002567',
-               'fono1' => '996139399',
-               'fono2' => '3406829',
-               'email1' => '',
-               'email2' => 'fravaesvi@hotmail.com',
+               'user_id' => '1538',
           ]);
           DataUser::create([
                'wdoc1' => 'GLORIA MARIA',
@@ -25637,6 +16934,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5331115',
                'email1' => 'gvilla@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1539',
           ]);
           DataUser::create([
                'wdoc1' => 'HEYDE ODO',
@@ -25647,6 +16945,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'hvilla@ucss.edu.pe',
                'email2' => 'villal8@hotmail.com',
+               'user_id' => '1540',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR AUGUSTO',
@@ -25657,6 +16956,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5331115',
                'email1' => 'cvilla@ucss.edu.pe',
                'email2' => 'cesarvilla2005@yahoo.com',
+               'user_id' => '1541',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FERNANDO',
@@ -25667,6 +16967,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2753707',
                'email1' => 'lbvillacorta@ucss.edu.pe',
                'email2' => 'lvillacorta@gmail.com',
+               'user_id' => '1542',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR MARTIN',
@@ -25677,16 +16978,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2652130',
                'email1' => 'vvillacorta@ucss.edu.pe',
                'email2' => 'vvillacorta2001@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN TOMAS',
-               'wdoc2' => 'VILLACORTA',
-               'wdoc3' => 'PAREDES',
-               'cdocente' => '000587',
-               'fono1' => '',
-               'fono2' => '4514334',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1543',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ANDRES',
@@ -25697,16 +16989,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4514334',
                'email1' => 'lvillacorta@ucss.edu.pe',
                'email2' => 'rricse@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NANCY ISABEL',
-               'wdoc2' => 'VILLAFLOR',
-               'wdoc3' => 'LAZARO',
-               'cdocente' => '002314',
-               'fono1' => '953653697',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'isapier_1977@hotmail.com',
+               'user_id' => '1544',
           ]);
           DataUser::create([
                'wdoc1' => 'ANGELICA MARIA',
@@ -25717,16 +17000,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5280318',
                'email1' => 'avillafuerte@ucss.edu.pe',
                'email2' => 'ariel_angie@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'SANDRA MARILIA',
-               'wdoc2' => 'VILLALOBOS',
-               'wdoc3' => 'MENDIVIL',
-               'cdocente' => '001259',
-               'fono1' => '998733250',
-               'fono2' => '6572731',
-               'email1' => '',
-               'email2' => 'svillalobos.mendivil@yahoo.com',
+               'user_id' => '1545',
           ]);
           DataUser::create([
                'wdoc1' => 'PACO',
@@ -25737,6 +17011,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'pvillalobos@ucss.edu.pe',
                'email2' => 'p.villalobos.06@gmail.com',
+               'user_id' => '1546',
           ]);
           DataUser::create([
                'wdoc1' => 'WILTON',
@@ -25747,26 +17022,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wvillalobos@ucss.edu.pe',
                'email2' => 'wiltonmat@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NATALY LISETTE',
-               'wdoc2' => 'VILLALTA',
-               'wdoc3' => 'ROSAS',
-               'cdocente' => '002406',
-               'fono1' => '964300659',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'naty18_vr@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JAIME JAVIER',
-               'wdoc2' => 'VILLANUEVA',
-               'wdoc3' => 'BARRETO',
-               'cdocente' => '000835',
-               'fono1' => '999104970',
-               'fono2' => '3492428',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1547',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCISCO',
@@ -25777,6 +17033,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fvillanueva@ucss.edu.pe',
                'email2' => 'fvhuaman@gmail.com',
+               'user_id' => '1548',
           ]);
           DataUser::create([
                'wdoc1' => 'ELIZABETH MARIA',
@@ -25787,6 +17044,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '7933939',
                'email1' => 'evillanueva@ucss.edu.pe',
                'email2' => 'emvm33@hotmail.com',
+               'user_id' => '1549',
           ]);
           DataUser::create([
                'wdoc1' => 'NOELIA EMPERATRIZ',
@@ -25797,16 +17055,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5335613',
                'email1' => 'nvillanueva@ucss.edu.pe',
                'email2' => 'noelia_emperatriz@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ARTURO CESAR',
-               'wdoc2' => 'VILLANUEVA',
-               'wdoc3' => 'VILLALVA',
-               'cdocente' => '001756',
-               'fono1' => '986079314',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'arcevillanuevavillalva@gmail.com',
+               'user_id' => '1550',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR AUGUSTO',
@@ -25817,6 +17066,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cvillarj@ucss.edu.pe',
                'email2' => 'caesariesus@icloud.com',
+               'user_id' => '1551',
           ]);
           DataUser::create([
                'wdoc1' => 'CESAR ABEL',
@@ -25827,6 +17077,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5444969',
                'email1' => 'cvillar@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1552',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMEN ROSA MARIA',
@@ -25837,26 +17088,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4452292',
                'email1' => 'cvillaran@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ELIANA URSULA',
-               'wdoc2' => 'VILLAVICENCIO',
-               'wdoc3' => 'VEGA',
-               'cdocente' => '000162',
-               'fono1' => '9357125',
-               'fono2' => '4512421',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JUAN JOSE',
-               'wdoc2' => 'VILLEGAS',
-               'wdoc3' => 'BERNALES',
-               'cdocente' => '000216',
-               'fono1' => '',
-               'fono2' => '5630112',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1553',
           ]);
           DataUser::create([
                'wdoc1' => 'RAFAEL',
@@ -25867,6 +17099,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rvillegas@ucss.edu.pe',
                'email2' => 'rvcordova@yahoo.es',
+               'user_id' => '1554',
           ]);
           DataUser::create([
                'wdoc1' => 'YURY JOSELINA',
@@ -25877,6 +17110,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5233386',
                'email1' => 'yvillegas@ucss.edu.pe',
                'email2' => 'yuryjoselina@gmail.com',
+               'user_id' => '1555',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -25887,16 +17121,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jvillegas@ucss.edu.pe',
                'email2' => 'jorgeluisvf9@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LIGIA MARIELA',
-               'wdoc2' => 'VILLEGAS',
-               'wdoc3' => 'RIVAS',
-               'cdocente' => '002409',
-               'fono1' => '949887388',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'marielavillegasrivas@gmail.com',
+               'user_id' => '1556',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS FERNANDO',
@@ -25907,16 +17132,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2815373',
                'email1' => 'fvillegas@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'OLGA MERCEDES',
-               'wdoc2' => 'VILORIA',
-               'wdoc3' => 'ORTIZ',
-               'cdocente' => '002787',
-               'fono1' => '923175420',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'olmevi5@gmail.com',
+               'user_id' => '1557',
           ]);
           DataUser::create([
                'wdoc1' => 'GIANLUCA',
@@ -25927,16 +17143,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'gvirgilio@ucss.edu.pe',
                'email2' => 'consultgv@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'VIRGINIA LOURDES',
-               'wdoc2' => 'VIRHUEZ',
-               'wdoc3' => 'GARAY',
-               'cdocente' => '001434',
-               'fono1' => '997003918',
-               'fono2' => '4259567',
-               'email1' => '',
-               'email2' => 'vvirhuez@yahoo.es',
+               'user_id' => '1558',
           ]);
           DataUser::create([
                'wdoc1' => 'DIANA STEFANIE',
@@ -25947,6 +17154,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'dvirto@ucss.edu.pe',
                'email2' => 'virtobalbindiana@gmail.com',
+               'user_id' => '1559',
           ]);
           DataUser::create([
                'wdoc1' => 'FRANCISCO JAVIER',
@@ -25957,6 +17165,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5681904',
                'email1' => 'fvivar@ucss.edu.pe',
                'email2' => 'fjvm_ 2007@ yahoo.es',
+               'user_id' => '1560',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ANDRES',
@@ -25967,6 +17176,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '6594581',
                'email1' => 'cviviano@ucss.edu.pe',
                'email2' => 'carlos.viviano@upch.pe',
+               'user_id' => '1561',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLOS ANTONIO',
@@ -25977,16 +17187,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5747169',
                'email1' => 'cvizcardo@ucss.edu.pe',
                'email2' => 'carlos_vizcardo@yahoo.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PIERO',
-               'wdoc2' => 'VOJVODIC',
-               'wdoc3' => 'PEREZ',
-               'cdocente' => '000522',
-               'fono1' => '7520299',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1562',
           ]);
           DataUser::create([
                'wdoc1' => 'CARMINE',
@@ -25997,6 +17198,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cvoto@ucss.edu.pe',
                'email2' => 'votocarmine@gmail.com',
+               'user_id' => '1563',
           ]);
           DataUser::create([
                'wdoc1' => 'ANSHIE JOSSELYN',
@@ -26007,16 +17209,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '235594',
                'email1' => 'awismann@ucss.edu.pe',
                'email2' => 'ing.awismann@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DAVID ERNESTO',
-               'wdoc2' => 'WONG',
-               'wdoc3' => 'CAM',
-               'cdocente' => '002025',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1564',
           ]);
           DataUser::create([
                'wdoc1' => 'MARTHA RITA',
@@ -26027,6 +17220,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5826877',
                'email1' => 'myacsahuanga@ucss.edu.pe',
                'email2' => 'mritays@gmail.com',
+               'user_id' => '1565',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLA VALERIE',
@@ -26037,26 +17231,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5331280',
                'email1' => 'cyafac@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARIO ALBERTO',
-               'wdoc2' => 'YAN',
-               'wdoc3' => 'LAU',
-               'cdocente' => '001052',
-               'fono1' => '998745899',
-               'fono2' => '3450432',
-               'email1' => '',
-               'email2' => 'marioalbertoyanlau@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAFAEL SEBASTIAN',
-               'wdoc2' => 'YANCAN',
-               'wdoc3' => 'MAYO',
-               'cdocente' => '001871',
-               'fono1' => '999414296',
-               'fono2' => '4292577',
-               'email1' => '',
-               'email2' => 'grupoxxi@hotmail.com',
+               'user_id' => '1566',
           ]);
           DataUser::create([
                'wdoc1' => 'OSCAR SAMUEL',
@@ -26067,6 +17242,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'oyance@ucss.edu.pe',
                'email2' => 'oyance@yahoo.com',
+               'user_id' => '1567',
           ]);
           DataUser::create([
                'wdoc1' => 'ESTANISLAO',
@@ -26077,6 +17253,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'eyapu@ucss.edu.pe',
                'email2' => 'estanisyapu@gmail.com',
+               'user_id' => '1568',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS ENRIQUE',
@@ -26087,6 +17264,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lyarleque@ucss.edu.pe',
                'email2' => 'leyvileo@hotmail.com',
+               'user_id' => '1569',
           ]);
           DataUser::create([
                'wdoc1' => 'NORMA MARIBEL',
@@ -26097,6 +17275,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nyarleque@ucss.edu.pe',
                'email2' => 'yarvil5@hotmail.com',
+               'user_id' => '1570',
           ]);
           DataUser::create([
                'wdoc1' => 'RAQUEL SOLEDAD',
@@ -26107,6 +17286,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4818937',
                'email1' => 'ryarnold@ucss.edu.pe',
                'email2' => 'raquelyarnold@hotmail.com',
+               'user_id' => '1571',
           ]);
           DataUser::create([
                'wdoc1' => 'WALTER EDWIN',
@@ -26117,26 +17297,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'wyasuda@ucss.edu.pe',
                'email2' => 'verde98@msn.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'EMERSON',
-               'wdoc2' => 'YAURI',
-               'wdoc3' => 'LOZANO',
-               'cdocente' => '001911',
-               'fono1' => '950012348',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'yauri.emerson@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MIGUEL VALENTIN',
-               'wdoc2' => 'YAURI',
-               'wdoc3' => 'VELASQUEZ',
-               'cdocente' => '002312',
-               'fono1' => '952917958',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'myauriv@hotmail.es',
+               'user_id' => '1572',
           ]);
           DataUser::create([
                'wdoc1' => 'CARLA VERONICA',
@@ -26147,36 +17308,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'cyengle@ucss.edu.pe',
                'email2' => 'carliyengle@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MONICA JANETTE',
-               'wdoc2' => 'YLLANES',
-               'wdoc3' => 'PUICAN',
-               'cdocente' => '000367',
-               'fono1' => '',
-               'fono2' => '5221119',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1573',
           ]);
           DataUser::create([
                'wdoc1' => 'JULIO CESAR',
                'wdoc2' => 'YNGA',
-               'wdoc3' => 'LEAÑO',
+               'wdoc3' => 'LEAÃ‘O',
                'cdocente' => '002540',
                'fono1' => '957444836',
                'fono2' => '',
                'email1' => 'jynga@ucss.edu.pe',
                'email2' => 'yngajulio@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO ANTONIO MARTIN',
-               'wdoc2' => 'YOUNG',
-               'wdoc3' => 'RABINES',
-               'cdocente' => '000010',
-               'fono1' => '',
-               'fono2' => '2616161',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1574',
           ]);
           DataUser::create([
                'wdoc1' => 'VITALI',
@@ -26187,6 +17330,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vyrene@ucss.edu.pe',
                'email2' => 'piscis19_65@hotmail.com',
+               'user_id' => '1575',
           ]);
           DataUser::create([
                'wdoc1' => 'SANDRA PATRICIA',
@@ -26197,6 +17341,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5363728',
                'email1' => 'syseki@ucss.edu.pe',
                'email2' => 'sandyseki@hotmail.com',
+               'user_id' => '1576',
           ]);
           DataUser::create([
                'wdoc1' => 'SANDRA',
@@ -26207,6 +17352,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3820766',
                'email1' => 'syucra@ucss.edu.pe',
                'email2' => 'sanyuse@gmail.com',
+               'user_id' => '1577',
           ]);
           DataUser::create([
                'wdoc1' => 'RICARDO IVAN',
@@ -26217,46 +17363,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ryupanqui@ucss.edu.pe',
                'email2' => 'ricardoivan02@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'STEFANIE JESUS',
-               'wdoc2' => 'ZABALETA',
-               'wdoc3' => 'FUENTES',
-               'cdocente' => '001347',
-               'fono1' => '987103724',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS',
-               'wdoc2' => 'ZABARBURO',
-               'wdoc3' => 'VALDIVIA',
-               'cdocente' => '001896',
-               'fono1' => '954445075',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'carlosvaldivia3@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JULIO EDGAR',
-               'wdoc2' => 'ZAFRA',
-               'wdoc3' => 'COTRINA',
-               'cdocente' => '000466',
-               'fono1' => '7844781',
-               'fono2' => '5286799',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'MARCO ANTONIO',
-               'wdoc2' => 'ZAGACETA',
-               'wdoc3' => 'CAMPOS',
-               'cdocente' => '001124',
-               'fono1' => '99999999',
-               'fono2' => '123456',
-               'email1' => '',
-               'email2' => 'mzagaceta@gmail.com',
+               'user_id' => '1578',
           ]);
           DataUser::create([
                'wdoc1' => 'VICTOR HUGO',
@@ -26267,6 +17374,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'vzambrano@ucss.edu.pe',
                'email2' => 'v_zambrano@yahoo.es',
+               'user_id' => '1579',
           ]);
           DataUser::create([
                'wdoc1' => 'JUAN ANTONI',
@@ -26277,36 +17385,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '3622693',
                'email1' => 'jzambranog@ucss.edu.pe',
                'email2' => 'juanzago64@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'RAUL FERNANDO',
-               'wdoc2' => 'ZAMBRANO',
-               'wdoc3' => 'QUISPE',
-               'cdocente' => '000604',
-               'fono1' => '',
-               'fono2' => '5361692',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'PABLO MAURO',
-               'wdoc2' => 'ZAMBRANO',
-               'wdoc3' => 'RUIZ',
-               'cdocente' => '000755',
-               'fono1' => '961597416',
-               'fono2' => '6306720',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'WILLIAM',
-               'wdoc2' => 'ZANATTA',
-               'wdoc3' => '',
-               'cdocente' => '000985',
-               'fono1' => '993132586',
-               'fono2' => '5210055',
-               'email1' => '',
-               'email2' => 'italianoestudia@gmail.com',
+               'user_id' => '1580',
           ]);
           DataUser::create([
                'wdoc1' => 'NICOLAS ALBERTO MARTIN',
@@ -26317,16 +17396,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'nzanetti@ucss.edu.pe',
                'email2' => 'nazatt239@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'REGINA LUCIA',
-               'wdoc2' => 'ZAPANA',
-               'wdoc3' => 'GONZALES',
-               'cdocente' => '002026',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1581',
           ]);
           DataUser::create([
                'wdoc1' => 'REMIGIO',
@@ -26337,6 +17407,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rzapata@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1582',
           ]);
           DataUser::create([
                'wdoc1' => 'FELIX ALBERTO',
@@ -26347,6 +17418,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'fzapata@ucss.edu.pe',
                'email2' => 'felix_zapata_corrales@yahoo.es',
+               'user_id' => '1583',
           ]);
           DataUser::create([
                'wdoc1' => 'CHRISTIAN DEIVI',
@@ -26357,6 +17429,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2355402',
                'email1' => 'czapata@ucss.edu.pe',
                'email2' => 'elchris16ze@hotmail.com',
+               'user_id' => '1584',
           ]);
           DataUser::create([
                'wdoc1' => 'EDUARDO REMBERTO',
@@ -26367,6 +17440,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ezapata@ucss.edu.pe',
                'email2' => 'ezapata_716@hotmail.com',
+               'user_id' => '1585',
           ]);
           DataUser::create([
                'wdoc1' => 'JOSE CARLOS',
@@ -26377,6 +17451,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4641879',
                'email1' => 'jzapata@ucss.edu.pe',
                'email2' => 'jocaza_2000@hotmail.com',
+               'user_id' => '1586',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS MANUEL',
@@ -26387,6 +17462,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jzapatav@ucss.edu.pe',
                'email2' => 'jeshu922@hotmail.com',
+               'user_id' => '1587',
           ]);
           DataUser::create([
                'wdoc1' => 'KARIN BELINDA',
@@ -26397,6 +17473,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5684484',
                'email1' => 'kzarate@ucss.edu.pe',
                'email2' => 'karin.b.zarate@gmail.com',
+               'user_id' => '1588',
           ]);
           DataUser::create([
                'wdoc1' => 'JESUS ROBERTO',
@@ -26407,16 +17484,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4721135',
                'email1' => 'jzarate@ucss.edu.pe',
                'email2' => 'robzarate@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LOURDES AZUCENA',
-               'wdoc2' => 'ZARATE',
-               'wdoc3' => 'MARCHENA',
-               'cdocente' => '001273',
-               'fono1' => '949803166',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'azucena_zama24@hotmail.com',
+               'user_id' => '1589',
           ]);
           DataUser::create([
                'wdoc1' => 'MARISA CONSUELO',
@@ -26427,6 +17495,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2261354',
                'email1' => 'mzarate@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1590',
           ]);
           DataUser::create([
                'wdoc1' => 'LILIANA VICTORIANA',
@@ -26437,6 +17506,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lzarzosa@ucss.edu.pe',
                'email2' => 'lilianamarquez27@hotmail.com',
+               'user_id' => '1591',
           ]);
           DataUser::create([
                'wdoc1' => 'NORA ISABEL',
@@ -26447,16 +17517,18 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5533245',
                'email1' => 'nzavala@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1592',
           ]);
           DataUser::create([
                'wdoc1' => 'DIEGO ALEXANDER',
                'wdoc2' => 'ZAVALA',
-               'wdoc3' => 'VICUÑA',
+               'wdoc3' => 'VICUÃ‘A',
                'cdocente' => '002454',
                'fono1' => '979090409',
                'fono2' => '',
                'email1' => 'dzavala@ucss.edu.pe',
                'email2' => 'diegozavi66@gmail.com',
+               'user_id' => '1593',
           ]);
           DataUser::create([
                'wdoc1' => 'MAGALI KATTY',
@@ -26467,6 +17539,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '2830555',
                'email1' => 'mzavaleta@ucss.edu.pe',
                'email2' => 'makattyzavaleta@gmail.com',
+               'user_id' => '1594',
           ]);
           DataUser::create([
                'wdoc1' => 'LUIS MARTIN',
@@ -26477,6 +17550,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'lzavaleta@ucss.edu.pe',
                'email2' => 'martinzavaleta@yahoo.com',
+               'user_id' => '1595',
           ]);
           DataUser::create([
                'wdoc1' => 'CINTHIA MONICA',
@@ -26487,6 +17561,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4056844',
                'email1' => 'czeballos@ucss.edu.pe',
                'email2' => 'monica_zeballos@hotmail.com',
+               'user_id' => '1596',
           ]);
           DataUser::create([
                'wdoc1' => 'CLAUDIO IVAN',
@@ -26497,6 +17572,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '5436916',
                'email1' => 'czegarra@ucss.edu.pe',
                'email2' => 'claudio_zegarra@hotmail.com',
+               'user_id' => '1597',
           ]);
           DataUser::create([
                'wdoc1' => 'MARLENE MORAYMA',
@@ -26507,6 +17583,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'mzegarra@ucss.edu.pe',
                'email2' => 'mmzegarra_1412@hotmail.com',
+               'user_id' => '1598',
           ]);
           DataUser::create([
                'wdoc1' => 'JORGE LUIS',
@@ -26517,76 +17594,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'jzegarra@ucss.edu.pe',
                'email2' => 'jorgezp@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NEREYDA PILAR',
-               'wdoc2' => 'ZEGARRA',
-               'wdoc3' => 'SALINAS',
-               'cdocente' => '000830',
-               'fono1' => '999144890',
-               'fono2' => '5610748',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'NILO',
-               'wdoc2' => 'ZEGARRA',
-               'wdoc3' => 'URQUIA',
-               'cdocente' => '001393',
-               'fono1' => '979723812',
-               'fono2' => '5360632',
-               'email1' => '',
-               'email2' => 'nzegarra2009@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LORENA',
-               'wdoc2' => 'ZEGARRA',
-               'wdoc3' => 'VALLADOLID',
-               'cdocente' => '002254',
-               'fono1' => '961869622',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lozeva_67@yahoo.es',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'LORENA MATILDE',
-               'wdoc2' => 'ZEGARRA',
-               'wdoc3' => 'VALLADOLID',
-               'cdocente' => '001363',
-               'fono1' => '961869622',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'lorena@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'JORGE ERNESTO',
-               'wdoc2' => 'ZELADA',
-               'wdoc3' => 'BURNEO',
-               'cdocente' => '002791',
-               'fono1' => '969929702',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'jorge.zelada.burneo@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'HECTOR JOEL',
-               'wdoc2' => 'ZELADA',
-               'wdoc3' => 'VIDALON',
-               'cdocente' => '000747',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'JHVZ72@gmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'CARLOS',
-               'wdoc2' => 'ZELADA',
-               'wdoc3' => 'YZQUIERDO',
-               'cdocente' => '001500',
-               'fono1' => '976819752',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => 'carzeyz@yahoo.com',
+               'user_id' => '1599',
           ]);
           DataUser::create([
                'wdoc1' => 'LUISA INES',
@@ -26597,6 +17605,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '4819803',
                'email1' => 'lzevallos@ucss.edu.pe',
                'email2' => 'luisazdlc@hotmail.com',
+               'user_id' => '1600',
           ]);
           DataUser::create([
                'wdoc1' => 'RUTH KARINA',
@@ -26607,6 +17616,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'rzorrilla@ucss.edu.pe',
                'email2' => 'karinazorrilla_25@hotmail.com',
+               'user_id' => '1601',
           ]);
           DataUser::create([
                'wdoc1' => 'EDELMIRA',
@@ -26617,6 +17627,7 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ezulueta@ucss.edu.pe',
                'email2' => 'ezulr@hotmail.com',
+               'user_id' => '1602',
           ]);
           DataUser::create([
                'wdoc1' => 'ESAU',
@@ -26627,66 +17638,40 @@ class DataUsersTableSeeder extends Seeder
                'fono2' => '',
                'email1' => 'ezumaeta@ucss.edu.pe',
                'email2' => '',
+               'user_id' => '1603',
           ]);
           DataUser::create([
                'wdoc1' => 'NELIZA KELI',
-               'wdoc2' => 'ZUÑIGA',
+               'wdoc2' => 'ZUÃ‘IGA',
                'wdoc3' => 'ALVARADO DE LA ROSA',
                'cdocente' => '000705',
                'fono1' => '959701568',
                'fono2' => '4493087',
                'email1' => 'nzuniga@ucss.edu.pe',
                'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'ALEX ALEJANDRO',
-               'wdoc2' => 'ZUÑIGA',
-               'wdoc3' => 'BEDRIÑANA',
-               'cdocente' => '000927',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1604',
           ]);
           DataUser::create([
                'wdoc1' => 'ARTURO PAUL',
-               'wdoc2' => 'ZUÑIGA',
+               'wdoc2' => 'ZUÃ‘IGA',
                'wdoc3' => 'EURIBE',
                'cdocente' => '001419',
                'fono1' => '998759658',
                'fono2' => '3440627',
                'email1' => 'azuniga@ucss.edu.pe',
                'email2' => 'apze@hotmail.com',
+               'user_id' => '1605',
           ]);
           DataUser::create([
                'wdoc1' => 'JANET DEL MILAGRO',
-               'wdoc2' => 'ZUÑIGA',
+               'wdoc2' => 'ZUÃ‘IGA',
                'wdoc3' => 'TRELLES',
                'cdocente' => '002446',
                'fono1' => '947474211',
                'fono2' => '',
                'email1' => 'jzuniga@ucss.edu.pe',
                'email2' => 'jamil-84@hotmail.com',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'YEFRIN',
-               'wdoc2' => 'ZURITA',
-               'wdoc3' => 'CASTILLO',
-               'cdocente' => '000619',
-               'fono1' => '97337588',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
-          ]);
-          DataUser::create([
-               'wdoc1' => 'DAIA-ZZZ',
-               'wdoc2' => 'ZZZ-CURSO',
-               'wdoc3' => 'ELIMINADO',
-               'cdocente' => '000000',
-               'fono1' => '',
-               'fono2' => '',
-               'email1' => '',
-               'email2' => '',
+               'user_id' => '1606',
           ]);
      }
 }

@@ -15,7 +15,7 @@ Seleccione la facultad: {{ $data['wfacultad'] }}
 y la sede: {{ $data['wsede'] }}
 
 
-@component('mail::button', ['url' => 'http://www.ucssfcec.xyz'])
+@component('mail::button', ['url' => 'http://disponibilidad.ucssfcec.xyz'])
 Acceso al módulo
 @endcomponent
 
